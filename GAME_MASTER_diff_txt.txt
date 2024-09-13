@@ -1,107 +1,245 @@
---- GAME_MASTER_old.txt	2024-09-13 08:13:24.338726245 +0200
-+++ GAME_MASTER.txt	2024-09-13 08:59:13.580571704 +0200
-@@ -135383,10 +135383,10 @@
-     template_id: "POSTCARD_COLLECTION_SETTINGS"
-     postcardCollectionSettings {
-       enabled: true
--      2: "spr_postcard_background_scorbunny2024"
--      3: 0x3f4ccccd
--      4: "#745D9D"
--      5: "#FFFFFF"
-+      obPostcardCollectionSettingsString2: "spr_postcard_background_scorbunny2024"
-+      obPostcardCollectionSettingsNumber3: 0.8
-+      obPostcardCollectionSettingsString4: "#745D9D"
-+      obPostcardCollectionSettingsString5: "#FFFFFF"
-     }
-   }
- }
-@@ -135488,7 +135488,7 @@
-   template_id: "RAID_CLIENT_SETTINGS"
-   data {
-     template_id: "RAID_CLIENT_SETTINGS"
--    raid_settings {
-+    raidSettings {
-       remoteRaidEnabled: true
-       maxRemoteRaidPasses: 3
-       remoteDamageModifier: 1
-@@ -135543,7 +135543,7 @@
-       bootCutoffMs: 15000
-       bootSoloMs: 30000
-       obRaidClientSettingsNumber1: 1
--      29: 1
-+      obRaidClientSettingsNumber29: 1
-     }
-   }
- }
-@@ -135860,10 +135860,10 @@
-       resumeRangeMeters: 40
-       routeEngagementStatsShardCount: 3
-       enableRouteRatingDetails: true
--      29: 1
--      30: 0x41d80000
--      33: 0x40e00000
--      35: 1
-+      obRoutePlaySettingsNumber29: 1
-+      obRoutePlaySettingsNumber30: 27
-+      obRoutePlaySettingsNumber33: 7
-+      obRoutePlaySettingsNumber45: 1
-     }
-   }
- }
-@@ -161880,7 +161880,7 @@
-   template_id: "SPONSORED_GEOFENCE_GIFT_SETTINGS"
-   data {
-     template_id: "SPONSORED_GEOFENCE_GIFT_SETTINGS"
--    sponsored_geofence_gift_settings {
-+    sponsoredGeofenceGiftSettings {
-       giftPersistenceTimeMs: 3000
-       mapPresentationTimeMs: 6000
-       enableSponsoredGeofenceGift: true
-@@ -161889,15 +161889,15 @@
-         enableBalloonGift: true
-         balloonAutoDismissTimeMs: 600000
-         getWasabiAdRpcIntervalMs: 60000
--        7: 1
-+        enableBalloonWebView: true
+--- GAME_MASTER_old.txt	2024-09-13 10:15:42.406526530 +0200
++++ GAME_MASTER.txt	2024-09-13 12:02:31.623846467 +0200
+@@ -300224,9 +300224,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
+-      raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -300234,6 +300232,7 @@
        }
--      11: 1
--      14: 5000
--      16: 1
--      17 {
--        1: "/22447386144/pgo_rewarded_video_prod"
--        2: "/22447386144/pgo_rewarded_video_prod"
--        3: "/22447386144/pgo_rewarded_video_prod"
-+      externalAdServiceAdsEnabled: true
-+      webViewDisableExitButtonTimeMs: 5000
-+      gamVideoAdsEnabled: true
-+      gamVideoAdUnitSettings {
-+        iosAdUnitId: "/22447386144/pgo_rewarded_video_prod"
-+        androidAdUnitId: "/22447386144/pgo_rewarded_video_prod"
-+        otherAdUnitId: "/22447386144/pgo_rewarded_video_prod"
+       ibfc {
        }
-     }
-   }
-@@ -173063,7 +173063,7 @@
-     template_id: "TODAY_VIEW_SETTINGS_V2"
-     todayViewSettings {
-       notificationServerAuthoritative: true
--      9: 1
-+      favoriteQuestEnabled: true
++      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -357657,10 +357657,10 @@
-   template_id: "PTC_OAUTH_SETTINGS"
+@@ -300301,13 +300300,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -300375,7 +300374,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -300383,6 +300381,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -300457,6 +300456,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -300524,7 +300524,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -300532,6 +300531,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -300599,7 +300599,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -300607,6 +300606,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -300674,7 +300674,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -300682,6 +300681,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -300749,13 +300749,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -300822,7 +300822,6 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -300830,6 +300829,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -300897,7 +300897,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -300905,6 +300904,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -300972,7 +300972,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -300980,6 +300979,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -336908,10 +336908,13 @@
+       sku: "bundle.cd2022.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       sale: true
+-      spriteId: "bundle.halloween.small.1"
+-      title: "bundle.halloween.small.1_title"
++      spriteId: "bundle.general4.small.1"
++      title: "bundle.general4.small.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2024-09-15T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1726444799000
+     }
+   }
+ }
+@@ -336923,10 +336926,13 @@
+       sku: "bundle.cd2022.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 2
+-      hidden: true
+       sale: true
+-      spriteId: "bundle.halloween.adventure.1"
+-      title: "bundle.halloween.adventure.1_title"
++      spriteId: "bundle.general1.medium.1"
++      title: "bundle.general1.medium.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2024-09-15T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1726444799000
+     }
+   }
+ }
+@@ -357654,17 +357660,6 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "SPAWN_V0327_POKEMON_SPINDA_08"
    data {
-     template_id: "PTC_OAUTH_SETTINGS"
--    207 {
--      1: 1
--      3: 2022190740000
--      4: 902
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-     }
+     template_id: "SPAWN_V0327_POKEMON_SPINDA_08"
+@@ -357775,12 +357770,6 @@
    }
  }
+ batch_id: 1726186248983
+-experiment_id: 1
+-experiment_id: 4
+-experiment_id: 6
+-experiment_id: 8
+-experiment_id: 11
+-experiment_id: 21
+ experiment_id: 101
+ experiment_id: 170
+ experiment_id: 173
+@@ -357804,8 +357793,8 @@
+ experiment_id: 2399
+ experiment_id: 2400
+ experiment_id: 2402
++experiment_id: 3025
+ experiment_id: 3032
+-experiment_id: 3033
+ experiment_id: 3050
+ experiment_id: 3051
+ experiment_id: 3063
