@@ -1,48 +1,40 @@
---- GAME_MASTER_old.txt	2024-09-16 09:56:21.017677920 +0200
-+++ GAME_MASTER.txt	2024-09-16 14:56:36.302977165 +0200
-@@ -350796,7 +350796,6 @@
-       sku: "evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
--      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._PsychSpec24_title"
-       description: "item_event_ticket_evergreen_desc_PsychSpec24"
-@@ -350816,7 +350815,6 @@
-       sku: "evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
--      hidden: true
-       spriteId: "evergreenticket.1"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2024-09-22T20:00:00"
-@@ -352437,7 +352435,6 @@
-       sku: "pgorelease.evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
--      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._PsychSpec24_title"
-       description: "item_event_ticket_evergreen_desc_PsychSpec24"
-@@ -352457,7 +352454,6 @@
-       sku: "pgorelease.evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
--      hidden: true
-       spriteId: "evergreenticket.1"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2024-09-22T20:00:00"
-@@ -357834,11 +357830,13 @@
- experiment_id: 3805
- experiment_id: 3814
- experiment_id: 3818
-+experiment_id: 3833
- experiment_id: 4683
- experiment_id: 4998
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-+experiment_id: 5203
- experiment_id: 5250
- experiment_id: 5508
- experiment_id: 5510
+--- GAME_MASTER_old.txt	2024-09-16 14:56:36.302977165 +0200
++++ GAME_MASTER.txt	2024-09-17 12:31:28.919945595 +0200
+@@ -135551,6 +135551,17 @@
+   }
+ }
+ template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++template {
+   template_id: "QUEST_EVOLUTION_SETTINGS"
+   data {
+     template_id: "QUEST_EVOLUTION_SETTINGS"
+@@ -357778,18 +357789,7 @@
+     }
+   }
+ }
+-template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-batch_id: 1726274137266
++batch_id: 1726530476891
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
