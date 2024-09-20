@@ -1,178 +1,107 @@
---- GAME_MASTER_old.txt	2024-09-19 21:36:16.214915124 +0200
-+++ GAME_MASTER.txt	2024-09-19 21:39:54.524551259 +0200
-@@ -300526,7 +300526,9 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      raidBossDistanceOffset: 3
-       formChange {
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -300534,7 +300536,6 @@
+--- GAME_MASTER_old.txt	2024-09-19 21:39:54.524551259 +0200
++++ GAME_MASTER.txt	2024-09-20 08:52:02.741192845 +0200
+@@ -39983,6 +39983,8 @@
+         breadBattleAvailabilityStartMinute: 360
+         breadBattleAvailabilityEndMinute: 1260
        }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
++      1: 18000000
++      11: 1800000
      }
    }
  }
-@@ -300602,13 +300603,13 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         candyCost: 25
-         stardustCost: 10000
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
+@@ -113021,6 +113023,71 @@
    }
  }
-@@ -300676,6 +300677,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -300683,7 +300685,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -300758,7 +300759,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -300826,6 +300826,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -300833,7 +300834,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -300901,6 +300901,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -300908,7 +300909,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -300976,6 +300976,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -300983,7 +300984,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -301051,13 +301051,13 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-         stardustCost: 10000
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -301124,6 +301124,7 @@
-       isTradable: true
-       raidBossDistanceOffset: 3
-       formChange {
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -301131,7 +301132,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -301199,6 +301199,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -301206,7 +301207,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -301274,6 +301274,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -301281,7 +301282,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -359030,7 +359030,24 @@
-     }
-   }
- }
+ template {
++  template_id: "ITEM_EVENT_TICKET_04"
++  data {
++    template_id: "ITEM_EVENT_TICKET_04"
++    itemSettings {
++      itemId: ITEM_EVENT_TICKET_04
++      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
++      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
++      globalEventTicket {
++        eventStartTime: "2024-09-22T14:00:00"
++        eventEndTime: "2024-09-22T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_04_desc_ResearchDaySept24"
++        giftable: true
++        giftItem: ITEM_EVENT_TICKET_04_TO_GIFT
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
++        displayV2Enabled: true
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_ResearchDaySept24"
++        textRewardsKey: "text_rewards_key_ResearchDaySept24"
++        iconRewards {
++          type: POKEMON_ENCOUNTER
++          pokemon_encounter {
++            pokemon_id: ORANGURU
++          }
++        }
++        iconRewards {
++          type: POKEMON_ENCOUNTER
++          pokemon_encounter {
++            pokemon_id: PASSIMIAN
++          }
++        }
++        iconRewards {
++          type: STARDUST
++          stardust: 2000
++        }
++        detailsLinkKey: "details_link_key"
++        clientEventStartTimeUtcMs: 1727013600000
++        clientEventEndTimeUtcMs: 1727024400000
++      }
++      descriptionOverride: "item_event_ticket_04_desc_ResearchDaySept24"
++    }
++  }
++}
 +template {
++  template_id: "ITEM_EVENT_TICKET_04_TO_GIFT"
++  data {
++    template_id: "ITEM_EVENT_TICKET_04_TO_GIFT"
++    itemSettings {
++      itemId: ITEM_EVENT_TICKET_04_TO_GIFT
++      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
++      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
++      globalEventTicket {
++        eventStartTime: "2024-09-22T14:00:00"
++        eventEndTime: "2024-09-22T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_04_details_ResearchDaySept24"
++        ticketItem: ITEM_EVENT_TICKET_04
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
++        clientEventStartTimeUtcMs: 1727013600000
++        clientEventEndTimeUtcMs: 1727024400000
++      }
++      ignoreInventorySpace: true
++      descriptionOverride: "item_event_ticket_04_details_ResearchDaySept24"
++    }
++  }
++}
++template {
+   template_id: "ITEM_EVENT_TICKET_05"
+   data {
+     template_id: "ITEM_EVENT_TICKET_05"
+@@ -114986,6 +115053,16 @@
+   }
+ }
+ template {
++  template_id: "LC_2024_INCHEON_SAFARI_ZONE_001"
++  data {
++    template_id: "LC_2024_INCHEON_SAFARI_ZONE_001"
++    locationCardSettings {
++      locationCard: LC_2024_INCHEON_SAFARI_ZONE_001
++      imageUrl: "lc_CitySafari2024_incheon"
++    }
++  }
++}
++template {
+   template_id: "LC_2024_JAKARTA_AIRADVENTURES_001"
+   data {
+     template_id: "LC_2024_JAKARTA_AIRADVENTURES_001"
+@@ -135613,6 +135690,17 @@
+   }
+ }
+ template {
 +  template_id: "PTC_OAUTH_SETTINGS"
 +  data {
 +    template_id: "PTC_OAUTH_SETTINGS"
@@ -183,21 +112,147 @@
 +    }
 +  }
 +}
- batch_id: 1726772953176
-+experiment_id: 1
-+experiment_id: 4
-+experiment_id: 6
-+experiment_id: 8
-+experiment_id: 11
-+experiment_id: 21
- experiment_id: 101
- experiment_id: 170
- experiment_id: 174
-@@ -359056,6 +359073,7 @@
- experiment_id: 2402
- experiment_id: 2700
- experiment_id: 3032
-+experiment_id: 3033
- experiment_id: 3050
- experiment_id: 3051
- experiment_id: 3063
++template {
+   template_id: "QUEST_EVOLUTION_SETTINGS"
+   data {
+     template_id: "QUEST_EVOLUTION_SETTINGS"
+@@ -136876,6 +136964,21 @@
+   }
+ }
+ template {
++  template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_A528B"
++  data {
++    template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_A528B"
++    obSettingsOverrideRules {
++      ruleType: DEVICE_MODEL
++      sortOrder: 50
++      ruleValue: "samsung SM-A528B"
++      meshingEnabled: TRUE
++      occlusionEnabled: TRUE
++      semanticsEnabled: TRUE
++      vpsEnabled: TRUE
++    }
++  }
++}
++template {
+   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F711B"
+   data {
+     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F711B"
+@@ -358940,108 +359043,7 @@
+     }
+   }
+ }
+-template {
+-  template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_A528B"
+-  data {
+-    template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_A528B"
+-    obSettingsOverrideRules {
+-      ruleType: DEVICE_MODEL
+-      sortOrder: 50
+-      ruleValue: "samsung SM-A528B"
+-      meshingEnabled: TRUE
+-      occlusionEnabled: TRUE
+-      semanticsEnabled: TRUE
+-      vpsEnabled: TRUE
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_EVENT_TICKET_04"
+-  data {
+-    template_id: "ITEM_EVENT_TICKET_04"
+-    itemSettings {
+-      itemId: ITEM_EVENT_TICKET_04
+-      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+-      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+-      globalEventTicket {
+-        eventStartTime: "2024-09-22T14:00:00"
+-        eventEndTime: "2024-09-22T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_04_desc_ResearchDaySept24"
+-        giftable: true
+-        giftItem: ITEM_EVENT_TICKET_04_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
+-        displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_ResearchDaySept24"
+-        textRewardsKey: "text_rewards_key_ResearchDaySept24"
+-        iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemon_encounter {
+-            pokemon_id: ORANGURU
+-          }
+-        }
+-        iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemon_encounter {
+-            pokemon_id: PASSIMIAN
+-          }
+-        }
+-        iconRewards {
+-          type: STARDUST
+-          stardust: 2000
+-        }
+-        detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1727013600000
+-        clientEventEndTimeUtcMs: 1727024400000
+-      }
+-      descriptionOverride: "item_event_ticket_04_desc_ResearchDaySept24"
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_EVENT_TICKET_04_TO_GIFT"
+-  data {
+-    template_id: "ITEM_EVENT_TICKET_04_TO_GIFT"
+-    itemSettings {
+-      itemId: ITEM_EVENT_TICKET_04_TO_GIFT
+-      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+-      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+-      globalEventTicket {
+-        eventStartTime: "2024-09-22T14:00:00"
+-        eventEndTime: "2024-09-22T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_04_details_ResearchDaySept24"
+-        ticketItem: ITEM_EVENT_TICKET_04
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
+-        clientEventStartTimeUtcMs: 1727013600000
+-        clientEventEndTimeUtcMs: 1727024400000
+-      }
+-      ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_04_details_ResearchDaySept24"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2024_INCHEON_SAFARI_ZONE_001"
+-  data {
+-    template_id: "LC_2024_INCHEON_SAFARI_ZONE_001"
+-    locationCardSettings {
+-      locationCard: LC_2024_INCHEON_SAFARI_ZONE_001
+-      imageUrl: "lc_CitySafari2024_incheon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-batch_id: 1726772953176
++batch_id: 1726801983608
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -359101,6 +359103,7 @@
+ experiment_id: 8921
+ experiment_id: 8924
+ experiment_id: 9502
++experiment_id: 9505
+ experiment_id: 20947
+ experiment_id: 43000
+ experiment_id: 44005
