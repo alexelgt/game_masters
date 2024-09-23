@@ -1,120 +1,2322 @@
---- GAME_MASTER_old.txt	2024-09-20 09:19:32.359468800 +0200
-+++ GAME_MASTER.txt	2024-09-21 16:49:30.962163670 +0200
-@@ -135690,17 +135690,6 @@
-   }
- }
- template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
-   template_id: "QUEST_EVOLUTION_SETTINGS"
-   data {
-     template_id: "QUEST_EVOLUTION_SETTINGS"
-@@ -352445,7 +352434,6 @@
-       sku: "general2.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.4"
-       title: "general1.ticket._ResearchDaySept24_title"
-       skuEnableTime: "2023-01-01T11:00:03"
-@@ -352464,7 +352452,6 @@
-       sku: "general2.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.4"
-       title: "general1.ticket._ResearchDaySept24_title"
-       skuEnableTime: "2023-01-01T11:00:03"
-@@ -354008,7 +353995,6 @@
-       sku: "pgorelease.general2.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.2"
-       title: "general1.ticket._ResearchDaySept24_title"
-       skuEnableTime: "2023-01-01T11:00:01"
-@@ -354027,7 +354013,6 @@
-       sku: "pgorelease.general2.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.2"
-       title: "general1.ticket._ResearchDaySept24_title"
-       skuEnableTime: "2023-01-01T11:00:01"
-@@ -359043,7 +359028,46 @@
+--- GAME_MASTER_old.txt	2024-09-21 16:49:30.962163670 +0200
++++ GAME_MASTER.txt	2024-09-23 08:53:11.496519908 +0200
+@@ -252574,7 +252574,7 @@
+         baseDefense: 132
+       }
+       quickMoves: TAKE_DOWN_FAST
+-      cinematicMoves: IRON_HEAD
++      cinematicMoves: STRUGGLE
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -252666,7 +252666,7 @@
+         baseDefense: 132
+       }
+       quickMoves: TAKE_DOWN_FAST
+-      cinematicMoves: IRON_HEAD
++      cinematicMoves: STRUGGLE
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -333938,29 +333938,6 @@
+           count: 3000
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
      }
    }
  }
--batch_id: 1726801983608
-+template {
-+  template_id: "bundle.koreaseptember100.1"
-+  data {
-+    template_id: "bundle.koreaseptember100.1"
-+    iapItemDisplay {
-+      sku: "bundle.koreaseptember100.1"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
+@@ -333985,12 +333962,6 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4500
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+           count: 6000
+         }
+       }
+@@ -334003,24 +333974,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 6000
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -334040,7 +333994,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -334057,29 +334011,6 @@
+           count: 4240
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -334090,50 +334021,27 @@
+     vs_seeker_loot {
+       rankLevel: 11
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 6400
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 4240
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -334153,7 +334061,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -334170,29 +334078,6 @@
+           count: 4240
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -334203,50 +334088,27 @@
+     vs_seeker_loot {
+       rankLevel: 12
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 6400
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 4240
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -334266,7 +334128,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -334283,29 +334145,6 @@
+           count: 4560
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -334316,50 +334155,27 @@
+     vs_seeker_loot {
+       rankLevel: 13
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 6800
++          count: 4560
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 9120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -334379,7 +334195,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -334396,29 +334212,6 @@
+           count: 4800
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -334429,50 +334222,27 @@
+     vs_seeker_loot {
+       rankLevel: 14
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 7200
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 4800
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 9600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -334515,29 +334285,6 @@
+           count: 2
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -334577,29 +334324,6 @@
+           count: 3
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+       rewardTrack: PREMIUM
+     }
+   }
+@@ -334617,7 +334341,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -334634,29 +334358,6 @@
+           count: 5600
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -334667,50 +334368,27 @@
+     vs_seeker_loot {
+       rankLevel: 16
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 8400
++          count: 5600
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 11200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -334730,7 +334408,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -334747,29 +334425,6 @@
+           count: 5840
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -334780,50 +334435,27 @@
+     vs_seeker_loot {
+       rankLevel: 17
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 8800
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 5840
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 11680
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -334843,7 +334475,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -334860,29 +334492,6 @@
+           count: 6160
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -334893,50 +334502,27 @@
+     vs_seeker_loot {
+       rankLevel: 18
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 9200
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 6160
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 12320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -334964,29 +334550,6 @@
+       reward {
+         pokemon_reward: true
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -335011,29 +334574,6 @@
+       reward {
+         pokemon_reward: true
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+       rewardTrack: PREMIUM
+     }
+   }
+@@ -335051,7 +334591,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -335068,29 +334608,6 @@
+           count: 2400
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 4000
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 4000
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 4000
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 4000
+-        }
+-      }
+     }
+   }
+ }
+@@ -335101,50 +334618,27 @@
+     vs_seeker_loot {
+       rankLevel: 1
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 3600
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 2400
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 12000
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 12000
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 12000
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 12000
++          count: 4800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -335164,7 +334658,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -335181,29 +334675,6 @@
+           count: 6960
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -335214,50 +334685,27 @@
+     vs_seeker_loot {
+       rankLevel: 20
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 10400
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 6960
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 13920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -335277,7 +334725,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -335294,29 +334742,6 @@
+           count: 7200
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -335327,50 +334752,27 @@
+     vs_seeker_loot {
+       rankLevel: 21
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 10800
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 7200
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -335390,7 +334792,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -335407,29 +334809,6 @@
+           count: 7200
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -335440,50 +334819,27 @@
+     vs_seeker_loot {
+       rankLevel: 22
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 10800
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 7200
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -335503,7 +334859,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -335520,29 +334876,6 @@
+           count: 7200
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -335553,50 +334886,27 @@
+     vs_seeker_loot {
+       rankLevel: 23
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 10800
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 7200
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -335616,7 +334926,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -335633,29 +334943,6 @@
+           count: 7200
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 11200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 11200
+-        }
+-      }
+     }
+   }
+ }
+@@ -335666,50 +334953,27 @@
+     vs_seeker_loot {
+       rankLevel: 24
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 10800
++          count: 7200
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 19200
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 19200
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 19200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 19200
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -335729,7 +334993,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -335746,29 +335010,6 @@
+           count: 2640
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 4800
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 4800
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 4800
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 4800
+-        }
+-      }
+     }
+   }
+ }
+@@ -335779,50 +335020,27 @@
+     vs_seeker_loot {
+       rankLevel: 2
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 4000
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 2640
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 12800
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 12800
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 12800
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 12800
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -335842,7 +335060,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -335859,29 +335077,6 @@
+           count: 2640
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 5600
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 5600
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 5600
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 5600
+-        }
+-      }
+     }
+   }
+ }
+@@ -335892,50 +335087,27 @@
+     vs_seeker_loot {
+       rankLevel: 3
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 4000
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 2640
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 13600
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 13600
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 13600
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 13600
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -335955,7 +335127,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -335972,29 +335144,6 @@
+           count: 2960
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 6400
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 6400
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 6400
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 6400
+-        }
+-      }
+     }
+   }
+ }
+@@ -336005,50 +335154,27 @@
+     vs_seeker_loot {
+       rankLevel: 4
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 4400
++          count: 2960
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 14400
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 14400
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 14400
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 14400
++          count: 5920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -336062,42 +335188,19 @@
+     vs_seeker_loot {
+       rankLevel: 5
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item_loot_table: true
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 7200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 7200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 7200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 7200
+-        }
++        item_ranking_loot_table_count: 1
+       }
+     }
+   }
+@@ -336109,42 +335212,19 @@
+     vs_seeker_loot {
+       rankLevel: 5
+       reward {
+-        item_loot_table: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 15200
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 15200
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 15200
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 15200
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       rewardTrack: PREMIUM
+     }
+@@ -336163,7 +335243,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -336180,29 +335260,6 @@
+           count: 3200
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 8000
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 8000
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 8000
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 8000
+-        }
+-      }
+     }
+   }
+ }
+@@ -336213,50 +335270,27 @@
+     vs_seeker_loot {
+       rankLevel: 6
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 4800
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 3200
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 16000
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 16000
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 16000
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 16000
++          count: 6400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -336276,7 +335310,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -336293,29 +335327,6 @@
+           count: 3440
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 8800
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 8800
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 8800
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 8800
+-        }
+-      }
+     }
+   }
+ }
+@@ -336326,50 +335337,27 @@
+     vs_seeker_loot {
+       rankLevel: 7
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 5200
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 3440
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 16800
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 16800
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 16800
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 16800
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -336389,7 +335377,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -336406,29 +335394,6 @@
+           count: 3440
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 9600
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 9600
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 9600
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 9600
+-        }
+-      }
+     }
+   }
+ }
+@@ -336439,50 +335404,27 @@
+     vs_seeker_loot {
+       rankLevel: 8
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 5200
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 3440
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 17600
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 17600
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 17600
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 17600
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -336502,7 +335444,7 @@
+         }
+       }
+       reward {
+-        item_loot_table: true
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+         pokemon_reward: true
+@@ -336519,29 +335461,6 @@
+           count: 3760
+         }
+       }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 10400
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 10400
+-        }
+-      }
+-      reward {
+-        item {
+-          stardust: true
+-          count: 10400
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 10400
+-        }
+-      }
+     }
+   }
+ }
+@@ -336552,50 +335471,27 @@
+     vs_seeker_loot {
+       rankLevel: 9
+       reward {
+-        pokemon_reward: true
+-      }
+-      reward {
+-        item_loot_table: true
+-      }
+-      reward {
+         item {
+           stardust: true
+-          count: 5600
+-        }
+-      }
+-      reward {
+-        item {
+-          item: ITEM_RARE_CANDY
+-          count: 6
++          count: 3760
+         }
+       }
+       reward {
+-        item {
+-          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-          count: 5
+-        }
++        item_ranking_loot_table_count: 1
+       }
+       reward {
+-        item {
+-          stardust: true
+-          count: 18400
+-        }
++        pokemon_reward: true
+       }
+       reward {
+         item {
+-          stardust: true
+-          count: 18400
++          item: ITEM_RARE_CANDY
++          count: 3
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 18400
+-        }
+-      }
+-      reward {
+-        item {
+-          count: 18400
++          count: 7520
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -352054,6 +350950,7 @@
+       sku: "evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
 +      hidden: true
-+      spriteId: "bundle.general1.small.1"
-+      title: "bundle.general1.small.1_title"
-+    }
-+  }
-+}
-+template {
-+  template_id: "bundle.koreaseptember200.1"
-+  data {
-+    template_id: "bundle.koreaseptember200.1"
-+    iapItemDisplay {
-+      sku: "bundle.koreaseptember200.1"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._PsychSpec24_title"
+       description: "item_event_ticket_evergreen_desc_PsychSpec24"
+@@ -352073,6 +350970,7 @@
+       sku: "evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
 +      hidden: true
-+      spriteId: "bundle.general1.medium.2"
-+      title: "bundle.silk.box.1_title"
-+    }
-+  }
-+}
-+template {
-+  template_id: "PTC_OAUTH_SETTINGS"
-+  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    }
-+  }
-+}
-+batch_id: 1726885536114
+       spriteId: "evergreenticket.1"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-09-22T20:00:00"
+@@ -352434,6 +351332,7 @@
+       sku: "general2.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.4"
+       title: "general1.ticket._ResearchDaySept24_title"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -352452,6 +351351,7 @@
+       sku: "general2.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.4"
+       title: "general1.ticket._ResearchDaySept24_title"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -353689,6 +352589,7 @@
+       sku: "pgorelease.evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._PsychSpec24_title"
+       description: "item_event_ticket_evergreen_desc_PsychSpec24"
+@@ -353708,6 +352609,7 @@
+       sku: "pgorelease.evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-09-22T20:00:00"
+@@ -353995,6 +352897,7 @@
+       sku: "pgorelease.general2.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._ResearchDaySept24_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -354013,6 +352916,7 @@
+       sku: "pgorelease.general2.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._ResearchDaySept24_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -359067,7 +357971,7 @@
+     }
+   }
+ }
+-batch_id: 1726885536114
++batch_id: 1727073768241
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -359089,17 +359113,18 @@
- experiment_id: 3833
- experiment_id: 3834
- experiment_id: 3835
-+experiment_id: 3838
+@@ -359109,22 +358013,16 @@
+ experiment_id: 3805
+ experiment_id: 3814
+ experiment_id: 3818
+-experiment_id: 3831
+-experiment_id: 3833
+-experiment_id: 3834
+-experiment_id: 3835
+-experiment_id: 3838
++experiment_id: 3839
  experiment_id: 4683
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-+experiment_id: 5204
+-experiment_id: 5204
  experiment_id: 5250
  experiment_id: 5508
  experiment_id: 5510
  experiment_id: 6075
- experiment_id: 8663
--experiment_id: 8904
+-experiment_id: 8663
  experiment_id: 8921
  experiment_id: 8924
  experiment_id: 9502
