@@ -1,725 +1,129 @@
---- GAME_MASTER_old.txt	2024-10-02 15:30:02.949182748 +0200
-+++ GAME_MASTER.txt	2024-10-03 09:55:13.896784521 +0200
-@@ -102672,6 +102672,10 @@
-       forms {
-         form: SNORLAX_NORMAL
-       }
-+      forms {
-+        form: 2849
-+        isCostume: true
-+      }
-     }
-   }
- }
-@@ -112716,7 +112720,7 @@
-     iapCategoryDisplay {
-       category: IAP_CATEGORY_AVATAR
-       sortOrder: 5
--      imageUrl: "https://storage.googleapis.com/prod-public-images/avatar_ballguy_outfit.jpg"
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/gengaronesie_1024x512_nologo.jpg"
-       description: "avatar_shop_description"
-     }
-   }
-@@ -176866,6 +176870,9 @@
-         cameraDistance: 2.295
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.5
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 128
-@@ -176897,6 +176904,7 @@
-       evolutionBranch {
-         evolution: METAPOD
-         candyCost: 12
-+        candyCostPurified: 10
-       }
-       modelScaleV2: 1.63
-       buddyOffsetMale: 0
-@@ -176913,10 +176921,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 1000
-+        purificationCandyNeeded: 1
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 1
-       ibfc {
-       }
--      breadTierGroup: GROUP_1
-     }
-   }
- }
-@@ -176949,6 +176962,8 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-+        shadowBaseCaptureRate: 0.25
-+        shadowAttackProbability: 0.7
-       }
-       stats {
-         baseStamina: 137
-@@ -176980,6 +176995,7 @@
-       evolutionBranch {
-         evolution: BUTTERFREE
-         candyCost: 50
-+        candyCostPurified: 45
-       }
-       modelScaleV2: 1
-       buddyOffsetMale: 0
-@@ -176996,10 +177012,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 1000
-+        purificationCandyNeeded: 1
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_1
-     }
-   }
- }
-@@ -177037,6 +177058,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 2
-+        shadowBaseCaptureRate: 0.125
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 155
-@@ -177081,12 +177105,17 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 1000
-+        purificationCandyNeeded: 1
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 4
-       eliteQuickMove: BUG_BITE_FAST
-       useIrisFlyingPlacement: true
-       ibfc {
-       }
--      breadTierGroup: GROUP_1
-     }
-   }
- }
-@@ -189433,6 +189462,9 @@
-         cameraDistance: 3.62812495
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.5
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 120
-@@ -189465,6 +189497,7 @@
-       evolutionBranch {
-         evolution: PRIMEAPE
-         candyCost: 50
-+        candyCostPurified: 45
-       }
-       modelScaleV2: 1
-       buddyOffsetMale: 5.2
-@@ -189481,10 +189514,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_2
-     }
-   }
- }
-@@ -189542,6 +189580,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-+        shadowBaseCaptureRate: 0.2
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 163
-@@ -189579,6 +189620,7 @@
-         questDisplay {
-           questRequirementTemplateId: "ANNIHILAPE_EVOLUTION_QUEST"
+--- GAME_MASTER_old.txt	2024-10-03 09:55:13.896784521 +0200
++++ GAME_MASTER.txt	2024-10-04 08:35:36.397610452 +0200
+@@ -113600,7 +113600,7 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-10-07T10:00:00"
++        eventStartTime: "2024-10-04T10:00:00"
+         eventEndTime: "2024-10-11T20:00:00"
+         itemBagDescriptionKey: "item_event_ticket_09_desc_MasterBall24"
+         giftable: true
+@@ -113634,7 +113634,7 @@
+           }
          }
-+        candyCostPurified: 90
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1728295200000
++        clientEventStartTimeUtcMs: 1728036000000
+         clientEventEndTimeUtcMs: 1728676800000
        }
-       modelScaleV2: 1
-       buddyOffsetMale: 20
-@@ -189595,12 +189637,17 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 3
-       eliteQuickMove: KARATE_CHOP_FAST
-       eliteCinematicMove: CROSS_CHOP
-       ibfc {
+       descriptionOverride: "item_event_ticket_09_desc_MasterBall24"
+@@ -113650,12 +113650,12 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-10-07T10:00:00"
++        eventStartTime: "2024-10-04T10:00:00"
+         eventEndTime: "2024-10-11T20:00:00"
+         itemBagDescriptionKey: "item_event_ticket_09_details_MasterBall24"
+         ticketItem: ITEM_EVENT_TICKET_09
+         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/PGO_MasterBall.jpg"
+-        clientEventStartTimeUtcMs: 1728295200000
++        clientEventStartTimeUtcMs: 1728036000000
+         clientEventEndTimeUtcMs: 1728676800000
        }
--      breadTierGroup: GROUP_2
+       ignoreInventorySpace: true
+@@ -114031,6 +114031,7 @@
+         clientEventStartTimeUtcMs: 1732356000000
+         clientEventEndTimeUtcMs: 1732472100000
+       }
++      ignoreInventorySpace: true
+       nameOverride: "general1.ticket._GOWA24_title"
+       descriptionOverride: "item_global_event_ticket_details_GOWA24"
+     }
+@@ -352157,7 +352158,6 @@
+       sku: "general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general1.ticket._MasterBall24_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -352176,7 +352176,6 @@
+       sku: "general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-10-11T20:00:00"
+@@ -353764,7 +353763,6 @@
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general1.ticket._MasterBall24_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -353783,7 +353781,6 @@
+       sku: "pgorelease.general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-10-11T20:00:00"
+@@ -358710,17 +358707,6 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "V0406_MOVE_AURA_WHEEL_ELECTRIC"
+   data {
+     template_id: "V0406_MOVE_AURA_WHEEL_ELECTRIC"
+@@ -358962,7 +358948,18 @@
      }
    }
  }
-@@ -271293,6 +271340,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-+        shadowBaseCaptureRate: 0.02
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 209
-@@ -271339,11 +271389,16 @@
-       }
-       isTransferable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 20000
-+        purificationCandyNeeded: 20
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 3
-       eliteCinematicMove: MAGMA_STORM
-       ibfc {
-       }
--      breadTierGroup: GROUP_4
-     }
-   }
- }
-@@ -276862,6 +276917,9 @@
-         cameraDistance: 2.5
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.5
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 146
-@@ -276893,6 +276951,7 @@
-       evolutionBranch {
-         evolution: BOLDORE
-         candyCost: 50
-+        candyCostPurified: 45
-       }
-       modelScaleV2: 1.1
-       buddyOffsetMale: 10.6
-@@ -276909,10 +276968,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_2
-     }
-   }
- }
-@@ -276948,6 +277012,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-+        shadowBaseCaptureRate: 0.25
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 172
-@@ -276981,6 +277048,7 @@
-         evolution: GIGALITH
-         candyCost: 200
-         noCandyCostViaTrade: true
-+        candyCostPurified: 180
-       }
-       modelScaleV2: 1
-       buddyOffsetMale: 12.8
-@@ -276997,10 +277065,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_2
-     }
-   }
- }
-@@ -277036,6 +277109,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 2
-+        shadowBaseCaptureRate: 0.125
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 198
-@@ -277082,11 +277158,16 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 3
-       eliteCinematicMove: METEOR_BEAM
-       ibfc {
-       }
--      breadTierGroup: GROUP_2
-     }
-   }
- }
-@@ -278633,6 +278714,9 @@
-         cameraDistance: 3
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.3
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 102
-@@ -278664,6 +278748,7 @@
-       evolutionBranch {
-         evolution: WHIRLIPEDE
-         candyCost: 25
-+        candyCostPurified: 22
-       }
-       modelScaleV2: 1.1
-       buddyOffsetMale: 10.2
-@@ -278680,10 +278765,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_1
-     }
-   }
- }
-@@ -278720,6 +278810,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-+        shadowBaseCaptureRate: 0.15
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 120
-@@ -278752,6 +278845,7 @@
-       evolutionBranch {
-         evolution: SCOLIPEDE
-         candyCost: 100
-+        candyCostPurified: 90
-       }
-       modelScaleV2: 1
-       buddyOffsetMale: 9.4
-@@ -278768,10 +278862,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_1
-     }
-   }
- }
-@@ -278808,6 +278907,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 2
-+        shadowBaseCaptureRate: 0.2
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 155
-@@ -278853,10 +278955,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_1
-     }
-   }
- }
-@@ -284673,6 +284780,9 @@
-         cameraDistance: 2.5
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.3
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 137
-@@ -284706,6 +284816,7 @@
-         evolution: ESCAVALIER
-         candyCost: 200
-         noCandyCostViaTrade: true
-+        candyCostPurified: 180
-       }
-       modelScaleV2: 1
-       buddyOffsetMale: 11.5
-@@ -284722,10 +284833,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_2
-     }
-   }
- }
-@@ -284763,6 +284879,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-+        shadowBaseCaptureRate: 0.125
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 172
-@@ -284808,10 +284927,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_2
-     }
-   }
- }
-@@ -287986,6 +288110,9 @@
-         cameraDistance: 2.5
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.3
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 137
-@@ -288018,6 +288145,7 @@
-         evolution: ACCELGOR
-         candyCost: 200
-         noCandyCostViaTrade: true
-+        candyCostPurified: 180
-       }
-       modelScaleV2: 1.1
-       buddyOffsetMale: 13.2
-@@ -288034,10 +288162,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_2
-     }
-   }
- }
-@@ -288073,6 +288206,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-+        shadowBaseCaptureRate: 0.15
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 190
-@@ -288119,10 +288255,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
--      breadTierGroup: GROUP_2
-     }
-   }
- }
-@@ -331836,6 +331977,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 2
-+        shadowBaseCaptureRate: 0.01
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 242
-@@ -331866,10 +332010,15 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 3
-       ibfc {
-       }
--      breadTierGroup: GROUP_2
-     }
-   }
- }
-@@ -358680,7 +358829,140 @@
-     }
-   }
- }
--batch_id: 1727823356504
+-batch_id: 1727909150913
 +template {
-+  template_id: "EXTENDED_V0143_POKEMON_SNORLAX_WILDAREA_2024"
++  template_id: "PTC_OAUTH_SETTINGS"
 +  data {
-+    template_id: "EXTENDED_V0143_POKEMON_SNORLAX_WILDAREA_2024"
-+    pokemonExtendedSettings {
-+      uniqueId: SNORLAX
-+      form: 2849
-+      sizeSettings {
-+        xxsLowerBound: 1.029
-+        xsLowerBound: 1.05
-+        mLowerBound: 1.575
-+        mUpperBound: 2.625
-+        xlUpperBound: 3.15
-+        xxlUpperBound: 3.675
-+      }
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
 +    }
 +  }
 +}
-+template {
-+  template_id: "SPAWN_V0143_POKEMON_SNORLAX_WILDAREA_2024"
-+  data {
-+    template_id: "SPAWN_V0143_POKEMON_SNORLAX_WILDAREA_2024"
-+    genderSettings {
-+      pokemon: SNORLAX
-+      gender {
-+        malePercent: 0.875
-+        femalePercent: 0.125
-+      }
-+      form: 2849
-+    }
-+  }
-+}
-+template {
-+  template_id: "V0143_POKEMON_SNORLAX_WILDAREA_2024"
-+  data {
-+    template_id: "V0143_POKEMON_SNORLAX_WILDAREA_2024"
-+    pokemonSettings {
-+      pokemonId: SNORLAX
-+      modelScale: 0.74
-+      type: POKEMON_TYPE_NORMAL
-+      camera {
-+        diskRadiusM: 1.11
-+        cylinderRadiusM: 1.15
-+        cylinderHeightM: 2
-+        shoulderModeScale: 0.5
-+      }
-+      encounter {
-+        collisionRadiusM: 0.74
-+        collisionHeightM: 1.11
-+        collisionHeadRadiusM: 0.481
-+        movementType: MOVEMENT_JUMP
-+        movementTimerS: 3
-+        jumpTimeS: 1
-+        attackTimerS: 8
-+        attackProbability: 0.1
-+        dodgeProbability: 0.05
-+        dodgeDurationS: 1
-+        dodgeDistance: 1
-+        cameraDistance: 5.55
-+        minPokemonActionFrequencyS: 0.2
-+        maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.05
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-+      }
-+      stats {
-+        baseStamina: 330
-+        baseAttack: 190
-+        baseDefense: 169
-+      }
-+      quickMoves: ZEN_HEADBUTT_FAST
-+      quickMoves: LICK_FAST
-+      cinematicMoves: HEAVY_SLAM
-+      cinematicMoves: HYPER_BEAM
-+      cinematicMoves: EARTHQUAKE
-+      cinematicMoves: OUTRAGE
-+      cinematicMoves: SKULL_BASH
-+      cinematicMoves: BODY_SLAM
-+      cinematicMoves: SUPER_POWER
-+      animationTime: 2.4
-+      animationTime: 0.6667
-+      animationTime: 1.8333
-+      animationTime: 1.6667
-+      animationTime: 0
-+      animationTime: 2.5
-+      animationTime: 2.5
-+      animationTime: 2.33333302
-+      evolutionPips: 1
-+      pokedexHeightM: 2.1
-+      pokedexWeightKg: 460
-+      parentPokemonId: MUNCHLAX
-+      heightStdDev: 0.2625
-+      weightStdDev: 57.5
-+      familyId: FAMILY_SNORLAX
-+      kmBuddyDistance: 5
-+      buddy_size: BUDDY_BIG
-+      modelHeight: 2
-+      modelScaleV2: 1
-+      form: 2849
-+      buddyOffsetMale: 10
-+      buddyOffsetMale: 0
-+      buddyOffsetMale: 28.01
-+      buddyOffsetFemale: 10
-+      buddyOffsetFemale: 0
-+      buddyOffsetFemale: 28.01
-+      buddyScale: 19
-+      third_move {
-+        stardustToUnlock: 75000
-+        candyToUnlock: 75
-+      }
-+      isTransferable: true
-+      isDeployable: true
-+      combatShoulderCameraAngle: 2.5
-+      combatShoulderCameraAngle: 1
-+      combatShoulderCameraAngle: 1.5
-+      isTradable: true
-+      combatDefaultCameraAngle: 2.7
-+      combatDefaultCameraAngle: 2
-+      combatDefaultCameraAngle: 2
-+      shadow {
-+        purificationStardustNeeded: 5000
-+        purificationCandyNeeded: 5
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-+      buddyGroupNumber: 3
-+      eliteQuickMove: YAWN_FAST
-+      ibfc {
-+      }
-+      breadTierGroup: GROUP_3
-+    }
-+  }
-+}
-+batch_id: 1727909150913
++batch_id: 1728014591935
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -358729,7 +359011,6 @@
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
--experiment_id: 5207
- experiment_id: 5250
- experiment_id: 5508
- experiment_id: 5510
-@@ -358743,8 +359024,6 @@
+@@ -359005,6 +359002,7 @@
+ experiment_id: 3806
+ experiment_id: 3815
+ experiment_id: 3819
++experiment_id: 3854
+ experiment_id: 3861
+ experiment_id: 4683
+ experiment_id: 4998
+@@ -359023,6 +359021,7 @@
+ experiment_id: 9502
  experiment_id: 9505
  experiment_id: 9510
++experiment_id: 9512
  experiment_id: 20947
--experiment_id: 43000
--experiment_id: 44005
  experiment_id: 80001
  experiment_id: 300000
- experiment_id: 314159
