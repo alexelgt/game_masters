@@ -1,97 +1,291 @@
---- GAME_MASTER_old.txt	2024-10-04 08:35:36.397610452 +0200
-+++ GAME_MASTER.txt	2024-10-05 12:07:22.240818235 +0200
-@@ -336706,9 +336706,9 @@
+--- GAME_MASTER_old.txt	2024-10-05 12:07:22.240818235 +0200
++++ GAME_MASTER.txt	2024-10-06 14:34:08.960974950 +0200
+@@ -176931,6 +176931,7 @@
+       buddyGroupNumber: 1
+       ibfc {
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: ZACIAN
-+          pokemon_id: ZAMAZENTA
-           pokemonDisplay {
--            form: ZACIAN_HERO
-+            form: ZAMAZENTA_HERO
-           }
-         }
-         unlockedAtRank: 20
-@@ -337344,9 +337344,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: ZACIAN
-+          pokemon_id: ZAMAZENTA
-           pokemonDisplay {
--            form: ZACIAN_HERO
-+            form: ZAMAZENTA_HERO
-           }
-         }
-         unlockedAtRank: 20
-@@ -337906,10 +337906,13 @@
-       sku: "bundle.cd2022.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       sale: true
--      spriteId: "bundle.halloween.small.1"
--      title: "bundle.halloween.small.1_title"
-+      spriteId: "bundle.general4.small.1"
-+      title: "bundle.general4.small.1_title"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2024-10-06T23:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1728259199000
++      breadTierGroup: GROUP_1
      }
    }
  }
-@@ -337921,10 +337924,13 @@
-       sku: "bundle.cd2022.2"
-       category: IAP_CATEGORY_BUNDLE
+@@ -177022,6 +177023,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_1
+     }
+   }
+ }
+@@ -177117,6 +177119,7 @@
+       useIrisFlyingPlacement: true
+       ibfc {
+       }
++      breadTierGroup: GROUP_1
+     }
+   }
+ }
+@@ -189524,6 +189527,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+@@ -189649,6 +189653,7 @@
+       eliteCinematicMove: CROSS_CHOP
+       ibfc {
+       }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+@@ -271400,6 +271405,7 @@
+       eliteCinematicMove: MAGMA_STORM
+       ibfc {
+       }
++      breadTierGroup: GROUP_4
+     }
+   }
+ }
+@@ -276978,6 +276984,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+@@ -277075,6 +277082,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+@@ -277169,6 +277177,7 @@
+       eliteCinematicMove: METEOR_BEAM
+       ibfc {
+       }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+@@ -278669,6 +278678,7 @@
+       isDeployable: true
+       isTradable: true
+       buddyGroupNumber: 2
++      eliteQuickMove: SHADOW_CLAW_FAST
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -278775,6 +278785,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_1
+     }
+   }
+ }
+@@ -278872,6 +278883,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_1
+     }
+   }
+ }
+@@ -278965,6 +278977,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_1
+     }
+   }
+ }
+@@ -284843,6 +284856,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+@@ -284937,6 +284951,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+@@ -288172,6 +288187,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+@@ -288265,6 +288281,7 @@
+       buddyGroupNumber: 2
+       ibfc {
+       }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+@@ -314676,7 +314693,7 @@
+       isDeployable: true
+       isTradable: true
+       buddyGroupNumber: 2
+-      raidBossDistanceOffset: 2
++      raidBossDistanceOffset: 7
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -323411,9 +323428,11 @@
+       }
+       quickMoves: CHARGE_BEAM_FAST
+       quickMoves: BITE_FAST
++      quickMoves: THUNDER_SHOCK_FAST
+       cinematicMoves: SEED_BOMB
+       cinematicMoves: OUTRAGE
+       cinematicMoves: AURA_WHEEL_ELECTRIC
++      cinematicMoves: PSYCHIC_FANGS
+       pokedexHeightM: 0.3
+       pokedexWeightKg: 3
+       heightStdDev: 0.0375
+@@ -323422,6 +323441,12 @@
+       kmBuddyDistance: 3
+       modelHeight: 0.36
+       modelScaleV2: 1
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
+       buddyScale: 19
+       third_move {
+         stardustToUnlock: 50000
+@@ -323484,9 +323509,11 @@
+       }
+       quickMoves: CHARGE_BEAM_FAST
+       quickMoves: BITE_FAST
++      quickMoves: THUNDER_SHOCK_FAST
+       cinematicMoves: SEED_BOMB
+       cinematicMoves: OUTRAGE
+       cinematicMoves: AURA_WHEEL_ELECTRIC
++      cinematicMoves: PSYCHIC_FANGS
+       pokedexHeightM: 0.3
+       pokedexWeightKg: 3
+       heightStdDev: 0.0375
+@@ -323496,6 +323523,12 @@
+       modelHeight: 0.36
+       modelScaleV2: 1
+       form: MORPEKO_FULL_BELLY
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
+       buddyScale: 19
+       third_move {
+         stardustToUnlock: 50000
+@@ -323541,9 +323574,11 @@
+       }
+       quickMoves: CHARGE_BEAM_FAST
+       quickMoves: BITE_FAST
++      quickMoves: THUNDER_SHOCK_FAST
+       cinematicMoves: SEED_BOMB
+       cinematicMoves: OUTRAGE
+       cinematicMoves: AURA_WHEEL_DARK
++      cinematicMoves: PSYCHIC_FANGS
+       pokedexHeightM: 0.3
+       pokedexWeightKg: 3
+       heightStdDev: 0.0375
+@@ -323553,6 +323588,12 @@
+       modelHeight: 0.36
+       modelScaleV2: 1
+       form: MORPEKO_HANGRY
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
+       buddyScale: 19
+       third_move {
+         stardustToUnlock: 50000
+@@ -325960,7 +326001,7 @@
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
+         dodgeDistance: 1
+-        cameraDistance: 5
++        cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
+@@ -332020,6 +332061,7 @@
+       buddyGroupNumber: 3
+       ibfc {
+       }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+@@ -351670,6 +351712,7 @@
+       sku: "general1.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
-       sale: true
--      spriteId: "bundle.halloween.adventure.1"
--      title: "bundle.halloween.adventure.1_title"
-+      spriteId: "bundle.general1.medium.1"
-+      title: "bundle.general1.medium.1_title"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2024-10-06T23:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1728259199000
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_SewaddleCD24_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -351688,6 +351731,7 @@
+       sku: "general1.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-10-05T17:00:00"
+@@ -353348,6 +353392,7 @@
+       sku: "pgorelease.general1.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_SewaddleCD24_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -353366,6 +353411,7 @@
+       sku: "pgorelease.general1.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-10-05T17:00:00"
+@@ -358965,7 +359011,7 @@
      }
    }
  }
-@@ -358959,7 +358965,7 @@
-     }
-   }
- }
--batch_id: 1728014591935
-+batch_id: 1728085762235
+-batch_id: 1728085762235
++batch_id: 1728176957086
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -358991,6 +358997,7 @@
- experiment_id: 2400
- experiment_id: 2402
- experiment_id: 2700
-+experiment_id: 3025
- experiment_id: 3032
- experiment_id: 3033
- experiment_id: 3050
-@@ -358999,9 +359006,10 @@
- experiment_id: 3647
- experiment_id: 3685
- experiment_id: 3800
--experiment_id: 3806
-+experiment_id: 3807
- experiment_id: 3815
- experiment_id: 3819
-+experiment_id: 3852
- experiment_id: 3854
- experiment_id: 3861
- experiment_id: 4683
-@@ -359009,6 +359017,7 @@
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-+experiment_id: 5208
+@@ -359021,9 +359067,8 @@
  experiment_id: 5250
  experiment_id: 5508
  experiment_id: 5510
+-experiment_id: 5850
+ experiment_id: 6075
+-experiment_id: 8668
++experiment_id: 8669
+ experiment_id: 8911
+ experiment_id: 8921
+ experiment_id: 8924
