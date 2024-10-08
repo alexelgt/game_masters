@@ -1,240 +1,142 @@
---- GAME_MASTER_old.txt	2024-10-07 09:34:21.708273582 +0200
-+++ GAME_MASTER.txt	2024-10-08 08:41:57.290334285 +0200
-@@ -56184,67 +56184,67 @@
-         type: POKEMON_BANLIST
-         pokemonBanList {
-           pokemon {
--            id: LANTURN
--          }
--          pokemon {
-             id: AZUMARILL
-           }
-           pokemon {
--            id: ALTARIA
-+            id: TALONFLAME
-           }
-           pokemon {
--            id: SKELEDIRGE
-+            id: WIGGLYTUFF
-           }
-           pokemon {
--            id: POLIWRATH
-+            id: CLODSIRE
-           }
-           pokemon {
--            id: SKARMORY
-+            id: QUAGSIRE
-           }
-           pokemon {
--            id: GLIGAR
-+            id: FERALIGATR
-           }
-           pokemon {
--            id: WIGGLYTUFF
-+            id: DUNSPARCE
-           }
-           pokemon {
-             id: DEWGONG
-           }
-           pokemon {
-+            id: TOXAPEX
-+          }
-+          pokemon {
-             id: SANDSLASH
-             forms: SANDSLASH_ALOLA
-           }
-           pokemon {
--            id: TALONFLAME
-+            id: MALAMAR
-           }
-           pokemon {
--            id: ANNIHILAPE
-+            id: MANDIBUZZ
-           }
-           pokemon {
--            id: BASTIODON
-+            id: DIGGERSBY
-           }
-           pokemon {
--            id: MANTINE
-+            id: JUMPLUFF
-           }
-           pokemon {
--            id: WHISCASH
-+            id: FERROTHORN
-           }
-           pokemon {
--            id: QUAGSIRE
-+            id: DRAPION
-           }
-           pokemon {
--            id: TYPHLOSION
--            forms: TYPHLOSION_NORMAL
-+            id: MAROWAK
-+            forms: MAROWAK_NORMAL
-             forms: FORM_UNSET
-           }
-           pokemon {
--            id: FERALIGATR
-+            id: GASTRODON
-           }
-           pokemon {
--            id: CHARJABUG
-+            id: SERPERIOR
-           }
-           pokemon {
--            id: LICKITUNG
-+            id: GRENINJA
-           }
-         }
+--- GAME_MASTER_old.txt	2024-10-08 08:41:57.290334285 +0200
++++ GAME_MASTER.txt	2024-10-08 22:52:54.323187863 +0200
+@@ -81114,6 +81114,17 @@
+     template_id: "EXTENDED_V0303_POKEMON_MAWILE"
+     pokemonExtendedSettings {
+       uniqueId: MAWILE
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 0.49
++          xsLowerBound: 0.5
++          mLowerBound: 0.75
++          mUpperBound: 1.25
++          xlUpperBound: 1.5
++          xxlUpperBound: 1.75
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.2989
+         xsLowerBound: 0.305
+@@ -81132,6 +81143,17 @@
+     pokemonExtendedSettings {
+       uniqueId: MAWILE
+       form: MAWILE_NORMAL
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 0.49
++          xsLowerBound: 0.5
++          mLowerBound: 0.75
++          mUpperBound: 1.25
++          xlUpperBound: 1.5
++          xxlUpperBound: 1.75
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.2989
+         xsLowerBound: 0.305
+@@ -239782,6 +239804,7 @@
+     pokemonFamily {
+       familyId: FAMILY_MAWILE
+       candyPerXlCandy: 100
++      megaEvolvablePokemonId: MAWILE
+     }
+   }
+ }
+@@ -239870,6 +239893,11 @@
+       familyId: FAMILY_MAWILE
+       kmBuddyDistance: 5
+       modelHeight: 0.62
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 200
++        temporaryEvolutionEnergyCostSubsequent: 40
++      }
+       modelScaleV2: 1
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -239892,6 +239920,24 @@
+         shadowChargeMove: FRUSTRATION
        }
-@@ -113034,6 +113034,7 @@
-       bagUpgradeBannerContexts: SPONSORED_GIFT_INVENTORY_FULL
-       bagUpgradeBannerContexts: COMBAT_HUB_INVENTORY_FULL
-       bagUpgradeBannerContexts: QUICK_SHOP_INVENTORY_FULL
-+      22: 1
-     }
-   }
- }
-@@ -113351,16 +113352,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-09-08T14:00:00"
--        eventEndTime: "2024-09-08T22:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_FalinksRaidDay"
-+        eventStartTime: "2024-10-12T14:00:00"
-+        eventEndTime: "2024-10-12T22:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_MawileRaidDay"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_05_TO_GIFT
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/Falinks%20Raid%20Day.jpg"
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-mawile-raid-day-2024.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/Falinks%20Raid%20Day.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_FalinksRaidDay"
--        textRewardsKey: "text_rewards_key_FalinksRaidDay"
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-mawile-raid-day-2024.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_MawileRaidDay"
-+        textRewardsKey: "text_rewards_key_MawileRaidDay"
-         iconRewards {
-           type: ITEM
-           item {
-@@ -113378,11 +113379,11 @@
-           type: STARDUST
-           stardust: 2
-         }
--        detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1725804000000
--        clientEventEndTimeUtcMs: 1725832800000
-+        detailsLinkKey: "details_link_key_MawileRaidDay"
-+        clientEventStartTimeUtcMs: 1728741600000
-+        clientEventEndTimeUtcMs: 1728770400000
+       buddyGroupNumber: 2
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 137
++          baseAttack: 188
++          baseDefense: 217
++        }
++        averageHeightM: 1
++        averageWeightKg: 23.5
++        typeOverride1: POKEMON_TYPE_STEEL
++        typeOverride2: POKEMON_TYPE_FAIRY
++        camera {
++          cylinderRadiusM: 1.9
++          cylinderHeightM: 1.4
++        }
++        modelHeight: 1.4
++      }
++      buddyWalkedMegaEnergyAward: 25
+       raidBossDistanceOffset: 5
+       ibfc {
        }
--      descriptionOverride: "item_event_ticket_gray_details_FalinksRaidDay"
-+      descriptionOverride: "item_event_ticket_gray_desc_MawileRaidDay"
-     }
-   }
- }
-@@ -113395,16 +113396,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-09-08T14:00:00"
--        eventEndTime: "2024-09-08T22:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_FalinksRaidDay"
-+        eventStartTime: "2024-10-12T14:00:00"
-+        eventEndTime: "2024-10-12T22:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_details_MawileRaidDay"
-         ticketItem: ITEM_EVENT_TICKET_05
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/Falinks%20Raid%20Day.jpg"
--        clientEventStartTimeUtcMs: 1725804000000
--        clientEventEndTimeUtcMs: 1725832800000
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-mawile-raid-day-2024.jpg"
-+        clientEventStartTimeUtcMs: 1728741600000
-+        clientEventEndTimeUtcMs: 1728770400000
+@@ -239963,6 +240009,11 @@
+       familyId: FAMILY_MAWILE
+       kmBuddyDistance: 5
+       modelHeight: 0.62
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 200
++        temporaryEvolutionEnergyCostSubsequent: 40
++      }
+       modelScaleV2: 1
+       form: MAWILE_NORMAL
+       buddyOffsetMale: 0
+@@ -239986,6 +240037,19 @@
+         shadowChargeMove: FRUSTRATION
        }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_FalinksRaidDay"
-+      descriptionOverride: "item_event_ticket_gray_details_MawileRaidDay"
-     }
-   }
- }
-@@ -115179,16 +115180,17 @@
-     template_id: "LATAM"
-     languageSettings {
-       language: "spanishlatinamerican"
-+      isEnabled: true
-     }
-   }
- }
- template {
--  template_id: "LATAM_ENABLED"
-+  template_id: "N_DISPLAY_n_face_toxelmask_0"
+       buddyGroupNumber: 2
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 137
++          baseAttack: 188
++          baseDefense: 217
++        }
++        averageHeightM: 1
++        averageWeightKg: 23.5
++        typeOverride1: POKEMON_TYPE_STEEL
++        typeOverride2: POKEMON_TYPE_FAIRY
++      }
++      buddyWalkedMegaEnergyAward: 25
+       raidBossDistanceOffset: 5
+       ibfc {
+       }
+@@ -334529,8 +334593,8 @@
    data {
--    template_id: "LATAM_ENABLED"
--    languageSettings {
--      language: "spanishlatinamerican"
--      isEnabled: true
-+    template_id: "N_DISPLAY_n_face_toxelmask_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_face_toxelmask_0_icon"
-+      displayStringId: "avatar_mask_toxelfacemask"
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GALAR_GREAT"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_SUNSHINE_GREAT"
      }
    }
  }
-@@ -162514,22 +162516,13 @@
-     template_id: "SPONSORED_GEOFENCE_GIFT_SETTINGS"
-     sponsoredGeofenceGiftSettings {
-       giftPersistenceTimeMs: 3000
--      mapPresentationTimeMs: 6000
-+      mapPresentationTimeMs: 7000
-       enableSponsoredGeofenceGift: true
-       fullscreenDisableExitButtonTimeMs: 3000
-       balloonGiftSettings {
-         enableBalloonGift: true
-         balloonAutoDismissTimeMs: 600000
-         getWasabiAdRpcIntervalMs: 60000
--        enableBalloonWebView: true
--      }
--      externalAdServiceAdsEnabled: true
--      webViewDisableExitButtonTimeMs: 5000
--      gamVideoAdsEnabled: true
--      gamVideoAdUnitSettings {
--        iosAdUnitId: "/22447386144/pgo_rewarded_video_prod"
--        androidAdUnitId: "/22447386144/pgo_rewarded_video_prod"
--        otherAdUnitId: "/22447386144/pgo_rewarded_video_prod"
-       }
-     }
-   }
-@@ -242922,7 +242915,6 @@
-       damageWindowStartMs: 1000
-       damageWindowEndMs: 1800
-       energyDelta: -33
--      isLocked: true
-     }
-   }
- }
-@@ -352051,12 +352043,12 @@
+@@ -353648,7 +353712,6 @@
+       sku: "pgorelease.general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-       hidden: true
+-      hidden: true
        spriteId: "general2.ticket.5"
--      title: "general1.ticket._FalinksRaidDay_title"
-+      title: "general1.ticket._MawileRaidDay_title"
+       title: "general1.ticket._MawileRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-09-08T17:00:00"
-+      skuDisableTime: "2024-10-12T22:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1725814800000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/Falinks%20Raid%20Day.jpg"
-+      skuDisableTimeUtcMs: 1728770400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-mawile-raid-day-2024.jpg"
-     }
-   }
- }
-@@ -352070,11 +352062,10 @@
+@@ -353667,13 +353730,11 @@
+       sku: "pgorelease.general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-       hidden: true
+-      hidden: true
        spriteId: "general2.ticket.5"
 -      title: "general1.ticket._FalinksRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
@@ -246,78 +148,44 @@
      }
    }
  }
-@@ -352778,8 +352769,9 @@
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-       hidden: true
--      spriteId: "bundle.general1.small.2"
--      title: "boost_box_title"
-+      sale: true
-+      spriteId: "bundle.general.adventure.1"
-+      title: "bundle.general1.tiny.2_title"
+@@ -358997,7 +359058,20 @@
      }
    }
  }
-@@ -353658,12 +353650,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.5"
--      title: "general1.ticket._FalinksRaidDay_title"
-+      title: "general1.ticket._MawileRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-09-08T17:00:00"
-+      skuDisableTime: "2024-10-12T22:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1725814800000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/Falinks%20Raid%20Day.jpg"
-+      skuDisableTimeUtcMs: 1728770400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-mawile-raid-day-2024.jpg"
-     }
-   }
- }
-@@ -359005,7 +358997,7 @@
-     }
-   }
- }
--batch_id: 1728176957086
-+batch_id: 1728333648220
+-batch_id: 1728333648220
++template {
++  template_id: "TEMPORARY_EVOLUTION_V0303_POKEMON_MAWILE"
++  data {
++    template_id: "TEMPORARY_EVOLUTION_V0303_POKEMON_MAWILE"
++    temporaryEvolutionSettings {
++      pokemonId: MAWILE
++      temporary_evolutions {
++        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
++        assetBundleValue: 51
++      }
++    }
++  }
++}
++batch_id: 1728420571595
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -359017,15 +359009,12 @@
- experiment_id: 176
+@@ -359006,7 +359080,7 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 170
+-experiment_id: 176
++experiment_id: 177
  experiment_id: 300
  experiment_id: 302
--experiment_id: 314
  experiment_id: 320
- experiment_id: 408
- experiment_id: 409
--experiment_id: 511
- experiment_id: 542
--experiment_id: 555
-+experiment_id: 561
- experiment_id: 602
--experiment_id: 680
- experiment_id: 805
- experiment_id: 807
- experiment_id: 1599
-@@ -359046,16 +359035,17 @@
- experiment_id: 3685
- experiment_id: 3800
- experiment_id: 3807
--experiment_id: 3815
-+experiment_id: 3816
- experiment_id: 3819
+@@ -359040,7 +359114,9 @@
  experiment_id: 3852
  experiment_id: 3854
--experiment_id: 3861
-+experiment_id: 3855
+ experiment_id: 3855
++experiment_id: 3868
  experiment_id: 4683
++experiment_id: 4921
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
- experiment_id: 5163
-+experiment_id: 5209
- experiment_id: 5250
- experiment_id: 5508
- experiment_id: 5510
