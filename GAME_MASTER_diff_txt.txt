@@ -1,338 +1,4188 @@
---- GAME_MASTER_old.txt	2024-10-10 08:38:28.949872499 +0200
-+++ GAME_MASTER.txt	2024-10-11 08:12:31.299441787 +0200
-@@ -113093,6 +113093,7 @@
-       useVpsEnabledStatus: true
-       sunThresholdCheckEnabled: true
-       irisSocialPoiDeactivationCooldownMs: 1209600000
-+      14: 60000
+--- GAME_MASTER_old.txt	2024-10-11 08:12:31.299441787 +0200
++++ GAME_MASTER.txt	2024-10-11 22:38:02.516304118 +0200
+@@ -177199,9 +177199,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "wrap"
+-      durationMs: 2900
+-      damageWindowStartMs: 2050
+-      damageWindowEndMs: 2700
++      durationMs: 3000
++      damageWindowStartMs: 2150
++      damageWindowEndMs: 2800
+       energyDelta: -33
+     }
+   }
+@@ -177414,9 +177414,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "hyper_beam"
+-      durationMs: 3800
+-      damageWindowStartMs: 3300
+-      damageWindowEndMs: 3600
++      durationMs: 4000
++      damageWindowStartMs: 3500
++      damageWindowEndMs: 3800
+       energyDelta: -100
+     }
+   }
+@@ -178108,9 +178108,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "sludge"
+-      durationMs: 2100
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 1550
++      durationMs: 2000
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 1450
+       energyDelta: -33
+     }
+   }
+@@ -178559,9 +178559,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "vice_grip"
+-      durationMs: 1900
+-      damageWindowStartMs: 1100
+-      damageWindowEndMs: 1500
++      durationMs: 2000
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 1600
+       energyDelta: -33
+     }
+   }
+@@ -178860,16 +178860,16 @@
+       movementId: FLAME_WHEEL
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIRE
+-      power: 60
++      power: 55
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.06
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "flame_wheel"
+-      durationMs: 2700
+-      damageWindowStartMs: 2100
+-      damageWindowEndMs: 2400
++      durationMs: 2500
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 2200
+       energyDelta: -50
+     }
+   }
+@@ -178969,16 +178969,16 @@
+       movementId: MEGAHORN
+       animationId: 5
+       pokemonType: POKEMON_TYPE_BUG
+-      power: 110
++      power: 105
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.12
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "megahorn"
+-      durationMs: 2200
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 1900
++      durationMs: 2000
++      damageWindowStartMs: 1500
++      damageWindowEndMs: 1700
+       energyDelta: -100
+     }
+   }
+@@ -179283,16 +179283,16 @@
+       movementId: FLAMETHROWER
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIRE
+-      power: 70
++      power: 65
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.09
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "flamethrower"
+-      durationMs: 2200
+-      damageWindowStartMs: 1500
+-      damageWindowEndMs: 1700
++      durationMs: 2000
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 1500
+       energyDelta: -50
+     }
+   }
+@@ -182700,9 +182700,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "dig"
+-      durationMs: 4700
+-      damageWindowStartMs: 2800
+-      damageWindowEndMs: 4500
++      durationMs: 4500
++      damageWindowStartMs: 2600
++      damageWindowEndMs: 4300
+       energyDelta: -50
+     }
+   }
+@@ -183788,16 +183788,16 @@
+       movementId: PSYBEAM
+       animationId: 5
+       pokemonType: POKEMON_TYPE_PSYCHIC
+-      power: 70
++      power: 65
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.065
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "psybeam"
+-      durationMs: 3200
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 2700
++      durationMs: 3000
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 2500
+       energyDelta: -50
+     }
+   }
+@@ -184018,9 +184018,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "earthquake"
+-      durationMs: 3600
+-      damageWindowStartMs: 2700
+-      damageWindowEndMs: 3500
++      durationMs: 3500
++      damageWindowStartMs: 2600
++      damageWindowEndMs: 3400
+       energyDelta: -100
+     }
+   }
+@@ -184234,16 +184234,16 @@
+       movementId: STONE_EDGE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_ROCK
+-      power: 100
++      power: 105
+       accuracyChance: 1
+       criticalChance: 0.5
+       staminaLossScalar: 0.1
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "stone_edge"
+-      durationMs: 2300
+-      damageWindowStartMs: 700
+-      damageWindowEndMs: 2100
++      durationMs: 2500
++      damageWindowStartMs: 900
++      damageWindowEndMs: 2300
+       energyDelta: -100
+     }
+   }
+@@ -184460,9 +184460,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "ice_punch"
+-      durationMs: 1900
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 1600
++      durationMs: 2000
++      damageWindowStartMs: 1400
++      damageWindowEndMs: 1700
+       energyDelta: -33
+     }
+   }
+@@ -184683,9 +184683,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "heart_stamp"
+-      durationMs: 1900
+-      damageWindowStartMs: 1100
+-      damageWindowEndMs: 1600
++      durationMs: 2000
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 1700
+       energyDelta: -33
+     }
+   }
+@@ -185021,9 +185021,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "flash_cannon"
+-      durationMs: 2700
+-      damageWindowStartMs: 1600
+-      damageWindowEndMs: 2500
++      durationMs: 2500
++      damageWindowStartMs: 1400
++      damageWindowEndMs: 2300
+       energyDelta: -100
+     }
+   }
+@@ -185425,16 +185425,16 @@
+       movementId: DRILL_PECK
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FLYING
+-      power: 65
++      power: 70
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.08
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "drill_peck"
+-      durationMs: 2300
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2100
++      durationMs: 2500
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 2300
+       energyDelta: -33
+     }
+   }
+@@ -185751,16 +185751,16 @@
+       movementId: ICE_BEAM
+       animationId: 5
+       pokemonType: POKEMON_TYPE_ICE
+-      power: 90
++      power: 95
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.09
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "ice_beam"
+-      durationMs: 3300
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 2800
++      durationMs: 3500
++      damageWindowStartMs: 1500
++      damageWindowEndMs: 3000
+       energyDelta: -50
+     }
+   }
+@@ -185872,9 +185872,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "blizzard"
+-      durationMs: 3100
+-      damageWindowStartMs: 1500
+-      damageWindowEndMs: 2900
++      durationMs: 3000
++      damageWindowStartMs: 1400
++      damageWindowEndMs: 2800
+       energyDelta: -100
+     }
+   }
+@@ -186844,9 +186844,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "aerial_ace"
+-      durationMs: 2400
+-      damageWindowStartMs: 1900
+-      damageWindowEndMs: 2200
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 2300
+       energyDelta: -33
+     }
+   }
+@@ -187066,16 +187066,16 @@
+       movementId: DRILL_RUN
+       animationId: 5
+       pokemonType: POKEMON_TYPE_GROUND
+-      power: 80
++      power: 85
+       accuracyChance: 1
+       criticalChance: 0.25
+       staminaLossScalar: 0.08
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "drill_run"
+-      durationMs: 2800
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2600
++      durationMs: 3000
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 2800
+       energyDelta: -50
+     }
+   }
+@@ -187181,9 +187181,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "petal_blizzard"
+-      durationMs: 2600
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2300
++      durationMs: 2500
++      damageWindowStartMs: 1600
++      damageWindowEndMs: 2200
+       energyDelta: -100
+     }
+   }
+@@ -187298,9 +187298,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "mega_drain"
+-      durationMs: 2600
+-      damageWindowStartMs: 950
+-      damageWindowEndMs: 2000
++      durationMs: 2500
++      damageWindowStartMs: 850
++      damageWindowEndMs: 1900
+       energyDelta: -50
+     }
+   }
+@@ -187506,16 +187506,16 @@
+       movementId: BUG_BUZZ
+       animationId: 5
+       pokemonType: POKEMON_TYPE_BUG
+-      power: 100
++      power: 95
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.09
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "bug_buzz"
+-      durationMs: 3700
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3100
++      durationMs: 3500
++      damageWindowStartMs: 1800
++      damageWindowEndMs: 2900
+       energyDelta: -50
+     }
+   }
+@@ -187733,16 +187733,16 @@
+       movementId: POISON_FANG
+       animationId: 5
+       pokemonType: POKEMON_TYPE_POISON
+-      power: 35
++      power: 30
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.05
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "poison_fang"
+-      durationMs: 1700
+-      damageWindowStartMs: 900
+-      damageWindowEndMs: 1400
++      durationMs: 1500
++      damageWindowStartMs: 700
++      damageWindowEndMs: 1200
+       energyDelta: -33
+     }
+   }
+@@ -188036,16 +188036,16 @@
+       movementId: NIGHT_SLASH
+       animationId: 5
+       pokemonType: POKEMON_TYPE_DARK
+-      power: 50
++      power: 45
+       accuracyChance: 1
+       criticalChance: 0.25
+       staminaLossScalar: 0.07
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "night_slash"
+-      durationMs: 2200
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 2000
++      durationMs: 2000
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 1800
+       energyDelta: -33
+     }
+   }
+@@ -188743,9 +188743,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "bubble_beam"
+-      durationMs: 1900
+-      damageWindowStartMs: 1450
+-      damageWindowEndMs: 1700
++      durationMs: 2000
++      damageWindowStartMs: 1550
++      damageWindowEndMs: 1800
+       energyDelta: -33
+     }
+   }
+@@ -189055,16 +189055,16 @@
+       movementId: SUBMISSION
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 60
++      power: 55
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.08
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "submission"
+-      durationMs: 2200
+-      damageWindowStartMs: 1800
+-      damageWindowEndMs: 2000
++      durationMs: 2000
++      damageWindowStartMs: 1600
++      damageWindowEndMs: 1800
+       energyDelta: -50
+     }
+   }
+@@ -189480,9 +189480,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "low_sweep"
+-      durationMs: 1900
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 1650
++      durationMs: 2000
++      damageWindowStartMs: 1400
++      damageWindowEndMs: 1750
+       energyDelta: -33
+     }
+   }
+@@ -189596,9 +189596,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "aqua_jet"
+-      durationMs: 2600
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2100
++      durationMs: 2500
++      damageWindowStartMs: 1600
++      damageWindowEndMs: 2000
+       energyDelta: -33
+     }
+   }
+@@ -189732,9 +189732,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "aqua_tail"
+-      durationMs: 1900
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 1650
++      durationMs: 2000
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 1750
+       energyDelta: -33
+     }
+   }
+@@ -190043,9 +190043,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "seed_bomb"
+-      durationMs: 2100
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 1900
++      durationMs: 2000
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 1800
+       energyDelta: -33
+     }
+   }
+@@ -190362,16 +190362,16 @@
+       movementId: PSYSHOCK
+       animationId: 5
+       pokemonType: POKEMON_TYPE_PSYCHIC
+-      power: 65
++      power: 60
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.08
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "psyshock"
+-      durationMs: 2700
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 2600
++      durationMs: 2500
++      damageWindowStartMs: 1800
++      damageWindowEndMs: 2400
+       energyDelta: -33
+     }
+   }
+@@ -191024,16 +191024,16 @@
+       movementId: ROCK_TOMB
+       animationId: 5
+       pokemonType: POKEMON_TYPE_ROCK
+-      power: 70
++      power: 65
+       accuracyChance: 1
+       criticalChance: 0.25
+       staminaLossScalar: 0.06
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "rock_tomb"
+-      durationMs: 3200
+-      damageWindowStartMs: 2250
+-      damageWindowEndMs: 3000
++      durationMs: 3000
++      damageWindowStartMs: 2050
++      damageWindowEndMs: 2800
+       energyDelta: -50
+     }
+   }
+@@ -191245,16 +191245,16 @@
+       movementId: ROCK_SLIDE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_ROCK
+-      power: 80
++      power: 75
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.075
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "rock_slide"
+-      durationMs: 2700
+-      damageWindowStartMs: 1500
+-      damageWindowEndMs: 2600
++      durationMs: 2500
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 2400
+       energyDelta: -50
+     }
+   }
+@@ -191479,9 +191479,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "power_gem"
+-      durationMs: 2900
+-      damageWindowStartMs: 1950
+-      damageWindowEndMs: 2700
++      durationMs: 3000
++      damageWindowStartMs: 2050
++      damageWindowEndMs: 2800
+       energyDelta: -50
+     }
+   }
+@@ -191738,9 +191738,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "shadow_sneak"
+-      durationMs: 2900
+-      damageWindowStartMs: 2200
+-      damageWindowEndMs: 2700
++      durationMs: 3000
++      damageWindowStartMs: 2300
++      damageWindowEndMs: 2800
+       energyDelta: -33
+     }
+   }
+@@ -191946,16 +191946,16 @@
+       movementId: SHADOW_PUNCH
+       animationId: 5
+       pokemonType: POKEMON_TYPE_GHOST
+-      power: 40
++      power: 35
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.06
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "shadow_punch"
+-      durationMs: 1700
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 1500
++      durationMs: 1500
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 1300
+       energyDelta: -33
+     }
+   }
+@@ -192380,16 +192380,16 @@
+       movementId: OMINOUS_WIND
+       animationId: 5
+       pokemonType: POKEMON_TYPE_GHOST
+-      power: 50
++      power: 55
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.06
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "ominous_wind"
+-      durationMs: 2300
+-      damageWindowStartMs: 1850
+-      damageWindowEndMs: 2100
++      durationMs: 2500
++      damageWindowStartMs: 2050
++      damageWindowEndMs: 2300
+       energyDelta: -33
+     }
+   }
+@@ -193035,16 +193035,16 @@
+       movementId: MAGNET_BOMB
+       animationId: 5
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 70
++      power: 75
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.06
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "magnet_bomb"
+-      durationMs: 2800
+-      damageWindowStartMs: 2200
+-      damageWindowEndMs: 2600
++      durationMs: 3000
++      damageWindowStartMs: 2400
++      damageWindowEndMs: 2800
+       energyDelta: -33
+     }
+   }
+@@ -193266,9 +193266,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "iron_head"
+-      durationMs: 1900
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 1700
++      durationMs: 2000
++      damageWindowStartMs: 1400
++      damageWindowEndMs: 1800
+       energyDelta: -50
+     }
+   }
+@@ -193574,7 +193574,7 @@
+       movementId: PARABOLIC_CHARGE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_ELECTRIC
+-      power: 65
++      power: 70
+       accuracyChance: 1
+       criticalChance: 0.05
+       healScalar: 0.5
+@@ -193582,9 +193582,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "parabolic_charge"
+-      durationMs: 2800
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 2400
++      durationMs: 3000
++      damageWindowStartMs: 1400
++      damageWindowEndMs: 2600
+       energyDelta: -50
+     }
+   }
+@@ -194205,16 +194205,16 @@
+       movementId: THUNDER_PUNCH
+       animationId: 5
+       pokemonType: POKEMON_TYPE_ELECTRIC
+-      power: 45
++      power: 50
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.075
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "thunder_punch"
+-      durationMs: 1800
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 1550
++      durationMs: 2000
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 1750
+       energyDelta: -33
+     }
+   }
+@@ -194535,9 +194535,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "thunder"
+-      durationMs: 2400
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 2200
++      durationMs: 2500
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 2300
+       energyDelta: -100
+     }
+   }
+@@ -195301,16 +195301,16 @@
+       movementId: TWISTER
+       animationId: 5
+       pokemonType: POKEMON_TYPE_DRAGON
+-      power: 45
++      power: 50
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.04
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "twister"
+-      durationMs: 2800
+-      damageWindowStartMs: 950
+-      damageWindowEndMs: 2600
++      durationMs: 3000
++      damageWindowStartMs: 1150
++      damageWindowEndMs: 2800
+       energyDelta: -33
+     }
+   }
+@@ -195981,9 +195981,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "dragon_pulse"
+-      durationMs: 3600
+-      damageWindowStartMs: 2150
+-      damageWindowEndMs: 3300
++      durationMs: 3500
++      damageWindowStartMs: 2050
++      damageWindowEndMs: 3200
+       energyDelta: -50
+     }
+   }
+@@ -196218,16 +196218,16 @@
+       movementId: DRAGON_CLAW
+       animationId: 5
+       pokemonType: POKEMON_TYPE_DRAGON
+-      power: 50
++      power: 45
+       accuracyChance: 1
+       criticalChance: 0.25
+       staminaLossScalar: 0.08
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "dragon_claw"
+-      durationMs: 1700
+-      damageWindowStartMs: 1100
+-      damageWindowEndMs: 1300
++      durationMs: 1500
++      damageWindowStartMs: 900
++      damageWindowEndMs: 1100
+       energyDelta: -33
+     }
+   }
+@@ -196543,9 +196543,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "disarming_voice"
+-      durationMs: 3900
+-      damageWindowStartMs: 3200
+-      damageWindowEndMs: 3500
++      durationMs: 4000
++      damageWindowStartMs: 3300
++      damageWindowEndMs: 3600
+       energyDelta: -33
+     }
+   }
+@@ -196655,9 +196655,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "draining_kiss"
+-      durationMs: 2600
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 1300
++      durationMs: 2500
++      damageWindowStartMs: 900
++      damageWindowEndMs: 1200
+       energyDelta: -50
+     }
+   }
+@@ -196880,9 +196880,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "moonblast"
+-      durationMs: 3900
+-      damageWindowStartMs: 2200
+-      damageWindowEndMs: 3700
++      durationMs: 4000
++      damageWindowStartMs: 2300
++      damageWindowEndMs: 3800
+       energyDelta: -100
+     }
+   }
+@@ -197001,9 +197001,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "play_rough"
+-      durationMs: 2900
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 2700
++      durationMs: 3000
++      damageWindowStartMs: 1400
++      damageWindowEndMs: 2800
+       energyDelta: -50
+     }
+   }
+@@ -197635,16 +197635,16 @@
+       movementId: SLUDGE_BOMB
+       animationId: 5
+       pokemonType: POKEMON_TYPE_POISON
+-      power: 80
++      power: 85
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.09
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "sludge_bomb"
+-      durationMs: 2300
+-      damageWindowStartMs: 1100
+-      damageWindowEndMs: 2100
++      durationMs: 2500
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 2300
+       energyDelta: -50
+     }
+   }
+@@ -197852,16 +197852,16 @@
+       movementId: SLUDGE_WAVE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_POISON
+-      power: 110
++      power: 105
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.095
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "sludge_wave"
+-      durationMs: 3200
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3000
++      durationMs: 3000
++      damageWindowStartMs: 1800
++      damageWindowEndMs: 2800
+       energyDelta: -100
+     }
+   }
+@@ -198089,9 +198089,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "gunk_shot"
+-      durationMs: 3100
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2700
++      durationMs: 3000
++      damageWindowStartMs: 1600
++      damageWindowEndMs: 2600
+       energyDelta: -100
+     }
+   }
+@@ -198324,9 +198324,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "bone_club"
+-      durationMs: 1600
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 1400
++      durationMs: 1500
++      damageWindowStartMs: 900
++      damageWindowEndMs: 1300
+       energyDelta: -33
+     }
+   }
+@@ -198993,16 +198993,16 @@
+       movementId: MUD_BOMB
+       animationId: 5
+       pokemonType: POKEMON_TYPE_GROUND
+-      power: 55
++      power: 60
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.065
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "mud_bomb"
+-      durationMs: 2300
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2100
++      durationMs: 2500
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 2300
+       energyDelta: -33
+     }
+   }
+@@ -199613,9 +199613,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "signal_beam"
+-      durationMs: 2900
+-      damageWindowStartMs: 1800
+-      damageWindowEndMs: 2600
++      durationMs: 3000
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 2700
+       energyDelta: -50
+     }
+   }
+@@ -199836,9 +199836,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "x_scissor"
+-      durationMs: 1600
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 1400
++      durationMs: 1500
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 1300
+       energyDelta: -33
+     }
+   }
+@@ -200150,9 +200150,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "flame_charge"
+-      durationMs: 3800
+-      damageWindowStartMs: 2900
+-      damageWindowEndMs: 3450
++      durationMs: 4000
++      damageWindowStartMs: 3100
++      damageWindowEndMs: 3650
+       energyDelta: -33
+     }
+   }
+@@ -200468,9 +200468,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "flame_burst"
+-      durationMs: 2600
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 2100
++      durationMs: 2500
++      damageWindowStartMs: 900
++      damageWindowEndMs: 2000
+       energyDelta: -50
+     }
+   }
+@@ -200689,9 +200689,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "fire_blast"
+-      durationMs: 4200
+-      damageWindowStartMs: 3100
+-      damageWindowEndMs: 3900
++      durationMs: 4000
++      damageWindowStartMs: 2900
++      damageWindowEndMs: 3700
+       energyDelta: -100
+     }
+   }
+@@ -201003,16 +201003,16 @@
+       movementId: BRINE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 60
++      power: 65
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.065
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "brine"
+-      durationMs: 2300
+-      damageWindowStartMs: 1500
+-      damageWindowEndMs: 2100
++      durationMs: 2500
++      damageWindowStartMs: 1700
++      damageWindowEndMs: 2300
+       energyDelta: -50
+     }
+   }
+@@ -201216,16 +201216,16 @@
+       movementId: WATER_PULSE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 70
++      power: 65
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.06
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "water_pulse"
+-      durationMs: 3200
+-      damageWindowStartMs: 2200
+-      damageWindowEndMs: 2900
++      durationMs: 3000
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 2700
+       energyDelta: -50
+     }
+   }
+@@ -201519,16 +201519,16 @@
+       movementId: SCALD
+       animationId: 5
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 80
++      power: 75
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.08
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "scald"
+-      durationMs: 3700
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 3400
++      durationMs: 3500
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 3200
+       energyDelta: -50
+     }
+   }
+@@ -201734,16 +201734,16 @@
+       movementId: HYDRO_PUMP
+       animationId: 5
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 130
++      power: 135
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.11
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "hydro_pump"
+-      durationMs: 3300
+-      damageWindowStartMs: 900
+-      damageWindowEndMs: 3000
++      durationMs: 3500
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 3200
+       energyDelta: -100
+     }
+   }
+@@ -201953,16 +201953,16 @@
+       movementId: PSYCHIC
+       animationId: 5
+       pokemonType: POKEMON_TYPE_PSYCHIC
+-      power: 90
++      power: 95
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.09
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "psychic"
+-      durationMs: 2800
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 2600
++      durationMs: 3000
++      damageWindowStartMs: 1500
++      damageWindowEndMs: 2800
+       energyDelta: -50
+     }
+   }
+@@ -202069,16 +202069,16 @@
+       movementId: PSYSTRIKE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_PSYCHIC
+-      power: 90
++      power: 95
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.1
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "psystrike"
+-      durationMs: 2300
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 2000
++      durationMs: 2500
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 2200
+       energyDelta: -50
+     }
+   }
+@@ -202593,16 +202593,16 @@
+       movementId: ICY_WIND
+       animationId: 5
+       pokemonType: POKEMON_TYPE_ICE
+-      power: 60
++      power: 65
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.055
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "icy_wind"
+-      durationMs: 3300
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 2800
++      durationMs: 3500
++      damageWindowStartMs: 2200
++      damageWindowEndMs: 3000
+       energyDelta: -33
+     }
+   }
+@@ -203129,9 +203129,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "giga_drain"
+-      durationMs: 3900
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 2200
++      durationMs: 4000
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 2300
+       energyDelta: -100
+     }
+   }
+@@ -203346,16 +203346,16 @@
+       movementId: FIRE_PUNCH
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIRE
+-      power: 55
++      power: 50
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.075
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "fire_punch"
+-      durationMs: 2200
+-      damageWindowStartMs: 1500
+-      damageWindowEndMs: 1900
++      durationMs: 2000
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 1700
+       energyDelta: -33
+     }
+   }
+@@ -203634,9 +203634,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "solar_beam"
+-      durationMs: 4900
+-      damageWindowStartMs: 2700
+-      damageWindowEndMs: 4700
++      durationMs: 5000
++      damageWindowStartMs: 2800
++      damageWindowEndMs: 4800
+       energyDelta: -100
+     }
+   }
+@@ -203849,9 +203849,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "leaf_blade"
+-      durationMs: 2400
+-      damageWindowStartMs: 1250
+-      damageWindowEndMs: 2200
++      durationMs: 2500
++      damageWindowStartMs: 1350
++      damageWindowEndMs: 2300
+       energyDelta: -33
+     }
+   }
+@@ -204083,9 +204083,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "power_whip"
+-      durationMs: 2600
+-      damageWindowStartMs: 1250
+-      damageWindowEndMs: 2350
++      durationMs: 2500
++      damageWindowStartMs: 1150
++      damageWindowEndMs: 2250
+       energyDelta: -50
+     }
+   }
+@@ -204366,16 +204366,16 @@
+       movementId: AIR_CUTTER
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FLYING
+-      power: 60
++      power: 55
+       accuracyChance: 1
+       criticalChance: 0.25
+       staminaLossScalar: 0.06
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "air_cutter"
+-      durationMs: 2700
+-      damageWindowStartMs: 1800
+-      damageWindowEndMs: 2500
++      durationMs: 2500
++      damageWindowStartMs: 1600
++      damageWindowEndMs: 2300
+       energyDelta: -50
+     }
+   }
+@@ -204486,16 +204486,16 @@
+       movementId: HURRICANE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FLYING
+-      power: 110
++      power: 105
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.11
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "hurricane"
+-      durationMs: 2700
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 2400
++      durationMs: 2500
++      damageWindowStartMs: 1000
++      damageWindowEndMs: 2200
+       energyDelta: -100
+     }
+   }
+@@ -204807,9 +204807,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "brick_break"
+-      durationMs: 1600
+-      damageWindowStartMs: 800
+-      damageWindowEndMs: 1400
++      durationMs: 1500
++      damageWindowStartMs: 700
++      damageWindowEndMs: 1300
+       energyDelta: -33
+     }
+   }
+@@ -205133,16 +205133,16 @@
+       movementId: SWIFT
+       animationId: 5
+       pokemonType: POKEMON_TYPE_NORMAL
+-      power: 60
++      power: 65
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.06
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "swift"
+-      durationMs: 2800
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 2600
++      durationMs: 3000
++      damageWindowStartMs: 2200
++      damageWindowEndMs: 2800
+       energyDelta: -50
+     }
+   }
+@@ -205358,16 +205358,16 @@
+       movementId: HORN_ATTACK
+       animationId: 5
+       pokemonType: POKEMON_TYPE_NORMAL
+-      power: 40
++      power: 45
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.065
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "horn_attack"
+-      durationMs: 1850
+-      damageWindowStartMs: 800
+-      damageWindowEndMs: 1650
++      durationMs: 2000
++      damageWindowStartMs: 950
++      damageWindowEndMs: 1800
+       energyDelta: -33
+     }
+   }
+@@ -205586,16 +205586,16 @@
+       movementId: STOMP
+       animationId: 5
+       pokemonType: POKEMON_TYPE_NORMAL
+-      power: 55
++      power: 50
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.065
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "stomp"
+-      durationMs: 1700
+-      damageWindowStartMs: 1100
+-      damageWindowEndMs: 1500
++      durationMs: 1500
++      damageWindowStartMs: 900
++      damageWindowEndMs: 1300
+       energyDelta: -50
+     }
+   }
+@@ -206395,9 +206395,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "body_slam"
+-      durationMs: 1900
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 1700
++      durationMs: 2000
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 1800
+       energyDelta: -33
+     }
+   }
+@@ -206708,9 +206708,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "rest"
+-      durationMs: 1900
+-      damageWindowStartMs: 1500
+-      damageWindowEndMs: 1700
++      durationMs: 2000
++      damageWindowStartMs: 1600
++      damageWindowEndMs: 1800
+       energyDelta: -33
+     }
+   }
+@@ -206814,9 +206814,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "struggle"
+-      durationMs: 2200
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 2000
++      durationMs: 2000
++      damageWindowStartMs: 1000
++      damageWindowEndMs: 1800
      }
    }
  }
-@@ -113333,37 +113334,49 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-09-22T14:00:00"
--        eventEndTime: "2024-09-22T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_04_desc_ResearchDaySept24"
-+        eventStartTime: "2024-10-22T10:00:00"
-+        eventEndTime: "2024-11-03T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_04_desc_Halloween2TR24"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_04_TO_GIFT
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/20240925_PGO_Static-blog-infographics-16x9_Static_VB.png"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_ResearchDaySept24"
--        textRewardsKey: "text_rewards_key_ResearchDaySept24"
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/20240925_PGO_Static-blog-infographics-16x9_Static_VB.png"
-+        eventDatetimeRangeKey: "event_datetime_range_key_Halloween2TR24"
-+        textRewardsKey: "text_rewards_key_Halloween2TR24"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemon_encounter {
--            pokemon_id: ORANGURU
-+            pokemon_id: ROWLET
-+            pokemonDisplay {
-+              costume: 79
-+            }
-           }
-         }
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemon_encounter {
--            pokemon_id: PASSIMIAN
-+            pokemon_id: PIKACHU
-+            pokemonDisplay {
-+              costume: HALLOWEEN_2017
-+              form: PIKACHU_NORMAL
-+            }
-           }
-         }
-         iconRewards {
--          type: STARDUST
--          stardust: 2000
-+          type: POKEMON_ENCOUNTER
-+          pokemon_encounter {
-+            pokemon_id: FROAKIE
-+            pokemonDisplay {
-+              costume: 79
-+            }
-+          }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1727013600000
--        clientEventEndTimeUtcMs: 1727024400000
-+        clientEventStartTimeUtcMs: 1729591200000
-+        clientEventEndTimeUtcMs: 1730664000000
-       }
--      descriptionOverride: "item_event_ticket_04_desc_ResearchDaySept24"
-+      descriptionOverride: "item_event_ticket_04_desc_Halloween2TR24"
+@@ -207276,9 +207276,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "scald_blastoise"
+-      durationMs: 4700
+-      damageWindowStartMs: 2500
+-      damageWindowEndMs: 4600
++      durationMs: 4500
++      damageWindowStartMs: 2300
++      damageWindowEndMs: 4400
+       energyDelta: -100
+     }
+   }
+@@ -207494,9 +207494,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "wrap_green"
+-      durationMs: 2900
+-      damageWindowStartMs: 2050
+-      damageWindowEndMs: 2700
++      durationMs: 3000
++      damageWindowStartMs: 2150
++      damageWindowEndMs: 2800
+       energyDelta: -33
+     }
+   }
+@@ -207614,9 +207614,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "wrap_pink"
+-      durationMs: 2900
+-      damageWindowStartMs: 2050
+-      damageWindowEndMs: 2700
++      durationMs: 3000
++      damageWindowStartMs: 2150
++      damageWindowEndMs: 2800
+       energyDelta: -33
+     }
+   }
+@@ -218746,16 +218746,16 @@
+       movementId: FURY_CUTTER_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_BUG
+-      power: 3
++      power: 4
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "fury_cutter_fast"
+-      durationMs: 400
+-      damageWindowStartMs: 100
+-      damageWindowEndMs: 400
+-      energyDelta: 6
++      durationMs: 500
++      damageWindowStartMs: 200
++      damageWindowEndMs: 500
++      energyDelta: 8
      }
    }
  }
-@@ -113376,16 +113389,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-09-22T14:00:00"
--        eventEndTime: "2024-09-22T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_04_details_ResearchDaySept24"
-+        eventStartTime: "2024-10-22T10:00:00"
-+        eventEndTime: "2024-11-03T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_04_details_Halloween2TR24"
-         ticketItem: ITEM_EVENT_TICKET_04
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
--        clientEventStartTimeUtcMs: 1727013600000
--        clientEventEndTimeUtcMs: 1727024400000
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/20240925_PGO_Static-blog-infographics-16x9_Static_VB.png"
-+        clientEventStartTimeUtcMs: 1729591200000
-+        clientEventEndTimeUtcMs: 1730664000000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_04_details_ResearchDaySept24"
-+      descriptionOverride: "item_event_ticket_04_details_Halloween2TR24"
+@@ -221446,16 +221446,16 @@
+       movementId: SUCKER_PUNCH_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_DARK
+-      power: 7
++      power: 5
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "sucker_punch_fast"
+-      durationMs: 700
+-      damageWindowStartMs: 300
+-      damageWindowEndMs: 700
+-      energyDelta: 8
++      durationMs: 500
++      damageWindowStartMs: 100
++      damageWindowEndMs: 500
++      energyDelta: 6
      }
    }
  }
-@@ -113786,49 +113799,43 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-08-23T15:00:00"
--        eventEndTime: "2024-08-30T23:59:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_TTFinale24"
-+        eventStartTime: "2024-10-22T10:00:00"
-+        eventEndTime: "2024-11-03T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_Halloween1TR24"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_GRAY_TO_GIFT
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_triumphTogether_2024.jpg"
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-halloween-pt1-morpeko-2024.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo_triumphTogether_2024.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_TTFinale24"
--        textRewardsKey: "text_rewards_key_TTFinale24"
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Morpeko_Outfits_1024x512_nmo_v3.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_Halloween1TR24"
-+        textRewardsKey: "text_rewards_key_Halloween1TR24"
-         iconRewards {
--          type: POKEMON_ENCOUNTER
--          pokemon_encounter {
--            pokemon_id: PONYTA
--            pokemonDisplay {
--              costume: SPRING_2023_VALOR
--              form: PONYTA_NORMAL
--            }
-+          type: AVATAR_CLOTHING
-+          18 {
-+            1: "N_AVATAR_n_shirt_morpekohangryonesie_0"
-+            2: "N_DISPLAY_n_shirt_morpekohangryonesie_0"
-           }
-         }
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemon_encounter {
--            pokemon_id: ELEKID
--            pokemonDisplay {
--              costume: SPRING_2023_INSTINCT
--            }
-+            pokemon_id: SPIRITOMB
-           }
-         }
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemon_encounter {
--            pokemon_id: LAPRAS
-+            pokemon_id: MORPEKO
-             pokemonDisplay {
--              costume: SPRING_2023_MYSTIC
--              form: LAPRAS_NORMAL
-+              form: MORPEKO_FULL_BELLY
-             }
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1724425200000
--        clientEventEndTimeUtcMs: 1725062340000
-+        clientEventStartTimeUtcMs: 1729591200000
-+        clientEventEndTimeUtcMs: 1730664000000
-       }
-+      descriptionOverride: "item_event_ticket_gray_desc_Halloween1TR24"
+@@ -221781,16 +221781,16 @@
+       movementId: THUNDER_SHOCK_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_ELECTRIC
+-      power: 5
++      power: 4
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "thunder_shock_fast"
+-      durationMs: 600
+-      damageWindowStartMs: 300
+-      damageWindowEndMs: 600
+-      energyDelta: 8
++      durationMs: 500
++      damageWindowStartMs: 200
++      damageWindowEndMs: 500
++      energyDelta: 7
      }
    }
  }
-@@ -113841,16 +113848,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-08-23T15:00:00"
--        eventEndTime: "2024-08-30T23:59:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_TTFinale24"
-+        eventStartTime: "2024-10-22T10:00:00"
-+        eventEndTime: "2024-11-03T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_details_Halloween1TR24"
-         ticketItem: ITEM_EVENT_TICKET_GRAY
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_triumphTogether_2024.jpg"
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo_triumphTogether_2024.jpg"
--        clientEventStartTimeUtcMs: 1724425200000
--        clientEventEndTimeUtcMs: 1725062340000
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-halloween-pt1-morpeko-2024.jpg"
-+        clientEventStartTimeUtcMs: 1729591200000
-+        clientEventEndTimeUtcMs: 1730664000000
-       }
-       ignoreInventorySpace: true
-+      descriptionOverride: "item_event_ticket_gray_details_Halloween1TR24"
+@@ -222007,16 +222007,16 @@
+       movementId: SPARK_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_ELECTRIC
+-      power: 6
++      power: 4
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "spark_fast"
+-      durationMs: 700
+-      damageWindowStartMs: 300
+-      damageWindowEndMs: 700
+-      energyDelta: 9
++      durationMs: 500
++      damageWindowStartMs: 100
++      damageWindowEndMs: 500
++      energyDelta: 6
      }
    }
  }
-@@ -351919,12 +351926,12 @@
+@@ -222117,16 +222117,16 @@
+       movementId: LOW_KICK_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 6
++      power: 5
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "low_kick_fast"
+-      durationMs: 600
+-      damageWindowStartMs: 300
+-      damageWindowEndMs: 600
+-      energyDelta: 6
++      durationMs: 500
++      damageWindowStartMs: 200
++      damageWindowEndMs: 500
++      energyDelta: 5
+     }
+   }
+ }
+@@ -222333,16 +222333,16 @@
+       movementId: KARATE_CHOP_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 8
++      power: 10
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "karate_chop_fast"
+-      durationMs: 800
+-      damageWindowStartMs: 600
+-      damageWindowEndMs: 800
+-      energyDelta: 10
++      durationMs: 1000
++      damageWindowStartMs: 800
++      damageWindowEndMs: 1000
++      energyDelta: 13
+     }
+   }
+ }
+@@ -222823,16 +222823,16 @@
+       movementId: WING_ATTACK_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_FLYING
+-      power: 8
++      power: 10
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "wing_attack_fast"
+-      durationMs: 800
+-      damageWindowStartMs: 550
+-      damageWindowEndMs: 750
+-      energyDelta: 9
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 950
++      energyDelta: 11
+     }
+   }
+ }
+@@ -223599,16 +223599,16 @@
+       movementId: SHADOW_CLAW_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_GHOST
+-      power: 9
++      power: 6
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "shadow_claw_fast"
+-      durationMs: 700
+-      damageWindowStartMs: 250
+-      damageWindowEndMs: 500
+-      energyDelta: 6
++      durationMs: 500
++      damageWindowStartMs: 50
++      damageWindowEndMs: 300
++      energyDelta: 4
+     }
+   }
+ }
+@@ -223808,16 +223808,16 @@
+       movementId: VINE_WHIP_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_GRASS
+-      power: 7
++      power: 6
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "vine_whip_fast"
+-      durationMs: 600
+-      damageWindowStartMs: 350
+-      damageWindowEndMs: 600
+-      energyDelta: 6
++      durationMs: 500
++      damageWindowStartMs: 250
++      damageWindowEndMs: 500
++      energyDelta: 5
+     }
+   }
+ }
+@@ -224282,16 +224282,16 @@
+       movementId: MUD_SHOT_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_GROUND
+-      power: 5
++      power: 4
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "mud_shot_fast"
+-      durationMs: 600
+-      damageWindowStartMs: 350
+-      damageWindowEndMs: 550
+-      energyDelta: 7
++      durationMs: 500
++      damageWindowStartMs: 250
++      damageWindowEndMs: 450
++      energyDelta: 6
+     }
+   }
+ }
+@@ -224498,16 +224498,16 @@
+       movementId: ICE_SHARD_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_ICE
+-      power: 12
++      power: 10
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "ice_shard_fast"
+-      durationMs: 1200
+-      damageWindowStartMs: 600
+-      damageWindowEndMs: 900
+-      energyDelta: 12
++      durationMs: 1000
++      damageWindowStartMs: 400
++      damageWindowEndMs: 700
++      energyDelta: 10
+     }
+   }
+ }
+@@ -224732,16 +224732,16 @@
+       movementId: FROST_BREATH_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_ICE
+-      power: 10
++      power: 11
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "frost_breath_fast"
+-      durationMs: 900
+-      damageWindowStartMs: 450
+-      damageWindowEndMs: 750
+-      energyDelta: 8
++      durationMs: 1000
++      damageWindowStartMs: 550
++      damageWindowEndMs: 850
++      energyDelta: 9
+     }
+   }
+ }
+@@ -224837,16 +224837,16 @@
+       movementId: QUICK_ATTACK_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_NORMAL
+-      power: 8
++      power: 10
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "quick_attack_fast"
+-      durationMs: 800
+-      damageWindowStartMs: 250
+-      damageWindowEndMs: 550
+-      energyDelta: 10
++      durationMs: 1000
++      damageWindowStartMs: 450
++      damageWindowEndMs: 750
++      energyDelta: 13
+     }
+   }
+ }
+@@ -225401,16 +225401,16 @@
+       movementId: POUND_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_NORMAL
+-      power: 7
++      power: 6
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "pound_fast"
+-      durationMs: 600
+-      damageWindowStartMs: 340
+-      damageWindowEndMs: 540
+-      energyDelta: 6
++      durationMs: 500
++      damageWindowStartMs: 240
++      damageWindowEndMs: 440
++      energyDelta: 5
+     }
+   }
+ }
+@@ -225778,16 +225778,16 @@
+       movementId: POISON_JAB_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_POISON
+-      power: 10
++      power: 13
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "poison_jab_fast"
+-      durationMs: 800
+-      damageWindowStartMs: 200
+-      damageWindowEndMs: 800
+-      energyDelta: 7
++      durationMs: 1000
++      damageWindowStartMs: 400
++      damageWindowEndMs: 1000
++      energyDelta: 9
+     }
+   }
+ }
+@@ -225894,16 +225894,16 @@
+       movementId: ACID_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_POISON
+-      power: 9
++      power: 11
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "acid_fast"
+-      durationMs: 800
+-      damageWindowStartMs: 400
+-      damageWindowEndMs: 600
+-      energyDelta: 8
++      durationMs: 1000
++      damageWindowStartMs: 600
++      damageWindowEndMs: 800
++      energyDelta: 10
+     }
+   }
+ }
+@@ -226198,16 +226198,16 @@
+       movementId: PSYCHO_CUT_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_PSYCHIC
+-      power: 5
++      power: 4
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "psycho_cut_fast"
+-      durationMs: 600
+-      damageWindowStartMs: 370
+-      damageWindowEndMs: 570
+-      energyDelta: 8
++      durationMs: 500
++      damageWindowStartMs: 270
++      damageWindowEndMs: 470
++      energyDelta: 7
+     }
+   }
+ }
+@@ -226313,16 +226313,16 @@
+       movementId: ROCK_THROW_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_ROCK
+-      power: 12
++      power: 13
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "rock_throw_fast"
+-      durationMs: 900
+-      damageWindowStartMs: 500
+-      damageWindowEndMs: 800
+-      energyDelta: 7
++      durationMs: 1000
++      damageWindowStartMs: 600
++      damageWindowEndMs: 900
++      energyDelta: 8
+     }
+   }
+ }
+@@ -226530,16 +226530,16 @@
+       movementId: METAL_CLAW_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 8
++      power: 6
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "metal_claw_fast"
+-      durationMs: 700
+-      damageWindowStartMs: 430
+-      damageWindowEndMs: 630
+-      energyDelta: 7
++      durationMs: 500
++      damageWindowStartMs: 230
++      damageWindowEndMs: 430
++      energyDelta: 5
+     }
+   }
+ }
+@@ -226746,16 +226746,16 @@
+       movementId: BULLET_PUNCH_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 9
++      power: 10
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "bullet_punch_fast"
+-      durationMs: 900
+-      damageWindowStartMs: 300
+-      damageWindowEndMs: 900
+-      energyDelta: 10
++      durationMs: 1000
++      damageWindowStartMs: 400
++      damageWindowEndMs: 1000
++      energyDelta: 11
+     }
+   }
+ }
+@@ -227243,10 +227243,10 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "splash_fast"
+-      durationMs: 1730
+-      damageWindowStartMs: 1030
+-      damageWindowEndMs: 1230
+-      energyDelta: 20
++      durationMs: 1500
++      damageWindowStartMs: 800
++      damageWindowEndMs: 1000
++      energyDelta: 17
+     }
+   }
+ }
+@@ -227470,16 +227470,16 @@
+       movementId: MUD_SLAP_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_GROUND
+-      power: 18
++      power: 19
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "mud_slap_fast"
+-      durationMs: 1400
+-      damageWindowStartMs: 1150
+-      damageWindowEndMs: 1350
+-      energyDelta: 12
++      durationMs: 1500
++      damageWindowStartMs: 1250
++      damageWindowEndMs: 1450
++      energyDelta: 13
+     }
+   }
+ }
+@@ -227704,16 +227704,16 @@
+       movementId: ZEN_HEADBUTT_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_PSYCHIC
+-      power: 12
++      power: 11
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "zen_headbutt_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 850
+-      damageWindowEndMs: 1050
+-      energyDelta: 10
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 950
++      energyDelta: 9
+     }
+   }
+ }
+@@ -227912,16 +227912,16 @@
+       movementId: CONFUSION_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_PSYCHIC
+-      power: 20
++      power: 19
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "confusion_fast"
+-      durationMs: 1600
+-      damageWindowStartMs: 600
+-      damageWindowEndMs: 1600
+-      energyDelta: 15
++      durationMs: 1500
++      damageWindowStartMs: 500
++      damageWindowEndMs: 1500
++      energyDelta: 14
+     }
+   }
+ }
+@@ -228016,16 +228016,16 @@
+       movementId: POISON_STING_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_POISON
+-      power: 5
++      power: 4
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "poison_sting_fast"
+-      durationMs: 600
+-      damageWindowStartMs: 375
+-      damageWindowEndMs: 575
+-      energyDelta: 7
++      durationMs: 500
++      damageWindowStartMs: 275
++      damageWindowEndMs: 475
++      energyDelta: 6
+     }
+   }
+ }
+@@ -228131,16 +228131,16 @@
+       movementId: BUBBLE_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 12
++      power: 10
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "bubble_fast"
+-      durationMs: 1200
+-      damageWindowStartMs: 750
+-      damageWindowEndMs: 1000
+-      energyDelta: 14
++      durationMs: 1000
++      damageWindowStartMs: 550
++      damageWindowEndMs: 800
++      energyDelta: 12
+     }
+   }
+ }
+@@ -228241,16 +228241,16 @@
+       movementId: FEINT_ATTACK_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_DARK
+-      power: 10
++      power: 11
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "feint_attack_fast"
+-      durationMs: 900
+-      damageWindowStartMs: 750
+-      damageWindowEndMs: 900
+-      energyDelta: 9
++      durationMs: 1000
++      damageWindowStartMs: 850
++      damageWindowEndMs: 1000
++      energyDelta: 10
+     }
+   }
+ }
+@@ -228349,16 +228349,16 @@
+       movementId: STEEL_WING_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 11
++      power: 14
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "steel_wing_fast"
+-      durationMs: 800
+-      damageWindowStartMs: 500
+-      damageWindowEndMs: 800
+-      energyDelta: 6
++      durationMs: 1000
++      damageWindowStartMs: 700
++      damageWindowEndMs: 1000
++      energyDelta: 8
+     }
+   }
+ }
+@@ -228456,16 +228456,16 @@
+       movementId: FIRE_FANG_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_FIRE
+-      power: 12
++      power: 13
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "fire_fang_fast"
+-      durationMs: 900
+-      damageWindowStartMs: 640
+-      damageWindowEndMs: 840
+-      energyDelta: 8
++      durationMs: 1000
++      damageWindowStartMs: 740
++      damageWindowEndMs: 940
++      energyDelta: 9
+     }
+   }
+ }
+@@ -228573,16 +228573,16 @@
+       movementId: ROCK_SMASH_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 15
++      power: 17
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "rock_smash_fast"
+-      durationMs: 1300
+-      damageWindowStartMs: 550
+-      damageWindowEndMs: 800
+-      energyDelta: 10
++      durationMs: 1500
++      damageWindowStartMs: 750
++      damageWindowEndMs: 1000
++      energyDelta: 12
+     }
+   }
+ }
+@@ -228681,9 +228681,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "transform_fast"
+-      durationMs: 2230
+-      damageWindowStartMs: 300
+-      damageWindowEndMs: 700
++      durationMs: 2000
++      damageWindowStartMs: 70
++      damageWindowEndMs: 470
+     }
+   }
+ }
+@@ -228789,16 +228789,16 @@
+       movementId: COUNTER_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 12
++      power: 13
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "counter_fast"
+-      durationMs: 900
+-      damageWindowStartMs: 700
+-      damageWindowEndMs: 900
+-      energyDelta: 8
++      durationMs: 1000
++      damageWindowStartMs: 800
++      damageWindowEndMs: 1000
++      energyDelta: 9
+     }
+   }
+ }
+@@ -229401,16 +229401,16 @@
+       movementId: CLOSE_COMBAT
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 100
++      power: 105
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.04
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "close_combat"
+-      durationMs: 2300
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 2300
++      durationMs: 2500
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 2500
+       energyDelta: -100
+     }
+   }
+@@ -229715,16 +229715,16 @@
+       movementId: DYNAMIC_PUNCH
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 90
++      power: 85
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.04
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "dynamic_punch"
+-      durationMs: 2700
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 2700
++      durationMs: 2500
++      damageWindowStartMs: 1000
++      damageWindowEndMs: 2500
+       energyDelta: -50
+     }
+   }
+@@ -230170,9 +230170,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "aurora_beam"
+-      durationMs: 3550
+-      damageWindowStartMs: 3350
+-      damageWindowEndMs: 3550
++      durationMs: 3500
++      damageWindowStartMs: 3300
++      damageWindowEndMs: 3500
+       energyDelta: -50
+     }
+   }
+@@ -230436,16 +230436,16 @@
+       movementId: CHARGE_BEAM_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_ELECTRIC
+-      power: 8
++      power: 7
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "charge_beam_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 850
+-      damageWindowEndMs: 1050
+-      energyDelta: 15
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 950
++      energyDelta: 14
+     }
+   }
+ }
+@@ -230752,16 +230752,16 @@
+       movementId: VOLT_SWITCH_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_ELECTRIC
+-      power: 14
++      power: 13
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "volt_switch_fast"
+-      durationMs: 1600
+-      damageWindowStartMs: 700
+-      damageWindowEndMs: 900
+-      energyDelta: 21
++      durationMs: 1500
++      damageWindowStartMs: 600
++      damageWindowEndMs: 800
++      energyDelta: 20
+     }
+   }
+ }
+@@ -231084,9 +231084,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "wild_charge"
+-      durationMs: 2600
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2100
++      durationMs: 2500
++      damageWindowStartMs: 1600
++      damageWindowEndMs: 2000
+       energyDelta: -50
+     }
+   }
+@@ -231200,9 +231200,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "zap_cannon"
+-      durationMs: 3700
+-      damageWindowStartMs: 3000
+-      damageWindowEndMs: 3500
++      durationMs: 3500
++      damageWindowStartMs: 2800
++      damageWindowEndMs: 3300
+       energyDelta: -100
+     }
+   }
+@@ -231308,16 +231308,16 @@
+       movementId: DRAGON_TAIL_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_DRAGON
+-      power: 15
++      power: 14
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "dragon_tail_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 850
+-      damageWindowEndMs: 1050
+-      energyDelta: 9
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 950
++      energyDelta: 8
+     }
+   }
+ }
+@@ -231426,16 +231426,16 @@
+       movementId: AVALANCHE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_ICE
+-      power: 90
++      power: 85
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.04
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "avalanche"
+-      durationMs: 2700
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2100
++      durationMs: 2500
++      damageWindowStartMs: 1500
++      damageWindowEndMs: 1900
+       energyDelta: -50
+     }
+   }
+@@ -231577,16 +231577,16 @@
+       movementId: AIR_SLASH_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_FLYING
+-      power: 14
++      power: 12
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "air_slash_fast"
+-      durationMs: 1200
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 1200
+-      energyDelta: 10
++      durationMs: 1000
++      damageWindowStartMs: 800
++      damageWindowEndMs: 1000
++      energyDelta: 8
+     }
+   }
+ }
+@@ -232492,9 +232492,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "rock_blast"
+-      durationMs: 2100
+-      damageWindowStartMs: 1600
+-      damageWindowEndMs: 2000
++      durationMs: 2000
++      damageWindowStartMs: 1500
++      damageWindowEndMs: 1900
+       energyDelta: -33
+     }
+   }
+@@ -232706,16 +232706,16 @@
+       movementId: INFESTATION_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_BUG
+-      power: 10
++      power: 9
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "infestation_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 850
+-      damageWindowEndMs: 1050
+-      energyDelta: 14
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 950
++      energyDelta: 13
+     }
+   }
+ }
+@@ -233182,16 +233182,16 @@
+       movementId: SILVER_WIND
+       animationId: 5
+       pokemonType: POKEMON_TYPE_BUG
+-      power: 70
++      power: 65
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.04
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "silver_wind"
+-      durationMs: 3700
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 3500
++      durationMs: 3500
++      damageWindowStartMs: 1500
++      damageWindowEndMs: 3300
+       energyDelta: -33
+     }
+   }
+@@ -233401,16 +233401,16 @@
+       movementId: ASTONISH_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_GHOST
+-      power: 8
++      power: 7
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "astonish_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 700
+-      damageWindowEndMs: 1050
+-      energyDelta: 14
++      durationMs: 1000
++      damageWindowStartMs: 600
++      damageWindowEndMs: 950
++      energyDelta: 13
+     }
+   }
+ }
+@@ -233709,16 +233709,16 @@
+       movementId: HEX_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_GHOST
+-      power: 10
++      power: 8
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "hex_fast"
+-      durationMs: 1200
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 1200
+-      energyDelta: 16
++      durationMs: 1000
++      damageWindowStartMs: 800
++      damageWindowEndMs: 1000
++      energyDelta: 13
+     }
+   }
+ }
+@@ -234031,9 +234031,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "night_shade"
+-      durationMs: 2600
+-      damageWindowStartMs: 2100
+-      damageWindowEndMs: 2500
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 2400
+       energyDelta: -50
+     }
+   }
+@@ -234131,16 +234131,16 @@
+       movementId: IRON_TAIL_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 15
++      power: 14
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "iron_tail_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 850
+-      damageWindowEndMs: 1050
+-      energyDelta: 7
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 950
++      energyDelta: 6
+     }
+   }
+ }
+@@ -234236,16 +234236,16 @@
+       movementId: GYRO_BALL
+       animationId: 5
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 80
++      power: 85
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.04
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "gyro_ball"
+-      durationMs: 3300
+-      damageWindowStartMs: 3000
+-      damageWindowEndMs: 3300
++      durationMs: 3500
++      damageWindowStartMs: 3200
++      damageWindowEndMs: 3500
+       energyDelta: -50
+     }
+   }
+@@ -234351,9 +234351,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "heavy_slam"
+-      durationMs: 2100
+-      damageWindowStartMs: 1500
+-      damageWindowEndMs: 1900
++      durationMs: 2000
++      damageWindowStartMs: 1400
++      damageWindowEndMs: 1800
+       energyDelta: -50
+     }
+   }
+@@ -234450,16 +234450,16 @@
+       movementId: FIRE_SPIN_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_FIRE
+-      power: 14
++      power: 13
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "fire_spin_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 850
+-      damageWindowEndMs: 1050
+-      energyDelta: 10
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 950
++      energyDelta: 9
+     }
+   }
+ }
+@@ -234673,16 +234673,16 @@
+       movementId: BULLET_SEED_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_GRASS
+-      power: 8
++      power: 7
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "bullet_seed_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 850
+-      damageWindowEndMs: 1050
+-      energyDelta: 14
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 950
++      energyDelta: 13
+     }
+   }
+ }
+@@ -234790,9 +234790,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "grass_knot"
+-      durationMs: 2600
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2600
++      durationMs: 2500
++      damageWindowStartMs: 1600
++      damageWindowEndMs: 2500
+       energyDelta: -50
+     }
+   }
+@@ -234910,9 +234910,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "energy_ball"
+-      durationMs: 3900
+-      damageWindowStartMs: 3000
+-      damageWindowEndMs: 3800
++      durationMs: 4000
++      damageWindowStartMs: 3100
++      damageWindowEndMs: 3900
+       energyDelta: -50
+     }
+   }
+@@ -235117,16 +235117,16 @@
+       movementId: EXTRASENSORY_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_PSYCHIC
+-      power: 12
++      power: 11
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "extrasensory_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 850
+-      damageWindowEndMs: 1050
+-      energyDelta: 12
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 950
++      energyDelta: 11
+     }
+   }
+ }
+@@ -235337,16 +235337,16 @@
+       movementId: FUTURESIGHT
+       animationId: 5
+       pokemonType: POKEMON_TYPE_PSYCHIC
+-      power: 120
++      power: 115
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.04
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "futuresight"
+-      durationMs: 2700
+-      damageWindowStartMs: 1400
+-      damageWindowEndMs: 2700
++      durationMs: 2500
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 2500
+       energyDelta: -100
+     }
+   }
+@@ -235569,9 +235569,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "mirror_coat"
+-      durationMs: 2600
+-      damageWindowStartMs: 2300
+-      damageWindowEndMs: 2500
++      durationMs: 2500
++      damageWindowStartMs: 2200
++      damageWindowEndMs: 2400
+       energyDelta: -50
+     }
+   }
+@@ -235672,9 +235672,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "outrage"
+-      durationMs: 3900
+-      damageWindowStartMs: 2500
+-      damageWindowEndMs: 3700
++      durationMs: 4000
++      damageWindowStartMs: 2600
++      damageWindowEndMs: 3800
+       energyDelta: -50
+     }
+   }
+@@ -235784,16 +235784,16 @@
+       movementId: SNARL_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_DARK
+-      power: 12
++      power: 11
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "snarl_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 850
+-      damageWindowEndMs: 1050
+-      energyDelta: 14
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 950
++      energyDelta: 13
+     }
+   }
+ }
+@@ -235895,16 +235895,16 @@
+       movementId: CRUNCH
+       animationId: 5
+       pokemonType: POKEMON_TYPE_DARK
+-      power: 70
++      power: 65
+       accuracyChance: 1
+       criticalChance: 0.05
+       staminaLossScalar: 0.04
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "crunch"
+-      durationMs: 3200
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 3000
++      durationMs: 3000
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 2800
+       energyDelta: -33
+     }
+   }
+@@ -236475,16 +236475,16 @@
+       movementId: TAKE_DOWN_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_NORMAL
+-      power: 8
++      power: 7
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "take_down_fast"
+-      durationMs: 1200
+-      damageWindowStartMs: 950
+-      damageWindowEndMs: 1100
+-      energyDelta: 10
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 900
++      energyDelta: 8
+     }
+   }
+ }
+@@ -236737,16 +236737,16 @@
+       movementId: WATERFALL_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 16
++      power: 13
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "waterfall_fast"
+-      durationMs: 1200
+-      damageWindowStartMs: 950
+-      damageWindowEndMs: 1100
+-      energyDelta: 8
++      durationMs: 1000
++      damageWindowStartMs: 750
++      damageWindowEndMs: 900
++      energyDelta: 7
+     }
+   }
+ }
+@@ -236841,15 +236841,15 @@
+       movementId: SURF
+       animationId: 5
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 65
++      power: 60
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "surf"
+-      durationMs: 1700
+-      damageWindowStartMs: 1400
+-      damageWindowEndMs: 1600
++      durationMs: 1500
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 1400
+       energyDelta: -50
+     }
+   }
+@@ -236969,9 +236969,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "draco_meteor"
+-      durationMs: 3600
+-      damageWindowStartMs: 3000
+-      damageWindowEndMs: 3500
++      durationMs: 3500
++      damageWindowStartMs: 2900
++      damageWindowEndMs: 3400
+       energyDelta: -100
+     }
+   }
+@@ -237067,15 +237067,15 @@
+       movementId: DOOM_DESIRE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 70
++      power: 65
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "doom_desire"
+-      durationMs: 1700
+-      damageWindowStartMs: 1400
+-      damageWindowEndMs: 1600
++      durationMs: 1500
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 1400
+       energyDelta: -33
+     }
+   }
+@@ -237190,10 +237190,10 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "yawn_fast"
+-      durationMs: 1700
+-      damageWindowStartMs: 1400
+-      damageWindowEndMs: 1600
+-      energyDelta: 15
++      durationMs: 1500
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 1400
++      energyDelta: 13
+     }
+   }
+ }
+@@ -237395,15 +237395,15 @@
+       movementId: ORIGIN_PULSE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 130
++      power: 120
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "origin_pulse"
+-      durationMs: 1700
+-      damageWindowStartMs: 1400
+-      damageWindowEndMs: 1600
++      durationMs: 1500
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 1400
+       energyDelta: -100
+     }
+   }
+@@ -237511,15 +237511,15 @@
+       movementId: PRECIPICE_BLADES
+       animationId: 5
+       pokemonType: POKEMON_TYPE_GROUND
+-      power: 130
++      power: 120
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "precipice_blades"
+-      durationMs: 1700
+-      damageWindowStartMs: 1400
+-      damageWindowEndMs: 1600
++      durationMs: 1500
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 1400
+       energyDelta: -100
+     }
+   }
+@@ -237615,16 +237615,16 @@
+       movementId: PRESENT_FAST
+       animationId: 5
+       pokemonType: POKEMON_TYPE_NORMAL
+-      power: 5
++      power: 6
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "present_fast"
+-      durationMs: 1300
+-      damageWindowStartMs: 1100
+-      damageWindowEndMs: 1300
+-      energyDelta: 20
++      durationMs: 1500
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 1500
++      energyDelta: 23
+     }
+   }
+ }
+@@ -237728,9 +237728,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "weather_ball_fire"
+-      durationMs: 1600
+-      damageWindowStartMs: 1350
+-      damageWindowEndMs: 1600
++      durationMs: 1500
++      damageWindowStartMs: 1250
++      damageWindowEndMs: 1500
+       energyDelta: -33
+     }
+   }
+@@ -237846,9 +237846,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "weather_ball_ice"
+-      durationMs: 1600
+-      damageWindowStartMs: 1350
+-      damageWindowEndMs: 1600
++      durationMs: 1500
++      damageWindowStartMs: 1250
++      damageWindowEndMs: 1500
+       energyDelta: -33
+     }
+   }
+@@ -238058,9 +238058,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "weather_ball_rock"
+-      durationMs: 1600
+-      damageWindowStartMs: 1350
+-      damageWindowEndMs: 1600
++      durationMs: 1500
++      damageWindowStartMs: 1250
++      damageWindowEndMs: 1500
+       energyDelta: -33
+     }
+   }
+@@ -238274,9 +238274,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "weather_ball_water"
+-      durationMs: 1600
+-      damageWindowStartMs: 1350
+-      damageWindowEndMs: 1600
++      durationMs: 1500
++      damageWindowStartMs: 1250
++      damageWindowEndMs: 1500
+       energyDelta: -33
+     }
+   }
+@@ -238492,9 +238492,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "frenzy_plant"
+-      durationMs: 2600
+-      damageWindowStartMs: 2145
+-      damageWindowEndMs: 2550
++      durationMs: 2500
++      damageWindowStartMs: 2045
++      damageWindowEndMs: 2450
+       energyDelta: -50
+     }
+   }
+@@ -238696,16 +238696,16 @@
+       movementId: SMACK_DOWN_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_ROCK
+-      power: 16
++      power: 13
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "smack_down_fast"
+-      durationMs: 1200
+-      damageWindowStartMs: 800
+-      damageWindowEndMs: 1100
+-      energyDelta: 8
++      durationMs: 1000
++      damageWindowStartMs: 600
++      damageWindowEndMs: 900
++      energyDelta: 7
+     }
+   }
+ }
+@@ -238906,15 +238906,15 @@
+       movementId: BLAST_BURN
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIRE
+-      power: 110
++      power: 120
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "blast_burn"
+-      durationMs: 3300
+-      damageWindowStartMs: 2750
+-      damageWindowEndMs: 3200
++      durationMs: 3500
++      damageWindowStartMs: 2950
++      damageWindowEndMs: 3400
+       energyDelta: -50
+     }
+   }
+@@ -239027,9 +239027,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "hydro_cannon"
+-      durationMs: 1900
+-      damageWindowStartMs: 500
+-      damageWindowEndMs: 1600
++      durationMs: 2000
++      damageWindowStartMs: 600
++      damageWindowEndMs: 1700
+       energyDelta: -50
+     }
+   }
+@@ -239255,9 +239255,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "last_resort"
+-      durationMs: 2900
+-      damageWindowStartMs: 2700
+-      damageWindowEndMs: 2850
++      durationMs: 3000
++      damageWindowStartMs: 2800
++      damageWindowEndMs: 2950
+       energyDelta: -50
+     }
+   }
+@@ -239359,9 +239359,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "meteor_mash"
+-      durationMs: 2600
+-      damageWindowStartMs: 2300
+-      damageWindowEndMs: 2500
++      durationMs: 2500
++      damageWindowStartMs: 2200
++      damageWindowEndMs: 2400
+       energyDelta: -50
+     }
+   }
+@@ -239475,9 +239475,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "skull_bash"
+-      durationMs: 3100
+-      damageWindowStartMs: 1800
+-      damageWindowEndMs: 2300
++      durationMs: 3000
++      damageWindowStartMs: 1700
++      damageWindowEndMs: 2200
+       energyDelta: -100
+     }
+   }
+@@ -240117,9 +240117,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "earth_power"
+-      durationMs: 3600
+-      damageWindowStartMs: 2700
+-      damageWindowEndMs: 3400
++      durationMs: 3500
++      damageWindowStartMs: 2600
++      damageWindowEndMs: 3300
+       energyDelta: -50
+     }
+   }
+@@ -240331,9 +240331,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "crabhammer"
+-      durationMs: 1900
+-      damageWindowStartMs: 1500
+-      damageWindowEndMs: 1750
++      durationMs: 2000
++      damageWindowStartMs: 1600
++      damageWindowEndMs: 1850
+       energyDelta: -50
+     }
+   }
+@@ -240555,9 +240555,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "lunge"
+-      durationMs: 2900
+-      damageWindowStartMs: 2400
+-      damageWindowEndMs: 2700
++      durationMs: 3000
++      damageWindowStartMs: 2500
++      damageWindowEndMs: 2800
+       energyDelta: -33
+     }
+   }
+@@ -240835,9 +240835,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "crush_claw"
+-      durationMs: 1900
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 1700
++      durationMs: 2000
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 1800
+     }
+   }
+ }
+@@ -240933,15 +240933,15 @@
+       movementId: OCTAZOOKA
+       animationId: 5
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 50
++      power: 55
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "octazooka"
+-      durationMs: 2300
+-      damageWindowStartMs: 1300
+-      damageWindowEndMs: 1600
++      durationMs: 2500
++      damageWindowStartMs: 1500
++      damageWindowEndMs: 1800
+       energyDelta: -50
+     }
+   }
+@@ -241074,9 +241074,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "mirror_shot"
+-      durationMs: 2400
+-      damageWindowStartMs: 1800
+-      damageWindowEndMs: 2200
++      durationMs: 2500
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 2300
+       energyDelta: -33
+     }
+   }
+@@ -241540,15 +241540,15 @@
+       movementId: FELL_STINGER
+       animationId: 5
+       pokemonType: POKEMON_TYPE_BUG
+-      power: 50
++      power: 45
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "fell_stinger"
+-      durationMs: 2200
+-      damageWindowStartMs: 1800
+-      damageWindowEndMs: 2000
++      durationMs: 2000
++      damageWindowStartMs: 1600
++      damageWindowEndMs: 1800
+       energyDelta: -33
+     }
+   }
+@@ -241657,9 +241657,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "leaf_tornado"
+-      durationMs: 3100
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 2600
++      durationMs: 3000
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 2500
+       energyDelta: -33
+     }
+   }
+@@ -241876,9 +241876,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "drain_punch"
+-      durationMs: 2400
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 1500
++      durationMs: 2500
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 1600
+       energyDelta: -33
+     }
+   }
+@@ -241980,15 +241980,15 @@
+       movementId: SHADOW_BONE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_GHOST
+-      power: 80
++      power: 85
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "shadow_bone"
+-      durationMs: 2800
+-      damageWindowStartMs: 2250
+-      damageWindowEndMs: 2700
++      durationMs: 3000
++      damageWindowStartMs: 2450
++      damageWindowEndMs: 2900
+       energyDelta: -50
+     }
+   }
+@@ -242097,15 +242097,15 @@
+       movementId: MUDDY_WATER
+       animationId: 5
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 50
++      power: 45
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "muddy_water"
+-      durationMs: 2200
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 1900
++      durationMs: 2000
++      damageWindowStartMs: 1000
++      damageWindowEndMs: 1700
+       energyDelta: -33
+     }
+   }
+@@ -242200,15 +242200,15 @@
+       movementId: BLAZE_KICK
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIRE
+-      power: 45
++      power: 40
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "blaze_kick"
+-      durationMs: 1200
+-      damageWindowStartMs: 450
+-      damageWindowEndMs: 800
++      durationMs: 1000
++      damageWindowStartMs: 250
++      damageWindowEndMs: 600
+       energyDelta: -33
+     }
+   }
+@@ -242319,15 +242319,15 @@
+       movementId: RAZOR_SHELL
+       animationId: 5
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 45
++      power: 55
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "razor_shell"
+-      durationMs: 1300
+-      damageWindowStartMs: 650
+-      damageWindowEndMs: 1000
++      durationMs: 1500
++      damageWindowStartMs: 850
++      damageWindowEndMs: 1200
+       energyDelta: -33
+     }
+   }
+@@ -242875,9 +242875,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "giga_impact"
+-      durationMs: 4700
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 2400
++      durationMs: 4500
++      damageWindowStartMs: 800
++      damageWindowEndMs: 2200
+       energyDelta: -100
+     }
+   }
+@@ -243118,15 +243118,14 @@
+       movementId: RETURN
+       animationId: 5
+       pokemonType: POKEMON_TYPE_NORMAL
+-      power: 35
++      power: 25
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "return"
+-      durationMs: 700
+-      damageWindowStartMs: 100
+-      damageWindowEndMs: 350
++      durationMs: 500
++      damageWindowEndMs: 150
+       energyDelta: -33
+     }
+   }
+@@ -243250,9 +243249,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "synchronoise"
+-      durationMs: 2600
+-      damageWindowStartMs: 850
+-      damageWindowEndMs: 1600
++      durationMs: 2500
++      damageWindowStartMs: 750
++      damageWindowEndMs: 1500
+       energyDelta: -50
+     }
+   }
+@@ -243352,16 +243351,16 @@
+       movementId: LOCK_ON_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_NORMAL
+-      power: 1
++      power: 2
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "lock_on_fast"
+-      durationMs: 300
+-      damageWindowStartMs: 170
+-      damageWindowEndMs: 300
+-      energyDelta: 6
++      durationMs: 500
++      damageWindowStartMs: 370
++      damageWindowEndMs: 500
++      energyDelta: 10
+     }
+   }
+ }
+@@ -243465,16 +243464,16 @@
+       movementId: THUNDER_FANG_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_ELECTRIC
+-      power: 12
++      power: 10
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "thunder_fang_fast"
+-      durationMs: 1200
+-      damageWindowStartMs: 400
+-      damageWindowEndMs: 900
+-      energyDelta: 16
++      durationMs: 1000
++      damageWindowStartMs: 200
++      damageWindowEndMs: 700
++      energyDelta: 13
+     }
+   }
+ }
+@@ -245325,9 +245324,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "horn_drill"
+-      durationMs: 1900
+-      damageWindowStartMs: 500
+-      damageWindowEndMs: 1500
++      durationMs: 2000
++      damageWindowStartMs: 600
++      damageWindowEndMs: 1600
+       energyDelta: -25
+     }
+   }
+@@ -245537,9 +245536,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "fissure"
+-      durationMs: 2800
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 2300
++      durationMs: 3000
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 2500
+       energyDelta: -25
+     }
+   }
+@@ -245761,15 +245760,15 @@
+       movementId: SACRED_SWORD
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 55
++      power: 50
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "sacred_sword"
+-      durationMs: 1200
+-      damageWindowStartMs: 500
+-      damageWindowEndMs: 1000
++      durationMs: 1000
++      damageWindowStartMs: 300
++      damageWindowEndMs: 800
+       energyDelta: -33
+     }
+   }
+@@ -245993,15 +245992,15 @@
+       movementId: FLYING_PRESS
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 110
++      power: 115
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "flying_press"
+-      durationMs: 2300
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 2000
++      durationMs: 2500
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 2200
+       energyDelta: -50
+     }
+   }
+@@ -246209,15 +246208,15 @@
+       movementId: AURA_SPHERE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 90
++      power: 100
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "aura_sphere"
+-      durationMs: 1800
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 1600
++      durationMs: 2000
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 1800
+       energyDelta: -50
+     }
+   }
+@@ -246434,15 +246433,15 @@
+       movementId: PAYBACK
+       animationId: 5
+       pokemonType: POKEMON_TYPE_DARK
+-      power: 100
++      power: 95
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "payback"
+-      durationMs: 2200
+-      damageWindowStartMs: 1100
+-      damageWindowEndMs: 2000
++      durationMs: 2000
++      damageWindowStartMs: 900
++      damageWindowEndMs: 1800
+       energyDelta: -100
+     }
+   }
+@@ -246548,9 +246547,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "rock_wrecker"
+-      durationMs: 3600
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 2700
++      durationMs: 3500
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 2600
+       energyDelta: -50
+     }
+   }
+@@ -246698,9 +246697,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "aeroblast"
+-      durationMs: 3400
+-      damageWindowStartMs: 3200
+-      damageWindowEndMs: 3400
++      durationMs: 3500
++      damageWindowStartMs: 3300
++      damageWindowEndMs: 3500
+       energyDelta: -100
+     }
+   }
+@@ -247374,15 +247373,15 @@
+       movementId: FLY
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FLYING
+-      power: 80
++      power: 90
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "fly"
+-      durationMs: 1800
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 1500
++      durationMs: 2000
++      damageWindowStartMs: 1400
++      damageWindowEndMs: 1700
+       energyDelta: -50
+     }
+   }
+@@ -247489,15 +247488,15 @@
+       movementId: V_CREATE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIRE
+-      power: 95
++      power: 105
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "v_create"
+-      durationMs: 2800
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2500
++      durationMs: 3000
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 2700
+       energyDelta: -33
+     }
+   }
+@@ -248058,16 +248057,16 @@
+       movementId: INCINERATE_FAST
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FIRE
+-      power: 29
++      power: 32
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "incinerate_fast"
+-      durationMs: 2300
+-      damageWindowStartMs: 500
+-      damageWindowEndMs: 2300
+-      energyDelta: 20
++      durationMs: 2500
++      damageWindowStartMs: 700
++      damageWindowEndMs: 2500
++      energyDelta: 22
+     }
+   }
+ }
+@@ -248475,9 +248474,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "feather_dance"
+-      durationMs: 2800
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 2500
++      durationMs: 3000
++      damageWindowStartMs: 1900
++      damageWindowEndMs: 2700
+       energyDelta: -50
+     }
+   }
+@@ -248790,9 +248789,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "fairy_wind_fast"
+-      durationMs: 970
+-      damageWindowStartMs: 600
+-      damageWindowEndMs: 970
++      durationMs: 1000
++      damageWindowStartMs: 630
++      damageWindowEndMs: 1000
+       energyDelta: 13
+     }
+   }
+@@ -249338,9 +249337,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "weather_ball_normal"
+-      durationMs: 1600
+-      damageWindowStartMs: 1350
+-      damageWindowEndMs: 1600
++      durationMs: 1500
++      damageWindowStartMs: 1250
++      damageWindowEndMs: 1500
+       energyDelta: -33
+     }
+   }
+@@ -249445,15 +249444,15 @@
+       movementId: PSYCHIC_FANGS
+       animationId: 5
+       pokemonType: POKEMON_TYPE_PSYCHIC
+-      power: 30
++      power: 25
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "psychic_fangs"
+-      durationMs: 1200
+-      damageWindowStartMs: 400
+-      damageWindowEndMs: 1100
++      durationMs: 1000
++      damageWindowStartMs: 200
++      damageWindowEndMs: 900
+       energyDelta: -33
+     }
+   }
+@@ -250323,16 +250322,16 @@
+       movementId: MAGICAL_LEAF_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_GRASS
+-      power: 16
++      power: 17
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "magical_leaf_fast"
+-      durationMs: 1400
+-      damageWindowStartMs: 750
+-      damageWindowEndMs: 1300
+-      energyDelta: 16
++      durationMs: 1500
++      damageWindowStartMs: 850
++      damageWindowEndMs: 1400
++      energyDelta: 17
+     }
+   }
+ }
+@@ -250444,9 +250443,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "sacred_fire"
+-      durationMs: 2600
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 2400
++      durationMs: 2500
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 2300
+       energyDelta: -100
+     }
+   }
+@@ -250554,15 +250553,15 @@
+       movementId: ICICLE_SPEAR
+       animationId: 5
+       pokemonType: POKEMON_TYPE_ICE
+-      power: 60
++      power: 55
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "icicle_spear"
+-      durationMs: 2200
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 1800
++      durationMs: 2000
++      damageWindowStartMs: 1000
++      damageWindowEndMs: 1600
+       energyDelta: -33
+     }
+   }
+@@ -250808,9 +250807,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "aeroblast"
+-      durationMs: 3400
+-      damageWindowStartMs: 3200
+-      damageWindowEndMs: 3400
++      durationMs: 3500
++      damageWindowStartMs: 3300
++      damageWindowEndMs: 3500
+       energyDelta: -100
+     }
+   }
+@@ -250921,9 +250920,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "aeroblast"
+-      durationMs: 3400
+-      damageWindowStartMs: 3200
+-      damageWindowEndMs: 3400
++      durationMs: 3500
++      damageWindowStartMs: 3300
++      damageWindowEndMs: 3500
+       energyDelta: -100
+     }
+   }
+@@ -251042,9 +251041,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "sacred_fire"
+-      durationMs: 2600
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 2400
++      durationMs: 2500
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 2300
+       energyDelta: -100
+     }
+   }
+@@ -251196,9 +251195,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "sacred_fire"
+-      durationMs: 2600
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 2400
++      durationMs: 2500
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 2300
+       energyDelta: -100
+     }
+   }
+@@ -251960,9 +251959,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "brutal_swing"
+-      durationMs: 1900
+-      damageWindowStartMs: 1200
+-      damageWindowEndMs: 1600
++      durationMs: 2000
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 1700
+       energyDelta: -33
+     }
+   }
+@@ -252058,16 +252057,16 @@
+       movementId: ROLLOUT_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_ROCK
+-      power: 14
++      power: 15
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "rollout_fast"
+-      durationMs: 1400
+-      damageWindowStartMs: 960
+-      damageWindowEndMs: 1200
+-      energyDelta: 18
++      durationMs: 1500
++      damageWindowStartMs: 1060
++      damageWindowEndMs: 1300
++      energyDelta: 19
+     }
+   }
+ }
+@@ -252172,15 +252171,15 @@
+       movementId: SEED_FLARE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_GRASS
+-      power: 120
++      power: 115
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "seed_flare"
+-      durationMs: 2700
+-      damageWindowStartMs: 2500
+-      damageWindowEndMs: 2600
++      durationMs: 2500
++      damageWindowStartMs: 2300
++      damageWindowEndMs: 2400
+       energyDelta: -100
+     }
+   }
+@@ -252290,9 +252289,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "obstruct"
+-      durationMs: 1700
+-      damageWindowStartMs: 500
+-      damageWindowEndMs: 1600
++      durationMs: 1500
++      damageWindowStartMs: 300
++      damageWindowEndMs: 1400
+       energyDelta: -33
+     }
+   }
+@@ -252401,9 +252400,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "shadow_force"
+-      durationMs: 1900
+-      damageWindowStartMs: 1700
+-      damageWindowEndMs: 1900
++      durationMs: 2000
++      damageWindowStartMs: 1800
++      damageWindowEndMs: 2000
+       energyDelta: -100
+     }
+   }
+@@ -252611,9 +252610,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "meteor_beam"
+-      durationMs: 1900
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 1900
++      durationMs: 2000
++      damageWindowStartMs: 1100
++      damageWindowEndMs: 2000
+       energyDelta: -100
+     }
+   }
+@@ -252825,16 +252824,16 @@
+       movementId: WATER_SHURIKEN_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_WATER
+-      power: 10
++      power: 9
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "water_shuriken_fast"
+-      durationMs: 1100
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 1100
+-      energyDelta: 15
++      durationMs: 1000
++      damageWindowStartMs: 900
++      damageWindowEndMs: 1000
++      energyDelta: 14
+     }
+   }
+ }
+@@ -253319,9 +253318,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "fusion_flare"
+-      durationMs: 2200
+-      damageWindowStartMs: 1500
+-      damageWindowEndMs: 2000
++      durationMs: 2000
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 1800
+       energyDelta: -100
+     }
+   }
+@@ -253541,9 +253540,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "poltergeist"
+-      durationMs: 3600
+-      damageWindowStartMs: 2800
+-      damageWindowEndMs: 3000
++      durationMs: 3500
++      damageWindowStartMs: 2700
++      damageWindowEndMs: 2900
+       energyDelta: -100
+     }
+   }
+@@ -253755,15 +253754,15 @@
+       movementId: HIGH_HORSEPOWER
+       animationId: 5
+       pokemonType: POKEMON_TYPE_GROUND
+-      power: 110
++      power: 105
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "high_horsepower"
+-      durationMs: 1600
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 1200
++      durationMs: 1500
++      damageWindowStartMs: 900
++      damageWindowEndMs: 1100
+       energyDelta: -100
+     }
+   }
+@@ -254005,15 +254004,15 @@
+       movementId: BREAKING_SWIPE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_DRAGON
+-      power: 35
++      power: 45
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "breaking_swipe"
+-      durationMs: 800
+-      damageWindowStartMs: 270
+-      damageWindowEndMs: 700
++      durationMs: 1000
++      damageWindowStartMs: 470
++      damageWindowEndMs: 900
+       energyDelta: -33
+     }
+   }
+@@ -254131,15 +254130,15 @@
+       movementId: BOOMBURST
+       animationId: 5
+       pokemonType: POKEMON_TYPE_NORMAL
+-      power: 140
++      power: 150
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "boomburst"
+-      durationMs: 2300
+-      damageWindowStartMs: 1000
+-      damageWindowEndMs: 2000
++      durationMs: 2500
++      damageWindowStartMs: 1200
++      damageWindowEndMs: 2200
+       energyDelta: -100
+     }
+   }
+@@ -255404,16 +255403,16 @@
+       movementId: LEAFAGE_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_GRASS
+-      power: 9
++      power: 6
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "leafage_fast"
+-      durationMs: 700
+-      damageWindowStartMs: 400
+-      damageWindowEndMs: 900
+-      energyDelta: 6
++      durationMs: 500
++      damageWindowStartMs: 200
++      damageWindowEndMs: 700
++      energyDelta: 4
+     }
+   }
+ }
+@@ -256603,9 +256602,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "natures_madness"
+-      durationMs: 2100
+-      damageWindowStartMs: 1400
+-      damageWindowEndMs: 2000
++      durationMs: 2000
++      damageWindowStartMs: 1300
++      damageWindowEndMs: 1900
+       energyDelta: -50
+     }
+   }
+@@ -257253,15 +257252,15 @@
+       movementId: SCORCHING_SANDS
+       animationId: 5
+       pokemonType: POKEMON_TYPE_GROUND
+-      power: 95
++      power: 90
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "scorching_sands"
+-      durationMs: 3200
+-      damageWindowStartMs: 1600
+-      damageWindowEndMs: 2500
++      durationMs: 3000
++      damageWindowStartMs: 1400
++      damageWindowEndMs: 2300
+       energyDelta: -50
+     }
+   }
+@@ -257373,9 +257372,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "roar_of_time"
+-      durationMs: 2200
+-      damageWindowStartMs: 1050
+-      damageWindowEndMs: 2500
++      durationMs: 2000
++      damageWindowStartMs: 850
++      damageWindowEndMs: 2300
+       energyDelta: -100
+     }
+   }
+@@ -257486,15 +257485,15 @@
+       movementId: BLEAKWIND_STORM
+       animationId: 5
+       pokemonType: POKEMON_TYPE_FLYING
+-      power: 140
++      power: 150
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "bleakwind_storm"
+-      durationMs: 2300
+-      damageWindowStartMs: 1800
+-      damageWindowEndMs: 2600
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 2800
+       energyDelta: -100
+     }
+   }
+@@ -257614,15 +257613,15 @@
+       movementId: SANDSEAR_STORM
+       animationId: 5
+       pokemonType: POKEMON_TYPE_GROUND
+-      power: 140
++      power: 150
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "sandsear_storm"
+-      durationMs: 2300
+-      damageWindowStartMs: 1800
+-      damageWindowEndMs: 2600
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 2800
+       energyDelta: -100
+     }
+   }
+@@ -257828,15 +257827,15 @@
+       movementId: WILDBOLT_STORM
+       animationId: 5
+       pokemonType: POKEMON_TYPE_ELECTRIC
+-      power: 140
++      power: 150
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "wildbold_storm"
+-      durationMs: 2300
+-      damageWindowStartMs: 1800
+-      damageWindowEndMs: 2600
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 2800
+       energyDelta: -100
+     }
+   }
+@@ -258298,9 +258297,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "volt_tackle"
+-      durationMs: 3400
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 2500
++      durationMs: 3500
++      damageWindowStartMs: 2100
++      damageWindowEndMs: 2600
+       energyDelta: -33
+     }
+   }
+@@ -258830,16 +258829,16 @@
+       movementId: METAL_SOUND_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 6
++      power: 4
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "metal_sound"
+-      durationMs: 700
+-      damageWindowStartMs: 400
+-      damageWindowEndMs: 900
+-      energyDelta: 9
++      durationMs: 500
++      damageWindowStartMs: 200
++      damageWindowEndMs: 700
++      energyDelta: 6
+     }
+   }
+ }
+@@ -259066,9 +259065,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "sunsteel_strike"
+-      durationMs: 3100
+-      damageWindowStartMs: 2300
+-      damageWindowEndMs: 3100
++      durationMs: 3000
++      damageWindowStartMs: 2200
++      damageWindowEndMs: 3000
+       energyDelta: -100
+     }
+   }
+@@ -259184,9 +259183,9 @@
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "moongeist_beam"
+-      durationMs: 3100
+-      damageWindowStartMs: 2300
+-      damageWindowEndMs: 3100
++      durationMs: 3000
++      damageWindowStartMs: 2200
++      damageWindowEndMs: 3000
+       energyDelta: -100
+     }
+   }
+@@ -267284,16 +267283,16 @@
+       movementId: FORCE_PALM_FAST
+       animationId: 4
+       pokemonType: POKEMON_TYPE_FIGHTING
+-      power: 9
++      power: 10
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+       trainerLevelMax: 100
+       vfxName: "force_palm_fast"
+-      durationMs: 900
+-      damageWindowStartMs: 700
+-      damageWindowEndMs: 900
+-      energyDelta: 14
++      durationMs: 1000
++      damageWindowStartMs: 800
++      damageWindowEndMs: 1000
++      energyDelta: 16
+     }
+   }
+ }
+@@ -352214,15 +352213,16 @@
+     iapItemDisplay {
+       sku: "general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
+-      spriteId: "general2.ticket.6"
+-      title: "general1.ticket._MonthlyTicketOct24_title"
+-      description: "item_event_ticket_gray_desc_MonthlyTicketOct24"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-10-10T23:59:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1728604740000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
++      sortOrder: 2
++      hidden: true
++      spriteId: "general2.ticket.9"
++      title: "general1.ticket._GOFestRaid24_title"
++      description: "general1.ticket.2_GOFestRaid2024_description"
++      skuEnableTime: "2024-06-08T10:00:00"
++      skuDisableTime: "2024-07-14T20:00:00"
++      skuEnableTimeUtcMs: 1717840800000
++      skuDisableTimeUtcMs: 1720987200000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/GOFest2024InboundfromUltraSpace%20LiveOp%20Key%20Art_1024x512%20No%20Logo%20(1).jpg"
+     }
+   }
+ }
+@@ -352233,13 +352233,16 @@
+     iapItemDisplay {
+       sku: "general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
+-      spriteId: "general2.ticket.6"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-10-10T23:59:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1728604740000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
++      sortOrder: 2
++      hidden: true
++      spriteId: "general2.ticket.9"
++      title: "general1.ticket._GOFestRaid24_title"
++      description: "general1.ticket.2_GOFestRaid2024_description"
++      skuEnableTime: "2024-06-08T10:00:00"
++      skuDisableTime: "2024-07-14T20:00:00"
++      skuEnableTimeUtcMs: 1717840800000
++      skuDisableTimeUtcMs: 1720987200000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/GOFest2024InboundfromUltraSpace%20LiveOp%20Key%20Art_1024x512%20No%20Logo%20(1).jpg"
+     }
+   }
+ }
+@@ -352331,6 +352334,7 @@
+       sku: "general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket._TTFinale24_title"
-+      title: "general1.ticket._Halloween1TR24_title"
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general1.ticket._MasterBall24_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-08-30T23:59:00"
-+      skuDisableTime: "2024-11-02T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1725062340000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_triumphTogether_2024.jpg"
-+      skuDisableTimeUtcMs: 1730577600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Morpeko_Outfits_1024x512_nmo_v3.jpg"
-     }
-   }
- }
-@@ -351938,10 +351945,12 @@
+@@ -352349,6 +352353,7 @@
+       sku: "general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.4"
-+      title: "general1.ticket._Halloween1TR24_title"
++      hidden: true
+       spriteId: "general2.ticket.9"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-08-30T23:59:00"
-+      skuDisableTime: "2024-11-02T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1725062340000
-+      skuDisableTimeUtcMs: 1730577600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Morpeko_Outfits_1024x512_nmo_v3.jpg"
+       skuDisableTime: "2024-10-11T20:00:00"
+@@ -353821,15 +353826,16 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
+-      spriteId: "general2.ticket.6"
+-      title: "general1.ticket._MonthlyTicketOct24_title"
+-      description: "item_event_ticket_gray_desc_MonthlyTicketOct24"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-10-10T23:59:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1728604740000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
++      sortOrder: 2
++      hidden: true
++      spriteId: "general2.ticket.9"
++      title: "general1.ticket._GOFestRaid24_title"
++      description: "general1.ticket.2_GOFestRaid2024_description"
++      skuEnableTime: "2024-06-08T10:00:00"
++      skuDisableTime: "2024-07-14T20:00:00"
++      skuEnableTimeUtcMs: 1717840800000
++      skuDisableTimeUtcMs: 1720987200000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/GOFest2024InboundfromUltraSpace%20LiveOp%20Key%20Art_1024x512%20No%20Logo%20(1).jpg"
      }
    }
  }
-@@ -352134,12 +352143,12 @@
-       sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.4"
--      title: "general1.ticket._ResearchDaySept24_title"
-+      title: "general1.ticket.2_Halloween2TR24_title"
-       skuEnableTime: "2023-01-01T11:00:03"
--      skuDisableTime: "2024-09-22T17:00:00"
-+      skuDisableTime: "2024-11-02T20:00:00"
-       skuEnableTimeUtcMs: 1672570803000
--      skuDisableTimeUtcMs: 1727024400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
-+      skuDisableTimeUtcMs: 1730577600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/20240925_PGO_Static-blog-infographics-16x9_Static_VB.png"
+@@ -353840,13 +353846,16 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
+-      spriteId: "general2.ticket.6"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-10-10T23:59:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1728604740000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
++      sortOrder: 2
++      hidden: true
++      spriteId: "general2.ticket.9"
++      title: "general1.ticket._GOFestRaid24_title"
++      description: "general1.ticket.2_GOFestRaid2024_description"
++      skuEnableTime: "2024-06-08T10:00:00"
++      skuDisableTime: "2024-07-14T20:00:00"
++      skuEnableTimeUtcMs: 1717840800000
++      skuDisableTimeUtcMs: 1720987200000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/GOFest2024InboundfromUltraSpace%20LiveOp%20Key%20Art_1024x512%20No%20Logo%20(1).jpg"
      }
    }
  }
-@@ -352153,12 +352162,12 @@
-       sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.4"
--      title: "general1.ticket._ResearchDaySept24_title"
-+      title: "general1.ticket.2_Halloween2TR24_title"
-       skuEnableTime: "2023-01-01T11:00:03"
--      skuDisableTime: "2024-09-22T17:00:00"
-+      skuDisableTime: "2024-11-02T20:00:00"
-       skuEnableTimeUtcMs: 1672570803000
--      skuDisableTimeUtcMs: 1727024400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
-+      skuDisableTimeUtcMs: 1730577600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/20240925_PGO_Static-blog-infographics-16x9_Static_VB.png"
-     }
-   }
- }
-@@ -353545,12 +353554,12 @@
+@@ -353938,6 +353947,7 @@
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket._TTFinale24_title"
-+      title: "general1.ticket._Halloween1TR24_title"
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general1.ticket._MasterBall24_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-08-30T23:59:00"
-+      skuDisableTime: "2024-11-02T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1725062340000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_triumphTogether_2024.jpg"
-+      skuDisableTimeUtcMs: 1730577600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Morpeko_Outfits_1024x512_nmo_v3.jpg"
-     }
-   }
- }
-@@ -353564,10 +353573,12 @@
+@@ -353956,6 +353966,7 @@
+       sku: "pgorelease.general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.4"
-+      title: "general1.ticket._Halloween1TR24_title"
++      hidden: true
+       spriteId: "general2.ticket.9"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-05-28T20:00:00"
-+      skuDisableTime: "2024-11-02T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1716926400000
-+      skuDisableTimeUtcMs: 1730577600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Morpeko_Outfits_1024x512_nmo_v3.jpg"
+       skuDisableTime: "2024-10-11T20:00:00"
+@@ -359466,7 +359477,7 @@
      }
    }
  }
-@@ -353741,12 +353752,12 @@
-       sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.2"
--      title: "general1.ticket._ResearchDaySept24_title"
-+      title: "general1.ticket.2_Halloween2TR24_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2024-09-22T17:00:00"
-+      skuDisableTime: "2024-11-02T20:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1727024400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
-+      skuDisableTimeUtcMs: 1730577600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/20240925_PGO_Static-blog-infographics-16x9_Static_VB.png"
-     }
-   }
- }
-@@ -353760,12 +353771,12 @@
-       sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.2"
--      title: "general1.ticket._ResearchDaySept24_title"
-+      title: "general1.ticket.2_Halloween2TR24_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2024-09-22T17:00:00"
-+      skuDisableTime: "2024-11-02T20:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1727024400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/Monkey%20Research%20Day.jpg"
-+      skuDisableTimeUtcMs: 1730577600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/20240925_PGO_Static-blog-infographics-16x9_Static_VB.png"
-     }
-   }
- }
-@@ -359455,7 +359466,7 @@
-     }
-   }
- }
--batch_id: 1728536036414
-+batch_id: 1728602263924
+-batch_id: 1728602263924
++batch_id: 1728674749329
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -359516,6 +359527,7 @@
- experiment_id: 9505
- experiment_id: 9510
+@@ -359505,9 +359516,6 @@
+ experiment_id: 3807
+ experiment_id: 3816
+ experiment_id: 3819
+-experiment_id: 3852
+-experiment_id: 3854
+-experiment_id: 3855
+ experiment_id: 3868
+ experiment_id: 4683
+ experiment_id: 4921
+@@ -359520,7 +359528,6 @@
+ experiment_id: 5510
+ experiment_id: 6075
+ experiment_id: 8669
+-experiment_id: 8911
+ experiment_id: 8921
+ experiment_id: 8924
+ experiment_id: 9502
+@@ -359529,6 +359536,7 @@
  experiment_id: 9512
-+experiment_id: 9513
+ experiment_id: 9513
  experiment_id: 20947
++experiment_id: 44006
  experiment_id: 80001
  experiment_id: 300000
+ experiment_id: 314159
