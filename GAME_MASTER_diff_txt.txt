@@ -1,0 +1,73 @@
+--- GAME_MASTER_old.txt	2024-10-12 13:12:32.368837946 +0200
++++ GAME_MASTER.txt	2024-10-12 13:17:08.449938227 +0200
+@@ -136257,7 +136257,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 5
++      dailySquashLimit: 20
+     }
+   }
+ }
+@@ -243014,6 +243014,7 @@
+       damageWindowStartMs: 1000
+       damageWindowEndMs: 1800
+       energyDelta: -33
++      isLocked: true
+     }
+   }
+ }
+@@ -359477,7 +359478,35 @@
+     }
+   }
+ }
+-batch_id: 1728674749329
++template {
++  template_id: "bundle.ksalaunch100.1"
++  data {
++    template_id: "bundle.ksalaunch100.1"
++    iapItemDisplay {
++      sku: "bundle.ksalaunch100.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general4.medium.1"
++      title: "bundle.general1.small.1_title"
++    }
++  }
++}
++template {
++  template_id: "bundle.ksalaunch200.1"
++  data {
++    template_id: "bundle.ksalaunch200.1"
++    iapItemDisplay {
++      sku: "bundle.ksalaunch200.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general1.large.1"
++      title: "bundle.general3.medium.1_title"
++    }
++  }
++}
++batch_id: 1728698031582
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -359517,12 +359546,16 @@
+ experiment_id: 3816
+ experiment_id: 3819
+ experiment_id: 3868
++experiment_id: 3869
+ experiment_id: 4683
++experiment_id: 4915
+ experiment_id: 4921
++experiment_id: 4922
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5210
+ experiment_id: 5250
+ experiment_id: 5508
+ experiment_id: 5510
