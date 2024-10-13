@@ -1,73 +1,94 @@
---- GAME_MASTER_old.txt	2024-10-12 13:12:32.368837946 +0200
-+++ GAME_MASTER.txt	2024-10-12 13:17:08.449938227 +0200
+--- GAME_MASTER_old.txt	2024-10-12 13:17:08.449938227 +0200
++++ GAME_MASTER.txt	2024-10-13 09:52:09.209608483 +0200
 @@ -136257,7 +136257,7 @@
      template_id: "REMOTE_RAID_LIMIT_SETTINGS"
      squashSettings {
        enabled: true
--      dailySquashLimit: 5
-+      dailySquashLimit: 20
+-      dailySquashLimit: 20
++      dailySquashLimit: 5
      }
    }
  }
-@@ -243014,6 +243014,7 @@
-       damageWindowStartMs: 1000
-       damageWindowEndMs: 1800
-       energyDelta: -33
-+      isLocked: true
-     }
-   }
- }
-@@ -359477,7 +359478,35 @@
-     }
-   }
- }
--batch_id: 1728674749329
-+template {
-+  template_id: "bundle.ksalaunch100.1"
-+  data {
-+    template_id: "bundle.ksalaunch100.1"
-+    iapItemDisplay {
-+      sku: "bundle.ksalaunch100.1"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
+@@ -353794,6 +353794,7 @@
+       sku: "pgorelease.general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
 +      hidden: true
-+      spriteId: "bundle.general4.medium.1"
-+      title: "bundle.general1.small.1_title"
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._MawileRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -353812,11 +353813,13 @@
+       sku: "pgorelease.general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.5"
++      title: "general1.ticket._FalinksRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-10-12T22:00:00"
++      skuDisableTime: "2024-09-08T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1728770400000
++      skuDisableTimeUtcMs: 1725814800000
+     }
+   }
+ }
+@@ -359468,17 +359471,6 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "bundle.ksalaunch100.1"
+   data {
+     template_id: "bundle.ksalaunch100.1"
+@@ -359506,7 +359498,18 @@
+     }
+   }
+ }
+-batch_id: 1728698031582
++template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
 +    }
 +  }
 +}
-+template {
-+  template_id: "bundle.ksalaunch200.1"
-+  data {
-+    template_id: "bundle.ksalaunch200.1"
-+    iapItemDisplay {
-+      sku: "bundle.ksalaunch200.1"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.general1.large.1"
-+      title: "bundle.general3.medium.1_title"
-+    }
-+  }
-+}
-+batch_id: 1728698031582
++batch_id: 1728792569009
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -359517,12 +359546,16 @@
+@@ -359545,12 +359548,7 @@
+ experiment_id: 3807
  experiment_id: 3816
  experiment_id: 3819
- experiment_id: 3868
-+experiment_id: 3869
+-experiment_id: 3868
+-experiment_id: 3869
  experiment_id: 4683
-+experiment_id: 4915
- experiment_id: 4921
-+experiment_id: 4922
+-experiment_id: 4915
+-experiment_id: 4921
+-experiment_id: 4922
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
- experiment_id: 5163
-+experiment_id: 5210
- experiment_id: 5250
+@@ -359560,7 +359558,6 @@
  experiment_id: 5508
  experiment_id: 5510
+ experiment_id: 6075
+-experiment_id: 8669
+ experiment_id: 8921
+ experiment_id: 8924
+ experiment_id: 9502
