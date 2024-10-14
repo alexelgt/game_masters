@@ -1,94 +1,44 @@
---- GAME_MASTER_old.txt	2024-10-12 13:17:08.449938227 +0200
-+++ GAME_MASTER.txt	2024-10-13 09:52:09.209608483 +0200
-@@ -136257,7 +136257,7 @@
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
-       enabled: true
--      dailySquashLimit: 20
-+      dailySquashLimit: 5
-     }
-   }
- }
-@@ -353794,6 +353794,7 @@
-       sku: "pgorelease.general2.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
+--- GAME_MASTER_old.txt	2024-10-13 09:52:09.209608483 +0200
++++ GAME_MASTER.txt	2024-10-14 08:53:36.176062285 +0200
+@@ -340435,15 +340435,9 @@
+       sku: "bundle.zzraid.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
 +      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general1.ticket._MawileRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -353812,11 +353813,13 @@
-       sku: "pgorelease.general2.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.5"
-+      title: "general1.ticket._FalinksRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-10-12T22:00:00"
-+      skuDisableTime: "2024-09-08T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1728770400000
-+      skuDisableTimeUtcMs: 1725814800000
+       spriteId: "bundle.general.premiumbox.small.1"
+       title: "raiding_box"
+-      skuEnableTime: "2019-10-31T21:00:00"
+-      skuDisableTime: "2024-10-13T20:00:00"
+-      skuEnableTimeUtcMs: 1572555600000
+-      skuDisableTimeUtcMs: 1728849600000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 590
      }
    }
  }
-@@ -359468,17 +359471,6 @@
-   }
- }
- template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
-   template_id: "bundle.ksalaunch100.1"
-   data {
-     template_id: "bundle.ksalaunch100.1"
-@@ -359506,7 +359498,18 @@
+@@ -359509,7 +359503,7 @@
      }
    }
  }
--batch_id: 1728698031582
-+template {
-+  template_id: "PTC_OAUTH_SETTINGS"
-+  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    }
-+  }
-+}
-+batch_id: 1728792569009
+-batch_id: 1728792569009
++batch_id: 1728870349423
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -359545,12 +359548,7 @@
- experiment_id: 3807
- experiment_id: 3816
- experiment_id: 3819
--experiment_id: 3868
--experiment_id: 3869
- experiment_id: 4683
--experiment_id: 4915
--experiment_id: 4921
--experiment_id: 4922
- experiment_id: 4998
+@@ -359531,7 +359525,6 @@
+ experiment_id: 1599
+ experiment_id: 1699
+ experiment_id: 1820
+-experiment_id: 2231
+ experiment_id: 2301
+ experiment_id: 2399
+ experiment_id: 2400
+@@ -359553,7 +359546,6 @@
  experiment_id: 5160
  experiment_id: 5162
-@@ -359560,7 +359558,6 @@
+ experiment_id: 5163
+-experiment_id: 5210
+ experiment_id: 5250
  experiment_id: 5508
  experiment_id: 5510
- experiment_id: 6075
--experiment_id: 8669
- experiment_id: 8921
- experiment_id: 8924
- experiment_id: 9502
