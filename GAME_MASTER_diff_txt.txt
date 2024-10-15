@@ -1,158 +1,107 @@
---- GAME_MASTER_old.txt	2024-10-14 20:40:41.117924955 +0200
-+++ GAME_MASTER.txt	2024-10-15 09:32:59.731972480 +0200
-@@ -113109,18 +113109,6 @@
-   }
- }
- template {
--  template_id: "IAP_CATEGORY_GIFTABLE"
--  data {
--    template_id: "IAP_CATEGORY_GIFTABLE"
--    iapCategoryDisplay {
--      category: 18
--      name: "shop_category_giftable"
--      sortOrder: 4
--      bannerTitle: "shop_category_giftable"
--    }
--  }
--}
--template {
-   template_id: "IAP_CATEGORY_GLOBAL_EVENT_TICKET"
-   data {
-     template_id: "IAP_CATEGORY_GLOBAL_EVENT_TICKET"
-@@ -113395,7 +113383,6 @@
-     template_id: "IRIS_SOCIAL_SETTINGS"
-     irisSocialSettings {
-       maxTimeNoActivityPlayerInactiveMs: 60000
--      enableSurveyAndReporting: true
-       useVpsEnabledStatus: true
-       sunThresholdCheckEnabled: true
-       irisSocialPoiDeactivationCooldownMs: 1209600000
-@@ -240597,6 +240584,11 @@
-         averageWeightKg: 23.5
-         typeOverride1: POKEMON_TYPE_STEEL
-         typeOverride2: POKEMON_TYPE_FAIRY
-+        camera {
-+          cylinderRadiusM: 1.9
-+          cylinderHeightM: 1.4
-+        }
-+        modelHeight: 1.4
-       }
-       buddyWalkedMegaEnergyAward: 25
-       raidBossDistanceOffset: 5
-@@ -308124,6 +308116,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -25
-+      buddyPortraitOffset: 0
-       third_move {
-         stardustToUnlock: 10000
-         candyToUnlock: 25
-@@ -308214,6 +308209,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -100
-+      buddyPortraitOffset: 0
-       third_move {
-         stardustToUnlock: 10000
-         candyToUnlock: 25
-@@ -308302,6 +308300,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 57.1
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -25
-+      buddyPortraitOffset: 0
-       third_move {
-         stardustToUnlock: 10000
-         candyToUnlock: 25
-@@ -308391,6 +308392,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 57.1
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -25
-+      buddyPortraitOffset: 0
-       third_move {
-         stardustToUnlock: 10000
-         candyToUnlock: 25
-@@ -308480,6 +308484,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 57.1
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -25
-+      buddyPortraitOffset: 0
-       third_move {
-         stardustToUnlock: 10000
-         candyToUnlock: 25
-@@ -324094,9 +324101,15 @@
-       type: POKEMON_TYPE_ELECTRIC
-       type2: POKEMON_TYPE_DARK
-       camera {
-+        cylinderRadiusM: 0.3
-+        cylinderHeightM: 0.36
-       }
-       encounter {
-+        collisionRadiusM: 0.1
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.1
-         movementType: MOVEMENT_JUMP
-+        jumpTimeS: 1.1
-         attackProbability: 0.1
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-@@ -324175,9 +324188,15 @@
-       type: POKEMON_TYPE_ELECTRIC
-       type2: POKEMON_TYPE_DARK
-       camera {
-+        cylinderRadiusM: 0.3
-+        cylinderHeightM: 0.36
-       }
-       encounter {
-+        collisionRadiusM: 0.1
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.1
-         movementType: MOVEMENT_JUMP
-+        jumpTimeS: 1.1
-         attackProbability: 0.1
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-@@ -324240,9 +324259,15 @@
-       type: POKEMON_TYPE_ELECTRIC
-       type2: POKEMON_TYPE_DARK
-       camera {
-+        cylinderRadiusM: 0.25
-+        cylinderHeightM: 0.36
-       }
-       encounter {
-+        collisionRadiusM: 0.1
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.1
-         movementType: MOVEMENT_JUMP
-+        jumpTimeS: 1.1
-         attackProbability: 0.3
-         dodgeProbability: 0.3
-         dodgeDurationS: 1
-@@ -359507,7 +359532,7 @@
+--- GAME_MASTER_old.txt	2024-10-15 09:32:59.731972480 +0200
++++ GAME_MASTER.txt	2024-10-15 20:51:06.227800405 +0200
+@@ -359532,7 +359532,103 @@
      }
    }
  }
--batch_id: 1728926935225
-+batch_id: 1728943961084
+-batch_id: 1728943961084
++template {
++  template_id: "EVOLUTION_V0848_POKEMON_TOXEL"
++  data {
++    template_id: "EVOLUTION_V0848_POKEMON_TOXEL"
++    evolution_chain_display_settings {
++      pokemon: TOXEL
++      evolutionChains {
++        evolutionInfos {
++          pokemon: TOXEL
++        }
++        evolutionInfos {
++          pokemon: TOXTRICITY
++          form: TOXTRICITY_LOW_KEY
++        }
++      }
++      evolutionChains {
++        evolutionInfos {
++          pokemon: TOXEL
++        }
++        evolutionInfos {
++          pokemon: TOXTRICITY
++          form: TOXTRICITY_AMPED
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVOLUTION_V0849_POKEMON_TOXTRICITY"
++  data {
++    template_id: "EVOLUTION_V0849_POKEMON_TOXTRICITY"
++    evolution_chain_display_settings {
++      pokemon: TOXTRICITY
++      evolutionChains {
++        evolutionInfos {
++          pokemon: TOXEL
++        }
++        evolutionInfos {
++          pokemon: TOXTRICITY
++          form: TOXTRICITY_LOW_KEY
++        }
++      }
++      evolutionChains {
++        evolutionInfos {
++          pokemon: TOXEL
++        }
++        evolutionInfos {
++          pokemon: TOXTRICITY
++          form: TOXTRICITY_AMPED
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "bundle.diademuertosmax100.1"
++  data {
++    template_id: "bundle.diademuertosmax100.1"
++    iapItemDisplay {
++      sku: "bundle.diademuertosmax100.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.latam.large.1"
++      title: "bundle.wicker.box.1_title"
++    }
++  }
++}
++template {
++  template_id: "bundle.diademuertosmax200.1"
++  data {
++    template_id: "bundle.diademuertosmax200.1"
++    iapItemDisplay {
++      sku: "bundle.diademuertosmax200.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.latam.large.1"
++      title: "bundle.general5.small.1_title"
++    }
++  }
++}
++template {
++  template_id: "bundle.diwalimax100.1"
++  data {
++    template_id: "bundle.diwalimax100.1"
++    iapItemDisplay {
++      sku: "bundle.diwalimax100.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general.premiumbox.large.1"
++      title: "bundle.general5.small.1_title"
++    }
++  }
++}
++batch_id: 1729017177484
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -359545,7 +359570,8 @@
- experiment_id: 3808
- experiment_id: 3816
- experiment_id: 3819
--experiment_id: 4683
-+experiment_id: 3871
-+experiment_id: 3872
- experiment_id: 4998
- experiment_id: 5160
- experiment_id: 5162
