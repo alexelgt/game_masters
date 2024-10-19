@@ -1,2859 +1,1110 @@
---- GAME_MASTER_old.txt	2024-10-18 08:21:12.580952688 +0200
-+++ GAME_MASTER.txt	2024-10-18 09:04:19.192416526 +0200
-@@ -39429,7 +39429,7 @@
-       nearbyLobbyCounterEnabled: true
-       minimumPlayerLevel: 13
-       breadPostBattleRecoveryEnabled: true
--      12: 1
-+      canUseMasterBallPostBattle: true
-     }
+--- GAME_MASTER_old.txt	2024-10-18 09:04:19.192416526 +0200
++++ GAME_MASTER.txt	2024-10-19 09:32:59.889168823 +0200
+@@ -69574,6 +69574,60 @@
    }
  }
-@@ -39442,7 +39442,7 @@
-       subscribeS2Level: 13
-       subscriptionNamespace: "pgorelease/BREAD_RAID_LOBBY_COUNT"
-       publishCutoffTimeMs: 20000
--      6: 40
-+      breadDoughLobbyMaxCountToUpdate: 40
-     }
+ template {
++  template_id: "EVOLUTION_V0848_POKEMON_TOXEL"
++  data {
++    template_id: "EVOLUTION_V0848_POKEMON_TOXEL"
++    evolution_chain_display_settings {
++      pokemon: TOXEL
++      evolutionChains {
++        evolutionInfos {
++          pokemon: TOXEL
++        }
++        evolutionInfos {
++          pokemon: TOXTRICITY
++          form: TOXTRICITY_LOW_KEY
++        }
++      }
++      evolutionChains {
++        evolutionInfos {
++          pokemon: TOXEL
++        }
++        evolutionInfos {
++          pokemon: TOXTRICITY
++          form: TOXTRICITY_AMPED
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVOLUTION_V0849_POKEMON_TOXTRICITY"
++  data {
++    template_id: "EVOLUTION_V0849_POKEMON_TOXTRICITY"
++    evolution_chain_display_settings {
++      pokemon: TOXTRICITY
++      evolutionChains {
++        evolutionInfos {
++          pokemon: TOXEL
++        }
++        evolutionInfos {
++          pokemon: TOXTRICITY
++          form: TOXTRICITY_LOW_KEY
++        }
++      }
++      evolutionChains {
++        evolutionInfos {
++          pokemon: TOXEL
++        }
++        evolutionInfos {
++          pokemon: TOXTRICITY
++          form: TOXTRICITY_AMPED
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "EVOLUTION_V0862_POKEMON_OBSTAGOON"
+   data {
+     template_id: "EVOLUTION_V0862_POKEMON_OBSTAGOON"
+@@ -114253,6 +114307,10 @@
+           }
+         }
+         iconRewards {
++          type: STARDUST
++          stardust: 2000
++        }
++        iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemon_encounter {
+             pokemon_id: YAMASK
+@@ -114261,10 +114319,6 @@
+             }
+           }
+         }
+-        iconRewards {
+-          type: STARDUST
+-          stardust: 2000
+-        }
+         detailsLinkKey: "details_link_key"
+         clientEventStartTimeUtcMs: 1729346400000
+         clientEventEndTimeUtcMs: 1729357200000
+@@ -127032,6 +127086,26 @@
    }
  }
-@@ -40286,163 +40286,163 @@
-       allowedSourdoughPokemon {
-         pokemonId: VENUSAUR
-         form: VENUSAUR_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: CHARIZARD
-         form: CHARIZARD_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: BLASTOISE
-         form: BLASTOISE_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: BUTTERFREE
-         form: BUTTERFREE_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: PIKACHU
-         form: PIKACHU_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: MEOWTH
-         form: MEOWTH_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: MACHAMP
-         form: MACHAMP_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: GENGAR
-         form: GENGAR_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: KINGLER
-         form: KINGLER_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: LAPRAS
-         form: LAPRAS_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: EEVEE
-         form: EEVEE_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: SNORLAX
-         form: SNORLAX_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: GARBODOR
-         form: GARBODOR_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: MELMETAL
-         form: MELMETAL_NORMAL
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: RILLABOOM
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: CINDERACE
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: INTELEON
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: CORVIKNIGHT
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: ORBEETLE
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: DREDNAW
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: COALOSSAL
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: FLAPPLE
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: APPLETUN
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: SANDACONDA
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: TOXTRICITY
-         form: TOXTRICITY_LOW_KEY
-         form: TOXTRICITY_AMPED
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: CENTISKORCH
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: HATTERENE
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: GRIMMSNARL
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: ALCREMIE
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: COPPERAJAH
-         form: FORM_UNSET
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: URSHIFU
-         form: URSHIFU_SINGLE_STRIKE
--        obBreadMode: BREAD_DOUGH_MODE
-+        breadMode: BREAD_DOUGH_MODE
-       }
-       allowedSourdoughPokemon {
-         pokemonId: URSHIFU
-         form: URSHIFU_RAPID_STRIKE
--        obBreadMode: BREAD_DOUGH_MODE_2
-+        breadMode: BREAD_DOUGH_MODE_2
-       }
-       maxStationedPokemon: 40
-       numStationedPokemonToReturn: 40
-@@ -40453,8 +40453,8 @@
-         breadBattleAvailabilityStartMinute: 360
-         breadBattleAvailabilityEndMinute: 1260
-       }
--      obBreadSharedSettingsNumber11: 1
--      12: 10
-+      minMsToReceiveReleaseStationRewards: 1
-+      maxStationedPokemonPerPlayer: 10
-     }
+ template {
++  template_id: "N_DISPLAY_n_shirt_morpekofullonesie_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_morpekofullonesie_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_morpekofullonesie_0_icon"
++      displayStringId: "avatar_shirt_morpekofullbelly"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_morpekohangryonesie_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_morpekohangryonesie_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_morpekohangryonesie_0_icon"
++      displayStringId: "avatar_shirt_morpekohangry"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_shirt_movie2020jessiejames_a_0"
+   data {
+     template_id: "N_DISPLAY_n_shirt_movie2020jessiejames_a_0"
+@@ -137265,6 +137339,21 @@
    }
  }
-@@ -118637,7 +118637,7 @@
-         breadBattleCatchMpCost: 800
-         battleLevel: BREAD_BATTLE_LEVEL_5
-       }
--      obMpSettingsNumber15: 250
-+      ftueMpCapacity: 250
-     }
-   }
- }
-@@ -132979,9 +132979,9 @@
-       screenCaptureSize: 2
-       isIrisEnabled: true
-       irisFlags: 2009075920
--      9: "PokemonSetsHeaderImage004"
--      9: "PokemonSetsHeaderImage005"
--      9: "PokemonSetsHeaderImage006"
-+      bannerImageUrl: "PokemonSetsHeaderImage004"
-+      bannerImageUrl: "PokemonSetsHeaderImage005"
-+      bannerImageUrl: "PokemonSetsHeaderImage006"
-     }
-   }
- }
-@@ -132989,7 +132989,7 @@
-   template_id: "PHOTO_SET_ALOLA"
-   data {
-     template_id: "PHOTO_SET_ALOLA"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_ALOLA"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -133010,7 +133010,7 @@
-   template_id: "PHOTO_SET_ANCIENT_FOSSILS"
-   data {
-     template_id: "PHOTO_SET_ANCIENT_FOSSILS"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_FOSSIL"
-       frameColor: "Beachside"
-       minimumPokemon: 1
-@@ -133083,7 +133083,7 @@
-   template_id: "PHOTO_SET_BATTLE_POKEMON"
-   data {
-     template_id: "PHOTO_SET_BATTLE_POKEMON"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_BATTLE_POKEMON"
-       frameColor: "Fighting"
-       minimumPokemon: 1
-@@ -133104,7 +133104,7 @@
-   template_id: "PHOTO_SET_BUNDLE_OF_JOY"
-   data {
-     template_id: "PHOTO_SET_BUNDLE_OF_JOY"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_BABIES"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -133189,7 +133189,7 @@
-   template_id: "PHOTO_SET_BUSY_CITY"
-   data {
-     template_id: "PHOTO_SET_BUSY_CITY"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_CITY"
-       frameColor: "Nightfall"
-       minimumPokemon: 1
-@@ -133285,7 +133285,7 @@
-   template_id: "PHOTO_SET_CLAWED_CUTIES"
-   data {
-     template_id: "PHOTO_SET_CLAWED_CUTIES"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_CLAWED_CUTIES"
-       frameColor: "RainyDay"
-       minimumPokemon: 1
-@@ -133346,7 +133346,7 @@
-   template_id: "PHOTO_SET_CUTE_POKEMON_PINK"
-   data {
-     template_id: "PHOTO_SET_CUTE_POKEMON_PINK"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_CUTE_POKEMON_PINK"
-       frameColor: "PinkPals"
-       minimumPokemon: 1
-@@ -133367,7 +133367,7 @@
-   template_id: "PHOTO_SET_FALL_VIBES"
-   data {
-     template_id: "PHOTO_SET_FALL_VIBES"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_FALL_VIBES"
-       frameColor: "Halloween"
-       minimumPokemon: 1
-@@ -133411,7 +133411,7 @@
-   template_id: "PHOTO_SET_FEATHERED_FRIENDS"
-   data {
-     template_id: "PHOTO_SET_FEATHERED_FRIENDS"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_FEATHERED_FRIENDS_SMALL"
-       frameColor: "UkiyoEuphoria"
-       minimumPokemon: 1
-@@ -133478,7 +133478,7 @@
-   template_id: "PHOTO_SET_FEATHERED_FRIENDS_LARGE"
-   data {
-     template_id: "PHOTO_SET_FEATHERED_FRIENDS_LARGE"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_FEATHERED_FRIENDS"
-       frameColor: "UkiyoEuphoria"
-       minimumPokemon: 1
-@@ -133499,7 +133499,7 @@
-   template_id: "PHOTO_SET_FEELING_FANCY"
-   data {
-     template_id: "PHOTO_SET_FEELING_FANCY"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_FANCY"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -133588,7 +133588,7 @@
-   template_id: "PHOTO_SET_FURRY_FRIENDS"
-   data {
-     template_id: "PHOTO_SET_FURRY_FRIENDS"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_FURRY_FRIENDS"
-       frameColor: "Beachside"
-       minimumPokemon: 1
-@@ -133654,7 +133654,7 @@
-   template_id: "PHOTO_SET_FURRY_FRIENDS_LARGE"
-   data {
-     template_id: "PHOTO_SET_FURRY_FRIENDS_LARGE"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_FURRY_FRIENDS_BIG"
-       frameColor: "Beachside"
-       minimumPokemon: 1
-@@ -133689,7 +133689,7 @@
-   template_id: "PHOTO_SET_GRACEFUL_FLYERS"
-   data {
-     template_id: "PHOTO_SET_GRACEFUL_FLYERS"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_GRACEFUL_FLYERS"
-       frameColor: "UkiyoEuphoria"
-       minimumPokemon: 1
-@@ -133793,7 +133793,7 @@
-   template_id: "PHOTO_SET_HISUI"
-   data {
-     template_id: "PHOTO_SET_HISUI"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_HISUI"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -133814,7 +133814,7 @@
-   template_id: "PHOTO_SET_HOENN"
-   data {
-     template_id: "PHOTO_SET_HOENN"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_HOENN"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -133835,7 +133835,7 @@
-   template_id: "PHOTO_SET_JOHTO"
-   data {
-     template_id: "PHOTO_SET_JOHTO"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_JOHTO"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -133856,7 +133856,7 @@
-   template_id: "PHOTO_SET_JUST_LOVELY"
-   data {
-     template_id: "PHOTO_SET_JUST_LOVELY"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_LOVELY"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -133940,7 +133940,7 @@
-   template_id: "PHOTO_SET_KALOS"
-   data {
-     template_id: "PHOTO_SET_KALOS"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_KALOS"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -133961,7 +133961,7 @@
-   template_id: "PHOTO_SET_KANTO"
-   data {
-     template_id: "PHOTO_SET_KANTO"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_KANTO"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -133982,7 +133982,7 @@
-   template_id: "PHOTO_SET_LITTLE_CHONKERS"
-   data {
-     template_id: "PHOTO_SET_LITTLE_CHONKERS"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_LITTLE_CHONKERS"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -134064,7 +134064,7 @@
-   template_id: "PHOTO_SET_MOUNTAIN_PASS"
-   data {
-     template_id: "PHOTO_SET_MOUNTAIN_PASS"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_MOUNTAIN"
-       frameColor: "RainyDay"
-       minimumPokemon: 1
-@@ -134160,7 +134160,7 @@
-   template_id: "PHOTO_SET_MUSEUM_FOSSILS"
-   data {
-     template_id: "PHOTO_SET_MUSEUM_FOSSILS"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_MUSEUM_FOSSILS"
-       frameColor: "Museum"
-       minimumPokemon: 1
-@@ -134184,7 +134184,7 @@
-   template_id: "PHOTO_SET_PALDEA"
-   data {
-     template_id: "PHOTO_SET_PALDEA"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_PALDEA"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -134205,7 +134205,7 @@
-   template_id: "PHOTO_SET_PLAYFUL_PALS_LARGE"
-   data {
-     template_id: "PHOTO_SET_PLAYFUL_PALS_LARGE"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_PLAYFUL_PALS_BIG"
-       frameColor: "Safarizone"
-       minimumPokemon: 1
-@@ -134285,7 +134285,7 @@
-   template_id: "PHOTO_SET_RELAXING_GARDEN"
-   data {
-     template_id: "PHOTO_SET_RELAXING_GARDEN"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_GARDEN"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -134379,7 +134379,7 @@
-   template_id: "PHOTO_SET_SAFARI_TREK"
-   data {
-     template_id: "PHOTO_SET_SAFARI_TREK"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SAFARI"
-       frameColor: "Safarizone"
-       minimumPokemon: 1
-@@ -134443,7 +134443,7 @@
-   template_id: "PHOTO_SET_SANDY_SHORELINE"
-   data {
-     template_id: "PHOTO_SET_SANDY_SHORELINE"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_BEACH"
-       frameColor: "Beachside"
-       minimumPokemon: 1
-@@ -134523,7 +134523,7 @@
-   template_id: "PHOTO_SET_SHADOWS_OF_NIGHT"
-   data {
-     template_id: "PHOTO_SET_SHADOWS_OF_NIGHT"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_NIGHT"
-       frameColor: "Nightfall"
-       minimumPokemon: 1
-@@ -134565,7 +134565,7 @@
-   template_id: "PHOTO_SET_SINNOH"
-   data {
-     template_id: "PHOTO_SET_SINNOH"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SINNOH"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -134586,7 +134586,7 @@
-   template_id: "PHOTO_SET_SMALL_AND_CUTE"
-   data {
-     template_id: "PHOTO_SET_SMALL_AND_CUTE"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SMALL_AND_CUTE"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -134673,7 +134673,7 @@
-   template_id: "PHOTO_SET_SMALL_CUTE_POKEMON"
-   data {
-     template_id: "PHOTO_SET_SMALL_CUTE_POKEMON"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SMALL_CUTE_POKEMON"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -134694,7 +134694,7 @@
-   template_id: "PHOTO_SET_SMALL_CUTE_POKEMON_PIKACHU_AND_EEVEE"
-   data {
-     template_id: "PHOTO_SET_SMALL_CUTE_POKEMON_PIKACHU_AND_EEVEE"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SMALL_CUTE_POKEMON_PIKACHU_AND_EEVEE"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -134712,7 +134712,7 @@
-   template_id: "PHOTO_SET_SMALL_CUTE_POKEMON_PINK"
-   data {
-     template_id: "PHOTO_SET_SMALL_CUTE_POKEMON_PINK"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SMALL_CUTE_POKEMON_PINK"
-       frameColor: "PinkPals"
-       minimumPokemon: 1
-@@ -134733,7 +134733,7 @@
-   template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON"
-   data {
-     template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SMALL_FLOWER_POKEMON"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -134757,7 +134757,7 @@
-   template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON_MEDIUM"
-   data {
-     template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON_MEDIUM"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SMALL_FLOWER_POKEMON_MEDIUM"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -134778,7 +134778,7 @@
-   template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON_SEEDS"
-   data {
-     template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON_SEEDS"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SMALL_FLOWER_POKEMON_SEEDS"
-       frameColor: "GreenShoots"
-       minimumPokemon: 1
-@@ -134799,7 +134799,7 @@
-   template_id: "PHOTO_SET_SMALL_WATER_POKEMON"
-   data {
-     template_id: "PHOTO_SET_SMALL_WATER_POKEMON"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SMALL_WATER_POKEMON"
-       frameColor: "UkiyoEuphoria"
-       minimumPokemon: 1
-@@ -134820,7 +134820,7 @@
-   template_id: "PHOTO_SET_SPRING_VIBES"
-   data {
-     template_id: "PHOTO_SET_SPRING_VIBES"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SPRING_VIBES"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -134889,7 +134889,7 @@
-   template_id: "PHOTO_SET_STARTERS"
-   data {
-     template_id: "PHOTO_SET_STARTERS"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_STARTERS"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -134973,7 +134973,7 @@
-   template_id: "PHOTO_SET_SUMMER_VIBES"
-   data {
-     template_id: "PHOTO_SET_SUMMER_VIBES"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_SUMMER_VIBES"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -135026,7 +135026,7 @@
-   template_id: "PHOTO_SET_TINY_TIKES"
-   data {
-     template_id: "PHOTO_SET_TINY_TIKES"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_TINY_TIKES"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -135128,7 +135128,7 @@
-   template_id: "PHOTO_SET_UNOVA"
-   data {
-     template_id: "PHOTO_SET_UNOVA"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_UNOVA"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -135149,7 +135149,7 @@
-   template_id: "PHOTO_SET_WINGS_POKEMON"
-   data {
-     template_id: "PHOTO_SET_WINGS_POKEMON"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_WINGS_POKEMON"
-       frameColor: "BusyBugs"
-       minimumPokemon: 1
-@@ -135173,7 +135173,7 @@
-   template_id: "PHOTO_SET_WINTER_VIBES"
-   data {
-     template_id: "PHOTO_SET_WINTER_VIBES"
--    obPhotoSetSettings {
-+    pokemonPhotoSets {
-       nameKey: "PHOTO_SET_WINTER_VIBES"
-       frameColor: "RainyDay"
-       minimumPokemon: 1
-@@ -136833,7 +136833,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ASUSASUS_I006D"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ASUSASUS_I006D"
--    obSettingsOverrideRules {
+ template {
++  template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2583"
++  data {
++    template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2583"
 +    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "asus ASUS_I006D"
-@@ -136848,7 +136848,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL6"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL6"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 6"
-@@ -136863,7 +136863,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL6A"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL6A"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 6a"
-@@ -136878,7 +136878,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL6PRO"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL6PRO"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 6 Pro"
-@@ -136893,7 +136893,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL7"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL7"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 7"
-@@ -136908,7 +136908,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL7A"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL7A"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 7a"
-@@ -136923,7 +136923,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL7PRO"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL7PRO"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 7 Pro"
-@@ -136938,7 +136938,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL8"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL8"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 8"
-@@ -136953,7 +136953,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL8PRO"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL8PRO"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 8 Pro"
-@@ -136968,7 +136968,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL9"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL9"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 9 Pro"
-@@ -136983,7 +136983,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL9PRO"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL9PRO"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 9 Pro"
-@@ -136998,7 +136998,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXELPROFOLD"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXELPROFOLD"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 9 Pro Fold"
-@@ -137013,7 +137013,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXELPROXL"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXELPROXL"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 9 Pro XL"
-@@ -137028,7 +137028,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_LGELM_V600"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_LGELM_V600"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "LGE LM-V600"
-@@ -137043,7 +137043,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_MOTOROLAMOTOROLAEDGE40"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_MOTOROLAMOTOROLAEDGE40"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "motorola motorola edge 40"
-@@ -137058,7 +137058,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUSCPH2399"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUSCPH2399"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2399"
-@@ -137073,7 +137073,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUSCPH2449"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUSCPH2449"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2449"
-@@ -137088,7 +137088,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUSDN2103"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUSDN2103"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus DN2103"
-@@ -137103,7 +137103,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUSKB2003"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUSKB2003"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus KB2003"
-@@ -137118,7 +137118,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUSLE2113"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUSLE2113"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus LE2113"
-@@ -137133,7 +137133,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUSLE2123"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUSLE2123"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus LE2123"
-@@ -137148,7 +137148,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUSNE2213"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUSNE2213"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus NE2213"
-@@ -137163,7 +137163,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2413"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2413"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2413"
-@@ -137178,7 +137178,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2415"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2415"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2415"
-@@ -137193,7 +137193,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2417"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2417"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2417"
-@@ -137208,7 +137208,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2447"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2447"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2447"
-@@ -137223,7 +137223,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2451"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2451"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2451"
-@@ -137238,7 +137238,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2573"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2573"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2573"
-@@ -137253,7 +137253,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2581"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2581"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2581"
-@@ -137268,7 +137268,7 @@
++      ruleType: DEVICE_MODEL
++      sortOrder: 50
++      ruleValue: "OnePlus CPH2583"
++      meshingEnabled: TRUE
++      occlusionEnabled: TRUE
++      semanticsEnabled: TRUE
++      vpsEnabled: TRUE
++    }
++  }
++}
++template {
    template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2585"
    data {
      template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2585"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2585"
-@@ -137283,7 +137283,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2609"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2609"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2609"
-@@ -137298,7 +137298,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2115"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2115"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus LE2115"
-@@ -137313,7 +137313,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2120"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2120"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus LE2120"
-@@ -137328,7 +137328,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2121"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2121"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus LE2121"
-@@ -137343,7 +137343,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2123"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2123"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus LE2123"
-@@ -137358,7 +137358,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2125"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2125"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus LE2125"
-@@ -137373,7 +137373,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2127"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_LE2127"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus LE2127"
-@@ -137388,7 +137388,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_NE2210"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_NE2210"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus NE2210"
-@@ -137403,7 +137403,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_NE2211"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_NE2211"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus NE2211"
-@@ -137418,7 +137418,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_NE2213"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_NE2213"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus NE2213"
-@@ -137433,7 +137433,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_NE2215"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_NE2215"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus NE2215"
-@@ -137448,7 +137448,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_NE2217"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_NE2217"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus NE2217"
-@@ -137463,7 +137463,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_PHB110"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_PHB110"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus PHB110"
-@@ -137478,7 +137478,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_PJD110"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_PJD110"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus PJD110"
-@@ -137493,7 +137493,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_OPPOCPH2359"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_OPPOCPH2359"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OPPO CPH2359"
-@@ -137508,7 +137508,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSCG09"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSCG09"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SCG09"
-@@ -137523,7 +137523,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSCG13"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSCG13"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SCG13"
-@@ -137538,7 +137538,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_51A"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_51A"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SC-51A"
-@@ -137553,7 +137553,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_51B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_51B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SC-51B"
-@@ -137568,7 +137568,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_51C"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_51C"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SC-51C"
-@@ -137583,7 +137583,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_51D"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_51D"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SC-51D"
-@@ -137598,7 +137598,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_52C"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_52C"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SC-52C"
-@@ -137613,7 +137613,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_52D"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_52D"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SC-52D"
-@@ -137628,7 +137628,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_A528B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSC_A528B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-A528B"
-@@ -137643,7 +137643,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F711B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F711B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F711B"
-@@ -137658,7 +137658,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F711N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F711N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F711N"
-@@ -137673,7 +137673,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F711U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F711U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F711U"
-@@ -137688,7 +137688,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F721B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F721B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F721B"
-@@ -137703,7 +137703,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F721N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F721N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F721N"
-@@ -137718,7 +137718,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F721U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F721U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F721U"
-@@ -137733,7 +137733,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F731B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F731B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F731B"
-@@ -137748,7 +137748,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F731N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F731N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F731N"
-@@ -137763,7 +137763,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F731U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F731U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F731U"
-@@ -137778,7 +137778,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F926B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F926B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F926B"
-@@ -137793,7 +137793,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F926N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F926N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F926N"
-@@ -137808,7 +137808,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F926U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F926U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F926U"
-@@ -137823,7 +137823,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F936B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F936B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F936B"
-@@ -137838,7 +137838,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F936N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F936N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F936N"
-@@ -137853,7 +137853,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F936U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F936U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F936U"
-@@ -137868,7 +137868,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F946B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F946B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F946B"
-@@ -137883,7 +137883,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F946N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F946N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F946N"
-@@ -137898,7 +137898,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F946U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_F946U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-F946U"
-@@ -137913,7 +137913,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G780F"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G780F"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G780F"
-@@ -137928,7 +137928,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G780G"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G780G"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G780G"
-@@ -137943,7 +137943,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G781B"
-@@ -137958,7 +137958,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G781N"
-@@ -137973,7 +137973,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G781U"
-@@ -137988,7 +137988,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G781U1"
-@@ -138003,7 +138003,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781V"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781V"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G781V"
-@@ -138018,7 +138018,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781W"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G781W"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G781W"
-@@ -138033,7 +138033,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G980F"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G980F"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G980F"
-@@ -138048,7 +138048,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G981B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G981B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G981B"
-@@ -138063,7 +138063,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G981N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G981N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G981N"
-@@ -138078,7 +138078,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G981U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G981U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G981U"
-@@ -138093,7 +138093,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G981U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G981U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G981U1"
-@@ -138108,7 +138108,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G985F"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G985F"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G985F"
-@@ -138123,7 +138123,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G986B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G986B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G986B"
-@@ -138138,7 +138138,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G986N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G986N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G986N"
-@@ -138153,7 +138153,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G986U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G986U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G986U"
-@@ -138168,7 +138168,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G986U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G986U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G986U1"
-@@ -138183,7 +138183,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G988B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G988B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G988B"
-@@ -138198,7 +138198,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G988N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G988N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G988N"
-@@ -138213,7 +138213,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G988U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G988U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G988U"
-@@ -138228,7 +138228,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G990B"
-@@ -138243,7 +138243,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990B2"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990B2"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G990B2"
-@@ -138258,7 +138258,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990E"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990E"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G990E"
-@@ -138273,7 +138273,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G990U"
-@@ -138288,7 +138288,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990U2"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990U2"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G990U2"
-@@ -138303,7 +138303,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990W2"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G990W2"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G990W2"
-@@ -138318,7 +138318,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G9910"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G9910"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G9910"
-@@ -138333,7 +138333,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G991B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G991B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G991B"
-@@ -138348,7 +138348,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G991N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G991N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G991N"
-@@ -138363,7 +138363,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G991U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G991U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G991U"
-@@ -138378,7 +138378,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G991U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G991U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G991U1"
-@@ -138393,7 +138393,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G991W"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G991W"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G991W"
-@@ -138408,7 +138408,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G996B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G996B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G996B"
-@@ -138423,7 +138423,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G996N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G996N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G996N"
-@@ -138438,7 +138438,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G996U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G996U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G996U"
-@@ -138453,7 +138453,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G996U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G996U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G996U1"
-@@ -138468,7 +138468,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G998B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G998B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G998B"
-@@ -138483,7 +138483,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G998N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G998N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G998N"
-@@ -138498,7 +138498,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G998U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G998U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G998U"
-@@ -138513,7 +138513,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G998U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_G998U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-G998U1"
-@@ -138528,7 +138528,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N970U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N970U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-N970U"
-@@ -138543,7 +138543,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N980F"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N980F"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-N980F"
-@@ -138558,7 +138558,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N981B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N981B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-N981B"
-@@ -138573,7 +138573,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N981N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N981N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-N981N"
-@@ -138588,7 +138588,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N981U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N981U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-N981U"
-@@ -138603,7 +138603,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N9860"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N9860"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-N9860"
-@@ -138618,7 +138618,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N986B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N986B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-N986B"
-@@ -138633,7 +138633,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N986N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N986N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-N986N"
-@@ -138648,7 +138648,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N986U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N986U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-N986U"
-@@ -138663,7 +138663,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N986U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_N986U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-N986U1"
-@@ -138678,7 +138678,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S711B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S711B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S711B"
-@@ -138693,7 +138693,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S711N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S711N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S711N"
-@@ -138708,7 +138708,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S711U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S711U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S711U"
-@@ -138723,7 +138723,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S711W"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S711W"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S711W"
-@@ -138738,7 +138738,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S901B"
-@@ -138753,7 +138753,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901E"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901E"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S901E"
-@@ -138768,7 +138768,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S901N"
-@@ -138783,7 +138783,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S901U"
-@@ -138798,7 +138798,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S901U1"
-@@ -138813,7 +138813,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901W"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S901W"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S901W"
-@@ -138828,7 +138828,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9060"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9060"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S9060"
-@@ -138843,7 +138843,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S906B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S906B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S906B"
-@@ -138858,7 +138858,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S906E"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S906E"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S906E"
-@@ -138873,7 +138873,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S906N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S906N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S906N"
-@@ -138888,7 +138888,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S906U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S906U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S906U"
-@@ -138903,7 +138903,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S906U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S906U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S906U1"
-@@ -138918,7 +138918,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9080"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9080"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S9080"
-@@ -138933,7 +138933,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S908B"
-@@ -138948,7 +138948,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908E"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908E"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S908E"
-@@ -138963,7 +138963,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S908N"
-@@ -138978,7 +138978,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S908U"
-@@ -138993,7 +138993,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S908U1"
-@@ -139008,7 +139008,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908W"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S908W"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S908W"
-@@ -139023,7 +139023,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S911B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S911B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S911B"
-@@ -139038,7 +139038,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S911N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S911N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S911N"
-@@ -139053,7 +139053,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S911U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S911U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S911U"
-@@ -139068,7 +139068,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S911U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S911U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S911U1"
-@@ -139083,7 +139083,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S911W"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S911W"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S911W"
-@@ -139098,7 +139098,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9160"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9160"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S9160"
-@@ -139113,7 +139113,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S916B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S916B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S916B"
-@@ -139128,7 +139128,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S916N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S916N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S916N"
-@@ -139143,7 +139143,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S916U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S916U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S916U"
-@@ -139158,7 +139158,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S916U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S916U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S916U1"
-@@ -139173,7 +139173,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9180"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9180"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S9180"
-@@ -139188,7 +139188,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S918B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S918B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S918B"
-@@ -139203,7 +139203,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S918N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S918N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S918N"
-@@ -139218,7 +139218,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S918U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S918U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S918U"
-@@ -139233,7 +139233,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S918U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S918U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S918U1"
-@@ -139248,7 +139248,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S918W"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S918W"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S918W"
-@@ -139263,7 +139263,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S921B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S921B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S921B"
-@@ -139278,7 +139278,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S921N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S921N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S921N"
-@@ -139293,7 +139293,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9260"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9260"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S9260"
-@@ -139308,7 +139308,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S926U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S926U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S926U"
-@@ -139323,7 +139323,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9280"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S9280"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S9280"
-@@ -139338,7 +139338,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S928B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S928B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S928B"
-@@ -139353,7 +139353,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S928N"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S928N"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S928N"
-@@ -139368,7 +139368,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S928U"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S928U"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S928U"
-@@ -139383,7 +139383,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S928U1"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SAMSUNGSM_S928U1"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "samsung SM-S928U1"
-@@ -139398,7 +139398,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SHARPSH_51B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SHARPSH_51B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "SHARP SH-51B"
-@@ -139413,7 +139413,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONYSOG02"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONYSOG02"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SOG02"
-@@ -139428,7 +139428,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONYSOG05"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONYSOG05"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SOG05"
-@@ -139443,7 +139443,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONYSOG06"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONYSOG06"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SOG06"
-@@ -139458,7 +139458,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONYSO_51A"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONYSO_51A"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SO-51A"
-@@ -139473,7 +139473,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONYSO_51B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONYSO_51B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SO-51B"
-@@ -139488,7 +139488,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONYSO_51C"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONYSO_51C"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SO-51C"
-@@ -139503,7 +139503,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONYSO_52A"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONYSO_52A"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SO-52A"
-@@ -139518,7 +139518,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONYSO_53B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONYSO_53B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SO-53B"
-@@ -139533,7 +139533,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONYSO_54C"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONYSO_54C"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SO-54C"
-@@ -139548,7 +139548,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_A002SO"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_A002SO"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony A002SO"
-@@ -139563,7 +139563,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_A101SO"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_A101SO"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony A101SO"
-@@ -139578,7 +139578,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_A103SO"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_A103SO"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony A103SO"
-@@ -139593,7 +139593,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_A201SO"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_A201SO"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony A201SO"
-@@ -139608,7 +139608,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_SO53B"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_SO53B"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SO-53B"
-@@ -139623,7 +139623,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_SOG01"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_SOG01"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SOG01"
-@@ -139638,7 +139638,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_SOG03"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_SOG03"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony SOG03"
-@@ -139653,7 +139653,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_1_II"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_1_II"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony Xperia 1 II"
-@@ -139668,7 +139668,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_1_III"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_1_III"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony Xperia 1 III"
-@@ -139683,7 +139683,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_1_IV"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_1_IV"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony Xperia 1 IV"
-@@ -139698,7 +139698,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_1_V"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_1_V"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony Xperia 1 V"
-@@ -139713,7 +139713,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_5_II"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_5_II"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony Xperia 5 II"
-@@ -139728,7 +139728,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_5_III"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_5_III"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony Xperia 5 III"
-@@ -139743,7 +139743,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_5_V"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_5_V"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony Xperia 5 V"
-@@ -139758,7 +139758,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_PRO"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_PRO"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony Xperia PRO"
-@@ -139773,7 +139773,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_PROI"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XPERIA_PROI"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony Xperia PRO-I"
-@@ -139788,7 +139788,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQAQ52"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQAQ52"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-AQ52"
-@@ -139803,7 +139803,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQAQ62"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQAQ62"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-AQ62"
-@@ -139818,7 +139818,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQAS42"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQAS42"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-AS42"
-@@ -139833,7 +139833,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQAS52"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQAS52"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-AS52"
-@@ -139848,7 +139848,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQAS62"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQAS62"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-AS62"
-@@ -139863,7 +139863,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQAS72"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQAS72"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-AS72"
-@@ -139878,7 +139878,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQAT42"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQAT42"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-AT42"
-@@ -139893,7 +139893,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQAT51"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQAT51"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-AT51"
-@@ -139908,7 +139908,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQAT52"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQAT52"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-AT52"
-@@ -139923,7 +139923,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQAT72"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQAT72"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-AT72"
-@@ -139938,7 +139938,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBC42"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBC42"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BC42"
-@@ -139953,7 +139953,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBC52"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBC52"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BC52"
-@@ -139968,7 +139968,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBC62"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBC62"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BC62"
-@@ -139983,7 +139983,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBC72"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBC72"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BC72"
-@@ -139998,7 +139998,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBE52"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBE52"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BE52"
-@@ -140013,7 +140013,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBE62"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBE62"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BE62"
-@@ -140028,7 +140028,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBE72"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBE72"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BE72"
-@@ -140043,7 +140043,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBQ42"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBQ42"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BQ42"
-@@ -140058,7 +140058,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBQ52"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBQ52"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BQ52"
-@@ -140073,7 +140073,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBQ62"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBQ62"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BQ62"
-@@ -140088,7 +140088,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQBQ72"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQBQ72"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-BQ72"
-@@ -140103,7 +140103,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQCT54"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQCT54"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-CT54"
-@@ -140118,7 +140118,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQCT62"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQCT62"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-CT62"
-@@ -140133,7 +140133,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQCT72"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQCT72"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-CT72"
-@@ -140148,7 +140148,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQ_DE44"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQ_DE44"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-DE44"
-@@ -140163,7 +140163,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_SONY_XQ_DQ44"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_SONY_XQ_DQ44"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Sony XQ-DQ44"
-@@ -140178,7 +140178,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMI21061110AG"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMI21061110AG"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi 21061110AG"
-@@ -140193,7 +140193,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMI2107113SG"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMI2107113SG"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi 2107113SG"
-@@ -140208,7 +140208,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMI21081111RG"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMI21081111RG"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi 21081111RG"
-@@ -140223,7 +140223,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMI21121210G"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMI21121210G"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi 21121210G"
-@@ -140238,7 +140238,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMI2201123G"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMI2201123G"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi 2201123G"
-@@ -140253,7 +140253,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMI22021211RG"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMI22021211RG"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi 22021211RG"
-@@ -140268,7 +140268,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMI22041216G"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMI22041216G"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi 22041216G"
-@@ -140283,7 +140283,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMI22081212UG"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMI22081212UG"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi 22081212UG"
-@@ -140298,7 +140298,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMI23049PCD8G"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMI23049PCD8G"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi 23049PCD8G"
-@@ -140313,7 +140313,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMIM2007J3SG"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMIM2007J3SG"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi M2007J3SG"
-@@ -140328,7 +140328,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMIM2007J3SY"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMIM2007J3SY"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi M2007J3SY"
-@@ -140343,7 +140343,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMIM2012K11AG"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMIM2012K11AG"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi M2012K11AG"
-@@ -140358,7 +140358,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_XIAOMIM2102K1AC"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_XIAOMIM2102K1AC"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Xiaomi M2102K1AC"
-@@ -140373,7 +140373,7 @@
-   template_id: "SETTINGS_RULES_ANDROID"
-   data {
-     template_id: "SETTINGS_RULES_ANDROID"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: PLATFORM
-       sortOrder: 2
-       ruleValue: "Android"
-@@ -140388,7 +140388,7 @@
-   template_id: "SETTINGS_RULES_BASE"
-   data {
-     template_id: "SETTINGS_RULES_BASE"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: ALL
-       sortOrder: 1
-       meshingEnabled: TRUE
-@@ -140404,7 +140404,7 @@
-   template_id: "SETTINGS_RULES_DENY_IPAD4"
-   data {
-     template_id: "SETTINGS_RULES_DENY_IPAD4"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL_CONTAINS
-       sortOrder: 10
-       ruleValue: "iPad4"
-@@ -140419,7 +140419,7 @@
-   template_id: "SETTINGS_RULES_DENY_IPAD5"
-   data {
-     template_id: "SETTINGS_RULES_DENY_IPAD5"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL_CONTAINS
-       sortOrder: 10
-       ruleValue: "iPad5"
-@@ -140434,7 +140434,7 @@
-   template_id: "SETTINGS_RULES_DENY_IPAD6"
-   data {
-     template_id: "SETTINGS_RULES_DENY_IPAD6"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL_CONTAINS
-       sortOrder: 10
-       ruleValue: "iPad6"
-@@ -140449,7 +140449,7 @@
-   template_id: "SETTINGS_RULES_DENY_IPHONE6"
-   data {
-     template_id: "SETTINGS_RULES_DENY_IPHONE6"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL_CONTAINS
-       sortOrder: 10
-       ruleValue: "iPhone7"
-@@ -140464,7 +140464,7 @@
-   template_id: "SETTINGS_RULES_DENY_IPHONE7"
-   data {
-     template_id: "SETTINGS_RULES_DENY_IPHONE7"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL_CONTAINS
-       sortOrder: 10
-       ruleValue: "iPhone9"
-@@ -140479,7 +140479,7 @@
-   template_id: "SETTINGS_RULES_DENY_IPHONESE"
-   data {
-     template_id: "SETTINGS_RULES_DENY_IPHONESE"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL_CONTAINS
-       sortOrder: 10
-       ruleValue: "iPhone8"
-@@ -359628,7 +359628,7 @@
-   template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2583"
-   data {
-     template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2583"
--    obSettingsOverrideRules {
-+    settingsOverrideRule {
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "OnePlus CPH2583"
+@@ -166912,6 +167001,78 @@
+   }
+ }
+ template {
++  template_id: "STICKER_HALLOWEEN24_FROAKIE"
++  data {
++    template_id: "STICKER_HALLOWEEN24_FROAKIE"
++    stickerMetadata {
++      stickerId: "STICKER_HALLOWEEN24_FROAKIE"
++      maxCount: 25
++      pokemonId: FROAKIE
++      category: "Pokemon"
++      releaseDate: 20241009
++      regionId: 6
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN24_FROAKIE.3"
++  data {
++    template_id: "STICKER_HALLOWEEN24_FROAKIE.3"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN24_FROAKIE.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN24_FROAKIE.5"
++  data {
++    template_id: "STICKER_HALLOWEEN24_FROAKIE.5"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN24_FROAKIE.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN24_ROWLET"
++  data {
++    template_id: "STICKER_HALLOWEEN24_ROWLET"
++    stickerMetadata {
++      stickerId: "STICKER_HALLOWEEN24_ROWLET"
++      maxCount: 25
++      pokemonId: ROWLET
++      category: "Pokemon"
++      releaseDate: 20241009
++      regionId: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN24_ROWLET.3"
++  data {
++    template_id: "STICKER_HALLOWEEN24_ROWLET.3"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN24_ROWLET.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 10
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN24_ROWLET.5"
++  data {
++    template_id: "STICKER_HALLOWEEN24_ROWLET.5"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN24_ROWLET.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 10
++    }
++  }
++}
++template {
+   template_id: "STICKER_HALLOWEEN_BULB"
+   data {
+     template_id: "STICKER_HALLOWEEN_BULB"
+@@ -167850,6 +168011,84 @@
+   }
+ }
+ template {
++  template_id: "STICKER_KURTASAREE_1"
++  data {
++    template_id: "STICKER_KURTASAREE_1"
++    stickerMetadata {
++      stickerId: "STICKER_KURTASAREE_1"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20241015
++    }
++  }
++}
++template {
++  template_id: "STICKER_KURTASAREE_2"
++  data {
++    template_id: "STICKER_KURTASAREE_2"
++    stickerMetadata {
++      stickerId: "STICKER_KURTASAREE_2"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20241015
++    }
++  }
++}
++template {
++  template_id: "STICKER_KURTASAREE_3"
++  data {
++    template_id: "STICKER_KURTASAREE_3"
++    stickerMetadata {
++      stickerId: "STICKER_KURTASAREE_3"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20241015
++    }
++  }
++}
++template {
++  template_id: "STICKER_KURTASAREE_4"
++  data {
++    template_id: "STICKER_KURTASAREE_4"
++    stickerMetadata {
++      stickerId: "STICKER_KURTASAREE_4"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20241015
++    }
++  }
++}
++template {
++  template_id: "STICKER_KURTASAREE_5"
++  data {
++    template_id: "STICKER_KURTASAREE_5"
++    stickerMetadata {
++      stickerId: "STICKER_KURTASAREE_5"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20241015
++    }
++  }
++}
++template {
++  template_id: "STICKER_KURTASAREE_6"
++  data {
++    template_id: "STICKER_KURTASAREE_6"
++    stickerMetadata {
++      stickerId: "STICKER_KURTASAREE_6"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20241015
++    }
++  }
++}
++template {
+   template_id: "STICKER_LENTILLAUNCH_CAMERA"
+   data {
+     template_id: "STICKER_LENTILLAUNCH_CAMERA"
+@@ -168030,6 +168269,143 @@
+   }
+ }
+ template {
++  template_id: "STICKER_MANKEY_1"
++  data {
++    template_id: "STICKER_MANKEY_1"
++    stickerMetadata {
++      stickerId: "STICKER_MANKEY_1"
++      maxCount: 25
++      pokemonId: MANKEY
++      category: "Pokemon"
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_1.3"
++  data {
++    template_id: "STICKER_MANKEY_1.3"
++    iapItemDisplay {
++      sku: "STICKER_MANKEY_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 5
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_1.5"
++  data {
++    template_id: "STICKER_MANKEY_1.5"
++    iapItemDisplay {
++      sku: "STICKER_MANKEY_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 5
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_2"
++  data {
++    template_id: "STICKER_MANKEY_2"
++    stickerMetadata {
++      stickerId: "STICKER_MANKEY_2"
++      maxCount: 25
++      pokemonId: MANKEY
++      category: "Pokemon"
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_2.3"
++  data {
++    template_id: "STICKER_MANKEY_2.3"
++    iapItemDisplay {
++      sku: "STICKER_MANKEY_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_2.5"
++  data {
++    template_id: "STICKER_MANKEY_2.5"
++    iapItemDisplay {
++      sku: "STICKER_MANKEY_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_3"
++  data {
++    template_id: "STICKER_MANKEY_3"
++    stickerMetadata {
++      stickerId: "STICKER_MANKEY_3"
++      maxCount: 25
++      pokemonId: MANKEY
++      category: "Pokemon"
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_3.3"
++  data {
++    template_id: "STICKER_MANKEY_3.3"
++    iapItemDisplay {
++      sku: "STICKER_MANKEY_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 6
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_3.5"
++  data {
++    template_id: "STICKER_MANKEY_3.5"
++    iapItemDisplay {
++      sku: "STICKER_MANKEY_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 6
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_4"
++  data {
++    template_id: "STICKER_MANKEY_4"
++    stickerMetadata {
++      stickerId: "STICKER_MANKEY_4"
++      maxCount: 25
++      pokemonId: ANNIHILAPE
++      category: "Pokemon"
++      regionId: 1001
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_4.3"
++  data {
++    template_id: "STICKER_MANKEY_4.3"
++    iapItemDisplay {
++      sku: "STICKER_MANKEY_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 8
++    }
++  }
++}
++template {
++  template_id: "STICKER_MANKEY_4.5"
++  data {
++    template_id: "STICKER_MANKEY_4.5"
++    iapItemDisplay {
++      sku: "STICKER_MANKEY_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 8
++    }
++  }
++}
++template {
+   template_id: "STICKER_MEWTWO"
+   data {
+     template_id: "STICKER_MEWTWO"
+@@ -168818,6 +169194,71 @@
+   }
+ }
+ template {
++  template_id: "STICKER_PAPELPICADOTGR_1"
++  data {
++    template_id: "STICKER_PAPELPICADOTGR_1"
++    stickerMetadata {
++      stickerId: "STICKER_PAPELPICADOTGR_1"
++      maxCount: 25
++      pokemonId: ARTICUNO
++      category: "Pokemon"
++      releaseDate: 20241015
++    }
++  }
++}
++template {
++  template_id: "STICKER_PAPELPICADOTGR_2"
++  data {
++    template_id: "STICKER_PAPELPICADOTGR_2"
++    stickerMetadata {
++      stickerId: "STICKER_PAPELPICADOTGR_2"
++      maxCount: 25
++      pokemonId: ZAPDOS
++      category: "Pokemon"
++      releaseDate: 20241015
++    }
++  }
++}
++template {
++  template_id: "STICKER_PAPELPICADOTGR_3"
++  data {
++    template_id: "STICKER_PAPELPICADOTGR_3"
++    stickerMetadata {
++      stickerId: "STICKER_PAPELPICADOTGR_3"
++      maxCount: 25
++      pokemonId: MOLTRES
++      category: "Pokemon"
++      releaseDate: 20241015
++    }
++  }
++}
++template {
++  template_id: "STICKER_PAPELPICADOTGR_4"
++  data {
++    template_id: "STICKER_PAPELPICADOTGR_4"
++    stickerMetadata {
++      stickerId: "STICKER_PAPELPICADOTGR_4"
++      maxCount: 25
++      category: "Misc"
++      releaseDate: 20241015
++      regionId: 2000
++    }
++  }
++}
++template {
++  template_id: "STICKER_PAPELPICADOTGR_5"
++  data {
++    template_id: "STICKER_PAPELPICADOTGR_5"
++    stickerMetadata {
++      stickerId: "STICKER_PAPELPICADOTGR_5"
++      maxCount: 25
++      category: "Misc"
++      releaseDate: 20241015
++      regionId: 2000
++    }
++  }
++}
++template {
+   template_id: "STICKER_PGOFEST2021_GALARIANZIGZAGOON"
+   data {
+     template_id: "STICKER_PGOFEST2021_GALARIANZIGZAGOON"
+@@ -169855,6 +170296,88 @@
+   }
+ }
+ template {
++  template_id: "STICKER_PGO_WILDAREA_2024"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_WILDAREA_2024"
++      maxCount: 25
++      category: "Misc"
++      releaseDate: 20241010
++      regionId: 2000
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_1"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_1"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_WILDAREA_2024_1"
++      maxCount: 25
++      pokemonId: TOXEL
++      category: "Pokemon"
++      releaseDate: 20241010
++      regionId: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_2"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_2"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_WILDAREA_2024_2"
++      maxCount: 25
++      pokemonId: TOXTRICITY
++      category: "Pokemon"
++      releaseDate: 20241010
++      regionId: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_3"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_WILDAREA_2024_3"
++      maxCount: 25
++      pokemonId: TOXTRICITY
++      category: "Pokemon"
++      releaseDate: 20241010
++      regionId: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_4"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_4"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_WILDAREA_2024_4"
++      maxCount: 25
++      pokemonId: TOXTRICITY
++      category: "Pokemon"
++      releaseDate: 20241010
++      regionId: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_LOGO"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_LOGO"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_WILDAREA_2024_LOGO"
++      maxCount: 25
++      category: "Misc"
++      releaseDate: 20241010
++      regionId: 2000
++    }
++  }
++}
++template {
+   template_id: "STICKER_PIKAAIRADVENTURE_1"
+   data {
+     template_id: "STICKER_PIKAAIRADVENTURE_1"
+@@ -294542,6 +295065,7 @@
+       isTradable: true
+       buddyGroupNumber: 3
+       eliteCinematicMove: HYDRO_CANNON
++      raidBossDistanceOffset: 3
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -338694,6 +339218,48 @@
+   }
+ }
+ template {
++  template_id: "bundle.diademuertosmax100.1"
++  data {
++    template_id: "bundle.diademuertosmax100.1"
++    iapItemDisplay {
++      sku: "bundle.diademuertosmax100.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.latam.large.1"
++      title: "bundle.wicker.box.1_title"
++    }
++  }
++}
++template {
++  template_id: "bundle.diademuertosmax200.1"
++  data {
++    template_id: "bundle.diademuertosmax200.1"
++    iapItemDisplay {
++      sku: "bundle.diademuertosmax200.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.latam.large.1"
++      title: "bundle.general5.small.1_title"
++    }
++  }
++}
++template {
++  template_id: "bundle.diwalimax100.1"
++  data {
++    template_id: "bundle.diwalimax100.1"
++    iapItemDisplay {
++      sku: "bundle.diwalimax100.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general.premiumbox.large.1"
++      title: "bundle.general5.small.1_title"
++    }
++  }
++}
++template {
+   template_id: "bundle.emea2023.1"
+   data {
+     template_id: "bundle.emea2023.1"
+@@ -359528,440 +360094,7 @@
+     }
+   }
+ }
+-template {
+-  template_id: "EVOLUTION_V0848_POKEMON_TOXEL"
+-  data {
+-    template_id: "EVOLUTION_V0848_POKEMON_TOXEL"
+-    evolution_chain_display_settings {
+-      pokemon: TOXEL
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: TOXEL
+-        }
+-        evolutionInfos {
+-          pokemon: TOXTRICITY
+-          form: TOXTRICITY_LOW_KEY
+-        }
+-      }
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: TOXEL
+-        }
+-        evolutionInfos {
+-          pokemon: TOXTRICITY
+-          form: TOXTRICITY_AMPED
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVOLUTION_V0849_POKEMON_TOXTRICITY"
+-  data {
+-    template_id: "EVOLUTION_V0849_POKEMON_TOXTRICITY"
+-    evolution_chain_display_settings {
+-      pokemon: TOXTRICITY
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: TOXEL
+-        }
+-        evolutionInfos {
+-          pokemon: TOXTRICITY
+-          form: TOXTRICITY_LOW_KEY
+-        }
+-      }
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: TOXEL
+-        }
+-        evolutionInfos {
+-          pokemon: TOXTRICITY
+-          form: TOXTRICITY_AMPED
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.diademuertosmax100.1"
+-  data {
+-    template_id: "bundle.diademuertosmax100.1"
+-    iapItemDisplay {
+-      sku: "bundle.diademuertosmax100.1"
+-      category: IAP_CATEGORY_BUNDLE
+-      sortOrder: 1
+-      hidden: true
+-      spriteId: "bundle.latam.large.1"
+-      title: "bundle.wicker.box.1_title"
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.diademuertosmax200.1"
+-  data {
+-    template_id: "bundle.diademuertosmax200.1"
+-    iapItemDisplay {
+-      sku: "bundle.diademuertosmax200.1"
+-      category: IAP_CATEGORY_BUNDLE
+-      sortOrder: 1
+-      hidden: true
+-      spriteId: "bundle.latam.large.1"
+-      title: "bundle.general5.small.1_title"
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.diwalimax100.1"
+-  data {
+-    template_id: "bundle.diwalimax100.1"
+-    iapItemDisplay {
+-      sku: "bundle.diwalimax100.1"
+-      category: IAP_CATEGORY_BUNDLE
+-      sortOrder: 1
+-      hidden: true
+-      spriteId: "bundle.general.premiumbox.large.1"
+-      title: "bundle.general5.small.1_title"
+-    }
+-  }
+-}
+-template {
+-  template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2583"
+-  data {
+-    template_id: "SETTINGS_RULES_ALLOW_ONEPLUS_CPH2583"
+-    settingsOverrideRule {
+-      ruleType: DEVICE_MODEL
+-      sortOrder: 50
+-      ruleValue: "OnePlus CPH2583"
+-      meshingEnabled: TRUE
+-      occlusionEnabled: TRUE
+-      semanticsEnabled: TRUE
+-      vpsEnabled: TRUE
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_HALLOWEEN24_FROAKIE"
+-  data {
+-    template_id: "STICKER_HALLOWEEN24_FROAKIE"
+-    stickerMetadata {
+-      stickerId: "STICKER_HALLOWEEN24_FROAKIE"
+-      maxCount: 25
+-      pokemonId: FROAKIE
+-      category: "Pokemon"
+-      releaseDate: 20241009
+-      regionId: 6
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_HALLOWEEN24_ROWLET"
+-  data {
+-    template_id: "STICKER_HALLOWEEN24_ROWLET"
+-    stickerMetadata {
+-      stickerId: "STICKER_HALLOWEEN24_ROWLET"
+-      maxCount: 25
+-      pokemonId: ROWLET
+-      category: "Pokemon"
+-      releaseDate: 20241009
+-      regionId: 7
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_KURTASAREE_1"
+-  data {
+-    template_id: "STICKER_KURTASAREE_1"
+-    stickerMetadata {
+-      stickerId: "STICKER_KURTASAREE_1"
+-      maxCount: 25
+-      pokemonId: PIKACHU
+-      category: "Pokemon"
+-      releaseDate: 20241015
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_KURTASAREE_2"
+-  data {
+-    template_id: "STICKER_KURTASAREE_2"
+-    stickerMetadata {
+-      stickerId: "STICKER_KURTASAREE_2"
+-      maxCount: 25
+-      pokemonId: PIKACHU
+-      category: "Pokemon"
+-      releaseDate: 20241015
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_KURTASAREE_3"
+-  data {
+-    template_id: "STICKER_KURTASAREE_3"
+-    stickerMetadata {
+-      stickerId: "STICKER_KURTASAREE_3"
+-      maxCount: 25
+-      pokemonId: PIKACHU
+-      category: "Pokemon"
+-      releaseDate: 20241015
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_KURTASAREE_4"
+-  data {
+-    template_id: "STICKER_KURTASAREE_4"
+-    stickerMetadata {
+-      stickerId: "STICKER_KURTASAREE_4"
+-      maxCount: 25
+-      pokemonId: PIKACHU
+-      category: "Pokemon"
+-      releaseDate: 20241015
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_KURTASAREE_5"
+-  data {
+-    template_id: "STICKER_KURTASAREE_5"
+-    stickerMetadata {
+-      stickerId: "STICKER_KURTASAREE_5"
+-      maxCount: 25
+-      pokemonId: PIKACHU
+-      category: "Pokemon"
+-      releaseDate: 20241015
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_KURTASAREE_6"
+-  data {
+-    template_id: "STICKER_KURTASAREE_6"
+-    stickerMetadata {
+-      stickerId: "STICKER_KURTASAREE_6"
+-      maxCount: 25
+-      pokemonId: PIKACHU
+-      category: "Pokemon"
+-      releaseDate: 20241015
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_MANKEY_1"
+-  data {
+-    template_id: "STICKER_MANKEY_1"
+-    stickerMetadata {
+-      stickerId: "STICKER_MANKEY_1"
+-      maxCount: 25
+-      pokemonId: MANKEY
+-      category: "Pokemon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_MANKEY_2"
+-  data {
+-    template_id: "STICKER_MANKEY_2"
+-    stickerMetadata {
+-      stickerId: "STICKER_MANKEY_2"
+-      maxCount: 25
+-      pokemonId: MANKEY
+-      category: "Pokemon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_MANKEY_3"
+-  data {
+-    template_id: "STICKER_MANKEY_3"
+-    stickerMetadata {
+-      stickerId: "STICKER_MANKEY_3"
+-      maxCount: 25
+-      pokemonId: MANKEY
+-      category: "Pokemon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_MANKEY_4"
+-  data {
+-    template_id: "STICKER_MANKEY_4"
+-    stickerMetadata {
+-      stickerId: "STICKER_MANKEY_4"
+-      maxCount: 25
+-      pokemonId: ANNIHILAPE
+-      category: "Pokemon"
+-      regionId: 1001
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PAPELPICADOTGR_1"
+-  data {
+-    template_id: "STICKER_PAPELPICADOTGR_1"
+-    stickerMetadata {
+-      stickerId: "STICKER_PAPELPICADOTGR_1"
+-      maxCount: 25
+-      pokemonId: ARTICUNO
+-      category: "Pokemon"
+-      releaseDate: 20241015
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PAPELPICADOTGR_2"
+-  data {
+-    template_id: "STICKER_PAPELPICADOTGR_2"
+-    stickerMetadata {
+-      stickerId: "STICKER_PAPELPICADOTGR_2"
+-      maxCount: 25
+-      pokemonId: ZAPDOS
+-      category: "Pokemon"
+-      releaseDate: 20241015
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PAPELPICADOTGR_3"
+-  data {
+-    template_id: "STICKER_PAPELPICADOTGR_3"
+-    stickerMetadata {
+-      stickerId: "STICKER_PAPELPICADOTGR_3"
+-      maxCount: 25
+-      pokemonId: MOLTRES
+-      category: "Pokemon"
+-      releaseDate: 20241015
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PAPELPICADOTGR_4"
+-  data {
+-    template_id: "STICKER_PAPELPICADOTGR_4"
+-    stickerMetadata {
+-      stickerId: "STICKER_PAPELPICADOTGR_4"
+-      maxCount: 25
+-      category: "Misc"
+-      releaseDate: 20241015
+-      regionId: 2000
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PAPELPICADOTGR_5"
+-  data {
+-    template_id: "STICKER_PAPELPICADOTGR_5"
+-    stickerMetadata {
+-      stickerId: "STICKER_PAPELPICADOTGR_5"
+-      maxCount: 25
+-      category: "Misc"
+-      releaseDate: 20241015
+-      regionId: 2000
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024"
+-    stickerMetadata {
+-      stickerId: "STICKER_PGO_WILDAREA_2024"
+-      maxCount: 25
+-      category: "Misc"
+-      releaseDate: 20241010
+-      regionId: 2000
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_1"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_1"
+-    stickerMetadata {
+-      stickerId: "STICKER_PGO_WILDAREA_2024_1"
+-      maxCount: 25
+-      pokemonId: TOXEL
+-      category: "Pokemon"
+-      releaseDate: 20241010
+-      regionId: 7
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_2"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_2"
+-    stickerMetadata {
+-      stickerId: "STICKER_PGO_WILDAREA_2024_2"
+-      maxCount: 25
+-      pokemonId: TOXTRICITY
+-      category: "Pokemon"
+-      releaseDate: 20241010
+-      regionId: 7
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_3"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_3"
+-    stickerMetadata {
+-      stickerId: "STICKER_PGO_WILDAREA_2024_3"
+-      maxCount: 25
+-      pokemonId: TOXTRICITY
+-      category: "Pokemon"
+-      releaseDate: 20241010
+-      regionId: 7
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_4"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_4"
+-    stickerMetadata {
+-      stickerId: "STICKER_PGO_WILDAREA_2024_4"
+-      maxCount: 25
+-      pokemonId: TOXTRICITY
+-      category: "Pokemon"
+-      releaseDate: 20241010
+-      regionId: 7
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_LOGO"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_LOGO"
+-    stickerMetadata {
+-      stickerId: "STICKER_PGO_WILDAREA_2024_LOGO"
+-      maxCount: 25
+-      category: "Misc"
+-      releaseDate: 20241010
+-      regionId: 2000
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_shirt_morpekofullonesie_0"
+-  data {
+-    template_id: "N_DISPLAY_n_shirt_morpekofullonesie_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_shirt_morpekofullonesie_0_icon"
+-      displayStringId: "avatar_shirt_morpekofullbelly"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_shirt_morpekohangryonesie_0"
+-  data {
+-    template_id: "N_DISPLAY_n_shirt_morpekohangryonesie_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_shirt_morpekohangryonesie_0_icon"
+-      displayStringId: "avatar_shirt_morpekohangry"
+-    }
+-  }
+-}
+-batch_id: 1729208532143
++batch_id: 1729297658621
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -360015,6 +360148,7 @@
+ experiment_id: 9510
+ experiment_id: 9512
+ experiment_id: 9513
++experiment_id: 9536
+ experiment_id: 20947
+ experiment_id: 80001
+ experiment_id: 300000
