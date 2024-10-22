@@ -1,28 +1,353 @@
---- GAME_MASTER_old.txt	2024-10-21 18:47:32.631778458 +0200
-+++ GAME_MASTER.txt	2024-10-21 19:19:01.952146876 +0200
-@@ -135590,6 +135590,16 @@
-         milestoneGoal: 9999
-         visuallyHidden: true
-       }
-+      pokedexCategorySettingsInOrder {
-+        pokedexCategory: 202
-+        milestoneGoal: 9999
-+        visuallyHidden: true
-+      }
-+      pokedexCategorySettingsInOrder {
-+        pokedexCategory: 201
-+        milestoneGoal: 9999
-+        visuallyHidden: true
-+      }
-       clientShinyFormCheck: true
-       searchEnabled: true
+--- GAME_MASTER_old.txt	2024-10-21 19:19:01.952146876 +0200
++++ GAME_MASTER.txt	2024-10-22 08:09:04.675846733 +0200
+@@ -113127,7 +113127,7 @@
+     iapCategoryDisplay {
+       category: IAP_CATEGORY_AVATAR
+       sortOrder: 5
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_avatar_lucario_mask.jpg"
++      imageUrl: "https://storage.googleapis.com/prod-public-images/avatar_halloween_2024.jpg"
+       description: "avatar_shop_description_new"
      }
-@@ -360098,7 +360108,7 @@
+   }
+@@ -113689,7 +113689,7 @@
+         giftItem: ITEM_EVENT_TICKET_04_TO_GIFT
+         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/20240925_PGO_Static-blog-infographics-16x9_Static_VB.png"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/20240925_PGO_Static-blog-infographics-16x9_Static_VB.png"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/image%20(66).png"
+         eventDatetimeRangeKey: "event_datetime_range_key_Halloween2TR24"
+         textRewardsKey: "text_rewards_key_Halloween2TR24"
+         iconRewards {
+@@ -166856,7 +166856,7 @@
+     iapItemDisplay {
+       sku: "STICKER_HALLOWEEN21_GHOSTPIKA.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 1
++      sortOrder: 10
      }
    }
  }
--batch_id: 1729297658621
-+batch_id: 1729530431770
+@@ -166867,7 +166867,7 @@
+     iapItemDisplay {
+       sku: "STICKER_HALLOWEEN21_GHOSTPIKA.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 1
++      sortOrder: 10
+     }
+   }
+ }
+@@ -167020,7 +167020,7 @@
+     iapItemDisplay {
+       sku: "STICKER_HALLOWEEN24_FROAKIE.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 9
++      sortOrder: 7
+     }
+   }
+ }
+@@ -167031,7 +167031,7 @@
+     iapItemDisplay {
+       sku: "STICKER_HALLOWEEN24_FROAKIE.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 9
++      sortOrder: 7
+     }
+   }
+ }
+@@ -167056,7 +167056,7 @@
+     iapItemDisplay {
+       sku: "STICKER_HALLOWEEN24_ROWLET.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 10
++      sortOrder: 8
+     }
+   }
+ }
+@@ -167067,7 +167067,7 @@
+     iapItemDisplay {
+       sku: "STICKER_HALLOWEEN24_ROWLET.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 10
++      sortOrder: 8
+     }
+   }
+ }
+@@ -168286,7 +168286,7 @@
+     iapItemDisplay {
+       sku: "STICKER_MANKEY_1.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 5
++      sortOrder: 3
+     }
+   }
+ }
+@@ -168297,7 +168297,7 @@
+     iapItemDisplay {
+       sku: "STICKER_MANKEY_1.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 5
++      sortOrder: 3
+     }
+   }
+ }
+@@ -168320,7 +168320,7 @@
+     iapItemDisplay {
+       sku: "STICKER_MANKEY_2.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 7
++      sortOrder: 5
+     }
+   }
+ }
+@@ -168331,7 +168331,7 @@
+     iapItemDisplay {
+       sku: "STICKER_MANKEY_2.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 7
++      sortOrder: 5
+     }
+   }
+ }
+@@ -168354,7 +168354,7 @@
+     iapItemDisplay {
+       sku: "STICKER_MANKEY_3.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 6
++      sortOrder: 4
+     }
+   }
+ }
+@@ -168365,7 +168365,7 @@
+     iapItemDisplay {
+       sku: "STICKER_MANKEY_3.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 6
++      sortOrder: 4
+     }
+   }
+ }
+@@ -168389,7 +168389,7 @@
+     iapItemDisplay {
+       sku: "STICKER_MANKEY_4.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 8
++      sortOrder: 6
+     }
+   }
+ }
+@@ -168400,7 +168400,7 @@
+     iapItemDisplay {
+       sku: "STICKER_MANKEY_4.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 8
++      sortOrder: 6
+     }
+   }
+ }
+@@ -353092,9 +353092,8 @@
+       sku: "general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Halloween1TR24_title"
++      title: "general1.ticket.2_Halloween1TR24_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-11-02T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+@@ -353111,9 +353110,8 @@
+       sku: "general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Halloween1TR24_title"
++      title: "general1.ticket.2_Halloween1TR24_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-11-02T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+@@ -353309,7 +353307,6 @@
+       sku: "general2.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.4"
+       title: "general1.ticket.2_Halloween2TR24_title"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -353328,7 +353325,6 @@
+       sku: "general2.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.4"
+       title: "general1.ticket.2_Halloween2TR24_title"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -354763,9 +354759,8 @@
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Halloween1TR24_title"
++      title: "general1.ticket.2_Halloween1TR24_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-11-02T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+@@ -354782,9 +354777,8 @@
+       sku: "pgorelease.general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Halloween1TR24_title"
++      title: "general1.ticket.2_Halloween1TR24_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-11-02T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+@@ -354961,7 +354955,6 @@
+       sku: "pgorelease.general2.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket.2_Halloween2TR24_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -354980,7 +354973,6 @@
+       sku: "pgorelease.general2.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket.2_Halloween2TR24_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -360108,7 +360100,120 @@
+     }
+   }
+ }
+-batch_id: 1729530431770
++template {
++  template_id: "COMBAT_V0464_MOVE_RAGE_FIST"
++  data {
++    template_id: "COMBAT_V0464_MOVE_RAGE_FIST"
++    combat_move {
++      uniqueId: 464
++      type: POKEMON_TYPE_GHOST
++      power: 50
++      vfxName: "rage_fist"
++      energyDelta: -35
++      buffs {
++        attackerAttackStatStageChange: 1
++        buffActivationChance: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "IAP_CATEGORY_NONE"
++  data {
++    template_id: "IAP_CATEGORY_NONE"
++    iapCategoryDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hat_halloween2024_0"
++  data {
++    template_id: "N_DISPLAY_n_hat_halloween2024_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_halloween2024_0_icon"
++      displayStringId: "avatar_hat_halloween2024"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_halloween2024_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_halloween2024_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_halloween2024_0_icon"
++      displayStringId: "avatar_shirt_halloween2024"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_set_halloween2024_0"
++  data {
++    template_id: "N_DISPLAY_set_halloween2024_0"
++    avatarItemDisplay {
++      iconAddress: "set_halloween2024_0"
++    }
++  }
++}
++template {
++  template_id: "STICKER_PIKACHU_JOL.3"
++  data {
++    template_id: "STICKER_PIKACHU_JOL.3"
++    iapItemDisplay {
++      sku: "STICKER_PIKACHU_JOL.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
++    }
++  }
++}
++template {
++  template_id: "STICKER_PIKACHU_JOL.5"
++  data {
++    template_id: "STICKER_PIKACHU_JOL.5"
++    iapItemDisplay {
++      sku: "STICKER_PIKACHU_JOL.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
++    }
++  }
++}
++template {
++  template_id: "V0464_MOVE_RAGE_FIST"
++  data {
++    template_id: "V0464_MOVE_RAGE_FIST"
++    moveSettings {
++      movementId: 464
++      animationId: 5
++      pokemonType: POKEMON_TYPE_GHOST
++      power: 100
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "rage_fist"
++      durationMs: 3000
++      damageWindowStartMs: 2750
++      damageWindowEndMs: 3000
++      energyDelta: -50
++    }
++  }
++}
++template {
++  template_id: "sequence_rage_fist"
++  data {
++    template_id: "sequence_rage_fist"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx rage_fist"
++      sequence: "sfx attacker 120-0_self_destruct"
++      sequence: "wait 2.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++batch_id: 1729571158644
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
+@@ -360145,6 +360250,8 @@
+ experiment_id: 3808
+ experiment_id: 3816
+ experiment_id: 3819
++experiment_id: 3890
++experiment_id: 3892
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
