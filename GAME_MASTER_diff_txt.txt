@@ -1,20 +1,48 @@
---- GAME_MASTER_old.txt	2024-10-22 08:09:04.675846733 +0200
-+++ GAME_MASTER.txt	2024-10-22 08:27:54.983581389 +0200
-@@ -360105,7 +360105,7 @@
-   data {
-     template_id: "COMBAT_V0464_MOVE_RAGE_FIST"
-     combat_move {
--      uniqueId: 464
-+      uniqueId: RAGE_FIST
-       type: POKEMON_TYPE_GHOST
-       power: 50
-       vfxName: "rage_fist"
-@@ -360182,7 +360182,7 @@
-   data {
-     template_id: "V0464_MOVE_RAGE_FIST"
-     moveSettings {
--      movementId: 464
-+      movementId: RAGE_FIST
-       animationId: 5
-       pokemonType: POKEMON_TYPE_GHOST
-       power: 100
+--- GAME_MASTER_old.txt	2024-10-22 08:27:54.983581389 +0200
++++ GAME_MASTER.txt	2024-10-22 11:17:39.999070116 +0200
+@@ -116361,6 +116361,8 @@
+     template_id: "MAP_DISPLAY_SETTINGS"
+     map_display_settings {
+       showEnhancedSky: true
++      9: "EventSkyFX_S8_Halloween"
++      10: "halloween"
+     }
+   }
+ }
+@@ -335321,6 +335323,8 @@
+       isVistaEncounterEnabled: true
+       isVistaMapEnabled: true
+       isVistaSpawnsEnabled: true
++      8: "Halloween"
++      9: 4
+     }
+   }
+ }
+@@ -360213,6 +360217,15 @@
+     }
+   }
+ }
++template {
++  template_id: "MUSIC_SETTINGS"
++  data {
++    template_id: "MUSIC_SETTINGS"
++    music_settings {
++      eiikceoolfp: "MapHalloweenNightMusic"
++    }
++  }
++}
+ batch_id: 1729571158644
+ experiment_id: 1
+ experiment_id: 4
+@@ -360250,8 +360263,11 @@
+ experiment_id: 3808
+ experiment_id: 3816
+ experiment_id: 3819
++experiment_id: 3885
++experiment_id: 3886
+ experiment_id: 3890
+ experiment_id: 3892
++experiment_id: 3894
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
