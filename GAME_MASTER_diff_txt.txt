@@ -1,13 +1,174 @@
---- GAME_MASTER_old.txt	2024-10-23 08:48:01.389868040 +0200
-+++ GAME_MASTER.txt	2024-10-23 08:58:59.199238129 +0200
-@@ -118809,8 +118809,8 @@
-   template_id: "MUSIC_SETTINGS"
-   data {
-     template_id: "MUSIC_SETTINGS"
--    music_settings {
--      eiikceoolfp: "MapHalloweenNightMusic"
-+    musicSettings {
-+      mapMusicNightOverride: "MapHalloweenNightMusic"
+--- GAME_MASTER_old.txt	2024-10-23 08:58:59.199238129 +0200
++++ GAME_MASTER.txt	2024-10-24 11:01:54.537588059 +0200
+@@ -101691,6 +101691,10 @@
+         form: PIKACHU_WCS_2024
+         isCostume: true
+       }
++      forms {
++        form: PIKACHU_DIWALI_2024
++        isCostume: true
++      }
      }
    }
  }
+@@ -116453,6 +116457,8 @@
+     template_id: "MAP_DISPLAY_SETTINGS"
+     mapDisplaySettings {
+       showEnhancedSky: true
++      skyEffectName: "EventSkyFX_S8_Halloween"
++      eventThemeName: "halloween"
+     }
+   }
+ }
+@@ -335492,8 +335498,9 @@
+       isFeatureEnabled: true
+       isVistaBattleEnabled: true
+       isVistaEncounterEnabled: true
+-      isVistaMapEnabled: true
+       isVistaSpawnsEnabled: true
++      themeOverride: "Halloween"
++      environmentSeason: SEASON_FALL
+     }
+   }
+ }
+@@ -360336,7 +360343,123 @@
+     }
+   }
+ }
+-batch_id: 1729641943739
++template {
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_DIWALI_2024"
++  data {
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_DIWALI_2024"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_DIWALI_2024
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_DIWALI_2024"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_DIWALI_2024"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        femalePercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "V0025_POKEMON_PIKACHU_DIWALI_2024"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_DIWALI_2024"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      candyToEvolve: 50
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_DIWALI_2024
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      eliteQuickMove: PRESENT_FAST
++      eliteCinematicMove: SURF
++      eliteCinematicMove: THUNDER
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++batch_id: 1729742547149
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -360355,7 +360478,6 @@
+ experiment_id: 602
+ experiment_id: 805
+ experiment_id: 807
+-experiment_id: 1599
+ experiment_id: 1699
+ experiment_id: 1820
+ experiment_id: 2301
+@@ -360383,7 +360505,6 @@
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5213
+ experiment_id: 5250
+ experiment_id: 5508
+ experiment_id: 5510
