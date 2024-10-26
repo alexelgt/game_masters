@@ -1,217 +1,55 @@
---- GAME_MASTER_old.txt	2024-10-25 08:10:26.020168203 +0200
-+++ GAME_MASTER.txt	2024-10-25 08:23:53.227495602 +0200
-@@ -70550,12 +70550,12 @@
-       breadOverrides {
-         breadMode: BREAD_DOUGH_MODE
-         averageHeightM: 24
--        5 {
--          2: 0x3fa00000
--          3: 0x3fc00000
-+        camera {
-+          cylinderRadiusM: 1.25
-+          cylinderHeightM: 1.5
-         }
--        6: 0x3f8ccccd
--        7: 0x3ff33333
-+        modelScaleV2: 1.1
-+        modelHeight: 1.9
-       }
-     }
+--- GAME_MASTER_old.txt	2024-10-25 08:23:53.227495602 +0200
++++ GAME_MASTER.txt	2024-10-26 20:51:37.395400907 +0200
+@@ -71450,6 +71450,24 @@
    }
-@@ -70745,12 +70745,12 @@
-       breadOverrides {
-         breadMode: BREAD_DOUGH_MODE
-         averageHeightM: 28
--        5 {
--          2: 0x3fa00000
--          3: 0x40000000
-+        camera {
-+          cylinderRadiusM: 1.25
-+          cylinderHeightM: 2
-         }
--        6: 0x3f99999a
--        7: 0x40000000
-+        modelScaleV2: 1.2
-+        modelHeight: 2
-       }
-     }
-   }
-@@ -70918,12 +70918,12 @@
-       breadOverrides {
-         breadMode: BREAD_DOUGH_MODE
-         averageHeightM: 25
--        5 {
--          2: 0x3fb33333
--          3: 0x40066666
-+        camera {
-+          cylinderRadiusM: 1.4
-+          cylinderHeightM: 2.1
-         }
--        6: 0x3f4ccccd
--        7: 0x3f99999a
-+        modelScaleV2: 0.8
-+        modelHeight: 1.2
-       }
-     }
-   }
-@@ -360848,160 +360848,160 @@
-   template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
+ }
+ template {
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_DIWALI_2024"
++  data {
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_DIWALI_2024"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_DIWALI_2024
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++    }
++  }
++}
++template {
+   template_id: "EXTENDED_V0025_POKEMON_PIKACHU_DOCTOR"
    data {
-     template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
--    239 {
--      1 {
--        1: 3
--        2: 169
--        3: 453
--      }
--      1 {
--        1: 6
--        2: 178
--        3: 427
--      }
--      1 {
--        1: 9
--        2: 187
--        3: 454
--      }
--      1 {
--        1: 12
--        2: 959
--        3: 428
--      }
--      1 {
--        1: 25
--        2: 598
--        3: 429
--      }
--      1 {
--        1: 52
--        2: 63
--        3: 430
--      }
--      1 {
--        1: 68
--        2: 815
--        3: 431
--      }
--      1 {
--        1: 94
--        2: 1044
--        3: 432
--      }
--      1 {
--        1: 99
--        2: 873
--        3: 433
--      }
--      1 {
--        1: 131
--        2: 322
--        3: 434
--      }
--      1 {
--        1: 133
--        2: 1092
--        3: 435
--      }
--      1 {
--        1: 143
--        2: 199
--        3: 436
--      }
--      1 {
--        1: 569
--        2: 2105
--        3: 437
--      }
--      1 {
--        1: 809
--        2: 2324
--        3: 438
--      }
--      1 {
--        1: 823
--        3: 439
--      }
--      1 {
--        1: 826
--        3: 440
--      }
--      1 {
--        1: 834
--        3: 441
--      }
--      1 {
--        1: 839
--        3: 442
--      }
--      1 {
--        1: 841
--        3: 443
--      }
--      1 {
--        1: 842
--        3: 444
--      }
--      1 {
--        1: 844
--        3: 445
--      }
--      1 {
--        1: 849
--        2: 2463
--        3: 446
--      }
--      1 {
--        1: 849
--        2: 2464
--        3: 446
--      }
--      1 {
--        1: 851
--        3: 447
--      }
--      1 {
--        1: 858
--        3: 448
--      }
--      1 {
--        1: 861
--        3: 449
--      }
--      1 {
--        1: 869
--        3: 450
--      }
--      1 {
--        1: 879
--        3: 451
--      }
--      1 {
--        1: 884
--        3: 452
--      }
--      1 {
--        1: 812
--        3: 455
--      }
--      1 {
--        1: 815
--        3: 456
--      }
--      1 {
--        1: 818
--        3: 457
--      }
--      1 {
--        1: 892
--        2: 2723
--        3: 458
--      }
--      1 {
--        1: 892
--        2: 2724
--        3: 459
+     template_id: "EXTENDED_V0025_POKEMON_PIKACHU_DOCTOR"
+@@ -136956,6 +136974,17 @@
+   }
+ }
+ template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++template {
+   template_id: "QUEST_EVOLUTION_SETTINGS"
+   data {
+     template_id: "QUEST_EVOLUTION_SETTINGS"
+@@ -141449,6 +141478,168 @@
+   }
+ }
+ template {
++  template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
++  data {
++    template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
 +    sourdoughMoveMappingSettings {
 +      mappings {
 +        pokemonId: VENUSAUR
@@ -366,6 +204,1907 @@
 +        pokemonId: URSHIFU
 +        form: URSHIFU_RAPID_STRIKE
 +        move: VN_BM_051
-       }
++      }
++    }
++  }
++}
++template {
+   template_id: "SPAWN_V0001_POKEMON_BULBASAUR"
+   data {
+     template_id: "SPAWN_V0001_POKEMON_BULBASAUR"
+@@ -142124,6 +142315,18 @@
+   }
+ }
+ template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_DIWALI_2024"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_DIWALI_2024"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        femalePercent: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "SPAWN_V0025_POKEMON_PIKACHU_DOCTOR"
+   data {
+     template_id: "SPAWN_V0025_POKEMON_PIKACHU_DOCTOR"
+@@ -181307,6 +181510,92 @@
+   }
+ }
+ template {
++  template_id: "V0025_POKEMON_PIKACHU_DIWALI_2024"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_DIWALI_2024"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      candyToEvolve: 50
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_DIWALI_2024
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      eliteQuickMove: PRESENT_FAST
++      eliteCinematicMove: SURF
++      eliteCinematicMove: THUNDER
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
+   template_id: "V0025_POKEMON_PIKACHU_DOCTOR"
+   data {
+     template_id: "V0025_POKEMON_PIKACHU_DOCTOR"
+@@ -336286,6 +336575,732 @@
+   }
+ }
+ template {
++  template_id: "VN_BM_019"
++  data {
++    template_id: "VN_BM_019"
++    moveSettings {
++      movementId: VN_BM_019
++      animationId: 5
++      pokemonType: POKEMON_TYPE_FIRE
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_wildfire"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_020"
++  data {
++    template_id: "VN_BM_020"
++    moveSettings {
++      movementId: VN_BM_020
++      animationId: 5
++      pokemonType: POKEMON_TYPE_BUG
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_befuddle"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_021"
++  data {
++    template_id: "VN_BM_021"
++    moveSettings {
++      movementId: VN_BM_021
++      animationId: 5
++      pokemonType: POKEMON_TYPE_ELECTRIC
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_voltcrash"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_022"
++  data {
++    template_id: "VN_BM_022"
++    moveSettings {
++      movementId: VN_BM_022
++      animationId: 5
++      pokemonType: POKEMON_TYPE_NORMAL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_goldrush"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_023"
++  data {
++    template_id: "VN_BM_023"
++    moveSettings {
++      movementId: VN_BM_023
++      animationId: 5
++      pokemonType: POKEMON_TYPE_FIGHTING
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_chistrike"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_024"
++  data {
++    template_id: "VN_BM_024"
++    moveSettings {
++      movementId: VN_BM_024
++      animationId: 5
++      pokemonType: POKEMON_TYPE_GHOST
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_terror"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_025"
++  data {
++    template_id: "VN_BM_025"
++    moveSettings {
++      movementId: VN_BM_025
++      animationId: 5
++      pokemonType: POKEMON_TYPE_WATER
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_foamburst"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_026"
++  data {
++    template_id: "VN_BM_026"
++    moveSettings {
++      movementId: VN_BM_026
++      animationId: 5
++      pokemonType: POKEMON_TYPE_ICE
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_resonance"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_027"
++  data {
++    template_id: "VN_BM_027"
++    moveSettings {
++      movementId: VN_BM_027
++      animationId: 5
++      pokemonType: POKEMON_TYPE_NORMAL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_cuddle"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_028"
++  data {
++    template_id: "VN_BM_028"
++    moveSettings {
++      movementId: VN_BM_028
++      animationId: 5
++      pokemonType: POKEMON_TYPE_NORMAL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_replenish"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_029"
++  data {
++    template_id: "VN_BM_029"
++    moveSettings {
++      movementId: VN_BM_029
++      animationId: 5
++      pokemonType: POKEMON_TYPE_POISON
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_malodor"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_030"
++  data {
++    template_id: "VN_BM_030"
++    moveSettings {
++      movementId: VN_BM_030
++      animationId: 5
++      pokemonType: POKEMON_TYPE_STEEL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_meltdown"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_031"
++  data {
++    template_id: "VN_BM_031"
++    moveSettings {
++      movementId: VN_BM_031
++      animationId: 5
++      pokemonType: POKEMON_TYPE_FLYING
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_windrage"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_032"
++  data {
++    template_id: "VN_BM_032"
++    moveSettings {
++      movementId: VN_BM_032
++      animationId: 5
++      pokemonType: POKEMON_TYPE_PSYCHIC
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_gravitas"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_033"
++  data {
++    template_id: "VN_BM_033"
++    moveSettings {
++      movementId: VN_BM_033
++      animationId: 5
++      pokemonType: POKEMON_TYPE_WATER
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_stonesurge"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_034"
++  data {
++    template_id: "VN_BM_034"
++    moveSettings {
++      movementId: VN_BM_034
++      animationId: 5
++      pokemonType: POKEMON_TYPE_ROCK
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_volcalith"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_035"
++  data {
++    template_id: "VN_BM_035"
++    moveSettings {
++      movementId: VN_BM_035
++      animationId: 5
++      pokemonType: POKEMON_TYPE_GRASS
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_tartness"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_036"
++  data {
++    template_id: "VN_BM_036"
++    moveSettings {
++      movementId: VN_BM_036
++      animationId: 5
++      pokemonType: POKEMON_TYPE_GRASS
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_sweetness"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_037"
++  data {
++    template_id: "VN_BM_037"
++    moveSettings {
++      movementId: VN_BM_037
++      animationId: 5
++      pokemonType: POKEMON_TYPE_GROUND
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_sandblast"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_038"
++  data {
++    template_id: "VN_BM_038"
++    moveSettings {
++      movementId: VN_BM_038
++      animationId: 5
++      pokemonType: POKEMON_TYPE_ELECTRIC
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_stun_shock"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_039"
++  data {
++    template_id: "VN_BM_039"
++    moveSettings {
++      movementId: VN_BM_039
++      animationId: 5
++      pokemonType: POKEMON_TYPE_FIRE
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_centiferno"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_040"
++  data {
++    template_id: "VN_BM_040"
++    moveSettings {
++      movementId: VN_BM_040
++      animationId: 5
++      pokemonType: POKEMON_TYPE_FAIRY
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_smite"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_041"
++  data {
++    template_id: "VN_BM_041"
++    moveSettings {
++      movementId: VN_BM_041
++      animationId: 5
++      pokemonType: POKEMON_TYPE_DARK
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_snooze"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_042"
++  data {
++    template_id: "VN_BM_042"
++    moveSettings {
++      movementId: VN_BM_042
++      animationId: 5
++      pokemonType: POKEMON_TYPE_FAIRY
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_finale"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_043"
++  data {
++    template_id: "VN_BM_043"
++    moveSettings {
++      movementId: VN_BM_043
++      animationId: 5
++      pokemonType: POKEMON_TYPE_STEEL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_steelsurge"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_044"
++  data {
++    template_id: "VN_BM_044"
++    moveSettings {
++      movementId: VN_BM_044
++      animationId: 5
++      pokemonType: POKEMON_TYPE_DRAGON
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_depletion"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_045"
++  data {
++    template_id: "VN_BM_045"
++    moveSettings {
++      movementId: VN_BM_045
++      animationId: 5
++      pokemonType: POKEMON_TYPE_GRASS
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_vinelash"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_046"
++  data {
++    template_id: "VN_BM_046"
++    moveSettings {
++      movementId: VN_BM_046
++      animationId: 5
++      pokemonType: POKEMON_TYPE_WATER
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_cannonade"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_047"
++  data {
++    template_id: "VN_BM_047"
++    moveSettings {
++      movementId: VN_BM_047
++      animationId: 5
++      pokemonType: POKEMON_TYPE_GRASS
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_drumsolo"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_048"
++  data {
++    template_id: "VN_BM_048"
++    moveSettings {
++      movementId: VN_BM_048
++      animationId: 5
++      pokemonType: POKEMON_TYPE_FIRE
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_fireball"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_049"
++  data {
++    template_id: "VN_BM_049"
++    moveSettings {
++      movementId: VN_BM_049
++      animationId: 5
++      pokemonType: POKEMON_TYPE_WATER
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_hydrosnipe"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_050"
++  data {
++    template_id: "VN_BM_050"
++    moveSettings {
++      movementId: VN_BM_050
++      animationId: 5
++      pokemonType: POKEMON_TYPE_DARK
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_oneblow"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
++  template_id: "VN_BM_051"
++  data {
++    template_id: "VN_BM_051"
++    moveSettings {
++      movementId: VN_BM_051
++      animationId: 5
++      pokemonType: POKEMON_TYPE_WATER
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gmax_rapidflow"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
+   template_id: "VN_BM_052"
+   data {
+     template_id: "VN_BM_052"
+@@ -360717,1022 +361732,7 @@
      }
    }
+ }
+-template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_DIWALI_2024"
+-  data {
+-    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_DIWALI_2024"
+-    pokemonExtendedSettings {
+-      uniqueId: PIKACHU
+-      form: PIKACHU_DIWALI_2024
+-      sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.7
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "SPAWN_V0025_POKEMON_PIKACHU_DIWALI_2024"
+-  data {
+-    template_id: "SPAWN_V0025_POKEMON_PIKACHU_DIWALI_2024"
+-    genderSettings {
+-      pokemon: PIKACHU
+-      gender {
+-        femalePercent: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0025_POKEMON_PIKACHU_DIWALI_2024"
+-  data {
+-    template_id: "V0025_POKEMON_PIKACHU_DIWALI_2024"
+-    pokemonSettings {
+-      pokemonId: PIKACHU
+-      modelScale: 1.48
+-      type: POKEMON_TYPE_ELECTRIC
+-      camera {
+-        diskRadiusM: 0.555
+-        cylinderRadiusM: 0.37
+-        cylinderHeightM: 0.5
+-        shoulderModeScale: 0.5
+-      }
+-      encounter {
+-        collisionRadiusM: 0.16
+-        collisionHeightM: 0.16
+-        collisionHeadRadiusM: 0.13
+-        movementType: MOVEMENT_JUMP
+-        movementTimerS: 10
+-        jumpTimeS: 1
+-        attackTimerS: 29
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 1
+-        cameraDistance: 2.775
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-      }
+-      stats {
+-        baseStamina: 111
+-        baseAttack: 112
+-        baseDefense: 96
+-      }
+-      quickMoves: THUNDER_SHOCK_FAST
+-      quickMoves: QUICK_ATTACK_FAST
+-      cinematicMoves: DISCHARGE
+-      cinematicMoves: THUNDERBOLT
+-      cinematicMoves: WILD_CHARGE
+-      animationTime: 1.8333
+-      animationTime: 0.6667
+-      animationTime: 1.6
+-      animationTime: 1.5667
+-      animationTime: 0
+-      animationTime: 1.8
+-      animationTime: 1.1333
+-      animationTime: 1.06666696
+-      evolutionPips: 1
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 6
+-      parentPokemonId: PICHU
+-      heightStdDev: 0.05
+-      weightStdDev: 0.75
+-      familyId: FAMILY_PIKACHU
+-      candyToEvolve: 50
+-      kmBuddyDistance: 1
+-      buddy_size: BUDDY_SHOULDER
+-      modelHeight: 0.4
+-      modelScaleV2: 1.1
+-      form: PIKACHU_DIWALI_2024
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 11
+-      third_move {
+-        stardustToUnlock: 10000
+-        candyToUnlock: 25
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 1
+-      eliteQuickMove: PRESENT_FAST
+-      eliteCinematicMove: SURF
+-      eliteCinematicMove: THUNDER
+-      disableTransferToPokemonHome: true
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
+-    }
+-  }
+-}
+-template {
+-  template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
+-  data {
+-    template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
+-    sourdoughMoveMappingSettings {
+-      mappings {
+-        pokemonId: VENUSAUR
+-        form: VENUSAUR_NORMAL
+-        move: VN_BM_045
+-      }
+-      mappings {
+-        pokemonId: CHARIZARD
+-        form: CHARIZARD_NORMAL
+-        move: VN_BM_019
+-      }
+-      mappings {
+-        pokemonId: BLASTOISE
+-        form: BLASTOISE_NORMAL
+-        move: VN_BM_046
+-      }
+-      mappings {
+-        pokemonId: BUTTERFREE
+-        form: BUTTERFREE_NORMAL
+-        move: VN_BM_020
+-      }
+-      mappings {
+-        pokemonId: PIKACHU
+-        form: PIKACHU_NORMAL
+-        move: VN_BM_021
+-      }
+-      mappings {
+-        pokemonId: MEOWTH
+-        form: MEOWTH_NORMAL
+-        move: VN_BM_022
+-      }
+-      mappings {
+-        pokemonId: MACHAMP
+-        form: MACHAMP_NORMAL
+-        move: VN_BM_023
+-      }
+-      mappings {
+-        pokemonId: GENGAR
+-        form: GENGAR_NORMAL
+-        move: VN_BM_024
+-      }
+-      mappings {
+-        pokemonId: KINGLER
+-        form: KINGLER_NORMAL
+-        move: VN_BM_025
+-      }
+-      mappings {
+-        pokemonId: LAPRAS
+-        form: LAPRAS_NORMAL
+-        move: VN_BM_026
+-      }
+-      mappings {
+-        pokemonId: EEVEE
+-        form: EEVEE_NORMAL
+-        move: VN_BM_027
+-      }
+-      mappings {
+-        pokemonId: SNORLAX
+-        form: SNORLAX_NORMAL
+-        move: VN_BM_028
+-      }
+-      mappings {
+-        pokemonId: GARBODOR
+-        form: GARBODOR_NORMAL
+-        move: VN_BM_029
+-      }
+-      mappings {
+-        pokemonId: MELMETAL
+-        form: MELMETAL_NORMAL
+-        move: VN_BM_030
+-      }
+-      mappings {
+-        pokemonId: CORVIKNIGHT
+-        move: VN_BM_031
+-      }
+-      mappings {
+-        pokemonId: ORBEETLE
+-        move: VN_BM_032
+-      }
+-      mappings {
+-        pokemonId: DREDNAW
+-        move: VN_BM_033
+-      }
+-      mappings {
+-        pokemonId: COALOSSAL
+-        move: VN_BM_034
+-      }
+-      mappings {
+-        pokemonId: FLAPPLE
+-        move: VN_BM_035
+-      }
+-      mappings {
+-        pokemonId: APPLETUN
+-        move: VN_BM_036
+-      }
+-      mappings {
+-        pokemonId: SANDACONDA
+-        move: VN_BM_037
+-      }
+-      mappings {
+-        pokemonId: TOXTRICITY
+-        form: TOXTRICITY_LOW_KEY
+-        move: VN_BM_038
+-      }
+-      mappings {
+-        pokemonId: TOXTRICITY
+-        form: TOXTRICITY_AMPED
+-        move: VN_BM_038
+-      }
+-      mappings {
+-        pokemonId: CENTISKORCH
+-        move: VN_BM_039
+-      }
+-      mappings {
+-        pokemonId: HATTERENE
+-        move: VN_BM_040
+-      }
+-      mappings {
+-        pokemonId: GRIMMSNARL
+-        move: VN_BM_041
+-      }
+-      mappings {
+-        pokemonId: ALCREMIE
+-        move: VN_BM_042
+-      }
+-      mappings {
+-        pokemonId: COPPERAJAH
+-        move: VN_BM_043
+-      }
+-      mappings {
+-        pokemonId: DURALUDON
+-        move: VN_BM_044
+-      }
+-      mappings {
+-        pokemonId: RILLABOOM
+-        move: VN_BM_047
+-      }
+-      mappings {
+-        pokemonId: CINDERACE
+-        move: VN_BM_048
+-      }
+-      mappings {
+-        pokemonId: INTELEON
+-        move: VN_BM_049
+-      }
+-      mappings {
+-        pokemonId: URSHIFU
+-        form: URSHIFU_SINGLE_STRIKE
+-        move: VN_BM_050
+-      }
+-      mappings {
+-        pokemonId: URSHIFU
+-        form: URSHIFU_RAPID_STRIKE
+-        move: VN_BM_051
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_019"
+-  data {
+-    template_id: "VN_BM_019"
+-    moveSettings {
+-      movementId: VN_BM_019
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_FIRE
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_wildfire"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_020"
+-  data {
+-    template_id: "VN_BM_020"
+-    moveSettings {
+-      movementId: VN_BM_020
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_BUG
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_befuddle"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_021"
+-  data {
+-    template_id: "VN_BM_021"
+-    moveSettings {
+-      movementId: VN_BM_021
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_ELECTRIC
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_voltcrash"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_022"
+-  data {
+-    template_id: "VN_BM_022"
+-    moveSettings {
+-      movementId: VN_BM_022
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_NORMAL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_goldrush"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_023"
+-  data {
+-    template_id: "VN_BM_023"
+-    moveSettings {
+-      movementId: VN_BM_023
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_FIGHTING
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_chistrike"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_024"
+-  data {
+-    template_id: "VN_BM_024"
+-    moveSettings {
+-      movementId: VN_BM_024
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_GHOST
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_terror"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_025"
+-  data {
+-    template_id: "VN_BM_025"
+-    moveSettings {
+-      movementId: VN_BM_025
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_WATER
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_foamburst"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_026"
+-  data {
+-    template_id: "VN_BM_026"
+-    moveSettings {
+-      movementId: VN_BM_026
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_ICE
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_resonance"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_027"
+-  data {
+-    template_id: "VN_BM_027"
+-    moveSettings {
+-      movementId: VN_BM_027
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_NORMAL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_cuddle"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_028"
+-  data {
+-    template_id: "VN_BM_028"
+-    moveSettings {
+-      movementId: VN_BM_028
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_NORMAL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_replenish"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_029"
+-  data {
+-    template_id: "VN_BM_029"
+-    moveSettings {
+-      movementId: VN_BM_029
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_POISON
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_malodor"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_030"
+-  data {
+-    template_id: "VN_BM_030"
+-    moveSettings {
+-      movementId: VN_BM_030
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_STEEL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_meltdown"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_031"
+-  data {
+-    template_id: "VN_BM_031"
+-    moveSettings {
+-      movementId: VN_BM_031
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_FLYING
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_windrage"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_032"
+-  data {
+-    template_id: "VN_BM_032"
+-    moveSettings {
+-      movementId: VN_BM_032
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_PSYCHIC
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_gravitas"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_033"
+-  data {
+-    template_id: "VN_BM_033"
+-    moveSettings {
+-      movementId: VN_BM_033
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_WATER
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_stonesurge"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_034"
+-  data {
+-    template_id: "VN_BM_034"
+-    moveSettings {
+-      movementId: VN_BM_034
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_ROCK
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_volcalith"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_035"
+-  data {
+-    template_id: "VN_BM_035"
+-    moveSettings {
+-      movementId: VN_BM_035
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_GRASS
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_tartness"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_036"
+-  data {
+-    template_id: "VN_BM_036"
+-    moveSettings {
+-      movementId: VN_BM_036
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_GRASS
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_sweetness"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_037"
+-  data {
+-    template_id: "VN_BM_037"
+-    moveSettings {
+-      movementId: VN_BM_037
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_GROUND
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_sandblast"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_038"
+-  data {
+-    template_id: "VN_BM_038"
+-    moveSettings {
+-      movementId: VN_BM_038
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_ELECTRIC
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_stun_shock"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_039"
+-  data {
+-    template_id: "VN_BM_039"
+-    moveSettings {
+-      movementId: VN_BM_039
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_FIRE
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_centiferno"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_040"
+-  data {
+-    template_id: "VN_BM_040"
+-    moveSettings {
+-      movementId: VN_BM_040
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_FAIRY
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_smite"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_041"
+-  data {
+-    template_id: "VN_BM_041"
+-    moveSettings {
+-      movementId: VN_BM_041
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_DARK
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_snooze"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_042"
+-  data {
+-    template_id: "VN_BM_042"
+-    moveSettings {
+-      movementId: VN_BM_042
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_FAIRY
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_finale"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_043"
+-  data {
+-    template_id: "VN_BM_043"
+-    moveSettings {
+-      movementId: VN_BM_043
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_STEEL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_steelsurge"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_044"
+-  data {
+-    template_id: "VN_BM_044"
+-    moveSettings {
+-      movementId: VN_BM_044
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_DRAGON
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_depletion"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_045"
+-  data {
+-    template_id: "VN_BM_045"
+-    moveSettings {
+-      movementId: VN_BM_045
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_GRASS
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_vinelash"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_046"
+-  data {
+-    template_id: "VN_BM_046"
+-    moveSettings {
+-      movementId: VN_BM_046
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_WATER
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_cannonade"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_047"
+-  data {
+-    template_id: "VN_BM_047"
+-    moveSettings {
+-      movementId: VN_BM_047
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_GRASS
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_drumsolo"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_048"
+-  data {
+-    template_id: "VN_BM_048"
+-    moveSettings {
+-      movementId: VN_BM_048
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_FIRE
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_fireball"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_049"
+-  data {
+-    template_id: "VN_BM_049"
+-    moveSettings {
+-      movementId: VN_BM_049
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_WATER
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_hydrosnipe"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_050"
+-  data {
+-    template_id: "VN_BM_050"
+-    moveSettings {
+-      movementId: VN_BM_050
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_DARK
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_oneblow"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_051"
+-  data {
+-    template_id: "VN_BM_051"
+-    moveSettings {
+-      movementId: VN_BM_051
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_WATER
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gmax_rapidflow"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-batch_id: 1729817908248
++batch_id: 1729903844787
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -361748,6 +361748,8 @@
+ experiment_id: 408
+ experiment_id: 409
+ experiment_id: 500
++experiment_id: 505
++experiment_id: 508
+ experiment_id: 561
+ experiment_id: 602
+ experiment_id: 805
+@@ -361770,15 +361772,16 @@
+ experiment_id: 3808
+ experiment_id: 3816
+ experiment_id: 3819
++experiment_id: 3822
+ experiment_id: 3885
+ experiment_id: 3886
+ experiment_id: 3890
+ experiment_id: 3892
+-experiment_id: 3894
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5214
+ experiment_id: 5250
+ experiment_id: 5508
+ experiment_id: 5510
