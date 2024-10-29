@@ -1,522 +1,65 @@
---- GAME_MASTER_old.txt	2024-10-28 09:38:18.732762566 +0100
-+++ GAME_MASTER.txt	2024-10-28 12:59:40.092994155 +0100
-@@ -41377,10 +41377,10 @@
-   template_id: "BUDDY_SWAP_SETTINGS"
-   data {
-     template_id: "BUDDY_SWAP_SETTINGS"
--    buddy_swap_settings {
-+    buddySwapSettings {
-       maxSwapsPerDay: 20
-       enableSwapFreeEvolution: true
--      obEnableQuickSwapButton: true
-+      enableQuickSwap: true
-     }
-   }
- }
-@@ -41455,7 +41455,7 @@
-       catchCardAvailableSeconds: 1800
-       catchCardShareCampfireEnabled: true
-       arCatchCardShareCampfireEnabled: true
--      obCampfireSettingsNumber1: 3600000
-+      meetupQueryTimerMs: 3600000
-     }
-   }
- }
-@@ -62786,7 +62786,7 @@
-   template_id: "COMBAT_SETTINGS"
-   data {
-     template_id: "COMBAT_SETTINGS"
--    combat_settings {
-+    combatSettings {
-       roundDurationSeconds: 270
-       turnDurationSeconds: 0.5
-       minigameDurationSeconds: 7
-@@ -62807,7 +62807,7 @@
-       chargeScoreExcellent: 1
-       superEffectiveFlyoutDurationTurns: 5
-       notVeryEffectiveFlyoutDurationTurns: 5
--      blockedEffectiveFlyoutDurationTurns: 5
-+      blockedFlyoutDurationTurns: 5
-       normalEffectiveFlyoutDurationTurns: 5
-       shadowPokemonAttackBonusMultiplier: 1.2
-       shadowPokemonDefenseBonusMultiplier: 0.833333313
-@@ -67214,8 +67214,8 @@
-         }
+--- GAME_MASTER_old.txt	2024-10-28 12:59:40.092994155 +0100
++++ GAME_MASTER.txt	2024-10-29 08:14:07.696698661 +0100
+@@ -322817,7 +322817,7 @@
+       modelHeight: 1
+       evolutionBranch {
+         evolution: POLTEAGEIST
+-        candyCost: 50
++        candyCost: 400
+         form: POLTEAGEIST_ANTIQUE
        }
-       localDeliveryTime: "0:00:00"
--      obDailyAdventureIncenseSettingsNumber8: 720
--      obDailyAdventureIncenseSettingsNumber9: 1200
-+      pushNotificationAfterTimeOfDayMinutes: 720
-+      pushNotificationBeforeTimeOfDayMinutes: 1200
+       modelScaleV2: 1
+@@ -339560,10 +339560,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GIRATINA
+-          pokemonDisplay {
+-            form: GIRATINA_ORIGIN
+-          }
++          pokemon_id: DARKRAI
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -340222,10 +340219,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GIRATINA
+-          pokemonDisplay {
+-            form: GIRATINA_ORIGIN
+-          }
++          pokemon_id: DARKRAI
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -361732,7 +361726,7 @@
      }
    }
  }
-@@ -113941,7 +113941,7 @@
-   template_id: "IRIS_SOCIAL_UX_FUNNEL_SETTINGS"
-   data {
-     template_id: "IRIS_SOCIAL_UX_FUNNEL_SETTINGS"
--    obIrisSocialUxFunnelSettings {
-+    irisSocialUxFunnelSettings {
-       uxFunnelVersion: 1
-       eventStep {
-         stepNumber: 2
-@@ -116842,7 +116842,7 @@
-   template_id: "MAIN_MENU_CAMERA_BUTTON_SETTINGS"
-   data {
-     template_id: "MAIN_MENU_CAMERA_BUTTON_SETTINGS"
--    obMainMenuCameraButtonSettings {
-+    mainMenuChanges {
-       enabled: true
-     }
-   }
-@@ -133602,7 +133602,7 @@
-   template_id: "PHOTO_SET_ALOLA"
-   data {
-     template_id: "PHOTO_SET_ALOLA"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_ALOLA"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -133623,7 +133623,7 @@
-   template_id: "PHOTO_SET_ANCIENT_FOSSILS"
-   data {
-     template_id: "PHOTO_SET_ANCIENT_FOSSILS"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_FOSSIL"
-       frameColor: "Beachside"
-       minimumPokemon: 1
-@@ -133696,7 +133696,7 @@
-   template_id: "PHOTO_SET_BATTLE_POKEMON"
-   data {
-     template_id: "PHOTO_SET_BATTLE_POKEMON"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_BATTLE_POKEMON"
-       frameColor: "Fighting"
-       minimumPokemon: 1
-@@ -133717,7 +133717,7 @@
-   template_id: "PHOTO_SET_BUNDLE_OF_JOY"
-   data {
-     template_id: "PHOTO_SET_BUNDLE_OF_JOY"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_BABIES"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -133802,7 +133802,7 @@
-   template_id: "PHOTO_SET_BUSY_CITY"
-   data {
-     template_id: "PHOTO_SET_BUSY_CITY"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_CITY"
-       frameColor: "Nightfall"
-       minimumPokemon: 1
-@@ -133898,7 +133898,7 @@
-   template_id: "PHOTO_SET_CLAWED_CUTIES"
-   data {
-     template_id: "PHOTO_SET_CLAWED_CUTIES"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_CLAWED_CUTIES"
-       frameColor: "RainyDay"
-       minimumPokemon: 1
-@@ -133959,7 +133959,7 @@
-   template_id: "PHOTO_SET_CUTE_POKEMON_PINK"
-   data {
-     template_id: "PHOTO_SET_CUTE_POKEMON_PINK"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_CUTE_POKEMON_PINK"
-       frameColor: "PinkPals"
-       minimumPokemon: 1
-@@ -133980,7 +133980,7 @@
-   template_id: "PHOTO_SET_FALL_VIBES"
-   data {
-     template_id: "PHOTO_SET_FALL_VIBES"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_FALL_VIBES"
-       frameColor: "Halloween"
-       minimumPokemon: 1
-@@ -134024,7 +134024,7 @@
-   template_id: "PHOTO_SET_FEATHERED_FRIENDS"
-   data {
-     template_id: "PHOTO_SET_FEATHERED_FRIENDS"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_FEATHERED_FRIENDS_SMALL"
-       frameColor: "UkiyoEuphoria"
-       minimumPokemon: 1
-@@ -134091,7 +134091,7 @@
-   template_id: "PHOTO_SET_FEATHERED_FRIENDS_LARGE"
-   data {
-     template_id: "PHOTO_SET_FEATHERED_FRIENDS_LARGE"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_FEATHERED_FRIENDS"
-       frameColor: "UkiyoEuphoria"
-       minimumPokemon: 1
-@@ -134112,7 +134112,7 @@
-   template_id: "PHOTO_SET_FEELING_FANCY"
-   data {
-     template_id: "PHOTO_SET_FEELING_FANCY"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_FANCY"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -134201,7 +134201,7 @@
-   template_id: "PHOTO_SET_FURRY_FRIENDS"
-   data {
-     template_id: "PHOTO_SET_FURRY_FRIENDS"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_FURRY_FRIENDS"
-       frameColor: "Beachside"
-       minimumPokemon: 1
-@@ -134267,7 +134267,7 @@
-   template_id: "PHOTO_SET_FURRY_FRIENDS_LARGE"
-   data {
-     template_id: "PHOTO_SET_FURRY_FRIENDS_LARGE"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_FURRY_FRIENDS_BIG"
-       frameColor: "Beachside"
-       minimumPokemon: 1
-@@ -134302,7 +134302,7 @@
-   template_id: "PHOTO_SET_GRACEFUL_FLYERS"
-   data {
-     template_id: "PHOTO_SET_GRACEFUL_FLYERS"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_GRACEFUL_FLYERS"
-       frameColor: "UkiyoEuphoria"
-       minimumPokemon: 1
-@@ -134406,7 +134406,7 @@
-   template_id: "PHOTO_SET_HISUI"
-   data {
-     template_id: "PHOTO_SET_HISUI"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_HISUI"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -134427,7 +134427,7 @@
-   template_id: "PHOTO_SET_HOENN"
-   data {
-     template_id: "PHOTO_SET_HOENN"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_HOENN"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -134448,7 +134448,7 @@
-   template_id: "PHOTO_SET_JOHTO"
-   data {
-     template_id: "PHOTO_SET_JOHTO"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_JOHTO"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -134469,7 +134469,7 @@
-   template_id: "PHOTO_SET_JUST_LOVELY"
-   data {
-     template_id: "PHOTO_SET_JUST_LOVELY"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_LOVELY"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -134553,7 +134553,7 @@
-   template_id: "PHOTO_SET_KALOS"
-   data {
-     template_id: "PHOTO_SET_KALOS"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_KALOS"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -134574,7 +134574,7 @@
-   template_id: "PHOTO_SET_KANTO"
-   data {
-     template_id: "PHOTO_SET_KANTO"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_KANTO"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -134595,7 +134595,7 @@
-   template_id: "PHOTO_SET_LITTLE_CHONKERS"
-   data {
-     template_id: "PHOTO_SET_LITTLE_CHONKERS"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_LITTLE_CHONKERS"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -134677,7 +134677,7 @@
-   template_id: "PHOTO_SET_MOUNTAIN_PASS"
-   data {
-     template_id: "PHOTO_SET_MOUNTAIN_PASS"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_MOUNTAIN"
-       frameColor: "RainyDay"
-       minimumPokemon: 1
-@@ -134773,7 +134773,7 @@
-   template_id: "PHOTO_SET_MUSEUM_FOSSILS"
-   data {
-     template_id: "PHOTO_SET_MUSEUM_FOSSILS"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_MUSEUM_FOSSILS"
-       frameColor: "Museum"
-       minimumPokemon: 1
-@@ -134797,7 +134797,7 @@
-   template_id: "PHOTO_SET_PALDEA"
-   data {
-     template_id: "PHOTO_SET_PALDEA"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_PALDEA"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -134818,7 +134818,7 @@
-   template_id: "PHOTO_SET_PLAYFUL_PALS_LARGE"
-   data {
-     template_id: "PHOTO_SET_PLAYFUL_PALS_LARGE"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_PLAYFUL_PALS_BIG"
-       frameColor: "Safarizone"
-       minimumPokemon: 1
-@@ -134898,7 +134898,7 @@
-   template_id: "PHOTO_SET_RELAXING_GARDEN"
-   data {
-     template_id: "PHOTO_SET_RELAXING_GARDEN"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_GARDEN"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -134992,7 +134992,7 @@
-   template_id: "PHOTO_SET_SAFARI_TREK"
-   data {
-     template_id: "PHOTO_SET_SAFARI_TREK"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SAFARI"
-       frameColor: "Safarizone"
-       minimumPokemon: 1
-@@ -135056,7 +135056,7 @@
-   template_id: "PHOTO_SET_SANDY_SHORELINE"
-   data {
-     template_id: "PHOTO_SET_SANDY_SHORELINE"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_BEACH"
-       frameColor: "Beachside"
-       minimumPokemon: 1
-@@ -135136,7 +135136,7 @@
-   template_id: "PHOTO_SET_SHADOWS_OF_NIGHT"
-   data {
-     template_id: "PHOTO_SET_SHADOWS_OF_NIGHT"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_NIGHT"
-       frameColor: "Nightfall"
-       minimumPokemon: 1
-@@ -135178,7 +135178,7 @@
-   template_id: "PHOTO_SET_SINNOH"
-   data {
-     template_id: "PHOTO_SET_SINNOH"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SINNOH"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -135199,7 +135199,7 @@
-   template_id: "PHOTO_SET_SMALL_AND_CUTE"
-   data {
-     template_id: "PHOTO_SET_SMALL_AND_CUTE"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SMALL_AND_CUTE"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -135286,7 +135286,7 @@
-   template_id: "PHOTO_SET_SMALL_CUTE_POKEMON"
-   data {
-     template_id: "PHOTO_SET_SMALL_CUTE_POKEMON"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SMALL_CUTE_POKEMON"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -135307,7 +135307,7 @@
-   template_id: "PHOTO_SET_SMALL_CUTE_POKEMON_PIKACHU_AND_EEVEE"
-   data {
-     template_id: "PHOTO_SET_SMALL_CUTE_POKEMON_PIKACHU_AND_EEVEE"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SMALL_CUTE_POKEMON_PIKACHU_AND_EEVEE"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -135325,7 +135325,7 @@
-   template_id: "PHOTO_SET_SMALL_CUTE_POKEMON_PINK"
-   data {
-     template_id: "PHOTO_SET_SMALL_CUTE_POKEMON_PINK"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SMALL_CUTE_POKEMON_PINK"
-       frameColor: "PinkPals"
-       minimumPokemon: 1
-@@ -135346,7 +135346,7 @@
-   template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON"
-   data {
-     template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SMALL_FLOWER_POKEMON"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -135370,7 +135370,7 @@
-   template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON_MEDIUM"
-   data {
-     template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON_MEDIUM"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SMALL_FLOWER_POKEMON_MEDIUM"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -135391,7 +135391,7 @@
-   template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON_SEEDS"
-   data {
-     template_id: "PHOTO_SET_SMALL_FLOWER_POKEMON_SEEDS"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SMALL_FLOWER_POKEMON_SEEDS"
-       frameColor: "GreenShoots"
-       minimumPokemon: 1
-@@ -135412,7 +135412,7 @@
-   template_id: "PHOTO_SET_SMALL_WATER_POKEMON"
-   data {
-     template_id: "PHOTO_SET_SMALL_WATER_POKEMON"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SMALL_WATER_POKEMON"
-       frameColor: "UkiyoEuphoria"
-       minimumPokemon: 1
-@@ -135433,7 +135433,7 @@
-   template_id: "PHOTO_SET_SPRING_VIBES"
-   data {
-     template_id: "PHOTO_SET_SPRING_VIBES"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SPRING_VIBES"
-       frameColor: "FloralFriends"
-       minimumPokemon: 1
-@@ -135502,7 +135502,7 @@
-   template_id: "PHOTO_SET_STARTERS"
-   data {
-     template_id: "PHOTO_SET_STARTERS"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_STARTERS"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -135586,7 +135586,7 @@
-   template_id: "PHOTO_SET_SUMMER_VIBES"
-   data {
-     template_id: "PHOTO_SET_SUMMER_VIBES"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_SUMMER_VIBES"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -135639,7 +135639,7 @@
-   template_id: "PHOTO_SET_TINY_TIKES"
-   data {
-     template_id: "PHOTO_SET_TINY_TIKES"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_TINY_TIKES"
-       frameColor: "TinyBuddies"
-       minimumPokemon: 1
-@@ -135741,7 +135741,7 @@
-   template_id: "PHOTO_SET_UNOVA"
-   data {
-     template_id: "PHOTO_SET_UNOVA"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_UNOVA"
-       frameColor: "SummerVibes"
-       minimumPokemon: 1
-@@ -135762,7 +135762,7 @@
-   template_id: "PHOTO_SET_WINGS_POKEMON"
-   data {
-     template_id: "PHOTO_SET_WINGS_POKEMON"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_WINGS_POKEMON"
-       frameColor: "BusyBugs"
-       minimumPokemon: 1
-@@ -135786,7 +135786,7 @@
-   template_id: "PHOTO_SET_WINTER_VIBES"
-   data {
-     template_id: "PHOTO_SET_WINTER_VIBES"
--    pokemonPhotoSets {
-+    photoSetsSettingsProto {
-       nameKey: "PHOTO_SET_WINTER_VIBES"
-       frameColor: "RainyDay"
-       minimumPokemon: 1
-@@ -135867,9 +135867,9 @@
-   template_id: "PLAYER_BONUS_SYSTEM_SETTINGS"
-   data {
-     template_id: "PLAYER_BONUS_SYSTEM_SETTINGS"
--    obPlayerBonusSystemSettings {
--      obPlayerBonusSystemSettingsNumber1: 86400000
--      obPlayerBonusSystemSettingsBool1: true
-+    playerBonusSystemSettings {
-+      maxBonusDurationMs: 86400000
-+      dayNightEvoEnabled: true
-     }
-   }
- }
-@@ -136924,10 +136924,10 @@
-     template_id: "POSTCARD_COLLECTION_SETTINGS"
-     postcardCollectionSettings {
-       enabled: true
--      obPostcardCollectionSettingsString2: "spr_postcard_background_scorbunny2024"
--      obPostcardCollectionSettingsNumber3: 0.8
--      obPostcardCollectionSettingsString4: "#745D9D"
--      obPostcardCollectionSettingsString5: "#FFFFFF"
-+      backgroundPatternName: "spr_postcard_background_scorbunny2024"
-+      backgroundPatternTileScale: 0.8
-+      postcardUiElementColor: "#745D9D"
-+      postcardUiTextStrokeColor: "#FFFFFF"
-     }
-   }
- }
-@@ -141132,7 +141132,7 @@
-   template_id: "SHARED_FUSION_SETTINGS"
-   data {
-     template_id: "SHARED_FUSION_SETTINGS"
--    obSharedFusionSettings {
-+    sharedFusionSettings {
-       fusionEnabled: true
-     }
-   }
-@@ -141156,7 +141156,7 @@
-     template_id: "SHARED_NON_COMBAT_MOVE_SETTINGS"
-     sharedNonCombatMoveSettings {
-       nonCombatMoveEnabled: true
--      obSharedNonCombatMoveSettingsBool1: true
-+      pokemonRarityIndicatorEnabled: true
-     }
-   }
- }
+-batch_id: 1729903844787
++batch_id: 1730164472987
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -361767,17 +361761,18 @@
+ experiment_id: 3647
+ experiment_id: 3685
+ experiment_id: 3800
+-experiment_id: 3808
++experiment_id: 3809
+ experiment_id: 3816
+ experiment_id: 3819
+ experiment_id: 3885
+-experiment_id: 3886
++experiment_id: 3887
+ experiment_id: 3890
+ experiment_id: 3892
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5215
+ experiment_id: 5250
+ experiment_id: 5508
+ experiment_id: 5510
