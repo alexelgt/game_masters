@@ -1,30 +1,137 @@
---- GAME_MASTER_old.txt	2024-11-05 08:40:30.618445647 +0100
-+++ GAME_MASTER.txt	2024-11-06 11:08:52.349359590 +0100
-@@ -337343,8 +337343,7 @@
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
-       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
+--- GAME_MASTER_old.txt	2024-11-06 11:08:52.349359590 +0100
++++ GAME_MASTER.txt	2024-11-07 11:34:53.766155218 +0100
+@@ -101575,7 +101575,7 @@
+   data {
+     template_id: "FEATURE_UNLOCK_LEVEL_SETTINGS"
+     featureUnlockLevelSettings {
+-      luresUnlockLevel: 8
++      luresUnlockLevel: 6
+       rareCandyConversionUnlockLevel: 1
+     }
+   }
+@@ -354547,7 +354547,6 @@
+       sku: "evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._Harvest1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -354566,7 +354565,6 @@
+       sku: "evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._Harvest1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -354623,7 +354621,6 @@
+       sku: "general1.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_MankeyCD24_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -354642,7 +354639,6 @@
+       sku: "general1.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-11-10T17:00:00"
+@@ -356231,7 +356227,6 @@
+       sku: "pgorelease.evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._Harvest1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -356250,7 +356245,6 @@
+       sku: "pgorelease.evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._Harvest1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -356307,7 +356301,6 @@
+       sku: "pgorelease.general1.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_MankeyCD24_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -356326,7 +356319,6 @@
+       sku: "pgorelease.general1.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2024-11-10T17:00:00"
+@@ -361750,7 +361742,31 @@
      }
    }
  }
-@@ -361751,7 +361750,7 @@
-     }
-   }
- }
--batch_id: 1730770280894
-+batch_id: 1730860622431
+-batch_id: 1730860622431
++template {
++  template_id: "ANNIHILAPE_CD_EVOLUTION_QUEST"
++  data {
++    template_id: "ANNIHILAPE_CD_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "ANNIHILAPE_CD_EVOLUTION_QUEST"
++      questType: QUEST_CATCH_POKEMON
++      goals {
++        condition {
++          type: WITH_POKEMON_TYPE
++          with_pokemon_type {
++            pokemonType: POKEMON_TYPE_FIGHTING
++          }
++        }
++        target: 20
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "quest_catch_type_fighting_plural"
++        title: "quest_catch_type_fighting_plural"
++      }
++    }
++  }
++}
++batch_id: 1730942544494
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -361760,7 +361759,7 @@
- experiment_id: 21
- experiment_id: 101
- experiment_id: 170
--experiment_id: 180
-+experiment_id: 181
- experiment_id: 300
- experiment_id: 302
- experiment_id: 320
+@@ -361788,22 +361804,27 @@
+ experiment_id: 3810
+ experiment_id: 3817
+ experiment_id: 3820
++experiment_id: 3880
++experiment_id: 3882
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5217
+ experiment_id: 5250
+ experiment_id: 5508
+ experiment_id: 5510
++experiment_id: 5850
+ experiment_id: 6075
++experiment_id: 8674
+ experiment_id: 8913
+ experiment_id: 8921
+ experiment_id: 8924
+ experiment_id: 9512
+ experiment_id: 9523
++experiment_id: 9531
+ experiment_id: 9536
+ experiment_id: 9551
++experiment_id: 9557
+ experiment_id: 20947
+ experiment_id: 80001
+ experiment_id: 300000
