@@ -1,391 +1,171 @@
---- GAME_MASTER_old.txt	2024-11-11 08:17:40.075497588 +0100
-+++ GAME_MASTER.txt	2024-11-11 10:31:14.403515012 +0100
-@@ -55,6 +55,30 @@
+--- GAME_MASTER_old.txt	2024-11-11 10:31:14.403515012 +0100
++++ GAME_MASTER.txt	2024-11-12 08:36:07.581492778 +0100
+@@ -114866,6 +114866,8 @@
+     itemExpirationSettings {
+       item: ITEM_WILD_BALL
+       expirationTime: "2016-01-01T00:00:00"
++      emergencyExpirationEnabled: true
++      emergencyExpirationTime: "2016-01-01T00:00:00"
+     }
    }
  }
- template {
-+  template_id: "ANNIHILAPE_CD_EVOLUTION_QUEST"
-+  data {
-+    template_id: "ANNIHILAPE_CD_EVOLUTION_QUEST"
-+    evolution_quest_template {
-+      questTemplateId: "ANNIHILAPE_CD_EVOLUTION_QUEST"
-+      questType: QUEST_CATCH_POKEMON
-+      goals {
-+        condition {
-+          type: WITH_POKEMON_TYPE
-+          with_pokemon_type {
-+            pokemonType: POKEMON_TYPE_FIGHTING
-+          }
-+        }
-+        target: 20
-+      }
-+      context: EVOLUTION_QUEST
-+      display {
-+        description: "quest_catch_type_fighting_plural"
-+        title: "quest_catch_type_fighting_plural"
-+      }
-+    }
-+  }
-+}
+@@ -114876,6 +114878,8 @@
+     itemExpirationSettings {
+       item: ITEM_WILD_BALL_PREMIER
+       expirationTime: "2016-01-01T00:00:00"
++      emergencyExpirationEnabled: true
++      emergencyExpirationTime: "2016-01-01T00:00:00"
+     }
+   }
+ }
+@@ -119796,8 +119800,7 @@
+           maxBounds: 1
+         }
+         shoulderSlider {
+-          maxBounds: 0.75
+-          minBounds: 0.2
++          maxBounds: 1
+         }
+         bustSlider {
+           maxBounds: 1
+@@ -361780,7 +361783,139 @@
+     }
+   }
+ }
+-batch_id: 1731314899035
 +template {
-   template_id: "ANNIHILAPE_EVOLUTION_QUEST"
-   data {
-     template_id: "ANNIHILAPE_EVOLUTION_QUEST"
-@@ -32811,6 +32835,20 @@
-   }
- }
- template {
-+  template_id: "BADGE_CHECK_INS"
++  template_id: "STICKER_PGO_WILDAREA_2024.3"
 +  data {
-+    template_id: "BADGE_CHECK_INS"
-+    badge_settings {
-+      badgeType: BADGE_CHECK_INS
-+      badgeRank: 5
-+      targets: 1
-+      targets: 20
-+      targets: 50
-+      targets: 100
-+    }
-+  }
-+}
-+template {
-   template_id: "BADGE_CHICAGO_FEST_JULY_2017"
-   data {
-     template_id: "BADGE_CHICAGO_FEST_JULY_2017"
-@@ -36737,18 +36775,6 @@
-   }
- }
- template {
--  template_id: "BADGE_GOWA_2024_IRL_SATURDAY_ESSENTIAL"
--  data {
--    template_id: "BADGE_GOWA_2024_IRL_SATURDAY_ESSENTIAL"
--    badge_settings {
--      badgeType: BADGE_GOWA_2024_IRL_SATURDAY_ESSENTIAL
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--    }
--  }
--}
--template {
-   template_id: "BADGE_GOWA_2024_IRL_SATURDAY_PARK_AFTERNOON"
-   data {
-     template_id: "BADGE_GOWA_2024_IRL_SATURDAY_PARK_AFTERNOON"
-@@ -36785,18 +36811,6 @@
-   }
- }
- template {
--  template_id: "BADGE_GOWA_2024_IRL_SUNDAY_ESSENTIAL"
--  data {
--    template_id: "BADGE_GOWA_2024_IRL_SUNDAY_ESSENTIAL"
--    badge_settings {
--      badgeType: BADGE_GOWA_2024_IRL_SUNDAY_ESSENTIAL
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--    }
--  }
--}
--template {
-   template_id: "BADGE_GOWA_2024_IRL_SUNDAY_PARK_AFTERNOON"
-   data {
-     template_id: "BADGE_GOWA_2024_IRL_SUNDAY_PARK_AFTERNOON"
-@@ -36833,18 +36847,6 @@
-   }
- }
- template {
--  template_id: "BADGE_GOWA_2024_IRL_TEST_ESSENTIAL"
--  data {
--    template_id: "BADGE_GOWA_2024_IRL_TEST_ESSENTIAL"
--    badge_settings {
--      badgeType: BADGE_GOWA_2024_IRL_TEST_ESSENTIAL
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--    }
--  }
--}
--template {
-   template_id: "BADGE_GOWA_2024_IRL_TEST_PARK_AFTERNOON"
-   data {
-     template_id: "BADGE_GOWA_2024_IRL_TEST_PARK_AFTERNOON"
-@@ -39448,6 +39450,16 @@
-   }
- }
- template {
-+  template_id: "BREAD_LOBBY_UPDATE_SETTINGS"
-+  data {
-+    template_id: "BREAD_LOBBY_UPDATE_SETTINGS"
-+    breadLobbyUpdateSettings {
-+      joinPublishCutoffTimeMs: 15000
-+      serverPublishRateLimitIntervalMs: 1000
-+    }
-+  }
-+}
-+template {
-   template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_1"
-   data {
-     template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_1"
-@@ -115375,6 +115387,18 @@
-   }
- }
- template {
-+  template_id: "ITEM_MAX_BOOST"
-+  data {
-+    template_id: "ITEM_MAX_BOOST"
-+    itemSettings {
-+      itemId: ITEM_MAX_BOOST
-+      itemType: ITEM_TYPE_BATTLE
-+      category: ITEM_CATEGORY_BOOST
-+      dropTrainerLevel: 99
-+    }
-+  }
-+}
-+template {
-   template_id: "ITEM_MAX_POTION"
-   data {
-     template_id: "ITEM_MAX_POTION"
-@@ -125661,6 +125685,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_pose_068"
-+  data {
-+    template_id: "N_DISPLAY_n_pose_068"
-+    avatarItemDisplay {
-+      iconAddress: "n_pose_068_icon"
-+      displayStringId: "avatar_pose_safariball"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_pose_empty"
-   data {
-     template_id: "N_DISPLAY_n_pose_empty"
-@@ -354543,6 +354577,20 @@
-   }
- }
- template {
-+  template_id: "diademuertos"
-+  data {
-+    template_id: "diademuertos"
++    template_id: "STICKER_PGO_WILDAREA_2024.3"
 +    iapItemDisplay {
-+      sku: "diademuertos"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.latam.large.1"
-+      title: "bundle.diademuertos.box.1_title"
++      sku: "STICKER_PGO_WILDAREA_2024.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 6
 +    }
 +  }
 +}
 +template {
-   template_id: "evergreenticket.1"
-   data {
-     template_id: "evergreenticket.1"
-@@ -355045,14 +355093,15 @@
-       sku: "general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general2.ticket.7"
--      title: "general1.ticket._MonthlyTicketNov24_title"
--      description: "item_event_ticket_gray_desc_MonthlyTicketNov24"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-11-10T23:59:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1731283140000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
-+      title: "iap_general2_ticket7_name"
-+      description: "general2_ticket7_IAP_description"
-+      skuEnableTime: "2023-01-01T11:00:06"
-+      skuDisableTime: "2023-01-01T17:00:00"
-+      skuEnableTimeUtcMs: 1672570806000
-+      skuDisableTimeUtcMs: 1672592400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-     }
-   }
- }
-@@ -355064,12 +355113,15 @@
-       sku: "general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general2.ticket.7"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-11-10T23:59:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1731283140000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
-+      title: "iap_general2_ticket7_name"
-+      description: "general2_ticket7_IAP_description"
-+      skuEnableTime: "2023-01-01T11:00:06"
-+      skuDisableTime: "2023-01-01T17:00:00"
-+      skuEnableTimeUtcMs: 1672570806000
-+      skuDisableTimeUtcMs: 1672592400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-     }
-   }
- }
-@@ -356692,14 +356744,15 @@
-       sku: "pgorelease.general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      spriteId: "general2.ticket.7"
--      title: "general1.ticket._MonthlyTicketNov24_title"
--      description: "item_event_ticket_gray_desc_MonthlyTicketNov24"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-11-10T23:59:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1731283140000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
-+      hidden: true
-+      spriteId: "general2.ticket.2"
-+      title: "iap_general2_ticket2_name"
-+      description: "general2_ticket2_IAP_description"
-+      skuEnableTime: "2023-01-01T11:00:01"
-+      skuDisableTime: "2023-01-01T17:00:00"
-+      skuEnableTimeUtcMs: 1672570801000
-+      skuDisableTimeUtcMs: 1672592400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-     }
-   }
- }
-@@ -356711,12 +356764,15 @@
-       sku: "pgorelease.general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      spriteId: "general2.ticket.7"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2024-11-10T23:59:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1731283140000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
-+      hidden: true
-+      spriteId: "general2.ticket.2"
-+      title: "iap_general2_ticket2_name"
-+      description: "general2_ticket2_IAP_description"
-+      skuEnableTime: "2023-01-01T11:00:01"
-+      skuDisableTime: "2023-01-01T17:00:00"
-+      skuEnableTimeUtcMs: 1672570801000
-+      skuDisableTimeUtcMs: 1672592400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-     }
-   }
- }
-@@ -361724,91 +361780,7 @@
-     }
-   }
- }
--template {
--  template_id: "diademuertos"
--  data {
--    template_id: "diademuertos"
--    iapItemDisplay {
--      sku: "diademuertos"
--      category: IAP_CATEGORY_BUNDLE
--      sortOrder: 1
--      hidden: true
--      spriteId: "bundle.latam.large.1"
--      title: "bundle.diademuertos.box.1_title"
--    }
--  }
--}
--template {
--  template_id: "ITEM_MAX_BOOST"
--  data {
--    template_id: "ITEM_MAX_BOOST"
--    itemSettings {
--      itemId: ITEM_MAX_BOOST
--      itemType: ITEM_TYPE_BATTLE
--      category: ITEM_CATEGORY_BOOST
--      dropTrainerLevel: 99
--    }
--  }
--}
--template {
--  template_id: "ANNIHILAPE_CD_EVOLUTION_QUEST"
--  data {
--    template_id: "ANNIHILAPE_CD_EVOLUTION_QUEST"
--    evolution_quest_template {
--      questTemplateId: "ANNIHILAPE_CD_EVOLUTION_QUEST"
--      questType: QUEST_CATCH_POKEMON
--      goals {
--        condition {
--          type: WITH_POKEMON_TYPE
--          with_pokemon_type {
--            pokemonType: POKEMON_TYPE_FIGHTING
--          }
--        }
--        target: 20
--      }
--      context: EVOLUTION_QUEST
--      display {
--        description: "quest_catch_type_fighting_plural"
--        title: "quest_catch_type_fighting_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "BADGE_CHECK_INS"
--  data {
--    template_id: "BADGE_CHECK_INS"
--    badge_settings {
--      badgeType: BADGE_CHECK_INS
--      badgeRank: 5
--      targets: 1
--      targets: 20
--      targets: 50
--      targets: 100
--    }
--  }
--}
--template {
--  template_id: "BREAD_LOBBY_UPDATE_SETTINGS"
--  data {
--    template_id: "BREAD_LOBBY_UPDATE_SETTINGS"
--    breadLobbyUpdateSettings {
--      joinPublishCutoffTimeMs: 15000
--      serverPublishRateLimitIntervalMs: 1000
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_pose_068"
--  data {
--    template_id: "N_DISPLAY_n_pose_068"
--    avatarItemDisplay {
--      iconAddress: "n_pose_068_icon"
--      displayStringId: "avatar_pose_safariball"
--    }
--  }
--}
--batch_id: 1731308673576
-+batch_id: 1731314899035
++  template_id: "STICKER_PGO_WILDAREA_2024.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 6
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_1.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_1.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 10
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_1.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_1.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 10
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_2.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_2.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_2.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_2.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_3.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_3.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 8
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_3.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_3.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 8
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_4.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_4.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_4.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_4.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_LOGO.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_LOGO.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_LOGO.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 5
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_LOGO.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_LOGO.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_LOGO.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 5
++    }
++  }
++}
++batch_id: 1731396436395
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -361843,7 +361815,7 @@
- experiment_id: 3647
- experiment_id: 3685
- experiment_id: 3800
--experiment_id: 3810
-+experiment_id: 3811
- experiment_id: 3817
- experiment_id: 3820
- experiment_id: 3880
-@@ -361852,12 +361824,12 @@
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-+experiment_id: 5219
- experiment_id: 5250
- experiment_id: 5508
- experiment_id: 5510
- experiment_id: 6075
- experiment_id: 8675
--experiment_id: 8913
- experiment_id: 8921
- experiment_id: 8924
- experiment_id: 9512
