@@ -1,1275 +1,939 @@
---- GAME_MASTER_old.txt	2024-11-13 08:33:19.524529345 +0100
-+++ GAME_MASTER.txt	2024-11-14 08:36:07.175126646 +0100
-@@ -60992,7 +60992,6 @@
-       pokemonCount: 3
-       bannedPokemon: DITTO
-       bannedPokemon: SHEDINJA
--      bannedPokemon: GARDEVOIR
-       bannedPokemon: ZORUA
-       bannedPokemon: ZOROARK
-       badgeType: BADGE_GREAT_LEAGUE
-@@ -114274,38 +114273,31 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-10-12T14:00:00"
--        eventEndTime: "2024-10-12T22:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_MawileRaidDay"
-+        eventStartTime: "2024-11-18T00:00:00"
-+        eventEndTime: "2024-11-22T23:59:59"
-+        itemBagDescriptionKey: "item_event_ticket_05_desc_HatchVer1"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_05_TO_GIFT
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-mawile-raid-day-2024.jpg"
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-mawile-raid-day-2024.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_MawileRaidDay"
--        textRewardsKey: "text_rewards_key_MawileRaidDay"
--        iconRewards {
--          type: ITEM
--          item {
--            item: ITEM_FREE_RAID_TICKET
--            amount: 8
--          }
--        }
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_1024x512.jpg"
-+        titleImageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO_WildArea_Logo_RGB_2024.png"
-+        eventDatetimeRangeKey: "event_datetime_range_key_GOWA2024Leadup"
-+        textRewardsKey: "text_rewards_key_GOWA2024HatchVer1"
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_XL_RARE_CANDY
-+            item: ITEM_INCUBATOR_BASIC
-+            amount: 1
-           }
-         }
--        iconRewards {
--          type: STARDUST
--          stardust: 2
--        }
--        detailsLinkKey: "details_link_key_MawileRaidDay"
--        clientEventStartTimeUtcMs: 1728741600000
--        clientEventEndTimeUtcMs: 1728770400000
-+        detailsLinkKey: "details_link_key_GOWA2024"
-+        clientEventStartTimeUtcMs: 1731888000000
-+        clientEventEndTimeUtcMs: 1732319999000
-       }
--      descriptionOverride: "item_event_ticket_gray_desc_MawileRaidDay"
-+      ignoreInventorySpace: true
-+      nameOverride: "general2.ticket.5._GOWA2024HatchVer1_title"
-+      descriptionOverride: "item_event_ticket_05_details"
+--- GAME_MASTER_old.txt	2024-11-14 08:36:07.175126646 +0100
++++ GAME_MASTER.txt	2024-11-15 08:09:51.363834193 +0100
+@@ -113632,7 +113632,7 @@
+     iapCategoryDisplay {
+       category: IAP_CATEGORY_AVATAR
+       sortOrder: 5
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/avatar_halloween_2024.jpg"
++      imageUrl: "https://storage.googleapis.com/prod-public-images/avatar_shop_GOWAitems.jpg"
+       description: "avatar_shop_description_new"
      }
    }
- }
-@@ -114318,16 +114310,18 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-10-12T14:00:00"
--        eventEndTime: "2024-10-12T22:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_MawileRaidDay"
-+        eventStartTime: "2024-11-18T00:00:00"
-+        eventEndTime: "2024-11-22T23:59:59"
-+        itemBagDescriptionKey: "item_event_ticket_05_desc_HatchVer1"
-         ticketItem: ITEM_EVENT_TICKET_05
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-mawile-raid-day-2024.jpg"
--        clientEventStartTimeUtcMs: 1728741600000
--        clientEventEndTimeUtcMs: 1728770400000
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_1024x512.jpg"
-+        clientEventStartTimeUtcMs: 1731888000000
-+        clientEventEndTimeUtcMs: 1732319999000
+@@ -114297,7 +114297,7 @@
        }
        ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_MawileRaidDay"
-+      nameOverride: "general2.ticket.5._GOWA2024HatchVer1_title"
-+      descriptionOverride: "item_event_ticket_05_details"
+       nameOverride: "general2.ticket.5._GOWA2024HatchVer1_title"
+-      descriptionOverride: "item_event_ticket_05_details"
++      descriptionOverride: "item_event_ticket_details_GOWALeadUp2024"
      }
    }
  }
-@@ -114662,43 +114656,31 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-10-22T10:00:00"
--        eventEndTime: "2024-11-03T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_Halloween1TR24"
-+        eventStartTime: "2024-11-18T00:00:00"
-+        eventEndTime: "2024-11-22T23:59:59"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_RaidVer1"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_GRAY_TO_GIFT
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-halloween-pt1-morpeko-2024.jpg"
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Morpeko_Outfits_1024x512_nmo_v3.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_Halloween1TR24"
--        textRewardsKey: "text_rewards_key_Halloween1TR24"
--        iconRewards {
--          type: AVATAR_CLOTHING
--          neutralAvatarItemTemplate {
--            itemTemplateId: "N_AVATAR_n_shirt_morpekohangryonesie_0"
--            displayTemplateId: "N_DISPLAY_n_shirt_morpekohangryonesie_0"
--          }
--        }
--        iconRewards {
--          type: POKEMON_ENCOUNTER
--          pokemon_encounter {
--            pokemon_id: SPIRITOMB
--          }
--        }
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_1024x512_nmo_sku_v6.jpg"
-+        titleImageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO_WildArea_Logo_RGB_2024.png"
-+        eventDatetimeRangeKey: "event_datetime_range_key_GOWA2024Leadup"
-+        textRewardsKey: "text_rewards_key_GOWA2024RaidVer1"
-         iconRewards {
--          type: POKEMON_ENCOUNTER
--          pokemon_encounter {
--            pokemon_id: MORPEKO
--            pokemonDisplay {
--              form: MORPEKO_FULL_BELLY
--            }
-+          type: ITEM
-+          item {
-+            item: ITEM_FREE_RAID_TICKET
-+            amount: 2
-           }
-         }
--        detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1729591200000
--        clientEventEndTimeUtcMs: 1730664000000
-+        detailsLinkKey: "details_link_key_GOWA2024"
-+        clientEventStartTimeUtcMs: 1731888000000
-+        clientEventEndTimeUtcMs: 1732319999000
-       }
--      descriptionOverride: "item_event_ticket_gray_desc_Halloween1TR24"
-+      ignoreInventorySpace: true
-+      nameOverride: "general1.ticket.5._GOWA2024RaidVer1_title"
-+      descriptionOverride: "item_event_ticket_gray_details"
-     }
-   }
- }
-@@ -114711,16 +114693,18 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-10-22T10:00:00"
--        eventEndTime: "2024-11-03T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_Halloween1TR24"
-+        eventStartTime: "2024-11-18T00:00:00"
-+        eventEndTime: "2024-11-22T23:59:59"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_RaidVer1"
-         ticketItem: ITEM_EVENT_TICKET_GRAY
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-halloween-pt1-morpeko-2024.jpg"
--        clientEventStartTimeUtcMs: 1729591200000
--        clientEventEndTimeUtcMs: 1730664000000
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_1024x512_nmo_sku_v6.jpg"
-+        clientEventStartTimeUtcMs: 1731888000000
-+        clientEventEndTimeUtcMs: 1732319999000
+@@ -114321,7 +114321,7 @@
        }
        ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_Halloween1TR24"
-+      nameOverride: "general1.ticket.5._GOWA2024RaidVer1_title"
-+      descriptionOverride: "item_event_ticket_gray_details"
+       nameOverride: "general2.ticket.5._GOWA2024HatchVer1_title"
+-      descriptionOverride: "item_event_ticket_05_details"
++      descriptionOverride: "item_event_ticket_details_GOWALeadUp2024"
      }
    }
  }
-@@ -114966,6 +114950,31 @@
-         titleImageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO_WildArea_Logo_RGB_2024.png"
-         eventDatetimeRangeKey: "event_datetime_range_key_GOWA24"
-         textRewardsKey: "text_rewards_key_GOWA24"
-+        iconRewards {
-+          type: POKEMON_ENCOUNTER
-+          pokemon_encounter {
-+            pokemon_id: TOXTRICITY
-+            pokemonDisplay {
-+              form: TOXTRICITY_AMPED
-+            }
-+          }
-+        }
-+        iconRewards {
-+          type: ITEM
-+          item {
-+            item: ITEM_FREE_RAID_TICKET
-+            amount: 5
-+          }
-+        }
-+        iconRewards {
-+          type: POKEMON_ENCOUNTER
-+          pokemon_encounter {
-+            pokemon_id: PIKACHU
-+            pokemonDisplay {
-+              form: PIKACHU_ROCK_STAR
-+            }
-+          }
-+        }
-         detailsLinkKey: "details_link_key_GOWA2024"
-         clientEventStartTimeUtcMs: 1732356000000
-         clientEventEndTimeUtcMs: 1732472100000
-@@ -119214,7 +119223,7 @@
-         battleLevel: BREAD_BATTLE_LEVEL_3
+@@ -114680,7 +114680,7 @@
        }
-       battleMpCostPerTier {
--        breadBattleCatchMpCost: 600
-+        breadBattleCatchMpCost: 800
-         battleLevel: BREAD_BATTLE_LEVEL_4
-       }
-       battleMpCostPerTier {
-@@ -337382,8 +337391,8 @@
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_WILLPOWER"
+       ignoreInventorySpace: true
+       nameOverride: "general1.ticket.5._GOWA2024RaidVer1_title"
+-      descriptionOverride: "item_event_ticket_gray_details"
++      descriptionOverride: "item_event_ticket_details_GOWALeadUp2024"
      }
    }
  }
-@@ -337396,31 +337405,31 @@
-       reward {
-         item {
-           stardust: true
--          count: 3000
-+          count: 750
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 3000
-+          count: 750
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 3000
-+          count: 750
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 3000
-+          count: 750
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 3000
-+          count: 750
-         }
-       }
-     }
-@@ -337435,31 +337444,31 @@
-       reward {
-         item {
-           stardust: true
--          count: 6000
-+          count: 1500
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 6000
-+          count: 1500
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 6000
-+          count: 1500
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 6000
-+          count: 1500
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 6000
-+          count: 1500
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -337475,7 +337484,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2120
-+          count: 530
-         }
-       }
-       reward {
-@@ -337493,7 +337502,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-     }
-@@ -337508,7 +337517,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-       reward {
-@@ -337526,7 +337535,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 8480
-+          count: 2120
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -337542,7 +337551,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2120
-+          count: 530
-         }
-       }
-       reward {
-@@ -337560,7 +337569,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-     }
-@@ -337575,7 +337584,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-       reward {
-@@ -337593,7 +337602,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 8480
-+          count: 2120
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -337609,7 +337618,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2280
-+          count: 570
-         }
-       }
-       reward {
-@@ -337627,7 +337636,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4560
-+          count: 1140
-         }
-       }
-     }
-@@ -337642,7 +337651,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4560
-+          count: 1140
-         }
-       }
-       reward {
-@@ -337660,7 +337669,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 9120
-+          count: 2280
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -337676,7 +337685,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2400
-+          count: 600
-         }
-       }
-       reward {
-@@ -337694,7 +337703,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4800
-+          count: 1200
-         }
-       }
-     }
-@@ -337709,7 +337718,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4800
-+          count: 1200
-         }
-       }
-       reward {
-@@ -337727,7 +337736,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 9600
-+          count: 2400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -337822,7 +337831,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2800
-+          count: 700
-         }
-       }
-       reward {
-@@ -337840,7 +337849,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5600
-+          count: 1400
-         }
-       }
-     }
-@@ -337855,7 +337864,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5600
-+          count: 1400
-         }
-       }
-       reward {
-@@ -337873,7 +337882,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 11200
-+          count: 2800
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -337889,7 +337898,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2920
-+          count: 730
-         }
-       }
-       reward {
-@@ -337907,7 +337916,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5840
-+          count: 1460
-         }
-       }
-     }
-@@ -337922,7 +337931,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5840
-+          count: 1460
-         }
-       }
-       reward {
-@@ -337940,7 +337949,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 11680
-+          count: 2920
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -337956,7 +337965,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3080
-+          count: 770
-         }
-       }
-       reward {
-@@ -337974,7 +337983,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6160
-+          count: 1540
-         }
-       }
-     }
-@@ -337989,7 +337998,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6160
-+          count: 1540
-         }
-       }
-       reward {
-@@ -338007,7 +338016,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 12320
-+          count: 3080
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338072,7 +338081,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 300
-         }
-       }
-       reward {
-@@ -338090,7 +338099,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2400
-+          count: 600
-         }
-       }
-     }
-@@ -338105,7 +338114,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2400
-+          count: 600
-         }
-       }
-       reward {
-@@ -338123,7 +338132,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4800
-+          count: 1200
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338139,7 +338148,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3480
-+          count: 870
-         }
-       }
-       reward {
-@@ -338157,7 +338166,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6960
-+          count: 1740
-         }
-       }
-     }
-@@ -338172,7 +338181,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6960
-+          count: 1740
-         }
-       }
-       reward {
-@@ -338190,7 +338199,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 13920
-+          count: 3480
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338206,7 +338215,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -338224,7 +338233,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -338239,7 +338248,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -338257,7 +338266,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338273,7 +338282,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -338291,7 +338300,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -338306,7 +338315,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -338324,7 +338333,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338340,7 +338349,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -338358,7 +338367,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -338373,7 +338382,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -338391,7 +338400,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338407,7 +338416,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -338425,7 +338434,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -338440,7 +338449,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -338458,7 +338467,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338474,7 +338483,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1320
-+          count: 330
-         }
-       }
-       reward {
-@@ -338492,7 +338501,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-     }
-@@ -338507,7 +338516,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-       reward {
-@@ -338525,7 +338534,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5280
-+          count: 1320
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338541,7 +338550,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1320
-+          count: 330
-         }
-       }
-       reward {
-@@ -338559,7 +338568,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-     }
-@@ -338574,7 +338583,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-       reward {
-@@ -338592,7 +338601,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5280
-+          count: 1320
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338608,7 +338617,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1480
-+          count: 370
-         }
-       }
-       reward {
-@@ -338626,7 +338635,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2960
-+          count: 740
-         }
-       }
-     }
-@@ -338641,7 +338650,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2960
-+          count: 740
-         }
-       }
-       reward {
-@@ -338659,7 +338668,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5920
-+          count: 1480
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338724,7 +338733,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1600
-+          count: 400
-         }
-       }
-       reward {
-@@ -338742,7 +338751,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3200
-+          count: 800
-         }
-       }
-     }
-@@ -338757,7 +338766,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3200
-+          count: 800
-         }
-       }
-       reward {
-@@ -338775,7 +338784,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6400
-+          count: 1600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338791,7 +338800,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1720
-+          count: 430
-         }
-       }
-       reward {
-@@ -338809,7 +338818,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-     }
-@@ -338824,7 +338833,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-       reward {
-@@ -338842,7 +338851,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6880
-+          count: 1720
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338858,7 +338867,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1720
-+          count: 430
-         }
-       }
-       reward {
-@@ -338876,7 +338885,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-     }
-@@ -338891,7 +338900,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-       reward {
-@@ -338909,7 +338918,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6880
-+          count: 1720
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -338925,7 +338934,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1880
-+          count: 470
-         }
-       }
-       reward {
-@@ -338943,7 +338952,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3760
-+          count: 940
-         }
-       }
-     }
-@@ -338958,7 +338967,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3760
-+          count: 940
-         }
-       }
-       reward {
-@@ -338976,7 +338985,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7520
-+          count: 1880
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -354601,6 +354610,7 @@
-       sku: "evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._Harvest1124_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -354619,6 +354629,7 @@
-       sku: "evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._Harvest1124_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -356287,6 +356298,7 @@
-       sku: "pgorelease.evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._Harvest1124_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -356305,6 +356317,7 @@
-       sku: "pgorelease.evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._Harvest1124_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -361915,7 +361928,184 @@
+@@ -114704,7 +114704,7 @@
+       }
+       ignoreInventorySpace: true
+       nameOverride: "general1.ticket.5._GOWA2024RaidVer1_title"
+-      descriptionOverride: "item_event_ticket_gray_details"
++      descriptionOverride: "item_event_ticket_details_GOWALeadUp2024"
      }
    }
  }
--batch_id: 1731438708359
-+template {
-+  template_id: "ITEM_TICKET_CITY_SAFARI_04"
-+  data {
-+    template_id: "ITEM_TICKET_CITY_SAFARI_04"
-+    itemSettings {
-+      itemId: ITEM_TICKET_CITY_SAFARI_04
-+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-+      globalEventTicket {
-+        eventStartTime: "2024-11-23T10:00:00"
-+        eventEndTime: "2024-11-24T18:15:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_GOWA2024GSBEA"
-+        clientEventStartTimeUtcMs: 1732356000000
-+        clientEventEndTimeUtcMs: 1732472100000
-+      }
-+      ignoreInventorySpace: true
-+      nameOverride: "general1.ticket._GOWA2024GSBEA_title"
-+      descriptionOverride: "item_event_ticket_evergreen_details_GOWA2024GSBEA"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_gloves_teamyellgrunts_0"
-+  data {
-+    template_id: "N_DISPLAY_n_gloves_teamyellgrunts_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_gloves_teamyellgrunts_0_icon"
-+      displayStringId: "avatar_gloves_teamyell"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_pants_teamyellgrunts-pants_0"
-+  data {
-+    template_id: "N_DISPLAY_n_pants_teamyellgrunts-pants_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_pants_teamyellgrunts-pants_0_icon"
-+      displayStringId: "avatar_pants_teamyellpants"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_pants_teamyellgrunts-skirt_0"
-+  data {
-+    template_id: "N_DISPLAY_n_pants_teamyellgrunts-skirt_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_pants_teamyellgrunts-skirt_0_icon"
-+      displayStringId: "avatar_pants_teamyellskirt"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shirt_gowa2024_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_gowa2024_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_gowa2024_0_icon"
-+      displayStringId: "avatar_shirt_gowa2024"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shirt_teamyellgrunts-cropped_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_teamyellgrunts-cropped_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_teamyellgrunts-cropped_0_icon"
-+      displayStringId: "avatar_shirt_teamyellcrop"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shirt_teamyellgrunts-long_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_teamyellgrunts-long_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_teamyellgrunts-long_0_icon"
-+      displayStringId: "avatar_shirt_teamyellshirt"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shoes_teamyellgrunts_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shoes_teamyellgrunts_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shoes_teamyellgrunts_0_icon"
-+      displayStringId: "avatar_shoes_teamyell"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_set_teamyellgrunts_a_0"
-+  data {
-+    template_id: "N_DISPLAY_set_teamyellgrunts_a_0"
-+    avatarItemDisplay {
-+      iconAddress: "set_teamyellgrunts_a_0"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_set_teamyellgrunts_b_0"
-+  data {
-+    template_id: "N_DISPLAY_set_teamyellgrunts_b_0"
-+    avatarItemDisplay {
-+      iconAddress: "set_teamyellgrunts_b_0"
-+    }
-+  }
-+}
-+template {
-+  template_id: "bundle.gowa2024.1"
-+  data {
-+    template_id: "bundle.gowa2024.1"
-+    iapItemDisplay {
-+      sku: "bundle.gowa2024.1"
-+      category: IAP_CATEGORY_BUNDLE
+@@ -119816,6 +119816,7 @@
+         }
+       }
+       neutralAvatarLegacyMappingVersion: 4
++      120: 1
+     }
+   }
+ }
+@@ -354775,15 +354776,16 @@
+     iapItemDisplay {
+       sku: "general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
 +      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.general.premiumbox.medium.1"
-+      title: "sku.name.web-gowa-2024-box-1"
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 1735
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general1.ticket.2_Halloween1TR24_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-11-02T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1730577600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Morpeko_Outfits_1024x512_nmo_v3.jpg"
++      spriteId: "general1.ticket.1"
++      title: "general1.ticket.5._GOWA2024RaidVer1_title"
++      description: "text_rewards_key_GOWA2024RaidVer1"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T20:00:00"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732305600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
+     }
+   }
+ }
+@@ -354794,15 +354796,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general1.ticket.2_Halloween1TR24_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-11-02T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1730577600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Morpeko_Outfits_1024x512_nmo_v3.jpg"
++      spriteId: "general1.ticket.1"
++      title: "general1.ticket.5._GOWA2024RaidVer1_title"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T20:00:00"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732305600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
+     }
+   }
+ }
+@@ -355030,15 +355032,16 @@
+     iapItemDisplay {
+       sku: "general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+-      spriteId: "general2.ticket.5"
+-      title: "general1.ticket._MawileRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-10-12T22:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1728770400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-mawile-raid-day-2024.jpg"
++      spriteId: "general1.ticket.1"
++      title: "general2.ticket.5._GOWA2024HatchVer1_title"
++      description: "text_rewards_key_GOWA2024HatchVer1"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T23:59:59"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732319999000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
+     }
+   }
+ }
+@@ -355049,13 +355052,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+-      spriteId: "general2.ticket.5"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-10-12T22:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1728770400000
++      spriteId: "general1.ticket.1"
++      title: "general2.ticket.5._GOWA2024HatchVer1_title"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T23:59:59"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732319999000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
+     }
+   }
+ }
+@@ -356446,15 +356451,16 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general1.ticket.2_Halloween1TR24_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-11-02T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1730577600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Morpeko_Outfits_1024x512_nmo_v3.jpg"
++      spriteId: "general1.ticket.1"
++      title: "general1.ticket.5._GOWA2024RaidVer1_title"
++      description: "text_rewards_key_GOWA2024RaidVer1"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T20:00:00"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732305600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
+     }
+   }
+ }
+@@ -356465,15 +356471,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general1.ticket.2_Halloween1TR24_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-11-02T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1730577600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Morpeko_Outfits_1024x512_nmo_v3.jpg"
++      spriteId: "general1.ticket.1"
++      title: "general1.ticket.5._GOWA2024RaidVer1_title"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T20:00:00"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732305600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
+     }
+   }
+ }
+@@ -356682,15 +356688,16 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+-      spriteId: "general2.ticket.5"
+-      title: "general1.ticket._MawileRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-10-12T22:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1728770400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-mawile-raid-day-2024.jpg"
++      spriteId: "general1.ticket.1"
++      title: "general2.ticket.5._GOWA2024HatchVer1_title"
++      description: "text_rewards_key_GOWA2024HatchVer1"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T23:59:59"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732319999000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
+     }
+   }
+ }
+@@ -356701,14 +356708,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+-      spriteId: "general2.ticket.5"
+-      title: "general1.ticket._FalinksRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-09-08T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1725814800000
++      spriteId: "general1.ticket.1"
++      title: "general2.ticket.5._GOWA2024HatchVer1_title"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T23:59:59"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732319999000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
+     }
+   }
+ }
+@@ -361985,7 +361993,7 @@
+     template_id: "N_DISPLAY_n_shirt_gowa2024_0"
+     avatarItemDisplay {
+       iconAddress: "n_shirt_gowa2024_0_icon"
+-      displayStringId: "avatar_shirt_gowa2024"
++      displayStringId: "avatar_shirt_gowatshirt2024"
+     }
+   }
+ }
+@@ -362105,7 +362113,664 @@
+     }
+   }
+ }
+-batch_id: 1731564075211
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_0"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_0"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_0_icon"
 +    }
 +  }
 +}
 +template {
-+  template_id: "bundle.gowa2024.2"
++  template_id: "N_DISPLAY_n_gradient_eye_1"
 +  data {
-+    template_id: "bundle.gowa2024.2"
-+    iapItemDisplay {
-+      sku: "bundle.gowa2024.2"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle2.sprite.b"
-+      title: "sku.name.web-gowa-2024-box-2"
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 3600
++    template_id: "N_DISPLAY_n_gradient_eye_1"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_1_icon"
 +    }
 +  }
 +}
 +template {
-+  template_id: "bundle.gowa2024.3"
++  template_id: "N_DISPLAY_n_gradient_eye_10"
 +  data {
-+    template_id: "bundle.gowa2024.3"
-+    iapItemDisplay {
-+      sku: "bundle.gowa2024.3"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle1.sprite.d"
-+      title: "sku.name.web-gowa-2024-box-3"
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 5235
++    template_id: "N_DISPLAY_n_gradient_eye_10"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_10_icon"
 +    }
 +  }
 +}
 +template {
-+  template_id: "bundle.gowa2024.4"
++  template_id: "N_DISPLAY_n_gradient_eye_11"
 +  data {
-+    template_id: "bundle.gowa2024.4"
-+    iapItemDisplay {
-+      sku: "bundle.gowa2024.4"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.general.adventure.1"
-+      title: "sticker_box"
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 72
++    template_id: "N_DISPLAY_n_gradient_eye_11"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_11_icon"
 +    }
 +  }
 +}
-+batch_id: 1731564075211
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_12"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_12"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_12_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_13"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_13"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_13_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_14"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_14"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_14_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_15"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_15"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_15_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_16"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_16"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_16_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_17"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_17"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_17_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_18"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_18"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_18_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_19"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_19"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_19_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_2"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_2"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_2_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_3"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_3"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_3_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_4"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_4"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_4_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_5"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_5"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_5_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_6"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_6"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_6_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_7"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_7"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_7_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_8"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_8"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_8_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_9"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_9"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_9_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_0"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_0"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_1"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_1"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_1_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_10"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_10"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_10_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_11"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_11"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_11_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_12"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_12"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_12_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_13"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_13"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_13_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_14"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_14"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_14_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_15"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_15"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_15_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_16"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_16"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_16_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_17"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_17"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_17_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_18"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_18"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_18_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_19"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_19"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_19_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_2"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_2"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_2_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_20"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_20"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_20_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_21"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_21"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_21_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_22"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_22"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_22_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_23"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_23"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_23_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_24"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_24"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_24_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_25"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_25"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_25_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_26"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_26"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_26_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_27"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_27"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_27_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_28"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_28"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_28_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_29"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_29"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_29_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_3"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_3"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_3_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_30"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_30"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_30_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_31"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_31"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_31_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_4"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_4"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_4_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_5"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_5"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_5_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_6"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_6"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_6_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_7"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_7"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_7_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_8"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_8"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_8_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_9"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_9"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_9_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_testeye_0"
++  data {
++    template_id: "N_DISPLAY_n_gradient_testeye_0"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_testeye_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_testeye_1"
++  data {
++    template_id: "N_DISPLAY_n_gradient_testeye_1"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_testeye_1_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_testhair_0"
++  data {
++    template_id: "N_DISPLAY_n_gradient_testhair_0"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_testhair_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_testhair_1"
++  data {
++    template_id: "N_DISPLAY_n_gradient_testhair_1"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_testhair_1_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_coilyshort_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_coilyshort_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_coilyshort_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_curlymedium_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_curlymedium_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_curlymedium_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_default_a_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_default_a_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_default_a_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_default_b_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_default_b_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_default_b_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_kinkymedium_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_kinkymedium_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_kinkymedium_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_kinkyshort_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_kinkyshort_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_kinkyshort_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_mohawk-0_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_mohawk-0_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_mohawk-0_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_mohawk-1_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_mohawk-1_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_mohawk-1_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_straightlong_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_straightlong_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_straightlong_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_straightmedium_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_straightmedium_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_straightmedium_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_straightshort_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_straightshort_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_straightshort_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_testhair-0_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_testhair-0_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_testhair-0_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_testhair-1_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_testhair-1_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_testhair-1_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_wavylong_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_wavylong_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_wavylong_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_wavymedium_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_wavymedium_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_wavymedium_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_wavyshort_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_wavyshort_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_wavyshort_0_icon"
++    }
++  }
++}
++template {
++  template_id: "POKEMON_INFO_PANEL_SETTINGS"
++  data {
++    template_id: "POKEMON_INFO_PANEL_SETTINGS"
++    242 {
++      2: 1
++    }
++  }
++}
++batch_id: 1731653383990
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -361924,7 +362114,7 @@
- experiment_id: 21
- experiment_id: 101
- experiment_id: 170
--experiment_id: 181
-+experiment_id: 182
- experiment_id: 300
- experiment_id: 302
- experiment_id: 320
-@@ -361953,13 +362143,11 @@
- experiment_id: 3811
+@@ -362144,6 +362809,7 @@
  experiment_id: 3817
  experiment_id: 3820
--experiment_id: 3882
  experiment_id: 3883
++experiment_id: 3904
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
- experiment_id: 5163
--experiment_id: 5219
- experiment_id: 5250
- experiment_id: 5508
- experiment_id: 5510
-@@ -361970,7 +362158,7 @@
- experiment_id: 9512
+@@ -362159,6 +362825,7 @@
  experiment_id: 9523
  experiment_id: 9531
--experiment_id: 9536
-+experiment_id: 9542
+ experiment_id: 9542
++experiment_id: 9548
  experiment_id: 9551
  experiment_id: 20947
  experiment_id: 80001
