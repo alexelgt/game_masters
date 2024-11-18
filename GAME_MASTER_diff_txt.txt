@@ -1,36 +1,280 @@
---- GAME_MASTER_old.txt	2024-11-16 08:36:54.756928358 +0100
-+++ GAME_MASTER.txt	2024-11-17 13:04:54.658077900 +0100
-@@ -114939,6 +114939,8 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
-+        eventBadge: BADGE_GOWA_2024_GLOBAL
-+        grantBadgeBeforeEventStartMs: 432000000
-         eventStartTime: "2024-11-23T10:00:00"
-         eventEndTime: "2024-11-24T18:15:00"
-         itemBagDescriptionKey: "item_global_event_ticket_details_GOWA24"
-@@ -362768,7 +362770,7 @@
+--- GAME_MASTER_old.txt	2024-11-17 13:04:54.658077900 +0100
++++ GAME_MASTER.txt	2024-11-18 13:55:37.112862769 +0100
+@@ -137098,13 +137098,15 @@
+       inviteCooldownDurationMillis: 30000
+       maxNumFriendInvitesPerAction: 5
+       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_EXTENDED_EGG
+-      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_5_SHADOW
++      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_4
+       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_1_SHADOW
+       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_3_SHADOW
++      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_5_SHADOW
+       unsupportedRemoteRaidLevels: RAID_LEVEL_EXTENDED_EGG
+-      unsupportedRemoteRaidLevels: RAID_LEVEL_5_SHADOW
++      unsupportedRemoteRaidLevels: RAID_LEVEL_4
+       unsupportedRemoteRaidLevels: RAID_LEVEL_1_SHADOW
+       unsupportedRemoteRaidLevels: RAID_LEVEL_3_SHADOW
++      unsupportedRemoteRaidLevels: RAID_LEVEL_5_SHADOW
+       raidLevelMusicOverrides {
+         raidLevel: RAID_LEVEL_ULTRA_BEAST
+         battleMusicKey: "GoFest2022Music_Battle"
+@@ -137295,7 +137297,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 5
++      dailySquashLimit: 20
      }
    }
  }
--batch_id: 1731742332565
-+batch_id: 1731840902534
+@@ -339603,9 +339605,36 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: LUGIA
++          pokemon_id: DIALGA
+           pokemonDisplay {
+-            form: LUGIA_NORMAL
++            form: DIALGA_ORIGIN
++          }
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
++          pokemon_id: PALKIA
++          pokemonDisplay {
++            form: PALKIA_ORIGIN
+           }
+         }
+         unlockedAtRank: 20
+@@ -340265,9 +340294,36 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: LUGIA
++          pokemon_id: DIALGA
++          pokemonDisplay {
++            form: DIALGA_ORIGIN
++          }
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
++          pokemon_id: PALKIA
+           pokemonDisplay {
+-            form: LUGIA_NORMAL
++            form: PALKIA_ORIGIN
+           }
+         }
+         unlockedAtRank: 20
+@@ -354777,7 +354833,6 @@
+       sku: "general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket.5._GOWA2024RaidVer1_title"
+       description: "text_rewards_key_GOWA2024RaidVer1"
+@@ -354797,7 +354852,6 @@
+       sku: "general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket.5._GOWA2024RaidVer1_title"
+       skuEnableTime: "2024-01-01T00:00:00"
+@@ -355033,7 +355087,6 @@
+       sku: "general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general2.ticket.5._GOWA2024HatchVer1_title"
+       description: "text_rewards_key_GOWA2024HatchVer1"
+@@ -355053,7 +355106,6 @@
+       sku: "general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general2.ticket.5._GOWA2024HatchVer1_title"
+       skuEnableTime: "2024-01-01T00:00:00"
+@@ -356452,7 +356504,6 @@
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket.5._GOWA2024RaidVer1_title"
+       description: "text_rewards_key_GOWA2024RaidVer1"
+@@ -356472,7 +356523,6 @@
+       sku: "pgorelease.general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket.5._GOWA2024RaidVer1_title"
+       skuEnableTime: "2024-01-01T00:00:00"
+@@ -356689,7 +356739,6 @@
+       sku: "pgorelease.general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general2.ticket.5._GOWA2024HatchVer1_title"
+       description: "text_rewards_key_GOWA2024HatchVer1"
+@@ -356709,7 +356758,6 @@
+       sku: "pgorelease.general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general2.ticket.5._GOWA2024HatchVer1_title"
+       skuEnableTime: "2024-01-01T00:00:00"
+@@ -362053,9 +362101,12 @@
+       sku: "bundle.gowa2024.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general.premiumbox.medium.1"
+       title: "sku.name.web-gowa-2024-box-1"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2024-11-24T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1732478400000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 1735
+@@ -362070,9 +362121,12 @@
+       sku: "bundle.gowa2024.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle2.sprite.b"
+       title: "sku.name.web-gowa-2024-box-2"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2024-11-24T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1732478400000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 3600
+@@ -362087,9 +362141,12 @@
+       sku: "bundle.gowa2024.3"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle1.sprite.d"
+       title: "sku.name.web-gowa-2024-box-3"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2024-11-24T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1732478400000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 5235
+@@ -362104,9 +362161,12 @@
+       sku: "bundle.gowa2024.4"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general.adventure.1"
+       title: "sticker_box"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2024-11-24T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1732478400000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 72
+@@ -362770,7 +362830,7 @@
+     }
+   }
+ }
+-batch_id: 1731840902534
++batch_id: 1731847522037
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -362813,6 +362815,7 @@
+@@ -362792,6 +362852,7 @@
+ experiment_id: 807
+ experiment_id: 1699
+ experiment_id: 1820
++experiment_id: 2247
+ experiment_id: 2301
+ experiment_id: 2399
+ experiment_id: 2400
+@@ -362805,22 +362866,20 @@
+ experiment_id: 3647
+ experiment_id: 3685
+ experiment_id: 3800
+-experiment_id: 3811
++experiment_id: 3812
+ experiment_id: 3817
+ experiment_id: 3820
+ experiment_id: 3883
+-experiment_id: 3903
+-experiment_id: 3904
++experiment_id: 3911
+ experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-+experiment_id: 5220
+-experiment_id: 5220
++experiment_id: 5221
  experiment_id: 5250
  experiment_id: 5508
  experiment_id: 5510
-@@ -362828,6 +362831,7 @@
+ experiment_id: 6075
+-experiment_id: 8675
+ experiment_id: 8921
+ experiment_id: 8924
+ experiment_id: 9512
+@@ -362831,8 +362890,8 @@
  experiment_id: 9551
  experiment_id: 20947
  experiment_id: 80001
-+experiment_id: 80200
- experiment_id: 80209
++experiment_id: 80002
+ experiment_id: 80200
+-experiment_id: 80209
  experiment_id: 300000
  experiment_id: 314159
+ experiment_id: 314160
