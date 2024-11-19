@@ -1,280 +1,2218 @@
---- GAME_MASTER_old.txt	2024-11-17 13:04:54.658077900 +0100
-+++ GAME_MASTER.txt	2024-11-18 13:55:37.112862769 +0100
-@@ -137098,13 +137098,15 @@
-       inviteCooldownDurationMillis: 30000
-       maxNumFriendInvitesPerAction: 5
-       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_EXTENDED_EGG
--      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_5_SHADOW
-+      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_4
-       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_1_SHADOW
-       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_3_SHADOW
-+      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_5_SHADOW
-       unsupportedRemoteRaidLevels: RAID_LEVEL_EXTENDED_EGG
--      unsupportedRemoteRaidLevels: RAID_LEVEL_5_SHADOW
-+      unsupportedRemoteRaidLevels: RAID_LEVEL_4
-       unsupportedRemoteRaidLevels: RAID_LEVEL_1_SHADOW
-       unsupportedRemoteRaidLevels: RAID_LEVEL_3_SHADOW
-+      unsupportedRemoteRaidLevels: RAID_LEVEL_5_SHADOW
-       raidLevelMusicOverrides {
-         raidLevel: RAID_LEVEL_ULTRA_BEAST
-         battleMusicKey: "GoFest2022Music_Battle"
-@@ -137295,7 +137297,7 @@
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
-       enabled: true
--      dailySquashLimit: 5
-+      dailySquashLimit: 20
+--- GAME_MASTER_old.txt	2024-11-18 13:55:37.112862769 +0100
++++ GAME_MASTER.txt	2024-11-19 12:56:07.023487063 +0100
+@@ -40874,6 +40874,7 @@
+       }
+       minMsToReceiveReleaseStationRewards: 1
+       maxStationedPokemonPerPlayer: 10
++      14: 0x43960000
      }
    }
  }
-@@ -339603,9 +339605,36 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: LUGIA
-+          pokemon_id: DIALGA
-           pokemonDisplay {
--            form: LUGIA_NORMAL
-+            form: DIALGA_ORIGIN
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
+@@ -115955,6 +115956,27 @@
+   }
+ }
+ template {
++  template_id: "ITEM_TICKET_CITY_SAFARI_04"
++  data {
++    template_id: "ITEM_TICKET_CITY_SAFARI_04"
++    itemSettings {
++      itemId: ITEM_TICKET_CITY_SAFARI_04
++      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
++      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
++      globalEventTicket {
++        eventStartTime: "2024-11-23T10:00:00"
++        eventEndTime: "2024-11-24T18:15:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_GOWA2024GSBEA"
++        clientEventStartTimeUtcMs: 1732356000000
++        clientEventEndTimeUtcMs: 1732472100000
 +      }
-+      availablePokemon {
-+        pokemon {
-+          pokemon_id: PALKIA
-+          pokemonDisplay {
-+            form: PALKIA_ORIGIN
-           }
-         }
-         unlockedAtRank: 20
-@@ -340265,9 +340294,36 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: LUGIA
-+          pokemon_id: DIALGA
-+          pokemonDisplay {
-+            form: DIALGA_ORIGIN
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-+      availablePokemon {
-+        pokemon {
-+          pokemon_id: PALKIA
-           pokemonDisplay {
--            form: LUGIA_NORMAL
-+            form: PALKIA_ORIGIN
-           }
-         }
-         unlockedAtRank: 20
-@@ -354777,7 +354833,6 @@
-       sku: "general1.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.1"
-       title: "general1.ticket.5._GOWA2024RaidVer1_title"
-       description: "text_rewards_key_GOWA2024RaidVer1"
-@@ -354797,7 +354852,6 @@
-       sku: "general1.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.1"
-       title: "general1.ticket.5._GOWA2024RaidVer1_title"
-       skuEnableTime: "2024-01-01T00:00:00"
-@@ -355033,7 +355087,6 @@
-       sku: "general2.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.1"
-       title: "general2.ticket.5._GOWA2024HatchVer1_title"
-       description: "text_rewards_key_GOWA2024HatchVer1"
-@@ -355053,7 +355106,6 @@
-       sku: "general2.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.1"
-       title: "general2.ticket.5._GOWA2024HatchVer1_title"
-       skuEnableTime: "2024-01-01T00:00:00"
-@@ -356452,7 +356504,6 @@
-       sku: "pgorelease.general1.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.1"
-       title: "general1.ticket.5._GOWA2024RaidVer1_title"
-       description: "text_rewards_key_GOWA2024RaidVer1"
-@@ -356472,7 +356523,6 @@
-       sku: "pgorelease.general1.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.1"
-       title: "general1.ticket.5._GOWA2024RaidVer1_title"
-       skuEnableTime: "2024-01-01T00:00:00"
-@@ -356689,7 +356739,6 @@
-       sku: "pgorelease.general2.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.1"
-       title: "general2.ticket.5._GOWA2024HatchVer1_title"
-       description: "text_rewards_key_GOWA2024HatchVer1"
-@@ -356709,7 +356758,6 @@
-       sku: "pgorelease.general2.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.1"
-       title: "general2.ticket.5._GOWA2024HatchVer1_title"
-       skuEnableTime: "2024-01-01T00:00:00"
-@@ -362053,9 +362101,12 @@
-       sku: "bundle.gowa2024.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle.general.premiumbox.medium.1"
-       title: "sku.name.web-gowa-2024-box-1"
++      ignoreInventorySpace: true
++      nameOverride: "general1.ticket._GOWA2024GSBEA_title"
++      descriptionOverride: "item_event_ticket_evergreen_details_GOWA2024GSBEA"
++    }
++  }
++}
++template {
+   template_id: "ITEM_TROY_DISK"
+   data {
+     template_id: "ITEM_TROY_DISK"
+@@ -121730,6 +121752,16 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_gloves_teamyellgrunts_0"
++  data {
++    template_id: "N_DISPLAY_n_gloves_teamyellgrunts_0"
++    avatarItemDisplay {
++      iconAddress: "n_gloves_teamyellgrunts_0_icon"
++      displayStringId: "avatar_gloves_teamyell"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_gloves_unequip_0"
+   data {
+     template_id: "N_DISPLAY_n_gloves_unequip_0"
+@@ -121750,6 +121782,654 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_gradient_eye_0"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_0"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_1"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_1"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_1_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_10"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_10"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_10_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_11"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_11"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_11_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_12"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_12"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_12_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_13"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_13"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_13_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_14"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_14"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_14_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_15"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_15"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_15_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_16"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_16"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_16_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_17"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_17"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_17_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_18"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_18"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_18_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_19"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_19"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_19_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_2"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_2"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_2_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_3"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_3"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_3_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_4"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_4"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_4_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_5"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_5"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_5_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_6"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_6"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_6_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_7"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_7"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_7_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_8"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_8"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_8_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_eye_9"
++  data {
++    template_id: "N_DISPLAY_n_gradient_eye_9"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_eye_9_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_0"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_0"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_1"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_1"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_1_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_10"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_10"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_10_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_11"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_11"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_11_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_12"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_12"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_12_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_13"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_13"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_13_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_14"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_14"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_14_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_15"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_15"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_15_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_16"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_16"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_16_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_17"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_17"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_17_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_18"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_18"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_18_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_19"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_19"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_19_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_2"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_2"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_2_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_20"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_20"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_20_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_21"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_21"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_21_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_22"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_22"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_22_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_23"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_23"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_23_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_24"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_24"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_24_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_25"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_25"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_25_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_26"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_26"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_26_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_27"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_27"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_27_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_28"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_28"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_28_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_29"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_29"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_29_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_3"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_3"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_3_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_30"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_30"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_30_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_31"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_31"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_31_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_4"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_4"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_4_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_5"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_5"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_5_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_6"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_6"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_6_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_7"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_7"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_7_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_8"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_8"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_8_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_hair_9"
++  data {
++    template_id: "N_DISPLAY_n_gradient_hair_9"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_hair_9_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_testeye_0"
++  data {
++    template_id: "N_DISPLAY_n_gradient_testeye_0"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_testeye_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_testeye_1"
++  data {
++    template_id: "N_DISPLAY_n_gradient_testeye_1"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_testeye_1_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_testhair_0"
++  data {
++    template_id: "N_DISPLAY_n_gradient_testhair_0"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_testhair_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_gradient_testhair_1"
++  data {
++    template_id: "N_DISPLAY_n_gradient_testhair_1"
++    avatarItemDisplay {
++      iconAddress: "n_gradient_testhair_1_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_coilyshort_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_coilyshort_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_coilyshort_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_curlymedium_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_curlymedium_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_curlymedium_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_default_a_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_default_a_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_default_a_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_default_b_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_default_b_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_default_b_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_kinkymedium_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_kinkymedium_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_kinkymedium_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_kinkyshort_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_kinkyshort_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_kinkyshort_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_mohawk-0_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_mohawk-0_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_mohawk-0_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_mohawk-1_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_mohawk-1_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_mohawk-1_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_straightlong_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_straightlong_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_straightlong_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_straightmedium_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_straightmedium_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_straightmedium_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_straightshort_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_straightshort_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_straightshort_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_testhair-0_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_testhair-0_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_testhair-0_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_testhair-1_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_testhair-1_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_testhair-1_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_wavylong_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_wavylong_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_wavylong_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_wavymedium_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_wavymedium_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_wavymedium_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_wavyshort_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_wavyshort_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_wavyshort_0_icon"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_hat_6thanniversary_a_0"
+   data {
+     template_id: "N_DISPLAY_n_hat_6thanniversary_a_0"
+@@ -124940,6 +125620,26 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_pants_teamyellgrunts-pants_0"
++  data {
++    template_id: "N_DISPLAY_n_pants_teamyellgrunts-pants_0"
++    avatarItemDisplay {
++      iconAddress: "n_pants_teamyellgrunts-pants_0_icon"
++      displayStringId: "avatar_pants_teamyellpants"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_pants_teamyellgrunts-skirt_0"
++  data {
++    template_id: "N_DISPLAY_n_pants_teamyellgrunts-skirt_0"
++    avatarItemDisplay {
++      iconAddress: "n_pants_teamyellgrunts-skirt_0_icon"
++      displayStringId: "avatar_pants_teamyellskirt"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_pants_turbine_0"
+   data {
+     template_id: "N_DISPLAY_n_pants_turbine_0"
+@@ -126960,6 +127660,16 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_shirt_gowa2024_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_gowa2024_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_gowa2024_0_icon"
++      displayStringId: "avatar_shirt_gowatshirt2024"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_shirt_greedentsweater_0"
+   data {
+     template_id: "N_DISPLAY_n_shirt_greedentsweater_0"
+@@ -129000,6 +129710,26 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_shirt_teamyellgrunts-cropped_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_teamyellgrunts-cropped_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_teamyellgrunts-cropped_0_icon"
++      displayStringId: "avatar_shirt_teamyellcrop"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_teamyellgrunts-long_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_teamyellgrunts-long_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_teamyellgrunts-long_0_icon"
++      displayStringId: "avatar_shirt_teamyellshirt"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_shirt_togepihoodie_0"
+   data {
+     template_id: "N_DISPLAY_n_shirt_togepihoodie_0"
+@@ -130840,6 +131570,16 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_shoes_teamyellgrunts_0"
++  data {
++    template_id: "N_DISPLAY_n_shoes_teamyellgrunts_0"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_teamyellgrunts_0_icon"
++      displayStringId: "avatar_shoes_teamyell"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_shoes_ultra_a_0"
+   data {
+     template_id: "N_DISPLAY_n_shoes_ultra_a_0"
+@@ -133320,6 +134060,24 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_set_teamyellgrunts_a_0"
++  data {
++    template_id: "N_DISPLAY_set_teamyellgrunts_a_0"
++    avatarItemDisplay {
++      iconAddress: "set_teamyellgrunts_a_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_set_teamyellgrunts_b_0"
++  data {
++    template_id: "N_DISPLAY_set_teamyellgrunts_b_0"
++    avatarItemDisplay {
++      iconAddress: "set_teamyellgrunts_b_0"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_set_ultra_0_f"
+   data {
+     template_id: "N_DISPLAY_set_ultra_0_f"
+@@ -136232,6 +136990,15 @@
+   }
+ }
+ template {
++  template_id: "POKEMON_INFO_PANEL_SETTINGS"
++  data {
++    template_id: "POKEMON_INFO_PANEL_SETTINGS"
++    pokemonInfoPanelSettings {
++      bottomOriginSectionV2Enabled: true
++    }
++  }
++}
++template {
+   template_id: "POKEMON_SCALE_SETTINGS_BATTLE_POKEMON_SCALE"
+   data {
+     template_id: "POKEMON_SCALE_SETTINGS_BATTLE_POKEMON_SCALE"
+@@ -171076,6 +171843,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_PGO_WILDAREA_2024.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 6
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 6
++    }
++  }
++}
++template {
+   template_id: "STICKER_PGO_WILDAREA_2024_1"
+   data {
+     template_id: "STICKER_PGO_WILDAREA_2024_1"
+@@ -171090,6 +171879,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_PGO_WILDAREA_2024_1.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_1.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 10
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_1.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_1.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 10
++    }
++  }
++}
++template {
+   template_id: "STICKER_PGO_WILDAREA_2024_2"
+   data {
+     template_id: "STICKER_PGO_WILDAREA_2024_2"
+@@ -171104,6 +171915,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_PGO_WILDAREA_2024_2.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_2.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_2.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_2.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
++    }
++  }
++}
++template {
+   template_id: "STICKER_PGO_WILDAREA_2024_3"
+   data {
+     template_id: "STICKER_PGO_WILDAREA_2024_3"
+@@ -171118,6 +171951,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_PGO_WILDAREA_2024_3.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_3.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 8
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_3.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_3.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 8
++    }
++  }
++}
++template {
+   template_id: "STICKER_PGO_WILDAREA_2024_4"
+   data {
+     template_id: "STICKER_PGO_WILDAREA_2024_4"
+@@ -171132,6 +171987,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_PGO_WILDAREA_2024_4.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_4.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_4.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_4.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 7
++    }
++  }
++}
++template {
+   template_id: "STICKER_PGO_WILDAREA_2024_LOGO"
+   data {
+     template_id: "STICKER_PGO_WILDAREA_2024_LOGO"
+@@ -171145,6 +172022,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_PGO_WILDAREA_2024_LOGO.3"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_LOGO.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_LOGO.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 5
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_WILDAREA_2024_LOGO.5"
++  data {
++    template_id: "STICKER_PGO_WILDAREA_2024_LOGO.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_WILDAREA_2024_LOGO.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 5
++    }
++  }
++}
++template {
+   template_id: "STICKER_PIKAAIRADVENTURE_1"
+   data {
+     template_id: "STICKER_PIKAAIRADVENTURE_1"
+@@ -340828,6 +341727,36 @@
+   }
+ }
+ template {
++  template_id: "bundle.blackfridaystickers24.1"
++  data {
++    template_id: "bundle.blackfridaystickers24.1"
++    iapItemDisplay {
++      sku: "bundle.blackfridaystickers24.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      sale: true
++      spriteId: "bundle.general.adventure.1"
++      title: "sticker_box"
++    }
++  }
++}
++template {
++  template_id: "bundle.blackfridaystickers24.2"
++  data {
++    template_id: "bundle.blackfridaystickers24.2"
++    iapItemDisplay {
++      sku: "bundle.blackfridaystickers24.2"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      sale: true
++      spriteId: "bundle.general.adventure.1"
++      title: "sticker_box"
++    }
++  }
++}
++template {
+   template_id: "bundle.boost2023.1"
+   data {
+     template_id: "bundle.boost2023.1"
+@@ -341737,6 +342666,86 @@
+   }
+ }
+ template {
++  template_id: "bundle.gowa2024.1"
++  data {
++    template_id: "bundle.gowa2024.1"
++    iapItemDisplay {
++      sku: "bundle.gowa2024.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      spriteId: "bundle.general.premiumbox.medium.1"
++      title: "sku.name.web-gowa-2024-box-1"
 +      skuEnableTime: "2019-10-31T21:00:00"
 +      skuDisableTime: "2024-11-24T20:00:00"
 +      skuEnableTimeUtcMs: 1572555600000
 +      skuDisableTimeUtcMs: 1732478400000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 1735
-@@ -362070,9 +362121,12 @@
-       sku: "bundle.gowa2024.2"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle2.sprite.b"
-       title: "sku.name.web-gowa-2024-box-2"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 1735
++    }
++  }
++}
++template {
++  template_id: "bundle.gowa2024.2"
++  data {
++    template_id: "bundle.gowa2024.2"
++    iapItemDisplay {
++      sku: "bundle.gowa2024.2"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      spriteId: "bundle2.sprite.b"
++      title: "sku.name.web-gowa-2024-box-2"
 +      skuEnableTime: "2019-10-31T21:00:00"
 +      skuDisableTime: "2024-11-24T20:00:00"
 +      skuEnableTimeUtcMs: 1572555600000
 +      skuDisableTimeUtcMs: 1732478400000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 3600
-@@ -362087,9 +362141,12 @@
-       sku: "bundle.gowa2024.3"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle1.sprite.d"
-       title: "sku.name.web-gowa-2024-box-3"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 3600
++    }
++  }
++}
++template {
++  template_id: "bundle.gowa2024.3"
++  data {
++    template_id: "bundle.gowa2024.3"
++    iapItemDisplay {
++      sku: "bundle.gowa2024.3"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      spriteId: "bundle1.sprite.d"
++      title: "sku.name.web-gowa-2024-box-3"
 +      skuEnableTime: "2019-10-31T21:00:00"
 +      skuDisableTime: "2024-11-24T20:00:00"
 +      skuEnableTimeUtcMs: 1572555600000
 +      skuDisableTimeUtcMs: 1732478400000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 5235
-@@ -362104,9 +362161,12 @@
-       sku: "bundle.gowa2024.4"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle.general.adventure.1"
-       title: "sticker_box"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 5235
++    }
++  }
++}
++template {
++  template_id: "bundle.gowa2024.4"
++  data {
++    template_id: "bundle.gowa2024.4"
++    iapItemDisplay {
++      sku: "bundle.gowa2024.4"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      spriteId: "bundle.general.adventure.1"
++      title: "sticker_box"
 +      skuEnableTime: "2019-10-31T21:00:00"
 +      skuDisableTime: "2024-11-24T20:00:00"
 +      skuEnableTimeUtcMs: 1572555600000
 +      skuDisableTimeUtcMs: 1732478400000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 72
-@@ -362770,7 +362830,7 @@
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 72
++    }
++  }
++}
++template {
+   template_id: "bundle.gpdindialaunch.1"
+   data {
+     template_id: "bundle.gpdindialaunch.1"
+@@ -342495,6 +343504,23 @@
+   }
+ }
+ template {
++  template_id: "bundle.s17seasonstart.1"
++  data {
++    template_id: "bundle.s17seasonstart.1"
++    iapItemDisplay {
++      sku: "bundle.s17seasonstart.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general2.medium.2"
++      title: "dual_destiny_box"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 295
++    }
++  }
++}
++template {
+   template_id: "bundle.season10evergreen.1"
+   data {
+     template_id: "bundle.season10evergreen.1"
+@@ -342810,6 +343836,23 @@
+   }
+ }
+ template {
++  template_id: "bundle.seasonaldelights2024.1"
++  data {
++    template_id: "bundle.seasonaldelights2024.1"
++    iapItemDisplay {
++      sku: "bundle.seasonaldelights2024.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general1.large.2"
++      title: "sku.name.web-thanksgiving-box-2023"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 11235
++    }
++  }
++}
++template {
+   template_id: "bundle.shadowlugia.1"
+   data {
+     template_id: "bundle.shadowlugia.1"
+@@ -356925,6 +357968,45 @@
+   }
+ }
+ template {
++  template_id: "pgorelease.pokecoin.15950"
++  data {
++    template_id: "pgorelease.pokecoin.15950"
++    iapItemDisplay {
++      sku: "pgorelease.pokecoin.15950"
++      category: IAP_CATEGORY_POKECOINS
++      sortOrder: 6
++      hidden: true
++      spriteId: "pokecoin.14500"
++    }
++  }
++}
++template {
++  template_id: "pgorelease.pokecoin.2750"
++  data {
++    template_id: "pgorelease.pokecoin.2750"
++    iapItemDisplay {
++      sku: "pgorelease.pokecoin.2750"
++      category: IAP_CATEGORY_POKECOINS
++      sortOrder: 4
++      hidden: true
++      spriteId: "pokecoin.2500"
++    }
++  }
++}
++template {
++  template_id: "pgorelease.pokecoin.5720"
++  data {
++    template_id: "pgorelease.pokecoin.5720"
++    iapItemDisplay {
++      sku: "pgorelease.pokecoin.5720"
++      category: IAP_CATEGORY_POKECOINS
++      sortOrder: 5
++      hidden: true
++      spriteId: "pokecoin.5200"
++    }
++  }
++}
++template {
+   template_id: "pokeball.100"
+   data {
+     template_id: "pokeball.100"
+@@ -361852,985 +362934,7 @@
      }
    }
  }
--batch_id: 1731840902534
-+batch_id: 1731847522037
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024.3"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 6
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024.5"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 6
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_1.3"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_1.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024_1.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 10
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_1.5"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_1.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024_1.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 10
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_2.3"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_2.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024_2.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 9
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_2.5"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_2.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024_2.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 9
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_3.3"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_3.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024_3.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 8
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_3.5"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_3.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024_3.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 8
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_4.3"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_4.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024_4.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 7
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_4.5"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_4.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024_4.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 7
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_LOGO.3"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_LOGO.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024_LOGO.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 5
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_WILDAREA_2024_LOGO.5"
+-  data {
+-    template_id: "STICKER_PGO_WILDAREA_2024_LOGO.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_WILDAREA_2024_LOGO.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 5
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_TICKET_CITY_SAFARI_04"
+-  data {
+-    template_id: "ITEM_TICKET_CITY_SAFARI_04"
+-    itemSettings {
+-      itemId: ITEM_TICKET_CITY_SAFARI_04
+-      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+-      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+-      globalEventTicket {
+-        eventStartTime: "2024-11-23T10:00:00"
+-        eventEndTime: "2024-11-24T18:15:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_GOWA2024GSBEA"
+-        clientEventStartTimeUtcMs: 1732356000000
+-        clientEventEndTimeUtcMs: 1732472100000
+-      }
+-      ignoreInventorySpace: true
+-      nameOverride: "general1.ticket._GOWA2024GSBEA_title"
+-      descriptionOverride: "item_event_ticket_evergreen_details_GOWA2024GSBEA"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gloves_teamyellgrunts_0"
+-  data {
+-    template_id: "N_DISPLAY_n_gloves_teamyellgrunts_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_gloves_teamyellgrunts_0_icon"
+-      displayStringId: "avatar_gloves_teamyell"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_pants_teamyellgrunts-pants_0"
+-  data {
+-    template_id: "N_DISPLAY_n_pants_teamyellgrunts-pants_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_pants_teamyellgrunts-pants_0_icon"
+-      displayStringId: "avatar_pants_teamyellpants"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_pants_teamyellgrunts-skirt_0"
+-  data {
+-    template_id: "N_DISPLAY_n_pants_teamyellgrunts-skirt_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_pants_teamyellgrunts-skirt_0_icon"
+-      displayStringId: "avatar_pants_teamyellskirt"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_shirt_gowa2024_0"
+-  data {
+-    template_id: "N_DISPLAY_n_shirt_gowa2024_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_shirt_gowa2024_0_icon"
+-      displayStringId: "avatar_shirt_gowatshirt2024"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_shirt_teamyellgrunts-cropped_0"
+-  data {
+-    template_id: "N_DISPLAY_n_shirt_teamyellgrunts-cropped_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_shirt_teamyellgrunts-cropped_0_icon"
+-      displayStringId: "avatar_shirt_teamyellcrop"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_shirt_teamyellgrunts-long_0"
+-  data {
+-    template_id: "N_DISPLAY_n_shirt_teamyellgrunts-long_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_shirt_teamyellgrunts-long_0_icon"
+-      displayStringId: "avatar_shirt_teamyellshirt"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_shoes_teamyellgrunts_0"
+-  data {
+-    template_id: "N_DISPLAY_n_shoes_teamyellgrunts_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_shoes_teamyellgrunts_0_icon"
+-      displayStringId: "avatar_shoes_teamyell"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_set_teamyellgrunts_a_0"
+-  data {
+-    template_id: "N_DISPLAY_set_teamyellgrunts_a_0"
+-    avatarItemDisplay {
+-      iconAddress: "set_teamyellgrunts_a_0"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_set_teamyellgrunts_b_0"
+-  data {
+-    template_id: "N_DISPLAY_set_teamyellgrunts_b_0"
+-    avatarItemDisplay {
+-      iconAddress: "set_teamyellgrunts_b_0"
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.gowa2024.1"
+-  data {
+-    template_id: "bundle.gowa2024.1"
+-    iapItemDisplay {
+-      sku: "bundle.gowa2024.1"
+-      category: IAP_CATEGORY_BUNDLE
+-      sortOrder: 1
+-      spriteId: "bundle.general.premiumbox.medium.1"
+-      title: "sku.name.web-gowa-2024-box-1"
+-      skuEnableTime: "2019-10-31T21:00:00"
+-      skuDisableTime: "2024-11-24T20:00:00"
+-      skuEnableTimeUtcMs: 1572555600000
+-      skuDisableTimeUtcMs: 1732478400000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 1735
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.gowa2024.2"
+-  data {
+-    template_id: "bundle.gowa2024.2"
+-    iapItemDisplay {
+-      sku: "bundle.gowa2024.2"
+-      category: IAP_CATEGORY_BUNDLE
+-      sortOrder: 1
+-      spriteId: "bundle2.sprite.b"
+-      title: "sku.name.web-gowa-2024-box-2"
+-      skuEnableTime: "2019-10-31T21:00:00"
+-      skuDisableTime: "2024-11-24T20:00:00"
+-      skuEnableTimeUtcMs: 1572555600000
+-      skuDisableTimeUtcMs: 1732478400000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 3600
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.gowa2024.3"
+-  data {
+-    template_id: "bundle.gowa2024.3"
+-    iapItemDisplay {
+-      sku: "bundle.gowa2024.3"
+-      category: IAP_CATEGORY_BUNDLE
+-      sortOrder: 1
+-      spriteId: "bundle1.sprite.d"
+-      title: "sku.name.web-gowa-2024-box-3"
+-      skuEnableTime: "2019-10-31T21:00:00"
+-      skuDisableTime: "2024-11-24T20:00:00"
+-      skuEnableTimeUtcMs: 1572555600000
+-      skuDisableTimeUtcMs: 1732478400000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 5235
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.gowa2024.4"
+-  data {
+-    template_id: "bundle.gowa2024.4"
+-    iapItemDisplay {
+-      sku: "bundle.gowa2024.4"
+-      category: IAP_CATEGORY_BUNDLE
+-      sortOrder: 1
+-      spriteId: "bundle.general.adventure.1"
+-      title: "sticker_box"
+-      skuEnableTime: "2019-10-31T21:00:00"
+-      skuDisableTime: "2024-11-24T20:00:00"
+-      skuEnableTimeUtcMs: 1572555600000
+-      skuDisableTimeUtcMs: 1732478400000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 72
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_0"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_1"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_1"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_1_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_10"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_10"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_10_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_11"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_11"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_11_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_12"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_12"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_12_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_13"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_13"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_13_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_14"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_14"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_14_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_15"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_15"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_15_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_16"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_16"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_16_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_17"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_17"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_17_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_18"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_18"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_18_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_19"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_19"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_19_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_2"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_2"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_2_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_3"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_3"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_3_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_4"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_4"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_4_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_5"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_5"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_5_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_6"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_6"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_6_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_7"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_7"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_7_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_8"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_8"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_8_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_eye_9"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_eye_9"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_eye_9_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_0"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_1"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_1"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_1_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_10"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_10"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_10_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_11"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_11"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_11_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_12"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_12"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_12_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_13"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_13"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_13_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_14"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_14"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_14_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_15"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_15"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_15_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_16"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_16"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_16_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_17"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_17"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_17_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_18"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_18"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_18_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_19"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_19"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_19_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_2"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_2"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_2_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_20"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_20"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_20_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_21"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_21"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_21_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_22"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_22"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_22_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_23"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_23"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_23_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_24"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_24"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_24_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_25"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_25"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_25_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_26"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_26"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_26_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_27"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_27"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_27_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_28"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_28"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_28_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_29"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_29"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_29_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_3"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_3"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_3_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_30"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_30"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_30_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_31"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_31"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_31_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_4"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_4"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_4_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_5"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_5"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_5_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_6"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_6"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_6_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_7"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_7"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_7_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_8"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_8"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_8_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_hair_9"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_hair_9"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_hair_9_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_testeye_0"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_testeye_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_testeye_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_testeye_1"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_testeye_1"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_testeye_1_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_testhair_0"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_testhair_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_testhair_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_gradient_testhair_1"
+-  data {
+-    template_id: "N_DISPLAY_n_gradient_testhair_1"
+-    avatarItemDisplay {
+-      iconAddress: "n_gradient_testhair_1_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_coilyshort_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_coilyshort_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_coilyshort_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_curlymedium_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_curlymedium_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_curlymedium_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_default_a_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_default_a_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_default_a_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_default_b_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_default_b_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_default_b_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_kinkymedium_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_kinkymedium_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_kinkymedium_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_kinkyshort_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_kinkyshort_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_kinkyshort_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_mohawk-0_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_mohawk-0_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_mohawk-0_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_mohawk-1_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_mohawk-1_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_mohawk-1_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_straightlong_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_straightlong_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_straightlong_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_straightmedium_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_straightmedium_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_straightmedium_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_straightshort_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_straightshort_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_straightshort_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_testhair-0_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_testhair-0_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_testhair-0_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_testhair-1_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_testhair-1_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_testhair-1_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_wavylong_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_wavylong_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_wavylong_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_wavymedium_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_wavymedium_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_wavymedium_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hair_wavyshort_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hair_wavyshort_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hair_wavyshort_0_icon"
+-    }
+-  }
+-}
+-template {
+-  template_id: "POKEMON_INFO_PANEL_SETTINGS"
+-  data {
+-    template_id: "POKEMON_INFO_PANEL_SETTINGS"
+-    pokemonInfoPanelSettings {
+-      bottomOriginSectionV2Enabled: true
+-    }
+-  }
+-}
+-batch_id: 1731847522037
++batch_id: 1732002589448
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -362792,6 +362852,7 @@
- experiment_id: 807
- experiment_id: 1699
- experiment_id: 1820
-+experiment_id: 2247
- experiment_id: 2301
- experiment_id: 2399
- experiment_id: 2400
-@@ -362805,22 +362866,20 @@
- experiment_id: 3647
- experiment_id: 3685
- experiment_id: 3800
--experiment_id: 3811
-+experiment_id: 3812
- experiment_id: 3817
- experiment_id: 3820
- experiment_id: 3883
--experiment_id: 3903
--experiment_id: 3904
-+experiment_id: 3911
- experiment_id: 4998
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
--experiment_id: 5220
-+experiment_id: 5221
- experiment_id: 5250
- experiment_id: 5508
- experiment_id: 5510
- experiment_id: 6075
--experiment_id: 8675
- experiment_id: 8921
- experiment_id: 8924
- experiment_id: 9512
-@@ -362831,8 +362890,8 @@
- experiment_id: 9551
- experiment_id: 20947
- experiment_id: 80001
-+experiment_id: 80002
- experiment_id: 80200
--experiment_id: 80209
- experiment_id: 300000
- experiment_id: 314159
- experiment_id: 314160
