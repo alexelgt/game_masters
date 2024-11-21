@@ -1,19 +1,45 @@
---- GAME_MASTER_old.txt	2024-11-20 08:35:26.670366465 +0100
-+++ GAME_MASTER.txt	2024-11-20 08:36:29.841691232 +0100
-@@ -362990,11 +362990,11 @@
-   template_id: "JOIN_RAID_VIA_FRIEND_LIST_SETTINGS"
-   data {
-     template_id: "JOIN_RAID_VIA_FRIEND_LIST_SETTINGS"
--    249 {
--      1: 1
--      2: 5
--      3: 7
--      4: 10000
-+    joinRaidViaFriendListSettings {
-+      enabled: true
-+      minPlayerLevel: 5
-+      minFriendshipScore: 7
-+      friendActivitiesBackgroundUpdatePeriodMs: 10000
+--- GAME_MASTER_old.txt	2024-11-20 08:36:29.841691232 +0100
++++ GAME_MASTER.txt	2024-11-21 09:11:57.080312830 +0100
+@@ -362998,7 +362998,33 @@
      }
    }
  }
+-batch_id: 1732066016908
++template {
++  template_id: "pgorelease.bundle.general.thirdparty.large.2"
++  data {
++    template_id: "pgorelease.bundle.general.thirdparty.large.2"
++    iapItemDisplay {
++      sku: "pgorelease.bundle.general.thirdparty.large.2"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general2.small.1"
++      title: "battle_box"
++    }
++  }
++}
++template {
++  template_id: "web-seasonal-delights-2024-box"
++  data {
++    template_id: "web-seasonal-delights-2024-box"
++    iapItemDisplay {
++      sku: "web-seasonal-delights-2024-box"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      spriteId: "bundle.general1.large.2"
++    }
++  }
++}
++batch_id: 1732151049415
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -363046,7 +363072,6 @@
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5221
+ experiment_id: 5250
+ experiment_id: 5508
+ experiment_id: 5510
