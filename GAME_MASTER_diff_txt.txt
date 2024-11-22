@@ -1,294 +1,137 @@
---- GAME_MASTER_old.txt	2024-11-21 09:11:57.080312830 +0100
-+++ GAME_MASTER.txt	2024-11-22 08:25:09.854481784 +0100
-@@ -113957,6 +113957,7 @@
+--- GAME_MASTER_old.txt	2024-11-22 08:25:09.854481784 +0100
++++ GAME_MASTER.txt	2024-11-22 08:36:27.611362128 +0100
+@@ -113957,7 +113957,7 @@
        useVpsEnabledStatus: true
        sunThresholdCheckEnabled: true
        irisSocialPoiDeactivationCooldownMs: 1209600000
-+      48: 0x3fd999999999999a
+-      48: 0x3fd999999999999a
++      minVpsScore: 0.4
      }
    }
  }
-@@ -137865,15 +137866,13 @@
-       inviteCooldownDurationMillis: 30000
-       maxNumFriendInvitesPerAction: 5
-       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_EXTENDED_EGG
--      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_4
-+      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_5_SHADOW
-       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_1_SHADOW
-       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_3_SHADOW
--      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_5_SHADOW
-       unsupportedRemoteRaidLevels: RAID_LEVEL_EXTENDED_EGG
--      unsupportedRemoteRaidLevels: RAID_LEVEL_4
-+      unsupportedRemoteRaidLevels: RAID_LEVEL_5_SHADOW
-       unsupportedRemoteRaidLevels: RAID_LEVEL_1_SHADOW
-       unsupportedRemoteRaidLevels: RAID_LEVEL_3_SHADOW
--      unsupportedRemoteRaidLevels: RAID_LEVEL_5_SHADOW
-       raidLevelMusicOverrides {
-         raidLevel: RAID_LEVEL_ULTRA_BEAST
-         battleMusicKey: "GoFest2022Music_Battle"
-@@ -137901,7 +137900,6 @@
-       friendRequestsEnabled: true
-       remoteRaidDistanceValidation: true
-       popupTimeMs: 30000
--      failedFriendInviteInfoEnabled: true
-       minPlayersToBoot: 2
-       bootCutoffMs: 15000
-       bootSoloMs: 30000
-@@ -138063,8 +138061,7 @@
+@@ -363026,7 +363026,7 @@
    data {
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
--      enabled: true
--      dailySquashLimit: 20
-+      dailySquashLimit: 999999
-     }
-   }
- }
-@@ -344380,7 +344377,7 @@
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-       hidden: true
--      spriteId: "bundle.general.premiumbox.small.1"
-+      spriteId: "bundle.general3.small.1"
-       title: "raiding_box"
-     }
-   }
-@@ -363007,7 +363004,7 @@
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-       hidden: true
--      spriteId: "bundle.general2.small.1"
-+      spriteId: "bundle.general3.small.1"
-       title: "battle_box"
-     }
-   }
-@@ -363024,7 +363021,210 @@
-     }
-   }
- }
--batch_id: 1732151049415
-+template {
-+  template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_HATCH"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_HATCH"
-+    badge_settings {
-+      badgeType: 5726
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_HATCH_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_HATCH_TEST"
-+    badge_settings {
-+      badgeType: 5725
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_RAID"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_RAID"
-+    badge_settings {
-+      badgeType: 5728
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_RAID_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_RAID_TEST"
-+    badge_settings {
-+      badgeType: 5727
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_HONG_KONG_DAY_01"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_HONG_KONG_DAY_01"
-+    badge_settings {
-+      badgeType: 5723
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_HONG_KONG_DAY_02"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_HONG_KONG_DAY_02"
-+    badge_settings {
-+      badgeType: 5724
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_HONG_KONG_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_HONG_KONG_TEST"
-+    badge_settings {
-+      badgeType: 5722
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_HATCH"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_HATCH"
-+    badge_settings {
-+      badgeType: 5719
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_HATCH_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_HATCH_TEST"
-+    badge_settings {
-+      badgeType: 5718
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_RAID"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_RAID"
-+    badge_settings {
-+      badgeType: 5721
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_RAID_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_RAID_TEST"
-+    badge_settings {
-+      badgeType: 5720
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_SAO_PAULO_DAY_01"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_SAO_PAULO_DAY_01"
-+    badge_settings {
-+      badgeType: 5716
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_SAO_PAULO_DAY_02"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_SAO_PAULO_DAY_02"
-+    badge_settings {
-+      badgeType: 5717
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2024_SAO_PAULO_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2024_SAO_PAULO_TEST"
-+    badge_settings {
-+      badgeType: 5715
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "AVATAR_f_face_toxelmask"
-+  data {
-+    template_id: "AVATAR_f_face_toxelmask"
-+    avatar_customization {
-+      enabled: true
-+      avatarType: PLAYER_AVATAR_FEMALE
-+      slot: FACE
-+      bundleName: "f_face_toxelmask_bundle"
-+      assetName: "f_face_toxelmask_0"
-+      groupName: "group_face"
-+      sortOrder: 101633
-+      unlockType: IAP_CLOTHING
-+      iapSku: "pgorelease.avatar.f_face_toxelmask_0"
-+      iconName: "f_face_toxelmask_00_bundle_icon"
-+    }
-+  }
-+}
-+template {
-+  template_id: "AVATAR_m_face_toxelmask"
-+  data {
-+    template_id: "AVATAR_m_face_toxelmask"
-+    avatar_customization {
-+      enabled: true
-+      slot: FACE
-+      bundleName: "m_face_toxelmask_bundle"
-+      assetName: "m_face_toxelmask_0"
-+      groupName: "group_face"
-+      sortOrder: 101634
-+      unlockType: IAP_CLOTHING
-+      iapSku: "pgorelease.avatar.m_face_toxelmask_0"
-+      iconName: "m_face_toxelmask_00_bundle_icon"
-+    }
-+  }
-+}
-+batch_id: 1732257951242
- experiment_id: 1
- experiment_id: 4
- experiment_id: 6
-@@ -363078,15 +363278,16 @@
- experiment_id: 6075
- experiment_id: 8921
- experiment_id: 8924
--experiment_id: 9512
- experiment_id: 9523
- experiment_id: 9531
- experiment_id: 9542
- experiment_id: 9548
- experiment_id: 9551
-+experiment_id: 9557
- experiment_id: 20947
- experiment_id: 80001
- experiment_id: 80002
-+experiment_id: 80027
- experiment_id: 80200
- experiment_id: 300000
- experiment_id: 314159
+     template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_HATCH"
+     badge_settings {
+-      badgeType: 5726
++      badgeType: BADGE_SAFARI_2024_HONG_KONG_ADD_ON_HATCH
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363038,7 +363038,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_HATCH_TEST"
+     badge_settings {
+-      badgeType: 5725
++      badgeType: BADGE_SAFARI_2024_HONG_KONG_ADD_ON_HATCH_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363050,7 +363050,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_RAID"
+     badge_settings {
+-      badgeType: 5728
++      badgeType: BADGE_SAFARI_2024_HONG_KONG_ADD_ON_RAID
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363062,7 +363062,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_HONG_KONG_ADD_ON_RAID_TEST"
+     badge_settings {
+-      badgeType: 5727
++      badgeType: BADGE_SAFARI_2024_HONG_KONG_ADD_ON_RAID_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363074,7 +363074,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_HONG_KONG_DAY_01"
+     badge_settings {
+-      badgeType: 5723
++      badgeType: BADGE_SAFARI_2024_HONG_KONG_DAY_01
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363086,7 +363086,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_HONG_KONG_DAY_02"
+     badge_settings {
+-      badgeType: 5724
++      badgeType: BADGE_SAFARI_2024_HONG_KONG_DAY_02
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363098,7 +363098,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_HONG_KONG_TEST"
+     badge_settings {
+-      badgeType: 5722
++      badgeType: BADGE_SAFARI_2024_HONG_KONG_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363110,7 +363110,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_HATCH"
+     badge_settings {
+-      badgeType: 5719
++      badgeType: BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_HATCH
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363122,7 +363122,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_HATCH_TEST"
+     badge_settings {
+-      badgeType: 5718
++      badgeType: BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_HATCH_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363134,7 +363134,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_RAID"
+     badge_settings {
+-      badgeType: 5721
++      badgeType: BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_RAID
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363146,7 +363146,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_RAID_TEST"
+     badge_settings {
+-      badgeType: 5720
++      badgeType: BADGE_SAFARI_2024_SAO_PAULO_ADD_ON_RAID_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363158,7 +363158,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_SAO_PAULO_DAY_01"
+     badge_settings {
+-      badgeType: 5716
++      badgeType: BADGE_SAFARI_2024_SAO_PAULO_DAY_01
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363170,7 +363170,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_SAO_PAULO_DAY_02"
+     badge_settings {
+-      badgeType: 5717
++      badgeType: BADGE_SAFARI_2024_SAO_PAULO_DAY_02
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -363182,7 +363182,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2024_SAO_PAULO_TEST"
+     badge_settings {
+-      badgeType: 5715
++      badgeType: BADGE_SAFARI_2024_SAO_PAULO_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
