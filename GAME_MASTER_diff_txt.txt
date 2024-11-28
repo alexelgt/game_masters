@@ -1,279 +1,332 @@
---- GAME_MASTER_old.txt	2024-11-26 19:52:24.743555732 +0100
-+++ GAME_MASTER.txt	2024-11-27 08:08:56.623127781 +0100
-@@ -43172,6 +43172,7 @@
-       seasonEndTimeTimestamp: 1717272000000
-       seasonEndTimeTimestamp: 1725393600000
-       seasonEndTimeTimestamp: 1733259600000
-+      seasonEndTimeTimestamp: 1741122000000
-       seasonEndTimeTimestamp: 4070980800000
-       ratingAdjustmentPercentage: 0.9
-       rankingAdjustmentPercentage: 0.01
-@@ -114360,11 +114361,12 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-09-03T13:00:00"
--        eventEndTime: "2024-09-12T13:00:00"
-+        eventStartTime: "2024-12-03T13:00:00"
-+        eventEndTime: "2024-12-18T13:00:00"
-         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
--        clientEventStartTimeUtcMs: 1725368400000
--        clientEventEndTimeUtcMs: 1726146000000
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-s17gbl-nologo-2024.jpg"
-+        clientEventStartTimeUtcMs: 1733230800000
-+        clientEventEndTimeUtcMs: 1734526800000
+--- GAME_MASTER_old.txt	2024-11-27 08:08:56.623127781 +0100
++++ GAME_MASTER.txt	2024-11-28 19:09:34.961848606 +0100
+@@ -67404,6 +67404,30 @@
+   data {
+     template_id: "CONVERSATION_SETTINGS"
+     conversationSettings {
++      2 {
++        1: 854
++        2: 2478
++        3: "appraise_sinistea_antique"
++        4: 1
++      }
++      2 {
++        1: 854
++        2: 2477
++        3: "appraise_sinistea_phony"
++        4: 1
++      }
++      2 {
++        1: 855
++        2: 2481
++        3: "appraise_polteageist_antique"
++        4: 1
++      }
++      2 {
++        1: 855
++        2: 2480
++        3: "appraise_polteageist_phony"
++        4: 1
++      }
+     }
+   }
+ }
+@@ -115512,7 +115536,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
        }
      }
    }
-@@ -114464,10 +114466,6 @@
-             amount: 5
+@@ -115528,7 +115552,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+       }
+     }
+   }
+@@ -115545,7 +115569,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 0.666666687
++        distanceMultiplier: 0.333333343
+       }
+     }
+   }
+@@ -342389,9 +342413,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: DIALGA
++          pokemon_id: ZACIAN
+           pokemonDisplay {
+-            form: DIALGA_ORIGIN
++            form: ZACIAN_HERO
            }
          }
--        iconRewards {
--          type: STARDUST
--          stardust: 5000
--        }
-         detailsLinkKey: "details_link_key"
-         clientEventStartTimeUtcMs: 1732701600000
-         clientEventEndTimeUtcMs: 1733083200000
-@@ -138438,7 +138436,7 @@
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
-       enabled: true
--      dailySquashLimit: 5
-+      dailySquashLimit: 10
+         unlockedAtRank: 20
+@@ -342416,9 +342440,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: PALKIA
++          pokemon_id: ZAMAZENTA
+           pokemonDisplay {
+-            form: PALKIA_ORIGIN
++            form: ZAMAZENTA_HERO
+           }
+         }
+         unlockedAtRank: 20
+@@ -342443,6 +342467,54 @@
+       }
+       availablePokemon {
+         pokemon {
++          pokemon_id: REGIDRAGO
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
++          pokemon_id: REGIELEKI
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
+           pokemon_id: MORPEKO
+         }
+         unlockedAtRank: 1
+@@ -343078,9 +343150,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: DIALGA
++          pokemon_id: ZACIAN
+           pokemonDisplay {
+-            form: DIALGA_ORIGIN
++            form: ZACIAN_HERO
+           }
+         }
+         unlockedAtRank: 20
+@@ -343105,9 +343177,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: PALKIA
++          pokemon_id: ZAMAZENTA
+           pokemonDisplay {
+-            form: PALKIA_ORIGIN
++            form: ZAMAZENTA_HERO
+           }
+         }
+         unlockedAtRank: 20
+@@ -343132,6 +343204,54 @@
+       }
+       availablePokemon {
+         pokemon {
++          pokemon_id: REGIDRAGO
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
++          pokemon_id: REGIELEKI
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
+           pokemon_id: MORPEKO
+         }
+         unlockedAtRank: 1
+@@ -357630,7 +357750,6 @@
+       sku: "general1.ticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket._MaxOutFinale1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -357649,7 +357768,6 @@
+       sku: "general1.ticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket._MaxOutFinale1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -357897,7 +358015,6 @@
+       sku: "general2.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._MaxOutFinaleRaids1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -357916,7 +358033,6 @@
+       sku: "general2.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._MaxOutFinaleRaids1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -359334,7 +359450,6 @@
+       sku: "pgorelease.general1.ticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket._MaxOutFinale1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -359353,7 +359468,6 @@
+       sku: "pgorelease.general1.ticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket._MaxOutFinale1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -359565,7 +359679,6 @@
+       sku: "pgorelease.general2.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._MaxOutFinaleRaids1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -359584,7 +359697,6 @@
+       sku: "pgorelease.general2.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._MaxOutFinaleRaids1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -365120,7 +365232,27 @@
      }
    }
  }
-@@ -340178,8 +340176,10 @@
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
-       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S16"
-     }
-   }
- }
-@@ -364927,7 +364927,200 @@
-     }
-   }
- }
--batch_id: 1732607672351
+-batch_id: 1732669514277
 +template {
-+  template_id: "COMBAT_RANKING_SETTINGS_S24"
++  template_id: "LC_2024_HONGKONG_CITYSAFARI_001"
 +  data {
-+    template_id: "COMBAT_RANKING_SETTINGS_S24"
-+    combat_ranking_proto_settings {
-+      rankLevel {
-+        rankLevel: 1
-+      }
-+      rankLevel {
-+        rankLevel: 2
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 3
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 4
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 5
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 6
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 7
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 8
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 9
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 10
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 11
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 12
-+        additionalWinsRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 13
-+        additionalWinsRequired: 6
-+      }
-+      rankLevel {
-+        rankLevel: 14
-+        additionalWinsRequired: 7
-+      }
-+      rankLevel {
-+        rankLevel: 15
-+        additionalWinsRequired: 8
-+      }
-+      rankLevel {
-+        rankLevel: 16
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 17
-+        additionalWinsRequired: 10
-+      }
-+      rankLevel {
-+        rankLevel: 18
-+        additionalWinsRequired: 15
-+      }
-+      rankLevel {
-+        rankLevel: 19
-+        additionalWinsRequired: 20
-+      }
-+      rankLevel {
-+        rankLevel: 20
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 21
-+        minRatingRequired: 2000
-+      }
-+      rankLevel {
-+        rankLevel: 22
-+        minRatingRequired: 2500
-+      }
-+      rankLevel {
-+        rankLevel: 23
-+        minRatingRequired: 2750
-+      }
-+      rankLevel {
-+        rankLevel: 24
-+        minRatingRequired: 3000
-+      }
-+      required_for_rewards {
-+        rankLevel: 1
-+        additionalTotalBattlesRequired: 5
-+      }
-+      minRankToDisplayRating: 20
-+      minRatingRequired: 24
++    template_id: "LC_2024_HONGKONG_CITYSAFARI_001"
++    locationCardSettings {
++      locationCard: 61
++      imageUrl: "lc_CitySafari2024_hongkong"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_WINTER_2024_1"
++  template_id: "LC_2024_SAOPAULO_CITYSAFARI_001"
 +  data {
-+    template_id: "STICKER_WINTER_2024_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_WINTER_2024_1"
-+      maxCount: 25
-+      pokemonId: VULPIX
-+      category: "Pokemon"
-+      releaseDate: 20241126
-+      regionId: 6
++    template_id: "LC_2024_SAOPAULO_CITYSAFARI_001"
++    locationCardSettings {
++      locationCard: 62
++      imageUrl: "lc_CitySafari2024_saopaulo"
 +    }
 +  }
 +}
-+template {
-+  template_id: "STICKER_WINTER_2024_2"
-+  data {
-+    template_id: "STICKER_WINTER_2024_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_WINTER_2024_2"
-+      maxCount: 25
-+      pokemonId: STANTLER
-+      category: "Pokemon"
-+      releaseDate: 20241126
-+      regionId: 1
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_WINTER_2024_3"
-+  data {
-+    template_id: "STICKER_WINTER_2024_3"
-+    stickerMetadata {
-+      stickerId: "STICKER_WINTER_2024_3"
-+      maxCount: 25
-+      pokemonId: CHANDELURE
-+      category: "Pokemon"
-+      releaseDate: 20241126
-+      regionId: 4
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_WINTER_2024_4"
-+  data {
-+    template_id: "STICKER_WINTER_2024_4"
-+    stickerMetadata {
-+      stickerId: "STICKER_WINTER_2024_4"
-+      maxCount: 25
-+      pokemonId: URSALUNA
-+      category: "Pokemon"
-+      releaseDate: 20241126
-+      regionId: 7
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_WINTER_2024_5"
-+  data {
-+    template_id: "STICKER_WINTER_2024_5"
-+    stickerMetadata {
-+      stickerId: "STICKER_WINTER_2024_5"
-+      maxCount: 25
-+      pokemonId: MAREEP
-+      category: "Pokemon"
-+      releaseDate: 20241126
-+      regionId: 1
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_WINTER_2024_6"
-+  data {
-+    template_id: "STICKER_WINTER_2024_6"
-+    stickerMetadata {
-+      stickerId: "STICKER_WINTER_2024_6"
-+      maxCount: 25
-+      pokemonId: MORELULL
-+      category: "Pokemon"
-+      releaseDate: 20241126
-+      regionId: 6
-+    }
-+  }
-+}
-+batch_id: 1732669514277
++batch_id: 1732765943949
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -364936,7 +365129,7 @@
- experiment_id: 21
- experiment_id: 101
- experiment_id: 170
--experiment_id: 183
-+experiment_id: 184
- experiment_id: 300
- experiment_id: 302
- experiment_id: 320
-@@ -364966,6 +365159,8 @@
- experiment_id: 3812
+@@ -365156,16 +365288,17 @@
+ experiment_id: 3647
+ experiment_id: 3685
+ experiment_id: 3800
+-experiment_id: 3812
++experiment_id: 3813
  experiment_id: 3817
  experiment_id: 3820
-+experiment_id: 3938
-+experiment_id: 3981
++experiment_id: 3933
++experiment_id: 3936
++experiment_id: 3937
+ experiment_id: 3938
+-experiment_id: 3981
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5223
+ experiment_id: 5250
+ experiment_id: 5508
+ experiment_id: 5510
