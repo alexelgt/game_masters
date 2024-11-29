@@ -1,73 +1,25 @@
---- GAME_MASTER_old.txt	2024-11-28 19:09:34.961848606 +0100
-+++ GAME_MASTER.txt	2024-11-28 19:19:59.663066067 +0100
-@@ -67404,29 +67404,29 @@
-   data {
-     template_id: "CONVERSATION_SETTINGS"
-     conversationSettings {
--      2 {
--        1: 854
--        2: 2478
--        3: "appraise_sinistea_antique"
--        4: 1
--      }
--      2 {
--        1: 854
--        2: 2477
--        3: "appraise_sinistea_phony"
--        4: 1
--      }
--      2 {
--        1: 855
--        2: 2481
--        3: "appraise_polteageist_antique"
--        4: 1
--      }
--      2 {
--        1: 855
--        2: 2480
--        3: "appraise_polteageist_phony"
--        4: 1
-+      pokemonFormAppraisalOverrides {
-+        id: SINISTEA
-+        form: SINISTEA_ANTIQUE
-+        appraisalKey: "appraise_sinistea_antique"
-+        addToStart: true
-+      }
-+      pokemonFormAppraisalOverrides {
-+        id: SINISTEA
-+        form: SINISTEA_PHONY
-+        appraisalKey: "appraise_sinistea_phony"
-+        addToStart: true
-+      }
-+      pokemonFormAppraisalOverrides {
-+        id: POLTEAGEIST
-+        form: POLTEAGEIST_ANTIQUE
-+        appraisalKey: "appraise_polteageist_antique"
-+        addToStart: true
-+      }
-+      pokemonFormAppraisalOverrides {
-+        id: POLTEAGEIST
-+        form: POLTEAGEIST_PHONY
-+        appraisalKey: "appraise_polteageist_phony"
-+        addToStart: true
-       }
+--- GAME_MASTER_old.txt	2024-11-28 19:19:59.663066067 +0100
++++ GAME_MASTER.txt	2024-11-29 08:21:57.812909505 +0100
+@@ -365252,7 +365252,21 @@
      }
    }
-@@ -365237,7 +365237,7 @@
-   data {
-     template_id: "LC_2024_HONGKONG_CITYSAFARI_001"
-     locationCardSettings {
--      locationCard: 61
-+      locationCard: LC_2024_HONGKONG_CITYSAFARI_001
-       imageUrl: "lc_CitySafari2024_hongkong"
-     }
-   }
-@@ -365247,7 +365247,7 @@
-   data {
-     template_id: "LC_2024_SAOPAULO_CITYSAFARI_001"
-     locationCardSettings {
--      locationCard: 62
-+      locationCard: LC_2024_SAOPAULO_CITYSAFARI_001
-       imageUrl: "lc_CitySafari2024_saopaulo"
-     }
-   }
+ }
+-batch_id: 1732765943949
++template {
++  template_id: "bundle.citysafari450hktw.1"
++  data {
++    template_id: "bundle.citysafari450hktw.1"
++    iapItemDisplay {
++      sku: "bundle.citysafari450hktw.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general1.large.2"
++      title: "bundle.citysafari.box.1_title"
++    }
++  }
++}
++batch_id: 1732853483098
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
