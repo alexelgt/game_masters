@@ -1,199 +1,622 @@
---- GAME_MASTER_old.txt	2024-11-29 08:21:57.812909505 +0100
-+++ GAME_MASTER.txt	2024-12-01 10:01:19.750751917 +0100
-@@ -345842,12 +345842,9 @@
-       sku: "bundle.seasonaldelights2024.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-+      hidden: true
-       spriteId: "bundle.general1.large.2"
-       title: "seasonal_delights_box"
--      skuEnableTime: "2019-10-31T21:00:00"
--      skuDisableTime: "2024-11-29T20:00:00"
--      skuEnableTimeUtcMs: 1572555600000
--      skuDisableTimeUtcMs: 1732910400000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 11235
-@@ -358015,6 +358012,7 @@
-       sku: "general2.ticket.2"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.2"
-       title: "general1.ticket._MaxOutFinaleRaids1124_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -358033,6 +358031,7 @@
-       sku: "general2.ticket.2.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.2"
-       title: "general1.ticket._MaxOutFinaleRaids1124_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359679,6 +359678,7 @@
-       sku: "pgorelease.general2.ticket.2"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.2"
-       title: "general1.ticket._MaxOutFinaleRaids1124_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359697,6 +359697,7 @@
-       sku: "pgorelease.general2.ticket.2.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.2"
-       title: "general1.ticket._MaxOutFinaleRaids1124_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359980,66 +359981,15 @@
+--- GAME_MASTER_old.txt	2024-12-01 10:01:19.750751917 +0100
++++ GAME_MASTER.txt	2024-12-02 18:03:33.176826457 +0100
+@@ -62782,6 +62782,115 @@
    }
  }
  template {
--  template_id: "pgorelease.pokecoin.100"
--  data {
--    template_id: "pgorelease.pokecoin.100"
--    iapItemDisplay {
--      sku: "pgorelease.pokecoin.100"
--      category: IAP_CATEGORY_POKECOINS
--      sortOrder: 1
--      spriteId: "pokecoin.100"
--    }
--  }
--}
--template {
--  template_id: "pgorelease.pokecoin.1200"
--  data {
--    template_id: "pgorelease.pokecoin.1200"
--    iapItemDisplay {
--      sku: "pgorelease.pokecoin.1200"
--      category: IAP_CATEGORY_POKECOINS
--      sortOrder: 3
--      spriteId: "pokecoin.1200"
--    }
--  }
--}
--template {
--  template_id: "pgorelease.pokecoin.14500"
--  data {
--    template_id: "pgorelease.pokecoin.14500"
--    iapItemDisplay {
--      sku: "pgorelease.pokecoin.14500"
--      category: IAP_CATEGORY_POKECOINS
--      sortOrder: 9
--      spriteId: "pokecoin.14500"
--    }
--  }
--}
--template {
-   template_id: "pgorelease.pokecoin.15950"
++  template_id: "COMBAT_RANKING_SETTINGS_S24"
++  data {
++    template_id: "COMBAT_RANKING_SETTINGS_S24"
++    combat_ranking_proto_settings {
++      rankLevel {
++        rankLevel: 1
++      }
++      rankLevel {
++        rankLevel: 2
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 3
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 4
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 5
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 6
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 7
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 8
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 9
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 10
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 11
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 12
++        additionalWinsRequired: 5
++      }
++      rankLevel {
++        rankLevel: 13
++        additionalWinsRequired: 6
++      }
++      rankLevel {
++        rankLevel: 14
++        additionalWinsRequired: 7
++      }
++      rankLevel {
++        rankLevel: 15
++        additionalWinsRequired: 8
++      }
++      rankLevel {
++        rankLevel: 16
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 17
++        additionalWinsRequired: 10
++      }
++      rankLevel {
++        rankLevel: 18
++        additionalWinsRequired: 15
++      }
++      rankLevel {
++        rankLevel: 19
++        additionalWinsRequired: 20
++      }
++      rankLevel {
++        rankLevel: 20
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 21
++        minRatingRequired: 2000
++      }
++      rankLevel {
++        rankLevel: 22
++        minRatingRequired: 2500
++      }
++      rankLevel {
++        rankLevel: 23
++        minRatingRequired: 2750
++      }
++      rankLevel {
++        rankLevel: 24
++        minRatingRequired: 3000
++      }
++      required_for_rewards {
++        rankLevel: 1
++        additionalTotalBattlesRequired: 5
++      }
++      minRankToDisplayRating: 20
++      minRatingRequired: 24
++    }
++  }
++}
++template {
+   template_id: "COMBAT_RANKING_SETTINGS_S8"
    data {
-     template_id: "pgorelease.pokecoin.15950"
-     iapItemDisplay {
-       sku: "pgorelease.pokecoin.15950"
-       category: IAP_CATEGORY_POKECOINS
--      sortOrder: 8
--      spriteId: "pokecoin.15675"
--      skuEnableTime: "2023-10-10T11:00:00"
--      skuDisableTime: "2024-11-29T20:00:00"
--      skuEnableTimeUtcMs: 1696935600000
--      skuDisableTimeUtcMs: 1732910400000
+     template_id: "COMBAT_RANKING_SETTINGS_S8"
+@@ -115536,7 +115645,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 0.5
++        distanceMultiplier: 1
+       }
+     }
+   }
+@@ -115552,7 +115661,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 0.5
++        distanceMultiplier: 1
+       }
+     }
+   }
+@@ -115569,7 +115678,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 0.333333343
++        distanceMultiplier: 0.666666687
+       }
+     }
+   }
+@@ -116629,6 +116738,16 @@
+   }
+ }
+ template {
++  template_id: "LC_2024_HONGKONG_CITYSAFARI_001"
++  data {
++    template_id: "LC_2024_HONGKONG_CITYSAFARI_001"
++    locationCardSettings {
++      locationCard: LC_2024_HONGKONG_CITYSAFARI_001
++      imageUrl: "lc_CitySafari2024_hongkong"
++    }
++  }
++}
++template {
+   template_id: "LC_2024_HONOLULU_WORLD_CHAMPIONSHIPS_001"
+   data {
+     template_id: "LC_2024_HONOLULU_WORLD_CHAMPIONSHIPS_001"
+@@ -116711,6 +116830,16 @@
+   }
+ }
+ template {
++  template_id: "LC_2024_SAOPAULO_CITYSAFARI_001"
++  data {
++    template_id: "LC_2024_SAOPAULO_CITYSAFARI_001"
++    locationCardSettings {
++      locationCard: LC_2024_SAOPAULO_CITYSAFARI_001
++      imageUrl: "lc_CitySafari2024_saopaulo"
++    }
++  }
++}
++template {
+   template_id: "LC_2024_SENDAI_GOFEST_001"
+   data {
+     template_id: "LC_2024_SENDAI_GOFEST_001"
+@@ -138460,7 +138589,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 5
+     }
+   }
+ }
+@@ -177171,6 +177300,90 @@
+   }
+ }
+ template {
++  template_id: "STICKER_WINTER_2024_1"
++  data {
++    template_id: "STICKER_WINTER_2024_1"
++    stickerMetadata {
++      stickerId: "STICKER_WINTER_2024_1"
++      maxCount: 25
++      pokemonId: VULPIX
++      category: "Pokemon"
++      releaseDate: 20241126
++      regionId: 6
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_2"
++  data {
++    template_id: "STICKER_WINTER_2024_2"
++    stickerMetadata {
++      stickerId: "STICKER_WINTER_2024_2"
++      maxCount: 25
++      pokemonId: STANTLER
++      category: "Pokemon"
++      releaseDate: 20241126
++      regionId: 1
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_3"
++  data {
++    template_id: "STICKER_WINTER_2024_3"
++    stickerMetadata {
++      stickerId: "STICKER_WINTER_2024_3"
++      maxCount: 25
++      pokemonId: CHANDELURE
++      category: "Pokemon"
++      releaseDate: 20241126
++      regionId: 4
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_4"
++  data {
++    template_id: "STICKER_WINTER_2024_4"
++    stickerMetadata {
++      stickerId: "STICKER_WINTER_2024_4"
++      maxCount: 25
++      pokemonId: URSALUNA
++      category: "Pokemon"
++      releaseDate: 20241126
++      regionId: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_5"
++  data {
++    template_id: "STICKER_WINTER_2024_5"
++    stickerMetadata {
++      stickerId: "STICKER_WINTER_2024_5"
++      maxCount: 25
++      pokemonId: MAREEP
++      category: "Pokemon"
++      releaseDate: 20241126
++      regionId: 1
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_6"
++  data {
++    template_id: "STICKER_WINTER_2024_6"
++    stickerMetadata {
++      stickerId: "STICKER_WINTER_2024_6"
++      maxCount: 25
++      pokemonId: MORELULL
++      category: "Pokemon"
++      releaseDate: 20241126
++      regionId: 6
++    }
++  }
++}
++template {
+   template_id: "STICKER_WINTER_AMAURA"
+   data {
+     template_id: "STICKER_WINTER_AMAURA"
+@@ -343870,6 +344083,20 @@
+   }
+ }
+ template {
++  template_id: "bundle.citysafari450hktw.1"
++  data {
++    template_id: "bundle.citysafari450hktw.1"
++    iapItemDisplay {
++      sku: "bundle.citysafari450hktw.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general1.large.2"
++      title: "bundle.citysafari.box.1_title"
++    }
++  }
++}
++template {
+   template_id: "bundle.decroutes2023.1"
+   data {
+     template_id: "bundle.decroutes2023.1"
+@@ -345510,9 +345737,12 @@
+       sku: "bundle.s17seasonstart.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general2.medium.2"
+       title: "dual_destiny_box"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2024-12-10T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1733860800000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 295
+@@ -357747,6 +357977,7 @@
+       sku: "general1.ticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket._MaxOutFinale1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -357765,6 +357996,7 @@
+       sku: "general1.ticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket._MaxOutFinale1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358804,7 +359036,7 @@
+       sku: "pgorelease.bundle.general.thirdparty.large.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
++      sale: true
+       spriteId: "bundle.general3.small.1"
+       title: "battle_box"
+     }
+@@ -359449,6 +359681,7 @@
+       sku: "pgorelease.general1.ticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket._MaxOutFinale1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -359467,6 +359700,7 @@
+       sku: "pgorelease.general1.ticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.1"
+       title: "general1.ticket._MaxOutFinale1124_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -364959,233 +365193,6 @@
+     }
+   }
+ }
+-template {
+-  template_id: "COMBAT_RANKING_SETTINGS_S24"
+-  data {
+-    template_id: "COMBAT_RANKING_SETTINGS_S24"
+-    combat_ranking_proto_settings {
+-      rankLevel {
+-        rankLevel: 1
+-      }
+-      rankLevel {
+-        rankLevel: 2
+-        additionalTotalBattlesRequired: 5
+-      }
+-      rankLevel {
+-        rankLevel: 3
+-        additionalTotalBattlesRequired: 5
+-      }
+-      rankLevel {
+-        rankLevel: 4
+-        additionalTotalBattlesRequired: 5
+-      }
+-      rankLevel {
+-        rankLevel: 5
+-        additionalTotalBattlesRequired: 5
+-      }
+-      rankLevel {
+-        rankLevel: 6
+-        additionalTotalBattlesRequired: 5
+-      }
+-      rankLevel {
+-        rankLevel: 7
+-        additionalWinsRequired: 1
+-      }
+-      rankLevel {
+-        rankLevel: 8
+-        additionalWinsRequired: 1
+-      }
+-      rankLevel {
+-        rankLevel: 9
+-        additionalWinsRequired: 1
+-      }
+-      rankLevel {
+-        rankLevel: 10
+-        additionalWinsRequired: 1
+-      }
+-      rankLevel {
+-        rankLevel: 11
+-        additionalTotalBattlesRequired: 5
+-      }
+-      rankLevel {
+-        rankLevel: 12
+-        additionalWinsRequired: 5
+-      }
+-      rankLevel {
+-        rankLevel: 13
+-        additionalWinsRequired: 6
+-      }
+-      rankLevel {
+-        rankLevel: 14
+-        additionalWinsRequired: 7
+-      }
+-      rankLevel {
+-        rankLevel: 15
+-        additionalWinsRequired: 8
+-      }
+-      rankLevel {
+-        rankLevel: 16
+-        additionalTotalBattlesRequired: 5
+-      }
+-      rankLevel {
+-        rankLevel: 17
+-        additionalWinsRequired: 10
+-      }
+-      rankLevel {
+-        rankLevel: 18
+-        additionalWinsRequired: 15
+-      }
+-      rankLevel {
+-        rankLevel: 19
+-        additionalWinsRequired: 20
+-      }
+-      rankLevel {
+-        rankLevel: 20
+-        additionalTotalBattlesRequired: 5
+-      }
+-      rankLevel {
+-        rankLevel: 21
+-        minRatingRequired: 2000
+-      }
+-      rankLevel {
+-        rankLevel: 22
+-        minRatingRequired: 2500
+-      }
+-      rankLevel {
+-        rankLevel: 23
+-        minRatingRequired: 2750
+-      }
+-      rankLevel {
+-        rankLevel: 24
+-        minRatingRequired: 3000
+-      }
+-      required_for_rewards {
+-        rankLevel: 1
+-        additionalTotalBattlesRequired: 5
+-      }
+-      minRankToDisplayRating: 20
+-      minRatingRequired: 24
 -    }
 -  }
 -}
 -template {
--  template_id: "pgorelease.pokecoin.2500"
+-  template_id: "STICKER_WINTER_2024_1"
 -  data {
--    template_id: "pgorelease.pokecoin.2500"
--    iapItemDisplay {
--      sku: "pgorelease.pokecoin.2500"
--      category: IAP_CATEGORY_POKECOINS
--      sortOrder: 5
--      spriteId: "pokecoin.2500"
-+      sortOrder: 6
-+      hidden: true
-+      spriteId: "pokecoin.14500"
-     }
-   }
- }
-@@ -360051,35 +360001,8 @@
-       sku: "pgorelease.pokecoin.2750"
-       category: IAP_CATEGORY_POKECOINS
-       sortOrder: 4
--      spriteId: "pokecoin.2725"
--      skuEnableTime: "2023-10-10T11:00:00"
--      skuDisableTime: "2024-11-29T20:00:00"
--      skuEnableTimeUtcMs: 1696935600000
--      skuDisableTimeUtcMs: 1732910400000
+-    template_id: "STICKER_WINTER_2024_1"
+-    stickerMetadata {
+-      stickerId: "STICKER_WINTER_2024_1"
+-      maxCount: 25
+-      pokemonId: VULPIX
+-      category: "Pokemon"
+-      releaseDate: 20241126
+-      regionId: 6
 -    }
 -  }
 -}
 -template {
--  template_id: "pgorelease.pokecoin.5200"
+-  template_id: "STICKER_WINTER_2024_2"
 -  data {
--    template_id: "pgorelease.pokecoin.5200"
--    iapItemDisplay {
--      sku: "pgorelease.pokecoin.5200"
--      category: IAP_CATEGORY_POKECOINS
--      sortOrder: 7
--      spriteId: "pokecoin.5200"
+-    template_id: "STICKER_WINTER_2024_2"
+-    stickerMetadata {
+-      stickerId: "STICKER_WINTER_2024_2"
+-      maxCount: 25
+-      pokemonId: STANTLER
+-      category: "Pokemon"
+-      releaseDate: 20241126
+-      regionId: 1
 -    }
 -  }
 -}
 -template {
--  template_id: "pgorelease.pokecoin.550"
+-  template_id: "STICKER_WINTER_2024_3"
 -  data {
--    template_id: "pgorelease.pokecoin.550"
+-    template_id: "STICKER_WINTER_2024_3"
+-    stickerMetadata {
+-      stickerId: "STICKER_WINTER_2024_3"
+-      maxCount: 25
+-      pokemonId: CHANDELURE
+-      category: "Pokemon"
+-      releaseDate: 20241126
+-      regionId: 4
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_4"
+-  data {
+-    template_id: "STICKER_WINTER_2024_4"
+-    stickerMetadata {
+-      stickerId: "STICKER_WINTER_2024_4"
+-      maxCount: 25
+-      pokemonId: URSALUNA
+-      category: "Pokemon"
+-      releaseDate: 20241126
+-      regionId: 7
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_5"
+-  data {
+-    template_id: "STICKER_WINTER_2024_5"
+-    stickerMetadata {
+-      stickerId: "STICKER_WINTER_2024_5"
+-      maxCount: 25
+-      pokemonId: MAREEP
+-      category: "Pokemon"
+-      releaseDate: 20241126
+-      regionId: 1
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_6"
+-  data {
+-    template_id: "STICKER_WINTER_2024_6"
+-    stickerMetadata {
+-      stickerId: "STICKER_WINTER_2024_6"
+-      maxCount: 25
+-      pokemonId: MORELULL
+-      category: "Pokemon"
+-      releaseDate: 20241126
+-      regionId: 6
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2024_HONGKONG_CITYSAFARI_001"
+-  data {
+-    template_id: "LC_2024_HONGKONG_CITYSAFARI_001"
+-    locationCardSettings {
+-      locationCard: LC_2024_HONGKONG_CITYSAFARI_001
+-      imageUrl: "lc_CitySafari2024_hongkong"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2024_SAOPAULO_CITYSAFARI_001"
+-  data {
+-    template_id: "LC_2024_SAOPAULO_CITYSAFARI_001"
+-    locationCardSettings {
+-      locationCard: LC_2024_SAOPAULO_CITYSAFARI_001
+-      imageUrl: "lc_CitySafari2024_saopaulo"
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.citysafari450hktw.1"
+-  data {
+-    template_id: "bundle.citysafari450hktw.1"
 -    iapItemDisplay {
--      sku: "pgorelease.pokecoin.550"
--      category: IAP_CATEGORY_POKECOINS
--      sortOrder: 2
--      spriteId: "pokecoin.550"
-+      hidden: true
-+      spriteId: "pokecoin.2500"
-     }
-   }
- }
-@@ -360090,12 +360013,9 @@
-     iapItemDisplay {
-       sku: "pgorelease.pokecoin.5720"
-       category: IAP_CATEGORY_POKECOINS
--      sortOrder: 6
--      spriteId: "pokecoin.5610"
--      skuEnableTime: "2023-10-10T11:00:00"
--      skuDisableTime: "2024-11-29T20:00:00"
--      skuEnableTimeUtcMs: 1696935600000
--      skuDisableTimeUtcMs: 1732910400000
-+      sortOrder: 5
-+      hidden: true
-+      spriteId: "pokecoin.5200"
-     }
-   }
- }
-@@ -365289,7 +365209,6 @@
- experiment_id: 1820
+-      sku: "bundle.citysafari450hktw.1"
+-      category: IAP_CATEGORY_BUNDLE
+-      sortOrder: 1
+-      hidden: true
+-      spriteId: "bundle.general1.large.2"
+-      title: "bundle.citysafari.box.1_title"
+-    }
+-  }
+-}
+ batch_id: 1732853483098
+ experiment_id: 1
+ experiment_id: 4
+@@ -365198,6 +365205,7 @@
+ experiment_id: 184
+ experiment_id: 300
+ experiment_id: 302
++experiment_id: 311
+ experiment_id: 320
+ experiment_id: 408
+ experiment_id: 409
+@@ -365210,6 +365218,7 @@
  experiment_id: 2244
  experiment_id: 2248
--experiment_id: 2249
  experiment_id: 2250
++experiment_id: 2251
  experiment_id: 2301
  experiment_id: 2399
-@@ -365307,12 +365226,12 @@
+ experiment_id: 2400
+@@ -365224,14 +365233,12 @@
+ experiment_id: 3813
+ experiment_id: 3817
  experiment_id: 3820
- experiment_id: 3933
- experiment_id: 3936
--experiment_id: 3937
- experiment_id: 3938
+-experiment_id: 3933
+-experiment_id: 3936
+-experiment_id: 3938
++experiment_id: 3939
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-+experiment_id: 5224
+-experiment_id: 5224
++experiment_id: 5225
  experiment_id: 5250
  experiment_id: 5508
  experiment_id: 5510
-@@ -365333,4 +365252,3 @@
- experiment_id: 3500035
- experiment_id: 3500037
- experiment_id: 4700000
--experiment_id: 6600301
