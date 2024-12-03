@@ -1,47 +1,1049 @@
---- GAME_MASTER_old.txt	2024-12-03 10:07:51.367040399 +0100
-+++ GAME_MASTER.txt	2024-12-03 21:34:33.398014824 +0100
-@@ -343641,15 +343641,14 @@
-       sku: "battlepassticket.1"
-       category: IAP_CATEGORY_FREE
-       sortOrder: 1
--      hidden: true
-       spriteId: "battlepassticket.1"
-       title: "iap_battle_pass_ticket_name"
-       description: "battle_pass_ticket_IAP_description"
-       skuEnableTime: "2023-02-27T20:00:00"
--      skuDisableTime: "2024-06-15T13:00:00"
-+      skuDisableTime: "2024-12-18T13:00:00"
-       skuEnableTimeUtcMs: 1677528000000
--      skuDisableTimeUtcMs: 1718456400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/GBL_SharedSkies_2024.jpeg"
-+      skuDisableTimeUtcMs: 1734526800000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-s17gbl-nologo-2024.jpg"
+--- GAME_MASTER_old.txt	2024-12-03 21:34:33.398014824 +0100
++++ GAME_MASTER.txt	2024-12-03 22:06:13.894669687 +0100
+@@ -63285,7 +63285,7 @@
+       defenderMinigameMultiplier: 1
+       changePokemonDurationSeconds: 12
+       minigameSubmitScoreDurationSeconds: 6.5
+-      quickSwapCooldownDurationSeconds: 50
++      quickSwapCooldownDurationSeconds: 60
+       chargeScoreBase: 0.25
+       chargeScoreNice: 0.5
+       chargeScoreGreat: 0.75
+@@ -63529,7 +63529,7 @@
+     combat_move {
+       uniqueId: ICE_PUNCH
+       type: POKEMON_TYPE_ICE
+-      power: 55
++      power: 60
+       vfxName: "ice_punch"
+       energyDelta: -40
+     }
+@@ -63992,7 +63992,7 @@
+     combat_move {
+       uniqueId: THUNDER_PUNCH
+       type: POKEMON_TYPE_ELECTRIC
+-      power: 55
++      power: 60
+       vfxName: "thunder_punch"
+       energyDelta: -40
+     }
+@@ -64208,9 +64208,13 @@
+     combat_move {
+       uniqueId: BULLDOZE
+       type: POKEMON_TYPE_GROUND
+-      power: 80
++      power: 45
+       vfxName: "bulldoze"
+-      energyDelta: -60
++      energyDelta: -45
++      buffs {
++        targetDefenseStatStageChange: -1
++        buffActivationChance: 0.5
++      }
      }
    }
  }
-@@ -365247,7 +365246,7 @@
+@@ -64424,7 +64428,7 @@
+     combat_move {
+       uniqueId: FIRE_PUNCH
+       type: POKEMON_TYPE_FIRE
+-      power: 55
++      power: 60
+       vfxName: "fire_punch"
+       energyDelta: -40
+     }
+@@ -64728,7 +64732,7 @@
+     combat_move {
+       uniqueId: THUNDER_SHOCK_FAST
+       type: POKEMON_TYPE_ELECTRIC
+-      power: 3
++      power: 4
+       vfxName: "thunder_shock_fast"
+       durationTurns: 1
+       energyDelta: 9
+@@ -65215,7 +65219,7 @@
+       power: 8
+       vfxName: "fire_fang_fast"
+       durationTurns: 1
+-      energyDelta: 5
++      energyDelta: 6
      }
    }
  }
--batch_id: 1733187063390
-+batch_id: 1733255937554
- experiment_id: 1
- experiment_id: 4
- experiment_id: 6
-@@ -365292,6 +365291,7 @@
- experiment_id: 3979
- experiment_id: 3985
- experiment_id: 3999
-+experiment_id: 4691
- experiment_id: 4998
- experiment_id: 5160
- experiment_id: 5162
-@@ -365301,6 +365301,8 @@
+@@ -66435,7 +66439,7 @@
+       power: 8
+       vfxName: "thunder_fang_fast"
+       durationTurns: 1
+-      energyDelta: 5
++      energyDelta: 6
+     }
+   }
+ }
+@@ -66449,7 +66453,7 @@
+       power: 8
+       vfxName: "ice_fang_fast"
+       durationTurns: 1
+-      energyDelta: 5
++      energyDelta: 6
+     }
+   }
+ }
+@@ -340564,9 +340568,7 @@
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S16"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
+     }
+   }
+ }
+@@ -340579,31 +340581,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+     }
+@@ -340618,31 +340620,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -340658,7 +340660,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 530
+         }
+       }
+       reward {
+@@ -340676,7 +340678,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+     }
+@@ -340691,7 +340693,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+       reward {
+@@ -340709,7 +340711,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 8480
++          count: 2120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -340725,7 +340727,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 530
+         }
+       }
+       reward {
+@@ -340743,7 +340745,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+     }
+@@ -340758,7 +340760,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+       reward {
+@@ -340776,7 +340778,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 8480
++          count: 2120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -340792,7 +340794,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 570
+         }
+       }
+       reward {
+@@ -340810,7 +340812,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4560
++          count: 1140
+         }
+       }
+     }
+@@ -340825,7 +340827,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4560
++          count: 1140
+         }
+       }
+       reward {
+@@ -340843,7 +340845,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 9120
++          count: 2280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -340859,7 +340861,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+       reward {
+@@ -340877,7 +340879,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+     }
+@@ -340892,7 +340894,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+       reward {
+@@ -340910,7 +340912,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 9600
++          count: 2400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341005,7 +341007,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 700
+         }
+       }
+       reward {
+@@ -341023,7 +341025,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5600
++          count: 1400
+         }
+       }
+     }
+@@ -341038,7 +341040,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5600
++          count: 1400
+         }
+       }
+       reward {
+@@ -341056,7 +341058,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 11200
++          count: 2800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341072,7 +341074,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 730
+         }
+       }
+       reward {
+@@ -341090,7 +341092,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5840
++          count: 1460
+         }
+       }
+     }
+@@ -341105,7 +341107,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5840
++          count: 1460
+         }
+       }
+       reward {
+@@ -341123,7 +341125,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 11680
++          count: 2920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341139,7 +341141,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 770
+         }
+       }
+       reward {
+@@ -341157,7 +341159,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6160
++          count: 1540
+         }
+       }
+     }
+@@ -341172,7 +341174,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6160
++          count: 1540
+         }
+       }
+       reward {
+@@ -341190,7 +341192,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 12320
++          count: 3080
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341255,7 +341257,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 300
+         }
+       }
+       reward {
+@@ -341273,7 +341275,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+     }
+@@ -341288,7 +341290,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+       reward {
+@@ -341306,7 +341308,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341322,7 +341324,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 870
+         }
+       }
+       reward {
+@@ -341340,7 +341342,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6960
++          count: 1740
+         }
+       }
+     }
+@@ -341355,7 +341357,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6960
++          count: 1740
+         }
+       }
+       reward {
+@@ -341373,7 +341375,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 13920
++          count: 3480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341389,7 +341391,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -341407,7 +341409,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -341422,7 +341424,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -341440,7 +341442,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341456,7 +341458,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -341474,7 +341476,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -341489,7 +341491,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -341507,7 +341509,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341523,7 +341525,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -341541,7 +341543,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -341556,7 +341558,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -341574,7 +341576,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341590,7 +341592,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -341608,7 +341610,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -341623,7 +341625,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -341641,7 +341643,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341657,7 +341659,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 330
+         }
+       }
+       reward {
+@@ -341675,7 +341677,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+     }
+@@ -341690,7 +341692,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+       reward {
+@@ -341708,7 +341710,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5280
++          count: 1320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341724,7 +341726,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 330
+         }
+       }
+       reward {
+@@ -341742,7 +341744,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+     }
+@@ -341757,7 +341759,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+       reward {
+@@ -341775,7 +341777,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5280
++          count: 1320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341791,7 +341793,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 370
+         }
+       }
+       reward {
+@@ -341809,7 +341811,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2960
++          count: 740
+         }
+       }
+     }
+@@ -341824,7 +341826,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2960
++          count: 740
+         }
+       }
+       reward {
+@@ -341842,7 +341844,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5920
++          count: 1480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341907,7 +341909,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 400
+         }
+       }
+       reward {
+@@ -341925,7 +341927,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3200
++          count: 800
+         }
+       }
+     }
+@@ -341940,7 +341942,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3200
++          count: 800
+         }
+       }
+       reward {
+@@ -341958,7 +341960,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6400
++          count: 1600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341974,7 +341976,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 430
+         }
+       }
+       reward {
+@@ -341992,7 +341994,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+     }
+@@ -342007,7 +342009,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+       reward {
+@@ -342025,7 +342027,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6880
++          count: 1720
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342041,7 +342043,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 430
+         }
+       }
+       reward {
+@@ -342059,7 +342061,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+     }
+@@ -342074,7 +342076,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+       reward {
+@@ -342092,7 +342094,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6880
++          count: 1720
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342108,7 +342110,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 470
+         }
+       }
+       reward {
+@@ -342126,7 +342128,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3760
++          count: 940
+         }
+       }
+     }
+@@ -342141,7 +342143,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3760
++          count: 940
+         }
+       }
+       reward {
+@@ -342159,7 +342161,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7520
++          count: 1880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -343440,91 +343442,90 @@
+       enableCombatLeagueView: true
+       enableTodayView: true
+       seasonSchedules {
+-        seasonTitle: "16"
+-        description_key: "16"
++        seasonTitle: "17"
++        description_key: "17"
+         vsSeekerSchedules {
+-          start_time_ms: 1725393600000
+-          end_time_ms: 1725998400000
++          start_time_ms: 1733259600000
++          end_time_ms: 1733864400000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GALAR_LITTLE"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1725998400000
+-          end_time_ms: 1726603200000
++          start_time_ms: 1733864400000
++          end_time_ms: 1734469200000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GALAR_LITTLE"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1726603200000
+-          end_time_ms: 1727208000000
++          start_time_ms: 1734469200000
++          end_time_ms: 1735074000000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_PSYCHIC"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_HOLIDAY"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1727208000000
+-          end_time_ms: 1727812800000
++          start_time_ms: 1735074000000
++          end_time_ms: 1735678800000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1727812800000
+-          end_time_ms: 1728417600000
++          start_time_ms: 1735678800000
++          end_time_ms: 1736283600000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GALAR_GREAT"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_HOLIDAY"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1728417600000
+-          end_time_ms: 1729022400000
++          start_time_ms: 1736283600000
++          end_time_ms: 1736888400000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_SUNSHINE_GREAT"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1729022400000
+-          end_time_ms: 1729627200000
++          start_time_ms: 1736888400000
++          end_time_ms: 1737493200000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HALLOWEEN_LITTLE"
+-        }
+-        vsSeekerSchedules {
+-          start_time_ms: 1729627200000
+-          end_time_ms: 1730232000000
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_REMIX"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HALLOWEEN"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1730232000000
+-          end_time_ms: 1730840400000
++          start_time_ms: 1737493200000
++          end_time_ms: 1738098000000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1730840400000
+-          end_time_ms: 1731445200000
++          start_time_ms: 1738098000000
++          end_time_ms: 1738702800000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_JUNGLE"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1731445200000
+-          end_time_ms: 1732050000000
++          start_time_ms: 1738702800000
++          end_time_ms: 1739307600000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_WILLPOWER"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LOVE"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1732050000000
+-          end_time_ms: 1732654800000
++          start_time_ms: 1739307600000
++          end_time_ms: 1739912400000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LOVE"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1732654800000
+-          end_time_ms: 1733259600000
++          start_time_ms: 1739912400000
++          end_time_ms: 1740517200000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S16"
+         }
+-        blogUrl: "https://pokemongolive.com/post/go-battle-league-max-out"
++        vsSeekerSchedules {
++          start_time_ms: 1740517200000
++          end_time_ms: 1741122000000
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
++        }
++        blogUrl: "https://pokemongolive.com/post/go-battle-league-dual-destiny"
+       }
+     }
+   }
+@@ -365254,8 +365255,9 @@
+ experiment_id: 11
+ experiment_id: 21
+ experiment_id: 101
+-experiment_id: 170
+-experiment_id: 184
++experiment_id: 149
++experiment_id: 150
++experiment_id: 152
+ experiment_id: 300
+ experiment_id: 302
+ experiment_id: 311
+@@ -365301,7 +365303,6 @@
  experiment_id: 5510
  experiment_id: 6075
  experiment_id: 8961
-+experiment_id: 8967
-+experiment_id: 8968
+-experiment_id: 8967
+ experiment_id: 8968
  experiment_id: 9523
  experiment_id: 9531
- experiment_id: 9542
