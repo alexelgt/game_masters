@@ -1,115 +1,69 @@
---- GAME_MASTER_old.txt	2024-12-03 22:06:13.894669687 +0100
-+++ GAME_MASTER.txt	2024-12-03 23:19:41.001346868 +0100
-@@ -63285,7 +63285,7 @@
-       defenderMinigameMultiplier: 1
-       changePokemonDurationSeconds: 12
-       minigameSubmitScoreDurationSeconds: 6.5
--      quickSwapCooldownDurationSeconds: 60
-+      quickSwapCooldownDurationSeconds: 50
-       chargeScoreBase: 0.25
-       chargeScoreNice: 0.5
-       chargeScoreGreat: 0.75
-@@ -209226,12 +209226,14 @@
-       }
-       quickMoves: HIDDEN_POWER_FAST
-       quickMoves: WATER_GUN_FAST
-+      quickMoves: PSYWAVE_FAST
-       cinematicMoves: HYDRO_PUMP
-       cinematicMoves: POWER_GEM
-       cinematicMoves: PSYCHIC
-       cinematicMoves: THUNDER
-       cinematicMoves: ICE_BEAM
-       cinematicMoves: PSYBEAM
-+      cinematicMoves: SURF
-       animationTime: 1.7333
-       animationTime: 0.6667
-       animationTime: 1.8667
-@@ -263481,6 +263483,7 @@
-       }
-       quickMoves: WATER_GUN_FAST
-       quickMoves: TAKE_DOWN_FAST
-+      quickMoves: ROLLOUT_FAST
-       cinematicMoves: HYPER_FANG
-       cinematicMoves: HYPER_BEAM
-       cinematicMoves: SURF
-@@ -263574,6 +263577,7 @@
-       }
-       quickMoves: WATER_GUN_FAST
-       quickMoves: TAKE_DOWN_FAST
-+      quickMoves: ROLLOUT_FAST
-       cinematicMoves: HYPER_FANG
-       cinematicMoves: HYPER_BEAM
-       cinematicMoves: SURF
-@@ -273758,6 +273762,7 @@
-       }
-       quickMoves: FURY_CUTTER_FAST
-       quickMoves: WING_ATTACK_FAST
-+      quickMoves: SAND_ATTACK_FAST
-       cinematicMoves: EARTHQUAKE
-       cinematicMoves: AERIAL_ACE
-       cinematicMoves: NIGHT_SLASH
-@@ -273857,6 +273862,7 @@
-       }
-       quickMoves: FURY_CUTTER_FAST
-       quickMoves: WING_ATTACK_FAST
-+      quickMoves: SAND_ATTACK_FAST
-       cinematicMoves: EARTHQUAKE
-       cinematicMoves: AERIAL_ACE
-       cinematicMoves: NIGHT_SLASH
-@@ -308405,6 +308411,7 @@
-       cinematicMoves: AQUA_TAIL
-       cinematicMoves: OUTRAGE
-       cinematicMoves: GUNK_SHOT
-+      cinematicMoves: FOCUS_BLAST
-       animationTime: 1.9
-       animationTime: 0.6666
-       animationTime: 1.7666
-@@ -357873,7 +357880,6 @@
-       sku: "evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
--      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket.2_AspiringTR2024_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -357892,7 +357898,6 @@
-       sku: "evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
--      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket.2_AspiringTR2024_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359571,7 +359576,6 @@
-       sku: "pgorelease.evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
--      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket.2_AspiringTR2024_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359590,7 +359594,6 @@
-       sku: "pgorelease.evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
--      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket.2_AspiringTR2024_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -365247,7 +365250,7 @@
+--- GAME_MASTER_old.txt	2024-12-03 23:19:41.001346868 +0100
++++ GAME_MASTER.txt	2024-12-04 08:33:57.826094461 +0100
+@@ -39635,6 +39635,7 @@
+       minimumPlayerLevel: 13
+       breadPostBattleRecoveryEnabled: true
+       canUseMasterBallPostBattle: true
++      boostItemEnabled: true
+       debugRpcEnabled: true
+     }
+   }
+@@ -365250,7 +365251,41 @@
      }
    }
  }
--batch_id: 1733255937554
-+batch_id: 1733264096946
+-batch_id: 1733264096946
++template {
++  template_id: "JOIN_RAID_VIA_FRIEND_LIST_SETTINGS"
++  data {
++    template_id: "JOIN_RAID_VIA_FRIEND_LIST_SETTINGS"
++    joinRaidViaFriendListSettings {
++      enabled: true
++      minPlayerLevel: 5
++      minFriendshipScore: 7
++      friendActivitiesBackgroundUpdatePeriodMs: 10000
++    }
++  }
++}
++template {
++  template_id: "max_boost.1"
++  data {
++    template_id: "max_boost.1"
++    iapItemDisplay {
++      sku: "max_boost.1"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 1
++    }
++  }
++}
++template {
++  template_id: "max_boost.3"
++  data {
++    template_id: "max_boost.3"
++    iapItemDisplay {
++      sku: "max_boost.3"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 2
++    }
++  }
++}
++batch_id: 1733279402365
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -365292,6 +365295,7 @@
- experiment_id: 3968
- experiment_id: 3979
- experiment_id: 3985
-+experiment_id: 3994
- experiment_id: 3999
- experiment_id: 4691
- experiment_id: 4998
+@@ -365268,6 +365303,7 @@
+ experiment_id: 408
+ experiment_id: 409
+ experiment_id: 500
++experiment_id: 511
+ experiment_id: 602
+ experiment_id: 805
+ experiment_id: 807
+@@ -365319,6 +365355,7 @@
+ experiment_id: 300000
+ experiment_id: 314159
+ experiment_id: 314160
++experiment_id: 1000765
+ experiment_id: 3500035
+ experiment_id: 3500037
+ experiment_id: 4700000
