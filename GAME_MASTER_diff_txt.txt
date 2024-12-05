@@ -1,69 +1,36 @@
---- GAME_MASTER_old.txt	2024-12-03 23:19:41.001346868 +0100
-+++ GAME_MASTER.txt	2024-12-04 08:33:57.826094461 +0100
-@@ -39635,6 +39635,7 @@
-       minimumPlayerLevel: 13
-       breadPostBattleRecoveryEnabled: true
-       canUseMasterBallPostBattle: true
-+      boostItemEnabled: true
-       debugRpcEnabled: true
+--- GAME_MASTER_old.txt	2024-12-04 08:33:57.826094461 +0100
++++ GAME_MASTER.txt	2024-12-05 08:16:36.002433066 +0100
+@@ -40453,7 +40453,7 @@
+               maxReticleSize: 14
+             }
+             breadBattleVisualData {
+-              scale: 13
++              scale: 14.94
+             }
+             breadStationVisualData {
+               scale: 1.02
+@@ -165269,6 +165269,7 @@
+         enableBalloonGift: true
+         balloonAutoDismissTimeMs: 600000
+         getWasabiAdRpcIntervalMs: 60000
++        enableBalloonWebView: true
+       }
      }
    }
-@@ -365250,7 +365251,41 @@
+@@ -365285,7 +365286,7 @@
      }
    }
  }
--batch_id: 1733264096946
-+template {
-+  template_id: "JOIN_RAID_VIA_FRIEND_LIST_SETTINGS"
-+  data {
-+    template_id: "JOIN_RAID_VIA_FRIEND_LIST_SETTINGS"
-+    joinRaidViaFriendListSettings {
-+      enabled: true
-+      minPlayerLevel: 5
-+      minFriendshipScore: 7
-+      friendActivitiesBackgroundUpdatePeriodMs: 10000
-+    }
-+  }
-+}
-+template {
-+  template_id: "max_boost.1"
-+  data {
-+    template_id: "max_boost.1"
-+    iapItemDisplay {
-+      sku: "max_boost.1"
-+      category: IAP_CATEGORY_ITEMS
-+      sortOrder: 1
-+    }
-+  }
-+}
-+template {
-+  template_id: "max_boost.3"
-+  data {
-+    template_id: "max_boost.3"
-+    iapItemDisplay {
-+      sku: "max_boost.3"
-+      category: IAP_CATEGORY_ITEMS
-+      sortOrder: 2
-+    }
-+  }
-+}
-+batch_id: 1733279402365
+-batch_id: 1733279402365
++batch_id: 1733366484330
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -365268,6 +365303,7 @@
- experiment_id: 408
- experiment_id: 409
- experiment_id: 500
-+experiment_id: 511
- experiment_id: 602
- experiment_id: 805
- experiment_id: 807
-@@ -365319,6 +365355,7 @@
- experiment_id: 300000
- experiment_id: 314159
- experiment_id: 314160
-+experiment_id: 1000765
- experiment_id: 3500035
- experiment_id: 3500037
- experiment_id: 4700000
+@@ -365333,7 +365334,6 @@
+ experiment_id: 3985
+ experiment_id: 3994
+ experiment_id: 3999
+-experiment_id: 4691
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
