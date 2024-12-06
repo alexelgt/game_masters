@@ -1,36 +1,440 @@
---- GAME_MASTER_old.txt	2024-12-04 08:33:57.826094461 +0100
-+++ GAME_MASTER.txt	2024-12-05 08:16:36.002433066 +0100
-@@ -40453,7 +40453,7 @@
-               maxReticleSize: 14
-             }
-             breadBattleVisualData {
--              scale: 13
-+              scale: 14.94
-             }
-             breadStationVisualData {
-               scale: 1.02
-@@ -165269,6 +165269,7 @@
-         enableBalloonGift: true
-         balloonAutoDismissTimeMs: 600000
-         getWasabiAdRpcIntervalMs: 60000
-+        enableBalloonWebView: true
+--- GAME_MASTER_old.txt	2024-12-05 08:16:36.002433066 +0100
++++ GAME_MASTER.txt	2024-12-06 10:13:49.223432178 +0100
+@@ -39634,6 +39634,7 @@
+       nearbyLobbyCounterEnabled: true
+       minimumPlayerLevel: 13
+       breadPostBattleRecoveryEnabled: true
++      powerSpotEditsEnabled: true
+       canUseMasterBallPostBattle: true
+       boostItemEnabled: true
+       debugRpcEnabled: true
+@@ -76623,7 +76624,7 @@
+           cylinderRadiusM: 1.35
+           cylinderHeightM: 2.05
+         }
+-        modelScaleV2: 0.86
++        modelScaleV2: 1
+         modelHeight: 2.17
        }
      }
+@@ -116774,6 +116775,18 @@
    }
-@@ -365285,7 +365286,7 @@
+ }
+ template {
++  template_id: "JOIN_RAID_VIA_FRIEND_LIST_SETTINGS"
++  data {
++    template_id: "JOIN_RAID_VIA_FRIEND_LIST_SETTINGS"
++    joinRaidViaFriendListSettings {
++      enabled: true
++      minPlayerLevel: 5
++      minFriendshipScore: 7
++      friendActivitiesBackgroundUpdatePeriodMs: 10000
++    }
++  }
++}
++template {
+   template_id: "LANGUAGE_SELECTOR_SETTINGS"
+   data {
+     template_id: "LANGUAGE_SELECTOR_SETTINGS"
+@@ -137674,15 +137687,6 @@
+   }
+ }
+ template {
+-  template_id: "POKEMON_INFO_PANEL_SETTINGS"
+-  data {
+-    template_id: "POKEMON_INFO_PANEL_SETTINGS"
+-    pokemonInfoPanelSettings {
+-      bottomOriginSectionV2Enabled: true
+-    }
+-  }
+-}
+-template {
+   template_id: "POKEMON_SCALE_SETTINGS_BATTLE_POKEMON_SCALE"
+   data {
+     template_id: "POKEMON_SCALE_SETTINGS_BATTLE_POKEMON_SCALE"
+@@ -177470,6 +177474,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_WINTER_2024_1.3"
++  data {
++    template_id: "STICKER_WINTER_2024_1.3"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 488
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_1.5"
++  data {
++    template_id: "STICKER_WINTER_2024_1.5"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 487
++    }
++  }
++}
++template {
+   template_id: "STICKER_WINTER_2024_2"
+   data {
+     template_id: "STICKER_WINTER_2024_2"
+@@ -177484,6 +177510,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_WINTER_2024_2.3"
++  data {
++    template_id: "STICKER_WINTER_2024_2.3"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 486
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_2.5"
++  data {
++    template_id: "STICKER_WINTER_2024_2.5"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 485
++    }
++  }
++}
++template {
+   template_id: "STICKER_WINTER_2024_3"
+   data {
+     template_id: "STICKER_WINTER_2024_3"
+@@ -177498,6 +177546,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_WINTER_2024_3.3"
++  data {
++    template_id: "STICKER_WINTER_2024_3.3"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 484
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_3.5"
++  data {
++    template_id: "STICKER_WINTER_2024_3.5"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 483
++    }
++  }
++}
++template {
+   template_id: "STICKER_WINTER_2024_4"
+   data {
+     template_id: "STICKER_WINTER_2024_4"
+@@ -177512,6 +177582,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_WINTER_2024_4.3"
++  data {
++    template_id: "STICKER_WINTER_2024_4.3"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 482
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_4.5"
++  data {
++    template_id: "STICKER_WINTER_2024_4.5"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 481
++    }
++  }
++}
++template {
+   template_id: "STICKER_WINTER_2024_5"
+   data {
+     template_id: "STICKER_WINTER_2024_5"
+@@ -177526,6 +177618,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_WINTER_2024_5.3"
++  data {
++    template_id: "STICKER_WINTER_2024_5.3"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_5.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 480
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_5.5"
++  data {
++    template_id: "STICKER_WINTER_2024_5.5"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_5.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 479
++    }
++  }
++}
++template {
+   template_id: "STICKER_WINTER_2024_6"
+   data {
+     template_id: "STICKER_WINTER_2024_6"
+@@ -177540,6 +177654,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_WINTER_2024_6.3"
++  data {
++    template_id: "STICKER_WINTER_2024_6.3"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_6.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 478
++    }
++  }
++}
++template {
++  template_id: "STICKER_WINTER_2024_6.5"
++  data {
++    template_id: "STICKER_WINTER_2024_6.5"
++    iapItemDisplay {
++      sku: "STICKER_WINTER_2024_6.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 477
++    }
++  }
++}
++template {
+   template_id: "STICKER_WINTER_AMAURA"
+   data {
+     template_id: "STICKER_WINTER_AMAURA"
+@@ -358595,6 +358731,28 @@
+   }
+ }
+ template {
++  template_id: "max_boost.1"
++  data {
++    template_id: "max_boost.1"
++    iapItemDisplay {
++      sku: "max_boost.1"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 1
++    }
++  }
++}
++template {
++  template_id: "max_boost.3"
++  data {
++    template_id: "max_boost.3"
++    iapItemDisplay {
++      sku: "max_boost.3"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 2
++    }
++  }
++}
++template {
+   template_id: "maxpotion.10"
+   data {
+     template_id: "maxpotion.10"
+@@ -365120,173 +365278,7 @@
      }
    }
  }
--batch_id: 1733279402365
-+batch_id: 1733366484330
+-template {
+-  template_id: "STICKER_WINTER_2024_1.3"
+-  data {
+-    template_id: "STICKER_WINTER_2024_1.3"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_1.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 488
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_1.5"
+-  data {
+-    template_id: "STICKER_WINTER_2024_1.5"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_1.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 487
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_2.3"
+-  data {
+-    template_id: "STICKER_WINTER_2024_2.3"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_2.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 486
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_2.5"
+-  data {
+-    template_id: "STICKER_WINTER_2024_2.5"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_2.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 485
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_3.3"
+-  data {
+-    template_id: "STICKER_WINTER_2024_3.3"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_3.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 484
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_3.5"
+-  data {
+-    template_id: "STICKER_WINTER_2024_3.5"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_3.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 483
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_4.3"
+-  data {
+-    template_id: "STICKER_WINTER_2024_4.3"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_4.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 482
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_4.5"
+-  data {
+-    template_id: "STICKER_WINTER_2024_4.5"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_4.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 481
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_5.3"
+-  data {
+-    template_id: "STICKER_WINTER_2024_5.3"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_5.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 480
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_5.5"
+-  data {
+-    template_id: "STICKER_WINTER_2024_5.5"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_5.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 479
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_6.3"
+-  data {
+-    template_id: "STICKER_WINTER_2024_6.3"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_6.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 478
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_WINTER_2024_6.5"
+-  data {
+-    template_id: "STICKER_WINTER_2024_6.5"
+-    iapItemDisplay {
+-      sku: "STICKER_WINTER_2024_6.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 477
+-    }
+-  }
+-}
+-template {
+-  template_id: "JOIN_RAID_VIA_FRIEND_LIST_SETTINGS"
+-  data {
+-    template_id: "JOIN_RAID_VIA_FRIEND_LIST_SETTINGS"
+-    joinRaidViaFriendListSettings {
+-      enabled: true
+-      minPlayerLevel: 5
+-      minFriendshipScore: 7
+-      friendActivitiesBackgroundUpdatePeriodMs: 10000
+-    }
+-  }
+-}
+-template {
+-  template_id: "max_boost.1"
+-  data {
+-    template_id: "max_boost.1"
+-    iapItemDisplay {
+-      sku: "max_boost.1"
+-      category: IAP_CATEGORY_ITEMS
+-      sortOrder: 1
+-    }
+-  }
+-}
+-template {
+-  template_id: "max_boost.3"
+-  data {
+-    template_id: "max_boost.3"
+-    iapItemDisplay {
+-      sku: "max_boost.3"
+-      category: IAP_CATEGORY_ITEMS
+-      sortOrder: 2
+-    }
+-  }
+-}
+-batch_id: 1733366484330
++batch_id: 1733446778633
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -365333,7 +365334,6 @@
- experiment_id: 3985
- experiment_id: 3994
- experiment_id: 3999
--experiment_id: 4691
- experiment_id: 4998
- experiment_id: 5160
- experiment_id: 5162
+@@ -365347,7 +365339,6 @@
+ experiment_id: 9523
+ experiment_id: 9531
+ experiment_id: 9542
+-experiment_id: 9548
+ experiment_id: 9551
+ experiment_id: 20947
+ experiment_id: 80000
