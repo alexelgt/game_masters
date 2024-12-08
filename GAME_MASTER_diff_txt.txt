@@ -1,272 +1,142 @@
---- GAME_MASTER_old.txt	2024-12-06 10:13:49.223432178 +0100
-+++ GAME_MASTER.txt	2024-12-07 11:29:13.530873282 +0100
-@@ -114936,33 +114936,38 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-10-03T00:00:00"
--        eventEndTime: "2024-11-02T23:59:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_MonthlyTicketOct24"
-+        eventStartTime: "2024-12-14T14:00:00"
-+        eventEndTime: "2024-12-14T22:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_NecrozmaFusionRaidDay"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_06_TO_GIFT
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_MonthlyTicketOct24"
--        textRewardsKey: "text_rewards_key_MonthlyTicketOct24"
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_NecrozmaRaidDay"
-+        textRewardsKey: "text_rewards_key_NecrozmaRaidDay"
-         iconRewards {
--          type: POKECOIN
--          pokecoin: 20
-+          type: ITEM
-+          item {
-+            item: ITEM_FREE_RAID_TICKET
-+            amount: 8
-+          }
-         }
-         iconRewards {
--          type: EXPERIENCE
--          exp: 15000
-+          type: ITEM
-+          item {
-+            item: ITEM_XL_RARE_CANDY
-+          }
-         }
-         iconRewards {
-           type: STARDUST
--          stardust: 15000
-+          stardust: 2
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1727913600000
--        clientEventEndTimeUtcMs: 1730591940000
-+        clientEventStartTimeUtcMs: 1734184800000
-+        clientEventEndTimeUtcMs: 1734213600000
+--- GAME_MASTER_old.txt	2024-12-07 11:29:13.530873282 +0100
++++ GAME_MASTER.txt	2024-12-08 10:43:27.678321012 +0100
+@@ -113941,7 +113941,7 @@
+     friendship_milestone_settings {
+       minPointsToReach: 1
+       milestoneXpReward: 3000
+-      attackBonusPercentage: 1.06
++      attackBonusPercentage: 1.03
+       unlockedTrading: REGULAR_IN_POKEDEX
+       unlockedTrading: SPECIAL_IN_POKEDEX
+       unlockedTrading: REGULAR_NON_POKEDEX
+@@ -113961,7 +113961,7 @@
+     friendship_milestone_settings {
+       minPointsToReach: 7
+       milestoneXpReward: 10000
+-      attackBonusPercentage: 1.1
++      attackBonusPercentage: 1.05
+       raidBallBonus: 1
+       unlockedTrading: REGULAR_IN_POKEDEX
+       unlockedTrading: SPECIAL_IN_POKEDEX
+@@ -113983,7 +113983,7 @@
+     friendship_milestone_settings {
+       minPointsToReach: 30
+       milestoneXpReward: 50000
+-      attackBonusPercentage: 1.14
++      attackBonusPercentage: 1.07
+       raidBallBonus: 2
+       unlockedTrading: REGULAR_IN_POKEDEX
+       unlockedTrading: SPECIAL_IN_POKEDEX
+@@ -114005,7 +114005,7 @@
+     friendship_milestone_settings {
+       minPointsToReach: 90
+       milestoneXpReward: 100000
+-      attackBonusPercentage: 1.2
++      attackBonusPercentage: 1.1
+       raidBallBonus: 4
+       unlockedTrading: REGULAR_IN_POKEDEX
+       unlockedTrading: SPECIAL_IN_POKEDEX
+@@ -115773,7 +115773,6 @@
+       dropTrainerLevel: 1
+       incense {
+         incenseLifetimeSeconds: 3600
+-        spawnTableProbability: 0.5
        }
--      descriptionOverride: "item_event_ticket_gray_details_MonthlyTicketOct24"
-+      descriptionOverride: "item_event_ticket_gray_desc_NecrozmaFusionRaidDay"
      }
    }
- }
-@@ -114975,16 +114980,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2024-10-03T00:00:00"
--        eventEndTime: "2024-11-02T23:59:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_MonthlyTicketOct24"
-+        eventStartTime: "2024-12-14T14:00:00"
-+        eventEndTime: "2024-12-14T22:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_details_NecrozmaFusionRaidDay"
-         ticketItem: ITEM_EVENT_TICKET_06
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
--        clientEventStartTimeUtcMs: 1727913600000
--        clientEventEndTimeUtcMs: 1730591940000
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
-+        clientEventStartTimeUtcMs: 1734184800000
-+        clientEventEndTimeUtcMs: 1734213600000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_MonthlyTicketOct24"
-+      descriptionOverride: "item_event_ticket_gray_details_NecrozmaFusionRaidDay"
-     }
-   }
- }
-@@ -138469,17 +138474,6 @@
-   }
- }
- template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
-   template_id: "QUEST_EVOLUTION_SETTINGS"
+@@ -119869,8 +119868,8 @@
    data {
-     template_id: "QUEST_EVOLUTION_SETTINGS"
-@@ -358468,16 +358462,16 @@
-     iapItemDisplay {
-       sku: "general2.ticket.6"
+     template_id: "MP_SHARED_SETTINGS"
+     mpSettings {
+-      numMpFromWalkQuest: 300
+-      numMetersGoal: 2000
++      numMpFromWalkQuest: 600
++      numMetersGoal: 500
+       debugAllowRemoveWalkQuest: true
+       numMpFromLootStation: 100
+       numExtraMpFromFirstLootStation: 20
+@@ -119883,24 +119882,17 @@
+       }
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 400
+-        battleLevel: BREAD_BATTLE_LEVEL_2
+-      }
+-      battleMpCostPerTier {
+-        breadBattleCatchMpCost: 400
+         battleLevel: BREAD_BATTLE_LEVEL_3
+       }
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 800
+-        battleLevel: BREAD_BATTLE_LEVEL_4
+-      }
+-      battleMpCostPerTier {
+-        breadBattleCatchMpCost: 800
+         battleLevel: BREAD_BATTLE_LEVEL_5
+       }
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 800
+         battleLevel: BREAD_DOUGH_BATTLE_LEVEL_1
+       }
++      ftueMpCapacity: 250
+     }
+   }
+ }
+@@ -358012,6 +358004,7 @@
+       sku: "evergreenticket.1"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
-+      sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.9"
--      title: "general1.ticket._GOFestRaid24_title"
--      description: "general1.ticket.2_GOFestRaid2024_description"
--      skuEnableTime: "2024-06-08T10:00:00"
--      skuDisableTime: "2024-07-14T20:00:00"
--      skuEnableTimeUtcMs: 1717840800000
--      skuDisableTimeUtcMs: 1720987200000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/GOFest2024InboundfromUltraSpace%20LiveOp%20Key%20Art_1024x512%20No%20Logo%20(1).jpg"
-+      spriteId: "general2.ticket.6"
-+      title: "general2.ticket._NecrozmaFusionRaidDay_title"
-+      description: "item_event_ticket_gray_desc_NecrozmaFusionRaidDay"
-+      skuEnableTime: "2023-01-01T11:00:05"
-+      skuDisableTime: "2024-12-14T17:00:00"
-+      skuEnableTimeUtcMs: 1672570805000
-+      skuDisableTimeUtcMs: 1734195600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
-     }
-   }
- }
-@@ -358488,16 +358482,16 @@
-     iapItemDisplay {
-       sku: "general2.ticket.6.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
-+      sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.9"
--      title: "general1.ticket._GOFestRaid24_title"
--      description: "general1.ticket.2_GOFestRaid2024_description"
--      skuEnableTime: "2024-06-08T10:00:00"
--      skuDisableTime: "2024-07-14T20:00:00"
--      skuEnableTimeUtcMs: 1717840800000
--      skuDisableTimeUtcMs: 1720987200000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/GOFest2024InboundfromUltraSpace%20LiveOp%20Key%20Art_1024x512%20No%20Logo%20(1).jpg"
-+      spriteId: "general2.ticket.6"
-+      title: "general2.ticket._NecrozmaFusionRaidDay_title"
-+      description: "item_event_ticket_gray_desc_NecrozmaFusionRaidDay"
-+      skuEnableTime: "2023-01-01T11:00:05"
-+      skuDisableTime: "2024-12-14T17:00:00"
-+      skuEnableTimeUtcMs: 1672570805000
-+      skuDisableTimeUtcMs: 1734195600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
-     }
-   }
- }
-@@ -360150,16 +360144,16 @@
-     iapItemDisplay {
-       sku: "pgorelease.general2.ticket.6"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
-+      sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.9"
--      title: "general1.ticket._GOFestRaid24_title"
--      description: "general1.ticket.2_GOFestRaid2024_description"
--      skuEnableTime: "2024-06-08T10:00:00"
--      skuDisableTime: "2024-07-14T20:00:00"
--      skuEnableTimeUtcMs: 1717840800000
--      skuDisableTimeUtcMs: 1720987200000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/GOFest2024InboundfromUltraSpace%20LiveOp%20Key%20Art_1024x512%20No%20Logo%20(1).jpg"
-+      spriteId: "general2.ticket.2"
-+      title: "general2.ticket._NecrozmaFusionRaidDay_title"
-+      description: "item_event_ticket_gray_desc_NecrozmaFusionRaidDay"
-+      skuEnableTime: "2023-01-01T11:00:01"
-+      skuDisableTime: "2024-12-14T17:00:00"
-+      skuEnableTimeUtcMs: 1672570801000
-+      skuDisableTimeUtcMs: 1734195600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
-     }
-   }
- }
-@@ -360170,16 +360164,16 @@
-     iapItemDisplay {
-       sku: "pgorelease.general2.ticket.6.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
-+      sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.9"
--      title: "general1.ticket._GOFestRaid24_title"
--      description: "general1.ticket.2_GOFestRaid2024_description"
--      skuEnableTime: "2024-06-08T10:00:00"
--      skuDisableTime: "2024-07-14T20:00:00"
--      skuEnableTimeUtcMs: 1717840800000
--      skuDisableTimeUtcMs: 1720987200000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/GOFest2024InboundfromUltraSpace%20LiveOp%20Key%20Art_1024x512%20No%20Logo%20(1).jpg"
-+      spriteId: "general2.ticket.2"
-+      title: "general2.ticket._NecrozmaFusionRaidDay_title"
-+      description: "item_event_ticket_gray_desc_NecrozmaFusionRaidDay"
-+      skuEnableTime: "2023-01-01T11:00:01"
-+      skuDisableTime: "2024-12-14T17:00:00"
-+      skuEnableTimeUtcMs: 1672570801000
-+      skuDisableTimeUtcMs: 1734195600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
-     }
-   }
- }
-@@ -365278,7 +365272,60 @@
-     }
-   }
- }
--batch_id: 1733446778633
-+template {
-+  template_id: "PTC_OAUTH_SETTINGS"
-+  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    }
-+  }
-+}
-+template {
-+  template_id: "bundle.cswkmakegoodprep.100.1"
-+  data {
-+    template_id: "bundle.cswkmakegoodprep.100.1"
-+    iapItemDisplay {
-+      sku: "bundle.cswkmakegoodprep.100.1"
-+      category: IAP_CATEGORY_FREE
-+      sortOrder: 1
+       sortOrder: 4
 +      hidden: true
-+      spriteId: "bundle.general5.small.1"
-+      title: "bundle.citysafari.box.1_title"
-+    }
-+  }
-+}
-+template {
-+  template_id: "bundle.cswkmakegoodprep.200.1"
-+  data {
-+    template_id: "bundle.cswkmakegoodprep.200.1"
-+    iapItemDisplay {
-+      sku: "bundle.cswkmakegoodprep.200.1"
-+      category: IAP_CATEGORY_FREE
-+      sortOrder: 1
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket.2_AspiringTR2024_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358030,6 +358023,7 @@
+       sku: "evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
 +      hidden: true
-+      spriteId: "bundle.general5.small.1"
-+      title: "bundle.citysafari.box.1_title"
-+    }
-+  }
-+}
-+template {
-+  template_id: "bundle.cswkmakegoodprep.300.1"
-+  data {
-+    template_id: "bundle.cswkmakegoodprep.300.1"
-+    iapItemDisplay {
-+      sku: "bundle.cswkmakegoodprep.300.1"
-+      category: IAP_CATEGORY_FREE
-+      sortOrder: 1
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket.2_AspiringTR2024_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -359730,6 +359724,7 @@
+       sku: "pgorelease.evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
 +      hidden: true
-+      spriteId: "bundle.general5.small.1"
-+      title: "bundle.citysafari.box.1_title"
-+    }
-+  }
-+}
-+batch_id: 1733555920249
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket.2_AspiringTR2024_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -359748,6 +359743,7 @@
+       sku: "pgorelease.evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket.2_AspiringTR2024_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -365325,7 +365321,7 @@
+     }
+   }
+ }
+-batch_id: 1733555920249
++batch_id: 1733623557895
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -365327,6 +365374,7 @@
- experiment_id: 3994
+@@ -365358,7 +365354,6 @@
+ experiment_id: 2402
+ experiment_id: 3032
+ experiment_id: 3033
+-experiment_id: 3050
+ experiment_id: 3063
+ experiment_id: 3647
+ experiment_id: 3685
+@@ -365370,8 +365365,7 @@
+ experiment_id: 3964
+ experiment_id: 3968
+ experiment_id: 3979
+-experiment_id: 3985
+-experiment_id: 3994
++experiment_id: 3996
  experiment_id: 3999
  experiment_id: 4998
-+experiment_id: 5105
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
+ experiment_id: 5105
