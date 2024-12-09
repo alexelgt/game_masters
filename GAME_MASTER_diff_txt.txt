@@ -1,142 +1,149 @@
---- GAME_MASTER_old.txt	2024-12-07 11:29:13.530873282 +0100
-+++ GAME_MASTER.txt	2024-12-08 10:43:27.678321012 +0100
-@@ -113941,7 +113941,7 @@
-     friendship_milestone_settings {
-       minPointsToReach: 1
-       milestoneXpReward: 3000
--      attackBonusPercentage: 1.06
-+      attackBonusPercentage: 1.03
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-       unlockedTrading: REGULAR_NON_POKEDEX
-@@ -113961,7 +113961,7 @@
-     friendship_milestone_settings {
-       minPointsToReach: 7
-       milestoneXpReward: 10000
--      attackBonusPercentage: 1.1
-+      attackBonusPercentage: 1.05
-       raidBallBonus: 1
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -113983,7 +113983,7 @@
-     friendship_milestone_settings {
-       minPointsToReach: 30
-       milestoneXpReward: 50000
--      attackBonusPercentage: 1.14
-+      attackBonusPercentage: 1.07
-       raidBallBonus: 2
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -114005,7 +114005,7 @@
-     friendship_milestone_settings {
-       minPointsToReach: 90
-       milestoneXpReward: 100000
--      attackBonusPercentage: 1.2
-+      attackBonusPercentage: 1.1
-       raidBallBonus: 4
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -115773,7 +115773,6 @@
-       dropTrainerLevel: 1
-       incense {
-         incenseLifetimeSeconds: 3600
--        spawnTableProbability: 0.5
-       }
-     }
-   }
-@@ -119869,8 +119868,8 @@
+--- GAME_MASTER_old.txt	2024-12-08 10:43:27.678321012 +0100
++++ GAME_MASTER.txt	2024-12-09 08:18:24.296933130 +0100
+@@ -119868,8 +119868,8 @@
    data {
      template_id: "MP_SHARED_SETTINGS"
      mpSettings {
--      numMpFromWalkQuest: 300
--      numMetersGoal: 2000
-+      numMpFromWalkQuest: 600
-+      numMetersGoal: 500
+-      numMpFromWalkQuest: 600
+-      numMetersGoal: 500
++      numMpFromWalkQuest: 300
++      numMetersGoal: 2000
        debugAllowRemoveWalkQuest: true
        numMpFromLootStation: 100
        numExtraMpFromFirstLootStation: 20
-@@ -119883,24 +119882,17 @@
+@@ -119882,17 +119882,24 @@
        }
        battleMpCostPerTier {
          breadBattleCatchMpCost: 400
--        battleLevel: BREAD_BATTLE_LEVEL_2
--      }
--      battleMpCostPerTier {
--        breadBattleCatchMpCost: 400
++        battleLevel: BREAD_BATTLE_LEVEL_2
++      }
++      battleMpCostPerTier {
++        breadBattleCatchMpCost: 400
          battleLevel: BREAD_BATTLE_LEVEL_3
        }
        battleMpCostPerTier {
          breadBattleCatchMpCost: 800
--        battleLevel: BREAD_BATTLE_LEVEL_4
--      }
--      battleMpCostPerTier {
--        breadBattleCatchMpCost: 800
++        battleLevel: BREAD_BATTLE_LEVEL_4
++      }
++      battleMpCostPerTier {
++        breadBattleCatchMpCost: 800
          battleLevel: BREAD_BATTLE_LEVEL_5
        }
        battleMpCostPerTier {
          breadBattleCatchMpCost: 800
          battleLevel: BREAD_DOUGH_BATTLE_LEVEL_1
        }
-+      ftueMpCapacity: 250
+-      ftueMpCapacity: 250
      }
    }
  }
-@@ -358012,6 +358004,7 @@
-       sku: "evergreenticket.1"
+@@ -358421,13 +358428,15 @@
+       sku: "general2.ticket.5"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
+       sortOrder: 1
+-      spriteId: "general2.ticket.5"
+-      title: "general1.ticket.5_gmaxlapras24_title"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2024-12-08T16:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1733673600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
 +      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket.2_AspiringTR2024_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -358030,6 +358023,7 @@
-       sku: "evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket.2_AspiringTR2024_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359730,6 +359724,7 @@
-       sku: "pgorelease.evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket.2_AspiringTR2024_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359748,6 +359743,7 @@
-       sku: "pgorelease.evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket.2_AspiringTR2024_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -365325,7 +365321,7 @@
++      spriteId: "general1.ticket.1"
++      title: "general2.ticket.5._GOWA2024HatchVer1_title"
++      description: "text_rewards_key_GOWA2024HatchVer1"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T23:59:59"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732319999000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
      }
    }
  }
--batch_id: 1733555920249
-+batch_id: 1733623557895
+@@ -358439,13 +358448,14 @@
+       sku: "general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      spriteId: "general2.ticket.5"
+-      title: "general1.ticket.5_gmaxlapras24_title"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2024-12-08T16:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1733673600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
++      hidden: true
++      spriteId: "general1.ticket.1"
++      title: "general2.ticket.5._GOWA2024HatchVer1_title"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T23:59:59"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732319999000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
+     }
+   }
+ }
+@@ -360105,13 +360115,15 @@
+       sku: "pgorelease.general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      spriteId: "general2.ticket.5"
+-      title: "general1.ticket.5_gmaxlapras24_title"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2024-12-08T16:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1733673600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
++      hidden: true
++      spriteId: "general1.ticket.1"
++      title: "general2.ticket.5._GOWA2024HatchVer1_title"
++      description: "text_rewards_key_GOWA2024HatchVer1"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T23:59:59"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732319999000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
+     }
+   }
+ }
+@@ -360123,13 +360135,14 @@
+       sku: "pgorelease.general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      spriteId: "general2.ticket.5"
+-      title: "general1.ticket.5_gmaxlapras24_title"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2024-12-08T16:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1733673600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
++      hidden: true
++      spriteId: "general1.ticket.1"
++      title: "general2.ticket.5._GOWA2024HatchVer1_title"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T23:59:59"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732319999000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
+     }
+   }
+ }
+@@ -365321,7 +365334,7 @@
+     }
+   }
+ }
+-batch_id: 1733623557895
++batch_id: 1733676759083
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -365358,7 +365354,6 @@
- experiment_id: 2402
- experiment_id: 3032
- experiment_id: 3033
--experiment_id: 3050
- experiment_id: 3063
- experiment_id: 3647
- experiment_id: 3685
-@@ -365370,8 +365365,7 @@
+@@ -365365,10 +365378,7 @@
  experiment_id: 3964
  experiment_id: 3968
  experiment_id: 3979
--experiment_id: 3985
--experiment_id: 3994
-+experiment_id: 3996
- experiment_id: 3999
+-experiment_id: 3996
+-experiment_id: 3999
  experiment_id: 4998
- experiment_id: 5105
+-experiment_id: 5105
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
