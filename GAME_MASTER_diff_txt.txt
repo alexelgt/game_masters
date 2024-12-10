@@ -1,149 +1,48 @@
---- GAME_MASTER_old.txt	2024-12-08 10:43:27.678321012 +0100
-+++ GAME_MASTER.txt	2024-12-09 08:18:24.296933130 +0100
-@@ -119868,8 +119868,8 @@
-   data {
-     template_id: "MP_SHARED_SETTINGS"
-     mpSettings {
--      numMpFromWalkQuest: 600
--      numMetersGoal: 500
-+      numMpFromWalkQuest: 300
-+      numMetersGoal: 2000
-       debugAllowRemoveWalkQuest: true
-       numMpFromLootStation: 100
-       numExtraMpFromFirstLootStation: 20
-@@ -119882,17 +119882,24 @@
-       }
-       battleMpCostPerTier {
-         breadBattleCatchMpCost: 400
-+        battleLevel: BREAD_BATTLE_LEVEL_2
+--- GAME_MASTER_old.txt	2024-12-09 08:18:24.296933130 +0100
++++ GAME_MASTER.txt	2024-12-10 08:16:49.153819984 +0100
+@@ -114944,8 +114944,8 @@
+         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
+         displayV2Enabled: true
+         backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_NecrozmaRaidDay"
+-        textRewardsKey: "text_rewards_key_NecrozmaRaidDay"
++        eventDatetimeRangeKey: "event_datetime_range_key_NecrozmaFusionRaidDay"
++        textRewardsKey: "text_rewards_key_NecrozmaFusionRaidDay"
+         iconRewards {
+           type: ITEM
+           item {
+@@ -365334,7 +365334,20 @@
+     }
+   }
+ }
+-batch_id: 1733676759083
++template {
++  template_id: "BREAD_CODE_GATE"
++  data {
++    template_id: "BREAD_CODE_GATE"
++    247 {
++      1: 1
++      3 {
++        1: "tappable_orb_code_gate"
++        2: 1
 +      }
-+      battleMpCostPerTier {
-+        breadBattleCatchMpCost: 400
-         battleLevel: BREAD_BATTLE_LEVEL_3
-       }
-       battleMpCostPerTier {
-         breadBattleCatchMpCost: 800
-+        battleLevel: BREAD_BATTLE_LEVEL_4
-+      }
-+      battleMpCostPerTier {
-+        breadBattleCatchMpCost: 800
-         battleLevel: BREAD_BATTLE_LEVEL_5
-       }
-       battleMpCostPerTier {
-         breadBattleCatchMpCost: 800
-         battleLevel: BREAD_DOUGH_BATTLE_LEVEL_1
-       }
--      ftueMpCapacity: 250
-     }
-   }
- }
-@@ -358421,13 +358428,15 @@
-       sku: "general2.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      spriteId: "general2.ticket.5"
--      title: "general1.ticket.5_gmaxlapras24_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2024-12-08T16:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1733673600000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
-+      hidden: true
-+      spriteId: "general1.ticket.1"
-+      title: "general2.ticket.5._GOWA2024HatchVer1_title"
-+      description: "text_rewards_key_GOWA2024HatchVer1"
-+      skuEnableTime: "2024-01-01T00:00:00"
-+      skuDisableTime: "2024-11-22T23:59:59"
-+      skuEnableTimeUtcMs: 1704067200000
-+      skuDisableTimeUtcMs: 1732319999000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
-     }
-   }
- }
-@@ -358439,13 +358448,14 @@
-       sku: "general2.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      spriteId: "general2.ticket.5"
--      title: "general1.ticket.5_gmaxlapras24_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2024-12-08T16:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1733673600000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
-+      hidden: true
-+      spriteId: "general1.ticket.1"
-+      title: "general2.ticket.5._GOWA2024HatchVer1_title"
-+      skuEnableTime: "2024-01-01T00:00:00"
-+      skuDisableTime: "2024-11-22T23:59:59"
-+      skuEnableTimeUtcMs: 1704067200000
-+      skuDisableTimeUtcMs: 1732319999000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
-     }
-   }
- }
-@@ -360105,13 +360115,15 @@
-       sku: "pgorelease.general2.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      spriteId: "general2.ticket.5"
--      title: "general1.ticket.5_gmaxlapras24_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2024-12-08T16:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1733673600000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
-+      hidden: true
-+      spriteId: "general1.ticket.1"
-+      title: "general2.ticket.5._GOWA2024HatchVer1_title"
-+      description: "text_rewards_key_GOWA2024HatchVer1"
-+      skuEnableTime: "2024-01-01T00:00:00"
-+      skuDisableTime: "2024-11-22T23:59:59"
-+      skuEnableTimeUtcMs: 1704067200000
-+      skuDisableTimeUtcMs: 1732319999000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
-     }
-   }
- }
-@@ -360123,13 +360135,14 @@
-       sku: "pgorelease.general2.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      spriteId: "general2.ticket.5"
--      title: "general1.ticket.5_gmaxlapras24_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2024-12-08T16:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1733673600000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
-+      hidden: true
-+      spriteId: "general1.ticket.1"
-+      title: "general2.ticket.5._GOWA2024HatchVer1_title"
-+      skuEnableTime: "2024-01-01T00:00:00"
-+      skuDisableTime: "2024-11-22T23:59:59"
-+      skuEnableTimeUtcMs: 1704067200000
-+      skuDisableTimeUtcMs: 1732319999000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/20241007_gowa_hatch_ticket_16x9.jpg"
-     }
-   }
- }
-@@ -365321,7 +365334,7 @@
-     }
-   }
- }
--batch_id: 1733623557895
-+batch_id: 1733676759083
++    }
++  }
++}
++batch_id: 1733782698055
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -365365,10 +365378,7 @@
+@@ -365376,9 +365389,11 @@
+ experiment_id: 3952
+ experiment_id: 3954
  experiment_id: 3964
- experiment_id: 3968
+-experiment_id: 3968
++experiment_id: 3969
  experiment_id: 3979
--experiment_id: 3996
--experiment_id: 3999
++experiment_id: 4691
  experiment_id: 4998
--experiment_id: 5105
++experiment_id: 5106
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
