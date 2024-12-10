@@ -1,48 +1,19 @@
---- GAME_MASTER_old.txt	2024-12-09 08:18:24.296933130 +0100
-+++ GAME_MASTER.txt	2024-12-10 08:16:49.153819984 +0100
-@@ -114944,8 +114944,8 @@
-         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
-         displayV2Enabled: true
-         backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/s17_necrozma_fusion_raid_day.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_NecrozmaRaidDay"
--        textRewardsKey: "text_rewards_key_NecrozmaRaidDay"
-+        eventDatetimeRangeKey: "event_datetime_range_key_NecrozmaFusionRaidDay"
-+        textRewardsKey: "text_rewards_key_NecrozmaFusionRaidDay"
-         iconRewards {
-           type: ITEM
-           item {
-@@ -365334,7 +365334,20 @@
+--- GAME_MASTER_old.txt	2024-12-10 08:16:49.153819984 +0100
++++ GAME_MASTER.txt	2024-12-10 08:47:47.901588921 +0100
+@@ -365338,11 +365338,11 @@
+   template_id: "BREAD_CODE_GATE"
+   data {
+     template_id: "BREAD_CODE_GATE"
+-    247 {
+-      1: 1
+-      3 {
+-        1: "tappable_orb_code_gate"
+-        2: 1
++    codeGateProto {
++      isEnabled: true
++      subCodeGateList {
++        name: "tappable_orb_code_gate"
++        isEnabled: true
+       }
      }
    }
- }
--batch_id: 1733676759083
-+template {
-+  template_id: "BREAD_CODE_GATE"
-+  data {
-+    template_id: "BREAD_CODE_GATE"
-+    247 {
-+      1: 1
-+      3 {
-+        1: "tappable_orb_code_gate"
-+        2: 1
-+      }
-+    }
-+  }
-+}
-+batch_id: 1733782698055
- experiment_id: 1
- experiment_id: 4
- experiment_id: 6
-@@ -365376,9 +365389,11 @@
- experiment_id: 3952
- experiment_id: 3954
- experiment_id: 3964
--experiment_id: 3968
-+experiment_id: 3969
- experiment_id: 3979
-+experiment_id: 4691
- experiment_id: 4998
-+experiment_id: 5106
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
