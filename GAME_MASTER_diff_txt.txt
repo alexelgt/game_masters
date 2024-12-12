@@ -1,61 +1,179 @@
---- GAME_MASTER_old.txt	2024-12-10 08:47:47.901588921 +0100
-+++ GAME_MASTER.txt	2024-12-11 08:42:04.008437853 +0100
-@@ -340705,7 +340705,7 @@
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
-       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
-     }
-   }
-@@ -345809,12 +345809,9 @@
-       sku: "bundle.s17seasonstart.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-+      hidden: true
-       spriteId: "bundle.general2.medium.2"
-       title: "dual_destiny_box"
--      skuEnableTime: "2019-10-31T21:00:00"
--      skuDisableTime: "2024-12-10T20:00:00"
--      skuEnableTimeUtcMs: 1572555600000
--      skuDisableTimeUtcMs: 1733860800000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 295
-@@ -365347,7 +365344,7 @@
+--- GAME_MASTER_old.txt	2024-12-11 08:42:04.008437853 +0100
++++ GAME_MASTER.txt	2024-12-12 08:34:01.183775066 +0100
+@@ -119900,6 +119900,7 @@
+         breadBattleCatchMpCost: 800
+         battleLevel: BREAD_DOUGH_BATTLE_LEVEL_1
+       }
++      ftueMpCapacity: 250
      }
    }
  }
--batch_id: 1733782698055
-+batch_id: 1733888736355
+@@ -358174,14 +358175,16 @@
+     iapItemDisplay {
+       sku: "general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
+-      spriteId: "general1.ticket.5"
+-      title: "general1.ticket.5_DecMonthly2024_title"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2024-12-11T20:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1733947200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++      sortOrder: 1
++      hidden: true
++      spriteId: "general1.ticket.1"
++      title: "general1.ticket.5._GOWA2024RaidVer1_title"
++      description: "text_rewards_key_GOWA2024RaidVer1"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T20:00:00"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732305600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
+     }
+   }
+ }
+@@ -358192,14 +358195,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
+-      spriteId: "general1.ticket.5"
+-      title: "general1.ticket.5_DecMonthly2024_title"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2024-12-11T20:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1733947200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++      sortOrder: 1
++      hidden: true
++      spriteId: "general1.ticket.1"
++      title: "general1.ticket.5._GOWA2024RaidVer1_title"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T20:00:00"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732305600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
+     }
+   }
+ }
+@@ -359880,14 +359884,16 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
+-      spriteId: "general1.ticket.5"
+-      title: "general1.ticket.5_DecMonthly2024_title"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2024-12-11T20:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1733947200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++      sortOrder: 1
++      hidden: true
++      spriteId: "general1.ticket.1"
++      title: "general1.ticket.5._GOWA2024RaidVer1_title"
++      description: "text_rewards_key_GOWA2024RaidVer1"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T20:00:00"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732305600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
+     }
+   }
+ }
+@@ -359898,14 +359904,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
+-      spriteId: "general1.ticket.5"
+-      title: "general1.ticket.5_DecMonthly2024_title"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2024-12-11T20:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1733947200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++      sortOrder: 1
++      hidden: true
++      spriteId: "general1.ticket.1"
++      title: "general1.ticket.5._GOWA2024RaidVer1_title"
++      skuEnableTime: "2024-01-01T00:00:00"
++      skuDisableTime: "2024-11-22T20:00:00"
++      skuEnableTimeUtcMs: 1704067200000
++      skuDisableTimeUtcMs: 1732305600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
+     }
+   }
+ }
+@@ -365279,17 +365286,6 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "bundle.cswkmakegoodprep.100.1"
+   data {
+     template_id: "bundle.cswkmakegoodprep.100.1"
+@@ -365344,7 +365340,32 @@
+     }
+   }
+ }
+-batch_id: 1733888736355
++template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++template {
++  template_id: "BADGE_PARTY_CHALLENGES_COMPLETED"
++  data {
++    template_id: "BADGE_PARTY_CHALLENGES_COMPLETED"
++    badge_settings {
++      badgeType: BADGE_PARTY_CHALLENGES_COMPLETED
++      badgeRank: 5
++      targets: 10
++      targets: 50
++      targets: 100
++      targets: 200
++    }
++  }
++}
++batch_id: 1733976462522
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -365355,9 +365352,8 @@
- experiment_id: 11
- experiment_id: 21
- experiment_id: 101
--experiment_id: 149
- experiment_id: 150
--experiment_id: 152
-+experiment_id: 153
- experiment_id: 300
- experiment_id: 302
- experiment_id: 311
-@@ -365373,7 +365369,6 @@
- experiment_id: 1820
- experiment_id: 2244
- experiment_id: 2248
--experiment_id: 2251
- experiment_id: 2301
- experiment_id: 2399
- experiment_id: 2400
-@@ -365391,6 +365386,7 @@
- experiment_id: 3964
+@@ -365387,9 +365408,8 @@
  experiment_id: 3969
  experiment_id: 3979
-+experiment_id: 3988
- experiment_id: 4691
+ experiment_id: 3988
+-experiment_id: 4691
++experiment_id: 4930
  experiment_id: 4998
- experiment_id: 5106
+-experiment_id: 5106
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+@@ -365397,7 +365417,6 @@
+ experiment_id: 5508
+ experiment_id: 5510
+ experiment_id: 6075
+-experiment_id: 8961
+ experiment_id: 8968
+ experiment_id: 9523
+ experiment_id: 9531
