@@ -1,15 +1,42 @@
---- GAME_MASTER_old.txt	2024-12-12 19:54:24.882760857 +0100
-+++ GAME_MASTER.txt	2024-12-12 19:59:07.439803404 +0100
-@@ -365365,9 +365365,9 @@
-   template_id: "ACCESSIBILITY_CLIENT_SETTINGS"
-   data {
-     template_id: "ACCESSIBILITY_CLIENT_SETTINGS"
--    235 {
--      1: 1
--      2: 1
-+    accessibilitySettings {
-+      enabled: true
-+      pluginEnabled: true
+--- GAME_MASTER_old.txt	2024-12-12 19:59:07.439803404 +0100
++++ GAME_MASTER.txt	2024-12-13 08:12:38.727103984 +0100
+@@ -365371,7 +365371,22 @@
      }
    }
  }
+-batch_id: 1734028943234
++template {
++  template_id: "bundle.cdrecapstickers.1"
++  data {
++    template_id: "bundle.cdrecapstickers.1"
++    iapItemDisplay {
++      sku: "bundle.cdrecapstickers.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      sale: true
++      spriteId: "bundle.general.adventure.1"
++      title: "sticker_box"
++    }
++  }
++}
++batch_id: 1734065007949
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -365415,7 +365430,6 @@
+ experiment_id: 3979
+ experiment_id: 3988
+ experiment_id: 4929
+-experiment_id: 4930
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+@@ -365428,6 +365442,7 @@
+ experiment_id: 9523
+ experiment_id: 9531
+ experiment_id: 9542
++experiment_id: 9545
+ experiment_id: 9551
+ experiment_id: 20947
+ experiment_id: 80000
