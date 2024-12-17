@@ -1,88 +1,2059 @@
---- GAME_MASTER_old.txt	2024-12-14 13:38:17.606673706 +0100
-+++ GAME_MASTER.txt	2024-12-16 08:14:43.281949161 +0100
-@@ -138741,7 +138741,7 @@
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
-       enabled: true
--      dailySquashLimit: 20
-+      dailySquashLimit: 5
+--- GAME_MASTER_old.txt	2024-12-16 08:14:43.281949161 +0100
++++ GAME_MASTER.txt	2024-12-17 08:40:43.905436162 +0100
+@@ -1,4 +1,14 @@
+ template {
++  template_id: "ACCESSIBILITY_CLIENT_SETTINGS"
++  data {
++    template_id: "ACCESSIBILITY_CLIENT_SETTINGS"
++    accessibilitySettings {
++      enabled: true
++      pluginEnabled: true
++    }
++  }
++}
++template {
+   template_id: "ADDITIVE_SCENE_SETTINGS"
+   data {
+     template_id: "ADDITIVE_SCENE_SETTINGS"
+@@ -37098,6 +37108,20 @@
+   }
+ }
+ template {
++  template_id: "BADGE_PARTY_CHALLENGES_COMPLETED"
++  data {
++    template_id: "BADGE_PARTY_CHALLENGES_COMPLETED"
++    badge_settings {
++      badgeType: BADGE_PARTY_CHALLENGES_COMPLETED
++      badgeRank: 5
++      targets: 10
++      targets: 50
++      targets: 100
++      targets: 200
++    }
++  }
++}
++template {
+   template_id: "BADGE_PHOTOBOMB"
+   data {
+     template_id: "BADGE_PHOTOBOMB"
+@@ -39621,6 +39645,19 @@
+   }
+ }
+ template {
++  template_id: "BREAD_CODE_GATE"
++  data {
++    template_id: "BREAD_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++      subCodeGateList {
++        name: "tappable_orb_code_gate"
++        isEnabled: true
++      }
++    }
++  }
++}
++template {
+   template_id: "BREAD_FEATURE_FLAGS"
+   data {
+     template_id: "BREAD_FEATURE_FLAGS"
+@@ -114880,28 +114917,43 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-12-08T14:00:00"
+-        eventEndTime: "2024-12-08T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_gmaxlapras24"
++        eventStartTime: "2024-12-22T10:00:00"
++        eventEndTime: "2024-12-27T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_MonochromeHolidaysDec2024"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_05_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Wooloo_Set_Ticket_1024x512_nmo_v1.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_gmaxlapras24"
+-        textRewardsKey: "text_rewards_key_gmaxlapras24"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-holidaypt2-nologo-2024.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_MonochromeHolidaysDec2024"
++        textRewardsKey: "text_rewards_key_MonochromeHolidaysDec2024"
++        iconRewards {
++          type: AVATAR_CLOTHING
++          neutralAvatarItemTemplate {
++            itemTemplateId: "N_AVATAR_n_shirt_holiday2024-wooloojacket_0"
++            displayTemplateId: "N_DISPLAY_n_shirt_holiday2024-wooloojacket_0"
++          }
++        }
++        iconRewards {
++          type: POKEMON_ENCOUNTER
++          pokemon_encounter {
++            pokemon_id: WOOLOO
++            pokemonDisplay {
++              costume: 80
++            }
++          }
++        }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_MAX_BOOST
+-            amount: 1
++            item: ITEM_TROY_DISK_GLACIAL
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1733666400000
+-        clientEventEndTimeUtcMs: 1733677200000
++        clientEventStartTimeUtcMs: 1734861600000
++        clientEventEndTimeUtcMs: 1735329600000
+       }
+-      descriptionOverride: "item_event_ticket_gray_desc_gmaxlapras24"
++      descriptionOverride: "item_event_ticket_evergreen_desc_MonochromeHolidaysDec2024"
      }
    }
  }
-@@ -345273,15 +345273,9 @@
-       sku: "bundle.hisuiraidday2023.1"
+@@ -114914,16 +114966,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-12-08T14:00:00"
+-        eventEndTime: "2024-12-08T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_gmaxlapras24"
++        eventStartTime: "2024-12-22T10:00:00"
++        eventEndTime: "2024-12-27T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_MonochromeHolidaysDec2024"
+         ticketItem: ITEM_EVENT_TICKET_05
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_GMAX_Lapras_MAX_1024x512_nmo_sku_v3.jpg"
+-        clientEventStartTimeUtcMs: 1733666400000
+-        clientEventEndTimeUtcMs: 1733677200000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_Wooloo_Set_Ticket_1024x512_nmo_v1.jpg"
++        clientEventStartTimeUtcMs: 1734861600000
++        clientEventEndTimeUtcMs: 1735329600000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_gmaxlapras24"
++      descriptionOverride: "item_event_ticket_evergreen_details_MonochromeHolidaysDec2024"
+     }
+   }
+ }
+@@ -115002,33 +115054,42 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-11-03T00:00:00"
+-        eventEndTime: "2024-12-02T23:59:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_MonthlyTicketNov24"
++        eventStartTime: "2024-12-21T09:00:00"
++        eventEndTime: "2024-12-22T21:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_RECAP2024"
+         giftable: true
+-        giftItem: ITEM_EVENT_TICKET_07_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
++        giftItem: ITEM_EVENT_TICKET_PINK_TO_GIFT
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-cdrecap2024-nologo-2024.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_MonthlyTicketNov24"
+-        textRewardsKey: "text_rewards_key_MonthlyTicketNov24"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-cdrecap2024-nologo-2024.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CD_RECAP2024"
++        textRewardsKey: "text_rewards_key_CD_RECAP2024"
+         iconRewards {
+-          type: POKECOIN
+-          pokecoin: 20
++          type: ITEM
++          item {
++            item: ITEM_POFFIN
++            amount: 1
++          }
+         }
+         iconRewards {
+-          type: EXPERIENCE
+-          exp: 15000
++          type: ITEM
++          item {
++            item: ITEM_MOVE_REROLL_ELITE_SPECIAL_ATTACK
++            amount: 1
++          }
+         }
+         iconRewards {
+-          type: STARDUST
+-          stardust: 15000
++          type: ITEM
++          item {
++            item: ITEM_RARE_CANDY
++            amount: 3
++          }
+         }
+-        detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1730592000000
+-        clientEventEndTimeUtcMs: 1733183940000
++        detailsLinkKey: "details_link_key_CD_RECAP2024"
++        clientEventStartTimeUtcMs: 1734771600000
++        clientEventEndTimeUtcMs: 1734901200000
+       }
+-      descriptionOverride: "item_event_ticket_gray_details_MonthlyTicketNov24"
++      descriptionOverride: "item_event_ticket_pink_desc_CD_RECAP2024"
+     }
+   }
+ }
+@@ -115041,16 +115102,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-11-03T00:00:00"
+-        eventEndTime: "2024-12-02T23:59:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_MonthlyTicketNov24"
++        eventStartTime: "2024-12-21T09:00:00"
++        eventEndTime: "2024-12-22T21:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_details_CD_RECAP2024"
+         ticketItem: ITEM_EVENT_TICKET_07
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/20240813_pgo_s16_dailycoinbounty_1024x512.jpg"
+-        clientEventStartTimeUtcMs: 1730592000000
+-        clientEventEndTimeUtcMs: 1733183940000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-cdrecap2024-nologo-2024.jpg"
++        clientEventStartTimeUtcMs: 1734771600000
++        clientEventEndTimeUtcMs: 1734901200000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_MonthlyTicketNov24"
++      descriptionOverride: "item_event_ticket_pink_details_CD_RECAP2024"
+     }
+   }
+ }
+@@ -120804,6 +120865,16 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_backpack_egg-incubator_0"
++  data {
++    template_id: "N_DISPLAY_n_backpack_egg-incubator_0"
++    avatarItemDisplay {
++      iconAddress: "n_backpack_egg-incubator_0_icon"
++      displayStringId: "avatar_backpack_eggincubator"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_backpack_eggbackpack_0"
+   data {
+     template_id: "N_DISPLAY_n_backpack_eggbackpack_0"
+@@ -128562,6 +128633,16 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_shirt_holiday2024-wooloojacket_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_holiday2024-wooloojacket_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_holiday2024-wooloojacket_0_icon"
++      displayStringId: "avatar_shirt_wooloojacket"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_shirt_holifestival2021black_0"
+   data {
+     template_id: "N_DISPLAY_n_shirt_holifestival2021black_0"
+@@ -138473,6 +138554,17 @@
+   }
+ }
+ template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++template {
+   template_id: "QUEST_EVOLUTION_SETTINGS"
+   data {
+     template_id: "QUEST_EVOLUTION_SETTINGS"
+@@ -165982,6 +166074,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_BELLSPROUTCD_1.3"
++  data {
++    template_id: "STICKER_BELLSPROUTCD_1.3"
++    iapItemDisplay {
++      sku: "STICKER_BELLSPROUTCD_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 44
++    }
++  }
++}
++template {
++  template_id: "STICKER_BELLSPROUTCD_1.5"
++  data {
++    template_id: "STICKER_BELLSPROUTCD_1.5"
++    iapItemDisplay {
++      sku: "STICKER_BELLSPROUTCD_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 43
++    }
++  }
++}
++template {
+   template_id: "STICKER_BELLSPROUTCD_2"
+   data {
+     template_id: "STICKER_BELLSPROUTCD_2"
+@@ -165995,6 +166109,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_BELLSPROUTCD_2.3"
++  data {
++    template_id: "STICKER_BELLSPROUTCD_2.3"
++    iapItemDisplay {
++      sku: "STICKER_BELLSPROUTCD_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 42
++    }
++  }
++}
++template {
++  template_id: "STICKER_BELLSPROUTCD_2.5"
++  data {
++    template_id: "STICKER_BELLSPROUTCD_2.5"
++    iapItemDisplay {
++      sku: "STICKER_BELLSPROUTCD_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 41
++    }
++  }
++}
++template {
+   template_id: "STICKER_BELLSPROUTCD_3"
+   data {
+     template_id: "STICKER_BELLSPROUTCD_3"
+@@ -166008,6 +166144,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_BELLSPROUTCD_3.3"
++  data {
++    template_id: "STICKER_BELLSPROUTCD_3.3"
++    iapItemDisplay {
++      sku: "STICKER_BELLSPROUTCD_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 40
++    }
++  }
++}
++template {
++  template_id: "STICKER_BELLSPROUTCD_3.5"
++  data {
++    template_id: "STICKER_BELLSPROUTCD_3.5"
++    iapItemDisplay {
++      sku: "STICKER_BELLSPROUTCD_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 39
++    }
++  }
++}
++template {
+   template_id: "STICKER_BELLSPROUTCD_4"
+   data {
+     template_id: "STICKER_BELLSPROUTCD_4"
+@@ -166021,6 +166179,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_BELLSPROUTCD_4.3"
++  data {
++    template_id: "STICKER_BELLSPROUTCD_4.3"
++    iapItemDisplay {
++      sku: "STICKER_BELLSPROUTCD_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 38
++    }
++  }
++}
++template {
++  template_id: "STICKER_BELLSPROUTCD_4.5"
++  data {
++    template_id: "STICKER_BELLSPROUTCD_4.5"
++    iapItemDisplay {
++      sku: "STICKER_BELLSPROUTCD_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 37
++    }
++  }
++}
++template {
+   template_id: "STICKER_BIDOOFDAY_1"
+   data {
+     template_id: "STICKER_BIDOOFDAY_1"
+@@ -166145,6 +166325,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_BOUNSWEETCD2024_1.3"
++  data {
++    template_id: "STICKER_BOUNSWEETCD2024_1.3"
++    iapItemDisplay {
++      sku: "STICKER_BOUNSWEETCD2024_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 52
++    }
++  }
++}
++template {
++  template_id: "STICKER_BOUNSWEETCD2024_1.5"
++  data {
++    template_id: "STICKER_BOUNSWEETCD2024_1.5"
++    iapItemDisplay {
++      sku: "STICKER_BOUNSWEETCD2024_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 51
++    }
++  }
++}
++template {
+   template_id: "STICKER_BOUNSWEETCD2024_2"
+   data {
+     template_id: "STICKER_BOUNSWEETCD2024_2"
+@@ -166158,6 +166360,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_BOUNSWEETCD2024_2.3"
++  data {
++    template_id: "STICKER_BOUNSWEETCD2024_2.3"
++    iapItemDisplay {
++      sku: "STICKER_BOUNSWEETCD2024_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 50
++    }
++  }
++}
++template {
++  template_id: "STICKER_BOUNSWEETCD2024_2.5"
++  data {
++    template_id: "STICKER_BOUNSWEETCD2024_2.5"
++    iapItemDisplay {
++      sku: "STICKER_BOUNSWEETCD2024_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 49
++    }
++  }
++}
++template {
+   template_id: "STICKER_BOUNSWEETCD2024_3"
+   data {
+     template_id: "STICKER_BOUNSWEETCD2024_3"
+@@ -166171,6 +166395,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_BOUNSWEETCD2024_3.3"
++  data {
++    template_id: "STICKER_BOUNSWEETCD2024_3.3"
++    iapItemDisplay {
++      sku: "STICKER_BOUNSWEETCD2024_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 48
++    }
++  }
++}
++template {
++  template_id: "STICKER_BOUNSWEETCD2024_3.5"
++  data {
++    template_id: "STICKER_BOUNSWEETCD2024_3.5"
++    iapItemDisplay {
++      sku: "STICKER_BOUNSWEETCD2024_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 47
++    }
++  }
++}
++template {
+   template_id: "STICKER_BOUNSWEETCD2024_4"
+   data {
+     template_id: "STICKER_BOUNSWEETCD2024_4"
+@@ -166184,6 +166430,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_BOUNSWEETCD2024_4.3"
++  data {
++    template_id: "STICKER_BOUNSWEETCD2024_4.3"
++    iapItemDisplay {
++      sku: "STICKER_BOUNSWEETCD2024_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 46
++    }
++  }
++}
++template {
++  template_id: "STICKER_BOUNSWEETCD2024_4.5"
++  data {
++    template_id: "STICKER_BOUNSWEETCD2024_4.5"
++    iapItemDisplay {
++      sku: "STICKER_BOUNSWEETCD2024_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 45
++    }
++  }
++}
++template {
+   template_id: "STICKER_BREADKOREA_001"
+   data {
+     template_id: "STICKER_BREADKOREA_001"
+@@ -166275,6 +166543,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_CHANSEYCD_1.3"
++  data {
++    template_id: "STICKER_CHANSEYCD_1.3"
++    iapItemDisplay {
++      sku: "STICKER_CHANSEYCD_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 28
++    }
++  }
++}
++template {
++  template_id: "STICKER_CHANSEYCD_1.5"
++  data {
++    template_id: "STICKER_CHANSEYCD_1.5"
++    iapItemDisplay {
++      sku: "STICKER_CHANSEYCD_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 27
++    }
++  }
++}
++template {
+   template_id: "STICKER_CHANSEYCD_2"
+   data {
+     template_id: "STICKER_CHANSEYCD_2"
+@@ -166288,6 +166578,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_CHANSEYCD_2.3"
++  data {
++    template_id: "STICKER_CHANSEYCD_2.3"
++    iapItemDisplay {
++      sku: "STICKER_CHANSEYCD_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 26
++    }
++  }
++}
++template {
++  template_id: "STICKER_CHANSEYCD_2.5"
++  data {
++    template_id: "STICKER_CHANSEYCD_2.5"
++    iapItemDisplay {
++      sku: "STICKER_CHANSEYCD_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 25
++    }
++  }
++}
++template {
+   template_id: "STICKER_CHANSEYCD_3"
+   data {
+     template_id: "STICKER_CHANSEYCD_3"
+@@ -166301,6 +166613,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_CHANSEYCD_3.3"
++  data {
++    template_id: "STICKER_CHANSEYCD_3.3"
++    iapItemDisplay {
++      sku: "STICKER_CHANSEYCD_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 24
++    }
++  }
++}
++template {
++  template_id: "STICKER_CHANSEYCD_3.5"
++  data {
++    template_id: "STICKER_CHANSEYCD_3.5"
++    iapItemDisplay {
++      sku: "STICKER_CHANSEYCD_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 23
++    }
++  }
++}
++template {
+   template_id: "STICKER_CHANSEYCD_4"
+   data {
+     template_id: "STICKER_CHANSEYCD_4"
+@@ -166314,6 +166648,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_CHANSEYCD_4.3"
++  data {
++    template_id: "STICKER_CHANSEYCD_4.3"
++    iapItemDisplay {
++      sku: "STICKER_CHANSEYCD_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 22
++    }
++  }
++}
++template {
++  template_id: "STICKER_CHANSEYCD_4.5"
++  data {
++    template_id: "STICKER_CHANSEYCD_4.5"
++    iapItemDisplay {
++      sku: "STICKER_CHANSEYCD_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 21
++    }
++  }
++}
++template {
+   template_id: "STICKER_CHARIZARD_1"
+   data {
+     template_id: "STICKER_CHARIZARD_1"
+@@ -169093,6 +169449,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_GOOMYCD_1.3"
++  data {
++    template_id: "STICKER_GOOMYCD_1.3"
++    iapItemDisplay {
++      sku: "STICKER_GOOMYCD_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 60
++    }
++  }
++}
++template {
++  template_id: "STICKER_GOOMYCD_1.5"
++  data {
++    template_id: "STICKER_GOOMYCD_1.5"
++    iapItemDisplay {
++      sku: "STICKER_GOOMYCD_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 59
++    }
++  }
++}
++template {
+   template_id: "STICKER_GOOMYCD_2"
+   data {
+     template_id: "STICKER_GOOMYCD_2"
+@@ -169107,6 +169485,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_GOOMYCD_2.3"
++  data {
++    template_id: "STICKER_GOOMYCD_2.3"
++    iapItemDisplay {
++      sku: "STICKER_GOOMYCD_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 58
++    }
++  }
++}
++template {
++  template_id: "STICKER_GOOMYCD_2.5"
++  data {
++    template_id: "STICKER_GOOMYCD_2.5"
++    iapItemDisplay {
++      sku: "STICKER_GOOMYCD_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 57
++    }
++  }
++}
++template {
+   template_id: "STICKER_GOOMYCD_3"
+   data {
+     template_id: "STICKER_GOOMYCD_3"
+@@ -169121,6 +169521,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_GOOMYCD_3.3"
++  data {
++    template_id: "STICKER_GOOMYCD_3.3"
++    iapItemDisplay {
++      sku: "STICKER_GOOMYCD_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 56
++    }
++  }
++}
++template {
++  template_id: "STICKER_GOOMYCD_3.5"
++  data {
++    template_id: "STICKER_GOOMYCD_3.5"
++    iapItemDisplay {
++      sku: "STICKER_GOOMYCD_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 55
++    }
++  }
++}
++template {
+   template_id: "STICKER_GOOMYCD_4"
+   data {
+     template_id: "STICKER_GOOMYCD_4"
+@@ -169135,6 +169557,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_GOOMYCD_4.3"
++  data {
++    template_id: "STICKER_GOOMYCD_4.3"
++    iapItemDisplay {
++      sku: "STICKER_GOOMYCD_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 54
++    }
++  }
++}
++template {
++  template_id: "STICKER_GOOMYCD_4.5"
++  data {
++    template_id: "STICKER_GOOMYCD_4.5"
++    iapItemDisplay {
++      sku: "STICKER_GOOMYCD_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 53
++    }
++  }
++}
++template {
+   template_id: "STICKER_GOTOUR2021"
+   data {
+     template_id: "STICKER_GOTOUR2021"
+@@ -171207,6 +171651,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_LITTENCD_1.3"
++  data {
++    template_id: "STICKER_LITTENCD_1.3"
++    iapItemDisplay {
++      sku: "STICKER_LITTENCD_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 36
++    }
++  }
++}
++template {
++  template_id: "STICKER_LITTENCD_1.5"
++  data {
++    template_id: "STICKER_LITTENCD_1.5"
++    iapItemDisplay {
++      sku: "STICKER_LITTENCD_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 35
++    }
++  }
++}
++template {
+   template_id: "STICKER_LITTENCD_2"
+   data {
+     template_id: "STICKER_LITTENCD_2"
+@@ -171220,6 +171686,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_LITTENCD_2.3"
++  data {
++    template_id: "STICKER_LITTENCD_2.3"
++    iapItemDisplay {
++      sku: "STICKER_LITTENCD_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 34
++    }
++  }
++}
++template {
++  template_id: "STICKER_LITTENCD_2.5"
++  data {
++    template_id: "STICKER_LITTENCD_2.5"
++    iapItemDisplay {
++      sku: "STICKER_LITTENCD_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 33
++    }
++  }
++}
++template {
+   template_id: "STICKER_LITTENCD_3"
+   data {
+     template_id: "STICKER_LITTENCD_3"
+@@ -171233,6 +171721,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_LITTENCD_3.3"
++  data {
++    template_id: "STICKER_LITTENCD_3.3"
++    iapItemDisplay {
++      sku: "STICKER_LITTENCD_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 32
++    }
++  }
++}
++template {
++  template_id: "STICKER_LITTENCD_3.5"
++  data {
++    template_id: "STICKER_LITTENCD_3.5"
++    iapItemDisplay {
++      sku: "STICKER_LITTENCD_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 31
++    }
++  }
++}
++template {
+   template_id: "STICKER_LITTENCD_4"
+   data {
+     template_id: "STICKER_LITTENCD_4"
+@@ -171246,6 +171756,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_LITTENCD_4.3"
++  data {
++    template_id: "STICKER_LITTENCD_4.3"
++    iapItemDisplay {
++      sku: "STICKER_LITTENCD_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 30
++    }
++  }
++}
++template {
++  template_id: "STICKER_LITTENCD_4.5"
++  data {
++    template_id: "STICKER_LITTENCD_4.5"
++    iapItemDisplay {
++      sku: "STICKER_LITTENCD_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 29
++    }
++  }
++}
++template {
+   template_id: "STICKER_LITWICK_1"
+   data {
+     template_id: "STICKER_LITWICK_1"
+@@ -174433,6 +174965,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_ROWLETCD_1.3"
++  data {
++    template_id: "STICKER_ROWLETCD_1.3"
++    iapItemDisplay {
++      sku: "STICKER_ROWLETCD_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 20
++    }
++  }
++}
++template {
++  template_id: "STICKER_ROWLETCD_1.5"
++  data {
++    template_id: "STICKER_ROWLETCD_1.5"
++    iapItemDisplay {
++      sku: "STICKER_ROWLETCD_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 19
++    }
++  }
++}
++template {
+   template_id: "STICKER_ROWLETCD_2"
+   data {
+     template_id: "STICKER_ROWLETCD_2"
+@@ -174447,6 +175001,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_ROWLETCD_2.3"
++  data {
++    template_id: "STICKER_ROWLETCD_2.3"
++    iapItemDisplay {
++      sku: "STICKER_ROWLETCD_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 18
++    }
++  }
++}
++template {
++  template_id: "STICKER_ROWLETCD_2.5"
++  data {
++    template_id: "STICKER_ROWLETCD_2.5"
++    iapItemDisplay {
++      sku: "STICKER_ROWLETCD_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 17
++    }
++  }
++}
++template {
+   template_id: "STICKER_ROWLETCD_3"
+   data {
+     template_id: "STICKER_ROWLETCD_3"
+@@ -174461,6 +175037,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_ROWLETCD_3.3"
++  data {
++    template_id: "STICKER_ROWLETCD_3.3"
++    iapItemDisplay {
++      sku: "STICKER_ROWLETCD_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 16
++    }
++  }
++}
++template {
++  template_id: "STICKER_ROWLETCD_3.5"
++  data {
++    template_id: "STICKER_ROWLETCD_3.5"
++    iapItemDisplay {
++      sku: "STICKER_ROWLETCD_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 15
++    }
++  }
++}
++template {
+   template_id: "STICKER_ROWLETCD_4"
+   data {
+     template_id: "STICKER_ROWLETCD_4"
+@@ -174475,6 +175073,28 @@
+   }
+ }
+ template {
++  template_id: "STICKER_ROWLETCD_4.3"
++  data {
++    template_id: "STICKER_ROWLETCD_4.3"
++    iapItemDisplay {
++      sku: "STICKER_ROWLETCD_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 14
++    }
++  }
++}
++template {
++  template_id: "STICKER_ROWLETCD_4.5"
++  data {
++    template_id: "STICKER_ROWLETCD_4.5"
++    iapItemDisplay {
++      sku: "STICKER_ROWLETCD_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 13
++    }
++  }
++}
++template {
+   template_id: "STICKER_SANDSHREW_1"
+   data {
+     template_id: "STICKER_SANDSHREW_1"
+@@ -240789,6 +241409,9 @@
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 20
+       buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 200
++      buddyPortraitOffset: -1200
+       third_move {
+         stardustToUnlock: 10000
+         candyToUnlock: 25
+@@ -241046,7 +241669,7 @@
+     pokemonFamily {
+       familyId: FAMILY_RALTS
+       candyPerXlCandy: 100
+-      megaEvolvablePokemonId: GARDEVOIR
++      4: "\232\002\333\003"
+     }
+   }
+ }
+@@ -241160,10 +241783,18 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 2
+-      buddyWalkedMegaEnergyAward: 25
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
++      53 {
++        1: 282
++        2: 25
++      }
++      53 {
++        1: 475
++        2: 25
++        3: 1
++      }
+     }
+   }
+ }
+@@ -241256,10 +241887,18 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 2
+-      buddyWalkedMegaEnergyAward: 25
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
++      53 {
++        1: 282
++        2: 25
++      }
++      53 {
++        1: 475
++        2: 25
++        3: 1
++      }
+     }
+   }
+ }
+@@ -241388,10 +242027,18 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 2
+-      buddyWalkedMegaEnergyAward: 25
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
++      53 {
++        1: 282
++        2: 25
++      }
++      53 {
++        1: 475
++        2: 25
++        3: 1
++      }
+     }
+   }
+ }
+@@ -241499,10 +242146,18 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 2
+-      buddyWalkedMegaEnergyAward: 25
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
++      53 {
++        1: 282
++        2: 25
++      }
++      53 {
++        1: 475
++        2: 25
++        3: 1
++      }
+     }
+   }
+ }
+@@ -241635,10 +242290,18 @@
+         typeOverride1: POKEMON_TYPE_PSYCHIC
+         typeOverride2: POKEMON_TYPE_FAIRY
+       }
+-      buddyWalkedMegaEnergyAward: 25
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
++      53 {
++        1: 282
++        2: 25
++      }
++      53 {
++        1: 475
++        2: 25
++        3: 1
++      }
+     }
+   }
+ }
+@@ -241751,10 +242414,18 @@
+         typeOverride1: POKEMON_TYPE_PSYCHIC
+         typeOverride2: POKEMON_TYPE_FAIRY
+       }
+-      buddyWalkedMegaEnergyAward: 25
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
++      53 {
++        1: 282
++        2: 25
++      }
++      53 {
++        1: 475
++        2: 25
++        3: 1
++      }
+     }
+   }
+ }
+@@ -274546,10 +275217,18 @@
+         modelScaleV2: 0.9
+         modelHeight: 1.8
+       }
+-      buddyWalkedMegaEnergyAward: 25
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
++      53 {
++        1: 282
++        2: 25
++      }
++      53 {
++        1: 475
++        2: 25
++        3: 1
++      }
+     }
+   }
+ }
+@@ -274667,10 +275346,18 @@
+         modelScaleV2: 0.9
+         modelHeight: 1.8
+       }
+-      buddyWalkedMegaEnergyAward: 25
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
++      53 {
++        1: 282
++        2: 25
++      }
++      53 {
++        1: 475
++        2: 25
++        3: 1
++      }
+     }
+   }
+ }
+@@ -282827,6 +283514,7 @@
+     pokemonFamily {
+       familyId: FAMILY_AUDINO
+       candyPerXlCandy: 100
++      megaEvolvablePokemonId: AUDINO
+     }
+   }
+ }
+@@ -323772,7 +324460,7 @@
+         dodgeProbability: 0.3
+         dodgeDurationS: 1
+         dodgeDistance: 0.5
+-        cameraDistance: 5
++        cameraDistance: 6
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 2
+@@ -323795,8 +324483,8 @@
+       familyId: FAMILY_ROOKIDEE
+       kmBuddyDistance: 1
+       buddy_size: BUDDY_BIG
+-      modelHeight: 2.57
+-      modelScaleV2: 0.86
++      modelHeight: 2.2
++      modelScaleV2: 1
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -324296,7 +324984,7 @@
+       pokemonId: WOOLOO
+       type: POKEMON_TYPE_NORMAL
+       camera {
+-        cylinderRadiusM: 0.33
++        cylinderRadiusM: 0.6
+         cylinderHeightM: 0.68
+       }
+       encounter {
+@@ -324343,7 +325031,7 @@
+       buddyScale: 19
+       buddyPortraitOffset: 0
+       buddyPortraitOffset: 60
+-      buddyPortraitOffset: 450
++      buddyPortraitOffset: 0
+       third_move {
+         stardustToUnlock: 10000
+         candyToUnlock: 25
+@@ -324367,7 +325055,7 @@
+       pokemonId: DUBWOOL
+       type: POKEMON_TYPE_NORMAL
+       camera {
+-        cylinderRadiusM: 0.58
++        cylinderRadiusM: 1
+         cylinderHeightM: 1.45
+       }
+       encounter {
+@@ -335070,13 +335758,19 @@
+       type: POKEMON_TYPE_POISON
+       type2: POKEMON_TYPE_NORMAL
+       camera {
++        cylinderRadiusM: 0.25
++        cylinderHeightM: 0.2
+       }
+       encounter {
++        collisionRadiusM: 0.1
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.15
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+@@ -335096,10 +335790,13 @@
+       weightStdDev: 0.0875
+       familyId: FAMILY_SHROODLE
+       kmBuddyDistance: 3
++      modelHeight: 0.2
+       evolutionBranch {
+         evolution: GRAFAIAI
+         candyCost: 50
+       }
++      modelScaleV2: 1.85
++      buddyScale: 10
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -335107,6 +335804,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 1
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -335122,8 +335820,13 @@
+       type: POKEMON_TYPE_POISON
+       type2: POKEMON_TYPE_NORMAL
+       camera {
++        cylinderRadiusM: 0.5
++        cylinderHeightM: 0.7
+       }
+       encounter {
++        collisionRadiusM: 0.2
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.25
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         bonusCandyCaptureReward: 2
+@@ -335131,6 +335834,7 @@
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 3.8
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
+@@ -335152,6 +335856,9 @@
+       weightStdDev: 3.4
+       familyId: FAMILY_SHROODLE
+       kmBuddyDistance: 3
++      modelHeight: 0.7
++      modelScaleV2: 1.25
++      buddyScale: 12
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -335159,6 +335866,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 1
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -344155,6 +344863,24 @@
+   }
+ }
+ template {
++  template_id: "bundle.cdrecapstickers.1"
++  data {
++    template_id: "bundle.cdrecapstickers.1"
++    iapItemDisplay {
++      sku: "bundle.cdrecapstickers.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      sale: true
++      spriteId: "bundle.general.adventure.1"
++      title: "sticker_box"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2024-12-23T22:00:00"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1734991200000
++    }
++  }
++}
++template {
+   template_id: "bundle.citysafari450hktw.1"
+   data {
+     template_id: "bundle.citysafari450hktw.1"
+@@ -344169,6 +344895,48 @@
+   }
+ }
+ template {
++  template_id: "bundle.cswkmakegoodprep.100.1"
++  data {
++    template_id: "bundle.cswkmakegoodprep.100.1"
++    iapItemDisplay {
++      sku: "bundle.cswkmakegoodprep.100.1"
++      category: IAP_CATEGORY_FREE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general5.small.1"
++      title: "bundle.citysafari.box.1_title"
++    }
++  }
++}
++template {
++  template_id: "bundle.cswkmakegoodprep.200.1"
++  data {
++    template_id: "bundle.cswkmakegoodprep.200.1"
++    iapItemDisplay {
++      sku: "bundle.cswkmakegoodprep.200.1"
++      category: IAP_CATEGORY_FREE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general5.small.1"
++      title: "bundle.citysafari.box.1_title"
++    }
++  }
++}
++template {
++  template_id: "bundle.cswkmakegoodprep.300.1"
++  data {
++    template_id: "bundle.cswkmakegoodprep.300.1"
++    iapItemDisplay {
++      sku: "bundle.cswkmakegoodprep.300.1"
++      category: IAP_CATEGORY_FREE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general5.small.1"
++      title: "bundle.citysafari.box.1_title"
++    }
++  }
++}
++template {
+   template_id: "bundle.decroutes2023.1"
+   data {
+     template_id: "bundle.decroutes2023.1"
+@@ -365285,659 +366053,21 @@
+   }
+ }
+ template {
+-  template_id: "bundle.cswkmakegoodprep.100.1"
+-  data {
+-    template_id: "bundle.cswkmakegoodprep.100.1"
+-    iapItemDisplay {
+-      sku: "bundle.cswkmakegoodprep.100.1"
+-      category: IAP_CATEGORY_FREE
+-      sortOrder: 1
+-      hidden: true
+-      spriteId: "bundle.general5.small.1"
+-      title: "bundle.citysafari.box.1_title"
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.cswkmakegoodprep.200.1"
++  template_id: "pgorelease.bundle.general.thirdparty.small.2"
+   data {
+-    template_id: "bundle.cswkmakegoodprep.200.1"
++    template_id: "pgorelease.bundle.general.thirdparty.small.2"
+     iapItemDisplay {
+-      sku: "bundle.cswkmakegoodprep.200.1"
+-      category: IAP_CATEGORY_FREE
+-      sortOrder: 1
+-      hidden: true
+-      spriteId: "bundle.general5.small.1"
+-      title: "bundle.citysafari.box.1_title"
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.cswkmakegoodprep.300.1"
+-  data {
+-    template_id: "bundle.cswkmakegoodprep.300.1"
+-    iapItemDisplay {
+-      sku: "bundle.cswkmakegoodprep.300.1"
+-      category: IAP_CATEGORY_FREE
+-      sortOrder: 1
+-      hidden: true
+-      spriteId: "bundle.general5.small.1"
+-      title: "bundle.citysafari.box.1_title"
+-    }
+-  }
+-}
+-template {
+-  template_id: "BREAD_CODE_GATE"
+-  data {
+-    template_id: "BREAD_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-      subCodeGateList {
+-        name: "tappable_orb_code_gate"
+-        isEnabled: true
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_PARTY_CHALLENGES_COMPLETED"
+-  data {
+-    template_id: "BADGE_PARTY_CHALLENGES_COMPLETED"
+-    badge_settings {
+-      badgeType: BADGE_PARTY_CHALLENGES_COMPLETED
+-      badgeRank: 5
+-      targets: 10
+-      targets: 50
+-      targets: 100
+-      targets: 200
+-    }
+-  }
+-}
+-template {
+-  template_id: "ACCESSIBILITY_CLIENT_SETTINGS"
+-  data {
+-    template_id: "ACCESSIBILITY_CLIENT_SETTINGS"
+-    accessibilitySettings {
+-      enabled: true
+-      pluginEnabled: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.cdrecapstickers.1"
+-  data {
+-    template_id: "bundle.cdrecapstickers.1"
+-    iapItemDisplay {
+-      sku: "bundle.cdrecapstickers.1"
++      sku: "pgorelease.bundle.general.thirdparty.small.2"
        category: IAP_CATEGORY_BUNDLE
        sortOrder: 1
-+      hidden: true
-       spriteId: "bundle.general.remotebox.medium.1"
-       title: "great_raid_box_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2024-12-14T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1734220799000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 1035
+       hidden: true
+       sale: true
+-      spriteId: "bundle.general.adventure.1"
+-      title: "sticker_box"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_backpack_egg-incubator_0"
+-  data {
+-    template_id: "N_DISPLAY_n_backpack_egg-incubator_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_backpack_egg-incubator_0_icon"
+-      displayStringId: "avatar_backpack_eggincubator"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_shirt_holiday2024-wooloojacket_0"
+-  data {
+-    template_id: "N_DISPLAY_n_shirt_holiday2024-wooloojacket_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_shirt_holiday2024-wooloojacket_0_icon"
+-      displayStringId: "avatar_shirt_wooloojacket"
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BELLSPROUTCD_1.3"
+-  data {
+-    template_id: "STICKER_BELLSPROUTCD_1.3"
+-    iapItemDisplay {
+-      sku: "STICKER_BELLSPROUTCD_1.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 44
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BELLSPROUTCD_1.5"
+-  data {
+-    template_id: "STICKER_BELLSPROUTCD_1.5"
+-    iapItemDisplay {
+-      sku: "STICKER_BELLSPROUTCD_1.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 43
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BELLSPROUTCD_2.3"
+-  data {
+-    template_id: "STICKER_BELLSPROUTCD_2.3"
+-    iapItemDisplay {
+-      sku: "STICKER_BELLSPROUTCD_2.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 42
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BELLSPROUTCD_2.5"
+-  data {
+-    template_id: "STICKER_BELLSPROUTCD_2.5"
+-    iapItemDisplay {
+-      sku: "STICKER_BELLSPROUTCD_2.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 41
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BELLSPROUTCD_3.3"
+-  data {
+-    template_id: "STICKER_BELLSPROUTCD_3.3"
+-    iapItemDisplay {
+-      sku: "STICKER_BELLSPROUTCD_3.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 40
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BELLSPROUTCD_3.5"
+-  data {
+-    template_id: "STICKER_BELLSPROUTCD_3.5"
+-    iapItemDisplay {
+-      sku: "STICKER_BELLSPROUTCD_3.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 39
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BELLSPROUTCD_4.3"
+-  data {
+-    template_id: "STICKER_BELLSPROUTCD_4.3"
+-    iapItemDisplay {
+-      sku: "STICKER_BELLSPROUTCD_4.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 38
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BELLSPROUTCD_4.5"
+-  data {
+-    template_id: "STICKER_BELLSPROUTCD_4.5"
+-    iapItemDisplay {
+-      sku: "STICKER_BELLSPROUTCD_4.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 37
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BOUNSWEETCD2024_1.3"
+-  data {
+-    template_id: "STICKER_BOUNSWEETCD2024_1.3"
+-    iapItemDisplay {
+-      sku: "STICKER_BOUNSWEETCD2024_1.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 52
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BOUNSWEETCD2024_1.5"
+-  data {
+-    template_id: "STICKER_BOUNSWEETCD2024_1.5"
+-    iapItemDisplay {
+-      sku: "STICKER_BOUNSWEETCD2024_1.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 51
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BOUNSWEETCD2024_2.3"
+-  data {
+-    template_id: "STICKER_BOUNSWEETCD2024_2.3"
+-    iapItemDisplay {
+-      sku: "STICKER_BOUNSWEETCD2024_2.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 50
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BOUNSWEETCD2024_2.5"
+-  data {
+-    template_id: "STICKER_BOUNSWEETCD2024_2.5"
+-    iapItemDisplay {
+-      sku: "STICKER_BOUNSWEETCD2024_2.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 49
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BOUNSWEETCD2024_3.3"
+-  data {
+-    template_id: "STICKER_BOUNSWEETCD2024_3.3"
+-    iapItemDisplay {
+-      sku: "STICKER_BOUNSWEETCD2024_3.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 48
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BOUNSWEETCD2024_3.5"
+-  data {
+-    template_id: "STICKER_BOUNSWEETCD2024_3.5"
+-    iapItemDisplay {
+-      sku: "STICKER_BOUNSWEETCD2024_3.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 47
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BOUNSWEETCD2024_4.3"
+-  data {
+-    template_id: "STICKER_BOUNSWEETCD2024_4.3"
+-    iapItemDisplay {
+-      sku: "STICKER_BOUNSWEETCD2024_4.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 46
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_BOUNSWEETCD2024_4.5"
+-  data {
+-    template_id: "STICKER_BOUNSWEETCD2024_4.5"
+-    iapItemDisplay {
+-      sku: "STICKER_BOUNSWEETCD2024_4.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 45
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_CHANSEYCD_1.3"
+-  data {
+-    template_id: "STICKER_CHANSEYCD_1.3"
+-    iapItemDisplay {
+-      sku: "STICKER_CHANSEYCD_1.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 28
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_CHANSEYCD_1.5"
+-  data {
+-    template_id: "STICKER_CHANSEYCD_1.5"
+-    iapItemDisplay {
+-      sku: "STICKER_CHANSEYCD_1.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 27
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_CHANSEYCD_2.3"
+-  data {
+-    template_id: "STICKER_CHANSEYCD_2.3"
+-    iapItemDisplay {
+-      sku: "STICKER_CHANSEYCD_2.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 26
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_CHANSEYCD_2.5"
+-  data {
+-    template_id: "STICKER_CHANSEYCD_2.5"
+-    iapItemDisplay {
+-      sku: "STICKER_CHANSEYCD_2.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 25
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_CHANSEYCD_3.3"
+-  data {
+-    template_id: "STICKER_CHANSEYCD_3.3"
+-    iapItemDisplay {
+-      sku: "STICKER_CHANSEYCD_3.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 24
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_CHANSEYCD_3.5"
+-  data {
+-    template_id: "STICKER_CHANSEYCD_3.5"
+-    iapItemDisplay {
+-      sku: "STICKER_CHANSEYCD_3.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 23
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_CHANSEYCD_4.3"
+-  data {
+-    template_id: "STICKER_CHANSEYCD_4.3"
+-    iapItemDisplay {
+-      sku: "STICKER_CHANSEYCD_4.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 22
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_CHANSEYCD_4.5"
+-  data {
+-    template_id: "STICKER_CHANSEYCD_4.5"
+-    iapItemDisplay {
+-      sku: "STICKER_CHANSEYCD_4.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 21
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_GOOMYCD_1.3"
+-  data {
+-    template_id: "STICKER_GOOMYCD_1.3"
+-    iapItemDisplay {
+-      sku: "STICKER_GOOMYCD_1.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 60
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_GOOMYCD_1.5"
+-  data {
+-    template_id: "STICKER_GOOMYCD_1.5"
+-    iapItemDisplay {
+-      sku: "STICKER_GOOMYCD_1.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 59
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_GOOMYCD_2.3"
+-  data {
+-    template_id: "STICKER_GOOMYCD_2.3"
+-    iapItemDisplay {
+-      sku: "STICKER_GOOMYCD_2.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 58
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_GOOMYCD_2.5"
+-  data {
+-    template_id: "STICKER_GOOMYCD_2.5"
+-    iapItemDisplay {
+-      sku: "STICKER_GOOMYCD_2.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 57
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_GOOMYCD_3.3"
+-  data {
+-    template_id: "STICKER_GOOMYCD_3.3"
+-    iapItemDisplay {
+-      sku: "STICKER_GOOMYCD_3.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 56
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_GOOMYCD_3.5"
+-  data {
+-    template_id: "STICKER_GOOMYCD_3.5"
+-    iapItemDisplay {
+-      sku: "STICKER_GOOMYCD_3.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 55
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_GOOMYCD_4.3"
+-  data {
+-    template_id: "STICKER_GOOMYCD_4.3"
+-    iapItemDisplay {
+-      sku: "STICKER_GOOMYCD_4.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 54
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_GOOMYCD_4.5"
+-  data {
+-    template_id: "STICKER_GOOMYCD_4.5"
+-    iapItemDisplay {
+-      sku: "STICKER_GOOMYCD_4.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 53
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_LITTENCD_1.3"
+-  data {
+-    template_id: "STICKER_LITTENCD_1.3"
+-    iapItemDisplay {
+-      sku: "STICKER_LITTENCD_1.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 36
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_LITTENCD_1.5"
+-  data {
+-    template_id: "STICKER_LITTENCD_1.5"
+-    iapItemDisplay {
+-      sku: "STICKER_LITTENCD_1.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 35
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_LITTENCD_2.3"
+-  data {
+-    template_id: "STICKER_LITTENCD_2.3"
+-    iapItemDisplay {
+-      sku: "STICKER_LITTENCD_2.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 34
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_LITTENCD_2.5"
+-  data {
+-    template_id: "STICKER_LITTENCD_2.5"
+-    iapItemDisplay {
+-      sku: "STICKER_LITTENCD_2.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 33
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_LITTENCD_3.3"
+-  data {
+-    template_id: "STICKER_LITTENCD_3.3"
+-    iapItemDisplay {
+-      sku: "STICKER_LITTENCD_3.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 32
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_LITTENCD_3.5"
+-  data {
+-    template_id: "STICKER_LITTENCD_3.5"
+-    iapItemDisplay {
+-      sku: "STICKER_LITTENCD_3.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 31
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_LITTENCD_4.3"
+-  data {
+-    template_id: "STICKER_LITTENCD_4.3"
+-    iapItemDisplay {
+-      sku: "STICKER_LITTENCD_4.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 30
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_LITTENCD_4.5"
+-  data {
+-    template_id: "STICKER_LITTENCD_4.5"
+-    iapItemDisplay {
+-      sku: "STICKER_LITTENCD_4.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 29
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_ROWLETCD_1.3"
+-  data {
+-    template_id: "STICKER_ROWLETCD_1.3"
+-    iapItemDisplay {
+-      sku: "STICKER_ROWLETCD_1.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 20
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_ROWLETCD_1.5"
+-  data {
+-    template_id: "STICKER_ROWLETCD_1.5"
+-    iapItemDisplay {
+-      sku: "STICKER_ROWLETCD_1.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 19
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_ROWLETCD_2.3"
+-  data {
+-    template_id: "STICKER_ROWLETCD_2.3"
+-    iapItemDisplay {
+-      sku: "STICKER_ROWLETCD_2.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 18
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_ROWLETCD_2.5"
+-  data {
+-    template_id: "STICKER_ROWLETCD_2.5"
+-    iapItemDisplay {
+-      sku: "STICKER_ROWLETCD_2.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 17
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_ROWLETCD_3.3"
+-  data {
+-    template_id: "STICKER_ROWLETCD_3.3"
+-    iapItemDisplay {
+-      sku: "STICKER_ROWLETCD_3.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 16
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_ROWLETCD_3.5"
+-  data {
+-    template_id: "STICKER_ROWLETCD_3.5"
+-    iapItemDisplay {
+-      sku: "STICKER_ROWLETCD_3.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 15
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_ROWLETCD_4.3"
+-  data {
+-    template_id: "STICKER_ROWLETCD_4.3"
+-    iapItemDisplay {
+-      sku: "STICKER_ROWLETCD_4.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 14
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_ROWLETCD_4.5"
+-  data {
+-    template_id: "STICKER_ROWLETCD_4.5"
+-    iapItemDisplay {
+-      sku: "STICKER_ROWLETCD_4.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 13
++      spriteId: "bundle.general2.large.1"
++      title: "bundle.xmas.small.1_title"
      }
    }
  }
-@@ -358473,6 +358467,7 @@
-       sku: "general2.ticket.6"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general2.ticket.6"
-       title: "general2.ticket._NecrozmaFusionRaidDay_title"
-       description: "item_event_ticket_gray_desc_NecrozmaFusionRaidDay"
-@@ -358492,6 +358487,7 @@
-       sku: "general2.ticket.6.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general2.ticket.6"
-       title: "general2.ticket._NecrozmaFusionRaidDay_title"
-       description: "item_event_ticket_gray_desc_NecrozmaFusionRaidDay"
-@@ -360161,6 +360157,7 @@
-       sku: "pgorelease.general2.ticket.6"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general2.ticket.2"
-       title: "general2.ticket._NecrozmaFusionRaidDay_title"
-       description: "item_event_ticket_gray_desc_NecrozmaFusionRaidDay"
-@@ -360180,6 +360177,7 @@
-       sku: "pgorelease.general2.ticket.6.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general2.ticket.2"
-       title: "general2.ticket._NecrozmaFusionRaidDay_title"
-       description: "item_event_ticket_gray_desc_NecrozmaFusionRaidDay"
-@@ -365964,7 +365962,6 @@
+-batch_id: 1734138697781
++batch_id: 1734411369652
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -365962,6 +366092,7 @@
  experiment_id: 1820
  experiment_id: 2244
  experiment_id: 2248
--experiment_id: 2252
++experiment_id: 2253
  experiment_id: 2301
  experiment_id: 2399
  experiment_id: 2400
-@@ -365981,11 +365978,7 @@
- experiment_id: 3964
+@@ -365979,6 +366110,7 @@
  experiment_id: 3969
  experiment_id: 3979
--experiment_id: 3988
--experiment_id: 4929
--experiment_id: 4930
  experiment_id: 4998
--experiment_id: 5107
++experiment_id: 5108
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -366001,7 +365994,6 @@
- experiment_id: 9551
- experiment_id: 20947
- experiment_id: 80000
--experiment_id: 80200
+@@ -365986,6 +366118,7 @@
+ experiment_id: 5508
+ experiment_id: 5510
+ experiment_id: 6075
++experiment_id: 8693
+ experiment_id: 8968
+ experiment_id: 9523
+ experiment_id: 9531
+@@ -365997,7 +366130,6 @@
  experiment_id: 300000
  experiment_id: 314159
  experiment_id: 314160
+-experiment_id: 1000765
+ experiment_id: 3500035
+ experiment_id: 3500037
+ experiment_id: 4700000
