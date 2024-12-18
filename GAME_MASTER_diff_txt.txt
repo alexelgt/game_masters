@@ -1,236 +1,1001 @@
---- GAME_MASTER_old.txt	2024-12-17 08:40:43.905436162 +0100
-+++ GAME_MASTER.txt	2024-12-17 08:48:34.520142814 +0100
-@@ -241669,7 +241669,8 @@
-     pokemonFamily {
-       familyId: FAMILY_RALTS
-       candyPerXlCandy: 100
--      4: "\232\002\333\003"
-+      megaEvolvablePokemonIds: GARDEVOIR
-+      megaEvolvablePokemonIds: GALLADE
+--- GAME_MASTER_old.txt	2024-12-17 08:48:34.520142814 +0100
++++ GAME_MASTER.txt	2024-12-18 08:52:28.511542428 +0100
+@@ -114684,6 +114684,10 @@
+         stepNumber: 40
+         event: 25
+       }
++      eventStep {
++        stepNumber: 41
++        event: 38
++      }
      }
    }
  }
-@@ -241783,18 +241784,18 @@
-         shadowChargeMove: FRUSTRATION
+@@ -115865,7 +115869,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
        }
-       buddyGroupNumber: 2
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GARDEVOIR
-+        megaEnergyAwardAmount: 25
-+      }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GALLADE
-+        megaEnergyAwardAmount: 25
-+        genderRequirement: MALE
-+      }
-       ibfc {
+     }
+   }
+@@ -115881,7 +115885,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
        }
-       breadTierGroup: GROUP_3
--      53 {
--        1: 282
--        2: 25
--      }
--      53 {
--        1: 475
--        2: 25
--        3: 1
--      }
+     }
+   }
+@@ -115898,7 +115902,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 0.666666687
++        distanceMultiplier: 0.333333343
+       }
+     }
+   }
+@@ -117618,6 +117622,7 @@
+     template_id: "MAP_DISPLAY_SETTINGS"
+     mapDisplaySettings {
+       showEnhancedSky: true
++      eventThemeName: "winter"
      }
    }
  }
-@@ -241887,18 +241888,18 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GARDEVOIR
-+        megaEnergyAwardAmount: 25
-+      }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GALLADE
-+        megaEnergyAwardAmount: 25
-+        genderRequirement: MALE
-+      }
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
--      53 {
--        1: 282
--        2: 25
--      }
--      53 {
--        1: 475
--        2: 25
--        3: 1
--      }
+@@ -340240,6 +340245,8 @@
+       isVistaEncounterEnabled: true
+       isVistaMapEnabled: true
+       isVistaSpawnsEnabled: true
++      themeOverride: "WinterHoliday"
++      environmentSeason: SEASON_WINTER
      }
    }
  }
-@@ -242027,18 +242028,18 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GARDEVOIR
-+        megaEnergyAwardAmount: 25
-+      }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GALLADE
-+        megaEnergyAwardAmount: 25
-+        genderRequirement: MALE
-+      }
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
--      53 {
--        1: 282
--        2: 25
--      }
--      53 {
--        1: 475
--        2: 25
--        3: 1
--      }
+@@ -341414,8 +341421,8 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_HOLIDAY"
      }
    }
  }
-@@ -242146,18 +242147,18 @@
-         shadowChargeMove: FRUSTRATION
+@@ -341428,31 +341435,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
        }
-       buddyGroupNumber: 2
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GARDEVOIR
-+        megaEnergyAwardAmount: 25
-+      }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GALLADE
-+        megaEnergyAwardAmount: 25
-+        genderRequirement: MALE
-+      }
-       ibfc {
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
        }
-       breadTierGroup: GROUP_3
--      53 {
--        1: 282
--        2: 25
--      }
--      53 {
--        1: 475
--        2: 25
--        3: 1
--      }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+     }
+@@ -341467,31 +341474,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341507,7 +341514,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -341525,7 +341532,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -341540,7 +341547,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -341558,7 +341565,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341574,7 +341581,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -341592,7 +341599,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -341607,7 +341614,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -341625,7 +341632,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341641,7 +341648,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 570
++          count: 2280
+         }
+       }
+       reward {
+@@ -341659,7 +341666,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+     }
+@@ -341674,7 +341681,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+       reward {
+@@ -341692,7 +341699,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 9120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341708,7 +341715,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -341726,7 +341733,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+     }
+@@ -341741,7 +341748,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       reward {
+@@ -341759,7 +341766,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 9600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341854,7 +341861,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 700
++          count: 2800
+         }
+       }
+       reward {
+@@ -341872,7 +341879,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+     }
+@@ -341887,7 +341894,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+       reward {
+@@ -341905,7 +341912,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 11200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341921,7 +341928,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 730
++          count: 2920
+         }
+       }
+       reward {
+@@ -341939,7 +341946,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+     }
+@@ -341954,7 +341961,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+       reward {
+@@ -341972,7 +341979,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 11680
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -341988,7 +341995,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 770
++          count: 3080
+         }
+       }
+       reward {
+@@ -342006,7 +342013,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+     }
+@@ -342021,7 +342028,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+       reward {
+@@ -342039,7 +342046,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 12320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342104,7 +342111,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 300
++          count: 1200
+         }
+       }
+       reward {
+@@ -342122,7 +342129,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+     }
+@@ -342137,7 +342144,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -342155,7 +342162,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342171,7 +342178,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 870
++          count: 3480
+         }
+       }
+       reward {
+@@ -342189,7 +342196,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+     }
+@@ -342204,7 +342211,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+       reward {
+@@ -342222,7 +342229,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 13920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342238,7 +342245,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -342256,7 +342263,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -342271,7 +342278,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -342289,7 +342296,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342305,7 +342312,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -342323,7 +342330,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -342338,7 +342345,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -342356,7 +342363,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342372,7 +342379,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -342390,7 +342397,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -342405,7 +342412,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -342423,7 +342430,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342439,7 +342446,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -342457,7 +342464,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -342472,7 +342479,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -342490,7 +342497,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342506,7 +342513,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -342524,7 +342531,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -342539,7 +342546,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -342557,7 +342564,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342573,7 +342580,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -342591,7 +342598,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -342606,7 +342613,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -342624,7 +342631,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342640,7 +342647,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 370
++          count: 1480
+         }
+       }
+       reward {
+@@ -342658,7 +342665,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+     }
+@@ -342673,7 +342680,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+       reward {
+@@ -342691,7 +342698,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 5920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342756,7 +342763,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 400
++          count: 1600
+         }
+       }
+       reward {
+@@ -342774,7 +342781,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+     }
+@@ -342789,7 +342796,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+       reward {
+@@ -342807,7 +342814,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 6400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342823,7 +342830,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -342841,7 +342848,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -342856,7 +342863,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -342874,7 +342881,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342890,7 +342897,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -342908,7 +342915,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -342923,7 +342930,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -342941,7 +342948,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -342957,7 +342964,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 470
++          count: 1880
+         }
+       }
+       reward {
+@@ -342975,7 +342982,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+     }
+@@ -342990,7 +342997,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+       reward {
+@@ -343008,7 +343015,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 7520
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -358777,7 +358784,6 @@
+       sku: "evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._HemisphereHolidays1224_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358796,7 +358802,6 @@
+       sku: "evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._HemisphereHolidays1224_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -360503,7 +360508,6 @@
+       sku: "pgorelease.evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._HemisphereHolidays1224_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -360522,7 +360526,6 @@
+       sku: "pgorelease.evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._HemisphereHolidays1224_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -366061,14 +366064,72 @@
+       sku: "pgorelease.bundle.general.thirdparty.small.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       sale: true
+       spriteId: "bundle.general2.large.1"
+       title: "bundle.xmas.small.1_title"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2025-01-07T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1736280000000
++    }
++  }
++}
++template {
++  template_id: "AVATAR_f_backpack_egg-incubator"
++  data {
++    template_id: "AVATAR_f_backpack_egg-incubator"
++    avatar_customization {
++      enabled: true
++      avatarType: PLAYER_AVATAR_FEMALE
++      slot: BACKPACK
++      bundleName: "f_backpack_egg-incubator_bundle"
++      assetName: "f_backpack_egg-incubator_0"
++      groupName: "group_backpack"
++      sortOrder: 101635
++      unlockType: IAP_CLOTHING
++      iapSku: "pgorelease.avatar.f_backpack_egg-incubator_0"
++      iconName: "f_backpack_egg-incubator_00_bundle_icon"
++    }
++  }
++}
++template {
++  template_id: "AVATAR_m_backpack_egg-incubator"
++  data {
++    template_id: "AVATAR_m_backpack_egg-incubator"
++    avatar_customization {
++      enabled: true
++      slot: BACKPACK
++      bundleName: "m_backpack_egg-incubator_bundle"
++      assetName: "m_backpack_egg-incubator_0"
++      groupName: "group_backpack"
++      sortOrder: 101636
++      unlockType: IAP_CLOTHING
++      iapSku: "pgorelease.avatar.m_backpack_egg-incubator_0"
++      iconName: "m_backpack_egg-incubator_00_bundle_icon"
++    }
++  }
++}
++template {
++  template_id: "bundle.holiday2024.1"
++  data {
++    template_id: "bundle.holiday2024.1"
++    iapItemDisplay {
++      sku: "bundle.holiday2024.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      spriteId: "bundle.general5.small.1"
++      title: "bundle.xmas.small.1_title"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2024-12-22T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1734897600000
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 1900
      }
    }
  }
-@@ -242290,18 +242291,18 @@
-         typeOverride1: POKEMON_TYPE_PSYCHIC
-         typeOverride2: POKEMON_TYPE_FAIRY
-       }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GARDEVOIR
-+        megaEnergyAwardAmount: 25
-+      }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GALLADE
-+        megaEnergyAwardAmount: 25
-+        genderRequirement: MALE
-+      }
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
--      53 {
--        1: 282
--        2: 25
--      }
--      53 {
--        1: 475
--        2: 25
--        3: 1
--      }
-     }
-   }
- }
-@@ -242414,18 +242415,18 @@
-         typeOverride1: POKEMON_TYPE_PSYCHIC
-         typeOverride2: POKEMON_TYPE_FAIRY
-       }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GARDEVOIR
-+        megaEnergyAwardAmount: 25
-+      }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GALLADE
-+        megaEnergyAwardAmount: 25
-+        genderRequirement: MALE
-+      }
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
--      53 {
--        1: 282
--        2: 25
--      }
--      53 {
--        1: 475
--        2: 25
--        3: 1
--      }
-     }
-   }
- }
-@@ -275217,18 +275218,18 @@
-         modelScaleV2: 0.9
-         modelHeight: 1.8
-       }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GARDEVOIR
-+        megaEnergyAwardAmount: 25
-+      }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GALLADE
-+        megaEnergyAwardAmount: 25
-+        genderRequirement: MALE
-+      }
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
--      53 {
--        1: 282
--        2: 25
--      }
--      53 {
--        1: 475
--        2: 25
--        3: 1
--      }
-     }
-   }
- }
-@@ -275346,18 +275347,18 @@
-         modelScaleV2: 0.9
-         modelHeight: 1.8
-       }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GARDEVOIR
-+        megaEnergyAwardAmount: 25
-+      }
-+      buddyWalkedMegaEnergyAwards {
-+        megaPokemonId: GALLADE
-+        megaEnergyAwardAmount: 25
-+        genderRequirement: MALE
-+      }
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
--      53 {
--        1: 282
--        2: 25
--      }
--      53 {
--        1: 475
--        2: 25
--        3: 1
--      }
-     }
-   }
- }
+-batch_id: 1734411369652
++batch_id: 1734490853431
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -366077,11 +366138,13 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 150
+-experiment_id: 153
++experiment_id: 154
+ experiment_id: 300
+ experiment_id: 302
+ experiment_id: 311
+ experiment_id: 320
++experiment_id: 345
++experiment_id: 350
+ experiment_id: 408
+ experiment_id: 409
+ experiment_id: 500
+@@ -366104,12 +366167,14 @@
+ experiment_id: 3647
+ experiment_id: 3685
+ experiment_id: 3950
+-experiment_id: 3951
+-experiment_id: 3952
+ experiment_id: 3955
+ experiment_id: 3964
+ experiment_id: 3969
+ experiment_id: 3979
++experiment_id: 4212
++experiment_id: 4213
++experiment_id: 4215
++experiment_id: 4216
+ experiment_id: 4998
+ experiment_id: 5108
+ experiment_id: 5160
