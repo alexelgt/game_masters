@@ -1,144 +1,42 @@
---- GAME_MASTER_old.txt	2024-12-29 13:16:46.911891256 +0100
-+++ GAME_MASTER.txt	2024-12-30 13:47:44.613992489 +0100
-@@ -116292,7 +116292,7 @@
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
-         uses: 3
--        distanceMultiplier: 0.5
-+        distanceMultiplier: 1
-       }
-     }
-   }
-@@ -116308,7 +116308,7 @@
-       dropTrainerLevel: 100
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
--        distanceMultiplier: 0.5
-+        distanceMultiplier: 1
-       }
-     }
-   }
-@@ -116325,7 +116325,7 @@
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
-         uses: 3
--        distanceMultiplier: 0.333333343
-+        distanceMultiplier: 0.666666687
-       }
-     }
-   }
-@@ -118056,6 +118056,7 @@
-     template_id: "MAP_DISPLAY_SETTINGS"
-     mapDisplaySettings {
-       showEnhancedSky: true
-+      mapEffectName: "fx_map_fireworks"
-     }
-   }
- }
-@@ -139012,17 +139013,6 @@
-   }
- }
- template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
-   template_id: "QUEST_EVOLUTION_SETTINGS"
-   data {
-     template_id: "QUEST_EVOLUTION_SETTINGS"
-@@ -347014,15 +347004,9 @@
-       sku: "bundle.hatchbox2024.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-+      hidden: true
-       spriteId: "bundle.general.adventure.1"
-       title: "hatch_box"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2024-12-29T20:00:00"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1735502400000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 1910
-     }
-   }
- }
-@@ -359889,6 +359873,7 @@
-       sku: "general1.ticket.2"
+--- GAME_MASTER_old.txt	2024-12-30 13:47:44.613992489 +0100
++++ GAME_MASTER.txt	2024-12-31 13:59:38.275183428 +0100
+@@ -360254,7 +360254,6 @@
+       sku: "general2.ticket.6"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket._ChargedEmbers1224_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359907,6 +359892,7 @@
-       sku: "general1.ticket.2.giftable"
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general1.ticket.5_JanMonthly2025_title"
+       description: "item_event_ticket_gray_details_JanMonthly2025"
+@@ -360274,7 +360273,6 @@
+       sku: "general2.ticket.6.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket._ChargedEmbers1224_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -361628,6 +361614,7 @@
-       sku: "pgorelease.general1.ticket.2"
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general1.ticket.5_JanMonthly2025_title"
+       description: "item_event_ticket_gray_details_JanMonthly2025"
+@@ -361961,7 +361959,6 @@
+       sku: "pgorelease.general2.ticket.6"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket._ChargedEmbers1224_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -361646,6 +361633,7 @@
-       sku: "pgorelease.general1.ticket.2.giftable"
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general1.ticket.5_JanMonthly2025_title"
+       description: "item_event_ticket_gray_details_JanMonthly2025"
+@@ -361981,7 +361978,6 @@
+       sku: "pgorelease.general2.ticket.6.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket._ChargedEmbers1224_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -367115,6 +367103,17 @@
-     }
-   }
- }
-+template {
-+  template_id: "PTC_OAUTH_SETTINGS"
-+  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    }
-+  }
-+}
- batch_id: 1735443814485
- experiment_id: 1
- experiment_id: 4
-@@ -367140,7 +367139,6 @@
- experiment_id: 1820
- experiment_id: 2244
- experiment_id: 2248
--experiment_id: 2254
- experiment_id: 2301
- experiment_id: 2399
- experiment_id: 2400
-@@ -367159,11 +367157,10 @@
- experiment_id: 3982
- experiment_id: 3989
- experiment_id: 4222
-+experiment_id: 4224
- experiment_id: 4226
--experiment_id: 4229
--experiment_id: 4517
- experiment_id: 4998
--experiment_id: 5112
-+experiment_id: 5113
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general1.ticket.5_JanMonthly2025_title"
+       description: "item_event_ticket_gray_details_JanMonthly2025"
+@@ -367169,6 +367165,7 @@
+ experiment_id: 5510
+ experiment_id: 6075
+ experiment_id: 8695
++experiment_id: 8963
+ experiment_id: 9523
+ experiment_id: 9531
+ experiment_id: 9542
