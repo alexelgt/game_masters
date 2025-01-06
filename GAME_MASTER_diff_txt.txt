@@ -1,173 +1,148 @@
---- GAME_MASTER_old.txt	2025-01-02 08:31:06.980978747 +0100
-+++ GAME_MASTER.txt	2025-01-03 08:10:36.765019294 +0100
-@@ -87887,6 +87887,17 @@
-     template_id: "EXTENDED_V0475_POKEMON_GALLADE"
-     pokemonExtendedSettings {
-       uniqueId: GALLADE
-+      temp_evo_overrides {
-+        tempEvoId: TEMP_EVOLUTION_MEGA
-+        sizeSettings {
-+          xxsLowerBound: 0.784
-+          xsLowerBound: 0.8
-+          mLowerBound: 1.2
-+          mUpperBound: 2
-+          xlUpperBound: 2.4
-+          xxlUpperBound: 2.48
-+        }
-+      }
-       sizeSettings {
-         xxsLowerBound: 0.784
-         xsLowerBound: 0.8
-@@ -87905,6 +87916,17 @@
-     pokemonExtendedSettings {
-       uniqueId: GALLADE
-       form: GALLADE_NORMAL
-+      temp_evo_overrides {
-+        tempEvoId: TEMP_EVOLUTION_MEGA
-+        sizeSettings {
-+          xxsLowerBound: 0.784
-+          xsLowerBound: 0.8
-+          mLowerBound: 1.2
-+          mUpperBound: 2
-+          xlUpperBound: 2.4
-+          xxlUpperBound: 2.48
-+        }
-+      }
-       sizeSettings {
-         xxsLowerBound: 0.784
-         xsLowerBound: 0.8
-@@ -360139,16 +360161,14 @@
-     iapItemDisplay {
+--- GAME_MASTER_old.txt	2025-01-03 08:10:36.765019294 +0100
++++ GAME_MASTER.txt	2025-01-06 19:52:18.151958536 +0100
+@@ -116230,7 +116230,7 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 6
+       incense {
+-        incenseLifetimeSeconds: 1800
++        incenseLifetimeSeconds: 900
+         spawnTableProbability: 0.25
+       }
+       ignoreInventorySpace: true
+@@ -333931,6 +333931,7 @@
+       cinematicMoves: PLAY_ROUGH
+       cinematicMoves: ENERGY_BALL
+       cinematicMoves: NIGHT_SLASH
++      cinematicMoves: FLOWER_TRICK
+       pokedexHeightM: 1.5
+       pokedexWeightKg: 31.2
+       parentPokemonId: FLORAGATO
+@@ -333949,6 +333950,7 @@
+       isDeployable: true
+       isTradable: true
+       buddyGroupNumber: 3
++      eliteCinematicMove: FRENZY_PLANT
+       raidBossDistanceOffset: 2
+       ibfc {
+       }
+@@ -344645,9 +344647,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GIRATINA
++          pokemon_id: PALKIA
+           pokemonDisplay {
+-            form: GIRATINA_ALTERED
++            form: PALKIA_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -345277,9 +345279,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GIRATINA
++          pokemon_id: PALKIA
+           pokemonDisplay {
+-            form: GIRATINA_ALTERED
++            form: PALKIA_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -360162,6 +360164,7 @@
        sku: "general2.ticket.3"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
--      hidden: true
--      spriteId: "general2.ticket.3"
--      title: "iap_general2_ticket3_name"
--      description: "general2_ticket3_IAP_description"
--      skuEnableTime: "2023-01-01T11:00:02"
--      skuDisableTime: "2023-01-01T17:00:00"
--      skuEnableTimeUtcMs: 1672570802000
--      skuDisableTimeUtcMs: 1672592400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-+      sortOrder: 2
-+      spriteId: "general1.ticket.2"
-+      title: "general1.ticket_CD_Sprigatito2025_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-01-05T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1736096400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-janCD-nologo-2025.jpg"
-     }
-   }
- }
-@@ -360159,16 +360179,12 @@
-     iapItemDisplay {
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Sprigatito2025_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -360180,6 +360183,7 @@
        sku: "general2.ticket.3.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
--      hidden: true
--      spriteId: "general2.ticket.3"
--      title: "iap_general2_ticket3_name"
--      description: "general2_ticket3_IAP_description"
--      skuEnableTime: "2023-01-01T11:00:02"
--      skuDisableTime: "2023-01-01T17:00:00"
--      skuEnableTimeUtcMs: 1672570802000
--      skuDisableTimeUtcMs: 1672592400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-+      sortOrder: 2
-+      spriteId: "general1.ticket.2"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-01-05T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1736096400000
-     }
-   }
- }
-@@ -361844,16 +361860,14 @@
-     iapItemDisplay {
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2025-01-05T17:00:00"
+@@ -361861,6 +361865,7 @@
        sku: "pgorelease.general2.ticket.3"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
--      hidden: true
--      spriteId: "general2.ticket.2"
--      title: "iap_general2_ticket2_name"
--      description: "general2_ticket2_IAP_description"
--      skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2023-01-01T17:00:00"
--      skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1672592400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-+      sortOrder: 2
-+      spriteId: "general1.ticket.2"
-+      title: "general1.ticket_CD_Sprigatito2025_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-01-05T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1736096400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-janCD-nologo-2025.jpg"
-     }
-   }
- }
-@@ -361864,16 +361878,12 @@
-     iapItemDisplay {
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Sprigatito2025_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -361879,6 +361884,7 @@
        sku: "pgorelease.general2.ticket.3.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
--      hidden: true
--      spriteId: "general2.ticket.2"
--      title: "iap_general2_ticket2_name"
--      description: "general2_ticket2_IAP_description"
--      skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2023-01-01T17:00:00"
--      skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1672592400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-+      sortOrder: 2
-+      spriteId: "general1.ticket.2"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-01-05T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1736096400000
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2025-01-05T17:00:00"
+@@ -367144,7 +367150,18 @@
      }
    }
  }
-@@ -367112,7 +367122,29 @@
-     }
-   }
- }
--batch_id: 1735443814485
+-batch_id: 1735857572424
 +template {
-+  template_id: "DISABLE_ROUTE_SHORT_CODES"
++  template_id: "LC_SPECIALBACKGROUND_2025_SEASON17"
 +  data {
-+    template_id: "DISABLE_ROUTE_SHORT_CODES"
-+    codeGateProto {
-+      isEnabled: true
++    template_id: "LC_SPECIALBACKGROUND_2025_SEASON17"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2025_SEASON17
++      imageUrl: "sb_Season17_DuelDestiny"
++      cardType: SPECIAL_BACKGROUND
 +    }
 +  }
 +}
-+template {
-+  template_id: "TEMPORARY_EVOLUTION_V0475_POKEMON_GALLADE"
-+  data {
-+    template_id: "TEMPORARY_EVOLUTION_V0475_POKEMON_GALLADE"
-+    temporaryEvolutionSettings {
-+      pokemonId: GALLADE
-+      temporary_evolutions {
-+        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
-+        assetBundleValue: 51
-+      }
-+    }
-+  }
-+}
-+batch_id: 1735857572424
++batch_id: 1736039522886
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -367164,6 +367196,7 @@
+@@ -367180,24 +367197,37 @@
+ experiment_id: 3647
+ experiment_id: 3685
+ experiment_id: 3950
+-experiment_id: 3957
+-experiment_id: 3964
+-experiment_id: 3970
++experiment_id: 3958
++experiment_id: 3965
+ experiment_id: 3979
+-experiment_id: 3982
+ experiment_id: 3989
+ experiment_id: 4222
++experiment_id: 4527
++experiment_id: 4528
++experiment_id: 4529
++experiment_id: 4530
++experiment_id: 4531
++experiment_id: 4532
++experiment_id: 4533
++experiment_id: 4534
++experiment_id: 4535
++experiment_id: 4536
++experiment_id: 4537
++experiment_id: 4538
++experiment_id: 4539
+ experiment_id: 4998
++experiment_id: 5115
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5250
++experiment_id: 5283
+ experiment_id: 5508
  experiment_id: 5510
  experiment_id: 6075
- experiment_id: 8695
-+experiment_id: 8702
+-experiment_id: 8695
+-experiment_id: 8702
++experiment_id: 8703
++experiment_id: 8704
  experiment_id: 8963
++experiment_id: 8966
  experiment_id: 9523
  experiment_id: 9531
+ experiment_id: 9542
