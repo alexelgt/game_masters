@@ -1,148 +1,700 @@
---- GAME_MASTER_old.txt	2025-01-03 08:10:36.765019294 +0100
-+++ GAME_MASTER.txt	2025-01-06 19:52:18.151958536 +0100
-@@ -116230,7 +116230,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 6
-       incense {
--        incenseLifetimeSeconds: 1800
-+        incenseLifetimeSeconds: 900
-         spawnTableProbability: 0.25
-       }
-       ignoreInventorySpace: true
-@@ -333931,6 +333931,7 @@
-       cinematicMoves: PLAY_ROUGH
-       cinematicMoves: ENERGY_BALL
-       cinematicMoves: NIGHT_SLASH
-+      cinematicMoves: FLOWER_TRICK
-       pokedexHeightM: 1.5
-       pokedexWeightKg: 31.2
-       parentPokemonId: FLORAGATO
-@@ -333949,6 +333950,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 3
-+      eliteCinematicMove: FRENZY_PLANT
-       raidBossDistanceOffset: 2
-       ibfc {
-       }
-@@ -344645,9 +344647,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: GIRATINA
-+          pokemon_id: PALKIA
-           pokemonDisplay {
--            form: GIRATINA_ALTERED
-+            form: PALKIA_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -345277,9 +345279,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: GIRATINA
-+          pokemon_id: PALKIA
-           pokemonDisplay {
--            form: GIRATINA_ALTERED
-+            form: PALKIA_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -360162,6 +360164,7 @@
-       sku: "general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Sprigatito2025_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -360180,6 +360183,7 @@
-       sku: "general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-01-05T17:00:00"
-@@ -361861,6 +361865,7 @@
-       sku: "pgorelease.general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Sprigatito2025_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -361879,6 +361884,7 @@
-       sku: "pgorelease.general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-01-05T17:00:00"
-@@ -367144,7 +367150,18 @@
+--- GAME_MASTER_old.txt	2025-01-06 19:52:18.151958536 +0100
++++ GAME_MASTER.txt	2025-01-07 22:41:59.722536023 +0100
+@@ -114180,6 +114180,7 @@
+       unlockedTrading: 8
+       unlockedTrading: 9
+       tradingDiscount: 0.2
++      7: 1
      }
    }
  }
--batch_id: 1735857572424
+@@ -114202,6 +114203,7 @@
+       unlockedTrading: 8
+       unlockedTrading: 9
+       tradingDiscount: 0.92
++      7: 1
+     }
+   }
+ }
+@@ -114224,6 +114226,7 @@
+       unlockedTrading: 8
+       unlockedTrading: 9
+       tradingDiscount: 0.96
++      7: 1
+     }
+   }
+ }
+@@ -115778,29 +115781,38 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-12-03T10:00:00"
+-        eventEndTime: "2024-12-31T23:59:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_DecMonthly2024"
++        eventStartTime: "2025-01-11T14:00:00"
++        eventEndTime: "2025-01-11T22:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaGalladeRaidDay"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_GRAY_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-megagallade-nologo-2024.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_DecMonthly2024"
+-        textRewardsKey: "text_rewards_key_DecMonthly2024"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-megagallade-nologo-2024.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_MegaGalladeRaidDay"
++        textRewardsKey: "text_rewards_key_MegaGalladeRaidDay"
+         iconRewards {
+-          type: EXPERIENCE
+-          exp: 15000
++          type: ITEM
++          item {
++            item: ITEM_FREE_RAID_TICKET
++            amount: 8
++          }
++        }
++        iconRewards {
++          type: ITEM
++          item {
++            item: ITEM_XL_RARE_CANDY
++          }
+         }
+         iconRewards {
+           type: STARDUST
+-          stardust: 15000
++          stardust: 2
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1733220000000
+-        clientEventEndTimeUtcMs: 1735689540000
++        clientEventStartTimeUtcMs: 1736604000000
++        clientEventEndTimeUtcMs: 1736632800000
+       }
+-      descriptionOverride: "item_event_ticket_gray_desc_DecMonthly2024"
++      descriptionOverride: "item_event_ticket_gray_desc_MegaGalladeRaidDay"
+     }
+   }
+ }
+@@ -115813,16 +115825,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-12-03T10:00:00"
+-        eventEndTime: "2024-12-31T23:59:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_DecMonthly2024"
++        eventStartTime: "2025-01-11T14:00:00"
++        eventEndTime: "2025-01-11T22:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_details_MegaGalladeRaidDay"
+         ticketItem: ITEM_EVENT_TICKET_GRAY
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
+-        clientEventStartTimeUtcMs: 1733220000000
+-        clientEventEndTimeUtcMs: 1735689540000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-megagallade-nologo-2024.jpg"
++        clientEventStartTimeUtcMs: 1736604000000
++        clientEventEndTimeUtcMs: 1736632800000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_DecMonthly2024"
++      descriptionOverride: "item_event_ticket_gray_details_MegaGalladeRaidDay"
+     }
+   }
+ }
+@@ -359988,16 +360000,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.1"
+-      title: "general1.ticket.5._GOWA2024RaidVer1_title"
+-      description: "text_rewards_key_GOWA2024RaidVer1"
+-      skuEnableTime: "2024-01-01T00:00:00"
+-      skuDisableTime: "2024-11-22T20:00:00"
+-      skuEnableTimeUtcMs: 1704067200000
+-      skuDisableTimeUtcMs: 1732305600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
++      spriteId: "general1.ticket.5"
++      title: "general2.ticket._MegaGalladeRaidDay_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-01-11T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1736614800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-megagallade-nologo-2024.jpg"
+     }
+   }
+ }
+@@ -360008,15 +360019,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.1"
+-      title: "general1.ticket.5._GOWA2024RaidVer1_title"
+-      skuEnableTime: "2024-01-01T00:00:00"
+-      skuDisableTime: "2024-11-22T20:00:00"
+-      skuEnableTimeUtcMs: 1704067200000
+-      skuDisableTimeUtcMs: 1732305600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
++      spriteId: "general1.ticket.5"
++      title: "general2.ticket._MegaGalladeRaidDay_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-01-11T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1736614800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-megagallade-nologo-2024.jpg"
+     }
+   }
+ }
+@@ -361708,16 +361719,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.1"
+-      title: "general1.ticket.5._GOWA2024RaidVer1_title"
+-      description: "text_rewards_key_GOWA2024RaidVer1"
+-      skuEnableTime: "2024-01-01T00:00:00"
+-      skuDisableTime: "2024-11-22T20:00:00"
+-      skuEnableTimeUtcMs: 1704067200000
+-      skuDisableTimeUtcMs: 1732305600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
++      spriteId: "general1.ticket.5"
++      title: "general2.ticket._MegaGalladeRaidDay_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-01-11T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1736614800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-megagallade-nologo-2024.jpg"
+     }
+   }
+ }
+@@ -361728,15 +361738,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.1"
+-      title: "general1.ticket.5._GOWA2024RaidVer1_title"
+-      skuEnableTime: "2024-01-01T00:00:00"
+-      skuDisableTime: "2024-11-22T20:00:00"
+-      skuEnableTimeUtcMs: 1704067200000
+-      skuDisableTimeUtcMs: 1732305600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/gowa2024/PGO-MCS_GOWA_IntoTheWild_Liveop_Ticket_16x9_nmo_v5.jpg"
++      spriteId: "general1.ticket.5"
++      title: "general2.ticket._MegaGalladeRaidDay_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-01-11T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1736614800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-megagallade-nologo-2024.jpg"
+     }
+   }
+ }
+@@ -367161,7 +367171,482 @@
+     }
+   }
+ }
+-batch_id: 1736039522886
 +template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_SEASON17"
++  template_id: "BADGE_GO_TOUR_2025_GLOBAL_BLACK_VERSION"
 +  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_SEASON17"
++    template_id: "BADGE_GO_TOUR_2025_GLOBAL_BLACK_VERSION"
++    badge_settings {
++      badgeType: 5763
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_GLOBAL_WHITE_VERSION"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_GLOBAL_WHITE_VERSION"
++    badge_settings {
++      badgeType: 5764
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_ADD_ON_HATCH"
++    badge_settings {
++      badgeType: 5744
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_ADD_ON_HATCH_TEST"
++    badge_settings {
++      badgeType: 5743
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_ADD_ON_RAID"
++    badge_settings {
++      badgeType: 5742
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_ADD_ON_RAID_TEST"
++    badge_settings {
++      badgeType: 5741
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_FRIDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_FRIDAY_CITY"
++    badge_settings {
++      badgeType: 5733
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_FRIDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_FRIDAY_PARK"
++    badge_settings {
++      badgeType: 5732
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_SATURDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_SATURDAY_CITY"
++    badge_settings {
++      badgeType: 5736
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_SATURDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_SATURDAY_PARK"
++    badge_settings {
++      badgeType: 5735
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_SUNDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_SUNDAY_CITY"
++    badge_settings {
++      badgeType: 5739
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_SUNDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_SUNDAY_PARK"
++    badge_settings {
++      badgeType: 5738
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_TEST_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_TEST_CITY"
++    badge_settings {
++      badgeType: 5730
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_TEST_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_TEST_PARK"
++    badge_settings {
++      badgeType: 5729
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_VIP"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_LOS_ANGELES_VIP"
++    badge_settings {
++      badgeType: 5745
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_ADD_ON_HATCH"
++    badge_settings {
++      badgeType: 5761
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_ADD_ON_HATCH_TEST"
++    badge_settings {
++      badgeType: 5760
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_ADD_ON_RAID"
++    badge_settings {
++      badgeType: 5759
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_ADD_ON_RAID_TEST"
++    badge_settings {
++      badgeType: 5758
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_FRIDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_FRIDAY_CITY"
++    badge_settings {
++      badgeType: 5750
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_FRIDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_FRIDAY_PARK"
++    badge_settings {
++      badgeType: 5749
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_SATURDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_SATURDAY_CITY"
++    badge_settings {
++      badgeType: 5753
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_SATURDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_SATURDAY_PARK"
++    badge_settings {
++      badgeType: 5752
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_SUNDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_SUNDAY_CITY"
++    badge_settings {
++      badgeType: 5756
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_SUNDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_SUNDAY_PARK"
++    badge_settings {
++      badgeType: 5755
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_TEST_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_TEST_CITY"
++    badge_settings {
++      badgeType: 5747
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_TEST_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_TEST_PARK"
++    badge_settings {
++      badgeType: 5746
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_VIP"
++  data {
++    template_id: "BADGE_GO_TOUR_2025_NEW_TAIPEI_CITY_VIP"
++    badge_settings {
++      badgeType: 5762
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "FUSION_RESOURCE_BLACK_KYUREM"
++  data {
++    template_id: "FUSION_RESOURCE_BLACK_KYUREM"
++    itemSettings {
++      itemId: FUSION_RESOURCE_BLACK_KYUREM
++      itemType: ITEM_TYPE_EVOLUTION_REQUIREMENT
++      category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
++      dropTrainerLevel: 1
++      ignoreInventorySpace: true
++      itemCap: 9999
++    }
++  }
++}
++template {
++  template_id: "FUSION_RESOURCE_WHITE_KYUREM"
++  data {
++    template_id: "FUSION_RESOURCE_WHITE_KYUREM"
++    itemSettings {
++      itemId: FUSION_RESOURCE_WHITE_KYUREM
++      itemType: ITEM_TYPE_EVOLUTION_REQUIREMENT
++      category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
++      dropTrainerLevel: 1
++      ignoreInventorySpace: true
++      itemCap: 9999
++    }
++  }
++}
++template {
++  template_id: "ITEM_EVENT_PASS_POINT_GO_TOUR_01"
++  data {
++    template_id: "ITEM_EVENT_PASS_POINT_GO_TOUR_01"
++    itemSettings {
++      itemId: 2001
++      itemType: 30
++      category: 29
++      ignoreInventorySpace: true
++    }
++  }
++}
++template {
++  template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
++  data {
++    template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
++    itemExpirationSettings {
++      item: 303
++      expirationTime: "2025-03-09T18:00:00"
++      emergencyExpirationTime: "2025-04-08T18:00:00"
++    }
++  }
++}
++template {
++  template_id: "ITEM_LUCKY_FRIEND_APPLICATOR"
++  data {
++    template_id: "ITEM_LUCKY_FRIEND_APPLICATOR"
++    itemSettings {
++      itemId: 303
++      itemType: 31
++      category: ITEM_CATEGORY_XP_BOOST
++    }
++  }
++}
++template {
++  template_id: "LC_2025_LOSANGELES_GOTOUR_001"
++  data {
++    template_id: "LC_2025_LOSANGELES_GOTOUR_001"
 +    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_SEASON17
-+      imageUrl: "sb_Season17_DuelDestiny"
++      locationCard: 64
++      imageUrl: "lc_GoTour2025_losAngeles"
++      cardType: LOCATION_CARD
++    }
++  }
++}
++template {
++  template_id: "LC_2025_NEWTAIPEICITY_GOTOUR_001"
++  data {
++    template_id: "LC_2025_NEWTAIPEICITY_GOTOUR_001"
++    locationCardSettings {
++      locationCard: 63
++      imageUrl: "lc_GoTour2025_newTaipeiCity"
++      cardType: LOCATION_CARD
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_ENIGMA_001"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_ENIGMA_001"
++    locationCardSettings {
++      locationCard: 71
++      imageUrl: "sb_GoTour2025_N"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_N"
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOTOUR_BLACK_001"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOTOUR_BLACK_001"
++    locationCardSettings {
++      locationCard: 66
++      imageUrl: "sb_GoTour2025_black"
 +      cardType: SPECIAL_BACKGROUND
 +    }
 +  }
 +}
-+batch_id: 1736039522886
++template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOTOUR_BLACK_WHITE_001"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOTOUR_BLACK_WHITE_001"
++    locationCardSettings {
++      locationCard: 67
++      imageUrl: "sb_GoTour2025_black_white"
++      cardType: SPECIAL_BACKGROUND
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOTOUR_WHITE_001"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOTOUR_WHITE_001"
++    locationCardSettings {
++      locationCard: 65
++      imageUrl: "sb_GoTour2025_white"
++      cardType: SPECIAL_BACKGROUND
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_pose_fashionweek2025"
++  data {
++    template_id: "N_DISPLAY_n_pose_fashionweek2025"
++    avatarItemDisplay {
++      iconAddress: "n_pose_fashionweek2025_icon"
++      displayStringId: "avatar_pose_runway"
++    }
++  }
++}
++batch_id: 1736204296075
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -367180,24 +367197,37 @@
- experiment_id: 3647
- experiment_id: 3685
+@@ -367199,6 +367684,7 @@
  experiment_id: 3950
--experiment_id: 3957
--experiment_id: 3964
--experiment_id: 3970
-+experiment_id: 3958
-+experiment_id: 3965
+ experiment_id: 3958
+ experiment_id: 3965
++experiment_id: 3971
  experiment_id: 3979
--experiment_id: 3982
  experiment_id: 3989
  experiment_id: 4222
-+experiment_id: 4527
-+experiment_id: 4528
-+experiment_id: 4529
-+experiment_id: 4530
-+experiment_id: 4531
-+experiment_id: 4532
-+experiment_id: 4533
-+experiment_id: 4534
-+experiment_id: 4535
-+experiment_id: 4536
-+experiment_id: 4537
-+experiment_id: 4538
-+experiment_id: 4539
- experiment_id: 4998
-+experiment_id: 5115
+@@ -367220,7 +367706,6 @@
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
--experiment_id: 5250
-+experiment_id: 5283
+-experiment_id: 5283
  experiment_id: 5508
  experiment_id: 5510
  experiment_id: 6075
--experiment_id: 8695
--experiment_id: 8702
-+experiment_id: 8703
-+experiment_id: 8704
- experiment_id: 8963
-+experiment_id: 8966
- experiment_id: 9523
- experiment_id: 9531
- experiment_id: 9542
