@@ -1,38 +1,212 @@
---- GAME_MASTER_old.txt	2025-01-08 21:44:24.562037229 +0100
-+++ GAME_MASTER.txt	2025-01-08 21:50:11.202564540 +0100
-@@ -367317,7 +367317,7 @@
-   data {
-     template_id: "COMBAT_V0466_MOVE_FREEZE_SHOCK"
-     combat_move {
--      uniqueId: 466
-+      uniqueId: FREEZE_SHOCK
-       type: POKEMON_TYPE_ICE
-       power: 1
-       vfxName: "freeze_shock"
-@@ -367866,7 +367866,7 @@
-   data {
-     template_id: "COMBAT_V0467_MOVE_ICE_BURN"
-     combat_move {
--      uniqueId: 467
-+      uniqueId: ICE_BURN
-       type: POKEMON_TYPE_ICE
-       power: 1
-       vfxName: "ice_burn"
-@@ -367879,7 +367879,7 @@
-   data {
-     template_id: "V0466_MOVE_FREEZE_SHOCK"
-     moveSettings {
--      movementId: 466
-+      movementId: FREEZE_SHOCK
-       animationId: 5
-       pokemonType: POKEMON_TYPE_ICE
-       power: 1
-@@ -367900,7 +367900,7 @@
-   data {
-     template_id: "V0467_MOVE_ICE_BURN"
-     moveSettings {
--      movementId: 467
-+      movementId: ICE_BURN
-       animationId: 5
-       pokemonType: POKEMON_TYPE_ICE
-       power: 1
+--- GAME_MASTER_old.txt	2025-01-08 21:50:11.202564540 +0100
++++ GAME_MASTER.txt	2025-01-10 09:21:19.607442739 +0100
+@@ -308392,7 +308392,9 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      raidBossDistanceOffset: 3
+       formChange {
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -308400,7 +308402,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -308468,13 +308469,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -308542,6 +308543,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -308549,7 +308551,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -308624,7 +308625,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -308692,6 +308692,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -308699,7 +308700,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -308767,6 +308767,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -308774,7 +308775,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -308842,6 +308842,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -308849,7 +308850,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -308917,13 +308917,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -308990,6 +308990,7 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -308997,7 +308998,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -309065,6 +309065,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -309072,7 +309073,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -309140,6 +309140,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -309147,7 +309148,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -367916,7 +367916,24 @@
+     }
+   }
+ }
+-batch_id: 1736368671568
++template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++batch_id: 1736385844076
++experiment_id: 1
++experiment_id: 4
++experiment_id: 6
++experiment_id: 8
++experiment_id: 11
++experiment_id: 21
+ experiment_id: 101
+ experiment_id: 150
+ experiment_id: 157
+@@ -367939,6 +367956,7 @@
+ experiment_id: 2400
+ experiment_id: 2402
+ experiment_id: 3032
++experiment_id: 3033
+ experiment_id: 3063
+ experiment_id: 3100
+ experiment_id: 3647
+@@ -367947,6 +367965,7 @@
+ experiment_id: 3958
+ experiment_id: 3965
+ experiment_id: 3971
++experiment_id: 3979
+ experiment_id: 3989
+ experiment_id: 4222
+ experiment_id: 4938
