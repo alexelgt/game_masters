@@ -1,439 +1,101 @@
---- GAME_MASTER_old.txt	2025-01-29 19:39:57.810682761 +0100
-+++ GAME_MASTER.txt	2025-01-30 19:43:10.156666220 +0100
-@@ -115692,29 +115692,26 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-01-25T14:00:00"
--        eventEndTime: "2025-01-25T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CDC_Ralts25"
-+        eventStartTime: "2025-02-09T14:00:00"
-+        eventEndTime: "2025-02-09T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_ShelmetKarrablast25"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-raltscdc-nologo-2025.jpg"
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-KarrablastShelmetCD-nologo-2025.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-raltscdc-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CDC_Ralts25"
--        textRewardsKey: "text_rewards_key_CDC_Ralts25"
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-KarrablastShelmetCD-nologo-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CD_ShelmetKarrablast25"
-+        textRewardsKey: "text_rewards_key_CD_ShelmetKarrablast25"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemon_encounter {
--            pokemon_id: GARDEVOIR
--            pokemonDisplay {
--              form: GARDEVOIR_NORMAL
--            }
-+            pokemon_id: ACCELGOR
+--- GAME_MASTER_old.txt	2025-01-30 19:43:10.156666220 +0100
++++ GAME_MASTER.txt	2025-01-31 08:44:15.603283065 +0100
+@@ -41534,6 +41534,26 @@
            }
          }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_INCUBATOR_BASIC
-+            item: ITEM_LUCKY_EGG
-             amount: 1
-           }
-         }
-@@ -115726,10 +115723,10 @@
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1737813600000
--        clientEventEndTimeUtcMs: 1737824400000
-+        clientEventStartTimeUtcMs: 1739109600000
-+        clientEventEndTimeUtcMs: 1739120400000
        }
--      descriptionOverride: "item_event_ticket_pink_details_CDC_Ralts25"
-+      descriptionOverride: "item_event_ticket_pink_desc_CD_ShelmetKarrablast25"
++      visualSettings {
++        pokemonId: KINGLER
++        pokemonFormData {
++          pokemonForm: KINGLER_NORMAL
++          visualData {
++            breadMode: BREAD_DOUGH_MODE
++            breadEncounterVisiualData {
++              scale: 11.1
++              cameraDistance: 35
++              maxReticleSize: 14
++            }
++            breadBattleVisualData {
++              scale: 22.19
++            }
++            breadStationVisualData {
++              scale: 1.51
++            }
++          }
++        }
++      }
      }
    }
  }
-@@ -115742,16 +115739,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-01-25T14:00:00"
--        eventEndTime: "2025-01-25T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CDC_Ralts25"
-+        eventStartTime: "2025-02-09T14:00:00"
-+        eventEndTime: "2025-02-09T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_details_CD_ShelmetKarrablast25"
-         ticketItem: ITEM_EVENT_TICKET_03
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-raltscdc-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1737813600000
--        clientEventEndTimeUtcMs: 1737824400000
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-KarrablastShelmetCD-nologo-2025.jpg"
-+        clientEventStartTimeUtcMs: 1739109600000
-+        clientEventEndTimeUtcMs: 1739120400000
+@@ -60611,12 +60631,36 @@
+           pokemonType: POKEMON_TYPE_DARK
+         }
        }
++      pokemonCondition {
++        type: POKEMON_BANLIST
++        pokemonBanList {
++          pokemon {
++            id: DITTO
++          }
++          pokemon {
++            id: SHEDINJA
++          }
++          pokemon {
++            id: SHUCKLE
++            forms: FORM_UNSET
++            forms: SHUCKLE_NORMAL
++          }
++          pokemon {
++            id: GLIGAR
++            forms: FORM_UNSET
++            forms: GLIGAR_NORMAL
++          }
++          pokemon {
++            id: SMEARGLE
++          }
++          pokemon {
++            id: STUNFISK
++            forms: STUNFISK_GALARIAN
++          }
++        }
++      }
+       iconUrl: "https://storage.googleapis.com/prod-public-images/LeagueIcons/jungleLeague2022_icon.png"
+       pokemonCount: 3
+-      bannedPokemon: DITTO
+-      bannedPokemon: SHEDINJA
+-      bannedPokemon: SHUCKLE
+-      bannedPokemon: SMEARGLE
+       badgeType: BADGE_GREAT_LEAGUE
+       battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
+       leagueType: PREMIER
+@@ -115547,7 +115591,7 @@
+       category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
+       dropTrainerLevel: 1
        ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_pink_details_CDC_Ralts25"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_ShelmetKarrablast25"
+-      itemCap: 250
++      itemCap: 300
      }
    }
  }
-@@ -349438,12 +349435,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CDC_Ralts25_title"
-+      title: "general1.ticket_CD_ShelmetKarrablast25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-01-25T17:00:00"
-+      skuDisableTime: "2025-02-09T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1737824400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-raltscdc-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1739120400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-KarrablastShelmetCD-nologo-2025.jpg"
+@@ -356664,7 +356708,20 @@
      }
    }
  }
-@@ -349457,11 +349454,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CDC_Ralts25_title"
-+      title: "general1.ticket_CD_ShelmetKarrablast25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-01-25T17:00:00"
-+      skuDisableTime: "2025-02-09T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1737824400000
-+      skuDisableTimeUtcMs: 1739120400000
-     }
-   }
- }
-@@ -349511,7 +349508,6 @@
-       sku: "general2.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general2.ticket.5_gmaxkingler25_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -349530,7 +349526,6 @@
-       sku: "general2.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general2.ticket.5_gmaxkingler25_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -351140,12 +351135,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CDC_Ralts25_title"
-+      title: "general1.ticket_CD_ShelmetKarrablast25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-01-25T17:00:00"
-+      skuDisableTime: "2025-02-09T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1737824400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-raltscdc-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1739120400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-KarrablastShelmetCD-nologo-2025.jpg"
-     }
-   }
- }
-@@ -351159,11 +351154,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CDC_Ralts25_title"
-+      title: "general1.ticket_CD_ShelmetKarrablast25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-01-25T17:00:00"
-+      skuDisableTime: "2025-02-09T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1737824400000
-+      skuDisableTimeUtcMs: 1739120400000
-     }
-   }
- }
-@@ -351213,7 +351208,6 @@
-       sku: "pgorelease.general2.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general2.ticket.5_gmaxkingler25_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -351232,7 +351226,6 @@
-       sku: "pgorelease.general2.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general2.ticket.5_gmaxkingler25_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -356439,7 +356432,239 @@
-     }
-   }
- }
--batch_id: 1738111852119
+-batch_id: 1738204141606
 +template {
-+  template_id: "BADGE_EVENT_0103"
++  template_id: "SHOW_RAID_GROUP_CODE_GATE"
 +  data {
-+    template_id: "BADGE_EVENT_0103"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0103
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
++    template_id: "SHOW_RAID_GROUP_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++      subCodeGateList {
++        name: "SHOW_RRP_GROUP_CODE"
++        isEnabled: true
 +      }
 +    }
 +  }
 +}
-+template {
-+  template_id: "BADGE_EVENT_0107"
-+  data {
-+    template_id: "BADGE_EVENT_0107"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0107
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "STAMP_COLLECTION_SETTINGS"
-+  data {
-+    template_id: "STAMP_COLLECTION_SETTINGS"
-+    243 {
-+      2: "#0f03fc"
-+      2: "#fc0328"
-+      2: "#205723"
-+      2: "#ffb700"
-+      3: 2
-+      5: 5
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOTOUR2025_BADGE"
-+  data {
-+    template_id: "STICKER_GOTOUR2025_BADGE"
-+    stickerMetadata {
-+      stickerId: "STICKER_GOTOUR2025_BADGE"
-+      maxCount: 25
-+      category: "Misc"
-+      releaseDate: 20250221
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOTOUR2025_KYUREMBLACK"
-+  data {
-+    template_id: "STICKER_GOTOUR2025_KYUREMBLACK"
-+    stickerMetadata {
-+      stickerId: "STICKER_GOTOUR2025_KYUREMBLACK"
-+      maxCount: 25
-+      pokemonId: KYUREM
-+      category: "Pokemon"
-+      releaseDate: 20250221
-+      regionId: 4
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOTOUR2025_KYUREMWHITE"
-+  data {
-+    template_id: "STICKER_GOTOUR2025_KYUREMWHITE"
-+    stickerMetadata {
-+      stickerId: "STICKER_GOTOUR2025_KYUREMWHITE"
-+      maxCount: 25
-+      pokemonId: KYUREM
-+      category: "Pokemon"
-+      releaseDate: 20250221
-+      regionId: 4
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOTOUR2025_RESHIRAM"
-+  data {
-+    template_id: "STICKER_GOTOUR2025_RESHIRAM"
-+    stickerMetadata {
-+      stickerId: "STICKER_GOTOUR2025_RESHIRAM"
-+      maxCount: 25
-+      pokemonId: RESHIRAM
-+      category: "Pokemon"
-+      releaseDate: 20250221
-+      regionId: 4
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOTOUR2025_RZ"
-+  data {
-+    template_id: "STICKER_GOTOUR2025_RZ"
-+    stickerMetadata {
-+      stickerId: "STICKER_GOTOUR2025_RZ"
-+      maxCount: 25
-+      category: "Misc"
-+      releaseDate: 20250221
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOTOUR2025_ZEKROM"
-+  data {
-+    template_id: "STICKER_GOTOUR2025_ZEKROM"
-+    stickerMetadata {
-+      stickerId: "STICKER_GOTOUR2025_ZEKROM"
-+      maxCount: 25
-+      pokemonId: ZEKROM
-+      category: "Pokemon"
-+      releaseDate: 20250221
-+      regionId: 4
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SHELMET_KARRABLAST_1"
-+  data {
-+    template_id: "STICKER_SHELMET_KARRABLAST_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_SHELMET_KARRABLAST_1"
-+      maxCount: 25
-+      pokemonId: SHELMET
-+      category: "Pokemon"
-+      releaseDate: 20250128
-+      regionId: 2000
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SHELMET_KARRABLAST_1.3"
-+  data {
-+    template_id: "STICKER_SHELMET_KARRABLAST_1.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SHELMET_KARRABLAST_1.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 46
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SHELMET_KARRABLAST_1.5"
-+  data {
-+    template_id: "STICKER_SHELMET_KARRABLAST_1.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SHELMET_KARRABLAST_1.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 45
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SHELMET_KARRABLAST_2"
-+  data {
-+    template_id: "STICKER_SHELMET_KARRABLAST_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_SHELMET_KARRABLAST_2"
-+      maxCount: 25
-+      pokemonId: SHELMET
-+      category: "Pokemon"
-+      releaseDate: 20250128
-+      regionId: 4
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SHELMET_KARRABLAST_2.3"
-+  data {
-+    template_id: "STICKER_SHELMET_KARRABLAST_2.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SHELMET_KARRABLAST_2.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 48
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SHELMET_KARRABLAST_2.5"
-+  data {
-+    template_id: "STICKER_SHELMET_KARRABLAST_2.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SHELMET_KARRABLAST_2.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 47
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SHELMET_KARRABLAST_3"
-+  data {
-+    template_id: "STICKER_SHELMET_KARRABLAST_3"
-+    stickerMetadata {
-+      stickerId: "STICKER_SHELMET_KARRABLAST_3"
-+      maxCount: 25
-+      pokemonId: KARRABLAST
-+      category: "Pokemon"
-+      releaseDate: 20250128
-+      regionId: 4
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SHELMET_KARRABLAST_3.3"
-+  data {
-+    template_id: "STICKER_SHELMET_KARRABLAST_3.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SHELMET_KARRABLAST_3.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 50
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SHELMET_KARRABLAST_3.5"
-+  data {
-+    template_id: "STICKER_SHELMET_KARRABLAST_3.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SHELMET_KARRABLAST_3.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 49
-+    }
-+  }
-+}
-+batch_id: 1738204141606
++batch_id: 1738293761985
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -356474,7 +356699,6 @@
- experiment_id: 3063
- experiment_id: 3100
- experiment_id: 3500
--experiment_id: 3647
- experiment_id: 3685
- experiment_id: 3950
- experiment_id: 3960
-@@ -356482,13 +356706,12 @@
- experiment_id: 3974
- experiment_id: 3979
- experiment_id: 4546
-+experiment_id: 4552
- experiment_id: 4565
- experiment_id: 4567
- experiment_id: 4568
- experiment_id: 4691
- experiment_id: 4998
--experiment_id: 5067
--experiment_id: 5121
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
