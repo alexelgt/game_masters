@@ -1,72 +1,49 @@
---- GAME_MASTER_old.txt	2025-02-05 22:37:31.271304481 +0100
-+++ GAME_MASTER.txt	2025-02-06 08:30:31.123620966 +0100
-@@ -57079,9 +57079,6 @@
-             id: CHARIZARD
-           }
-           pokemon {
--            id: CHARIZARD
--          }
--          pokemon {
-             id: CLEFAIRY
-           }
-           pokemon {
-@@ -57138,6 +57135,7 @@
-           pokemon {
-             id: MR_MIME
-             forms: MR_MIME_NORMAL
-+            forms: FORM_UNSET
-           }
-           pokemon {
-             id: JYNX
-@@ -57196,6 +57194,7 @@
-           pokemon {
-             id: CORSOLA
-             forms: CORSOLA_NORMAL
-+            forms: FORM_UNSET
-           }
-           pokemon {
-             id: OCTILLERY
-@@ -275232,7 +275231,7 @@
-       movementId: FREEZE_SHOCK
-       animationId: 5
-       pokemonType: POKEMON_TYPE_ICE
--      power: 180
-+      power: 160
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-@@ -275442,7 +275441,7 @@
-       movementId: ICE_BURN
-       animationId: 5
-       pokemonType: POKEMON_TYPE_ICE
--      power: 100
-+      power: 80
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-@@ -299618,6 +299617,7 @@
+--- GAME_MASTER_old.txt	2025-02-06 08:30:31.123620966 +0100
++++ GAME_MASTER.txt	2025-02-06 08:45:53.857799434 +0100
+@@ -115492,9 +115492,9 @@
+       eventPassPoint {
+         eventPassId: "EVENT_PASS_GOTOUR2025_GLOBAL"
        }
-       quickMoves: DRAGON_BREATH_FAST
-       quickMoves: STEEL_WING_FAST
-+      quickMoves: ICE_FANG_FAST
-       cinematicMoves: DRAGON_PULSE
-       cinematicMoves: BLIZZARD
-       cinematicMoves: ANCIENT_POWER
-@@ -356507,7 +356507,7 @@
+-      32 {
+-        1 {
+-          1: 150
++      timePeriodCounters {
++        playerActivity {
++          limit: 150
+         }
+       }
      }
-   }
- }
--batch_id: 1738714821623
-+batch_id: 1738801447424
- experiment_id: 1
- experiment_id: 4
- experiment_id: 6
-@@ -356552,8 +356552,6 @@
- experiment_id: 4588
- experiment_id: 4691
- experiment_id: 4998
--experiment_id: 5069
--experiment_id: 5123
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
+@@ -356468,11 +356468,11 @@
+         stardustCost: 5000
+       }
+       bonusEffect {
+-        4 {
+-          1: 0x3f000000
+-          2: 0x3fa00000
+-          3: 0x3f800000
+-          4: 0x3f000000
++        slowFreezeBonus {
++          catchCircleTimeScaleOverride: 0.5
++          catchRateIncreaseMultiplier: 1.25
++          catchCircleSpeedChangeThreshold: 1
++          catchCircleOuterTimeScaleOverride: 0.5
+         }
+       }
+       durationMs: 600000
+@@ -356493,11 +356493,11 @@
+         stardustCost: 5000
+       }
+       bonusEffect {
+-        4 {
+-          1: 0x3e4ccccd
+-          2: 0x3fc00000
+-          3: 0x3fcccccd
+-          4: 0x40800000
++        slowFreezeBonus {
++          catchCircleTimeScaleOverride: 0.2
++          catchRateIncreaseMultiplier: 1.5
++          catchCircleSpeedChangeThreshold: 1.6
++          catchCircleOuterTimeScaleOverride: 4
+         }
+       }
+       durationMs: 600000
