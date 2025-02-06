@@ -1,169 +1,72 @@
---- GAME_MASTER_old.txt	2025-02-04 09:58:09.050552279 +0100
-+++ GAME_MASTER.txt	2025-02-05 22:37:31.271304481 +0100
-@@ -275232,7 +275232,7 @@
+--- GAME_MASTER_old.txt	2025-02-05 22:37:31.271304481 +0100
++++ GAME_MASTER.txt	2025-02-06 08:30:31.123620966 +0100
+@@ -57079,9 +57079,6 @@
+             id: CHARIZARD
+           }
+           pokemon {
+-            id: CHARIZARD
+-          }
+-          pokemon {
+             id: CLEFAIRY
+           }
+           pokemon {
+@@ -57138,6 +57135,7 @@
+           pokemon {
+             id: MR_MIME
+             forms: MR_MIME_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: JYNX
+@@ -57196,6 +57194,7 @@
+           pokemon {
+             id: CORSOLA
+             forms: CORSOLA_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: OCTILLERY
+@@ -275232,7 +275231,7 @@
        movementId: FREEZE_SHOCK
        animationId: 5
        pokemonType: POKEMON_TYPE_ICE
--      power: 100
-+      power: 180
+-      power: 180
++      power: 160
        accuracyChance: 1
        staminaLossScalar: 0.01
        trainerLevelMin: 1
-@@ -275241,7 +275241,7 @@
-       durationMs: 1500
-       damageWindowStartMs: 900
-       damageWindowEndMs: 1400
--      energyDelta: -65
-+      energyDelta: -100
-     }
-   }
- }
-@@ -275442,7 +275442,7 @@
+@@ -275442,7 +275441,7 @@
        movementId: ICE_BURN
        animationId: 5
        pokemonType: POKEMON_TYPE_ICE
--      power: 120
-+      power: 100
+-      power: 100
++      power: 80
        accuracyChance: 1
        staminaLossScalar: 0.01
        trainerLevelMin: 1
-@@ -275451,7 +275451,7 @@
-       durationMs: 2000
-       damageWindowStartMs: 1800
-       damageWindowEndMs: 2200
--      energyDelta: -70
-+      energyDelta: -50
+@@ -299618,6 +299617,7 @@
+       }
+       quickMoves: DRAGON_BREATH_FAST
+       quickMoves: STEEL_WING_FAST
++      quickMoves: ICE_FANG_FAST
+       cinematicMoves: DRAGON_PULSE
+       cinematicMoves: BLIZZARD
+       cinematicMoves: ANCIENT_POWER
+@@ -356507,7 +356507,7 @@
      }
    }
  }
-@@ -343046,8 +343046,8 @@
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_JUNGLE"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LOVE"
-     }
-   }
- }
-@@ -349492,7 +349492,6 @@
-       sku: "general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_ShelmetKarrablast25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -349511,7 +349510,6 @@
-       sku: "general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_ShelmetKarrablast25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -351194,7 +351192,6 @@
-       sku: "pgorelease.general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_ShelmetKarrablast25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -351213,7 +351210,6 @@
-       sku: "pgorelease.general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_ShelmetKarrablast25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -356461,7 +356457,57 @@
-     }
-   }
- }
--batch_id: 1738638839496
-+template {
-+  template_id: "NON_COMBAT_V0466_MOVE_FREEZE_SHOCK"
-+  data {
-+    template_id: "NON_COMBAT_V0466_MOVE_FREEZE_SHOCK"
-+    nonCombatMoveSettings {
-+      uniqueId: FREEZE_SHOCK
-+      cost {
-+        candyCost: 5
-+        stardustCost: 5000
-+      }
-+      bonusEffect {
-+        4 {
-+          1: 0x3f000000
-+          2: 0x3fa00000
-+          3: 0x3f800000
-+          4: 0x3f000000
-+        }
-+      }
-+      durationMs: 600000
-+      bonusType: 5
-+      enableMultiUse: true
-+      extraDurationMs: 4000
-+    }
-+  }
-+}
-+template {
-+  template_id: "NON_COMBAT_V0467_MOVE_ICE_BURN"
-+  data {
-+    template_id: "NON_COMBAT_V0467_MOVE_ICE_BURN"
-+    nonCombatMoveSettings {
-+      uniqueId: ICE_BURN
-+      cost {
-+        candyCost: 5
-+        stardustCost: 5000
-+      }
-+      bonusEffect {
-+        4 {
-+          1: 0x3e4ccccd
-+          2: 0x3fc00000
-+          3: 0x3fcccccd
-+          4: 0x40800000
-+        }
-+      }
-+      durationMs: 600000
-+      bonusType: 6
-+      enableMultiUse: true
-+      extraDurationMs: 4000
-+    }
-+  }
-+}
-+batch_id: 1738714821623
+-batch_id: 1738714821623
++batch_id: 1738801447424
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -356470,7 +356516,7 @@
- experiment_id: 21
- experiment_id: 101
- experiment_id: 150
--experiment_id: 160
-+experiment_id: 161
- experiment_id: 300
- experiment_id: 302
- experiment_id: 320
-@@ -356502,8 +356548,11 @@
- experiment_id: 3975
- experiment_id: 3979
- experiment_id: 4546
-+experiment_id: 4585
-+experiment_id: 4588
+@@ -356552,8 +356552,6 @@
+ experiment_id: 4588
  experiment_id: 4691
  experiment_id: 4998
-+experiment_id: 5069
- experiment_id: 5123
+-experiment_id: 5069
+-experiment_id: 5123
  experiment_id: 5160
  experiment_id: 5162
-@@ -356512,6 +356561,7 @@
- experiment_id: 5510
- experiment_id: 5850
- experiment_id: 6075
-+experiment_id: 8715
- experiment_id: 8965
- experiment_id: 9521
- experiment_id: 9531
+ experiment_id: 5163
