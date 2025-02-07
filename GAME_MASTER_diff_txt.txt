@@ -1,49 +1,268 @@
---- GAME_MASTER_old.txt	2025-02-06 08:30:31.123620966 +0100
-+++ GAME_MASTER.txt	2025-02-06 08:45:53.857799434 +0100
-@@ -115492,9 +115492,9 @@
-       eventPassPoint {
-         eventPassId: "EVENT_PASS_GOTOUR2025_GLOBAL"
-       }
--      32 {
--        1 {
--          1: 150
-+      timePeriodCounters {
-+        playerActivity {
-+          limit: 150
-         }
-       }
+--- GAME_MASTER_old.txt	2025-02-06 08:45:53.857799434 +0100
++++ GAME_MASTER.txt	2025-02-07 13:45:23.118453092 +0100
+@@ -116287,7 +116287,7 @@
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_TOUR_01"
+     itemExpirationSettings {
+       item: ITEM_EVENT_PASS_POINT_GO_TOUR_01
+-      expirationTime: "2025-02-02T18:00:00"
++      expirationTime: "2025-02-13T18:00:00"
+       emergencyExpirationTime: "2025-04-08T18:00:00"
      }
-@@ -356468,11 +356468,11 @@
-         stardustCost: 5000
+   }
+@@ -116298,7 +116298,7 @@
+     template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
+     itemExpirationSettings {
+       item: ITEM_LUCKY_FRIEND_APPLICATOR
+-      expirationTime: "2025-02-03T22:00:00"
++      expirationTime: "2025-02-13T22:00:00"
+       emergencyExpirationTime: "2025-04-08T18:00:00"
+     }
+   }
+@@ -136081,9 +136081,9 @@
+       screenCaptureSize: 2
+       isIrisEnabled: true
+       irisFlags: 2011175120
+-      bannerImageUrl: "PokemonSetsHeaderImage004"
+-      bannerImageUrl: "PokemonSetsHeaderImage005"
+-      bannerImageUrl: "PokemonSetsHeaderImage006"
++      bannerImageUrl: "PokemonSetsHeaderImage007"
++      bannerImageUrl: "PokemonSetsHeaderImage008"
++      bannerImageUrl: "PokemonSetsHeaderImage009"
+     }
+   }
+ }
+@@ -138567,35 +138567,19 @@
+     pokedex_categories_settings {
+       featureEnabled: true
+       pokedexCategorySettingsInOrder {
+-        pokedexCategory: COSTUME
+-        milestoneGoal: 1
+-      }
+-      pokedexCategorySettingsInOrder {
+-        pokedexCategory: LUCKY
+-        milestoneGoal: 10
+-      }
+-      pokedexCategorySettingsInOrder {
+         pokedexCategory: SHINY
+         milestoneGoal: 15
        }
-       bonusEffect {
--        4 {
--          1: 0x3f000000
--          2: 0x3fa00000
--          3: 0x3f800000
--          4: 0x3f000000
-+        slowFreezeBonus {
-+          catchCircleTimeScaleOverride: 0.5
-+          catchRateIncreaseMultiplier: 1.25
-+          catchCircleSpeedChangeThreshold: 1
-+          catchCircleOuterTimeScaleOverride: 0.5
+       pokedexCategorySettingsInOrder {
+-        pokedexCategory: SHINY_THREE_STAR
+-        milestoneGoal: 50
+-      }
+-      pokedexCategorySettingsInOrder {
+-        pokedexCategory: THREE_STAR
++        pokedexCategory: LUCKY
+         milestoneGoal: 10
+       }
+       pokedexCategorySettingsInOrder {
+-        pokedexCategory: FOUR_STAR
+-        milestoneGoal: 20
+-      }
+-      pokedexCategorySettingsInOrder {
+-        pokedexCategory: SHADOW
++        pokedexCategory: 202
+         milestoneGoal: 10
+       }
+       pokedexCategorySettingsInOrder {
+-        pokedexCategory: PURIFIED
++        pokedexCategory: 201
+         milestoneGoal: 10
+       }
+       pokedexCategorySettingsInOrder {
+@@ -138609,17 +138593,36 @@
+         visuallyHidden: true
+       }
+       pokedexCategorySettingsInOrder {
+-        pokedexCategory: 202
++        pokedexCategory: COSTUME
+         milestoneGoal: 9999
+         visuallyHidden: true
+       }
+       pokedexCategorySettingsInOrder {
+-        pokedexCategory: 201
++        pokedexCategory: SHINY_THREE_STAR
+         milestoneGoal: 9999
+         visuallyHidden: true
+       }
++      pokedexCategorySettingsInOrder {
++        pokedexCategory: THREE_STAR
++        milestoneGoal: 9999
++        visuallyHidden: true
++      }
++      pokedexCategorySettingsInOrder {
++        pokedexCategory: SHADOW
++        milestoneGoal: 10
++      }
++      pokedexCategorySettingsInOrder {
++        pokedexCategory: PURIFIED
++        milestoneGoal: 10
++      }
++      pokedexCategorySettingsInOrder {
++        pokedexCategory: FOUR_STAR
++        milestoneGoal: 10
++      }
+       clientShinyFormCheck: true
+       searchEnabled: true
++      5: 1
++      6: 1
+     }
+   }
+ }
+@@ -345251,9 +345254,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: DIALGA
++          pokemon_id: ENAMORUS
+           pokemonDisplay {
+-            form: DIALGA_NORMAL
++            form: ENAMORUS_INCARNATE
+           }
          }
+         unlockedAtRank: 20
+@@ -345883,9 +345886,9 @@
        }
-       durationMs: 600000
-@@ -356493,11 +356493,11 @@
-         stardustCost: 5000
-       }
-       bonusEffect {
--        4 {
--          1: 0x3e4ccccd
--          2: 0x3fc00000
--          3: 0x3fcccccd
--          4: 0x40800000
-+        slowFreezeBonus {
-+          catchCircleTimeScaleOverride: 0.2
-+          catchRateIncreaseMultiplier: 1.5
-+          catchCircleSpeedChangeThreshold: 1.6
-+          catchCircleOuterTimeScaleOverride: 4
+       availablePokemon {
+         pokemon {
+-          pokemon_id: DIALGA
++          pokemon_id: ENAMORUS
+           pokemonDisplay {
+-            form: DIALGA_NORMAL
++            form: ENAMORUS_INCARNATE
+           }
          }
-       }
-       durationMs: 600000
+         unlockedAtRank: 20
+@@ -346465,10 +346468,13 @@
+       sku: "bundle.cd2022.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       sale: true
+-      spriteId: "bundle.halloween.small.1"
+-      title: "bundle.halloween.small.1_title"
++      spriteId: "bundle.general4.small.1"
++      title: "bundle.general4.small.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-02-09T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1739145599000
+     }
+   }
+ }
+@@ -346480,10 +346486,13 @@
+       sku: "bundle.cd2022.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 2
+-      hidden: true
+       sale: true
+-      spriteId: "bundle.halloween.adventure.1"
+-      title: "bundle.halloween.adventure.1_title"
++      spriteId: "bundle.general1.medium.1"
++      title: "bundle.general1.medium.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-02-09T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1739145599000
+     }
+   }
+ }
+@@ -356507,7 +356516,79 @@
+     }
+   }
+ }
+-batch_id: 1738801447424
++template {
++  template_id: "N_DISPLAY_n_hat_kyuremhat_0"
++  data {
++    template_id: "N_DISPLAY_n_hat_kyuremhat_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_kyuremhat_0_icon"
++      displayStringId: "avatar_hat_kyurem"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_pants_blackwhite_0"
++  data {
++    template_id: "N_DISPLAY_n_pants_blackwhite_0"
++    avatarItemDisplay {
++      iconAddress: "n_pants_blackwhite_0_icon"
++      displayStringId: "avatar_pants_bwpants"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_blackwhite_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_blackwhite_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_blackwhite_0_icon"
++      displayStringId: "avatar_shirt_bwhoodie"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_gotour2025_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_gotour2025_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_gotour2025_0_icon"
++      displayStringId: "avatar_shirt_gotour2025black"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_gotour2025_1"
++  data {
++    template_id: "N_DISPLAY_n_shirt_gotour2025_1"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_gotour2025_1_icon"
++      displayStringId: "avatar_shirt_gotour2025white"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_shinymeloettatshirt_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_shinymeloettatshirt_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_shinymeloettatshirt_0_icon"
++      displayStringId: "avatar_shirt_shinymeloetta"
++    }
++  }
++}
++template {
++  template_id: "POKEDEXV2_FEATURE_FLAGS"
++  data {
++    template_id: "POKEDEXV2_FEATURE_FLAGS"
++    246 {
++      1: 1
++      2: 1650943169
++      3: 18446744072218491441
++      6: 18446744072518016629
++    }
++  }
++}
++batch_id: 1738893375874
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -356536,6 +356617,8 @@
+ experiment_id: 2399
+ experiment_id: 2400
+ experiment_id: 2402
++experiment_id: 2600
++experiment_id: 3025
+ experiment_id: 3032
+ experiment_id: 3033
+ experiment_id: 3063
+@@ -356543,7 +356626,7 @@
+ experiment_id: 3500
+ experiment_id: 3685
+ experiment_id: 3950
+-experiment_id: 3960
++experiment_id: 3961
+ experiment_id: 3967
+ experiment_id: 3975
+ experiment_id: 3979
