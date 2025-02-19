@@ -1,64 +1,66 @@
---- GAME_MASTER_old.txt	2025-02-18 09:05:26.372324653 +0100
-+++ GAME_MASTER.txt	2025-02-18 09:39:32.549529226 +0100
-@@ -68440,12 +68440,12 @@
-   template_id: "DEFAULT_BATTLE_INPUT_BUFFER_SETTINGS"
+--- GAME_MASTER_old.txt	2025-02-18 09:39:32.549529226 +0100
++++ GAME_MASTER.txt	2025-02-19 19:41:45.994308089 +0100
+@@ -343679,8 +343679,9 @@
    data {
-     template_id: "DEFAULT_BATTLE_INPUT_BUFFER_SETTINGS"
--    259 {
--      1 {
--        1: "\005"
-+    battleInputBufferSettings {
-+      raidsInputBufferPriorityList {
-+        eventPriority: DODGE
-       }
--      2 {
--        1: "\005"
-+      breadInputBufferPriorityList {
-+        eventPriority: DODGE
-       }
-     }
-   }
-@@ -115311,7 +115311,7 @@
-       bagUpgradeBannerContexts: COMBAT_HUB_INVENTORY_FULL
-       bagUpgradeBannerContexts: QUICK_SHOP_INVENTORY_FULL
-       easyIncubatorBuyEnabled: true
--      23: 1
-+      luckyFriendApplicatorSettingsToggleEnabled: true
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LOVE"
      }
    }
  }
-@@ -116765,6 +116765,9 @@
-         giftable: true
-         giftItem: ITEM_GLOBAL_EVENT_TICKET_TO_GIFT
-         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/banners/ShinyMeloetta_ticketBanner.png"
-+        conflictStoryQuestIds: "GO_TOUR_2025_LIVE_LA_SR_SET_0_HEADER"
-+        conflictStoryQuestIds: "GO_TOUR_2025_LIVE_NTC_SR_SET_0_HEADER"
-+        conflictStoryQuestIds: "MASTERWORK_SHINY_MELOETTA_SET_0_HEADER"
-         displayV2Enabled: true
-         backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/banners/RoadToUnovaLogoless.png"
-         titleImageUrl: "https://storage.googleapis.com/prod-public-images/gotourlogo_1914247967.png"
-@@ -116796,9 +116799,6 @@
-         detailsLinkKey: "details_link_key_GOTourHatch2025"
-         clientEventStartTimeUtcMs: 1740391200000
-         clientEventEndTimeUtcMs: 1740938400000
--        19: "GO_TOUR_2025_LIVE_LA_SR_SET_0_HEADER"
--        19: "GO_TOUR_2025_LIVE_NTC_SR_SET_0_HEADER"
--        19: "MASTERWORK_SHINY_MELOETTA_SET_0_HEADER"
-       }
-       descriptionOverride: "item_global_event_ticket_details_Meloetta"
+@@ -348941,9 +348942,12 @@
+       sku: "bundle.s17seasonstart.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general2.medium.2"
+       title: "bundle.general1.small.1_title"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2025-02-20T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1740081600000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 295
+@@ -357140,7 +357144,7 @@
      }
-@@ -116818,11 +116818,11 @@
-         itemBagDescriptionKey: "item_global_event_ticket_details_Meloetta"
-         ticketItem: ITEM_GLOBAL_EVENT_TICKET
-         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/banners/ShinyMeloetta_ticketBanner.png"
-+        conflictStoryQuestIds: "GO_TOUR_2025_LIVE_LA_SR_SET_0_HEADER"
-+        conflictStoryQuestIds: "GO_TOUR_2025_LIVE_NTC_SR_SET_0_HEADER"
-+        conflictStoryQuestIds: "MASTERWORK_SHINY_MELOETTA_SET_0_HEADER"
-         clientEventStartTimeUtcMs: 1740391200000
-         clientEventEndTimeUtcMs: 1740938400000
--        19: "GO_TOUR_2025_LIVE_LA_SR_SET_0_HEADER"
--        19: "GO_TOUR_2025_LIVE_NTC_SR_SET_0_HEADER"
--        19: "MASTERWORK_SHINY_MELOETTA_SET_0_HEADER"
-       }
-       ignoreInventorySpace: true
-       descriptionOverride: "item_global_event_ticket_details_Meloetta"
+   }
+ }
+-batch_id: 1739860224739
++batch_id: 1739984781928
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -357149,7 +357153,7 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 150
+-experiment_id: 162
++experiment_id: 163
+ experiment_id: 300
+ experiment_id: 302
+ experiment_id: 320
+@@ -357163,6 +357167,7 @@
+ experiment_id: 1699
+ experiment_id: 1820
+ experiment_id: 2248
++experiment_id: 2251
+ experiment_id: 2301
+ experiment_id: 2399
+ experiment_id: 2400
+@@ -357178,9 +357183,12 @@
+ experiment_id: 3977
+ experiment_id: 3979
+ experiment_id: 4546
++experiment_id: 4559
++experiment_id: 4561
+ experiment_id: 4563
+ experiment_id: 4691
+ experiment_id: 4998
++experiment_id: 5074
+ experiment_id: 5127
+ experiment_id: 5160
+ experiment_id: 5162
