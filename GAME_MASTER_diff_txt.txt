@@ -1,66 +1,797 @@
---- GAME_MASTER_old.txt	2025-02-18 09:39:32.549529226 +0100
-+++ GAME_MASTER.txt	2025-02-19 19:41:45.994308089 +0100
-@@ -343679,8 +343679,9 @@
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
-       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LOVE"
+--- GAME_MASTER_old.txt	2025-02-19 19:41:45.994308089 +0100
++++ GAME_MASTER.txt	2025-02-21 19:41:28.640657666 +0100
+@@ -115010,7 +115010,7 @@
+     iapCategoryDisplay {
+       category: IAP_CATEGORY_AVATAR
+       sortOrder: 5
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_avatar_fashionweekset.jpg"
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_avatar_blackwhitekyurem.jpg"
+       description: "avatar_shop_description_new"
+     }
+   }
+@@ -115901,26 +115901,26 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-02-09T14:00:00"
+-        eventEndTime: "2025-02-09T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_ShelmetKarrablast25"
++        eventStartTime: "2025-03-08T14:00:00"
++        eventEndTime: "2025-03-08T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Fuecoco25"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-KarrablastShelmetCD-nologo-2025.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-fuecoco-cd-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-KarrablastShelmetCD-nologo-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_CD_ShelmetKarrablast25"
+-        textRewardsKey: "text_rewards_key_CD_ShelmetKarrablast25"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-fuecoco-cd-2025-skeledirge.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CD_Fuecoco25"
++        textRewardsKey: "text_rewards_key_CD_Fuecoco25"
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemon_encounter {
+-            pokemon_id: ACCELGOR
++            pokemon_id: SKELEDIRGE
+           }
+         }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_LUCKY_EGG
++            item: ITEM_STAR_PIECE
+             amount: 1
+           }
+         }
+@@ -115932,10 +115932,10 @@
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1739109600000
+-        clientEventEndTimeUtcMs: 1739120400000
++        clientEventStartTimeUtcMs: 1741442400000
++        clientEventEndTimeUtcMs: 1741453200000
+       }
+-      descriptionOverride: "item_event_ticket_pink_desc_CD_ShelmetKarrablast25"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Fuecoco25"
      }
    }
  }
-@@ -348941,9 +348942,12 @@
+@@ -115948,16 +115948,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-02-09T14:00:00"
+-        eventEndTime: "2025-02-09T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_details_CD_ShelmetKarrablast25"
++        eventStartTime: "2025-03-08T14:00:00"
++        eventEndTime: "2025-03-08T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Fuecoco25"
+         ticketItem: ITEM_EVENT_TICKET_03
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-KarrablastShelmetCD-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1739109600000
+-        clientEventEndTimeUtcMs: 1739120400000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-fuecoco-cd-2025.jpg"
++        clientEventStartTimeUtcMs: 1741442400000
++        clientEventEndTimeUtcMs: 1741453200000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_pink_details_CD_ShelmetKarrablast25"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Fuecoco25"
+     }
+   }
+ }
+@@ -116062,7 +116062,9 @@
+         }
+         iconRewards {
+           type: AVATAR_CLOTHING
+-          avatar_template_id: "N_AVATAR_n_shirt_blackwhite_0"
++          neutralAvatarItemTemplate {
++            displayTemplateId: "N_DISPLAY_n_shirt_blackwhite_0"
++          }
+         }
+         iconRewards {
+           type: ITEM
+@@ -116123,7 +116125,9 @@
+         textRewardsKey: "text_rewards_key_GOTourRaid2025"
+         iconRewards {
+           type: AVATAR_CLOTHING
+-          avatar_template_id: "N_AVATAR_n_pants_blackwhite_0"
++          neutralAvatarItemTemplate {
++            displayTemplateId: "N_DISPLAY_n_pants_blackwhite_0"
++          }
+         }
+         iconRewards {
+           type: ITEM
+@@ -116171,38 +116175,36 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-01-19T14:00:00"
+-        eventEndTime: "2025-01-19T22:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_ShadowHoOhRaidDay"
++        eventStartTime: "2025-04-04T10:00:00"
++        eventEndTime: "2025-05-04T10:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_AprilMonthly2025"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_07_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/20241125_pgo_ho-oh_shadowraid_1024x512%20no%20logo.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/20241125_pgo_ho-oh_shadowraid_1024x512%20no%20logo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_ShadowHoOhRaidDay"
+-        textRewardsKey: "text_rewards_key_ShadowHoOhRaidDay"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_AprilMonthly2025"
++        textRewardsKey: "text_rewards_key_AprilMonthly2025"
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_FREE_RAID_TICKET
++            item: ITEM_PAID_RAID_TICKET
+             amount: 8
+           }
+         }
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_XL_RARE_CANDY
+-          }
++          type: STARDUST
++          stardust: 50000
+         }
+         iconRewards {
+-          type: STARDUST
+-          stardust: 2
++          type: EXPERIENCE
++          exp: 50000
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1737295200000
+-        clientEventEndTimeUtcMs: 1737324000000
++        clientEventStartTimeUtcMs: 1743760800000
++        clientEventEndTimeUtcMs: 1746352800000
+       }
+-      descriptionOverride: "item_event_ticket_gray_desc_ShadowHoOhRaidDay"
++      descriptionOverride: "item_event_ticket_gray_desc_AprilMonthly2025"
+     }
+   }
+ }
+@@ -116215,16 +116217,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-01-19T14:00:00"
+-        eventEndTime: "2025-01-19T22:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_ShadowHoOhRaidDay"
++        eventStartTime: "2025-04-04T10:00:00"
++        eventEndTime: "2025-05-04T10:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_AprilMonthly2025"
+         ticketItem: ITEM_EVENT_TICKET_07
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/20241125_pgo_ho-oh_shadowraid_1024x512%20no%20logo.jpg"
+-        clientEventStartTimeUtcMs: 1737295200000
+-        clientEventEndTimeUtcMs: 1737324000000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++        clientEventStartTimeUtcMs: 1743760800000
++        clientEventEndTimeUtcMs: 1746352800000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_ShadowHoOhRaidDay"
++      descriptionOverride: "item_event_ticket_gray_desc_AprilMonthly2025"
+     }
+   }
+ }
+@@ -116429,38 +116431,36 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-02-15T14:00:00"
+-        eventEndTime: "2025-02-15T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_HoopaUnboundRaidDay"
++        eventStartTime: "2025-03-04T10:00:00"
++        eventEndTime: "2025-04-04T10:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_MarchMonthly2025"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_GRAY_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-HoopaRaidDay-nologo-2025.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-HoopaRaidDay-nologo-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_HoopaUnboundRaidDay"
+-        textRewardsKey: "text_rewards_key_HoopaUnboundRaidDay"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_MarchMonthly2025"
++        textRewardsKey: "text_rewards_key_MarchMonthly2025"
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_FREE_RAID_TICKET
++            item: ITEM_PAID_RAID_TICKET
+             amount: 8
+           }
+         }
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_XL_RARE_CANDY
+-          }
++          type: STARDUST
++          stardust: 50000
+         }
+         iconRewards {
+-          type: STARDUST
+-          stardust: 2
++          type: EXPERIENCE
++          exp: 50000
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1739628000000
+-        clientEventEndTimeUtcMs: 1739638800000
++        clientEventStartTimeUtcMs: 1741082400000
++        clientEventEndTimeUtcMs: 1743760800000
+       }
+-      descriptionOverride: "item_event_ticket_gray_desc_HoopaUnboundRaidDay"
++      descriptionOverride: "item_event_ticket_gray_desc_MarchMonthly2025"
+     }
+   }
+ }
+@@ -116473,16 +116473,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-02-15T14:00:00"
+-        eventEndTime: "2025-02-15T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_HoopaUnboundRaidDay"
++        eventStartTime: "2025-03-04T10:00:00"
++        eventEndTime: "2025-04-04T10:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_MarchMonthly2025"
+         ticketItem: ITEM_EVENT_TICKET_GRAY
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-HoopaRaidDay-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1739628000000
+-        clientEventEndTimeUtcMs: 1739638800000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++        clientEventStartTimeUtcMs: 1741082400000
++        clientEventEndTimeUtcMs: 1743760800000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_HoopaUnboundRaidDay"
++      descriptionOverride: "item_event_ticket_gray_desc_MarchMonthly2025"
+     }
+   }
+ }
+@@ -348942,12 +348942,9 @@
        sku: "bundle.s17seasonstart.1"
        category: IAP_CATEGORY_BUNDLE
        sortOrder: 1
--      hidden: true
++      hidden: true
        spriteId: "bundle.general2.medium.2"
        title: "bundle.general1.small.1_title"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2025-02-20T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1740081600000
+-      skuEnableTime: "2019-10-31T21:00:00"
+-      skuDisableTime: "2025-02-20T20:00:00"
+-      skuEnableTimeUtcMs: 1572555600000
+-      skuDisableTimeUtcMs: 1740081600000
        showDiscountTag: true
        showStrikethroughPrice: true
        totalValue: 295
-@@ -357140,7 +357144,7 @@
+@@ -349881,12 +349878,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.1"
+-      title: "general1.ticket._MaxOutFinale1124_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-12-01T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1733083200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/determinedpose.png"
++      title: "gotour_2025_shiny_meloetta_masterwork_sr_title"
++      skuEnableTime: "2025-01-25T10:00:00"
++      skuDisableTime: "2025-03-02T18:00:00"
++      skuEnableTimeUtcMs: 1737799200000
++      skuDisableTimeUtcMs: 1740938400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/ShinyMeloetta_ticketBanner.png"
      }
    }
  }
--batch_id: 1739860224739
-+batch_id: 1739984781928
+@@ -349900,11 +349897,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.1"
+-      title: "general1.ticket._MaxOutFinale1124_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-12-01T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1733083200000
++      title: "gotour_2025_shiny_meloetta_masterwork_sr_title"
++      skuEnableTime: "2025-01-25T10:00:00"
++      skuDisableTime: "2025-03-02T18:00:00"
++      skuEnableTimeUtcMs: 1737799200000
++      skuDisableTimeUtcMs: 1740938400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/ShinyMeloetta_ticketBanner.png"
+     }
+   }
+ }
+@@ -350011,13 +350009,14 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general1.ticket.5_HoopaUnboundRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-02-15T16:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1739635200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-HoopaRaidDay-nologo-2025.jpg"
++      spriteId: "general1.ticket.5"
++      title: "general1.ticket.5_MarchMonthly2025_title"
++      description: "item_event_ticket_gray_details_MarchMonthly2025"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-04-11T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1744401600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+     }
+   }
+ }
+@@ -350030,13 +350029,14 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general1.ticket.5_HoopaUnboundRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-02-15T16:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1739635200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-HoopaRaidDay-nologo-2025.jpg"
++      spriteId: "general1.ticket.5"
++      title: "general1.ticket.5_MarchMonthly2025_title"
++      description: "item_event_ticket_gray_details_MarchMonthly2025"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-04-11T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1744401600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+     }
+   }
+ }
+@@ -350186,12 +350186,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_ShelmetKarrablast25_title"
++      title: "general1.ticket.2_fuecoco_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-02-09T17:00:00"
++      skuDisableTime: "2025-03-08T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1739120400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-KarrablastShelmetCD-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1741453200000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-fuecoco-cd-2025-skeledirge.jpg"
+     }
+   }
+ }
+@@ -350205,11 +350205,11 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_ShelmetKarrablast25_title"
++      title: "general1.ticket.2_fuecoco_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-02-09T17:00:00"
++      skuDisableTime: "2025-03-08T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1739120400000
++      skuDisableTimeUtcMs: 1741453200000
+     }
+   }
+ }
+@@ -350258,15 +350258,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 4
+       hidden: true
+       spriteId: "general2.ticket.5"
+-      title: "general2.ticket.5_gmaxkingler25_title"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-02-01T16:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1738425600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-gmax-kingler-nologo-2025.png"
++      title: "road_to_unova_event_title_hatch"
++      skuEnableTime: "2025-01-25T10:00:00"
++      skuDisableTime: "2025-03-02T18:00:00"
++      skuEnableTimeUtcMs: 1737799200000
++      skuDisableTimeUtcMs: 1740938400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/Road_to_Unova_hatch_banner_01.jpg"
+     }
+   }
+ }
+@@ -350277,15 +350277,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 4
+       hidden: true
+       spriteId: "general2.ticket.5"
+-      title: "general2.ticket.5_gmaxkingler25_title"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-02-01T16:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1738425600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-gmax-kingler-nologo-2025.png"
++      title: "road_to_unova_event_title_hatch"
++      skuEnableTime: "2025-01-25T10:00:00"
++      skuDisableTime: "2025-03-02T18:00:00"
++      skuEnableTimeUtcMs: 1737799200000
++      skuDisableTimeUtcMs: 1740938400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/Road_to_Unova_hatch_banner_01.jpg"
+     }
+   }
+ }
+@@ -350296,16 +350296,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 3
+       hidden: true
+-      spriteId: "general2.ticket.6"
+-      title: "general1.ticket.5_JanMonthly2025_title"
+-      description: "item_event_ticket_gray_details_JanMonthly2025"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-01-10T20:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1736539200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++      spriteId: "general2.ticket.9"
++      title: "road_to_unova_event_title_raid"
++      skuEnableTime: "2025-01-25T10:00:00"
++      skuDisableTime: "2025-03-02T18:00:00"
++      skuEnableTimeUtcMs: 1737799200000
++      skuDisableTimeUtcMs: 1740938400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/Road_to_Unova_raid_banner_01.jpg"
+     }
+   }
+ }
+@@ -350316,16 +350315,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 3
+       hidden: true
+-      spriteId: "general2.ticket.6"
+-      title: "general1.ticket.5_JanMonthly2025_title"
+-      description: "item_event_ticket_gray_details_JanMonthly2025"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-01-10T20:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1736539200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++      spriteId: "general2.ticket.9"
++      title: "road_to_unova_event_title_raid"
++      skuEnableTime: "2025-01-25T10:00:00"
++      skuDisableTime: "2025-03-02T18:00:00"
++      skuEnableTimeUtcMs: 1737799200000
++      skuDisableTimeUtcMs: 1740938400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/Road_to_Unova_raid_banner_01.jpg"
+     }
+   }
+ }
+@@ -350338,13 +350336,14 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general2.ticket._ShadowHoOhRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-01-19T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1737306000000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20241125_pgo_ho-oh_shadowraid_1024x512%20no%20logo.jpg"
++      spriteId: "general2.ticket.7"
++      title: "general2.ticket.7_AprilMonthly2025_title"
++      description: "item_event_ticket_gray_details_AprilMonthly2025"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-05-11T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1746993600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+     }
+   }
+ }
+@@ -350357,13 +350356,14 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general2.ticket._ShadowHoOhRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-01-19T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1737306000000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20241125_pgo_ho-oh_shadowraid_1024x512%20no%20logo.jpg"
++      spriteId: "general2.ticket.7"
++      title: "general2.ticket.7_AprilMonthly2025_title"
++      description: "item_event_ticket_gray_details_AprilMonthly2025"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-05-11T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1746993600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+     }
+   }
+ }
+@@ -350375,6 +350375,7 @@
+       sku: "general2.ticket.8"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.8"
+       title: "general2.ticket.8_scattered_winds_feb_2025_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -350393,6 +350394,7 @@
+       sku: "general2.ticket.8.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.8"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2025-02-20T20:00:00"
+@@ -351612,7 +351614,7 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.1"
+       title: "gotour_2025_shiny_meloetta_masterwork_sr_title"
+@@ -351631,7 +351633,7 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.1"
+       title: "gotour_2025_shiny_meloetta_masterwork_sr_title"
+@@ -351729,13 +351731,14 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general1.ticket.5_HoopaUnboundRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-02-15T16:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1739635200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-HoopaRaidDay-nologo-2025.jpg"
++      spriteId: "general1.ticket.5"
++      title: "general1.ticket.5_MarchMonthly2025_title"
++      description: "item_event_ticket_gray_details_MarchMonthly2025"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-04-11T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1744401600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+     }
+   }
+ }
+@@ -351748,13 +351751,14 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general1.ticket.5_HoopaUnboundRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-02-15T16:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1739635200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-HoopaRaidDay-nologo-2025.jpg"
++      spriteId: "general1.ticket.5"
++      title: "general1.ticket.5_MarchMonthly2025_title"
++      description: "item_event_ticket_gray_details_MarchMonthly2025"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-04-11T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1744401600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+     }
+   }
+ }
+@@ -351885,12 +351889,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_ShelmetKarrablast25_title"
++      title: "general1.ticket.2_fuecoco_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-02-09T17:00:00"
++      skuDisableTime: "2025-03-08T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1739120400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-KarrablastShelmetCD-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1741453200000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-fuecoco-cd-2025-skeledirge.jpg"
+     }
+   }
+ }
+@@ -351904,11 +351908,11 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_ShelmetKarrablast25_title"
++      title: "general1.ticket.2_fuecoco_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-02-09T17:00:00"
++      skuDisableTime: "2025-03-08T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1739120400000
++      skuDisableTimeUtcMs: 1741453200000
+     }
+   }
+ }
+@@ -351957,7 +351961,7 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 3
++      sortOrder: 4
+       hidden: true
+       spriteId: "general2.ticket.5"
+       title: "road_to_unova_event_title_hatch"
+@@ -351976,7 +351980,7 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 3
++      sortOrder: 4
+       hidden: true
+       spriteId: "general2.ticket.5"
+       title: "road_to_unova_event_title_hatch"
+@@ -351995,7 +351999,7 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 3
+       hidden: true
+       spriteId: "general2.ticket.9"
+       title: "road_to_unova_event_title_raid"
+@@ -352014,7 +352018,7 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 3
+       hidden: true
+       spriteId: "general2.ticket.9"
+       title: "road_to_unova_event_title_raid"
+@@ -352035,13 +352039,14 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general2.ticket._ShadowHoOhRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-01-19T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1737306000000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20241125_pgo_ho-oh_shadowraid_1024x512%20no%20logo.jpg"
++      spriteId: "general2.ticket.7"
++      title: "general2.ticket.7_AprilMonthly2025_title"
++      description: "item_event_ticket_gray_details_AprilMonthly2025"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-05-11T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1746993600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+     }
+   }
+ }
+@@ -352054,13 +352059,14 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+       hidden: true
+-      spriteId: "general1.ticket.4"
+-      title: "general2.ticket._ShadowHoOhRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-01-19T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1737306000000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20241125_pgo_ho-oh_shadowraid_1024x512%20no%20logo.jpg"
++      spriteId: "general2.ticket.7"
++      title: "general2.ticket.7_AprilMonthly2025_title"
++      description: "item_event_ticket_gray_details_AprilMonthly2025"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-05-11T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1746993600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+     }
+   }
+ }
+@@ -352072,6 +352078,7 @@
+       sku: "pgorelease.general2.ticket.8"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.8"
+       title: "general2.ticket.8_scattered_winds_feb_2025_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -352090,6 +352097,7 @@
+       sku: "pgorelease.general2.ticket.8.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.8"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2025-02-20T20:00:00"
+@@ -357144,7 +357152,27 @@
+     }
+   }
+ }
+-batch_id: 1739984781928
++template {
++  template_id: "N_DISPLAY_n_backpack_blackkyuremitem_0"
++  data {
++    template_id: "N_DISPLAY_n_backpack_blackkyuremitem_0"
++    avatarItemDisplay {
++      iconAddress: "n_backpack_blackkyuremitem_0_icon"
++      displayStringId: "avatar_backpack_blackkyurem"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_backpack_whitekyuremitem_0"
++  data {
++    template_id: "N_DISPLAY_n_backpack_whitekyuremitem_0"
++    avatarItemDisplay {
++      iconAddress: "n_backpack_whitekyuremitem_0_icon"
++      displayStringId: "avatar_backpack_whitekyurem"
++    }
++  }
++}
++batch_id: 1740160192221
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -357149,7 +357153,7 @@
- experiment_id: 21
- experiment_id: 101
- experiment_id: 150
--experiment_id: 162
-+experiment_id: 163
- experiment_id: 300
- experiment_id: 302
- experiment_id: 320
-@@ -357163,6 +357167,7 @@
+@@ -357167,7 +357195,6 @@
  experiment_id: 1699
  experiment_id: 1820
  experiment_id: 2248
-+experiment_id: 2251
+-experiment_id: 2251
  experiment_id: 2301
  experiment_id: 2399
  experiment_id: 2400
-@@ -357178,9 +357183,12 @@
- experiment_id: 3977
+@@ -357184,12 +357211,8 @@
  experiment_id: 3979
  experiment_id: 4546
-+experiment_id: 4559
-+experiment_id: 4561
- experiment_id: 4563
+ experiment_id: 4559
+-experiment_id: 4561
+-experiment_id: 4563
  experiment_id: 4691
  experiment_id: 4998
-+experiment_id: 5074
- experiment_id: 5127
+-experiment_id: 5074
+-experiment_id: 5127
  experiment_id: 5160
  experiment_id: 5162
+ experiment_id: 5163
+@@ -357203,6 +357226,10 @@
+ experiment_id: 9553
+ experiment_id: 9554
+ experiment_id: 20947
++experiment_id: 55500
++experiment_id: 55621
++experiment_id: 55622
++experiment_id: 55623
+ experiment_id: 314159
+ experiment_id: 314160
+ experiment_id: 3500035
