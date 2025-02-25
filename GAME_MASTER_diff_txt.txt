@@ -1,1180 +1,461 @@
---- GAME_MASTER_old.txt	2025-02-24 20:50:28.183793099 +0100
-+++ GAME_MASTER.txt	2025-02-24 21:52:38.239413472 +0100
-@@ -68651,7 +68651,7 @@
-       minPointsRequired: 4950
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: ZORUA
-           pokemonDisplay {
-             gender: MALE
-@@ -68954,8 +68954,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: TEPIG
--          lndgdlpphjj: 5
-+          pokemonId: TEPIG
-+          amount: 5
-         }
-       }
+--- GAME_MASTER_old.txt	2025-02-24 21:52:38.239413472 +0100
++++ GAME_MASTER.txt	2025-02-25 19:58:38.701642538 +0100
+@@ -187699,7 +187699,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_BADGE.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 40
++      sortOrder: 46
      }
-@@ -68970,9 +68970,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: TEPIG
--          lndgdlpphjj: 25
-+        xlCandy {
-+          pokemonId: TEPIG
-+          amount: 25
-         }
-       }
+   }
+ }
+@@ -187710,7 +187710,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_BADGE.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 39
++      sortOrder: 45
      }
-@@ -69279,8 +69279,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: OSHAWOTT
--          lndgdlpphjj: 5
-+          pokemonId: OSHAWOTT
-+          amount: 5
-         }
-       }
+   }
+ }
+@@ -187735,7 +187735,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_KYUREMBLACK.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 42
++      sortOrder: 34
      }
-@@ -69295,9 +69295,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: OSHAWOTT
--          lndgdlpphjj: 25
-+        xlCandy {
-+          pokemonId: OSHAWOTT
-+          amount: 25
-         }
-       }
+   }
+ }
+@@ -187746,7 +187746,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_KYUREMBLACK.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 41
++      sortOrder: 33
      }
-@@ -71220,8 +71220,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: RESHIRAM
--          lndgdlpphjj: 2
-+          pokemonId: RESHIRAM
-+          amount: 2
-         }
-       }
+   }
+ }
+@@ -187771,7 +187771,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_KYUREMWHITE.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 44
++      sortOrder: 36
      }
-@@ -71237,8 +71237,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: RESHIRAM
--          lndgdlpphjj: 25
-+          pokemonId: RESHIRAM
-+          amount: 25
-         }
-       }
+   }
+ }
+@@ -187782,7 +187782,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_KYUREMWHITE.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 43
++      sortOrder: 35
      }
-@@ -71545,8 +71545,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: ZEKROM
--          lndgdlpphjj: 2
-+          pokemonId: ZEKROM
-+          amount: 2
-         }
-       }
+   }
+ }
+@@ -187807,7 +187807,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_RESHIRAM.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 48
++      sortOrder: 40
      }
-@@ -71562,8 +71562,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: ZEKROM
--          lndgdlpphjj: 25
-+          pokemonId: ZEKROM
-+          amount: 25
-         }
-       }
+   }
+ }
+@@ -187818,7 +187818,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_RESHIRAM.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 47
++      sortOrder: 39
      }
-@@ -71870,8 +71870,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: KYUREM
--          lndgdlpphjj: 2
-+          pokemonId: KYUREM
-+          amount: 2
-         }
-       }
+   }
+ }
+@@ -187841,7 +187841,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_RZ.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 46
++      sortOrder: 48
      }
-@@ -71887,8 +71887,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: KYUREM
--          lndgdlpphjj: 25
-+          pokemonId: KYUREM
-+          amount: 25
-         }
-       }
+   }
+ }
+@@ -187852,7 +187852,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_RZ.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 45
++      sortOrder: 47
      }
-@@ -71920,14 +71920,14 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: VICTINI
-           isFeaturedPokemon: true
-         }
-       }
-       rewards {
-         type: PLAYER_ATTRIBUTE
--        player_attribute {
-+        playerAttribute {
-           key: "victini_gotour_2025"
-         }
-       }
-@@ -72234,7 +72234,7 @@
-       minPointsRequired: 950
-       rewards {
-         type: PLAYER_ATTRIBUTE
--        player_attribute {
-+        playerAttribute {
-           key: "gotour_unova_pass_rank_01"
-           durationMins: 131487
-         }
-@@ -72888,7 +72888,7 @@
-       minPointsRequired: 1050
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: SANDILE
-           shinyProbability: 0.015625
-         }
-@@ -72905,7 +72905,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: SANDILE
-           shinyProbability: 0.015625
-         }
-@@ -73213,7 +73213,7 @@
-       minPointsRequired: 1100
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: MIENFOO
-           shinyProbability: 0.015625
-         }
-@@ -73230,7 +73230,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: MIENFOO
-           shinyProbability: 0.015625
-         }
-@@ -73538,7 +73538,7 @@
-       minPointsRequired: 1150
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: PAWNIARD
-           shinyProbability: 0.015625
-         }
-@@ -73555,7 +73555,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: PAWNIARD
-           shinyProbability: 0.015625
-         }
-@@ -73863,7 +73863,7 @@
-       minPointsRequired: 1200
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: VULLABY
-           shinyProbability: 0.015625
-         }
-@@ -73880,7 +73880,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: VULLABY
-           shinyProbability: 0.015625
-         }
-@@ -74514,8 +74514,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: SANDILE
--          lndgdlpphjj: 5
-+          pokemonId: SANDILE
-+          amount: 5
-         }
-       }
+   }
+ }
+@@ -187877,7 +187877,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_ZEKROM.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 50
++      sortOrder: 42
      }
-@@ -74530,7 +74530,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: SANDILE
-           shinyProbability: 0.015625
-         }
-@@ -74839,8 +74839,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: MIENFOO
--          lndgdlpphjj: 5
-+          pokemonId: MIENFOO
-+          amount: 5
-         }
-       }
+   }
+ }
+@@ -187888,7 +187888,7 @@
+     iapItemDisplay {
+       sku: "STICKER_GOTOUR2025_ZEKROM.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 49
++      sortOrder: 41
      }
-@@ -74855,7 +74855,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: MIENFOO
-           shinyProbability: 0.015625
-         }
-@@ -75164,8 +75164,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: PAWNIARD
--          lndgdlpphjj: 5
-+          pokemonId: PAWNIARD
-+          amount: 5
-         }
-       }
+   }
+ }
+@@ -191174,7 +191174,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGOFEST2021_MELOETTA_1.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 1
++      sortOrder: 44
      }
-@@ -75180,7 +75180,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: PAWNIARD
-           shinyProbability: 0.015625
-         }
-@@ -75524,8 +75524,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: VULLABY
--          lndgdlpphjj: 5
-+          pokemonId: VULLABY
-+          amount: 5
-         }
-       }
+   }
+ }
+@@ -191185,7 +191185,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGOFEST2021_MELOETTA_1.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 1
++      sortOrder: 43
      }
-@@ -75540,7 +75540,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: VULLABY
-           shinyProbability: 0.015625
-         }
-@@ -77775,8 +77775,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: RESHIRAM
--          lndgdlpphjj: 2
-+          pokemonId: RESHIRAM
-+          amount: 2
-         }
-       }
+   }
+ }
+@@ -191211,7 +191211,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGOFEST2021_MELOETTA_2.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 1
++      sortOrder: 50
      }
-@@ -77791,9 +77791,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: RESHIRAM
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: RESHIRAM
-+          amount: 5
-         }
-       }
+   }
+ }
+@@ -191222,7 +191222,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGOFEST2021_MELOETTA_2.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 1
++      sortOrder: 49
      }
-@@ -78100,8 +78100,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: ZEKROM
--          lndgdlpphjj: 2
-+          pokemonId: ZEKROM
-+          amount: 2
-         }
+   }
+ }
+@@ -332360,7 +332360,7 @@
+       type: POKEMON_TYPE_FIRE
+       type2: POKEMON_TYPE_WATER
+       camera {
+-        cylinderRadiusM: 0.25
++        cylinderRadiusM: 1
+         cylinderHeightM: 0.4
        }
+       encounter {
+@@ -343812,9 +343812,15 @@
+       pokemonId: NICKIT
+       type: POKEMON_TYPE_DARK
+       camera {
++        cylinderRadiusM: 0.5
++        cylinderHeightM: 0.6
+       }
+       encounter {
++        collisionRadiusM: 0.37
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.15
+         movementType: MOVEMENT_JUMP
++        jumpTimeS: 0.9
+         attackProbability: 0.4
+         dodgeProbability: 0.2
+         dodgeDurationS: 1
+@@ -343838,7 +343844,7 @@
+       weightStdDev: 1.1125
+       familyId: FAMILY_NICKIT
+       kmBuddyDistance: 1
+-      modelHeight: 1
++      modelHeight: 0.6
+       evolutionBranch {
+         evolution: THIEVUL
+         candyCost: 50
+@@ -343873,9 +343879,15 @@
+       pokemonId: THIEVUL
+       type: POKEMON_TYPE_DARK
+       camera {
++        cylinderRadiusM: 1.1
++        cylinderHeightM: 1.5
+       }
+       encounter {
++        collisionRadiusM: 0.9
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.3
+         movementType: MOVEMENT_JUMP
++        jumpTimeS: 0.9
+         bonusCandyCaptureReward: 2
+         bonusStardustCaptureReward: 200
+         attackProbability: 0.4
+@@ -343903,7 +343915,7 @@
+       weightStdDev: 2.4875
+       familyId: FAMILY_NICKIT
+       kmBuddyDistance: 1
+-      modelHeight: 1
++      modelHeight: 1.37
+       modelScaleV2: 1
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -343912,6 +343924,9 @@
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+       buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: -1500
+       third_move {
+         stardustToUnlock: 10000
+         candyToUnlock: 25
+@@ -362734,10 +362749,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GENESECT
+-          pokemonDisplay {
+-            form: GENESECT_BURN
+-          }
++          pokemon_id: VIRIZION
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -362761,10 +362773,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GENESECT
+-          pokemonDisplay {
+-            form: GENESECT_CHILL
+-          }
++          pokemon_id: TERRAKION
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -362788,64 +362797,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GENESECT
+-          pokemonDisplay {
+-            form: GENESECT_DOUSE
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: GENESECT
+-          pokemonDisplay {
+-            form: GENESECT_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: GENESECT
+-          pokemonDisplay {
+-            form: GENESECT_SHOCK
+-          }
++          pokemon_id: COBALION
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -363474,64 +363426,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GENESECT
+-          pokemonDisplay {
+-            form: GENESECT_BURN
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: GENESECT
+-          pokemonDisplay {
+-            form: GENESECT_CHILL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: GENESECT
+-          pokemonDisplay {
+-            form: GENESECT_DOUSE
+-          }
++          pokemon_id: VIRIZION
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -363555,10 +363450,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GENESECT
+-          pokemonDisplay {
+-            form: GENESECT_NORMAL
+-          }
++          pokemon_id: TERRAKION
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -363582,10 +363474,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GENESECT
+-          pokemonDisplay {
+-            form: GENESECT_SHOCK
+-          }
++          pokemon_id: COBALION
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -363701,7 +363590,7 @@
+           start_time_ms: 1740517200000
+           end_time_ms: 1741122000000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
+         }
+         blogUrl: "https://pokemongolive.com/post/go-battle-league-dual-destiny"
+       }
+@@ -374244,7 +374133,29 @@
      }
-@@ -78116,9 +78116,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: ZEKROM
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: ZEKROM
-+          amount: 5
-         }
-       }
-     }
-@@ -78425,8 +78425,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: KYUREM
--          lndgdlpphjj: 2
-+          pokemonId: KYUREM
-+          amount: 2
-         }
-       }
-     }
-@@ -78441,9 +78441,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: KYUREM
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: KYUREM
-+          amount: 5
-         }
-       }
-     }
-@@ -78459,7 +78459,7 @@
-       minPointsRequired: 100
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: SNIVY
-           shinyProbability: 0.05
-         }
-@@ -78476,7 +78476,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: SERVINE
-         }
-       }
-@@ -78784,8 +78784,8 @@
-       rewards {
-         type: STICKER
-         sticker {
--          klgphmefdhj: "STICKER_GOTOUR2025_RZ"
--          lndgdlpphjj: 10
-+          stickerId: "STICKER_GOTOUR2025_RZ"
-+          amount: 10
-         }
-       }
-     }
-@@ -79434,8 +79434,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: SANDILE
--          lndgdlpphjj: 5
-+          pokemonId: SANDILE
-+          amount: 5
-         }
-       }
-     }
-@@ -79450,7 +79450,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: SANDILE
-           shinyProbability: 0.015625
-         }
-@@ -79759,8 +79759,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: MIENFOO
--          lndgdlpphjj: 5
-+          pokemonId: MIENFOO
-+          amount: 5
-         }
-       }
-     }
-@@ -79775,7 +79775,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: MIENFOO
-           shinyProbability: 0.015625
-         }
-@@ -80084,8 +80084,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: PAWNIARD
--          lndgdlpphjj: 5
-+          pokemonId: PAWNIARD
-+          amount: 5
-         }
-       }
-     }
-@@ -80100,7 +80100,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: PAWNIARD
-           shinyProbability: 0.015625
-         }
-@@ -80409,8 +80409,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: VULLABY
--          lndgdlpphjj: 5
-+          pokemonId: VULLABY
-+          amount: 5
-         }
-       }
-     }
-@@ -80425,7 +80425,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: VULLABY
-           shinyProbability: 0.015625
-         }
-@@ -81059,8 +81059,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: SANDILE
--          lndgdlpphjj: 5
-+          pokemonId: SANDILE
-+          amount: 5
-         }
-       }
-     }
-@@ -81075,7 +81075,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: SANDILE
-           shinyProbability: 0.015625
-         }
-@@ -81384,8 +81384,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: MIENFOO
--          lndgdlpphjj: 5
-+          pokemonId: MIENFOO
-+          amount: 5
-         }
-       }
-     }
-@@ -81400,7 +81400,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: MIENFOO
-           shinyProbability: 0.015625
-         }
-@@ -81709,8 +81709,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: PAWNIARD
--          lndgdlpphjj: 5
-+          pokemonId: PAWNIARD
-+          amount: 5
-         }
-       }
-     }
-@@ -81725,7 +81725,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: PAWNIARD
-           shinyProbability: 0.015625
-         }
-@@ -81743,7 +81743,7 @@
-       minPointsRequired: 150
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: TEPIG
-           shinyProbability: 0.05
-         }
-@@ -81760,7 +81760,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: PIGNITE
-         }
-       }
-@@ -82068,8 +82068,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: VULLABY
--          lndgdlpphjj: 5
-+          pokemonId: VULLABY
-+          amount: 5
-         }
-       }
-     }
-@@ -82084,7 +82084,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: VULLABY
-           shinyProbability: 0.015625
-         }
-@@ -83623,8 +83623,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: RESHIRAM
--          lndgdlpphjj: 2
-+          pokemonId: RESHIRAM
-+          amount: 2
-         }
-       }
-     }
-@@ -83639,9 +83639,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: RESHIRAM
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: RESHIRAM
-+          amount: 5
-         }
-       }
-     }
-@@ -83658,8 +83658,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: ZEKROM
--          lndgdlpphjj: 2
-+          pokemonId: ZEKROM
-+          amount: 2
-         }
-       }
-     }
-@@ -83674,9 +83674,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: ZEKROM
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: ZEKROM
-+          amount: 5
-         }
-       }
-     }
-@@ -83693,8 +83693,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: KYUREM
--          lndgdlpphjj: 2
-+          pokemonId: KYUREM
-+          amount: 2
-         }
-       }
-     }
-@@ -83709,9 +83709,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: KYUREM
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: KYUREM
-+          amount: 5
-         }
-       }
-     }
-@@ -83727,7 +83727,7 @@
-       minPointsRequired: 200
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: OSHAWOTT
-           shinyProbability: 0.05
-         }
-@@ -83744,7 +83744,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: DEWOTT
-         }
-       }
-@@ -83761,7 +83761,7 @@
-       minPointsRequired: 2950
-       rewards {
-         type: PLAYER_ATTRIBUTE
--        player_attribute {
-+        playerAttribute {
-           key: "gotour_unova_pass_rank_02"
-           durationMins: 131487
-         }
-@@ -83835,7 +83835,7 @@
-       minPointsRequired: 3050
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: BASCULIN
-           pokemonDisplay {
-             form: BASCULIN_BLUE_STRIPED
-@@ -83855,7 +83855,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: BASCULIN
-           pokemonDisplay {
-             form: BASCULIN_BLUE_STRIPED
-@@ -83876,7 +83876,7 @@
-       minPointsRequired: 3100
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: BASCULIN
-           pokemonDisplay {
-             form: BASCULIN_RED_STRIPED
-@@ -83896,7 +83896,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: BASCULIN
-           pokemonDisplay {
-             form: BASCULIN_RED_STRIPED
-@@ -83984,7 +83984,7 @@
-       minPointsRequired: 3250
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: BASCULIN
-           pokemonDisplay {
-             form: BASCULIN_BLUE_STRIPED
-@@ -84004,7 +84004,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: BASCULIN
-           pokemonDisplay {
-             form: BASCULIN_BLUE_STRIPED
-@@ -84025,7 +84025,7 @@
-       minPointsRequired: 3300
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: BASCULIN
-           pokemonDisplay {
-             form: BASCULIN_RED_STRIPED
-@@ -84045,7 +84045,7 @@
-       track: PREMIUM
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: BASCULIN
-           pokemonDisplay {
-             form: BASCULIN_RED_STRIPED
-@@ -84134,8 +84134,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: SNIVY
--          lndgdlpphjj: 5
-+          pokemonId: SNIVY
-+          amount: 5
-         }
-       }
-     }
-@@ -84150,9 +84150,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: SNIVY
--          lndgdlpphjj: 25
-+        xlCandy {
-+          pokemonId: SNIVY
-+          amount: 25
-         }
-       }
-     }
-@@ -84483,8 +84483,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: TEPIG
--          lndgdlpphjj: 5
-+          pokemonId: TEPIG
-+          amount: 5
-         }
-       }
-     }
-@@ -84499,9 +84499,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: TEPIG
--          lndgdlpphjj: 25
-+        xlCandy {
-+          pokemonId: TEPIG
-+          amount: 25
-         }
-       }
-     }
-@@ -84517,7 +84517,7 @@
-       minPointsRequired: 3950
-       rewards {
-         type: PLAYER_ATTRIBUTE
--        player_attribute {
-+        playerAttribute {
-           key: "gotour_unova_pass_rank_03"
-           durationMins: 131487
-         }
-@@ -84557,8 +84557,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: COBALION
--          lndgdlpphjj: 5
-+          pokemonId: COBALION
-+          amount: 5
-         }
-       }
-     }
-@@ -84573,9 +84573,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: COBALION
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: COBALION
-+          amount: 5
-         }
-       }
-     }
-@@ -84592,8 +84592,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: TERRAKION
--          lndgdlpphjj: 5
-+          pokemonId: TERRAKION
-+          amount: 5
-         }
-       }
-     }
-@@ -84608,9 +84608,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: TERRAKION
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: TERRAKION
-+          amount: 5
-         }
-       }
-     }
-@@ -84627,8 +84627,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: VIRIZION
--          lndgdlpphjj: 5
-+          pokemonId: VIRIZION
-+          amount: 5
-         }
-       }
-     }
-@@ -84643,9 +84643,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: VIRIZION
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: VIRIZION
-+          amount: 5
-         }
-       }
-     }
-@@ -84662,8 +84662,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: TORNADUS
--          lndgdlpphjj: 5
-+          pokemonId: TORNADUS
-+          amount: 5
-         }
-       }
-     }
-@@ -84678,9 +84678,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: TORNADUS
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: TORNADUS
-+          amount: 5
-         }
-       }
-     }
-@@ -84697,8 +84697,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: THUNDURUS
--          lndgdlpphjj: 5
-+          pokemonId: THUNDURUS
-+          amount: 5
-         }
-       }
-     }
-@@ -84713,9 +84713,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: THUNDURUS
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: THUNDURUS
-+          amount: 5
-         }
-       }
-     }
-@@ -84732,8 +84732,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: RESHIRAM
--          lndgdlpphjj: 5
-+          pokemonId: RESHIRAM
-+          amount: 5
-         }
-       }
-     }
-@@ -84748,9 +84748,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: RESHIRAM
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: RESHIRAM
-+          amount: 5
-         }
-       }
-     }
-@@ -84767,8 +84767,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: ZEKROM
--          lndgdlpphjj: 5
-+          pokemonId: ZEKROM
-+          amount: 5
-         }
-       }
-     }
-@@ -84783,9 +84783,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: ZEKROM
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: ZEKROM
-+          amount: 5
-         }
-       }
-     }
-@@ -84802,8 +84802,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: LANDORUS
--          lndgdlpphjj: 5
-+          pokemonId: LANDORUS
-+          amount: 5
-         }
-       }
-     }
-@@ -84818,9 +84818,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: LANDORUS
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: LANDORUS
-+          amount: 5
-         }
-       }
-     }
-@@ -84837,8 +84837,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: KYUREM
--          lndgdlpphjj: 5
-+          pokemonId: KYUREM
-+          amount: 5
-         }
-       }
-     }
-@@ -84853,9 +84853,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: KYUREM
--          lndgdlpphjj: 5
-+        xlCandy {
-+          pokemonId: KYUREM
-+          amount: 5
-         }
-       }
-     }
-@@ -84872,8 +84872,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: OSHAWOTT
--          lndgdlpphjj: 5
-+          pokemonId: OSHAWOTT
-+          amount: 5
-         }
-       }
-     }
-@@ -84888,9 +84888,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: OSHAWOTT
--          lndgdlpphjj: 25
-+        xlCandy {
-+          pokemonId: OSHAWOTT
-+          amount: 25
-         }
-       }
-     }
-@@ -85168,7 +85168,7 @@
-       minPointsRequired: 4850
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: WOOBAT
-           pokemonDisplay {
-             gender: MALE
-@@ -85206,7 +85206,7 @@
-       minPointsRequired: 4900
-       rewards {
-         type: POKEMON_ENCOUNTER
--        pokemon_encounter {
-+        pokemonEncounter {
-           pokemon_id: DARMANITAN
-           pokemonDisplay {
-             gender: MALE
-@@ -85246,8 +85246,8 @@
-       rewards {
-         type: CANDY
-         candy {
--          ghegmkffbcn: SNIVY
--          lndgdlpphjj: 5
-+          pokemonId: SNIVY
-+          amount: 5
-         }
-       }
-     }
-@@ -85262,9 +85262,9 @@
-       track: PREMIUM
-       rewards {
-         type: XL_CANDY
--        xl_candy {
--          ghegmkffbcn: SNIVY
--          lndgdlpphjj: 25
-+        xlCandy {
-+          pokemonId: SNIVY
-+          amount: 25
-         }
-       }
-     }
-@@ -132639,7 +132639,7 @@
-         textRewardsKey: "text_rewards_key_CD_Fuecoco25"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
--          pokemon_encounter {
-+          pokemonEncounter {
-             pokemon_id: SKELEDIRGE
-           }
-         }
-@@ -132715,7 +132715,7 @@
-         }
-         iconRewards {
-           type: POKEMON_ENCOUNTER
--          pokemon_encounter {
-+          pokemonEncounter {
-             pokemon_id: PIKACHU
-             pokemonDisplay {
-               costume: WINTER_2018
-@@ -132782,7 +132782,7 @@
-         textRewardsKey: "text_rewards_key_GOTourHatch2025"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
--          pokemon_encounter {
-+          pokemonEncounter {
-             pokemon_id: SIGILYPH
-           }
-         }
-@@ -133098,11 +133098,11 @@
-         textRewardsKey: "text_rewards_key_WonderTicket"
-         iconRewards {
-           type: AVATAR_CLOTHING
--          avatar_template_id: "AVATAR_m_hat_poipole"
-+          avatarTemplateId: "AVATAR_m_hat_poipole"
-         }
-         iconRewards {
-           type: POKEMON_ENCOUNTER
--          pokemon_encounter {
-+          pokemonEncounter {
-             pokemon_id: SYLVEON
-             pokemonDisplay {
-               costume: SPRING_2023
-@@ -133111,7 +133111,7 @@
-         }
-         iconRewards {
-           type: POKEMON_ENCOUNTER
--          pokemon_encounter {
-+          pokemonEncounter {
-             pokemon_id: POIPOLE
-           }
-         }
-@@ -133299,7 +133299,7 @@
-         textRewardsKey: "text_rewards_key_LunarNY0125"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
--          pokemon_encounter {
-+          pokemonEncounter {
-             pokemon_id: EKANS
-             pokemonDisplay {
-               form: EKANS_NORMAL
-@@ -133308,7 +133308,7 @@
-         }
-         iconRewards {
-           type: POKEMON_ENCOUNTER
--          pokemon_encounter {
-+          pokemonEncounter {
-             pokemon_id: NOSEPASS
-             pokemonDisplay {
-               form: NOSEPASS_NORMAL
-@@ -133497,7 +133497,7 @@
-         textRewardsKey: "text_rewards_key_MeloettaMasterwork2025"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
--          pokemon_encounter {
-+          pokemonEncounter {
-             pokemon_id: MELOETTA
-             pokemonDisplay {
-               kglealcogbg: true
-@@ -133508,8 +133508,8 @@
-         iconRewards {
-           type: CANDY
-           candy {
--            ghegmkffbcn: MELOETTA
--            lndgdlpphjj: 30
-+            pokemonId: MELOETTA
-+            amount: 30
-           }
-         }
-         iconRewards {
+   }
+ }
+-batch_id: 1740375855548
++template {
++  template_id: "STICKER_PGO_FEST_VICTINI_05.3"
++  data {
++    template_id: "STICKER_PGO_FEST_VICTINI_05.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_VICTINI_05.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 38
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_VICTINI_05.5"
++  data {
++    template_id: "STICKER_PGO_FEST_VICTINI_05.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_VICTINI_05.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 37
++    }
++  }
++}
++batch_id: 1740504574986
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -374280,21 +374191,20 @@
+ experiment_id: 3950
+ experiment_id: 3967
+ experiment_id: 3979
++experiment_id: 3980
+ experiment_id: 4546
+ experiment_id: 4998
+-experiment_id: 5129
++experiment_id: 5130
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5290
+-experiment_id: 5300
+-experiment_id: 5301
++experiment_id: 5303
++experiment_id: 5305
+ experiment_id: 5508
+ experiment_id: 5510
+ experiment_id: 6075
+ experiment_id: 9521
+ experiment_id: 9531
+-experiment_id: 9545
+ experiment_id: 9552
+ experiment_id: 9553
+ experiment_id: 9554
