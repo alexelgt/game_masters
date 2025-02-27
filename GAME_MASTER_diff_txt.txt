@@ -1,461 +1,537 @@
---- GAME_MASTER_old.txt	2025-02-24 21:52:38.239413472 +0100
-+++ GAME_MASTER.txt	2025-02-25 19:58:38.701642538 +0100
-@@ -187699,7 +187699,7 @@
-     iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_BADGE.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 40
-+      sortOrder: 46
+--- GAME_MASTER_old.txt	2025-02-25 19:58:38.701642538 +0100
++++ GAME_MASTER.txt	2025-02-27 19:17:23.575845446 +0100
+@@ -68601,7 +68601,7 @@
+       additionalBonusTiersLevel: 101
+       eventPassDisplaySettings {
+         bonusBoxes {
+-          text: "catch_a_pokemon_short_title"
++          text: "quest_catch_pokemon_singular"
+           iconType: SPAWN_UNKNOWN
+           quantity: 5
+         }
+@@ -132004,8 +132004,8 @@
+   data {
+     template_id: "INVENTORY_SETTINGS"
+     inventorySettings {
+-      maxPokemon: 9300
+-      maxBagItems: 8300
++      maxPokemon: 9800
++      maxBagItems: 8800
+       basePokemon: 300
+       baseBagItems: 350
+       baseEggs: 9
+@@ -156674,17 +156674,6 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
+   data {
+     template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
+@@ -156779,7 +156768,6 @@
+       friendRequestsEnabled: true
+       remoteRaidDistanceValidation: true
+       popupTimeMs: 30000
+-      failedFriendInviteInfoEnabled: true
+       minPlayersToBoot: 2
+       bootCutoffMs: 15000
+       bootSoloMs: 30000
+@@ -156941,8 +156929,7 @@
+   data {
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+-      enabled: true
+-      dailySquashLimit: 20
++      dailySquashLimit: 999999
      }
    }
  }
-@@ -187710,7 +187710,7 @@
+@@ -196509,7 +196496,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_BADGE.5"
+       sku: "STICKER_WINTER_2024_1.3"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 39
-+      sortOrder: 45
+-      sortOrder: 488
++      sortOrder: 500
      }
    }
  }
-@@ -187735,7 +187735,7 @@
+@@ -196520,7 +196507,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_KYUREMBLACK.3"
+       sku: "STICKER_WINTER_2024_1.5"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 42
-+      sortOrder: 34
+-      sortOrder: 487
++      sortOrder: 499
      }
    }
  }
-@@ -187746,7 +187746,7 @@
+@@ -196545,7 +196532,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_KYUREMBLACK.5"
+       sku: "STICKER_WINTER_2024_2.3"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 41
-+      sortOrder: 33
+-      sortOrder: 486
++      sortOrder: 498
      }
    }
  }
-@@ -187771,7 +187771,7 @@
+@@ -196556,7 +196543,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_KYUREMWHITE.3"
+       sku: "STICKER_WINTER_2024_2.5"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 44
-+      sortOrder: 36
+-      sortOrder: 485
++      sortOrder: 497
      }
    }
  }
-@@ -187782,7 +187782,7 @@
+@@ -196581,7 +196568,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_KYUREMWHITE.5"
+       sku: "STICKER_WINTER_2024_3.3"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 43
-+      sortOrder: 35
+-      sortOrder: 480
++      sortOrder: 492
      }
    }
  }
-@@ -187807,7 +187807,7 @@
+@@ -196592,7 +196579,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_RESHIRAM.3"
+       sku: "STICKER_WINTER_2024_3.5"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 48
-+      sortOrder: 40
+-      sortOrder: 479
++      sortOrder: 491
      }
    }
  }
-@@ -187818,7 +187818,7 @@
+@@ -196617,7 +196604,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_RESHIRAM.5"
+       sku: "STICKER_WINTER_2024_4.3"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 47
-+      sortOrder: 39
+-      sortOrder: 482
++      sortOrder: 494
      }
    }
  }
-@@ -187841,7 +187841,7 @@
+@@ -196628,7 +196615,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_RZ.3"
+       sku: "STICKER_WINTER_2024_4.5"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 46
-+      sortOrder: 48
+-      sortOrder: 481
++      sortOrder: 493
      }
    }
  }
-@@ -187852,7 +187852,7 @@
+@@ -196653,7 +196640,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_RZ.5"
+       sku: "STICKER_WINTER_2024_5.3"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 45
-+      sortOrder: 47
+-      sortOrder: 484
++      sortOrder: 496
      }
    }
  }
-@@ -187877,7 +187877,7 @@
+@@ -196664,7 +196651,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_ZEKROM.3"
+       sku: "STICKER_WINTER_2024_5.5"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 50
-+      sortOrder: 42
+-      sortOrder: 483
++      sortOrder: 495
      }
    }
  }
-@@ -187888,7 +187888,7 @@
+@@ -196689,7 +196676,7 @@
      iapItemDisplay {
-       sku: "STICKER_GOTOUR2025_ZEKROM.5"
+       sku: "STICKER_WINTER_2024_6.3"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 49
-+      sortOrder: 41
+-      sortOrder: 478
++      sortOrder: 490
      }
    }
  }
-@@ -191174,7 +191174,7 @@
+@@ -196700,7 +196687,7 @@
      iapItemDisplay {
-       sku: "STICKER_PGOFEST2021_MELOETTA_1.3"
+       sku: "STICKER_WINTER_2024_6.5"
        category: IAP_CATEGORY_STICKER
--      sortOrder: 1
-+      sortOrder: 44
+-      sortOrder: 477
++      sortOrder: 489
      }
    }
  }
-@@ -191185,7 +191185,7 @@
-     iapItemDisplay {
-       sku: "STICKER_PGOFEST2021_MELOETTA_1.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 1
-+      sortOrder: 43
-     }
-   }
- }
-@@ -191211,7 +191211,7 @@
-     iapItemDisplay {
-       sku: "STICKER_PGOFEST2021_MELOETTA_2.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 1
-+      sortOrder: 50
-     }
-   }
- }
-@@ -191222,7 +191222,7 @@
-     iapItemDisplay {
-       sku: "STICKER_PGOFEST2021_MELOETTA_2.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 1
-+      sortOrder: 49
-     }
-   }
- }
-@@ -332360,7 +332360,7 @@
-       type: POKEMON_TYPE_FIRE
-       type2: POKEMON_TYPE_WATER
-       camera {
--        cylinderRadiusM: 0.25
-+        cylinderRadiusM: 1
-         cylinderHeightM: 0.4
-       }
-       encounter {
-@@ -343812,9 +343812,15 @@
-       pokemonId: NICKIT
-       type: POKEMON_TYPE_DARK
-       camera {
-+        cylinderRadiusM: 0.5
-+        cylinderHeightM: 0.6
-       }
-       encounter {
-+        collisionRadiusM: 0.37
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.15
-         movementType: MOVEMENT_JUMP
-+        jumpTimeS: 0.9
-         attackProbability: 0.4
-         dodgeProbability: 0.2
-         dodgeDurationS: 1
-@@ -343838,7 +343844,7 @@
-       weightStdDev: 1.1125
-       familyId: FAMILY_NICKIT
-       kmBuddyDistance: 1
--      modelHeight: 1
-+      modelHeight: 0.6
-       evolutionBranch {
-         evolution: THIEVUL
-         candyCost: 50
-@@ -343873,9 +343879,15 @@
-       pokemonId: THIEVUL
-       type: POKEMON_TYPE_DARK
-       camera {
-+        cylinderRadiusM: 1.1
-+        cylinderHeightM: 1.5
-       }
-       encounter {
-+        collisionRadiusM: 0.9
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.3
-         movementType: MOVEMENT_JUMP
-+        jumpTimeS: 0.9
-         bonusCandyCaptureReward: 2
-         bonusStardustCaptureReward: 200
-         attackProbability: 0.4
-@@ -343903,7 +343915,7 @@
-       weightStdDev: 2.4875
-       familyId: FAMILY_NICKIT
-       kmBuddyDistance: 1
--      modelHeight: 1
-+      modelHeight: 1.37
-       modelScaleV2: 1
+@@ -350245,16 +350232,6 @@
+       familyId: FAMILY_KUBFU
+       kmBuddyDistance: 20
+       modelHeight: 0.71
+-      evolutionBranch {
+-        evolution: URSHIFU
+-        candyCost: 200
+-        form: URSHIFU_SINGLE_STRIKE
+-      }
+-      evolutionBranch {
+-        evolution: URSHIFU
+-        candyCost: 200
+-        form: URSHIFU_RAPID_STRIKE
+-      }
+       modelScaleV2: 1.28
        buddyOffsetMale: 0
        buddyOffsetMale: 0
-@@ -343912,6 +343924,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -1500
-       third_move {
-         stardustToUnlock: 10000
-         candyToUnlock: 25
-@@ -362734,10 +362749,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: GENESECT
--          pokemonDisplay {
--            form: GENESECT_BURN
--          }
-+          pokemon_id: VIRIZION
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -362761,10 +362773,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: GENESECT
--          pokemonDisplay {
--            form: GENESECT_CHILL
--          }
-+          pokemon_id: TERRAKION
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -362788,64 +362797,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: GENESECT
--          pokemonDisplay {
--            form: GENESECT_DOUSE
--          }
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: GENESECT
--          pokemonDisplay {
--            form: GENESECT_NORMAL
--          }
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: GENESECT
--          pokemonDisplay {
--            form: GENESECT_SHOCK
--          }
-+          pokemon_id: COBALION
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -363474,64 +363426,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: GENESECT
--          pokemonDisplay {
--            form: GENESECT_BURN
--          }
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: GENESECT
--          pokemonDisplay {
--            form: GENESECT_CHILL
--          }
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: GENESECT
--          pokemonDisplay {
--            form: GENESECT_DOUSE
--          }
-+          pokemon_id: VIRIZION
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -363555,10 +363450,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: GENESECT
--          pokemonDisplay {
--            form: GENESECT_NORMAL
--          }
-+          pokemon_id: TERRAKION
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -363582,10 +363474,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: GENESECT
--          pokemonDisplay {
--            form: GENESECT_SHOCK
--          }
-+          pokemon_id: COBALION
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -363701,7 +363590,7 @@
-           start_time_ms: 1740517200000
-           end_time_ms: 1741122000000
-           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
--          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
-+          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
-         }
-         blogUrl: "https://pokemongolive.com/post/go-battle-league-dual-destiny"
-       }
-@@ -374244,7 +374133,29 @@
+@@ -360544,8 +360521,7 @@
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
      }
    }
  }
--batch_id: 1740375855548
+@@ -362749,55 +362725,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: VIRIZION
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: TERRAKION
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: COBALION
++          pokemon_id: RESHIRAM
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -363426,55 +363354,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: VIRIZION
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: TERRAKION
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: COBALION
++          pokemon_id: RESHIRAM
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -374155,7 +374035,186 @@
+     }
+   }
+ }
+-batch_id: 1740504574986
 +template {
-+  template_id: "STICKER_PGO_FEST_VICTINI_05.3"
++  template_id: "STICKER_FOSSILMUSEUM_1"
 +  data {
-+    template_id: "STICKER_PGO_FEST_VICTINI_05.3"
-+    iapItemDisplay {
-+      sku: "STICKER_PGO_FEST_VICTINI_05.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 38
++    template_id: "STICKER_FOSSILMUSEUM_1"
++    stickerMetadata {
++      stickerId: "STICKER_FOSSILMUSEUM_1"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20250308
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_PGO_FEST_VICTINI_05.5"
++  template_id: "STICKER_FOSSILMUSEUM_2"
 +  data {
-+    template_id: "STICKER_PGO_FEST_VICTINI_05.5"
-+    iapItemDisplay {
-+      sku: "STICKER_PGO_FEST_VICTINI_05.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 37
++    template_id: "STICKER_FOSSILMUSEUM_2"
++    stickerMetadata {
++      stickerId: "STICKER_FOSSILMUSEUM_2"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20250308
 +    }
 +  }
 +}
-+batch_id: 1740504574986
++template {
++  template_id: "STICKER_SPRING_2025_1"
++  data {
++    template_id: "STICKER_SPRING_2025_1"
++    stickerMetadata {
++      stickerId: "STICKER_SPRING_2025_1"
++      maxCount: 25
++      pokemonId: RIBOMBEE
++      category: "Pokemon"
++      releaseDate: 20250303
++      regionId: 6
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_1.3"
++  data {
++    template_id: "STICKER_SPRING_2025_1.3"
++    iapItemDisplay {
++      sku: "STICKER_SPRING_2025_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 488
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_1.5"
++  data {
++    template_id: "STICKER_SPRING_2025_1.5"
++    iapItemDisplay {
++      sku: "STICKER_SPRING_2025_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 487
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_2"
++  data {
++    template_id: "STICKER_SPRING_2025_2"
++    stickerMetadata {
++      stickerId: "STICKER_SPRING_2025_2"
++      maxCount: 25
++      pokemonId: BUTTERFREE
++      category: "Pokemon"
++      releaseDate: 20250303
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_2.3"
++  data {
++    template_id: "STICKER_SPRING_2025_2.3"
++    iapItemDisplay {
++      sku: "STICKER_SPRING_2025_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 486
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_2.5"
++  data {
++    template_id: "STICKER_SPRING_2025_2.5"
++    iapItemDisplay {
++      sku: "STICKER_SPRING_2025_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 485
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_3"
++  data {
++    template_id: "STICKER_SPRING_2025_3"
++    stickerMetadata {
++      stickerId: "STICKER_SPRING_2025_3"
++      maxCount: 25
++      pokemonId: VILEPLUME
++      category: "Pokemon"
++      releaseDate: 20250303
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_3.3"
++  data {
++    template_id: "STICKER_SPRING_2025_3.3"
++    iapItemDisplay {
++      sku: "STICKER_SPRING_2025_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 484
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_3.5"
++  data {
++    template_id: "STICKER_SPRING_2025_3.5"
++    iapItemDisplay {
++      sku: "STICKER_SPRING_2025_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 483
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_4"
++  data {
++    template_id: "STICKER_SPRING_2025_4"
++    stickerMetadata {
++      stickerId: "STICKER_SPRING_2025_4"
++      maxCount: 25
++      pokemonId: PETILIL
++      category: "Pokemon"
++      releaseDate: 20250303
++      regionId: 4
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_4.3"
++  data {
++    template_id: "STICKER_SPRING_2025_4.3"
++    iapItemDisplay {
++      sku: "STICKER_SPRING_2025_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 482
++    }
++  }
++}
++template {
++  template_id: "STICKER_SPRING_2025_4.5"
++  data {
++    template_id: "STICKER_SPRING_2025_4.5"
++    iapItemDisplay {
++      sku: "STICKER_SPRING_2025_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 481
++    }
++  }
++}
++template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++batch_id: 1740665980393
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -374280,21 +374191,20 @@
- experiment_id: 3950
- experiment_id: 3967
- experiment_id: 3979
-+experiment_id: 3980
+@@ -374164,10 +374223,11 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 150
+-experiment_id: 163
++experiment_id: 164
+ experiment_id: 300
+ experiment_id: 302
+ experiment_id: 320
++experiment_id: 361
+ experiment_id: 408
+ experiment_id: 409
+ experiment_id: 500
+@@ -374194,12 +374254,12 @@
+ experiment_id: 3980
  experiment_id: 4546
  experiment_id: 4998
--experiment_id: 5129
-+experiment_id: 5130
+-experiment_id: 5130
++experiment_id: 5132
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
--experiment_id: 5290
--experiment_id: 5300
--experiment_id: 5301
-+experiment_id: 5303
-+experiment_id: 5305
+-experiment_id: 5303
+-experiment_id: 5305
++experiment_id: 5309
++experiment_id: 5310
  experiment_id: 5508
  experiment_id: 5510
  experiment_id: 6075
- experiment_id: 9521
- experiment_id: 9531
--experiment_id: 9545
- experiment_id: 9552
- experiment_id: 9553
- experiment_id: 9554
+@@ -374212,9 +374272,12 @@
+ experiment_id: 55500
+ experiment_id: 55565
+ experiment_id: 55566
++experiment_id: 55567
+ experiment_id: 55571
++experiment_id: 55572
+ experiment_id: 55573
+ experiment_id: 55574
++experiment_id: 55601
+ experiment_id: 55618
+ experiment_id: 55621
+ experiment_id: 55622
