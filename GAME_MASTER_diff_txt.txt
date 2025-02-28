@@ -1,537 +1,515 @@
---- GAME_MASTER_old.txt	2025-02-25 19:58:38.701642538 +0100
-+++ GAME_MASTER.txt	2025-02-27 19:17:23.575845446 +0100
-@@ -68601,7 +68601,7 @@
-       additionalBonusTiersLevel: 101
-       eventPassDisplaySettings {
-         bonusBoxes {
--          text: "catch_a_pokemon_short_title"
-+          text: "quest_catch_pokemon_singular"
-           iconType: SPAWN_UNKNOWN
-           quantity: 5
+--- GAME_MASTER_old.txt	2025-02-27 19:17:23.575845446 +0100
++++ GAME_MASTER.txt	2025-02-28 19:52:58.191847510 +0100
+@@ -43922,6 +43922,7 @@
+       seasonEndTimeTimestamp: 1725393600000
+       seasonEndTimeTimestamp: 1733259600000
+       seasonEndTimeTimestamp: 1741122000000
++      seasonEndTimeTimestamp: 1748980800000
+       seasonEndTimeTimestamp: 4070980800000
+       ratingAdjustmentPercentage: 0.9
+       rankingAdjustmentPercentage: 0.01
+@@ -132447,12 +132448,12 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-12-03T13:00:00"
+-        eventEndTime: "2024-12-18T13:00:00"
++        eventStartTime: "2025-03-04T13:00:00"
++        eventEndTime: "2025-03-18T14:00:00"
+         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
+         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-s17gbl-nologo-2024.jpg"
+-        clientEventStartTimeUtcMs: 1733230800000
+-        clientEventEndTimeUtcMs: 1734526800000
++        clientEventStartTimeUtcMs: 1741093200000
++        clientEventEndTimeUtcMs: 1742306400000
+       }
+     }
+   }
+@@ -132571,28 +132572,40 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-11-27T10:00:00"
+-        eventEndTime: "2024-12-01T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_MaxOutFinaleRaids1124"
++        eventStartTime: "2025-03-05T10:00:00"
++        eventEndTime: "2025-05-29T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_FFSR0325"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_02_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_S16_Finale_Event_1024x512_nmo_v1-nologo%20(3).png"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_S16_Finale_Event_1024x512_nmo_v1-nologo%20(3).png"
+-        eventDatetimeRangeKey: "event_datetime_range_key_MaxOutFinaleRaids1124"
+-        textRewardsKey: "text_rewards_key_MaxOutFinaleRaids1124"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_FFSR0325"
++        textRewardsKey: "text_rewards_key_FFSR0325"
++        iconRewards {
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemon_id: KUBFU
++          }
++        }
++        iconRewards {
++          type: CANDY
++          candy {
++            pokemonId: KUBFU
++          }
++        }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_FREE_RAID_TICKET
+-            amount: 5
++            item: ITEM_PAID_RAID_TICKET
++            amount: 2
+           }
          }
-@@ -132004,8 +132004,8 @@
-   data {
-     template_id: "INVENTORY_SETTINGS"
-     inventorySettings {
--      maxPokemon: 9300
--      maxBagItems: 8300
-+      maxPokemon: 9800
-+      maxBagItems: 8800
-       basePokemon: 300
-       baseBagItems: 350
-       baseEggs: 9
-@@ -156674,17 +156674,6 @@
-   }
- }
- template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
-   template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
-   data {
-     template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
-@@ -156779,7 +156768,6 @@
-       friendRequestsEnabled: true
-       remoteRaidDistanceValidation: true
-       popupTimeMs: 30000
--      failedFriendInviteInfoEnabled: true
-       minPlayersToBoot: 2
-       bootCutoffMs: 15000
-       bootSoloMs: 30000
-@@ -156941,8 +156929,7 @@
-   data {
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
--      enabled: true
--      dailySquashLimit: 20
-+      dailySquashLimit: 999999
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1732701600000
+-        clientEventEndTimeUtcMs: 1733083200000
++        clientEventStartTimeUtcMs: 1741168800000
++        clientEventEndTimeUtcMs: 1748548800000
+       }
+-      descriptionOverride: "item_event_ticket_evergreen_details_MaxOutFinaleRaids1124"
++      descriptionOverride: "item_event_ticket_evergreen_desc_FFSR0325"
      }
    }
  }
-@@ -196509,7 +196496,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_1.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 488
-+      sortOrder: 500
+@@ -132605,16 +132618,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2024-11-27T10:00:00"
+-        eventEndTime: "2024-12-01T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_MaxOutFinaleRaids1124"
++        eventStartTime: "2025-03-05T10:00:00"
++        eventEndTime: "2025-05-29T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_FFSR0325"
+         ticketItem: ITEM_EVENT_TICKET_02
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_S16_Finale_Event_1024x512_nmo_v1-nologo%20(3).png"
+-        clientEventStartTimeUtcMs: 1732701600000
+-        clientEventEndTimeUtcMs: 1733083200000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
++        clientEventStartTimeUtcMs: 1741168800000
++        clientEventEndTimeUtcMs: 1748548800000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_evergreen_details_MaxOutFinaleRaids1124"
++      descriptionOverride: "item_event_ticket_evergreen_details_FFSR0325"
      }
    }
  }
-@@ -196520,7 +196507,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_1.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 487
-+      sortOrder: 499
-     }
-   }
- }
-@@ -196545,7 +196532,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_2.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 486
-+      sortOrder: 498
-     }
-   }
- }
-@@ -196556,7 +196543,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_2.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 485
-+      sortOrder: 497
-     }
-   }
- }
-@@ -196581,7 +196568,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_3.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 480
-+      sortOrder: 492
-     }
-   }
- }
-@@ -196592,7 +196579,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_3.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 479
-+      sortOrder: 491
-     }
-   }
- }
-@@ -196617,7 +196604,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_4.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 482
-+      sortOrder: 494
-     }
-   }
- }
-@@ -196628,7 +196615,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_4.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 481
-+      sortOrder: 493
-     }
-   }
- }
-@@ -196653,7 +196640,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_5.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 484
-+      sortOrder: 496
-     }
-   }
- }
-@@ -196664,7 +196651,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_5.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 483
-+      sortOrder: 495
-     }
-   }
- }
-@@ -196689,7 +196676,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_6.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 478
-+      sortOrder: 490
-     }
-   }
- }
-@@ -196700,7 +196687,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER_2024_6.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 477
-+      sortOrder: 489
-     }
-   }
- }
-@@ -350245,16 +350232,6 @@
-       familyId: FAMILY_KUBFU
-       kmBuddyDistance: 20
-       modelHeight: 0.71
--      evolutionBranch {
--        evolution: URSHIFU
--        candyCost: 200
--        form: URSHIFU_SINGLE_STRIKE
--      }
--      evolutionBranch {
--        evolution: URSHIFU
--        candyCost: 200
--        form: URSHIFU_RAPID_STRIKE
--      }
-       modelScaleV2: 1.28
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -360544,8 +360521,7 @@
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
-       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
-     }
-   }
- }
-@@ -362749,55 +362725,7 @@
+@@ -362725,7 +362738,7 @@
        }
        availablePokemon {
          pokemon {
--          pokemon_id: VIRIZION
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: TERRAKION
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: COBALION
-+          pokemon_id: RESHIRAM
+-          pokemon_id: RESHIRAM
++          pokemon_id: ZEKROM
          }
          unlockedAtRank: 20
          attackIvOverride {
-@@ -363426,55 +363354,7 @@
+@@ -363354,7 +363367,7 @@
        }
        availablePokemon {
          pokemon {
--          pokemon_id: VIRIZION
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: TERRAKION
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: COBALION
-+          pokemon_id: RESHIRAM
+-          pokemon_id: RESHIRAM
++          pokemon_id: ZEKROM
          }
          unlockedAtRank: 20
          attackIvOverride {
-@@ -374155,7 +374035,186 @@
+@@ -366973,15 +366986,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.2"
+-      title: "general1.ticket._MaxOutFinaleRaids1124_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-11-30T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1732996800000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_S16_Finale_Event_1024x512_nmo_v1-nologo%20(3).png"
++      title: "general1.ticket._FFSR0325_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2025-03-10T20:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1741636800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
      }
    }
  }
--batch_id: 1740504574986
+@@ -366992,14 +367005,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.2"
+-      title: "general1.ticket._MaxOutFinaleRaids1124_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-11-30T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1732996800000
++      title: "general1.ticket._FFSR0325_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2025-03-10T20:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1741636800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
+     }
+   }
+ }
+@@ -368678,15 +368692,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.2"
+-      title: "general1.ticket._MaxOutFinaleRaids1124_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-11-30T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1732996800000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/PGO-MCS_S16_Finale_Event_1024x512_nmo_v1-nologo%20(3).png"
++      title: "general1.ticket._FFSR0325_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2025-03-10T20:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1741636800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
+     }
+   }
+ }
+@@ -368697,14 +368711,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.2"
+-      title: "general1.ticket._MaxOutFinaleRaids1124_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2024-11-30T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1732996800000
++      title: "general1.ticket._FFSR0325_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2025-03-10T20:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1741636800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
+     }
+   }
+ }
+@@ -374214,7 +374229,269 @@
+     }
+   }
+ }
+-batch_id: 1740665980393
 +template {
-+  template_id: "STICKER_FOSSILMUSEUM_1"
++  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
 +  data {
-+    template_id: "STICKER_FOSSILMUSEUM_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_FOSSILMUSEUM_1"
-+      maxCount: 25
-+      pokemonId: PIKACHU
-+      category: "Pokemon"
-+      releaseDate: 20250308
++    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
++    combat_league {
++      title: "catch_cup_s13_title"
++      enabled: true
++      unlockCondition {
++        type: WITH_UNIQUE_POKEMON
++        minPokemonCount: 3
++      }
++      pokemonCondition {
++        type: WITH_POKEMON_CP_LIMIT
++        withPokemonCpLimit {
++          maxCp: 1500
++        }
++      }
++      pokemonCondition {
++        type: WITH_UNIQUE_POKEMON
++      }
++      pokemonCondition {
++        type: POKEMON_CAUGHT_TIMESTAMP
++        pokemonCaughtTimestamp {
++          afterTimestamp: 1741082400000
++          beforeTimestamp: 1748944800000
++        }
++      }
++      iconUrl: "https://storage.googleapis.com/prod-public-images/premierball_sprite.png"
++      pokemonCount: 3
++      leagueType: PREMIER
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FOSSILMUSEUM_2"
++  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
 +  data {
-+    template_id: "STICKER_FOSSILMUSEUM_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_FOSSILMUSEUM_2"
-+      maxCount: 25
-+      pokemonId: PIKACHU
-+      category: "Pokemon"
-+      releaseDate: 20250308
++    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
++    combat_league {
++      title: "scrolls_cup_great_title"
++      enabled: true
++      unlockCondition {
++        type: WITH_UNIQUE_POKEMON
++        minPokemonCount: 3
++      }
++      pokemonCondition {
++        type: WITH_POKEMON_CP_LIMIT
++        withPokemonCpLimit {
++          maxCp: 1500
++        }
++      }
++      pokemonCondition {
++        type: WITH_UNIQUE_POKEMON
++      }
++      pokemonCondition {
++        type: WITH_POKEMON_TYPE
++        withPokemonType {
++          pokemonType: POKEMON_TYPE_WATER
++          pokemonType: POKEMON_TYPE_FIGHTING
++          pokemonType: POKEMON_TYPE_DARK
++        }
++      }
++      iconUrl: "https://storage.googleapis.com/prod-public-images/pgo-s18-gbl-icon-2025.png"
++      pokemonCount: 3
++      bannedPokemon: DITTO
++      bannedPokemon: SHEDINJA
++      bannedPokemon: PRIMARINA
++      badgeType: BADGE_GREAT_LEAGUE
++      battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
++      leagueType: PREMIER
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_SPRING_2025_1"
++  template_id: "COMBAT_RANKING_SETTINGS_S25"
 +  data {
-+    template_id: "STICKER_SPRING_2025_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_SPRING_2025_1"
-+      maxCount: 25
-+      pokemonId: RIBOMBEE
-+      category: "Pokemon"
-+      releaseDate: 20250303
-+      regionId: 6
++    template_id: "COMBAT_RANKING_SETTINGS_S25"
++    combat_ranking_proto_settings {
++      rankLevel {
++        rankLevel: 1
++      }
++      rankLevel {
++        rankLevel: 2
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 3
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 4
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 5
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 6
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 7
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 8
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 9
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 10
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 11
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 12
++        additionalWinsRequired: 5
++      }
++      rankLevel {
++        rankLevel: 13
++        additionalWinsRequired: 6
++      }
++      rankLevel {
++        rankLevel: 14
++        additionalWinsRequired: 7
++      }
++      rankLevel {
++        rankLevel: 15
++        additionalWinsRequired: 8
++      }
++      rankLevel {
++        rankLevel: 16
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 17
++        additionalWinsRequired: 10
++      }
++      rankLevel {
++        rankLevel: 18
++        additionalWinsRequired: 15
++      }
++      rankLevel {
++        rankLevel: 19
++        additionalWinsRequired: 20
++      }
++      rankLevel {
++        rankLevel: 20
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 21
++        minRatingRequired: 2000
++      }
++      rankLevel {
++        rankLevel: 22
++        minRatingRequired: 2500
++      }
++      rankLevel {
++        rankLevel: 23
++        minRatingRequired: 2750
++      }
++      rankLevel {
++        rankLevel: 24
++        minRatingRequired: 3000
++      }
++      required_for_rewards {
++        rankLevel: 1
++        additionalTotalBattlesRequired: 5
++      }
++      minRankToDisplayRating: 20
++      minRatingRequired: 25
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_SPRING_2025_1.3"
++  template_id: "N_DISPLAY_n_hat_mustard_0"
 +  data {
-+    template_id: "STICKER_SPRING_2025_1.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_1.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 488
++    template_id: "N_DISPLAY_n_hat_mustard_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_mustard_0_icon"
++      displayStringId: "avatar_hat_mustard"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_SPRING_2025_1.5"
++  template_id: "N_DISPLAY_n_pants_mustard_0"
 +  data {
-+    template_id: "STICKER_SPRING_2025_1.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_1.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 487
++    template_id: "N_DISPLAY_n_pants_mustard_0"
++    avatarItemDisplay {
++      iconAddress: "n_pants_mustard_0_icon"
++      displayStringId: "avatar_pants_mustard"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_SPRING_2025_2"
++  template_id: "N_DISPLAY_n_pose_mustard"
 +  data {
-+    template_id: "STICKER_SPRING_2025_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_SPRING_2025_2"
-+      maxCount: 25
-+      pokemonId: BUTTERFREE
-+      category: "Pokemon"
-+      releaseDate: 20250303
++    template_id: "N_DISPLAY_n_pose_mustard"
++    avatarItemDisplay {
++      iconAddress: "n_pose_mustard_icon"
++      displayStringId: "avatar_pose_mustard"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_SPRING_2025_2.3"
++  template_id: "N_DISPLAY_n_shirt_mustard_0"
 +  data {
-+    template_id: "STICKER_SPRING_2025_2.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_2.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 486
++    template_id: "N_DISPLAY_n_shirt_mustard_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_mustard_0_icon"
++      displayStringId: "avatar_shirt_mustard"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_SPRING_2025_2.5"
++  template_id: "N_DISPLAY_n_shoes_mustard_0"
 +  data {
-+    template_id: "STICKER_SPRING_2025_2.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_2.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 485
++    template_id: "N_DISPLAY_n_shoes_mustard_0"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_mustard_0_icon"
++      displayStringId: "avatar_shoes_mustard"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_SPRING_2025_3"
++  template_id: "N_DISPLAY_set_mustard_0"
 +  data {
-+    template_id: "STICKER_SPRING_2025_3"
-+    stickerMetadata {
-+      stickerId: "STICKER_SPRING_2025_3"
-+      maxCount: 25
-+      pokemonId: VILEPLUME
-+      category: "Pokemon"
-+      releaseDate: 20250303
++    template_id: "N_DISPLAY_set_mustard_0"
++    avatarItemDisplay {
++      iconAddress: "set_mustard_0"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_SPRING_2025_3.3"
++  template_id: "RAID_LOCATION_VERIFICATION_CODE_GATE"
 +  data {
-+    template_id: "STICKER_SPRING_2025_3.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_3.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 484
++    template_id: "RAID_LOCATION_VERIFICATION_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_SPRING_2025_3.5"
++  template_id: "USE_ITEM_MOVE_REROLL_CODE_GATE"
 +  data {
-+    template_id: "STICKER_SPRING_2025_3.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_3.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 483
++    template_id: "USE_ITEM_MOVE_REROLL_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++      subCodeGateList {
++        name: "UPDATE_FUSION_DETAILS_ONLY_FOR_VALID_BASE_MOVE"
++        isEnabled: true
++      }
 +    }
 +  }
 +}
-+template {
-+  template_id: "STICKER_SPRING_2025_4"
-+  data {
-+    template_id: "STICKER_SPRING_2025_4"
-+    stickerMetadata {
-+      stickerId: "STICKER_SPRING_2025_4"
-+      maxCount: 25
-+      pokemonId: PETILIL
-+      category: "Pokemon"
-+      releaseDate: 20250303
-+      regionId: 4
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_4.3"
-+  data {
-+    template_id: "STICKER_SPRING_2025_4.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_4.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 482
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_4.5"
-+  data {
-+    template_id: "STICKER_SPRING_2025_4.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_4.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 481
-+    }
-+  }
-+}
-+template {
-+  template_id: "PTC_OAUTH_SETTINGS"
-+  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    }
-+  }
-+}
-+batch_id: 1740665980393
++batch_id: 1740758296717
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -374164,10 +374223,11 @@
- experiment_id: 21
- experiment_id: 101
- experiment_id: 150
--experiment_id: 163
-+experiment_id: 164
- experiment_id: 300
- experiment_id: 302
- experiment_id: 320
-+experiment_id: 361
- experiment_id: 408
- experiment_id: 409
- experiment_id: 500
-@@ -374194,12 +374254,12 @@
+@@ -374254,12 +374531,12 @@
  experiment_id: 3980
  experiment_id: 4546
  experiment_id: 4998
--experiment_id: 5130
-+experiment_id: 5132
+-experiment_id: 5132
++experiment_id: 5133
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
--experiment_id: 5303
--experiment_id: 5305
-+experiment_id: 5309
-+experiment_id: 5310
+-experiment_id: 5309
+-experiment_id: 5310
++experiment_id: 5312
++experiment_id: 5313
  experiment_id: 5508
  experiment_id: 5510
  experiment_id: 6075
-@@ -374212,9 +374272,12 @@
- experiment_id: 55500
+@@ -374273,6 +374550,7 @@
  experiment_id: 55565
  experiment_id: 55566
-+experiment_id: 55567
+ experiment_id: 55567
++experiment_id: 55569
  experiment_id: 55571
-+experiment_id: 55572
+ experiment_id: 55572
  experiment_id: 55573
- experiment_id: 55574
-+experiment_id: 55601
- experiment_id: 55618
+@@ -374282,6 +374560,7 @@
  experiment_id: 55621
  experiment_id: 55622
+ experiment_id: 55623
++experiment_id: 55660
+ experiment_id: 314159
+ experiment_id: 314160
+ experiment_id: 3500035
