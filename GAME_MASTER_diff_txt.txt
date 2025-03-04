@@ -1,1066 +1,1562 @@
---- GAME_MASTER_old.txt	2025-02-28 19:52:58.191847510 +0100
-+++ GAME_MASTER.txt	2025-03-04 13:23:07.573160961 +0100
-@@ -68464,11 +68464,16 @@
-   }
- }
- template {
--  template_id: "DISABLE_ROUTE_SHORT_CODES"
-+  template_id: "bundle.carnival2025.2"
-   data {
--    template_id: "DISABLE_ROUTE_SHORT_CODES"
--    codeGateProto {
--      isEnabled: true
-+    template_id: "bundle.carnival2025.2"
-+    iapItemDisplay {
-+      sku: "bundle.carnival2025.2"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.latam.small.1"
-+      title: "bundle.wicker.box.1_title"
+--- GAME_MASTER_old.txt	2025-03-04 13:23:07.573160961 +0100
++++ GAME_MASTER.txt	2025-03-04 22:02:20.359090534 +0100
+@@ -64052,7 +64052,7 @@
+     combat_move {
+       uniqueId: SLUDGE
+       type: POKEMON_TYPE_POISON
+-      power: 50
++      power: 70
+       vfxName: "sludge"
+       energyDelta: -40
+     }
+@@ -64208,9 +64208,9 @@
+     combat_move {
+       uniqueId: DISCHARGE
+       type: POKEMON_TYPE_ELECTRIC
+-      power: 65
++      power: 55
+       vfxName: "discharge"
+-      energyDelta: -45
++      energyDelta: -40
      }
    }
  }
-@@ -131466,7 +131471,7 @@
-     friendshipMilestoneSettings {
-       minPointsToReach: 1
-       milestoneXpReward: 3000
--      attackBonusPercentage: 1.03
-+      attackBonusPercentage: 1.06
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-       unlockedTrading: REGULAR_NON_POKEDEX
-@@ -131486,7 +131491,7 @@
-     friendshipMilestoneSettings {
-       minPointsToReach: 7
-       milestoneXpReward: 10000
--      attackBonusPercentage: 1.05
-+      attackBonusPercentage: 1.1
-       raidBallBonus: 1
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -131509,7 +131514,7 @@
-     friendshipMilestoneSettings {
-       minPointsToReach: 30
-       milestoneXpReward: 50000
--      attackBonusPercentage: 1.07
-+      attackBonusPercentage: 1.14
-       raidBallBonus: 2
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -131532,7 +131537,7 @@
-     friendshipMilestoneSettings {
-       minPointsToReach: 90
-       milestoneXpReward: 100000
--      attackBonusPercentage: 1.1
-+      attackBonusPercentage: 1.2
-       raidBallBonus: 4
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -131634,15 +131639,15 @@
-       enableGiftToStardust: true
-       stardustPerGift: 50
-       stardustMultiplier {
--        multiplier: 2
-+        multiplier: 1
-         randomWeight: 0.6
-       }
-       stardustMultiplier {
--        multiplier: 4
-+        multiplier: 2
-         randomWeight: 0.3
-       }
-       stardustMultiplier {
--        multiplier: 8
-+        multiplier: 4
-         randomWeight: 0.1
-       }
-     }
-@@ -132247,6 +132252,7 @@
-       guidanceInCarThreshold: 0.8
-       locationManagerJpegCompressionQuality: 50
-       gameplayReportsActive: true
-+      60: 1
+@@ -64432,9 +64432,9 @@
+     combat_move {
+       uniqueId: AQUA_JET
+       type: POKEMON_TYPE_WATER
+-      power: 45
++      power: 70
+       vfxName: "aqua_jet"
+-      energyDelta: -45
++      energyDelta: -40
      }
    }
  }
-@@ -133748,7 +133754,7 @@
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
-         uses: 3
--        distanceMultiplier: 0.5
-+        distanceMultiplier: 1
-       }
-     }
-   }
-@@ -133764,7 +133770,7 @@
-       dropTrainerLevel: 100
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
--        distanceMultiplier: 0.5
-+        distanceMultiplier: 1
-       }
-     }
-   }
-@@ -133781,7 +133787,7 @@
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
-         uses: 3
--        distanceMultiplier: 0.333333343
-+        distanceMultiplier: 0.666666687
-       }
-     }
-   }
-@@ -156781,6 +156787,7 @@
-       friendRequestsEnabled: true
-       remoteRaidDistanceValidation: true
-       popupTimeMs: 30000
-+      failedFriendInviteInfoEnabled: true
-       minPlayersToBoot: 2
-       bootCutoffMs: 15000
-       bootSoloMs: 30000
-@@ -156942,7 +156949,8 @@
-   data {
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
--      dailySquashLimit: 999999
-+      enabled: true
-+      dailySquashLimit: 5
+@@ -64473,7 +64473,7 @@
+       type: POKEMON_TYPE_PSYCHIC
+       power: 70
+       vfxName: "psyshock"
+-      energyDelta: -45
++      energyDelta: -40
      }
    }
  }
-@@ -362173,9 +362181,9 @@
-       availablePokemon {
-         guaranteedLimitedPokemonReward {
-           pokemon {
--            pokemon_id: SCRAGGY
-+            pokemon_id: MIENFOO
-           }
--          identifier: "season24_scraggy"
-+          identifier: "season25_mienfoo"
-           lifetime_max_count: 1
-         }
-         unlockedAtRank: 1
-@@ -362201,9 +362209,9 @@
-       availablePokemon {
-         guaranteedLimitedPokemonReward {
-           pokemon {
--            pokemon_id: SANDILE
-+            pokemon_id: VULLABY
-           }
--          identifier: "season24_sandile"
-+          identifier: "season25_vullaby"
-           lifetime_max_count: 1
-         }
-         unlockedAtRank: 6
-@@ -362229,9 +362237,9 @@
-       availablePokemon {
-         guaranteedLimitedPokemonReward {
-           pokemon {
--            pokemon_id: JANGMO_O
-+            pokemon_id: MORPEKO
-           }
--          identifier: "season24_jangmoo"
-+          identifier: "season25_morpeko"
-           lifetime_max_count: 1
-         }
-         unlockedAtRank: 21
-@@ -362257,9 +362265,9 @@
-       availablePokemon {
-         guaranteedLimitedPokemonReward {
-           pokemon {
--            pokemon_id: DEINO
-+            pokemon_id: FRIGIBAX
-           }
--          identifier: "season24_deino"
-+          identifier: "season25_frigibax"
-           lifetime_max_count: 1
-         }
-         unlockedAtRank: 22
-@@ -362285,9 +362293,9 @@
-       availablePokemon {
-         guaranteedLimitedPokemonReward {
-           pokemon {
--            pokemon_id: FRIGIBAX
-+            pokemon_id: DREEPY
-           }
--          identifier: "season24_frigibax"
-+          identifier: "season25_dreepy"
-           lifetime_max_count: 1
-         }
-         unlockedAtRank: 23
-@@ -362360,7 +362368,10 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: CLEFAIRY
-+          pokemon_id: WOOPER
-+          pokemonDisplay {
-+            form: WOOPER_PALDEA
-+          }
-         }
-         unlockedAtRank: 1
-         attackIvOverride {
-@@ -362384,10 +362395,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: MACHOP
--          pokemonDisplay {
--            form: MACHOP_NORMAL
--          }
-+          pokemon_id: SPOINK
-         }
-         unlockedAtRank: 1
-         attackIvOverride {
-@@ -362411,7 +362419,10 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: FLETCHLING
-+          pokemon_id: CUBONE
-+          pokemonDisplay {
-+            form: CUBONE_NORMAL
-+          }
-         }
-         unlockedAtRank: 1
-         attackIvOverride {
-@@ -362435,10 +362446,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: FRILLISH
--          pokemonDisplay {
--            form: FRILLISH_NORMAL
--          }
-+          pokemon_id: VULLABY
-         }
-         unlockedAtRank: 6
-         attackIvOverride {
-@@ -362462,7 +362470,10 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: TOGEDEMARU
-+          pokemon_id: SKORUPI
-+          pokemonDisplay {
-+            form: SKORUPI_NORMAL
-+          }
-         }
-         unlockedAtRank: 6
-         attackIvOverride {
-@@ -362486,10 +362497,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: STUNFISK
--          pokemonDisplay {
--            form: STUNFISK_GALARIAN
--          }
-+          pokemon_id: BARBOACH
-         }
-         unlockedAtRank: 11
-         attackIvOverride {
-@@ -362537,7 +362545,10 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: PHANTUMP
-+          pokemon_id: JUMPLUFF
-+          pokemonDisplay {
-+            form: JUMPLUFF_NORMAL
-+          }
-         }
-         unlockedAtRank: 11
-         attackIvOverride {
-@@ -362588,9 +362599,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: TOTODILE
-+          pokemon_id: MAROWAK
-           pokemonDisplay {
--            form: TOTODILE_NORMAL
-+            form: MAROWAK_ALOLA
-           }
-         }
-         unlockedAtRank: 16
-@@ -362615,9 +362626,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: SNEASEL
-+          pokemon_id: LAPRAS
-           pokemonDisplay {
--            form: SNEASEL_HISUIAN
-+            form: LAPRAS_NORMAL
-           }
-         }
-         unlockedAtRank: 16
-@@ -362666,7 +362677,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: JANGMO_O
-+          pokemon_id: MORPEKO
-         }
-         unlockedAtRank: 21
-         attackIvOverride {
-@@ -362690,7 +362701,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: DEINO
-+          pokemon_id: FRIGIBAX
-         }
-         unlockedAtRank: 22
-         attackIvOverride {
-@@ -362714,7 +362725,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: FRIGIBAX
-+          pokemon_id: DREEPY
-         }
-         unlockedAtRank: 23
-         attackIvOverride {
-@@ -362738,7 +362749,64 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: ZEKROM
-+          pokemon_id: ARTICUNO
-+          pokemonDisplay {
-+            form: ARTICUNO_NORMAL
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
+@@ -64502,9 +64502,9 @@
+     combat_move {
+       uniqueId: ROCK_TOMB
+       type: POKEMON_TYPE_ROCK
+-      power: 70
++      power: 80
+       vfxName: "rock_tomb"
+-      energyDelta: -60
++      energyDelta: -50
+       buffs {
+         targetAttackStatStageChange: -1
+         buffActivationChance: 1
+@@ -64749,9 +64749,9 @@
+     combat_move {
+       uniqueId: DAZZLING_GLEAM
+       type: POKEMON_TYPE_FAIRY
+-      power: 110
++      power: 90
+       vfxName: "dazzling_gleam"
+-      energyDelta: -70
++      energyDelta: -55
+     }
+   }
+ }
+@@ -65133,9 +65133,13 @@
+     combat_move {
+       uniqueId: AIR_CUTTER
+       type: POKEMON_TYPE_FLYING
+-      power: 60
++      power: 45
+       vfxName: "air_cutter"
+-      energyDelta: -55
++      energyDelta: -35
++      buffs {
++        attackerAttackStatStageChange: 1
++        buffActivationChance: 0.3
 +      }
-+      availablePokemon {
-+        pokemon {
-+          pokemon_id: ZAPDOS
-+          pokemonDisplay {
-+            form: ZAPDOS_NORMAL
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-+      availablePokemon {
-+        pokemon {
-+          pokemon_id: MOLTRES
-+          pokemonDisplay {
-+            form: MOLTRES_NORMAL
-+          }
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -362802,9 +362870,9 @@
-       availablePokemon {
-         guaranteedLimitedPokemonReward {
-           pokemon {
--            pokemon_id: SCRAGGY
-+            pokemon_id: MIENFOO
-           }
--          identifier: "season24_scraggy"
-+          identifier: "season25_mienfoo"
-           lifetime_max_count: 1
-         }
-         unlockedAtRank: 1
-@@ -362830,9 +362898,9 @@
-       availablePokemon {
-         guaranteedLimitedPokemonReward {
-           pokemon {
--            pokemon_id: SANDILE
-+            pokemon_id: VULLABY
-           }
--          identifier: "season24_sandile"
-+          identifier: "season25_vullaby"
-           lifetime_max_count: 1
-         }
-         unlockedAtRank: 6
-@@ -362858,9 +362926,9 @@
-       availablePokemon {
-         guaranteedLimitedPokemonReward {
-           pokemon {
--            pokemon_id: JANGMO_O
-+            pokemon_id: MORPEKO
-           }
--          identifier: "season24_jangmoo"
-+          identifier: "season25_morpeko"
-           lifetime_max_count: 1
-         }
-         unlockedAtRank: 21
-@@ -362886,9 +362954,9 @@
-       availablePokemon {
-         guaranteedLimitedPokemonReward {
-           pokemon {
--            pokemon_id: DEINO
-+            pokemon_id: FRIGIBAX
-           }
--          identifier: "season24_deino"
-+          identifier: "season25_frigibax"
-           lifetime_max_count: 1
-         }
-         unlockedAtRank: 22
-@@ -362914,9 +362982,9 @@
-       availablePokemon {
-         guaranteedLimitedPokemonReward {
-           pokemon {
--            pokemon_id: FRIGIBAX
-+            pokemon_id: DREEPY
-           }
--          identifier: "season24_frigibax"
-+          identifier: "season25_dreepy"
-           lifetime_max_count: 1
-         }
-         unlockedAtRank: 23
-@@ -362989,7 +363057,10 @@
+     }
+   }
+ }
+@@ -65956,7 +65960,7 @@
+       type: POKEMON_TYPE_FIGHTING
+       power: 90
+       vfxName: "dynamic_punch"
+-      energyDelta: -50
++      energyDelta: -45
+     }
+   }
+ }
+@@ -66216,10 +66220,10 @@
+     combat_move {
+       uniqueId: HEX_FAST
+       type: POKEMON_TYPE_GHOST
+-      power: 6
++      power: 7
+       vfxName: "hex_fast"
+       durationTurns: 2
+-      energyDelta: 12
++      energyDelta: 13
+     }
+   }
+ }
+@@ -66230,7 +66234,7 @@
+     combat_move {
+       uniqueId: NIGHT_SHADE
+       type: POKEMON_TYPE_GHOST
+-      power: 80
++      power: 70
+       vfxName: "night_shade"
+       energyDelta: -45
+     }
+@@ -66442,9 +66446,9 @@
+     combat_move {
+       uniqueId: FOUL_PLAY
+       type: POKEMON_TYPE_DARK
+-      power: 70
++      power: 60
+       vfxName: "foul_play"
+-      energyDelta: -45
++      energyDelta: -40
+     }
+   }
+ }
+@@ -67546,7 +67550,7 @@
+       type: POKEMON_TYPE_FLYING
+       power: 110
+       vfxName: "acrobatics"
+-      energyDelta: -60
++      energyDelta: -55
+     }
+   }
+ }
+@@ -67604,7 +67608,7 @@
+     combat_move {
+       uniqueId: ROLLOUT_FAST
+       type: POKEMON_TYPE_ROCK
+-      power: 8
++      power: 7
+       vfxName: "rollout_fast"
+       durationTurns: 2
+       energyDelta: 13
+@@ -200479,6 +200483,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: CLEFAIRY
-+          pokemon_id: WOOPER
-+          pokemonDisplay {
-+            form: WOOPER_PALDEA
-+          }
-         }
-         unlockedAtRank: 1
-         attackIvOverride {
-@@ -363013,10 +363084,7 @@
+       quickMoves: WATER_GUN_FAST
+       quickMoves: BITE_FAST
++      quickMoves: ROLLOUT_FAST
+       cinematicMoves: FLASH_CANNON
+       cinematicMoves: ICE_BEAM
+       cinematicMoves: HYDRO_PUMP
+@@ -200602,6 +200607,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: MACHOP
--          pokemonDisplay {
--            form: MACHOP_NORMAL
--          }
-+          pokemon_id: SPOINK
-         }
-         unlockedAtRank: 1
-         attackIvOverride {
-@@ -363040,7 +363108,10 @@
+       quickMoves: WATER_GUN_FAST
+       quickMoves: BITE_FAST
++      quickMoves: ROLLOUT_FAST
+       cinematicMoves: FLASH_CANNON
+       cinematicMoves: ICE_BEAM
+       cinematicMoves: HYDRO_PUMP
+@@ -200707,6 +200713,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: FLETCHLING
-+          pokemon_id: CUBONE
-+          pokemonDisplay {
-+            form: CUBONE_NORMAL
-+          }
-         }
-         unlockedAtRank: 1
-         attackIvOverride {
-@@ -363064,10 +363135,7 @@
+       quickMoves: WATER_GUN_FAST
+       quickMoves: BITE_FAST
++      quickMoves: ROLLOUT_FAST
+       cinematicMoves: FLASH_CANNON
+       cinematicMoves: ICE_BEAM
+       cinematicMoves: HYDRO_PUMP
+@@ -211884,6 +211891,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: FRILLISH
--          pokemonDisplay {
--            form: FRILLISH_NORMAL
--          }
-+          pokemon_id: VULLABY
-         }
-         unlockedAtRank: 6
-         attackIvOverride {
-@@ -363091,7 +363159,10 @@
+       quickMoves: INFESTATION_FAST
+       quickMoves: CONFUSION_FAST
++      quickMoves: PSYWAVE_FAST
+       cinematicMoves: SILVER_WIND
+       cinematicMoves: PSYCHIC
+       cinematicMoves: BUG_BUZZ
+@@ -211981,6 +211989,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: TOGEDEMARU
-+          pokemon_id: SKORUPI
-+          pokemonDisplay {
-+            form: SKORUPI_NORMAL
-+          }
-         }
-         unlockedAtRank: 6
-         attackIvOverride {
-@@ -363115,10 +363186,7 @@
+       quickMoves: INFESTATION_FAST
+       quickMoves: CONFUSION_FAST
++      quickMoves: PSYWAVE_FAST
+       cinematicMoves: SILVER_WIND
+       cinematicMoves: PSYCHIC
+       cinematicMoves: BUG_BUZZ
+@@ -226648,6 +226657,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: STUNFISK
--          pokemonDisplay {
--            form: STUNFISK_GALARIAN
--          }
-+          pokemon_id: BARBOACH
-         }
-         unlockedAtRank: 11
-         attackIvOverride {
-@@ -363166,7 +363234,10 @@
+       quickMoves: TACKLE_FAST
+       quickMoves: INFESTATION_FAST
++      quickMoves: ROLLOUT_FAST
+       cinematicMoves: SLUDGE_BOMB
+       cinematicMoves: SHADOW_BALL
+       cinematicMoves: DARK_PULSE
+@@ -226844,6 +226854,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: PHANTUMP
-+          pokemon_id: JUMPLUFF
-+          pokemonDisplay {
-+            form: JUMPLUFF_NORMAL
-+          }
-         }
-         unlockedAtRank: 11
-         attackIvOverride {
-@@ -363217,9 +363288,9 @@
+       quickMoves: TACKLE_FAST
+       quickMoves: INFESTATION_FAST
++      quickMoves: ROLLOUT_FAST
+       cinematicMoves: SLUDGE_BOMB
+       cinematicMoves: SHADOW_BALL
+       cinematicMoves: DARK_PULSE
+@@ -230767,10 +230778,12 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: TOTODILE
-+          pokemon_id: MAROWAK
-           pokemonDisplay {
--            form: TOTODILE_NORMAL
-+            form: MAROWAK_ALOLA
-           }
-         }
-         unlockedAtRank: 16
-@@ -363244,9 +363315,9 @@
+       quickMoves: FROST_BREATH_FAST
+       quickMoves: WATER_GUN_FAST
++      quickMoves: PSYWAVE_FAST
+       cinematicMoves: HYDRO_PUMP
+       cinematicMoves: SURF
+       cinematicMoves: BLIZZARD
+       cinematicMoves: SKULL_BASH
++      cinematicMoves: SPARKLING_ARIA
+       animationTime: 2.6667
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -230860,10 +230873,12 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: SNEASEL
-+          pokemon_id: LAPRAS
-           pokemonDisplay {
--            form: SNEASEL_HISUIAN
-+            form: LAPRAS_NORMAL
-           }
-         }
-         unlockedAtRank: 16
-@@ -363295,7 +363366,7 @@
+       quickMoves: FROST_BREATH_FAST
+       quickMoves: WATER_GUN_FAST
++      quickMoves: PSYWAVE_FAST
+       cinematicMoves: HYDRO_PUMP
+       cinematicMoves: SURF
+       cinematicMoves: BLIZZARD
+       cinematicMoves: SKULL_BASH
++      cinematicMoves: SPARKLING_ARIA
+       animationTime: 2.6667
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -230955,10 +230970,12 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: JANGMO_O
-+          pokemon_id: MORPEKO
-         }
-         unlockedAtRank: 21
-         attackIvOverride {
-@@ -363319,7 +363390,7 @@
+       quickMoves: FROST_BREATH_FAST
+       quickMoves: WATER_GUN_FAST
++      quickMoves: PSYWAVE_FAST
+       cinematicMoves: HYDRO_PUMP
+       cinematicMoves: SURF
+       cinematicMoves: BLIZZARD
+       cinematicMoves: SKULL_BASH
++      cinematicMoves: SPARKLING_ARIA
+       animationTime: 2.6667
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -237543,6 +237560,8 @@
+       cinematicMoves: DIG
+       cinematicMoves: BRICK_BREAK
+       cinematicMoves: HYPER_BEAM
++      cinematicMoves: SWIFT
++      cinematicMoves: TRAILBLAZE
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -238937,6 +238956,7 @@
+       cinematicMoves: DAZZLING_GLEAM
+       cinematicMoves: AERIAL_ACE
+       cinematicMoves: DRAINING_KISS
++      cinematicMoves: PSYSHOCK
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -249653,6 +249673,7 @@
+       cinematicMoves: BULLDOZE
+       cinematicMoves: STONE_EDGE
+       cinematicMoves: HIGH_HORSEPOWER
++      cinematicMoves: ICICLE_SPEAR
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -249754,6 +249775,7 @@
+       cinematicMoves: BULLDOZE
+       cinematicMoves: STONE_EDGE
+       cinematicMoves: HIGH_HORSEPOWER
++      cinematicMoves: ICICLE_SPEAR
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -257192,6 +257214,7 @@
+       cinematicMoves: SLUDGE_WAVE
+       cinematicMoves: SURF
+       cinematicMoves: MUDDY_WATER
++      cinematicMoves: SLUDGE
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -257310,6 +257333,7 @@
+       cinematicMoves: SLUDGE_WAVE
+       cinematicMoves: SURF
+       cinematicMoves: MUDDY_WATER
++      cinematicMoves: SLUDGE
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -257666,6 +257690,7 @@
+       quickMoves: FIRE_FANG_FAST
+       quickMoves: THUNDER_FANG_FAST
+       quickMoves: ICE_FANG_FAST
++      quickMoves: SUCKER_PUNCH_FAST
+       cinematicMoves: CRUNCH
+       cinematicMoves: PLAY_ROUGH
+       cinematicMoves: POISON_FANG
+@@ -257759,6 +257784,7 @@
+       quickMoves: FIRE_FANG_FAST
+       quickMoves: THUNDER_FANG_FAST
+       quickMoves: ICE_FANG_FAST
++      quickMoves: SUCKER_PUNCH_FAST
+       cinematicMoves: CRUNCH
+       cinematicMoves: PLAY_ROUGH
+       cinematicMoves: POISON_FANG
+@@ -258194,6 +258220,7 @@
+       cinematicMoves: DIG
+       cinematicMoves: GRASS_KNOT
+       cinematicMoves: THUNDER
++      cinematicMoves: SWIFT
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -258385,6 +258412,7 @@
+       cinematicMoves: DIG
+       cinematicMoves: GRASS_KNOT
+       cinematicMoves: THUNDER
++      cinematicMoves: SWIFT
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -264023,6 +264051,7 @@
+       cinematicMoves: POWER_GEM
+       cinematicMoves: FOUL_PLAY
+       cinematicMoves: SHADOW_SNEAK
++      cinematicMoves: DAZZLING_GLEAM
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -264138,6 +264167,7 @@
+       cinematicMoves: POWER_GEM
+       cinematicMoves: FOUL_PLAY
+       cinematicMoves: SHADOW_SNEAK
++      cinematicMoves: DAZZLING_GLEAM
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -264256,6 +264286,7 @@
+       cinematicMoves: POWER_GEM
+       cinematicMoves: FOUL_PLAY
+       cinematicMoves: SHADOW_SNEAK
++      cinematicMoves: DAZZLING_GLEAM
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -266761,6 +266792,7 @@
+       cinematicMoves: SLUDGE_BOMB
+       cinematicMoves: ICE_BEAM
+       cinematicMoves: ACID_SPRAY
++      cinematicMoves: SLUDGE
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -267310,6 +267342,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: DEINO
-+          pokemon_id: FRIGIBAX
-         }
-         unlockedAtRank: 22
-         attackIvOverride {
-@@ -363343,7 +363414,7 @@
+       quickMoves: SPLASH_FAST
+       quickMoves: WATER_GUN_FAST
++      quickMoves: ROLLOUT_FAST
+       cinematicMoves: HEAVY_SLAM
+       cinematicMoves: WATER_PULSE
+       cinematicMoves: BODY_SLAM
+@@ -267427,6 +267460,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: FRIGIBAX
-+          pokemon_id: DREEPY
-         }
-         unlockedAtRank: 23
-         attackIvOverride {
-@@ -363367,7 +363438,64 @@
+       quickMoves: ZEN_HEADBUTT_FAST
+       quickMoves: WATER_GUN_FAST
++      quickMoves: ROLLOUT_FAST
+       cinematicMoves: SURF
+       cinematicMoves: BLIZZARD
+       cinematicMoves: HYPER_BEAM
+@@ -268024,9 +268058,11 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: ZEKROM
-+          pokemon_id: ARTICUNO
-+          pokemonDisplay {
-+            form: ARTICUNO_NORMAL
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-+      availablePokemon {
-+        pokemon {
-+          pokemon_id: ZAPDOS
-+          pokemonDisplay {
-+            form: ZAPDOS_NORMAL
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-+      availablePokemon {
-+        pokemon {
-+          pokemon_id: MOLTRES
-+          pokemonDisplay {
-+            form: MOLTRES_NORMAL
-+          }
+       quickMoves: CHARGE_BEAM_FAST
+       quickMoves: EXTRASENSORY_FAST
++      quickMoves: PSYWAVE_FAST
+       cinematicMoves: PSYCHIC
+       cinematicMoves: SHADOW_BALL
+       cinematicMoves: MIRROR_COAT
++      cinematicMoves: DYNAMIC_PUNCH
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -272622,6 +272658,7 @@
+       cinematicMoves: BULLDOZE
+       cinematicMoves: STONE_EDGE
+       cinematicMoves: ROCK_SLIDE
++      cinematicMoves: ROCK_TOMB
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -272716,6 +272753,7 @@
+       cinematicMoves: BULLDOZE
+       cinematicMoves: STONE_EDGE
+       cinematicMoves: ROCK_SLIDE
++      cinematicMoves: ROCK_TOMB
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -275596,6 +275634,7 @@
+       }
+       quickMoves: ICE_SHARD_FAST
+       quickMoves: FROST_BREATH_FAST
++      quickMoves: ROLLOUT_FAST
+       cinematicMoves: AVALANCHE
+       cinematicMoves: GYRO_BALL
+       cinematicMoves: SHADOW_BALL
+@@ -283959,6 +283998,7 @@
+       quickMoves: POISON_JAB_FAST
+       quickMoves: RAZOR_LEAF_FAST
+       quickMoves: MAGICAL_LEAF_FAST
++      quickMoves: POISON_STING_FAST
+       cinematicMoves: SOLAR_BEAM
+       cinematicMoves: SLUDGE_BOMB
+       cinematicMoves: DAZZLING_GLEAM
+@@ -293066,6 +293106,7 @@
+       cinematicMoves: DAZZLING_GLEAM
+       cinematicMoves: AERIAL_ACE
+       cinematicMoves: FLAMETHROWER
++      cinematicMoves: PSYSHOCK
+       animationTime: 1.9
+       animationTime: 0.6667
+       animationTime: 1.8
+@@ -293615,6 +293656,7 @@
+       cinematicMoves: BULLDOZE
+       cinematicMoves: STONE_EDGE
+       cinematicMoves: HIGH_HORSEPOWER
++      cinematicMoves: ICICLE_SPEAR
+       animationTime: 1.9
+       animationTime: 0.6667
+       animationTime: 1.8
+@@ -293711,6 +293753,7 @@
+       cinematicMoves: BULLDOZE
+       cinematicMoves: STONE_EDGE
+       cinematicMoves: HIGH_HORSEPOWER
++      cinematicMoves: ICICLE_SPEAR
+       animationTime: 1.9
+       animationTime: 0.6667
+       animationTime: 1.8
+@@ -294454,6 +294497,7 @@
+       cinematicMoves: DARK_PULSE
+       cinematicMoves: POLTERGEIST
+       cinematicMoves: SHADOW_PUNCH
++      cinematicMoves: DYNAMIC_PUNCH
+       animationTime: 1.9
+       animationTime: 0.6667
+       animationTime: 1.8
+@@ -294553,6 +294597,7 @@
+       cinematicMoves: DARK_PULSE
+       cinematicMoves: POLTERGEIST
+       cinematicMoves: SHADOW_PUNCH
++      cinematicMoves: DYNAMIC_PUNCH
+       animationTime: 1.9
+       animationTime: 0.6667
+       animationTime: 1.8
+@@ -308195,6 +308240,7 @@
+       cinematicMoves: FUTURESIGHT
+       cinematicMoves: SHADOW_BALL
+       cinematicMoves: THUNDER
++      cinematicMoves: PSYSHOCK
+       animationTime: 1.9
+       animationTime: 0.6667
+       animationTime: 1.8
+@@ -325454,6 +325500,7 @@
+       cinematicMoves: PETAL_BLIZZARD
+       cinematicMoves: PSYCHIC
+       cinematicMoves: DISARMING_VOICE
++      cinematicMoves: TRAILBLAZE
+       animationTime: 1.9
+       animationTime: 0.6666
+       animationTime: 1.7666
+@@ -325533,6 +325580,7 @@
+       cinematicMoves: PETAL_BLIZZARD
+       cinematicMoves: PSYCHIC
+       cinematicMoves: DISARMING_VOICE
++      cinematicMoves: TRAILBLAZE
+       animationTime: 1.9
+       animationTime: 0.6666
+       animationTime: 1.7666
+@@ -325615,6 +325663,7 @@
+       cinematicMoves: PETAL_BLIZZARD
+       cinematicMoves: PSYCHIC
+       cinematicMoves: DISARMING_VOICE
++      cinematicMoves: TRAILBLAZE
+       animationTime: 1.9
+       animationTime: 0.6666
+       animationTime: 1.7666
+@@ -325697,6 +325746,7 @@
+       cinematicMoves: PETAL_BLIZZARD
+       cinematicMoves: PSYCHIC
+       cinematicMoves: DISARMING_VOICE
++      cinematicMoves: TRAILBLAZE
+       animationTime: 1.9
+       animationTime: 0.6666
+       animationTime: 1.7666
+@@ -325779,6 +325829,7 @@
+       cinematicMoves: PETAL_BLIZZARD
+       cinematicMoves: PSYCHIC
+       cinematicMoves: DISARMING_VOICE
++      cinematicMoves: TRAILBLAZE
+       animationTime: 1.9
+       animationTime: 0.6666
+       animationTime: 1.7666
+@@ -325861,6 +325912,7 @@
+       cinematicMoves: PETAL_BLIZZARD
+       cinematicMoves: PSYCHIC
+       cinematicMoves: DISARMING_VOICE
++      cinematicMoves: TRAILBLAZE
+       animationTime: 1.9
+       animationTime: 0.6666
+       animationTime: 1.7666
+@@ -328363,6 +328415,7 @@
+       cinematicMoves: OUTRAGE
+       cinematicMoves: GUNK_SHOT
+       cinematicMoves: FOCUS_BLAST
++      cinematicMoves: SLUDGE_BOMB
+       animationTime: 1.9
+       animationTime: 0.6666
+       animationTime: 1.7666
+@@ -334652,6 +334705,7 @@
+       }
+       quickMoves: FAIRY_WIND_FAST
+       quickMoves: STRUGGLE_BUG_FAST
++      quickMoves: CHARM_FAST
+       cinematicMoves: DAZZLING_GLEAM
+       cinematicMoves: BUG_BUZZ
+       cinematicMoves: DRAINING_KISS
+@@ -339631,6 +339685,7 @@
+       cinematicMoves: PSYCHIC_FANGS
+       cinematicMoves: AQUA_TAIL
+       cinematicMoves: CRUNCH
++      cinematicMoves: PSYSHOCK
+       pokedexHeightM: 0.9
+       pokedexWeightKg: 19
+       heightStdDev: 0.1125
+@@ -339710,6 +339765,7 @@
+       cinematicMoves: OUTRAGE
+       cinematicMoves: DRAGON_PULSE
+       cinematicMoves: FLY
++      cinematicMoves: SWIFT
+       pokedexHeightM: 3
+       pokedexWeightKg: 185
+       heightStdDev: 0.375
+@@ -354613,6 +354669,7 @@
+       }
+       quickMoves: THUNDER_SHOCK_FAST
+       quickMoves: WATER_GUN_FAST
++      quickMoves: SUCKER_PUNCH_FAST
+       cinematicMoves: PARABOLIC_CHARGE
+       cinematicMoves: DISCHARGE
+       cinematicMoves: ZAP_CANNON
+@@ -355976,9 +356033,11 @@
+       }
+       quickMoves: WING_ATTACK_FAST
+       quickMoves: ROCK_THROW_FAST
++      quickMoves: SUCKER_PUNCH_FAST
+       cinematicMoves: PAYBACK
+       cinematicMoves: AERIAL_ACE
+       cinematicMoves: FLY
++      cinematicMoves: ROCK_TOMB
+       pokedexHeightM: 1.5
+       pokedexWeightKg: 42.9
+       heightStdDev: 0.1875
+@@ -360542,7 +360601,7 @@
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_WILLPOWER"
+     }
+   }
+ }
+@@ -360555,31 +360614,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
          }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -363688,15 +363816,9 @@
-       sku: "bundle.GOTour2024.1"
-       category: IAP_CATEGORY_BUNDLE
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+     }
+@@ -360594,31 +360653,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -360634,7 +360693,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 530
+         }
+       }
+       reward {
+@@ -360652,7 +360711,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+     }
+@@ -360667,7 +360726,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+       reward {
+@@ -360685,7 +360744,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 8480
++          count: 2120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -360701,7 +360760,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 530
+         }
+       }
+       reward {
+@@ -360719,7 +360778,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+     }
+@@ -360734,7 +360793,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+       reward {
+@@ -360752,7 +360811,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 8480
++          count: 2120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -360768,7 +360827,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 570
+         }
+       }
+       reward {
+@@ -360786,7 +360845,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4560
++          count: 1140
+         }
+       }
+     }
+@@ -360801,7 +360860,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4560
++          count: 1140
+         }
+       }
+       reward {
+@@ -360819,7 +360878,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 9120
++          count: 2280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -360835,7 +360894,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+       reward {
+@@ -360853,7 +360912,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+     }
+@@ -360868,7 +360927,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+       reward {
+@@ -360886,7 +360945,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 9600
++          count: 2400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -360981,7 +361040,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 700
+         }
+       }
+       reward {
+@@ -360999,7 +361058,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5600
++          count: 1400
+         }
+       }
+     }
+@@ -361014,7 +361073,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5600
++          count: 1400
+         }
+       }
+       reward {
+@@ -361032,7 +361091,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 11200
++          count: 2800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361048,7 +361107,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 730
+         }
+       }
+       reward {
+@@ -361066,7 +361125,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5840
++          count: 1460
+         }
+       }
+     }
+@@ -361081,7 +361140,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5840
++          count: 1460
+         }
+       }
+       reward {
+@@ -361099,7 +361158,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 11680
++          count: 2920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361115,7 +361174,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 770
+         }
+       }
+       reward {
+@@ -361133,7 +361192,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6160
++          count: 1540
+         }
+       }
+     }
+@@ -361148,7 +361207,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6160
++          count: 1540
+         }
+       }
+       reward {
+@@ -361166,7 +361225,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 12320
++          count: 3080
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361231,7 +361290,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 300
+         }
+       }
+       reward {
+@@ -361249,7 +361308,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+     }
+@@ -361264,7 +361323,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+       reward {
+@@ -361282,7 +361341,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361298,7 +361357,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 870
+         }
+       }
+       reward {
+@@ -361316,7 +361375,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6960
++          count: 1740
+         }
+       }
+     }
+@@ -361331,7 +361390,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6960
++          count: 1740
+         }
+       }
+       reward {
+@@ -361349,7 +361408,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 13920
++          count: 3480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361365,7 +361424,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -361383,7 +361442,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -361398,7 +361457,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -361416,7 +361475,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361432,7 +361491,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -361450,7 +361509,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -361465,7 +361524,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -361483,7 +361542,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361499,7 +361558,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -361517,7 +361576,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -361532,7 +361591,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -361550,7 +361609,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361566,7 +361625,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -361584,7 +361643,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -361599,7 +361658,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -361617,7 +361676,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361633,7 +361692,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 330
+         }
+       }
+       reward {
+@@ -361651,7 +361710,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+     }
+@@ -361666,7 +361725,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+       reward {
+@@ -361684,7 +361743,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5280
++          count: 1320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361700,7 +361759,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 330
+         }
+       }
+       reward {
+@@ -361718,7 +361777,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+     }
+@@ -361733,7 +361792,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+       reward {
+@@ -361751,7 +361810,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5280
++          count: 1320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361767,7 +361826,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 370
+         }
+       }
+       reward {
+@@ -361785,7 +361844,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2960
++          count: 740
+         }
+       }
+     }
+@@ -361800,7 +361859,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2960
++          count: 740
+         }
+       }
+       reward {
+@@ -361818,7 +361877,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5920
++          count: 1480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361883,7 +361942,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 400
+         }
+       }
+       reward {
+@@ -361901,7 +361960,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3200
++          count: 800
+         }
+       }
+     }
+@@ -361916,7 +361975,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3200
++          count: 800
+         }
+       }
+       reward {
+@@ -361934,7 +361993,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6400
++          count: 1600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361950,7 +362009,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 430
+         }
+       }
+       reward {
+@@ -361968,7 +362027,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+     }
+@@ -361983,7 +362042,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+       reward {
+@@ -362001,7 +362060,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6880
++          count: 1720
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362017,7 +362076,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 430
+         }
+       }
+       reward {
+@@ -362035,7 +362094,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+     }
+@@ -362050,7 +362109,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+       reward {
+@@ -362068,7 +362127,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6880
++          count: 1720
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362084,7 +362143,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 470
+         }
+       }
+       reward {
+@@ -362102,7 +362161,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3760
++          count: 940
+         }
+       }
+     }
+@@ -362117,7 +362176,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3760
++          count: 940
+         }
+       }
+       reward {
+@@ -362135,7 +362194,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7520
++          count: 1880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363530,90 +363589,90 @@
+       enableCombatLeagueView: true
+       enableTodayView: true
+       seasonSchedules {
+-        seasonTitle: "17"
+-        description_key: "17"
++        seasonTitle: "18"
++        description_key: "18"
+         vsSeekerSchedules {
+-          start_time_ms: 1733259600000
+-          end_time_ms: 1733864400000
++          start_time_ms: 1741122000000
++          end_time_ms: 1741723200000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_WILLPOWER"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1733864400000
+-          end_time_ms: 1734469200000
++          start_time_ms: 1741723200000
++          end_time_ms: 1742328000000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1734469200000
+-          end_time_ms: 1735074000000
++          start_time_ms: 1742328000000
++          end_time_ms: 1742932800000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_HOLIDAY"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1735074000000
+-          end_time_ms: 1735678800000
++          start_time_ms: 1742932800000
++          end_time_ms: 1743537600000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1735678800000
+-          end_time_ms: 1736283600000
++          start_time_ms: 1743537600000
++          end_time_ms: 1744142400000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_HOLIDAY"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1736283600000
+-          end_time_ms: 1736888400000
++          start_time_ms: 1744142400000
++          end_time_ms: 1744747200000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_SPRING_GREAT"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1736888400000
+-          end_time_ms: 1737493200000
++          start_time_ms: 1744747200000
++          end_time_ms: 1745352000000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_SPRING_GREAT"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1737493200000
+-          end_time_ms: 1738098000000
++          start_time_ms: 1745352000000
++          end_time_ms: 1745956800000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1738098000000
+-          end_time_ms: 1738702800000
++          start_time_ms: 1745956800000
++          end_time_ms: 1746561600000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_JUNGLE"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_REMIX"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1738702800000
+-          end_time_ms: 1739307600000
++          start_time_ms: 1746561600000
++          end_time_ms: 1747166400000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LOVE"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_REMIX"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1739307600000
+-          end_time_ms: 1739912400000
++          start_time_ms: 1747166400000
++          end_time_ms: 1747771200000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LOVE"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1739912400000
+-          end_time_ms: 1740517200000
++          start_time_ms: 1747771200000
++          end_time_ms: 1748376000000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
+         }
+         vsSeekerSchedules {
+-          start_time_ms: 1740517200000
+-          end_time_ms: 1741122000000
++          start_time_ms: 1748376000000
++          end_time_ms: 1748980800000
+           vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
++          vsSeekerLeagueTempalteId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+         }
+-        blogUrl: "https://pokemongolive.com/post/go-battle-league-dual-destiny"
++        blogUrl: "https://storage.googleapis.com/prod-public-images/pgo_s18_gbl_2025.jpg"
+       }
+     }
+   }
+@@ -363721,15 +363780,14 @@
+       sku: "battlepassticket.1"
+       category: IAP_CATEGORY_FREE
        sortOrder: 1
-+      hidden: true
-       spriteId: "bundle.general5.small.1"
-       title: "great_storage_box"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2025-03-02T22:00:00"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1740952800000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 695
+-      hidden: true
+       spriteId: "battlepassticket.1"
+       title: "iap_battle_pass_ticket_name"
+       description: "battle_pass_ticket_IAP_description"
+       skuEnableTime: "2023-02-27T20:00:00"
+-      skuDisableTime: "2024-06-15T13:00:00"
++      skuDisableTime: "2025-03-18T13:00:00"
+       skuEnableTimeUtcMs: 1677528000000
+-      skuDisableTimeUtcMs: 1718456400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/GBL_SharedSkies_2024.jpeg"
++      skuDisableTimeUtcMs: 1742302800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_s18_gbl_2025.jpg"
      }
    }
  }
-@@ -363708,15 +363830,9 @@
-       sku: "bundle.GOTour2024.2"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 2
-+      hidden: true
-       spriteId: "bundle.general.adventure.1"
-       title: "hatch_box"
--      skuEnableTime: "2022-10-13T12:00:01"
--      skuDisableTime: "2025-03-02T22:00:00"
--      skuEnableTimeUtcMs: 1665662401000
--      skuDisableTimeUtcMs: 1740952800000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 5350
-     }
-   }
- }
-@@ -363728,15 +363844,9 @@
-       sku: "bundle.GOTour2024.3"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 3
-+      hidden: true
-       spriteId: "bundle.general.remotebox.medium.1"
-       title: "great_raid_box_title"
--      skuEnableTime: "2022-10-13T12:00:02"
--      skuDisableTime: "2025-03-02T22:00:00"
--      skuEnableTimeUtcMs: 1665662402000
--      skuDisableTimeUtcMs: 1740952800000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 1185
-     }
-   }
- }
-@@ -363748,15 +363858,9 @@
-       sku: "bundle.GOTour2024.4"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 4
-+      hidden: true
-       spriteId: "bundle.general1.small.2"
-       title: "catch_box"
--      skuEnableTime: "2022-10-13T12:00:03"
--      skuDisableTime: "2025-03-02T22:00:00"
--      skuEnableTimeUtcMs: 1665662403000
--      skuDisableTimeUtcMs: 1740952800000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 580
-     }
-   }
- }
-@@ -363768,15 +363872,9 @@
-       sku: "bundle.GOTour2024.5"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 5
-+      hidden: true
-       spriteId: "bundle.general1.large.2"
-       title: "external_box_name_2"
--      skuEnableTime: "2022-10-13T12:00:04"
--      skuDisableTime: "2025-03-02T22:00:00"
--      skuEnableTimeUtcMs: 1665662404000
--      skuDisableTimeUtcMs: 1740952800000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 17500
-     }
-   }
- }
-@@ -363788,13 +363886,10 @@
-       sku: "bundle.GOTour2024.6"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 6
-+      hidden: true
-       sale: true
-       spriteId: "bundle.general.premiumbox.large.1"
-       title: "ultra_raid_box_title"
--      skuEnableTime: "2022-10-13T12:00:05"
--      skuDisableTime: "2025-03-02T22:00:00"
--      skuEnableTimeUtcMs: 1665662405000
--      skuDisableTimeUtcMs: 1740952800000
-     }
-   }
- }
-@@ -363806,12 +363901,10 @@
-       sku: "bundle.GOTour2024.7"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 7
-+      hidden: true
-+      sale: true
-       spriteId: "bundle2.sprite.a"
-       title: "sticker_box"
--      skuEnableTime: "2022-10-13T12:00:05"
--      skuDisableTime: "2025-03-02T22:00:00"
--      skuEnableTimeUtcMs: 1665662405000
--      skuDisableTimeUtcMs: 1740952800000
-     }
-   }
- }
-@@ -366848,14 +366941,13 @@
-       sku: "general1.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_MarchMonthly2025_title"
-       description: "item_event_ticket_gray_details_MarchMonthly2025"
-       skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-04-11T20:00:00"
-+      skuDisableTime: "2025-03-11T20:00:00"
-       skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1744401600000
-+      skuDisableTimeUtcMs: 1741723200000
-       imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
-     }
-   }
-@@ -366868,14 +366960,13 @@
-       sku: "general1.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_MarchMonthly2025_title"
-       description: "item_event_ticket_gray_details_MarchMonthly2025"
-       skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-04-11T20:00:00"
-+      skuDisableTime: "2025-03-11T20:00:00"
-       skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1744401600000
-+      skuDisableTimeUtcMs: 1741723200000
-       imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
-     }
-   }
-@@ -367025,9 +367116,8 @@
-       sku: "general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket.2_fuecoco_title"
-+      title: "general1.ticket_CD_Fuecoco25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-03-08T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
-@@ -367044,9 +367134,8 @@
-       sku: "general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket.2_fuecoco_title"
-+      title: "general1.ticket_CD_Fuecoco25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-03-08T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
-@@ -368460,6 +368549,7 @@
-       sku: "pgorelease.general1.ticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.1"
-       title: "gotour_2025_shiny_meloetta_masterwork_sr_title"
-       skuEnableTime: "2025-01-25T10:00:00"
-@@ -368478,6 +368568,7 @@
-       sku: "pgorelease.general1.ticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.1"
-       title: "gotour_2025_shiny_meloetta_masterwork_sr_title"
-       skuEnableTime: "2025-01-25T10:00:00"
-@@ -368573,14 +368664,13 @@
-       sku: "pgorelease.general1.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_MarchMonthly2025_title"
-       description: "item_event_ticket_gray_details_MarchMonthly2025"
-       skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-04-11T20:00:00"
-+      skuDisableTime: "2025-03-11T20:00:00"
-       skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1744401600000
-+      skuDisableTimeUtcMs: 1741723200000
-       imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
-     }
-   }
-@@ -368593,14 +368683,13 @@
-       sku: "pgorelease.general1.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_MarchMonthly2025_title"
-       description: "item_event_ticket_gray_details_MarchMonthly2025"
-       skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-04-11T20:00:00"
-+      skuDisableTime: "2025-03-11T20:00:00"
-       skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1744401600000
-+      skuDisableTimeUtcMs: 1741723200000
-       imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
-     }
-   }
-@@ -368731,9 +368820,8 @@
-       sku: "pgorelease.general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket.2_fuecoco_title"
-+      title: "general1.ticket_CD_Fuecoco25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-03-08T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
-@@ -368750,9 +368838,8 @@
-       sku: "pgorelease.general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket.2_fuecoco_title"
-+      title: "general1.ticket_CD_Fuecoco25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-03-08T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
-@@ -368806,6 +368893,7 @@
-       sku: "pgorelease.general2.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "road_to_unova_event_title_hatch"
-       skuEnableTime: "2025-01-25T10:00:00"
-@@ -368824,6 +368912,7 @@
-       sku: "pgorelease.general2.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "road_to_unova_event_title_hatch"
-       skuEnableTime: "2025-01-25T10:00:00"
-@@ -368842,6 +368931,7 @@
-       sku: "pgorelease.general2.ticket.6"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 3
-+      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "road_to_unova_event_title_raid"
-       skuEnableTime: "2025-01-25T10:00:00"
-@@ -368860,6 +368950,7 @@
-       sku: "pgorelease.general2.ticket.6.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 3
-+      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "road_to_unova_event_title_raid"
-       skuEnableTime: "2025-01-25T10:00:00"
-@@ -374219,17 +374310,6 @@
+@@ -374597,6 +374655,18 @@
    }
  }
  template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
-   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
++  template_id: "LC_SPECIALBACKGROUND_2025_S18"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_S18"
++    locationCardSettings {
++      locationCard: 76
++      imageUrl: "sb_Season18_MightAndMastery"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_MightAndMastery"
++    }
++  }
++}
++template {
+   template_id: "PTC_OAUTH_SETTINGS"
    data {
-     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
-@@ -374491,9 +374571,44 @@
+     template_id: "PTC_OAUTH_SETTINGS"
+@@ -374607,16 +374677,16 @@
      }
    }
  }
--batch_id: 1740758296717
-+template {
-+  template_id: "IAP_CATEGORY_REWARDED_SPEND"
-+  data {
-+    template_id: "IAP_CATEGORY_REWARDED_SPEND"
-+    iapCategoryDisplay {
-+      category: 19
-+      name: "REWARDED_SPEND_MONTHLY_REWARD_ROAD_KEY"
-+      description: "rewarded_spend_category_description"
-+    }
-+  }
-+}
-+template {
-+  template_id: "bundle.carnival2025.1"
-+  data {
-+    template_id: "bundle.carnival2025.1"
-+    iapItemDisplay {
-+      sku: "bundle.carnival2025.1"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.latam.small.1"
-+      title: "bundle.wicker.box.1_title"
-+    }
-+  }
-+}
-+template {
-+  template_id: "PTC_OAUTH_SETTINGS"
-+  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    }
-+  }
-+}
-+batch_id: 1741083463537
+-batch_id: 1741083463537
++batch_id: 1741121111040
  experiment_id: 1
--experiment_id: 4
  experiment_id: 6
  experiment_id: 8
  experiment_id: 11
-@@ -374501,6 +374616,7 @@
+ experiment_id: 21
  experiment_id: 101
- experiment_id: 150
- experiment_id: 164
-+experiment_id: 169
+-experiment_id: 150
+-experiment_id: 164
+ experiment_id: 169
++experiment_id: 170
++experiment_id: 172
  experiment_id: 300
  experiment_id: 302
  experiment_id: 320
-@@ -374515,7 +374631,6 @@
- experiment_id: 1699
- experiment_id: 1820
- experiment_id: 2248
--experiment_id: 2257
- experiment_id: 2301
- experiment_id: 2399
- experiment_id: 2400
-@@ -374524,43 +374639,30 @@
- experiment_id: 3032
- experiment_id: 3033
- experiment_id: 3063
-+experiment_id: 3502
-+experiment_id: 3503
-+experiment_id: 3504
-+experiment_id: 3506
-+experiment_id: 3518
-+experiment_id: 3522
- experiment_id: 3685
--experiment_id: 3950
--experiment_id: 3967
--experiment_id: 3979
--experiment_id: 3980
--experiment_id: 4546
- experiment_id: 4998
--experiment_id: 5133
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
--experiment_id: 5312
--experiment_id: 5313
- experiment_id: 5508
- experiment_id: 5510
+@@ -374655,6 +374725,7 @@
  experiment_id: 6075
-+experiment_id: 8722
-+experiment_id: 8909
+ experiment_id: 8722
+ experiment_id: 8909
++experiment_id: 8916
  experiment_id: 9521
  experiment_id: 9531
  experiment_id: 9552
- experiment_id: 9553
- experiment_id: 9554
- experiment_id: 20947
--experiment_id: 55500
--experiment_id: 55565
--experiment_id: 55566
--experiment_id: 55567
--experiment_id: 55569
- experiment_id: 55571
--experiment_id: 55572
--experiment_id: 55573
--experiment_id: 55574
--experiment_id: 55601
- experiment_id: 55618
--experiment_id: 55621
--experiment_id: 55622
--experiment_id: 55623
--experiment_id: 55660
- experiment_id: 314159
- experiment_id: 314160
- experiment_id: 3500035
-@@ -374568,3 +374670,4 @@
- experiment_id: 4610000
- experiment_id: 4700000
- experiment_id: 5000301
-+experiment_id: 6600407
