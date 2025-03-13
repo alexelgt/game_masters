@@ -1,10 +1,345 @@
---- GAME_MASTER_old.txt	2025-03-12 09:10:42.460210735 +0100
-+++ GAME_MASTER.txt	2025-03-12 19:15:22.988540256 +0100
-@@ -358206,6 +358206,7 @@
+--- GAME_MASTER_old.txt	2025-03-12 19:15:22.988540256 +0100
++++ GAME_MASTER.txt	2025-03-13 18:23:59.524812653 +0100
+@@ -115935,26 +115935,29 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-03-08T14:00:00"
+-        eventEndTime: "2025-03-08T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Fuecoco25"
++        eventStartTime: "2025-03-22T14:00:00"
++        eventEndTime: "2025-03-22T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CDC_Totodile25"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-fuecoco-cd-2025.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-TotodileCD-nologo-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-fuecoco-cd-2025-skeledirge.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_CD_Fuecoco25"
+-        textRewardsKey: "text_rewards_key_CD_Fuecoco25"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-TotodileCD-nologo-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CDC_Totodile25"
++        textRewardsKey: "text_rewards_key_CDC_Totodile25"
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemonEncounter {
+-            pokemon_id: SKELEDIRGE
++            pokemon_id: FERALIGATR
++            pokemonDisplay {
++              form: FERALIGATR_NORMAL
++            }
+           }
+         }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_STAR_PIECE
++            item: ITEM_INCUBATOR_BASIC
+             amount: 1
+           }
+         }
+@@ -115966,10 +115969,10 @@
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1741442400000
+-        clientEventEndTimeUtcMs: 1741453200000
++        clientEventStartTimeUtcMs: 1742652000000
++        clientEventEndTimeUtcMs: 1742662800000
+       }
+-      descriptionOverride: "item_event_ticket_pink_details_CD_Fuecoco25"
++      descriptionOverride: "item_event_ticket_pink_details_CDC_Totodile25"
+     }
+   }
+ }
+@@ -115982,16 +115985,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-03-08T14:00:00"
+-        eventEndTime: "2025-03-08T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Fuecoco25"
++        eventStartTime: "2025-03-22T14:00:00"
++        eventEndTime: "2025-03-22T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CDC_Totodile25"
+         ticketItem: ITEM_EVENT_TICKET_03
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-fuecoco-cd-2025.jpg"
+-        clientEventStartTimeUtcMs: 1741442400000
+-        clientEventEndTimeUtcMs: 1741453200000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-TotodileCD-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1742652000000
++        clientEventEndTimeUtcMs: 1742662800000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_pink_details_CD_Fuecoco25"
++      descriptionOverride: "item_event_ticket_pink_details_CDC_Totodile25"
+     }
+   }
+ }
+@@ -116990,7 +116993,8 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 1
+       incense {
+-        incenseLifetimeSeconds: 3600
++        incenseLifetimeSeconds: 7200
++        spawnTableProbability: 0.5
+       }
+     }
+   }
+@@ -118844,6 +118848,8 @@
+     template_id: "MAP_DISPLAY_SETTINGS"
+     mapDisplaySettings {
+       showEnhancedSky: true
++      showMapShoreLines: true
++      eventThemeName: "Colors"
+     }
+   }
+ }
+@@ -346095,64 +346101,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: ARTICUNO
+-          pokemonDisplay {
+-            form: ARTICUNO_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: ZAPDOS
+-          pokemonDisplay {
+-            form: ZAPDOS_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: MOLTRES
+-          pokemonDisplay {
+-            form: MOLTRES_NORMAL
+-          }
++          pokemon_id: TAPU_KOKO
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -346784,64 +346733,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: ARTICUNO
+-          pokemonDisplay {
+-            form: ARTICUNO_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: ZAPDOS
+-          pokemonDisplay {
+-            form: ZAPDOS_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemon_id: MOLTRES
+-          pokemonDisplay {
+-            form: MOLTRES_NORMAL
+-          }
++          pokemon_id: TAPU_KOKO
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -348983,9 +348875,12 @@
+       sku: "bundle.maxmonday.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle3.sprite.d"
+       title: "max_battler_box"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2025-03-16T22:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1742162400000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 550
+@@ -350458,12 +350353,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Fuecoco25_title"
++      title: "general1.ticket_CDC_Totodile25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-03-08T17:00:00"
++      skuDisableTime: "2025-03-22T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1741453200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-fuecoco-cd-2025-skeledirge.jpg"
++      skuDisableTimeUtcMs: 1742662800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-TotodileCD-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -350477,11 +350372,11 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Fuecoco25_title"
++      title: "general1.ticket_CDC_Totodile25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-03-08T17:00:00"
++      skuDisableTime: "2025-03-22T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1741453200000
++      skuDisableTimeUtcMs: 1742662800000
+     }
+   }
+ }
+@@ -352159,12 +352054,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Fuecoco25_title"
++      title: "general1.ticket_CDC_Totodile25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-03-08T17:00:00"
++      skuDisableTime: "2025-03-22T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1741453200000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-fuecoco-cd-2025-skeledirge.jpg"
++      skuDisableTimeUtcMs: 1742662800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-TotodileCD-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -352178,11 +352073,11 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Fuecoco25_title"
++      title: "general1.ticket_CDC_Totodile25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-03-08T17:00:00"
++      skuDisableTime: "2025-03-22T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1741453200000
++      skuDisableTimeUtcMs: 1742662800000
+     }
+   }
+ }
+@@ -358161,7 +358056,7 @@
+     }
+   }
+ }
+-batch_id: 1741743589511
++batch_id: 1741814695077
+ experiment_id: 1
+ experiment_id: 6
+ experiment_id: 8
+@@ -358184,6 +358079,7 @@
+ experiment_id: 1699
+ experiment_id: 1820
+ experiment_id: 2248
++experiment_id: 2255
+ experiment_id: 2301
+ experiment_id: 2399
+ experiment_id: 2400
+@@ -358197,16 +358093,17 @@
+ experiment_id: 3502
+ experiment_id: 3503
+ experiment_id: 3504
+-experiment_id: 3506
++experiment_id: 3507
+ experiment_id: 3518
+ experiment_id: 3523
+ experiment_id: 3536
+ experiment_id: 3559
++experiment_id: 3568
++experiment_id: 3569
+ experiment_id: 3573
  experiment_id: 3685
  experiment_id: 4691
  experiment_id: 4998
-+experiment_id: 5003
+-experiment_id: 5003
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
