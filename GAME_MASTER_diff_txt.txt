@@ -1,77 +1,244 @@
---- GAME_MASTER_old.txt	2025-03-13 18:23:59.524812653 +0100
-+++ GAME_MASTER.txt	2025-03-14 19:17:57.126405012 +0100
-@@ -350388,7 +350388,6 @@
-       sku: "general2.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.4"
-       title: "general2.ticket4.CATCH_MASTERY_ARCHEN"
-       skuEnableTime: "2023-01-01T11:00:03"
-@@ -350407,7 +350406,6 @@
-       sku: "general2.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.4"
-       title: "general2.ticket4.CATCH_MASTERY_ARCHEN"
-       skuEnableTime: "2023-01-01T11:00:03"
-@@ -352089,7 +352087,6 @@
-       sku: "pgorelease.general2.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.2"
-       title: "general2.ticket4.CATCH_MASTERY_ARCHEN"
-       skuEnableTime: "2023-01-01T11:00:01"
-@@ -352108,7 +352105,6 @@
-       sku: "pgorelease.general2.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general2.ticket.2"
-       title: "general2.ticket4.CATCH_MASTERY_ARCHEN"
-       skuEnableTime: "2023-01-01T11:00:01"
-@@ -358056,7 +358052,25 @@
+--- GAME_MASTER_old.txt	2025-03-14 19:17:57.126405012 +0100
++++ GAME_MASTER.txt	2025-03-16 13:45:47.616823520 +0100
+@@ -116139,35 +116139,38 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-02-24T10:00:00"
+-        eventEndTime: "2025-03-02T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_global_details_GOTourRaid2025"
++        eventStartTime: "2025-03-23T14:00:00"
++        eventEndTime: "2025-03-23T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaAbsolRaidDay"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_06_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/banners/Road_to_Unova_raid_banner_01.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-absol-raid-day.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/banners/RoadToUnovaLogoless.png"
+-        titleImageUrl: "https://storage.googleapis.com/prod-public-images/gotourlogo_1914247967.png"
+-        eventDatetimeRangeKey: "event_datetime_range_key_GOTour2025"
+-        textRewardsKey: "text_rewards_key_GOTourRaid2025"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-absol-raid-day.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_MegaAbsolRaidDay"
++        textRewardsKey: "text_rewards_key_MegaAbsolRaidDay"
+         iconRewards {
+-          type: AVATAR_CLOTHING
+-          neutralAvatarItemTemplate {
+-            displayTemplateId: "N_DISPLAY_n_pants_blackwhite_0"
++          type: ITEM
++          item {
++            item: ITEM_FREE_RAID_TICKET
++            amount: 8
+           }
+         }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_FREE_RAID_TICKET
+-            amount: 1
++            item: ITEM_XL_RARE_CANDY
+           }
+         }
+-        detailsLinkKey: "details_link_key_GOTourHatch2025"
+-        clientEventStartTimeUtcMs: 1740391200000
+-        clientEventEndTimeUtcMs: 1740945600000
++        iconRewards {
++          type: STARDUST
++          stardust: 2
++        }
++        detailsLinkKey: "details_link_key"
++        clientEventStartTimeUtcMs: 1742738400000
++        clientEventEndTimeUtcMs: 1742749200000
+       }
+-      descriptionOverride: "item_event_ticket_global_details_GOTourRaid2025"
++      descriptionOverride: "item_event_ticket_gray_desc_MegaAbsolRaidDay"
      }
    }
  }
--batch_id: 1741814695077
+@@ -116180,16 +116183,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-02-24T10:00:00"
+-        eventEndTime: "2025-03-02T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_global_details_GOTourRaid2025"
++        eventStartTime: "2025-03-23T14:00:00"
++        eventEndTime: "2025-03-23T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_details_MegaAbsolRaidDay"
+         ticketItem: ITEM_EVENT_TICKET_06
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/banners/Road_to_Unova_raid_banner_01.jpg"
+-        clientEventStartTimeUtcMs: 1740391200000
+-        clientEventEndTimeUtcMs: 1740945600000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-absol-raid-day.jpg"
++        clientEventStartTimeUtcMs: 1742738400000
++        clientEventEndTimeUtcMs: 1742749200000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_global_details_GOTourRaid2025"
++      descriptionOverride: "item_event_ticket_gray_details_MegaAbsolRaidDay"
+     }
+   }
+ }
+@@ -121161,12 +121164,12 @@
+     template_id: "MP_SHARED_SETTINGS"
+     mpSettings {
+       numMpFromWalkQuest: 300
+-      numMetersGoal: 2000
++      numMetersGoal: 500
+       debugAllowRemoveWalkQuest: true
+-      numMpFromLootStation: 100
++      numMpFromLootStation: 800
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1000
+-      mpBaseDailyLimit: 800
++      mpBaseDailyLimit: 1600
+       mpClaimParticleSpeedMultiplier: 1
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 250
+@@ -350461,15 +350464,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 3
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general2.ticket.9"
+-      title: "road_to_unova_event_title_raid"
+-      skuEnableTime: "2025-01-25T10:00:00"
+-      skuDisableTime: "2025-03-02T18:00:00"
+-      skuEnableTimeUtcMs: 1737799200000
+-      skuDisableTimeUtcMs: 1740938400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/Road_to_Unova_raid_banner_01.jpg"
++      spriteId: "general2.ticket.6"
++      title: "general2.ticket.6_MegaAbsolRaidDay_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-03-23T16:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1742745600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-absol-raid-day.jpg"
+     }
+   }
+ }
+@@ -350480,15 +350483,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 3
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general2.ticket.9"
+-      title: "road_to_unova_event_title_raid"
+-      skuEnableTime: "2025-01-25T10:00:00"
+-      skuDisableTime: "2025-03-02T18:00:00"
+-      skuEnableTimeUtcMs: 1737799200000
+-      skuDisableTimeUtcMs: 1740938400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/Road_to_Unova_raid_banner_01.jpg"
++      spriteId: "general2.ticket.6"
++      title: "general2.ticket.6_MegaAbsolRaidDay_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-03-23T16:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1742745600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-absol-raid-day.jpg"
+     }
+   }
+ }
+@@ -352160,15 +352163,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 3
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general2.ticket.9"
+-      title: "road_to_unova_event_title_raid"
+-      skuEnableTime: "2025-01-25T10:00:00"
+-      skuDisableTime: "2025-03-02T18:00:00"
+-      skuEnableTimeUtcMs: 1737799200000
+-      skuDisableTimeUtcMs: 1740938400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/Road_to_Unova_raid_banner_01.jpg"
++      spriteId: "general2.ticket.6"
++      title: "general2.ticket.6_MegaAbsolRaidDay_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-03-23T16:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1742745600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-absol-raid-day.jpg"
+     }
+   }
+ }
+@@ -352179,15 +352182,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 3
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general2.ticket.9"
+-      title: "road_to_unova_event_title_raid"
+-      skuEnableTime: "2025-01-25T10:00:00"
+-      skuDisableTime: "2025-03-02T18:00:00"
+-      skuEnableTimeUtcMs: 1737799200000
+-      skuDisableTimeUtcMs: 1740938400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/Road_to_Unova_raid_banner_01.jpg"
++      spriteId: "general2.ticket.6"
++      title: "general2.ticket.6_MegaAbsolRaidDay_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-03-23T16:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1742745600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-mega-absol-raid-day.jpg"
+     }
+   }
+ }
+@@ -358070,7 +358073,16 @@
+     }
+   }
+ }
+-batch_id: 1741905104818
 +template {
-+  template_id: "POKEBALL_SOFTLOCK_FIX"
++  template_id: "OLD_EMAIL_TICKET_FIX_CODE_GATE"
 +  data {
-+    template_id: "POKEBALL_SOFTLOCK_FIX"
++    template_id: "OLD_EMAIL_TICKET_FIX_CODE_GATE"
 +    codeGateProto {
 +      isEnabled: true
 +    }
 +  }
 +}
-+template {
-+  template_id: "RECORD_COMBAT_LEAGUE_PERFORMANCE_CODE_GATE"
-+  data {
-+    template_id: "RECORD_COMBAT_LEAGUE_PERFORMANCE_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+batch_id: 1741905104818
++batch_id: 1742098262271
  experiment_id: 1
  experiment_id: 6
  experiment_id: 8
-@@ -358080,6 +358094,7 @@
- experiment_id: 1820
- experiment_id: 2248
- experiment_id: 2255
-+experiment_id: 2297
- experiment_id: 2301
- experiment_id: 2399
- experiment_id: 2400
-@@ -358103,6 +358118,7 @@
+@@ -358113,20 +358125,22 @@
+ experiment_id: 3523
+ experiment_id: 3536
+ experiment_id: 3559
++experiment_id: 3560
+ experiment_id: 3568
+ experiment_id: 3569
  experiment_id: 3573
  experiment_id: 3685
  experiment_id: 4691
-+experiment_id: 4697
++experiment_id: 4695
+ experiment_id: 4697
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5202
+ experiment_id: 5508
+ experiment_id: 5510
+ experiment_id: 6075
+-experiment_id: 8723
+ experiment_id: 8916
+ experiment_id: 9521
+ experiment_id: 9552
+@@ -358135,6 +358149,7 @@
+ experiment_id: 20947
+ experiment_id: 55571
+ experiment_id: 80400
++experiment_id: 80401
+ experiment_id: 314159
+ experiment_id: 314160
+ experiment_id: 3500035
