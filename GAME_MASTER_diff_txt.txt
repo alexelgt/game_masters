@@ -1,573 +1,308 @@
---- GAME_MASTER_old.txt	2025-03-18 19:16:51.998785819 +0100
-+++ GAME_MASTER.txt	2025-03-18 19:29:42.967036474 +0100
-@@ -140308,13 +140308,14 @@
-   }
- }
- template {
--  template_id: "PTC_OAUTH_SETTINGS"
-+  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH"
+--- GAME_MASTER_old.txt	2025-03-18 19:29:42.967036474 +0100
++++ GAME_MASTER.txt	2025-03-18 19:39:22.409146430 +0100
+@@ -140312,7 +140312,7 @@
    data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH"
-+    badgeSettings {
-+      badgeType: 5772
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
+     template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH"
+     badgeSettings {
+-      badgeType: 5772
++      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -181099,7 +181099,7 @@
+   template_id: "TAPPABLE_SETTINGS"
+   data {
+     template_id: "TAPPABLE_SETTINGS"
+-    tappable_settings {
++    tappableSettings {
+       visibleRadiusMeters: 150
+       spawnAngleDegrees: 45
+       movementRespawnThresholdMeters: 5
+@@ -181112,7 +181112,7 @@
+   template_id: "TAPPABLE_SETTINGS_BREAKFAST"
+   data {
+     template_id: "TAPPABLE_SETTINGS_BREAKFAST"
+-    tappable_settings {
++    tappableSettings {
+       visibleRadiusMeters: 150
+       spawnAngleDegrees: 45
+       movementRespawnThresholdMeters: 5
+@@ -181127,10 +181127,10 @@
+   template_id: "TAPPABLE_TYPE_POKEBALL"
+   data {
+     template_id: "TAPPABLE_TYPE_POKEBALL"
+-    tappable_settings {
++    tappableSettings {
+       visibleRadiusMeters: 150
+       removeWhenTapped: true
+-      11: "TAPPABLE_TYPE_POKEBALL"
++      tappableAssetKey: "TAPPABLE_TYPE_POKEBALL"
      }
    }
  }
-@@ -310340,9 +310341,7 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
--      raidBossDistanceOffset: 3
-       formChange {
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -310350,6 +310349,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -310417,13 +310417,13 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         candyCost: 25
-         stardustCost: 10000
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -310491,7 +310491,6 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -310499,6 +310498,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -310573,6 +310573,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -310640,7 +310641,6 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -310648,6 +310648,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -310715,7 +310716,6 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -310723,6 +310723,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -310790,7 +310791,6 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -310798,6 +310798,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -310865,13 +310866,13 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-         stardustCost: 10000
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -310938,7 +310939,6 @@
-       isTradable: true
-       raidBossDistanceOffset: 3
-       formChange {
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -310946,6 +310946,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -311013,7 +311014,6 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -311021,6 +311021,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -311088,7 +311089,6 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -311096,6 +311096,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -358161,12 +358162,357 @@
-     }
-   }
- }
--batch_id: 1742320621085
--experiment_id: 1
--experiment_id: 6
--experiment_id: 8
--experiment_id: 11
--experiment_id: 21
-+template {
-+  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST"
-+    badgeSettings {
-+      badgeType: 5771
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID"
-+    badgeSettings {
-+      badgeType: 5774
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST"
-+    badgeSettings {
-+      badgeType: 5773
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MILAN_DAY_01"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MILAN_DAY_01"
-+    badgeSettings {
-+      badgeType: 5769
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MILAN_DAY_02"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MILAN_DAY_02"
-+    badgeSettings {
-+      badgeType: 5770
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MILAN_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MILAN_TEST"
-+    badgeSettings {
-+      badgeType: 5768
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH"
-+    badgeSettings {
-+      badgeType: 5779
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST"
-+    badgeSettings {
-+      badgeType: 5778
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID"
-+    badgeSettings {
-+      badgeType: 5781
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST"
-+    badgeSettings {
-+      badgeType: 5780
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_01"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_01"
-+    badgeSettings {
-+      badgeType: 5776
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_02"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_02"
-+    badgeSettings {
-+      badgeType: 5777
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_MUMBAI_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_MUMBAI_TEST"
-+    badgeSettings {
-+      badgeType: 5775
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH"
-+    badgeSettings {
-+      badgeType: 5786
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST"
-+    badgeSettings {
-+      badgeType: 5785
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID"
-+    badgeSettings {
-+      badgeType: 5788
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST"
-+    badgeSettings {
-+      badgeType: 5787
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_01"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_01"
-+    badgeSettings {
-+      badgeType: 5783
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_02"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_02"
-+    badgeSettings {
-+      badgeType: 5784
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SANTIAGO_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SANTIAGO_TEST"
-+    badgeSettings {
-+      badgeType: 5782
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH"
-+    badgeSettings {
-+      badgeType: 5793
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST"
-+    badgeSettings {
-+      badgeType: 5792
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID"
-+    badgeSettings {
-+      badgeType: 5795
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST"
-+    badgeSettings {
-+      badgeType: 5794
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_01"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_01"
-+    badgeSettings {
-+      badgeType: 5790
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_02"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_02"
-+    badgeSettings {
-+      badgeType: 5791
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_SAFARI_2025_SINGAPORE_TEST"
-+  data {
-+    template_id: "BADGE_SAFARI_2025_SINGAPORE_TEST"
-+    badgeSettings {
-+      badgeType: 5789
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PLANNER_SETTINGS"
-+  data {
-+    template_id: "EVENT_PLANNER_SETTINGS"
-+    253 {
-+      2 {
-+        13 {
-+          2: 1
+@@ -358167,7 +358167,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST"
+     badgeSettings {
+-      badgeType: 5771
++      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358179,7 +358179,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID"
+     badgeSettings {
+-      badgeType: 5774
++      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_RAID
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358191,7 +358191,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST"
+     badgeSettings {
+-      badgeType: 5773
++      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358203,7 +358203,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MILAN_DAY_01"
+     badgeSettings {
+-      badgeType: 5769
++      badgeType: BADGE_SAFARI_2025_MILAN_DAY_01
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358215,7 +358215,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MILAN_DAY_02"
+     badgeSettings {
+-      badgeType: 5770
++      badgeType: BADGE_SAFARI_2025_MILAN_DAY_02
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358227,7 +358227,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MILAN_TEST"
+     badgeSettings {
+-      badgeType: 5768
++      badgeType: BADGE_SAFARI_2025_MILAN_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358239,7 +358239,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH"
+     badgeSettings {
+-      badgeType: 5779
++      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358251,7 +358251,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST"
+     badgeSettings {
+-      badgeType: 5778
++      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358263,7 +358263,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID"
+     badgeSettings {
+-      badgeType: 5781
++      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358275,7 +358275,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST"
+     badgeSettings {
+-      badgeType: 5780
++      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358287,7 +358287,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_01"
+     badgeSettings {
+-      badgeType: 5776
++      badgeType: BADGE_SAFARI_2025_MUMBAI_DAY_01
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358299,7 +358299,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_02"
+     badgeSettings {
+-      badgeType: 5777
++      badgeType: BADGE_SAFARI_2025_MUMBAI_DAY_02
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358311,7 +358311,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_MUMBAI_TEST"
+     badgeSettings {
+-      badgeType: 5775
++      badgeType: BADGE_SAFARI_2025_MUMBAI_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358323,7 +358323,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH"
+     badgeSettings {
+-      badgeType: 5786
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358335,7 +358335,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST"
+     badgeSettings {
+-      badgeType: 5785
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358347,7 +358347,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID"
+     badgeSettings {
+-      badgeType: 5788
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358359,7 +358359,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST"
+     badgeSettings {
+-      badgeType: 5787
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358371,7 +358371,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_01"
+     badgeSettings {
+-      badgeType: 5783
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_DAY_01
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358383,7 +358383,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_02"
+     badgeSettings {
+-      badgeType: 5784
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_DAY_02
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358395,7 +358395,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SANTIAGO_TEST"
+     badgeSettings {
+-      badgeType: 5782
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358407,7 +358407,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH"
+     badgeSettings {
+-      badgeType: 5793
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358419,7 +358419,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST"
+     badgeSettings {
+-      badgeType: 5792
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358431,7 +358431,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID"
+     badgeSettings {
+-      badgeType: 5795
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358443,7 +358443,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST"
+     badgeSettings {
+-      badgeType: 5794
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358455,7 +358455,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_01"
+     badgeSettings {
+-      badgeType: 5790
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_DAY_01
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358467,7 +358467,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_02"
+     badgeSettings {
+-      badgeType: 5791
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_DAY_02
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358479,7 +358479,7 @@
+   data {
+     template_id: "BADGE_SAFARI_2025_SINGAPORE_TEST"
+     badgeSettings {
+-      badgeType: 5789
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_TEST
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -358490,14 +358490,14 @@
+   template_id: "EVENT_PLANNER_SETTINGS"
+   data {
+     template_id: "EVENT_PLANNER_SETTINGS"
+-    253 {
+-      2 {
+-        13 {
+-          2: 1
+-        }
+-        13 {
+-          1: 600
+-          2: 2
++    plannerSettings {
++      eventSettings {
++        messageTiming {
++          messageSendTime: TIMESLOT_START
 +        }
-+        13 {
-+          1: 600
-+          2: 2
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "RSVP_SUBSCRIBE_BY_GEO_CODE_GATE"
-+  data {
-+    template_id: "RSVP_SUBSCRIBE_BY_GEO_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+batch_id: 1742321936065
- experiment_id: 101
- experiment_id: 170
- experiment_id: 173
-@@ -358193,11 +358539,9 @@
- experiment_id: 2650
- experiment_id: 2800
- experiment_id: 3032
--experiment_id: 3033
- experiment_id: 3063
- experiment_id: 3502
- experiment_id: 3503
--experiment_id: 3504
- experiment_id: 3507
- experiment_id: 3518
- experiment_id: 3524
-@@ -358227,5 +358571,4 @@
- experiment_id: 3500037
- experiment_id: 4610000
- experiment_id: 4700000
--experiment_id: 5000301
- experiment_id: 6600407
++        messageTiming {
++          messageSendBeforeEventSeconds: 600
++          messageSendTime: TIMESLOT_EARLY
+         }
+       }
+     }
