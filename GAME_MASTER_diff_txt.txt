@@ -1,2148 +1,573 @@
---- GAME_MASTER_old.txt	2025-03-17 19:04:32.667873117 +0100
-+++ GAME_MASTER.txt	2025-03-18 19:16:51.998785819 +0100
-@@ -53113,6 +53113,39 @@
+--- GAME_MASTER_old.txt	2025-03-18 19:16:51.998785819 +0100
++++ GAME_MASTER.txt	2025-03-18 19:29:42.967036474 +0100
+@@ -140308,13 +140308,14 @@
    }
  }
  template {
-+  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
-+  data {
-+    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
-+    combat_league {
-+      title: "catch_cup_s13_title"
-+      enabled: true
-+      unlockCondition {
-+        type: WITH_UNIQUE_POKEMON
-+        minPokemonCount: 3
-+      }
-+      pokemonCondition {
-+        type: WITH_POKEMON_CP_LIMIT
-+        withPokemonCpLimit {
-+          maxCp: 1500
-+        }
-+      }
-+      pokemonCondition {
-+        type: WITH_UNIQUE_POKEMON
-+      }
-+      pokemonCondition {
-+        type: POKEMON_CAUGHT_TIMESTAMP
-+        pokemonCaughtTimestamp {
-+          afterTimestamp: 1741082400000
-+          beforeTimestamp: 1748944800000
-+        }
-+      }
-+      iconUrl: "https://storage.googleapis.com/prod-public-images/premierball_sprite.png"
-+      pokemonCount: 3
-+      leagueType: PREMIER
-+    }
-+  }
-+}
-+template {
-   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S8"
-   data {
-     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S8"
-@@ -58561,6 +58594,45 @@
-   }
- }
- template {
-+  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
-+  data {
-+    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
-+    combat_league {
-+      title: "scrolls_cup_great_title"
-+      enabled: true
-+      unlockCondition {
-+        type: WITH_UNIQUE_POKEMON
-+        minPokemonCount: 3
-+      }
-+      pokemonCondition {
-+        type: WITH_POKEMON_CP_LIMIT
-+        withPokemonCpLimit {
-+          maxCp: 1500
-+        }
-+      }
-+      pokemonCondition {
-+        type: WITH_UNIQUE_POKEMON
-+      }
-+      pokemonCondition {
-+        type: WITH_POKEMON_TYPE
-+        withPokemonType {
-+          pokemonType: POKEMON_TYPE_WATER
-+          pokemonType: POKEMON_TYPE_FIGHTING
-+          pokemonType: POKEMON_TYPE_DARK
-+        }
-+      }
-+      iconUrl: "https://storage.googleapis.com/prod-public-images/pgo-s18-gbl-icon-2025.png"
-+      pokemonCount: 3
-+      bannedPokemon: DITTO
-+      bannedPokemon: SHEDINJA
-+      bannedPokemon: PRIMARINA
-+      badgeType: BADGE_GREAT_LEAGUE
-+      battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
-+      leagueType: PREMIER
-+    }
-+  }
-+}
-+template {
-   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SINGLE_TYPE"
-   data {
-     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SINGLE_TYPE"
-@@ -63704,6 +63776,115 @@
-   }
- }
- template {
-+  template_id: "COMBAT_RANKING_SETTINGS_S25"
-+  data {
-+    template_id: "COMBAT_RANKING_SETTINGS_S25"
-+    combat_ranking_proto_settings {
-+      rankLevel {
-+        rankLevel: 1
-+      }
-+      rankLevel {
-+        rankLevel: 2
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 3
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 4
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 5
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 6
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 7
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 8
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 9
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 10
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 11
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 12
-+        additionalWinsRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 13
-+        additionalWinsRequired: 6
-+      }
-+      rankLevel {
-+        rankLevel: 14
-+        additionalWinsRequired: 7
-+      }
-+      rankLevel {
-+        rankLevel: 15
-+        additionalWinsRequired: 8
-+      }
-+      rankLevel {
-+        rankLevel: 16
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 17
-+        additionalWinsRequired: 10
-+      }
-+      rankLevel {
-+        rankLevel: 18
-+        additionalWinsRequired: 15
-+      }
-+      rankLevel {
-+        rankLevel: 19
-+        additionalWinsRequired: 20
-+      }
-+      rankLevel {
-+        rankLevel: 20
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 21
-+        minRatingRequired: 2000
-+      }
-+      rankLevel {
-+        rankLevel: 22
-+        minRatingRequired: 2500
-+      }
-+      rankLevel {
-+        rankLevel: 23
-+        minRatingRequired: 2750
-+      }
-+      rankLevel {
-+        rankLevel: 24
-+        minRatingRequired: 3000
-+      }
-+      required_for_rewards {
-+        rankLevel: 1
-+        additionalTotalBattlesRequired: 5
-+      }
-+      minRankToDisplayRating: 20
-+      minRatingRequired: 25
-+    }
-+  }
-+}
-+template {
-   template_id: "COMBAT_RANKING_SETTINGS_S8"
-   data {
-     template_id: "COMBAT_RANKING_SETTINGS_S8"
-@@ -68317,6 +68498,23 @@
-   }
- }
- template {
-+  template_id: "COMBAT_V0468_MOVE_TORCH_SONG"
-+  data {
-+    template_id: "COMBAT_V0468_MOVE_TORCH_SONG"
-+    combat_move {
-+      uniqueId: TORCH_SONG
-+      type: POKEMON_TYPE_FIRE
-+      power: 70
-+      vfxName: "torch_song"
-+      energyDelta: -45
-+      buffs {
-+        attackerAttackStatStageChange: 1
-+        buffActivationChance: 1
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "CONTEST_SETTINGS"
-   data {
-     template_id: "CONTEST_SETTINGS"
-@@ -68469,20 +68667,6 @@
-   }
- }
- template {
--  template_id: "bundle.carnival2025.2"
--  data {
--    template_id: "bundle.carnival2025.2"
--    iapItemDisplay {
--      sku: "bundle.carnival2025.2"
--      category: IAP_CATEGORY_BUNDLE
--      sortOrder: 1
--      hidden: true
--      spriteId: "bundle.latam.small.1"
--      title: "bundle.wicker.box.1_title"
--    }
--  }
--}
--template {
-   template_id: "EGG_HATCH_IMPROVEMENTS_SETTINGS"
-   data {
-     template_id: "EGG_HATCH_IMPROVEMENTS_SETTINGS"
-@@ -73108,6 +73292,24 @@
-   }
- }
- template {
-+  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_KURTA"
-+  data {
-+    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_KURTA"
-+    pokemonExtendedSettings {
-+      uniqueId: PIKACHU
-+      form: PIKACHU_KURTA
-+      sizeSettings {
-+        xxsLowerBound: 0.196
-+        xsLowerBound: 0.2
-+        mLowerBound: 0.3
-+        mUpperBound: 0.5
-+        xlUpperBound: 0.6
-+        xxlUpperBound: 0.7
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "EXTENDED_V0025_POKEMON_PIKACHU_NORMAL"
-   data {
-     template_id: "EXTENDED_V0025_POKEMON_PIKACHU_NORMAL"
-@@ -115132,6 +115334,17 @@
-   }
- }
- template {
-+  template_id: "IAP_CATEGORY_REWARDED_SPEND"
-+  data {
-+    template_id: "IAP_CATEGORY_REWARDED_SPEND"
-+    iapCategoryDisplay {
-+      category: 19
-+      name: "REWARDED_SPEND_MONTHLY_REWARD_ROAD_KEY"
-+      description: "rewarded_spend_category_description"
-+    }
-+  }
-+}
-+template {
-   template_id: "IAP_CATEGORY_STICKER"
-   data {
-     template_id: "IAP_CATEGORY_STICKER"
-@@ -117015,8 +117228,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 1
-       incense {
--        incenseLifetimeSeconds: 7200
--        spawnTableProbability: 0.5
-+        incenseLifetimeSeconds: 3600
-       }
-     }
-   }
-@@ -118424,6 +118636,18 @@
-   }
- }
- template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_S18"
-+  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_S18"
-+    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_S18
-+      imageUrl: "sb_Season18_MightAndMastery"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_MightAndMastery"
-+    }
-+  }
-+}
-+template {
-   template_id: "LC_SPECIALBACKGROUND_2025_SEASON17"
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2025_SEASON17"
-@@ -118870,8 +119094,6 @@
-     template_id: "MAP_DISPLAY_SETTINGS"
-     mapDisplaySettings {
-       showEnhancedSky: true
--      showMapShoreLines: true
--      eventThemeName: "Colors"
-     }
-   }
- }
-@@ -125580,6 +125802,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_hat_mustard_0"
-+  data {
-+    template_id: "N_DISPLAY_n_hat_mustard_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_hat_mustard_0_icon"
-+      displayStringId: "avatar_hat_mustard"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_hat_newyear2022_0"
-   data {
-     template_id: "N_DISPLAY_n_hat_newyear2022_0"
-@@ -127100,6 +127332,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_pants_mustard_0"
-+  data {
-+    template_id: "N_DISPLAY_n_pants_mustard_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_pants_mustard_0_icon"
-+      displayStringId: "avatar_pants_mustard"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_pants_naganadelaitems_0"
-   data {
-     template_id: "N_DISPLAY_n_pants_naganadelaitems_0"
-@@ -128540,6 +128782,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_pose_mustard"
-+  data {
-+    template_id: "N_DISPLAY_n_pose_mustard"
-+    avatarItemDisplay {
-+      iconAddress: "n_pose_mustard_icon"
-+      displayStringId: "avatar_pose_mustard"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_pose_penpal"
-   data {
-     template_id: "N_DISPLAY_n_pose_penpal"
-@@ -130630,6 +130882,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_shirt_mustard_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_mustard_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_mustard_0_icon"
-+      displayStringId: "avatar_shirt_mustard"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_shirt_naganadelaitems_0"
-   data {
-     template_id: "N_DISPLAY_n_shirt_naganadelaitems_0"
-@@ -133280,6 +133542,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_shoes_mustard_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shoes_mustard_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shoes_mustard_0_icon"
-+      displayStringId: "avatar_shoes_mustard"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_shoes_necrozmaitems_0"
-   data {
-     template_id: "N_DISPLAY_n_shoes_necrozmaitems_0"
-@@ -135443,6 +135715,15 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_set_mustard_0"
-+  data {
-+    template_id: "N_DISPLAY_set_mustard_0"
-+    avatarItemDisplay {
-+      iconAddress: "set_mustard_0"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_set_n_default-new"
-   data {
-     template_id: "N_DISPLAY_set_n_default-new"
-@@ -136424,6 +136705,15 @@
-   }
- }
- template {
-+  template_id: "OLD_EMAIL_TICKET_FIX_CODE_GATE"
-+  data {
-+    template_id: "OLD_EMAIL_TICKET_FIX_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+template {
-   template_id: "ONBOARDING_SETTINGS"
-   data {
-     template_id: "ONBOARDING_SETTINGS"
-@@ -139058,6 +139348,15 @@
-   }
- }
- template {
-+  template_id: "POKEBALL_SOFTLOCK_FIX"
-+  data {
-+    template_id: "POKEBALL_SOFTLOCK_FIX"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+template {
-   template_id: "POKEBALL_THROW_PROPERTY_SETTINGS"
-   data {
-     template_id: "POKEBALL_THROW_PROPERTY_SETTINGS"
-@@ -139192,6 +139491,20 @@
-   }
- }
- template {
-+  template_id: "POKEDEX_V2_SETTINGS"
-+  data {
-+    template_id: "POKEDEX_V2_SETTINGS"
-+    pokedexV2Settings {
-+      maxTrackedPokemon: 1
-+      pokemonAlertExcluded: DITTO
-+      pokemonAlertExcluded: ZORUA
-+      pokemonAlertExcluded: ZOROARK
-+      pokemonAlertExcluded: SMEARGLE
-+      pokemonAlertExcluded: KECLEON
-+    }
-+  }
-+}
-+template {
-   template_id: "POKEMON_FX_SETTINGS"
-   data {
-     template_id: "POKEMON_FX_SETTINGS"
-@@ -139995,6 +140308,17 @@
-   }
- }
- template {
-+  template_id: "PTC_OAUTH_SETTINGS"
-+  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    }
-+  }
-+}
-+template {
-   template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
-   data {
-     template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
-@@ -140119,6 +140443,15 @@
-   }
- }
- template {
-+  template_id: "RAID_LOCATION_VERIFICATION_CODE_GATE"
-+  data {
-+    template_id: "RAID_LOCATION_VERIFICATION_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+template {
-   template_id: "RECOMMENDED_SEARCH_APPRAISAL_IV_HIGH"
-   data {
-     template_id: "RECOMMENDED_SEARCH_APPRAISAL_IV_HIGH"
-@@ -140219,6 +140552,15 @@
-   }
- }
- template {
-+  template_id: "RECORD_COMBAT_LEAGUE_PERFORMANCE_CODE_GATE"
-+  data {
-+    template_id: "RECORD_COMBAT_LEAGUE_PERFORMANCE_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+template {
-   template_id: "REFERRAL_SETTINGS"
-   data {
-     template_id: "REFERRAL_SETTINGS"
-@@ -145383,6 +145725,18 @@
-   }
- }
- template {
-+  template_id: "SPAWN_V0025_POKEMON_PIKACHU_KURTA"
-+  data {
-+    template_id: "SPAWN_V0025_POKEMON_PIKACHU_KURTA"
-+    genderSettings {
-+      pokemon: PIKACHU
-+      gender {
-+        malePercent: 1
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "SPAWN_V0025_POKEMON_PIKACHU_NORMAL"
-   data {
-     template_id: "SPAWN_V0025_POKEMON_PIKACHU_NORMAL"
-@@ -170044,6 +170398,32 @@
-   }
- }
- template {
-+  template_id: "STICKER_FOSSILMUSEUM_1"
-+  data {
-+    template_id: "STICKER_FOSSILMUSEUM_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_FOSSILMUSEUM_1"
-+      maxCount: 25
-+      pokemonId: PIKACHU
-+      category: "Pokemon"
-+      releaseDate: 20250308
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_FOSSILMUSEUM_2"
-+  data {
-+    template_id: "STICKER_FOSSILMUSEUM_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_FOSSILMUSEUM_2"
-+      maxCount: 25
-+      pokemonId: PIKACHU
-+      category: "Pokemon"
-+      releaseDate: 20250308
-+    }
-+  }
-+}
-+template {
-   template_id: "STICKER_FROAKIE_1"
-   data {
-     template_id: "STICKER_FROAKIE_1"
-@@ -172895,6 +173275,30 @@
-   }
- }
- template {
-+  template_id: "STICKER_IPLPARTNERSHIP_1"
-+  data {
-+    template_id: "STICKER_IPLPARTNERSHIP_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_IPLPARTNERSHIP_1"
-+      maxCount: 25
-+      category: "Misc"
-+      releaseDate: 20250305
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_IPLPARTNERSHIP_2"
-+  data {
-+    template_id: "STICKER_IPLPARTNERSHIP_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_IPLPARTNERSHIP_2"
-+      maxCount: 25
-+      category: "Misc"
-+      releaseDate: 20250305
-+    }
-+  }
-+}
-+template {
-   template_id: "STICKER_JUNECD2023_AXEW_1"
-   data {
-     template_id: "STICKER_JUNECD2023_AXEW_1"
-@@ -175360,6 +175764,28 @@
-   }
- }
- template {
-+  template_id: "STICKER_PGO_FEST_VICTINI_05.3"
-+  data {
-+    template_id: "STICKER_PGO_FEST_VICTINI_05.3"
-+    iapItemDisplay {
-+      sku: "STICKER_PGO_FEST_VICTINI_05.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 38
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_PGO_FEST_VICTINI_05.5"
-+  data {
-+    template_id: "STICKER_PGO_FEST_VICTINI_05.5"
-+    iapItemDisplay {
-+      sku: "STICKER_PGO_FEST_VICTINI_05.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 37
-+    }
-+  }
-+}
-+template {
-   template_id: "STICKER_PGO_TOUR_2024"
-   data {
-     template_id: "STICKER_PGO_TOUR_2024"
-@@ -177713,6 +178139,148 @@
-   }
- }
- template {
-+  template_id: "STICKER_SPRING_2025_1"
-+  data {
-+    template_id: "STICKER_SPRING_2025_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_SPRING_2025_1"
-+      maxCount: 25
-+      pokemonId: RIBOMBEE
-+      category: "Pokemon"
-+      releaseDate: 20250303
-+      regionId: 6
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_1.3"
-+  data {
-+    template_id: "STICKER_SPRING_2025_1.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_1.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 488
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_1.5"
-+  data {
-+    template_id: "STICKER_SPRING_2025_1.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_1.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 487
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_2"
-+  data {
-+    template_id: "STICKER_SPRING_2025_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_SPRING_2025_2"
-+      maxCount: 25
-+      pokemonId: BUTTERFREE
-+      category: "Pokemon"
-+      releaseDate: 20250303
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_2.3"
-+  data {
-+    template_id: "STICKER_SPRING_2025_2.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_2.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 486
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_2.5"
-+  data {
-+    template_id: "STICKER_SPRING_2025_2.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_2.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 485
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_3"
-+  data {
-+    template_id: "STICKER_SPRING_2025_3"
-+    stickerMetadata {
-+      stickerId: "STICKER_SPRING_2025_3"
-+      maxCount: 25
-+      pokemonId: VILEPLUME
-+      category: "Pokemon"
-+      releaseDate: 20250303
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_3.3"
-+  data {
-+    template_id: "STICKER_SPRING_2025_3.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_3.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 484
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_3.5"
-+  data {
-+    template_id: "STICKER_SPRING_2025_3.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_3.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 483
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_4"
-+  data {
-+    template_id: "STICKER_SPRING_2025_4"
-+    stickerMetadata {
-+      stickerId: "STICKER_SPRING_2025_4"
-+      maxCount: 25
-+      pokemonId: PETILIL
-+      category: "Pokemon"
-+      releaseDate: 20250303
-+      regionId: 4
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_4.3"
-+  data {
-+    template_id: "STICKER_SPRING_2025_4.3"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_4.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 482
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_SPRING_2025_4.5"
-+  data {
-+    template_id: "STICKER_SPRING_2025_4.5"
-+    iapItemDisplay {
-+      sku: "STICKER_SPRING_2025_4.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 481
-+    }
-+  }
-+}
-+template {
-   template_id: "STICKER_SPRING_EIEVUI"
-   data {
-     template_id: "STICKER_SPRING_EIEVUI"
-@@ -180555,6 +181123,17 @@
-   }
- }
- template {
-+  template_id: "TAPPABLE_TYPE_POKEBALL"
-+  data {
-+    template_id: "TAPPABLE_TYPE_POKEBALL"
-+    tappable_settings {
-+      visibleRadiusMeters: 150
-+      removeWhenTapped: true
-+      11: "TAPPABLE_TYPE_POKEBALL"
-+    }
-+  }
-+}
-+template {
-   template_id: "TEMPORARY_EVOLUTION_V0003_POKEMON_VENUSAUR"
-   data {
-     template_id: "TEMPORARY_EVOLUTION_V0003_POKEMON_VENUSAUR"
-@@ -181457,6 +182036,19 @@
-   }
- }
- template {
-+  template_id: "USE_ITEM_MOVE_REROLL_CODE_GATE"
-+  data {
-+    template_id: "USE_ITEM_MOVE_REROLL_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+      subCodeGateList {
-+        name: "UPDATE_FUSION_DETAILS_ONLY_FOR_VALID_BASE_MOVE"
-+        isEnabled: true
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "V0001_FAMILY_BULBASAUR"
-   data {
-     template_id: "V0001_FAMILY_BULBASAUR"
-@@ -188966,6 +189558,92 @@
-   }
- }
- template {
-+  template_id: "V0025_POKEMON_PIKACHU_KURTA"
-+  data {
-+    template_id: "V0025_POKEMON_PIKACHU_KURTA"
-+    pokemonSettings {
-+      pokemonId: PIKACHU
-+      modelScale: 1.48
-+      type: POKEMON_TYPE_ELECTRIC
-+      camera {
-+        diskRadiusM: 0.555
-+        cylinderRadiusM: 0.37
-+        cylinderHeightM: 0.5
-+        shoulderModeScale: 0.5
-+      }
-+      encounter {
-+        collisionRadiusM: 0.16
-+        collisionHeightM: 0.16
-+        collisionHeadRadiusM: 0.13
-+        movementType: MOVEMENT_JUMP
-+        movementTimerS: 10
-+        jumpTimeS: 1
-+        attackTimerS: 29
-+        attackProbability: 0.1
-+        dodgeProbability: 0.15
-+        dodgeDurationS: 1
-+        dodgeDistance: 1
-+        cameraDistance: 2.775
-+        minPokemonActionFrequencyS: 0.2
-+        maxPokemonActionFrequencyS: 1.6
-+      }
-+      stats {
-+        baseStamina: 111
-+        baseAttack: 112
-+        baseDefense: 96
-+      }
-+      quickMoves: THUNDER_SHOCK_FAST
-+      quickMoves: QUICK_ATTACK_FAST
-+      cinematicMoves: DISCHARGE
-+      cinematicMoves: THUNDERBOLT
-+      cinematicMoves: WILD_CHARGE
-+      animationTime: 1.8333
-+      animationTime: 0.6667
-+      animationTime: 1.6
-+      animationTime: 1.5667
-+      animationTime: 0
-+      animationTime: 1.8
-+      animationTime: 1.1333
-+      animationTime: 1.06666696
-+      evolutionPips: 1
-+      pokedexHeightM: 0.4
-+      pokedexWeightKg: 6
-+      parentPokemonId: PICHU
-+      heightStdDev: 0.05
-+      weightStdDev: 0.75
-+      familyId: FAMILY_PIKACHU
-+      candyToEvolve: 50
-+      kmBuddyDistance: 1
-+      buddy_size: BUDDY_SHOULDER
-+      modelHeight: 0.4
-+      modelScaleV2: 1.1
-+      form: PIKACHU_KURTA
-+      buddyOffsetMale: 0
-+      buddyOffsetMale: 0
-+      buddyOffsetMale: 0
-+      buddyOffsetFemale: 0
-+      buddyOffsetFemale: 0
-+      buddyOffsetFemale: 0
-+      buddyScale: 11
-+      third_move {
-+        stardustToUnlock: 10000
-+        candyToUnlock: 25
-+      }
-+      isTransferable: true
-+      isDeployable: true
-+      isTradable: true
-+      buddyGroupNumber: 1
-+      eliteQuickMove: PRESENT_FAST
-+      eliteCinematicMove: SURF
-+      eliteCinematicMove: THUNDER
-+      disableTransferToPokemonHome: true
-+      ibfc {
-+      }
-+      breadTierGroup: GROUP_1
-+    }
-+  }
-+}
-+template {
-   template_id: "V0025_POKEMON_PIKACHU_NORMAL"
-   data {
-     template_id: "V0025_POKEMON_PIKACHU_NORMAL"
-@@ -276358,6 +277036,27 @@
-   }
- }
- template {
-+  template_id: "V0468_MOVE_TORCH_SONG"
-+  data {
-+    template_id: "V0468_MOVE_TORCH_SONG"
-+    moveSettings {
-+      movementId: TORCH_SONG
-+      animationId: 5
-+      pokemonType: POKEMON_TYPE_FIRE
-+      power: 100
-+      accuracyChance: 1
-+      staminaLossScalar: 0.01
-+      trainerLevelMin: 1
-+      trainerLevelMax: 100
-+      vfxName: "torch_song"
-+      durationMs: 3500
-+      damageWindowStartMs: 2500
-+      damageWindowEndMs: 3500
-+      energyDelta: -50
-+    }
-+  }
-+}
-+template {
-   template_id: "V0468_POKEMON_TOGEKISS"
-   data {
-     template_id: "V0468_POKEMON_TOGEKISS"
-@@ -327320,13 +328019,19 @@
-       pokemonId: GOSSIFLEUR
-       type: POKEMON_TYPE_GRASS
-       camera {
-+        cylinderRadiusM: 0.3
-+        cylinderHeightM: 0.35
-       }
-       encounter {
-+        collisionRadiusM: 0.1
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.1
-+        jumpTimeS: 0.95
-         attackProbability: 0.1
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 0.5
--        cameraDistance: 4
-+        cameraDistance: 3
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-       }
-@@ -327345,12 +328050,12 @@
-       weightStdDev: 0.275
-       familyId: FAMILY_GOSSIFLEUR
-       kmBuddyDistance: 3
--      modelHeight: 1
-+      modelHeight: 0.4
-       evolutionBranch {
-         evolution: ELDEGOSS
-         candyCost: 50
-       }
--      modelScaleV2: 1
-+      modelScaleV2: 1.1
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -327366,6 +328071,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      raidBossDistanceOffset: 1
-       ibfc {
-       }
-       breadTierGroup: GROUP_2
-@@ -327380,15 +328086,21 @@
-       pokemonId: ELDEGOSS
-       type: POKEMON_TYPE_GRASS
-       camera {
-+        cylinderRadiusM: 0.5
-+        cylinderHeightM: 0.6
-       }
-       encounter {
-+        collisionRadiusM: 0.15
-+        collisionHeightM: 0.15
-+        collisionHeadRadiusM: 0.15
-+        jumpTimeS: 0.95
-         bonusCandyCaptureReward: 2
-         bonusStardustCaptureReward: 200
-         attackProbability: 0.1
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 0.5
--        cameraDistance: 4
-+        cameraDistance: 3
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-@@ -327409,8 +328121,8 @@
-       weightStdDev: 0.3125
-       familyId: FAMILY_GOSSIFLEUR
-       kmBuddyDistance: 3
--      modelHeight: 1
--      modelScaleV2: 1
-+      modelHeight: 0.48
-+      modelScaleV2: 1.02
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -327426,6 +328138,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      raidBossDistanceOffset: 1
-       ibfc {
-       }
-       breadTierGroup: GROUP_2
-@@ -328135,17 +328848,24 @@
-       type: POKEMON_TYPE_GRASS
-       type2: POKEMON_TYPE_DRAGON
-       camera {
-+        cylinderRadiusM: 0.35
-+        cylinderHeightM: 0.85
-+        cylinderGroundM: 0.45
-       }
-       encounter {
--        movementType: MOVEMENT_FLYING
-+        collisionRadiusM: 0.1
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.126
-+        movementType: MOVEMENT_ELECTRIC
-+        jumpTimeS: 0.9
-         bonusCandyCaptureReward: 2
-         bonusStardustCaptureReward: 200
--        attackProbability: 0.2
--        dodgeProbability: 0.3
--        dodgeDurationS: 1
--        dodgeDistance: 0.5
--        cameraDistance: 4
--        minPokemonActionFrequencyS: 0.2
-+        attackProbability: 0.3
-+        dodgeProbability: 0.35
-+        dodgeDurationS: 0.75
-+        dodgeDistance: 0.7
-+        cameraDistance: 3
-+        minPokemonActionFrequencyS: 0.9
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-       }
-@@ -328167,14 +328887,15 @@
-       weightStdDev: 0.125
-       familyId: FAMILY_APPLIN
-       kmBuddyDistance: 5
-+      buddy_size: BUDDY_FLYING
-       modelHeight: 0.3
-       modelScaleV2: 1.68
--      buddyOffsetMale: 0
--      buddyOffsetMale: 0
--      buddyOffsetMale: 0
--      buddyOffsetFemale: 0
--      buddyOffsetFemale: 0
--      buddyOffsetFemale: 0
-+      buddyOffsetMale: 33
-+      buddyOffsetMale: 28
-+      buddyOffsetMale: 25
-+      buddyOffsetFemale: 33
-+      buddyOffsetFemale: 28
-+      buddyOffsetFemale: 25
-       buddyScale: 19
-       third_move {
-         stardustToUnlock: 75000
-@@ -328182,8 +328903,23 @@
-       }
-       isTransferable: true
-       isDeployable: true
-+      combatShoulderCameraAngle: 0
-+      combatShoulderCameraAngle: 0
-+      combatShoulderCameraAngle: 0
-       isTradable: true
--      buddyGroupNumber: 2
-+      combatDefaultCameraAngle: 0
-+      combatDefaultCameraAngle: 0
-+      combatDefaultCameraAngle: 0
-+      combatOpponentFocusCameraAngle: 0
-+      combatOpponentFocusCameraAngle: 0
-+      combatOpponentFocusCameraAngle: 0
-+      combatPlayerFocusCameraAngle: 0
-+      combatPlayerFocusCameraAngle: 0
-+      combatPlayerFocusCameraAngle: 0
-+      combatPlayerPokemonPositionOffset: 0
-+      combatPlayerPokemonPositionOffset: 0
-+      combatPlayerPokemonPositionOffset: 0
-+      buddyGroupNumber: 4
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -328199,15 +328935,22 @@
-       type: POKEMON_TYPE_GRASS
-       type2: POKEMON_TYPE_DRAGON
-       camera {
-+        cylinderRadiusM: 0.25
-+        cylinderHeightM: 0.35
-       }
-       encounter {
-+        collisionRadiusM: 0.252
-+        collisionHeightM: 0.336
-+        collisionHeadRadiusM: 0.252
-+        movementType: MOVEMENT_JUMP
-+        jumpTimeS: 1.35
-         bonusCandyCaptureReward: 2
-         bonusStardustCaptureReward: 200
--        attackProbability: 0.2
-+        attackProbability: 0.1
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
--        dodgeDistance: 0.5
--        cameraDistance: 4
-+        dodgeDistance: 1
-+        cameraDistance: 3.15
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-@@ -328238,7 +328981,7 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
--      buddyScale: 19
-+      buddyScale: 11
-       third_move {
-         stardustToUnlock: 75000
-         candyToUnlock: 75
-@@ -328950,7 +329693,7 @@
-         evolution: CENTISKORCH
-         candyCost: 50
-       }
--      modelScaleV2: 1.5
-+      modelScaleV2: 1.75
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -329026,6 +329769,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -1000
-       third_move {
-         stardustToUnlock: 75000
-         candyToUnlock: 75
-@@ -335344,6 +336090,9 @@
-       }
-       modelScaleV2: 1.05
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -70
-+      buddyPortraitOffset: 180
-       third_move {
-         stardustToUnlock: 10000
-         candyToUnlock: 25
-@@ -346981,14 +347730,15 @@
-       sku: "battlepassticket.1"
-       category: IAP_CATEGORY_FREE
-       sortOrder: 1
-+      hidden: true
-       spriteId: "battlepassticket.1"
-       title: "iap_battle_pass_ticket_name"
-       description: "battle_pass_ticket_IAP_description"
-       skuEnableTime: "2023-02-27T20:00:00"
--      skuDisableTime: "2025-03-18T13:00:00"
-+      skuDisableTime: "2024-06-15T13:00:00"
-       skuEnableTimeUtcMs: 1677528000000
--      skuDisableTimeUtcMs: 1742302800000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_s18_gbl_2025.jpg"
-+      skuDisableTimeUtcMs: 1718456400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/GBL_SharedSkies_2024.jpeg"
-     }
-   }
- }
-@@ -347342,6 +348092,34 @@
-   }
- }
- template {
-+  template_id: "bundle.carnival2025.1"
-+  data {
-+    template_id: "bundle.carnival2025.1"
-+    iapItemDisplay {
-+      sku: "bundle.carnival2025.1"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.latam.small.1"
-+      title: "bundle.wicker.box.1_title"
-+    }
-+  }
-+}
-+template {
-+  template_id: "bundle.carnival2025.2"
-+  data {
-+    template_id: "bundle.carnival2025.2"
-+    iapItemDisplay {
-+      sku: "bundle.carnival2025.2"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.latam.small.1"
-+      title: "bundle.wicker.box.1_title"
-+    }
-+  }
-+}
-+template {
-   template_id: "bundle.cd2022.1"
-   data {
-     template_id: "bundle.cd2022.1"
-@@ -348571,6 +349349,34 @@
-   }
- }
- template {
-+  template_id: "bundle.holi2025.1"
-+  data {
-+    template_id: "bundle.holi2025.1"
-+    iapItemDisplay {
-+      sku: "bundle.holi2025.1"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.general4.large.1"
-+      title: "bundle.regional.box.1_title"
-+    }
-+  }
-+}
-+template {
-+  template_id: "bundle.holi2025.2"
-+  data {
-+    template_id: "bundle.holi2025.2"
-+    iapItemDisplay {
-+      sku: "bundle.holi2025.2"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.general.premiumbox.large.1"
-+      title: "bundle.regional.box.1_title"
-+    }
-+  }
-+}
-+template {
-   template_id: "bundle.holiday2022.1"
-   data {
-     template_id: "bundle.holiday2022.1"
-@@ -350030,6 +350836,7 @@
-       sku: "evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._FOC_MAR25_title"
-       skuEnableTime: "2023-12-05T16:00:00"
-@@ -350048,6 +350855,7 @@
-       sku: "evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       skuEnableTime: "2023-12-05T16:00:00"
-       skuDisableTime: "2025-03-17T20:00:00"
-@@ -350158,7 +350966,6 @@
-       sku: "general1.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket4._MAR2025_DEEP_DEPTHS"
-       skuEnableTime: "2023-01-01T11:00:05"
-@@ -350177,7 +350984,6 @@
-       sku: "general1.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket4._MAR2025_DEEP_DEPTHS"
-       skuEnableTime: "2023-01-01T11:00:05"
-@@ -351767,6 +352573,7 @@
-       sku: "pgorelease.evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._FOC_MAR25_title"
-       skuEnableTime: "2023-12-05T16:00:00"
-@@ -351785,6 +352592,7 @@
-       sku: "pgorelease.evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       skuEnableTime: "2023-12-05T16:00:00"
-       skuDisableTime: "2025-03-17T20:00:00"
-@@ -351878,7 +352686,6 @@
-       sku: "pgorelease.general1.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket4._MAR2025_DEEP_DEPTHS"
-       skuEnableTime: "2023-01-01T11:00:01"
-@@ -351897,7 +352704,6 @@
-       sku: "pgorelease.general1.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket4._MAR2025_DEEP_DEPTHS"
-       skuEnableTime: "2023-01-01T11:00:01"
-@@ -356700,6 +357506,21 @@
-   }
- }
- template {
-+  template_id: "sequence_torch_song"
-+  data {
-+    template_id: "sequence_torch_song"
-+    move_sequence_settings {
-+      sequence: "anim attacker atk-move"
-+      sequence: "wait 0.5"
-+      sequence: "vfx torch_song"
-+      sequence: "sfx attacker 126-0_fire_blast"
-+      sequence: "wait 2.0"
-+      sequence: "sys ui-sync"
-+      sequence: "sys complete"
-+    }
-+  }
-+}
-+template {
-   template_id: "sequence_trailblaze"
-   data {
-     template_id: "sequence_trailblaze"
-@@ -357340,769 +358161,7 @@
-     }
-   }
- }
--template {
--  template_id: "STICKER_PGO_FEST_VICTINI_05.3"
--  data {
--    template_id: "STICKER_PGO_FEST_VICTINI_05.3"
--    iapItemDisplay {
--      sku: "STICKER_PGO_FEST_VICTINI_05.3"
--      category: IAP_CATEGORY_STICKER
--      sortOrder: 38
--    }
--  }
--}
--template {
--  template_id: "STICKER_PGO_FEST_VICTINI_05.5"
--  data {
--    template_id: "STICKER_PGO_FEST_VICTINI_05.5"
--    iapItemDisplay {
--      sku: "STICKER_PGO_FEST_VICTINI_05.5"
--      category: IAP_CATEGORY_STICKER
--      sortOrder: 37
--    }
--  }
--}
--template {
--  template_id: "STICKER_FOSSILMUSEUM_1"
--  data {
--    template_id: "STICKER_FOSSILMUSEUM_1"
--    stickerMetadata {
--      stickerId: "STICKER_FOSSILMUSEUM_1"
--      maxCount: 25
--      pokemonId: PIKACHU
--      category: "Pokemon"
--      releaseDate: 20250308
--    }
--  }
--}
--template {
--  template_id: "STICKER_FOSSILMUSEUM_2"
--  data {
--    template_id: "STICKER_FOSSILMUSEUM_2"
--    stickerMetadata {
--      stickerId: "STICKER_FOSSILMUSEUM_2"
--      maxCount: 25
--      pokemonId: PIKACHU
--      category: "Pokemon"
--      releaseDate: 20250308
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_1"
--  data {
--    template_id: "STICKER_SPRING_2025_1"
--    stickerMetadata {
--      stickerId: "STICKER_SPRING_2025_1"
--      maxCount: 25
--      pokemonId: RIBOMBEE
--      category: "Pokemon"
--      releaseDate: 20250303
--      regionId: 6
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_1.3"
--  data {
--    template_id: "STICKER_SPRING_2025_1.3"
--    iapItemDisplay {
--      sku: "STICKER_SPRING_2025_1.3"
--      category: IAP_CATEGORY_STICKER
--      sortOrder: 488
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_1.5"
--  data {
--    template_id: "STICKER_SPRING_2025_1.5"
--    iapItemDisplay {
--      sku: "STICKER_SPRING_2025_1.5"
--      category: IAP_CATEGORY_STICKER
--      sortOrder: 487
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_2"
--  data {
--    template_id: "STICKER_SPRING_2025_2"
--    stickerMetadata {
--      stickerId: "STICKER_SPRING_2025_2"
--      maxCount: 25
--      pokemonId: BUTTERFREE
--      category: "Pokemon"
--      releaseDate: 20250303
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_2.3"
--  data {
--    template_id: "STICKER_SPRING_2025_2.3"
--    iapItemDisplay {
--      sku: "STICKER_SPRING_2025_2.3"
--      category: IAP_CATEGORY_STICKER
--      sortOrder: 486
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_2.5"
--  data {
--    template_id: "STICKER_SPRING_2025_2.5"
--    iapItemDisplay {
--      sku: "STICKER_SPRING_2025_2.5"
--      category: IAP_CATEGORY_STICKER
--      sortOrder: 485
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_3"
--  data {
--    template_id: "STICKER_SPRING_2025_3"
--    stickerMetadata {
--      stickerId: "STICKER_SPRING_2025_3"
--      maxCount: 25
--      pokemonId: VILEPLUME
--      category: "Pokemon"
--      releaseDate: 20250303
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_3.3"
--  data {
--    template_id: "STICKER_SPRING_2025_3.3"
--    iapItemDisplay {
--      sku: "STICKER_SPRING_2025_3.3"
--      category: IAP_CATEGORY_STICKER
--      sortOrder: 484
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_3.5"
--  data {
--    template_id: "STICKER_SPRING_2025_3.5"
--    iapItemDisplay {
--      sku: "STICKER_SPRING_2025_3.5"
--      category: IAP_CATEGORY_STICKER
--      sortOrder: 483
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_4"
--  data {
--    template_id: "STICKER_SPRING_2025_4"
--    stickerMetadata {
--      stickerId: "STICKER_SPRING_2025_4"
--      maxCount: 25
--      pokemonId: PETILIL
--      category: "Pokemon"
--      releaseDate: 20250303
--      regionId: 4
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_4.3"
--  data {
--    template_id: "STICKER_SPRING_2025_4.3"
--    iapItemDisplay {
--      sku: "STICKER_SPRING_2025_4.3"
--      category: IAP_CATEGORY_STICKER
--      sortOrder: 482
--    }
--  }
--}
--template {
--  template_id: "STICKER_SPRING_2025_4.5"
--  data {
--    template_id: "STICKER_SPRING_2025_4.5"
--    iapItemDisplay {
--      sku: "STICKER_SPRING_2025_4.5"
--      category: IAP_CATEGORY_STICKER
--      sortOrder: 481
--    }
--  }
--}
--template {
--  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
--  data {
--    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
--    combat_league {
--      title: "catch_cup_s13_title"
--      enabled: true
--      unlockCondition {
--        type: WITH_UNIQUE_POKEMON
--        minPokemonCount: 3
--      }
--      pokemonCondition {
--        type: WITH_POKEMON_CP_LIMIT
--        withPokemonCpLimit {
--          maxCp: 1500
--        }
--      }
--      pokemonCondition {
--        type: WITH_UNIQUE_POKEMON
--      }
--      pokemonCondition {
--        type: POKEMON_CAUGHT_TIMESTAMP
--        pokemonCaughtTimestamp {
--          afterTimestamp: 1741082400000
--          beforeTimestamp: 1748944800000
--        }
--      }
--      iconUrl: "https://storage.googleapis.com/prod-public-images/premierball_sprite.png"
--      pokemonCount: 3
--      leagueType: PREMIER
--    }
--  }
--}
--template {
--  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
--  data {
--    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
--    combat_league {
--      title: "scrolls_cup_great_title"
--      enabled: true
--      unlockCondition {
--        type: WITH_UNIQUE_POKEMON
--        minPokemonCount: 3
--      }
--      pokemonCondition {
--        type: WITH_POKEMON_CP_LIMIT
--        withPokemonCpLimit {
--          maxCp: 1500
--        }
--      }
--      pokemonCondition {
--        type: WITH_UNIQUE_POKEMON
--      }
--      pokemonCondition {
--        type: WITH_POKEMON_TYPE
--        withPokemonType {
--          pokemonType: POKEMON_TYPE_WATER
--          pokemonType: POKEMON_TYPE_FIGHTING
--          pokemonType: POKEMON_TYPE_DARK
--        }
--      }
--      iconUrl: "https://storage.googleapis.com/prod-public-images/pgo-s18-gbl-icon-2025.png"
--      pokemonCount: 3
--      bannedPokemon: DITTO
--      bannedPokemon: SHEDINJA
--      bannedPokemon: PRIMARINA
--      badgeType: BADGE_GREAT_LEAGUE
--      battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
--      leagueType: PREMIER
--    }
--  }
--}
--template {
--  template_id: "COMBAT_RANKING_SETTINGS_S25"
--  data {
--    template_id: "COMBAT_RANKING_SETTINGS_S25"
--    combat_ranking_proto_settings {
--      rankLevel {
--        rankLevel: 1
--      }
--      rankLevel {
--        rankLevel: 2
--        additionalTotalBattlesRequired: 5
--      }
--      rankLevel {
--        rankLevel: 3
--        additionalTotalBattlesRequired: 5
--      }
--      rankLevel {
--        rankLevel: 4
--        additionalTotalBattlesRequired: 5
--      }
--      rankLevel {
--        rankLevel: 5
--        additionalTotalBattlesRequired: 5
--      }
--      rankLevel {
--        rankLevel: 6
--        additionalTotalBattlesRequired: 5
--      }
--      rankLevel {
--        rankLevel: 7
--        additionalWinsRequired: 1
--      }
--      rankLevel {
--        rankLevel: 8
--        additionalWinsRequired: 1
--      }
--      rankLevel {
--        rankLevel: 9
--        additionalWinsRequired: 1
--      }
--      rankLevel {
--        rankLevel: 10
--        additionalWinsRequired: 1
--      }
--      rankLevel {
--        rankLevel: 11
--        additionalTotalBattlesRequired: 5
--      }
--      rankLevel {
--        rankLevel: 12
--        additionalWinsRequired: 5
--      }
--      rankLevel {
--        rankLevel: 13
--        additionalWinsRequired: 6
--      }
--      rankLevel {
--        rankLevel: 14
--        additionalWinsRequired: 7
--      }
--      rankLevel {
--        rankLevel: 15
--        additionalWinsRequired: 8
--      }
--      rankLevel {
--        rankLevel: 16
--        additionalTotalBattlesRequired: 5
--      }
--      rankLevel {
--        rankLevel: 17
--        additionalWinsRequired: 10
--      }
--      rankLevel {
--        rankLevel: 18
--        additionalWinsRequired: 15
--      }
--      rankLevel {
--        rankLevel: 19
--        additionalWinsRequired: 20
--      }
--      rankLevel {
--        rankLevel: 20
--        additionalTotalBattlesRequired: 5
--      }
--      rankLevel {
--        rankLevel: 21
--        minRatingRequired: 2000
--      }
--      rankLevel {
--        rankLevel: 22
--        minRatingRequired: 2500
--      }
--      rankLevel {
--        rankLevel: 23
--        minRatingRequired: 2750
--      }
--      rankLevel {
--        rankLevel: 24
--        minRatingRequired: 3000
--      }
--      required_for_rewards {
--        rankLevel: 1
--        additionalTotalBattlesRequired: 5
--      }
--      minRankToDisplayRating: 20
--      minRatingRequired: 25
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_hat_mustard_0"
--  data {
--    template_id: "N_DISPLAY_n_hat_mustard_0"
--    avatarItemDisplay {
--      iconAddress: "n_hat_mustard_0_icon"
--      displayStringId: "avatar_hat_mustard"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_pants_mustard_0"
--  data {
--    template_id: "N_DISPLAY_n_pants_mustard_0"
--    avatarItemDisplay {
--      iconAddress: "n_pants_mustard_0_icon"
--      displayStringId: "avatar_pants_mustard"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_pose_mustard"
--  data {
--    template_id: "N_DISPLAY_n_pose_mustard"
--    avatarItemDisplay {
--      iconAddress: "n_pose_mustard_icon"
--      displayStringId: "avatar_pose_mustard"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_shirt_mustard_0"
--  data {
--    template_id: "N_DISPLAY_n_shirt_mustard_0"
--    avatarItemDisplay {
--      iconAddress: "n_shirt_mustard_0_icon"
--      displayStringId: "avatar_shirt_mustard"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_shoes_mustard_0"
--  data {
--    template_id: "N_DISPLAY_n_shoes_mustard_0"
--    avatarItemDisplay {
--      iconAddress: "n_shoes_mustard_0_icon"
--      displayStringId: "avatar_shoes_mustard"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_set_mustard_0"
--  data {
--    template_id: "N_DISPLAY_set_mustard_0"
--    avatarItemDisplay {
--      iconAddress: "set_mustard_0"
--    }
--  }
--}
--template {
--  template_id: "RAID_LOCATION_VERIFICATION_CODE_GATE"
--  data {
--    template_id: "RAID_LOCATION_VERIFICATION_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
--  template_id: "USE_ITEM_MOVE_REROLL_CODE_GATE"
--  data {
--    template_id: "USE_ITEM_MOVE_REROLL_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--      subCodeGateList {
--        name: "UPDATE_FUSION_DETAILS_ONLY_FOR_VALID_BASE_MOVE"
--        isEnabled: true
--      }
--    }
--  }
--}
--template {
--  template_id: "IAP_CATEGORY_REWARDED_SPEND"
--  data {
--    template_id: "IAP_CATEGORY_REWARDED_SPEND"
--    iapCategoryDisplay {
--      category: 19
--      name: "REWARDED_SPEND_MONTHLY_REWARD_ROAD_KEY"
--      description: "rewarded_spend_category_description"
--    }
--  }
--}
--template {
--  template_id: "bundle.carnival2025.1"
--  data {
--    template_id: "bundle.carnival2025.1"
--    iapItemDisplay {
--      sku: "bundle.carnival2025.1"
--      category: IAP_CATEGORY_BUNDLE
--      sortOrder: 1
--      hidden: true
--      spriteId: "bundle.latam.small.1"
--      title: "bundle.wicker.box.1_title"
--    }
--  }
--}
--template {
--  template_id: "LC_SPECIALBACKGROUND_2025_S18"
--  data {
--    template_id: "LC_SPECIALBACKGROUND_2025_S18"
--    locationCardSettings {
--      locationCard: LC_SPECIALBACKGROUND_2025_S18
--      imageUrl: "sb_Season18_MightAndMastery"
--      cardType: SPECIAL_BACKGROUND
--      vfxAddress: "bgfx_MightAndMastery"
--    }
--  }
--}
--template {
 -  template_id: "PTC_OAUTH_SETTINGS"
--  data {
++  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH"
+   data {
 -    template_id: "PTC_OAUTH_SETTINGS"
 -    ptcOauthSettings {
 -      ptcAccountLinkingEnabled: true
 -      endTimeMs: 2022190740000
 -      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
--  template_id: "COMBAT_V0468_MOVE_TORCH_SONG"
--  data {
--    template_id: "COMBAT_V0468_MOVE_TORCH_SONG"
--    combat_move {
--      uniqueId: TORCH_SONG
--      type: POKEMON_TYPE_FIRE
--      power: 70
--      vfxName: "torch_song"
--      energyDelta: -45
--      buffs {
--        attackerAttackStatStageChange: 1
--        buffActivationChance: 1
--      }
--    }
--  }
--}
--template {
--  template_id: "V0468_MOVE_TORCH_SONG"
--  data {
--    template_id: "V0468_MOVE_TORCH_SONG"
--    moveSettings {
--      movementId: TORCH_SONG
--      animationId: 5
--      pokemonType: POKEMON_TYPE_FIRE
--      power: 100
--      accuracyChance: 1
--      staminaLossScalar: 0.01
--      trainerLevelMin: 1
--      trainerLevelMax: 100
--      vfxName: "torch_song"
--      durationMs: 3500
--      damageWindowStartMs: 2500
--      damageWindowEndMs: 3500
--      energyDelta: -50
--    }
--  }
--}
--template {
--  template_id: "sequence_torch_song"
--  data {
--    template_id: "sequence_torch_song"
--    move_sequence_settings {
--      sequence: "anim attacker atk-move"
--      sequence: "wait 0.5"
--      sequence: "vfx torch_song"
--      sequence: "sfx attacker 126-0_fire_blast"
--      sequence: "wait 2.0"
--      sequence: "sys ui-sync"
--      sequence: "sys complete"
--    }
--  }
--}
--template {
--  template_id: "bundle.holi2025.1"
--  data {
--    template_id: "bundle.holi2025.1"
--    iapItemDisplay {
--      sku: "bundle.holi2025.1"
--      category: IAP_CATEGORY_BUNDLE
--      sortOrder: 1
--      hidden: true
--      spriteId: "bundle.general4.large.1"
--      title: "bundle.regional.box.1_title"
--    }
--  }
--}
--template {
--  template_id: "bundle.holi2025.2"
--  data {
--    template_id: "bundle.holi2025.2"
--    iapItemDisplay {
--      sku: "bundle.holi2025.2"
--      category: IAP_CATEGORY_BUNDLE
--      sortOrder: 1
--      hidden: true
--      spriteId: "bundle.general.premiumbox.large.1"
--      title: "bundle.regional.box.1_title"
--    }
--  }
--}
--template {
--  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_KURTA"
--  data {
--    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_KURTA"
--    pokemonExtendedSettings {
--      uniqueId: PIKACHU
--      form: PIKACHU_KURTA
--      sizeSettings {
--        xxsLowerBound: 0.196
--        xsLowerBound: 0.2
--        mLowerBound: 0.3
--        mUpperBound: 0.5
--        xlUpperBound: 0.6
--        xxlUpperBound: 0.7
--      }
--    }
--  }
--}
--template {
--  template_id: "POKEDEX_V2_SETTINGS"
--  data {
--    template_id: "POKEDEX_V2_SETTINGS"
--    pokedexV2Settings {
--      maxTrackedPokemon: 1
--      pokemonAlertExcluded: DITTO
--      pokemonAlertExcluded: ZORUA
--      pokemonAlertExcluded: ZOROARK
--      pokemonAlertExcluded: SMEARGLE
--      pokemonAlertExcluded: KECLEON
--    }
--  }
--}
--template {
--  template_id: "SPAWN_V0025_POKEMON_PIKACHU_KURTA"
--  data {
--    template_id: "SPAWN_V0025_POKEMON_PIKACHU_KURTA"
--    genderSettings {
--      pokemon: PIKACHU
--      gender {
--        malePercent: 1
--      }
--    }
--  }
--}
--template {
--  template_id: "V0025_POKEMON_PIKACHU_KURTA"
--  data {
--    template_id: "V0025_POKEMON_PIKACHU_KURTA"
--    pokemonSettings {
--      pokemonId: PIKACHU
--      modelScale: 1.48
--      type: POKEMON_TYPE_ELECTRIC
--      camera {
--        diskRadiusM: 0.555
--        cylinderRadiusM: 0.37
--        cylinderHeightM: 0.5
--        shoulderModeScale: 0.5
--      }
--      encounter {
--        collisionRadiusM: 0.16
--        collisionHeightM: 0.16
--        collisionHeadRadiusM: 0.13
--        movementType: MOVEMENT_JUMP
--        movementTimerS: 10
--        jumpTimeS: 1
--        attackTimerS: 29
--        attackProbability: 0.1
--        dodgeProbability: 0.15
--        dodgeDurationS: 1
--        dodgeDistance: 1
--        cameraDistance: 2.775
--        minPokemonActionFrequencyS: 0.2
--        maxPokemonActionFrequencyS: 1.6
--      }
--      stats {
--        baseStamina: 111
--        baseAttack: 112
--        baseDefense: 96
--      }
--      quickMoves: THUNDER_SHOCK_FAST
--      quickMoves: QUICK_ATTACK_FAST
--      cinematicMoves: DISCHARGE
--      cinematicMoves: THUNDERBOLT
--      cinematicMoves: WILD_CHARGE
--      animationTime: 1.8333
--      animationTime: 0.6667
--      animationTime: 1.6
--      animationTime: 1.5667
--      animationTime: 0
--      animationTime: 1.8
--      animationTime: 1.1333
--      animationTime: 1.06666696
--      evolutionPips: 1
--      pokedexHeightM: 0.4
--      pokedexWeightKg: 6
--      parentPokemonId: PICHU
--      heightStdDev: 0.05
--      weightStdDev: 0.75
--      familyId: FAMILY_PIKACHU
--      candyToEvolve: 50
--      kmBuddyDistance: 1
--      buddy_size: BUDDY_SHOULDER
--      modelHeight: 0.4
--      modelScaleV2: 1.1
--      form: PIKACHU_KURTA
--      buddyOffsetMale: 0
--      buddyOffsetMale: 0
--      buddyOffsetMale: 0
--      buddyOffsetFemale: 0
--      buddyOffsetFemale: 0
--      buddyOffsetFemale: 0
--      buddyScale: 11
--      third_move {
--        stardustToUnlock: 10000
--        candyToUnlock: 25
--      }
--      isTransferable: true
--      isDeployable: true
--      isTradable: true
--      buddyGroupNumber: 1
--      eliteQuickMove: PRESENT_FAST
--      eliteCinematicMove: SURF
--      eliteCinematicMove: THUNDER
--      disableTransferToPokemonHome: true
--      ibfc {
--      }
--      breadTierGroup: GROUP_1
--    }
--  }
--}
--template {
--  template_id: "STICKER_IPLPARTNERSHIP_1"
--  data {
--    template_id: "STICKER_IPLPARTNERSHIP_1"
--    stickerMetadata {
--      stickerId: "STICKER_IPLPARTNERSHIP_1"
--      maxCount: 25
--      category: "Misc"
--      releaseDate: 20250305
--    }
--  }
--}
--template {
--  template_id: "STICKER_IPLPARTNERSHIP_2"
--  data {
--    template_id: "STICKER_IPLPARTNERSHIP_2"
--    stickerMetadata {
--      stickerId: "STICKER_IPLPARTNERSHIP_2"
--      maxCount: 25
--      category: "Misc"
--      releaseDate: 20250305
--    }
--  }
--}
--template {
--  template_id: "POKEBALL_SOFTLOCK_FIX"
--  data {
--    template_id: "POKEBALL_SOFTLOCK_FIX"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
--  template_id: "RECORD_COMBAT_LEAGUE_PERFORMANCE_CODE_GATE"
--  data {
--    template_id: "RECORD_COMBAT_LEAGUE_PERFORMANCE_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
--  template_id: "OLD_EMAIL_TICKET_FIX_CODE_GATE"
--  data {
--    template_id: "OLD_EMAIL_TICKET_FIX_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--batch_id: 1742228899513
-+batch_id: 1742320621085
- experiment_id: 1
- experiment_id: 6
- experiment_id: 8
-@@ -358143,9 +358202,7 @@
++    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: 5772
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
+     }
+   }
+ }
+@@ -310340,9 +310341,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
+-      raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310350,6 +310349,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310417,13 +310417,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310491,7 +310491,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310499,6 +310498,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310573,6 +310573,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310640,7 +310641,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310648,6 +310648,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310715,7 +310716,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310723,6 +310723,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310790,7 +310791,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310798,6 +310798,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310865,13 +310866,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310938,7 +310939,6 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310946,6 +310946,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311013,7 +311014,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -311021,6 +311021,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311088,7 +311089,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -311096,6 +311096,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -358161,12 +358162,357 @@
+     }
+   }
+ }
+-batch_id: 1742320621085
+-experiment_id: 1
+-experiment_id: 6
+-experiment_id: 8
+-experiment_id: 11
+-experiment_id: 21
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: 5771
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: 5774
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: 5773
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_DAY_01"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_DAY_01"
++    badgeSettings {
++      badgeType: 5769
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_DAY_02"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_DAY_02"
++    badgeSettings {
++      badgeType: 5770
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_TEST"
++    badgeSettings {
++      badgeType: 5768
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: 5779
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: 5778
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: 5781
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: 5780
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_01"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_01"
++    badgeSettings {
++      badgeType: 5776
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_02"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_02"
++    badgeSettings {
++      badgeType: 5777
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_TEST"
++    badgeSettings {
++      badgeType: 5775
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: 5786
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: 5785
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: 5788
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: 5787
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_01"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_01"
++    badgeSettings {
++      badgeType: 5783
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_02"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_02"
++    badgeSettings {
++      badgeType: 5784
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_TEST"
++    badgeSettings {
++      badgeType: 5782
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: 5793
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: 5792
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: 5795
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: 5794
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_01"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_01"
++    badgeSettings {
++      badgeType: 5790
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_02"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_02"
++    badgeSettings {
++      badgeType: 5791
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_TEST"
++    badgeSettings {
++      badgeType: 5789
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "EVENT_PLANNER_SETTINGS"
++  data {
++    template_id: "EVENT_PLANNER_SETTINGS"
++    253 {
++      2 {
++        13 {
++          2: 1
++        }
++        13 {
++          1: 600
++          2: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "RSVP_SUBSCRIBE_BY_GEO_CODE_GATE"
++  data {
++    template_id: "RSVP_SUBSCRIBE_BY_GEO_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++    }
++  }
++}
++batch_id: 1742321936065
+ experiment_id: 101
+ experiment_id: 170
+ experiment_id: 173
+@@ -358193,11 +358539,9 @@
+ experiment_id: 2650
+ experiment_id: 2800
+ experiment_id: 3032
+-experiment_id: 3033
+ experiment_id: 3063
+ experiment_id: 3502
+ experiment_id: 3503
+-experiment_id: 3504
+ experiment_id: 3507
  experiment_id: 3518
  experiment_id: 3524
- experiment_id: 3536
--experiment_id: 3568
--experiment_id: 3569
--experiment_id: 3573
-+experiment_id: 3554
- experiment_id: 3685
- experiment_id: 4691
- experiment_id: 4998
-@@ -358156,7 +358213,6 @@
- experiment_id: 5508
- experiment_id: 5510
- experiment_id: 6075
--experiment_id: 8916
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
+@@ -358227,5 +358571,4 @@
+ experiment_id: 3500037
+ experiment_id: 4610000
+ experiment_id: 4700000
+-experiment_id: 5000301
+ experiment_id: 6600407
