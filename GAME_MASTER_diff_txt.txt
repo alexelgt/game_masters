@@ -1,308 +1,1189 @@
---- GAME_MASTER_old.txt	2025-03-18 19:29:42.967036474 +0100
-+++ GAME_MASTER.txt	2025-03-18 19:39:22.409146430 +0100
-@@ -140312,7 +140312,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH"
-     badgeSettings {
--      badgeType: 5772
-+      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -181099,7 +181099,7 @@
-   template_id: "TAPPABLE_SETTINGS"
-   data {
-     template_id: "TAPPABLE_SETTINGS"
--    tappable_settings {
-+    tappableSettings {
-       visibleRadiusMeters: 150
-       spawnAngleDegrees: 45
-       movementRespawnThresholdMeters: 5
-@@ -181112,7 +181112,7 @@
-   template_id: "TAPPABLE_SETTINGS_BREAKFAST"
-   data {
-     template_id: "TAPPABLE_SETTINGS_BREAKFAST"
--    tappable_settings {
-+    tappableSettings {
-       visibleRadiusMeters: 150
-       spawnAngleDegrees: 45
-       movementRespawnThresholdMeters: 5
-@@ -181127,10 +181127,10 @@
-   template_id: "TAPPABLE_TYPE_POKEBALL"
-   data {
-     template_id: "TAPPABLE_TYPE_POKEBALL"
--    tappable_settings {
-+    tappableSettings {
-       visibleRadiusMeters: 150
-       removeWhenTapped: true
--      11: "TAPPABLE_TYPE_POKEBALL"
-+      tappableAssetKey: "TAPPABLE_TYPE_POKEBALL"
+--- GAME_MASTER_old.txt	2025-03-18 19:39:22.409146430 +0100
++++ GAME_MASTER.txt	2025-03-19 19:40:32.807429784 +0100
+@@ -116914,8 +116914,8 @@
+     template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
+     itemExpirationSettings {
+       item: ITEM_LUCKY_FRIEND_APPLICATOR
+-      expirationTime: "2025-03-09T18:00:00"
+-      emergencyExpirationTime: "2025-04-08T18:00:00"
++      expirationTime: "2025-05-11T23:59:00"
++      emergencyExpirationTime: "2025-05-12T23:59:00"
      }
    }
  }
-@@ -358167,7 +358167,7 @@
+@@ -117261,7 +117261,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+       }
+     }
+   }
+@@ -117277,7 +117277,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+       }
+     }
+   }
+@@ -117294,7 +117294,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 0.666666687
++        distanceMultiplier: 0.333333343
+       }
+     }
+   }
+@@ -310341,7 +310341,9 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      raidBossDistanceOffset: 3
+       formChange {
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310349,7 +310351,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310417,13 +310418,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310491,6 +310492,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310498,7 +310500,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310573,7 +310574,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310641,6 +310641,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310648,7 +310649,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310716,6 +310716,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310723,7 +310724,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310791,6 +310791,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310798,7 +310799,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310866,13 +310866,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -310939,6 +310939,7 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -310946,7 +310947,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311014,6 +311014,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -311021,7 +311022,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311089,6 +311089,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -311096,7 +311097,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -344665,7 +344665,7 @@
    data {
-     template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST"
-     badgeSettings {
--      badgeType: 5771
-+      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358179,7 +358179,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID"
-     badgeSettings {
--      badgeType: 5774
-+      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_RAID
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358191,7 +358191,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST"
-     badgeSettings {
--      badgeType: 5773
-+      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358203,7 +358203,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MILAN_DAY_01"
-     badgeSettings {
--      badgeType: 5769
-+      badgeType: BADGE_SAFARI_2025_MILAN_DAY_01
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358215,7 +358215,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MILAN_DAY_02"
-     badgeSettings {
--      badgeType: 5770
-+      badgeType: BADGE_SAFARI_2025_MILAN_DAY_02
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358227,7 +358227,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MILAN_TEST"
-     badgeSettings {
--      badgeType: 5768
-+      badgeType: BADGE_SAFARI_2025_MILAN_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358239,7 +358239,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH"
-     badgeSettings {
--      badgeType: 5779
-+      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358251,7 +358251,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST"
-     badgeSettings {
--      badgeType: 5778
-+      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358263,7 +358263,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID"
-     badgeSettings {
--      badgeType: 5781
-+      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358275,7 +358275,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST"
-     badgeSettings {
--      badgeType: 5780
-+      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358287,7 +358287,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_01"
-     badgeSettings {
--      badgeType: 5776
-+      badgeType: BADGE_SAFARI_2025_MUMBAI_DAY_01
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358299,7 +358299,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_02"
-     badgeSettings {
--      badgeType: 5777
-+      badgeType: BADGE_SAFARI_2025_MUMBAI_DAY_02
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358311,7 +358311,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_MUMBAI_TEST"
-     badgeSettings {
--      badgeType: 5775
-+      badgeType: BADGE_SAFARI_2025_MUMBAI_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358323,7 +358323,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH"
-     badgeSettings {
--      badgeType: 5786
-+      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358335,7 +358335,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST"
-     badgeSettings {
--      badgeType: 5785
-+      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358347,7 +358347,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID"
-     badgeSettings {
--      badgeType: 5788
-+      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358359,7 +358359,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST"
-     badgeSettings {
--      badgeType: 5787
-+      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358371,7 +358371,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_01"
-     badgeSettings {
--      badgeType: 5783
-+      badgeType: BADGE_SAFARI_2025_SANTIAGO_DAY_01
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358383,7 +358383,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_02"
-     badgeSettings {
--      badgeType: 5784
-+      badgeType: BADGE_SAFARI_2025_SANTIAGO_DAY_02
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358395,7 +358395,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SANTIAGO_TEST"
-     badgeSettings {
--      badgeType: 5782
-+      badgeType: BADGE_SAFARI_2025_SANTIAGO_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358407,7 +358407,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH"
-     badgeSettings {
--      badgeType: 5793
-+      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358419,7 +358419,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST"
-     badgeSettings {
--      badgeType: 5792
-+      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358431,7 +358431,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID"
-     badgeSettings {
--      badgeType: 5795
-+      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358443,7 +358443,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST"
-     badgeSettings {
--      badgeType: 5794
-+      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358455,7 +358455,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_01"
-     badgeSettings {
--      badgeType: 5790
-+      badgeType: BADGE_SAFARI_2025_SINGAPORE_DAY_01
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358467,7 +358467,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_02"
-     badgeSettings {
--      badgeType: 5791
-+      badgeType: BADGE_SAFARI_2025_SINGAPORE_DAY_02
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358479,7 +358479,7 @@
-   data {
-     template_id: "BADGE_SAFARI_2025_SINGAPORE_TEST"
-     badgeSettings {
--      badgeType: 5789
-+      badgeType: BADGE_SAFARI_2025_SINGAPORE_TEST
-       badgeRank: 2
-       targets: 100
-       eventBadge: true
-@@ -358490,14 +358490,14 @@
-   template_id: "EVENT_PLANNER_SETTINGS"
-   data {
-     template_id: "EVENT_PLANNER_SETTINGS"
--    253 {
--      2 {
--        13 {
--          2: 1
--        }
--        13 {
--          1: 600
--          2: 2
-+    plannerSettings {
-+      eventSettings {
-+        messageTiming {
-+          messageSendTime: TIMESLOT_START
-+        }
-+        messageTiming {
-+          messageSendBeforeEventSeconds: 600
-+          messageSendTime: TIMESLOT_EARLY
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
+     }
+   }
+@@ -344679,31 +344679,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
          }
        }
      }
+@@ -344718,31 +344718,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -344758,7 +344758,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -344776,7 +344776,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -344791,7 +344791,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -344809,7 +344809,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -344825,7 +344825,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -344843,7 +344843,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -344858,7 +344858,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -344876,7 +344876,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -344892,7 +344892,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 570
++          count: 2280
+         }
+       }
+       reward {
+@@ -344910,7 +344910,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+     }
+@@ -344925,7 +344925,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+       reward {
+@@ -344943,7 +344943,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 9120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -344959,7 +344959,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -344977,7 +344977,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+     }
+@@ -344992,7 +344992,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       reward {
+@@ -345010,7 +345010,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 9600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345105,7 +345105,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 700
++          count: 2800
+         }
+       }
+       reward {
+@@ -345123,7 +345123,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+     }
+@@ -345138,7 +345138,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+       reward {
+@@ -345156,7 +345156,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 11200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345172,7 +345172,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 730
++          count: 2920
+         }
+       }
+       reward {
+@@ -345190,7 +345190,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+     }
+@@ -345205,7 +345205,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+       reward {
+@@ -345223,7 +345223,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 11680
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345239,7 +345239,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 770
++          count: 3080
+         }
+       }
+       reward {
+@@ -345257,7 +345257,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+     }
+@@ -345272,7 +345272,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+       reward {
+@@ -345290,7 +345290,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 12320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345355,7 +345355,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 300
++          count: 1200
+         }
+       }
+       reward {
+@@ -345373,7 +345373,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+     }
+@@ -345388,7 +345388,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -345406,7 +345406,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345422,7 +345422,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 870
++          count: 3480
+         }
+       }
+       reward {
+@@ -345440,7 +345440,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+     }
+@@ -345455,7 +345455,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+       reward {
+@@ -345473,7 +345473,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 13920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345489,7 +345489,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -345507,7 +345507,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -345522,7 +345522,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -345540,7 +345540,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345556,7 +345556,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -345574,7 +345574,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -345589,7 +345589,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -345607,7 +345607,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345623,7 +345623,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -345641,7 +345641,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -345656,7 +345656,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -345674,7 +345674,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345690,7 +345690,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -345708,7 +345708,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -345723,7 +345723,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -345741,7 +345741,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345757,7 +345757,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -345775,7 +345775,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -345790,7 +345790,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -345808,7 +345808,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345824,7 +345824,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -345842,7 +345842,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -345857,7 +345857,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -345875,7 +345875,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -345891,7 +345891,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 370
++          count: 1480
+         }
+       }
+       reward {
+@@ -345909,7 +345909,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+     }
+@@ -345924,7 +345924,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+       reward {
+@@ -345942,7 +345942,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 5920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -346007,7 +346007,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 400
++          count: 1600
+         }
+       }
+       reward {
+@@ -346025,7 +346025,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+     }
+@@ -346040,7 +346040,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+       reward {
+@@ -346058,7 +346058,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 6400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -346074,7 +346074,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -346092,7 +346092,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -346107,7 +346107,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -346125,7 +346125,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -346141,7 +346141,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -346159,7 +346159,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -346174,7 +346174,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -346192,7 +346192,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -346208,7 +346208,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 470
++          count: 1880
+         }
+       }
+       reward {
+@@ -346226,7 +346226,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+     }
+@@ -346241,7 +346241,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+       reward {
+@@ -346259,7 +346259,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 7520
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -358512,10 +358512,142 @@
+     }
+   }
+ }
+-batch_id: 1742321936065
++template {
++  template_id: "BADGE_EVENT_0114"
++  data {
++    template_id: "BADGE_EVENT_0114"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0114
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_EVENT_0118"
++  data {
++    template_id: "BADGE_EVENT_0118"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0118
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_MONTH2_SEASON_STORE_REDIRECT"
++  data {
++    template_id: "EVENT_PASS_MONTH2_SEASON_STORE_REDIRECT"
++    iapItemDisplay {
++      sku: "pgorelease.month2_deluxe_event_pass_track_redirect"
++      sortOrder: 1
++      hidden: true
++      title: "gotour_2025_deluxe_event_pass_track_unlock_title"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2024-01-01T10:00:00"
++      skuDisableTime: "2024-05-08T10:00:00"
++      skuEnableTimeUtcMs: 1704103200000
++      skuDisableTimeUtcMs: 1715162400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/20241209_gotour_2025_victini_003_1024x512.jpg"
++    }
++  }
++}
++template {
++  template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
++  data {
++    template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
++    itemSettings {
++      itemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_02
++      itemType: ITEM_TYPE_EVENT_PASS_POINT
++      category: ITEM_CATEGORY_EVENT_PASS_POINT
++      ignoreInventorySpace: true
++      itemCap: 999999
++      eventPassPoint {
++        eventPassId: "EVENT_PASS_APRIL2025_SEASON"
++      }
++      timePeriodCounters {
++        playerActivity {
++          limit: 300
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
++  data {
++    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
++    itemExpirationSettings {
++      item: ITEM_EVENT_PASS_POINT_LIVE_OPS_02
++      expirationTime: "2025-05-08T10:00:00"
++      emergencyExpirationTime: "2025-05-10T10:00:00"
++    }
++  }
++}
++template {
++  template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++  data {
++    template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++    iapItemDisplay {
++      sku: "pgorelease.month2_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      hidden: true
++      title: "gotour_2025_deluxe_event_pass_track_unlock_title"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2024-01-01T10:00:00"
++      skuDisableTime: "2024-05-08T10:00:00"
++      skuEnableTimeUtcMs: 1704103200000
++      skuDisableTimeUtcMs: 1715162400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/20241209_gotour_2025_victini_003_1024x512.jpg"
++    }
++  }
++}
++template {
++  template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++  data {
++    template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++    iapItemDisplay {
++      sku: "pgorelease.month2_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      hidden: true
++      title: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_title"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
++      skuEnableTime: "2024-01-01T10:00:00"
++      skuDisableTime: "2024-05-08T10:00:00"
++      skuEnableTimeUtcMs: 1704103200000
++      skuDisableTimeUtcMs: 1715162400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/20241209_gotour_2025_victini_003_1024x512.jpg"
++    }
++  }
++}
++template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++batch_id: 1742346490817
++experiment_id: 1
++experiment_id: 6
++experiment_id: 8
++experiment_id: 11
++experiment_id: 21
+ experiment_id: 101
+ experiment_id: 170
+-experiment_id: 173
++experiment_id: 174
+ experiment_id: 300
+ experiment_id: 302
+ experiment_id: 320
+@@ -358539,21 +358671,25 @@
+ experiment_id: 2650
+ experiment_id: 2800
+ experiment_id: 3032
++experiment_id: 3033
+ experiment_id: 3063
+ experiment_id: 3502
+ experiment_id: 3503
++experiment_id: 3504
+ experiment_id: 3507
+ experiment_id: 3518
+ experiment_id: 3524
+ experiment_id: 3536
++experiment_id: 3552
+ experiment_id: 3554
++experiment_id: 3556
+ experiment_id: 3685
+ experiment_id: 4691
+ experiment_id: 4998
++experiment_id: 5005
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5203
+ experiment_id: 5508
+ experiment_id: 5510
+ experiment_id: 6075
+@@ -358571,4 +358707,5 @@
+ experiment_id: 3500037
+ experiment_id: 4610000
+ experiment_id: 4700000
++experiment_id: 5000301
+ experiment_id: 6600407
