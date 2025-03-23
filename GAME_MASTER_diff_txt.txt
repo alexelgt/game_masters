@@ -1,429 +1,1099 @@
---- GAME_MASTER_old.txt	2025-03-20 19:35:31.728035179 +0100
-+++ GAME_MASTER.txt	2025-03-22 11:52:31.238201763 +0100
-@@ -116099,45 +116099,40 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-03-29T14:00:00"
--        eventEndTime: "2025-03-29T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_FuzzyRD2024"
-+        eventStartTime: "2025-03-05T10:00:00"
-+        eventEndTime: "2025-05-29T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_FFSR0325"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_02_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_FuzzyRD2024"
--        textRewardsKey: "text_rewards_key_FuzzyRD2024"
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_FFSR0325"
-+        textRewardsKey: "text_rewards_key_FFSR0325"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemon_id: PANCHAM
-+            pokemon_id: KUBFU
-           }
-         }
-         iconRewards {
--          type: POKEMON_ENCOUNTER
--          pokemonEncounter {
--            pokemon_id: CUBCHOO
--            pokemonDisplay {
--              form: CUBCHOO_NORMAL
--            }
-+          type: CANDY
-+          candy {
-+            pokemonId: KUBFU
-           }
-         }
-         iconRewards {
--          type: POKEMON_ENCOUNTER
--          pokemonEncounter {
--            pokemon_id: TEDDIURSA
--            pokemonDisplay {
--              form: TEDDIURSA_NORMAL
--            }
-+          type: ITEM
-+          item {
-+            item: ITEM_PAID_RAID_TICKET
-+            amount: 2
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1743256800000
--        clientEventEndTimeUtcMs: 1743267600000
-+        clientEventStartTimeUtcMs: 1741168800000
-+        clientEventEndTimeUtcMs: 1748548800000
-       }
--      descriptionOverride: "item_event_ticket_pink_desc_FuzzyRD2024"
-+      descriptionOverride: "item_event_ticket_evergreen_desc_FFSR0325"
+--- GAME_MASTER_old.txt	2025-03-22 11:52:31.238201763 +0100
++++ GAME_MASTER.txt	2025-03-23 11:30:27.294230776 +0100
+@@ -33754,6 +33754,21 @@
+   }
+ }
+ template {
++  template_id: "BADGE_EVENT_0114"
++  data {
++    template_id: "BADGE_EVENT_0114"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0114
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0117"
+   data {
+     template_id: "BADGE_EVENT_0117"
+@@ -33766,6 +33781,21 @@
+   }
+ }
+ template {
++  template_id: "BADGE_EVENT_0118"
++  data {
++    template_id: "BADGE_EVENT_0118"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0118
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVOLVED_TOTAL"
+   data {
+     template_id: "BADGE_EVOLVED_TOTAL"
+@@ -39162,6 +39192,342 @@
+   }
+ }
+ template {
++  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_RAID
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_DAY_01"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_DAY_01"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MILAN_DAY_01
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_DAY_02"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_DAY_02"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MILAN_DAY_02
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MILAN_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MILAN_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MILAN_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_01"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_01"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MUMBAI_DAY_01
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_02"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_02"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MUMBAI_DAY_02
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_MUMBAI_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_MUMBAI_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_MUMBAI_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_01"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_01"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_DAY_01
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_02"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_02"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_DAY_02
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SANTIAGO_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SANTIAGO_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SANTIAGO_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_01"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_01"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_DAY_01
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_02"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_02"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_DAY_02
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_SINGAPORE_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_SINGAPORE_TEST"
++    badgeSettings {
++      badgeType: BADGE_SAFARI_2025_SINGAPORE_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
+   template_id: "BADGE_SAFARI_ZONE_EUROPE_2017"
+   data {
+     template_id: "BADGE_SAFARI_ZONE_EUROPE_2017"
+@@ -68794,6 +69160,41 @@
+   }
+ }
+ template {
++  template_id: "EVENT_PASS_MONTH2_SEASON_STORE_REDIRECT"
++  data {
++    template_id: "EVENT_PASS_MONTH2_SEASON_STORE_REDIRECT"
++    iapItemDisplay {
++      sku: "pgorelease.month2_deluxe_event_pass_track_redirect"
++      sortOrder: 1
++      hidden: true
++      title: "gotour_2025_deluxe_event_pass_track_unlock_title"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2024-01-01T10:00:00"
++      skuDisableTime: "2024-05-08T10:00:00"
++      skuEnableTimeUtcMs: 1704103200000
++      skuDisableTimeUtcMs: 1715162400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/20241209_gotour_2025_victini_003_1024x512.jpg"
++    }
++  }
++}
++template {
++  template_id: "EVENT_PLANNER_SETTINGS"
++  data {
++    template_id: "EVENT_PLANNER_SETTINGS"
++    plannerSettings {
++      eventSettings {
++        messageTiming {
++          messageSendTime: TIMESLOT_START
++        }
++        messageTiming {
++          messageSendBeforeEventSeconds: 600
++          messageSendTime: TIMESLOT_EARLY
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "EVOLUTION_V0052_POKEMON_MEOWTH"
+   data {
+     template_id: "EVOLUTION_V0052_POKEMON_MEOWTH"
+@@ -116091,6 +116492,27 @@
+   }
+ }
+ template {
++  template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
++  data {
++    template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
++    itemSettings {
++      itemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_02
++      itemType: ITEM_TYPE_EVENT_PASS_POINT
++      category: ITEM_CATEGORY_EVENT_PASS_POINT
++      ignoreInventorySpace: true
++      itemCap: 999999
++      eventPassPoint {
++        eventPassId: "EVENT_PASS_APRIL2025_SEASON"
++      }
++      timePeriodCounters {
++        playerActivity {
++          limit: 300
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "ITEM_EVENT_TICKET_02"
+   data {
+     template_id: "ITEM_EVENT_TICKET_02"
+@@ -116918,6 +117340,17 @@
+   }
+ }
+ template {
++  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
++  data {
++    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
++    itemExpirationSettings {
++      item: ITEM_EVENT_PASS_POINT_LIVE_OPS_02
++      expirationTime: "2025-05-08T10:00:00"
++      emergencyExpirationTime: "2025-05-10T10:00:00"
++    }
++  }
++}
++template {
+   template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
+   data {
+     template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
+@@ -121409,6 +121842,42 @@
+   }
+ }
+ template {
++  template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++  data {
++    template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++    iapItemDisplay {
++      sku: "pgorelease.month2_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      hidden: true
++      title: "gotour_2025_deluxe_event_pass_track_unlock_title"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2024-01-01T10:00:00"
++      skuDisableTime: "2024-05-08T10:00:00"
++      skuEnableTimeUtcMs: 1704103200000
++      skuDisableTimeUtcMs: 1715162400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/20241209_gotour_2025_victini_003_1024x512.jpg"
++    }
++  }
++}
++template {
++  template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++  data {
++    template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++    iapItemDisplay {
++      sku: "pgorelease.month2_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      hidden: true
++      title: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_title"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
++      skuEnableTime: "2024-01-01T10:00:00"
++      skuDisableTime: "2024-05-08T10:00:00"
++      skuEnableTimeUtcMs: 1704103200000
++      skuDisableTimeUtcMs: 1715162400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/20241209_gotour_2025_victini_003_1024x512.jpg"
++    }
++  }
++}
++template {
+   template_id: "MP_SHARED_SETTINGS"
+   data {
+     template_id: "MP_SHARED_SETTINGS"
+@@ -140317,14 +140786,13 @@
+   }
+ }
+ template {
+-  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH"
++  template_id: "PTC_OAUTH_SETTINGS"
+   data {
+-    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
      }
    }
  }
-@@ -116150,16 +116145,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-03-29T14:00:00"
--        eventEndTime: "2025-03-29T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_details_FuzzyRD2024"
-+        eventStartTime: "2025-03-05T10:00:00"
-+        eventEndTime: "2025-05-29T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_details_FFSR0325"
-         ticketItem: ITEM_EVENT_TICKET_02
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1743256800000
--        clientEventEndTimeUtcMs: 1743267600000
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
-+        clientEventStartTimeUtcMs: 1741168800000
-+        clientEventEndTimeUtcMs: 1748548800000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_pink_details_FuzzyRD2024"
-+      descriptionOverride: "item_event_ticket_evergreen_details_FFSR0325"
+@@ -140604,7 +141072,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 5
++      dailySquashLimit: 20
      }
    }
  }
-@@ -116244,35 +116239,45 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-03-16T10:00:00"
--        eventEndTime: "2025-03-16T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_04_desc_CATCH_MASTERY_ARCHEN"
-+        eventStartTime: "2025-03-29T14:00:00"
-+        eventEndTime: "2025-03-29T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_FuzzyRD2024"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_04_TO_GIFT
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_archen_catch_mastery_2025.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo_archen_catch_mastery_2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CATCH_MASTERY_ARCHEN"
--        textRewardsKey: "text_rewards_key_CATCH_MASTERY_ARCHEN"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_FuzzyRD2024"
-+        textRewardsKey: "text_rewards_key_FuzzyRD2024"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemon_id: ARCHEN
-+            pokemon_id: PANCHAM
-           }
-         }
-         iconRewards {
--          type: EXPERIENCE
--          exp: 12000
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemon_id: CUBCHOO
-+            pokemonDisplay {
-+              form: CUBCHOO_NORMAL
-+            }
-+          }
-         }
-         iconRewards {
--          type: STARDUST
--          stardust: 3000
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemon_id: TEDDIURSA
-+            pokemonDisplay {
-+              form: TEDDIURSA_NORMAL
-+            }
-+          }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1742119200000
--        clientEventEndTimeUtcMs: 1742155200000
-+        clientEventStartTimeUtcMs: 1743256800000
-+        clientEventEndTimeUtcMs: 1743267600000
-       }
--      descriptionOverride: "item_event_ticket_04_details_CATCH_MASTERY_ARCHEN"
-+      descriptionOverride: "item_event_ticket_pink_desc_FuzzyRD2024"
-     }
+@@ -140772,6 +141240,15 @@
    }
  }
-@@ -116285,16 +116290,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-03-16T10:00:00"
--        eventEndTime: "2025-03-16T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_04_desc_CATCH_MASTERY_ARCHEN"
-+        eventStartTime: "2025-03-29T14:00:00"
-+        eventEndTime: "2025-03-29T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_details_FuzzyRD2024"
-         ticketItem: ITEM_EVENT_TICKET_04
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_archen_catch_mastery_2025.jpg"
--        clientEventStartTimeUtcMs: 1742119200000
--        clientEventEndTimeUtcMs: 1742155200000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-+        clientEventStartTimeUtcMs: 1743256800000
-+        clientEventEndTimeUtcMs: 1743267600000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_04_details_CATCH_MASTERY_ARCHEN"
-+      descriptionOverride: "item_event_ticket_pink_details_FuzzyRD2024"
-     }
-   }
- }
-@@ -346877,7 +346882,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: TAPU_KOKO
-+          pokemon_id: HEATRAN
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -347509,7 +347514,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: TAPU_KOKO
-+          pokemon_id: HEATRAN
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -348132,10 +348137,13 @@
-       sku: "bundle.cd2022.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       sale: true
--      spriteId: "bundle.halloween.small.1"
--      title: "bundle.halloween.small.1_title"
-+      spriteId: "bundle.general4.small.1"
-+      title: "bundle.general4.small.1_title"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2025-03-23T23:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1742774399000
-     }
-   }
- }
-@@ -348147,10 +348155,13 @@
-       sku: "bundle.cd2022.2"
-       category: IAP_CATEGORY_BUNDLE
+ template {
++  template_id: "RSVP_SUBSCRIBE_BY_GEO_CODE_GATE"
++  data {
++    template_id: "RSVP_SUBSCRIBE_BY_GEO_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++    }
++  }
++}
++template {
+   template_id: "RUNERIGUS_EVOLUTION_QUEST"
+   data {
+     template_id: "RUNERIGUS_EVOLUTION_QUEST"
+@@ -351199,6 +351676,7 @@
+       sku: "general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
-       sale: true
--      spriteId: "bundle.halloween.adventure.1"
--      title: "bundle.halloween.adventure.1_title"
-+      spriteId: "bundle.general1.medium.1"
-+      title: "bundle.general1.medium.1_title"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2025-03-23T23:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1742774399000
-     }
-   }
- }
-@@ -349347,9 +349358,15 @@
-       sku: "bundle.hisuiraidday2023.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle.general.remotebox.medium.1"
-       title: "great_raid_box_title"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2025-03-23T23:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1742774399000
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 1035
-     }
-   }
- }
-@@ -351146,12 +351163,12 @@
-       sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.2"
--      title: "general1.ticket.2_FuzzyRD2024_title"
-+      title: "general1.ticket._FFSR0325_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-03-29T17:00:00"
-+      skuDisableTime: "2025-03-10T20:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1743267600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1741636800000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
-     }
-   }
- }
-@@ -351165,12 +351182,12 @@
-       sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.2"
--      title: "general1.ticket.2_FuzzyRD2024_title"
-+      title: "general1.ticket._FFSR0325_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-03-29T17:00:00"
-+      skuDisableTime: "2025-03-10T20:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1743267600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1741636800000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
-     }
-   }
- }
-@@ -351218,13 +351235,13 @@
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CDC_Totodile25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -351217,6 +351695,7 @@
+       sku: "general2.ticket.3.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.4"
--      title: "general2.ticket4.CATCH_MASTERY_ARCHEN"
--      skuEnableTime: "2023-01-01T11:00:03"
--      skuDisableTime: "2025-03-16T20:00:00"
--      skuEnableTimeUtcMs: 1672570803000
--      skuDisableTimeUtcMs: 1742155200000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_archen_catch_mastery_2025.jpg"
-+      spriteId: "general2.ticket.2"
-+      title: "general1.ticket.2_FuzzyRD2024_title"
-+      skuEnableTime: "2023-01-01T11:00:01"
-+      skuDisableTime: "2025-03-29T17:00:00"
-+      skuEnableTimeUtcMs: 1672570801000
-+      skuDisableTimeUtcMs: 1743267600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-     }
-   }
- }
-@@ -351237,13 +351254,13 @@
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CDC_Totodile25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -352897,6 +353376,7 @@
+       sku: "pgorelease.general2.ticket.3"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.4"
--      title: "general2.ticket4.CATCH_MASTERY_ARCHEN"
--      skuEnableTime: "2023-01-01T11:00:03"
--      skuDisableTime: "2025-03-16T20:00:00"
--      skuEnableTimeUtcMs: 1672570803000
--      skuDisableTimeUtcMs: 1742155200000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_archen_catch_mastery_2025.jpg"
-+      spriteId: "general2.ticket.2"
-+      title: "general1.ticket.2_FuzzyRD2024_title"
-+      skuEnableTime: "2023-01-01T11:00:01"
-+      skuDisableTime: "2025-03-29T17:00:00"
-+      skuEnableTimeUtcMs: 1672570801000
-+      skuDisableTimeUtcMs: 1743267600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CDC_Totodile25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -352915,6 +353395,7 @@
+       sku: "pgorelease.general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CDC_Totodile25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358177,483 +358658,6 @@
      }
    }
  }
-@@ -352844,12 +352861,12 @@
-       sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.2"
--      title: "general1.ticket.2_FuzzyRD2024_title"
-+      title: "general1.ticket._FFSR0325_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-03-29T17:00:00"
-+      skuDisableTime: "2025-03-10T20:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1743267600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1741636800000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
-     }
-   }
- }
-@@ -352863,12 +352880,12 @@
-       sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.2"
--      title: "general1.ticket.2_FuzzyRD2024_title"
-+      title: "general1.ticket._FFSR0325_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-03-29T17:00:00"
-+      skuDisableTime: "2025-03-10T20:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1743267600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1741636800000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
-     }
-   }
- }
-@@ -352917,12 +352934,12 @@
-       sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.2"
--      title: "general2.ticket4.CATCH_MASTERY_ARCHEN"
-+      title: "general1.ticket.2_FuzzyRD2024_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-03-16T20:00:00"
-+      skuDisableTime: "2025-03-29T17:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1742155200000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_archen_catch_mastery_2025.jpg"
-+      skuDisableTimeUtcMs: 1743267600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-     }
-   }
- }
-@@ -352936,12 +352953,12 @@
-       sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.2"
--      title: "general2.ticket4.CATCH_MASTERY_ARCHEN"
-+      title: "general1.ticket.2_FuzzyRD2024_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-03-16T20:00:00"
-+      skuDisableTime: "2025-03-29T17:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1742155200000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_archen_catch_mastery_2025.jpg"
-+      skuDisableTimeUtcMs: 1743267600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
-     }
-   }
- }
-@@ -358637,7 +358654,7 @@
-     }
-   }
- }
--batch_id: 1742440688446
-+batch_id: 1742599507080
+-template {
+-  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_HATCH_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_RAID
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MILAN_ADD_ON_RAID_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MILAN_DAY_01"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MILAN_DAY_01"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MILAN_DAY_01
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MILAN_DAY_02"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MILAN_DAY_02"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MILAN_DAY_02
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MILAN_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MILAN_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MILAN_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_HATCH_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MUMBAI_ADD_ON_RAID_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_01"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_01"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MUMBAI_DAY_01
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_02"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MUMBAI_DAY_02"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MUMBAI_DAY_02
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_MUMBAI_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_MUMBAI_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_MUMBAI_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_HATCH_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SANTIAGO_ADD_ON_RAID_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_01"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_01"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SANTIAGO_DAY_01
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_02"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SANTIAGO_DAY_02"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SANTIAGO_DAY_02
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SANTIAGO_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SANTIAGO_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SANTIAGO_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_HATCH_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SINGAPORE_ADD_ON_RAID_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_01"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_01"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SINGAPORE_DAY_01
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_02"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SINGAPORE_DAY_02"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SINGAPORE_DAY_02
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_SAFARI_2025_SINGAPORE_TEST"
+-  data {
+-    template_id: "BADGE_SAFARI_2025_SINGAPORE_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_SAFARI_2025_SINGAPORE_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PLANNER_SETTINGS"
+-  data {
+-    template_id: "EVENT_PLANNER_SETTINGS"
+-    plannerSettings {
+-      eventSettings {
+-        messageTiming {
+-          messageSendTime: TIMESLOT_START
+-        }
+-        messageTiming {
+-          messageSendBeforeEventSeconds: 600
+-          messageSendTime: TIMESLOT_EARLY
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "RSVP_SUBSCRIBE_BY_GEO_CODE_GATE"
+-  data {
+-    template_id: "RSVP_SUBSCRIBE_BY_GEO_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_EVENT_0114"
+-  data {
+-    template_id: "BADGE_EVENT_0114"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0114
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_EVENT_0118"
+-  data {
+-    template_id: "BADGE_EVENT_0118"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0118
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_MONTH2_SEASON_STORE_REDIRECT"
+-  data {
+-    template_id: "EVENT_PASS_MONTH2_SEASON_STORE_REDIRECT"
+-    iapItemDisplay {
+-      sku: "pgorelease.month2_deluxe_event_pass_track_redirect"
+-      sortOrder: 1
+-      hidden: true
+-      title: "gotour_2025_deluxe_event_pass_track_unlock_title"
+-      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2024-01-01T10:00:00"
+-      skuDisableTime: "2024-05-08T10:00:00"
+-      skuEnableTimeUtcMs: 1704103200000
+-      skuDisableTimeUtcMs: 1715162400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20241209_gotour_2025_victini_003_1024x512.jpg"
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
+-  data {
+-    template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
+-    itemSettings {
+-      itemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_02
+-      itemType: ITEM_TYPE_EVENT_PASS_POINT
+-      category: ITEM_CATEGORY_EVENT_PASS_POINT
+-      ignoreInventorySpace: true
+-      itemCap: 999999
+-      eventPassPoint {
+-        eventPassId: "EVENT_PASS_APRIL2025_SEASON"
+-      }
+-      timePeriodCounters {
+-        playerActivity {
+-          limit: 300
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
+-  data {
+-    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
+-    itemExpirationSettings {
+-      item: ITEM_EVENT_PASS_POINT_LIVE_OPS_02
+-      expirationTime: "2025-05-08T10:00:00"
+-      emergencyExpirationTime: "2025-05-10T10:00:00"
+-    }
+-  }
+-}
+-template {
+-  template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK"
+-  data {
+-    template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK"
+-    iapItemDisplay {
+-      sku: "pgorelease.month2_deluxe_event_pass_track_unlock"
+-      sortOrder: 1
+-      hidden: true
+-      title: "gotour_2025_deluxe_event_pass_track_unlock_title"
+-      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2024-01-01T10:00:00"
+-      skuDisableTime: "2024-05-08T10:00:00"
+-      skuEnableTimeUtcMs: 1704103200000
+-      skuDisableTimeUtcMs: 1715162400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20241209_gotour_2025_victini_003_1024x512.jpg"
+-    }
+-  }
+-}
+-template {
+-  template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
+-  data {
+-    template_id: "MONTH2_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
+-    iapItemDisplay {
+-      sku: "pgorelease.month2_deluxe_event_pass_track_unlock_plus_points"
+-      sortOrder: 1
+-      hidden: true
+-      title: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_title"
+-      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
+-      skuEnableTime: "2024-01-01T10:00:00"
+-      skuDisableTime: "2024-05-08T10:00:00"
+-      skuEnableTimeUtcMs: 1704103200000
+-      skuDisableTimeUtcMs: 1715162400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/20241209_gotour_2025_victini_003_1024x512.jpg"
+-    }
+-  }
+-}
+-template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+ batch_id: 1742599507080
  experiment_id: 1
  experiment_id: 6
- experiment_id: 8
-@@ -358660,6 +358677,7 @@
- experiment_id: 1699
- experiment_id: 1820
- experiment_id: 2248
-+experiment_id: 2252
- experiment_id: 2297
- experiment_id: 2301
- experiment_id: 2399
-@@ -358668,13 +358686,14 @@
- experiment_id: 2600
- experiment_id: 2650
- experiment_id: 2800
-+experiment_id: 3025
- experiment_id: 3032
- experiment_id: 3033
- experiment_id: 3063
- experiment_id: 3502
- experiment_id: 3503
- experiment_id: 3504
--experiment_id: 3507
-+experiment_id: 3508
- experiment_id: 3518
- experiment_id: 3524
- experiment_id: 3536
-@@ -358688,6 +358707,7 @@
+@@ -358703,6 +358707,7 @@
+ experiment_id: 3685
+ experiment_id: 4691
+ experiment_id: 4967
++experiment_id: 4968
+ experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
- experiment_id: 5163
-+experiment_id: 5204
+@@ -358711,7 +358716,7 @@
  experiment_id: 5508
  experiment_id: 5510
  experiment_id: 6075
+-experiment_id: 8729
++experiment_id: 8730
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
