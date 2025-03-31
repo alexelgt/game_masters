@@ -1,85 +1,236 @@
---- GAME_MASTER_old.txt	2025-03-30 11:51:49.293875849 +0200
-+++ GAME_MASTER.txt	2025-03-31 19:25:37.133116812 +0200
-@@ -347941,7 +347941,7 @@
+--- GAME_MASTER_old.txt	2025-03-31 19:25:37.133116812 +0200
++++ GAME_MASTER.txt	2025-03-31 22:27:57.294495210 +0200
+@@ -140960,17 +140960,6 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
+   data {
+     template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
+@@ -311387,9 +311376,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
+-      raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -311397,6 +311384,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: HEATRAN
-+          pokemon_id: TAPU_LELE
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -348573,7 +348573,7 @@
+       ibfc {
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: HEATRAN
-+          pokemon_id: TAPU_LELE
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -351919,6 +351919,7 @@
-       sku: "evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._BugOut0325_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -351937,6 +351938,7 @@
-       sku: "evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._BugOut0325_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -353660,6 +353662,7 @@
-       sku: "pgorelease.evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._BugOut0325_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -353678,6 +353681,7 @@
-       sku: "pgorelease.evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._BugOut0325_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359252,7 +359256,7 @@
++      breadTierGroup: GROUP_3
      }
    }
  }
--batch_id: 1743324760468
-+batch_id: 1743329186747
- experiment_id: 1
- experiment_id: 6
- experiment_id: 8
-@@ -359288,19 +359292,18 @@
+@@ -311464,13 +311452,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311538,7 +311526,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -311546,6 +311533,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311620,6 +311608,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311687,7 +311676,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -311695,6 +311683,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311762,7 +311751,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -311770,6 +311758,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311837,7 +311826,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -311845,6 +311833,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311912,13 +311901,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -311985,7 +311974,6 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -311993,6 +311981,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -312060,7 +312049,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -312068,6 +312056,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -312135,7 +312124,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -312143,6 +312131,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -344512,6 +344501,7 @@
+   data {
+     template_id: "VERBOSE_LOG_COMBAT_SETTINGS"
+     verboseLogCombatSettings {
++      enabled: true
+       enableCoreCombat: true
+       enableCombatChallengeSetup: true
+       enableCombatVsSeekerSetup: true
+@@ -359256,12 +359246,7 @@
+     }
+   }
+ }
+-batch_id: 1743329186747
+-experiment_id: 1
+-experiment_id: 6
+-experiment_id: 8
+-experiment_id: 11
+-experiment_id: 21
++batch_id: 1743452127600
+ experiment_id: 101
+ experiment_id: 170
+ experiment_id: 175
+@@ -359287,11 +359272,9 @@
+ experiment_id: 2650
+ experiment_id: 2800
+ experiment_id: 3032
+-experiment_id: 3033
+ experiment_id: 3063
  experiment_id: 3502
  experiment_id: 3503
- experiment_id: 3504
--experiment_id: 3508
-+experiment_id: 3509
+-experiment_id: 3504
+ experiment_id: 3509
  experiment_id: 3518
--experiment_id: 3525
-+experiment_id: 3526
- experiment_id: 3536
--experiment_id: 3575
--experiment_id: 3577
- experiment_id: 3685
- experiment_id: 4698
- experiment_id: 4998
- experiment_id: 5160
+ experiment_id: 3526
+@@ -359303,7 +359286,6 @@
  experiment_id: 5162
  experiment_id: 5163
--experiment_id: 5206
-+experiment_id: 5207
-+experiment_id: 5263
+ experiment_id: 5207
+-experiment_id: 5263
  experiment_id: 5508
  experiment_id: 5510
  experiment_id: 6075
+@@ -359321,5 +359303,4 @@
+ experiment_id: 3500037
+ experiment_id: 4610000
+ experiment_id: 4700000
+-experiment_id: 5000301
+ experiment_id: 6600407
