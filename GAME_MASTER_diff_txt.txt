@@ -1,236 +1,518 @@
---- GAME_MASTER_old.txt	2025-03-31 19:25:37.133116812 +0200
-+++ GAME_MASTER.txt	2025-03-31 22:27:57.294495210 +0200
-@@ -140960,17 +140960,6 @@
+--- GAME_MASTER_old.txt	2025-03-31 22:27:57.294495210 +0200
++++ GAME_MASTER.txt	2025-04-01 08:09:48.960004657 +0200
+@@ -78519,6 +78519,19 @@
+         xlUpperBound: 3.15
+         xxlUpperBound: 3.675
+       }
++      breadOverrides {
++        camera {
++          cylinderRadiusM: 1.15
++          cylinderHeightM: 2.15
++        }
++        modelScaleV2: 1
++        modelHeight: 2
++        catchOverrideSettings {
++          collisionRadiusM: 1.4
++          collisionHeightM: 1.11
++          collisionHeadRadiusM: 0.74
++        }
++      }
+     }
    }
  }
- template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
-   template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
-   data {
-     template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
-@@ -311387,9 +311376,7 @@
+@@ -117543,40 +117556,35 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-03-19T10:00:00"
+-        eventEndTime: "2025-03-24T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_04_desc_MAR2025_DEEP_DEPTHS"
++        eventStartTime: "2025-04-06T14:00:00"
++        eventEndTime: "2025-04-06T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Tyrogue0425"
+         giftable: true
+         giftItem: ITEM_GLOBAL_EVENT_TICKET_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-deep-depths-2025.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-deep-depths-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_MAR2025_DEEP_DEPTHS"
+-        textRewardsKey: "text_rewards_key_MAR2025_DEEP_DEPTHS"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_Tyrogue0425"
++        textRewardsKey: "text_rewards_key_Tyrogue0425"
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemon_id: CLAUNCHER
++          type: ITEM
++          item {
++            item: ITEM_STAR_PIECE
++            amount: 1
+           }
+         }
+         iconRewards {
+           type: ITEM
+           item {
+             item: ITEM_INCUBATOR_SUPER
+-            amount: 2
+-          }
+-        }
+-        iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemon_id: NICKIT
++            amount: 1
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1742378400000
+-        clientEventEndTimeUtcMs: 1742846400000
++        clientEventStartTimeUtcMs: 1743948000000
++        clientEventEndTimeUtcMs: 1743958800000
+       }
+-      descriptionOverride: "item_event_ticket_04_desc_MAR2025_DEEP_DEPTHS"
++      descriptionOverride: "item_event_ticket_evergreen_desc_Tyrogue0425"
+     }
+   }
+ }
+@@ -117589,16 +117597,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-03-19T10:00:00"
+-        eventEndTime: "2025-03-24T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_04_details_MAR2025_DEEP_DEPTHS"
++        eventStartTime: "2025-04-06T14:00:00"
++        eventEndTime: "2025-04-06T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_Tyrogue0425"
+         ticketItem: ITEM_GLOBAL_EVENT_TICKET
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-deep-depths-2025.jpg"
+-        clientEventStartTimeUtcMs: 1742378400000
+-        clientEventEndTimeUtcMs: 1742846400000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
++        clientEventStartTimeUtcMs: 1743948000000
++        clientEventEndTimeUtcMs: 1743958800000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_04_details_MAR2025_DEEP_DEPTHS"
++      descriptionOverride: "item_event_ticket_evergreen_details_Tyrogue0425"
+     }
+   }
+ }
+@@ -311376,7 +311384,9 @@
        isTransferable: true
        isDeployable: true
        isTradable: true
--      raidBossDistanceOffset: 3
++      raidBossDistanceOffset: 3
        formChange {
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -311397,6 +311384,7 @@
+@@ -311384,7 +311394,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -311464,13 +311452,13 @@
+@@ -311452,13 +311461,13 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          candyCost: 25
          stardustCost: 10000
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -311538,7 +311526,6 @@
+@@ -311526,6 +311535,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -311546,6 +311533,7 @@
+@@ -311533,7 +311543,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -311620,6 +311608,7 @@
+@@ -311608,7 +311617,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -311687,7 +311676,6 @@
+@@ -311676,6 +311684,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -311695,6 +311683,7 @@
+@@ -311683,7 +311692,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -311762,7 +311751,6 @@
+@@ -311751,6 +311759,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -311770,6 +311758,7 @@
+@@ -311758,7 +311767,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -311837,7 +311826,6 @@
+@@ -311826,6 +311834,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -311845,6 +311833,7 @@
+@@ -311833,7 +311842,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -311912,13 +311901,13 @@
+@@ -311901,13 +311909,13 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_DANDY
          candyCost: 25
          stardustCost: 10000
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -311985,7 +311974,6 @@
+@@ -311974,6 +311982,7 @@
        isTradable: true
        raidBossDistanceOffset: 3
        formChange {
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -311993,6 +311981,7 @@
+@@ -311981,7 +311990,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -312060,7 +312049,6 @@
+@@ -312049,6 +312057,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -312068,6 +312056,7 @@
+@@ -312056,7 +312065,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -312135,7 +312124,6 @@
+@@ -312124,6 +312132,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -312143,6 +312131,7 @@
+@@ -312131,7 +312140,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -344512,6 +344501,7 @@
-   data {
-     template_id: "VERBOSE_LOG_COMBAT_SETTINGS"
-     verboseLogCombatSettings {
-+      enabled: true
-       enableCoreCombat: true
-       enableCombatChallengeSetup: true
-       enableCombatVsSeekerSetup: true
-@@ -359256,12 +359246,7 @@
+@@ -328952,8 +328960,9 @@
+         baseAttack: 85
+         baseDefense: 82
+       }
+-      quickMoves: QUICK_ATTACK_FAST
++      quickMoves: SUCKER_PUNCH_FAST
+       quickMoves: SNARL_FAST
++      quickMoves: QUICK_ATTACK_FAST
+       cinematicMoves: NIGHT_SLASH
+       cinematicMoves: PLAY_ROUGH
+       pokedexHeightM: 0.6
+@@ -329022,8 +329031,9 @@
+         baseAttack: 172
+         baseDefense: 164
+       }
+-      quickMoves: QUICK_ATTACK_FAST
++      quickMoves: SUCKER_PUNCH_FAST
+       quickMoves: SNARL_FAST
++      quickMoves: QUICK_ATTACK_FAST
+       cinematicMoves: NIGHT_SLASH
+       cinematicMoves: PLAY_ROUGH
+       pokedexHeightM: 1.2
+@@ -329458,6 +329468,7 @@
+       cinematicMoves: BODY_SLAM
+       cinematicMoves: SURF
+       cinematicMoves: ROCK_BLAST
++      cinematicMoves: CRUNCH
+       pokedexHeightM: 1
+       pokedexWeightKg: 115.5
+       parentPokemonId: CHEWTLE
+@@ -329947,7 +329958,7 @@
+       kmBuddyDistance: 5
+       buddy_size: BUDDY_FLYING
+       modelHeight: 0.3
+-      modelScaleV2: 1.68
++      modelScaleV2: 1.34
+       buddyOffsetMale: 33
+       buddyOffsetMale: 28
+       buddyOffsetMale: 25
+@@ -330032,7 +330043,7 @@
+       familyId: FAMILY_APPLIN
+       kmBuddyDistance: 5
+       modelHeight: 0.4
+-      modelScaleV2: 1.48
++      modelScaleV2: 1.924
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -330092,6 +330103,7 @@
+       cinematicMoves: DIG
+       cinematicMoves: BULLDOZE
+       cinematicMoves: EARTH_POWER
++      cinematicMoves: WRAP
+       pokedexHeightM: 2.2
+       pokedexWeightKg: 7.6
+       heightStdDev: 0.275
+@@ -330156,6 +330168,7 @@
+       cinematicMoves: DIG
+       cinematicMoves: BULLDOZE
+       cinematicMoves: EARTH_POWER
++      cinematicMoves: WRAP
+       pokedexHeightM: 3.8
+       pokedexWeightKg: 65.5
+       parentPokemonId: SILICOBRA
+@@ -339447,7 +339460,7 @@
+       }
+       quickMoves: SMACK_DOWN_FAST
+       quickMoves: MUD_SHOT_FAST
+-      cinematicMoves: ROCK_SLIDE
++      cinematicMoves: ROCK_BLAST
+       cinematicMoves: ROCK_TOMB
+       cinematicMoves: ANCIENT_POWER
+       pokedexHeightM: 2.3
+@@ -340387,6 +340400,7 @@
+       quickMoves: MUD_SHOT_FAST
+       cinematicMoves: EARTH_POWER
+       cinematicMoves: SEED_BOMB
++      cinematicMoves: WRAP
+       cinematicMoves: ACID_SPRAY
+       pokedexHeightM: 1.9
+       pokedexWeightKg: 58
+@@ -340784,6 +340798,7 @@
+       cinematicMoves: PSYBEAM
+       cinematicMoves: PSYSHOCK
+       cinematicMoves: PSYCHIC
++      cinematicMoves: DAZZLING_GLEAM
+       pokedexHeightM: 1.9
+       pokedexWeightKg: 90
+       parentPokemonId: FLITTLE
+@@ -341709,7 +341724,7 @@
+       quickMoves: ROCK_THROW_FAST
+       quickMoves: SMACK_DOWN_FAST
+       cinematicMoves: DAZZLING_GLEAM
+-      cinematicMoves: ROCK_SLIDE
++      cinematicMoves: POWER_GEM
+       cinematicMoves: SLUDGE_WAVE
+       pokedexHeightM: 0.7
+       pokedexWeightKg: 8
+@@ -341764,7 +341779,7 @@
+       quickMoves: ROCK_THROW_FAST
+       quickMoves: SMACK_DOWN_FAST
+       cinematicMoves: DAZZLING_GLEAM
+-      cinematicMoves: ROCK_SLIDE
++      cinematicMoves: POWER_GEM
+       cinematicMoves: SLUDGE_WAVE
+       pokedexHeightM: 1.5
+       pokedexWeightKg: 45
+@@ -352039,15 +352054,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket4._MAR2025_DEEP_DEPTHS"
+-      skuEnableTime: "2023-01-01T11:00:05"
+-      skuDisableTime: "2025-03-24T20:00:00"
+-      skuEnableTimeUtcMs: 1672570805000
+-      skuDisableTimeUtcMs: 1742846400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-deep-depths-2025.jpg"
++      title: "general1.ticket._Tyrogue0425_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-04-06T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1743958800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
      }
    }
  }
--batch_id: 1743329186747
--experiment_id: 1
--experiment_id: 6
--experiment_id: 8
--experiment_id: 11
--experiment_id: 21
-+batch_id: 1743452127600
+@@ -352058,15 +352073,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket4._MAR2025_DEEP_DEPTHS"
+-      skuEnableTime: "2023-01-01T11:00:05"
+-      skuDisableTime: "2025-03-24T20:00:00"
+-      skuEnableTimeUtcMs: 1672570805000
+-      skuDisableTimeUtcMs: 1742846400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-deep-depths-2025.jpg"
++      title: "general1.ticket._Tyrogue0425_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-04-06T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1743958800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
+     }
+   }
+ }
+@@ -353765,15 +353780,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket4._MAR2025_DEEP_DEPTHS"
+-      skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-03-24T20:00:00"
+-      skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1742846400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-deep-depths-2025.jpg"
++      title: "general1.ticket._Tyrogue0425_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-04-06T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1743958800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
+     }
+   }
+ }
+@@ -353784,15 +353799,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket4._MAR2025_DEEP_DEPTHS"
+-      skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-03-24T20:00:00"
+-      skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1742846400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-deep-depths-2025.jpg"
++      title: "general1.ticket._Tyrogue0425_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-04-06T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1743958800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
+     }
+   }
+ }
+@@ -359246,7 +359261,23 @@
+     }
+   }
+ }
+-batch_id: 1743452127600
++template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++batch_id: 1743473023810
++experiment_id: 1
++experiment_id: 6
++experiment_id: 8
++experiment_id: 11
++experiment_id: 21
  experiment_id: 101
  experiment_id: 170
  experiment_id: 175
-@@ -359287,11 +359272,9 @@
+@@ -359272,13 +359303,16 @@
  experiment_id: 2650
  experiment_id: 2800
  experiment_id: 3032
--experiment_id: 3033
++experiment_id: 3033
  experiment_id: 3063
  experiment_id: 3502
  experiment_id: 3503
--experiment_id: 3504
++experiment_id: 3504
  experiment_id: 3509
  experiment_id: 3518
  experiment_id: 3526
-@@ -359303,7 +359286,6 @@
- experiment_id: 5162
- experiment_id: 5163
- experiment_id: 5207
--experiment_id: 5263
- experiment_id: 5508
- experiment_id: 5510
- experiment_id: 6075
-@@ -359321,5 +359303,4 @@
+ experiment_id: 3536
++experiment_id: 3606
+ experiment_id: 3685
+ experiment_id: 4698
+ experiment_id: 4998
+@@ -359303,4 +359337,6 @@
  experiment_id: 3500037
  experiment_id: 4610000
  experiment_id: 4700000
--experiment_id: 5000301
++experiment_id: 5000301
  experiment_id: 6600407
++experiment_id: 6600417
