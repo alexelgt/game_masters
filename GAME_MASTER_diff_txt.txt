@@ -1,42 +1,1112 @@
---- GAME_MASTER_old.txt	2025-04-08 09:12:41.584255499 +0200
-+++ GAME_MASTER.txt	2025-04-08 19:52:39.245531077 +0200
-@@ -351991,7 +351991,6 @@
-       sku: "evergreenticket.1"
+--- GAME_MASTER_old.txt	2025-04-08 19:52:39.245531077 +0200
++++ GAME_MASTER.txt	2025-04-09 18:46:08.457533857 +0200
+@@ -117825,7 +117825,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+       }
+     }
+   }
+@@ -117841,7 +117841,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+       }
+     }
+   }
+@@ -117858,7 +117858,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 0.666666687
++        distanceMultiplier: 0.333333343
+       }
+     }
+   }
+@@ -118011,7 +118011,7 @@
+       dropTrainerLevel: 1
+       xp_boost {
+         xpMultiplier: 2
+-        boostDurationMs: 1800000
++        boostDurationMs: 3600000
+       }
+     }
+   }
+@@ -345805,8 +345805,8 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_SPRING_GREAT"
+     }
+   }
+ }
+@@ -348013,7 +348013,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: TAPU_LELE
++          pokemon_id: BLACEPHALON
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -348645,7 +348645,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: TAPU_LELE
++          pokemon_id: BLACEPHALON
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -352409,7 +352409,6 @@
+       sku: "general2.ticket.5"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
+       sortOrder: 2
 -      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._SIS_APR25_title"
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._SparringPartnersRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -352010,7 +352009,6 @@
-       sku: "evergreenticket.1.giftable"
+@@ -352428,7 +352427,6 @@
+       sku: "general2.ticket.5.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
+       sortOrder: 2
 -      hidden: true
-       spriteId: "evergreenticket.1"
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._SparringPartnersRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-04-14T20:00:00"
-@@ -353730,7 +353728,6 @@
-       sku: "pgorelease.evergreenticket.1"
+@@ -354110,7 +354108,6 @@
+       sku: "pgorelease.general2.ticket.5"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
+       sortOrder: 2
 -      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._SIS_APR25_title"
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._SparringPartnersRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -353749,7 +353746,6 @@
-       sku: "pgorelease.evergreenticket.1.giftable"
+@@ -354129,7 +354126,6 @@
+       sku: "pgorelease.general2.ticket.5.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
+       sortOrder: 2
 -      hidden: true
-       spriteId: "evergreenticket.1"
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._SparringPartnersRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-04-14T20:00:00"
-@@ -368987,6 +368983,7 @@
+@@ -359390,6 +359386,491 @@
+   }
+ }
+ template {
++  template_id: "LC_2025_OSAKA_EVENT_001"
++  data {
++    template_id: "LC_2025_OSAKA_EVENT_001"
++    locationCardSettings {
++      locationCard: LC_2025_OSAKA_EVENT_001
++      imageUrl: "lc_OsakaEvent2025_01"
++    }
++  }
++}
++template {
++  template_id: "LC_2025_OSAKA_EVENT_002"
++  data {
++    template_id: "LC_2025_OSAKA_EVENT_002"
++    locationCardSettings {
++      locationCard: LC_2025_OSAKA_EVENT_002
++      imageUrl: "lc_OsakaEvent2025_02"
++    }
++  }
++}
++template {
++  template_id: "PARTY_GET_REFACTOR_CODE_GATE"
++  data {
++    template_id: "PARTY_GET_REFACTOR_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++    }
++  }
++}
++template {
++  template_id: "sequence_freeze_shock"
++  data {
++    template_id: "sequence_freeze_shock"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx freeze_shock"
++      sequence: "sfx attacker 553-0_freeze_shock"
++      sequence: "wait 2.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++template {
++  template_id: "sequence_ice_burn"
++  data {
++    template_id: "sequence_ice_burn"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx ice_burn"
++      sequence: "sfx attacker 554-0_ice_burn"
++      sequence: "wait 2.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++template {
++  template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_7"
++  data {
++    template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_7"
++    breadMoveLevelSettings {
++      group: 7
++      aSettings {
++        candyCost: 1
++        6: 1
++      }
++      aSettings {
++        candyCost: 100
++        xpRewards: 6000
++        6: 600
++      }
++      aSettings {
++        xlCandyCost: 40
++        xpRewards: 8000
++        6: 800
++      }
++      bSettings {
++        candyCost: 50
++        xpRewards: 4000
++        6: 400
++      }
++      bSettings {
++        candyCost: 100
++        xpRewards: 6000
++        6: 600
++      }
++      bSettings {
++        xlCandyCost: 40
++        xpRewards: 8000
++        6: 800
++      }
++      cSettings {
++        candyCost: 50
++        xpRewards: 4000
++        6: 400
++      }
++      cSettings {
++        candyCost: 100
++        xpRewards: 6000
++        6: 600
++      }
++      cSettings {
++        xlCandyCost: 40
++        xpRewards: 8000
++        6: 800
++      }
++    }
++  }
++}
++template {
++  template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_Z"
++  data {
++    template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_Z"
++    breadMoveLevelSettings {
++      group: 7
++      aSettings {
++        candyCost: 1
++        6: 1
++      }
++      aSettings {
++        candyCost: 100
++        xpRewards: 6000
++        6: 600
++      }
++      aSettings {
++        xlCandyCost: 40
++        xpRewards: 8000
++        6: 800
++      }
++      bSettings {
++        candyCost: 50
++        xpRewards: 4000
++        6: 400
++      }
++      bSettings {
++        candyCost: 100
++        xpRewards: 6000
++        6: 600
++      }
++      bSettings {
++        xlCandyCost: 40
++        xpRewards: 8000
++        6: 800
++      }
++      cSettings {
++        candyCost: 50
++        xpRewards: 4000
++        6: 400
++      }
++      cSettings {
++        candyCost: 100
++        xpRewards: 6000
++        6: 600
++      }
++      cSettings {
++        xlCandyCost: 40
++        xpRewards: 8000
++        6: 800
++      }
++    }
++  }
++}
++template {
++  template_id: "COMBAT_V0469_MOVE_BEHEMOTH_BLADE"
++  data {
++    template_id: "COMBAT_V0469_MOVE_BEHEMOTH_BLADE"
++    combat_move {
++      uniqueId: BEHEMOTH_BLADE
++      type: POKEMON_TYPE_STEEL
++      power: 100
++      vfxName: "behemoth_blade"
++      energyDelta: -55
++    }
++  }
++}
++template {
++  template_id: "COMBAT_V0470_MOVE_BEHEMOTH_BASH"
++  data {
++    template_id: "COMBAT_V0470_MOVE_BEHEMOTH_BASH"
++    combat_move {
++      uniqueId: BEHEMOTH_BASH
++      type: POKEMON_TYPE_STEEL
++      power: 80
++      vfxName: "behemoth_bash"
++      energyDelta: -45
++    }
++  }
++}
++template {
++  template_id: "ITEM_RESOURCE_CROWNED_ZACIAN"
++  data {
++    template_id: "ITEM_RESOURCE_CROWNED_ZACIAN"
++    itemSettings {
++      itemId: ITEM_RESOURCE_CROWNED_ZACIAN
++      itemType: ITEM_TYPE_EVOLUTION_REQUIREMENT
++      category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
++      dropTrainerLevel: 1
++      ignoreInventorySpace: true
++      itemCap: 10000
++      hideItemInInventory: true
++    }
++  }
++}
++template {
++  template_id: "ITEM_RESOURCE_CROWNED_ZAMAZENTA"
++  data {
++    template_id: "ITEM_RESOURCE_CROWNED_ZAMAZENTA"
++    itemSettings {
++      itemId: ITEM_RESOURCE_CROWNED_ZAMAZENTA
++      itemType: ITEM_TYPE_EVOLUTION_REQUIREMENT
++      category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
++      dropTrainerLevel: 1
++      ignoreInventorySpace: true
++      itemCap: 10000
++      hideItemInInventory: true
++    }
++  }
++}
++template {
++  template_id: "V0469_MOVE_BEHEMOTH_BLADE"
++  data {
++    template_id: "V0469_MOVE_BEHEMOTH_BLADE"
++    moveSettings {
++      movementId: BEHEMOTH_BLADE
++      animationId: 5
++      pokemonType: POKEMON_TYPE_STEEL
++      power: 1
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "behemoth_blade"
++      durationMs: 3500
++      damageWindowStartMs: 2500
++      damageWindowEndMs: 3500
++      energyDelta: -1
++      isLocked: true
++    }
++  }
++}
++template {
++  template_id: "V0470_MOVE_BEHEMOTH_BASH"
++  data {
++    template_id: "V0470_MOVE_BEHEMOTH_BASH"
++    moveSettings {
++      movementId: BEHEMOTH_BASH
++      animationId: 5
++      pokemonType: POKEMON_TYPE_STEEL
++      power: 1
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "behemoth_bash"
++      durationMs: 1500
++      damageWindowStartMs: 900
++      damageWindowEndMs: 1400
++      energyDelta: -1
++      isLocked: true
++    }
++  }
++}
++template {
++  template_id: "VN_BM_054"
++  data {
++    template_id: "VN_BM_054"
++    moveSettings {
++      movementId: VN_BM_054
++      animationId: 5
++      pokemonType: POKEMON_TYPE_NORMAL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "max_shield"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++    }
++  }
++}
++template {
++  template_id: "VN_BM_055"
++  data {
++    template_id: "VN_BM_055"
++    moveSettings {
++      movementId: VN_BM_055
++      animationId: 5
++      pokemonType: POKEMON_TYPE_NORMAL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "max_heal"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++    }
++  }
++}
++template {
++  template_id: "VN_BM_056"
++  data {
++    template_id: "VN_BM_056"
++    moveSettings {
++      movementId: VN_BM_056
++      animationId: 5
++      pokemonType: POKEMON_TYPE_NORMAL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "max_shield"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++    }
++  }
++}
++template {
++  template_id: "VN_BM_057"
++  data {
++    template_id: "VN_BM_057"
++    moveSettings {
++      movementId: VN_BM_057
++      animationId: 5
++      pokemonType: POKEMON_TYPE_NORMAL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "max_heal"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++    }
++  }
++}
++template {
++  template_id: "VN_BM_058"
++  data {
++    template_id: "VN_BM_058"
++    moveSettings {
++      movementId: VN_BM_058
++      animationId: 5
++      pokemonType: POKEMON_TYPE_NORMAL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "max_shield"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++    }
++  }
++}
++template {
++  template_id: "VN_BM_059"
++  data {
++    template_id: "VN_BM_059"
++    moveSettings {
++      movementId: VN_BM_059
++      animationId: 5
++      pokemonType: POKEMON_TYPE_NORMAL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "max_heal"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++    }
++  }
++}
++template {
++  template_id: "VN_BM_060"
++  data {
++    template_id: "VN_BM_060"
++    moveSettings {
++      movementId: VN_BM_060
++      animationId: 5
++      pokemonType: POKEMON_TYPE_STEEL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "max_behemoth_blade"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++    }
++  }
++}
++template {
++  template_id: "VN_BM_061"
++  data {
++    template_id: "VN_BM_061"
++    moveSettings {
++      movementId: VN_BM_061
++      animationId: 5
++      pokemonType: POKEMON_TYPE_STEEL
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "max_behemoth_bash"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++      obMoveSettingsNumber18: 0
++    }
++  }
++}
++template {
++  template_id: "bundle.rrpstar.1"
++  data {
++    template_id: "bundle.rrpstar.1"
++    iapItemDisplay {
++      sku: "bundle.rrpstar.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general.remotebox.medium.1"
++      title: "great_raid_box_title"
++    }
++  }
++}
++template {
++  template_id: "sequence_behemoth_bash"
++  data {
++    template_id: "sequence_behemoth_bash"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "vfx behemoth_bash"
++      sequence: "wait 3.13"
++      sequence: "sfx attacker 126-0_fire_blast"
++      sequence: "wait 2.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++template {
++  template_id: "sequence_behemoth_blade"
++  data {
++    template_id: "sequence_behemoth_blade"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx behemoth_blade"
++      sequence: "sfx attacker 126-0_fire_blast"
++      sequence: "wait 2.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++template {
+   template_id: "EVENT_PASS_APRIL2025_SEASON"
+   data {
+     template_id: "EVENT_PASS_APRIL2025_SEASON"
+@@ -368425,26 +368906,6 @@
+   }
+ }
+ template {
+-  template_id: "LC_2025_OSAKA_EVENT_001"
+-  data {
+-    template_id: "LC_2025_OSAKA_EVENT_001"
+-    locationCardSettings {
+-      locationCard: LC_2025_OSAKA_EVENT_001
+-      imageUrl: "lc_OsakaEvent2025_01"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2025_OSAKA_EVENT_002"
+-  data {
+-    template_id: "LC_2025_OSAKA_EVENT_002"
+-    locationCardSettings {
+-      locationCard: LC_2025_OSAKA_EVENT_002
+-      imageUrl: "lc_OsakaEvent2025_02"
+-    }
+-  }
+-}
+-template {
+   template_id: "PTC_OAUTH_SETTINGS"
+   data {
+     template_id: "PTC_OAUTH_SETTINGS"
+@@ -368487,463 +368948,7 @@
+     }
+   }
+ }
+-template {
+-  template_id: "sequence_freeze_shock"
+-  data {
+-    template_id: "sequence_freeze_shock"
+-    move_sequence_settings {
+-      sequence: "anim attacker atk-move"
+-      sequence: "wait 0.5"
+-      sequence: "vfx freeze_shock"
+-      sequence: "sfx attacker 553-0_freeze_shock"
+-      sequence: "wait 2.0"
+-      sequence: "sys ui-sync"
+-      sequence: "sys complete"
+-    }
+-  }
+-}
+-template {
+-  template_id: "sequence_ice_burn"
+-  data {
+-    template_id: "sequence_ice_burn"
+-    move_sequence_settings {
+-      sequence: "anim attacker atk-move"
+-      sequence: "wait 0.5"
+-      sequence: "vfx ice_burn"
+-      sequence: "sfx attacker 554-0_ice_burn"
+-      sequence: "wait 2.0"
+-      sequence: "sys ui-sync"
+-      sequence: "sys complete"
+-    }
+-  }
+-}
+-template {
+-  template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_7"
+-  data {
+-    template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_7"
+-    breadMoveLevelSettings {
+-      group: 7
+-      aSettings {
+-        candyCost: 1
+-        6: 1
+-      }
+-      aSettings {
+-        candyCost: 100
+-        xpRewards: 6000
+-        6: 600
+-      }
+-      aSettings {
+-        xlCandyCost: 40
+-        xpRewards: 8000
+-        6: 800
+-      }
+-      bSettings {
+-        candyCost: 50
+-        xpRewards: 4000
+-        6: 400
+-      }
+-      bSettings {
+-        candyCost: 100
+-        xpRewards: 6000
+-        6: 600
+-      }
+-      bSettings {
+-        xlCandyCost: 40
+-        xpRewards: 8000
+-        6: 800
+-      }
+-      cSettings {
+-        candyCost: 50
+-        xpRewards: 4000
+-        6: 400
+-      }
+-      cSettings {
+-        candyCost: 100
+-        xpRewards: 6000
+-        6: 600
+-      }
+-      cSettings {
+-        xlCandyCost: 40
+-        xpRewards: 8000
+-        6: 800
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_Z"
+-  data {
+-    template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_Z"
+-    breadMoveLevelSettings {
+-      group: 7
+-      aSettings {
+-        candyCost: 1
+-        6: 1
+-      }
+-      aSettings {
+-        candyCost: 100
+-        xpRewards: 6000
+-        6: 600
+-      }
+-      aSettings {
+-        xlCandyCost: 40
+-        xpRewards: 8000
+-        6: 800
+-      }
+-      bSettings {
+-        candyCost: 50
+-        xpRewards: 4000
+-        6: 400
+-      }
+-      bSettings {
+-        candyCost: 100
+-        xpRewards: 6000
+-        6: 600
+-      }
+-      bSettings {
+-        xlCandyCost: 40
+-        xpRewards: 8000
+-        6: 800
+-      }
+-      cSettings {
+-        candyCost: 50
+-        xpRewards: 4000
+-        6: 400
+-      }
+-      cSettings {
+-        candyCost: 100
+-        xpRewards: 6000
+-        6: 600
+-      }
+-      cSettings {
+-        xlCandyCost: 40
+-        xpRewards: 8000
+-        6: 800
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "COMBAT_V0469_MOVE_BEHEMOTH_BLADE"
+-  data {
+-    template_id: "COMBAT_V0469_MOVE_BEHEMOTH_BLADE"
+-    combat_move {
+-      uniqueId: BEHEMOTH_BLADE
+-      type: POKEMON_TYPE_STEEL
+-      power: 100
+-      vfxName: "behemoth_blade"
+-      energyDelta: -55
+-    }
+-  }
+-}
+-template {
+-  template_id: "COMBAT_V0470_MOVE_BEHEMOTH_BASH"
+-  data {
+-    template_id: "COMBAT_V0470_MOVE_BEHEMOTH_BASH"
+-    combat_move {
+-      uniqueId: BEHEMOTH_BASH
+-      type: POKEMON_TYPE_STEEL
+-      power: 80
+-      vfxName: "behemoth_bash"
+-      energyDelta: -45
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_RESOURCE_CROWNED_ZACIAN"
+-  data {
+-    template_id: "ITEM_RESOURCE_CROWNED_ZACIAN"
+-    itemSettings {
+-      itemId: ITEM_RESOURCE_CROWNED_ZACIAN
+-      itemType: ITEM_TYPE_EVOLUTION_REQUIREMENT
+-      category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
+-      dropTrainerLevel: 1
+-      ignoreInventorySpace: true
+-      itemCap: 10000
+-      hideItemInInventory: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_RESOURCE_CROWNED_ZAMAZENTA"
+-  data {
+-    template_id: "ITEM_RESOURCE_CROWNED_ZAMAZENTA"
+-    itemSettings {
+-      itemId: ITEM_RESOURCE_CROWNED_ZAMAZENTA
+-      itemType: ITEM_TYPE_EVOLUTION_REQUIREMENT
+-      category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
+-      dropTrainerLevel: 1
+-      ignoreInventorySpace: true
+-      itemCap: 10000
+-      hideItemInInventory: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0469_MOVE_BEHEMOTH_BLADE"
+-  data {
+-    template_id: "V0469_MOVE_BEHEMOTH_BLADE"
+-    moveSettings {
+-      movementId: BEHEMOTH_BLADE
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_STEEL
+-      power: 1
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "behemoth_blade"
+-      durationMs: 3500
+-      damageWindowStartMs: 2500
+-      damageWindowEndMs: 3500
+-      energyDelta: -1
+-      isLocked: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0470_MOVE_BEHEMOTH_BASH"
+-  data {
+-    template_id: "V0470_MOVE_BEHEMOTH_BASH"
+-    moveSettings {
+-      movementId: BEHEMOTH_BASH
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_STEEL
+-      power: 1
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "behemoth_bash"
+-      durationMs: 1500
+-      damageWindowStartMs: 900
+-      damageWindowEndMs: 1400
+-      energyDelta: -1
+-      isLocked: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_054"
+-  data {
+-    template_id: "VN_BM_054"
+-    moveSettings {
+-      movementId: VN_BM_054
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_NORMAL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "max_shield"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_055"
+-  data {
+-    template_id: "VN_BM_055"
+-    moveSettings {
+-      movementId: VN_BM_055
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_NORMAL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "max_heal"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_056"
+-  data {
+-    template_id: "VN_BM_056"
+-    moveSettings {
+-      movementId: VN_BM_056
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_NORMAL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "max_shield"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_057"
+-  data {
+-    template_id: "VN_BM_057"
+-    moveSettings {
+-      movementId: VN_BM_057
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_NORMAL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "max_heal"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_058"
+-  data {
+-    template_id: "VN_BM_058"
+-    moveSettings {
+-      movementId: VN_BM_058
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_NORMAL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "max_shield"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_059"
+-  data {
+-    template_id: "VN_BM_059"
+-    moveSettings {
+-      movementId: VN_BM_059
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_NORMAL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "max_heal"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_060"
+-  data {
+-    template_id: "VN_BM_060"
+-    moveSettings {
+-      movementId: VN_BM_060
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_STEEL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "max_behemoth_blade"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_061"
+-  data {
+-    template_id: "VN_BM_061"
+-    moveSettings {
+-      movementId: VN_BM_061
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_STEEL
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "max_behemoth_bash"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-    }
+-  }
+-}
+-template {
+-  template_id: "bundle.rrpstar.1"
+-  data {
+-    template_id: "bundle.rrpstar.1"
+-    iapItemDisplay {
+-      sku: "bundle.rrpstar.1"
+-      category: IAP_CATEGORY_BUNDLE
+-      sortOrder: 1
+-      hidden: true
+-      spriteId: "bundle.general.remotebox.medium.1"
+-      title: "great_raid_box_title"
+-    }
+-  }
+-}
+-template {
+-  template_id: "sequence_behemoth_bash"
+-  data {
+-    template_id: "sequence_behemoth_bash"
+-    move_sequence_settings {
+-      sequence: "anim attacker atk-move"
+-      sequence: "vfx behemoth_bash"
+-      sequence: "wait 3.13"
+-      sequence: "sfx attacker 126-0_fire_blast"
+-      sequence: "wait 2.0"
+-      sequence: "sys ui-sync"
+-      sequence: "sys complete"
+-    }
+-  }
+-}
+-template {
+-  template_id: "sequence_behemoth_blade"
+-  data {
+-    template_id: "sequence_behemoth_blade"
+-    move_sequence_settings {
+-      sequence: "anim attacker atk-move"
+-      sequence: "wait 0.5"
+-      sequence: "vfx behemoth_blade"
+-      sequence: "sfx attacker 126-0_fire_blast"
+-      sequence: "wait 2.0"
+-      sequence: "sys ui-sync"
+-      sequence: "sys complete"
+-    }
+-  }
+-}
+-batch_id: 1744069268663
++batch_id: 1744198775495
+ experiment_id: 1
+ experiment_id: 6
+ experiment_id: 8
+@@ -368951,7 +368956,7 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 170
+-experiment_id: 176
++experiment_id: 177
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 361
+@@ -368979,14 +368984,18 @@
+ experiment_id: 3502
+ experiment_id: 3503
+ experiment_id: 3504
+-experiment_id: 3509
++experiment_id: 3510
  experiment_id: 3519
  experiment_id: 3527
  experiment_id: 3536
-+experiment_id: 3604
++experiment_id: 3599
++experiment_id: 3600
+ experiment_id: 3604
  experiment_id: 3685
++experiment_id: 4979
  experiment_id: 4993
  experiment_id: 4998
++experiment_id: 5011
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
