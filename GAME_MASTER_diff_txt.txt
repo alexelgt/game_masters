@@ -1,19 +1,772 @@
---- GAME_MASTER_old.txt	2025-04-10 08:14:51.057189649 +0200
-+++ GAME_MASTER.txt	2025-04-10 19:44:22.180378781 +0200
-@@ -369025,7 +369025,7 @@
+--- GAME_MASTER_old.txt	2025-04-10 19:44:22.180378781 +0200
++++ GAME_MASTER.txt	2025-04-12 12:58:15.989898678 +0200
+@@ -58269,67 +58269,79 @@
+         type: POKEMON_BANLIST
+         pokemonBanList {
+           pokemon {
+-            id: AZUMARILL
++            id: DRAPION
++            forms: DRAPION_NORMAL
+           }
+           pokemon {
+-            id: TALONFLAME
++            id: CRADILY
++            forms: CRADILY_NORMAL
+           }
+           pokemon {
+-            id: WIGGLYTUFF
++            id: LAPRAS
++            forms: LAPRAS_NORMAL
++            forms: LAPRAS_COSTUME_2020
+           }
+           pokemon {
+-            id: CLODSIRE
++            id: SERPERIOR
+           }
+           pokemon {
+-            id: QUAGSIRE
++            id: MANDIBUZZ
+           }
+           pokemon {
+-            id: FERALIGATR
++            id: BLASTOISE
++            forms: BLASTOISE_NORMAL
++            forms: BLASTOISE_COPY_2019
+           }
+           pokemon {
+-            id: DUNSPARCE
++            id: SABLEYE
++            forms: SABLEYE_NORMAL
++            forms: SABLEYE_COSTUME_2020
+           }
+           pokemon {
+-            id: DEWGONG
++            id: ANNIHILAPE
+           }
+           pokemon {
+-            id: TOXAPEX
++            id: GOLISOPOD
+           }
+           pokemon {
+-            id: SANDSLASH
+-            forms: SANDSLASH_ALOLA
++            id: GASTRODON
++            forms: GASTRODON_EAST_SEA
++            forms: GASTRODON_WEST_SEA
+           }
+           pokemon {
+-            id: MALAMAR
++            id: CLODSIRE
+           }
+           pokemon {
+-            id: MANDIBUZZ
++            id: AZUMARILL
+           }
+           pokemon {
+-            id: DIGGERSBY
++            id: WIGGLYTUFF
+           }
+           pokemon {
+-            id: JUMPLUFF
++            id: TALONFLAME
+           }
+           pokemon {
+-            id: FERROTHORN
++            id: MAROWAK
++            forms: MAROWAK_NORMAL
+           }
+           pokemon {
+-            id: DRAPION
++            id: FERALIGATR
++            forms: FERALIGATR_NORMAL
+           }
+           pokemon {
+-            id: MAROWAK
+-            forms: MAROWAK_NORMAL
+-            forms: FORM_UNSET
++            id: MORPEKO
++            forms: MORPEKO_FULL_BELLY
+           }
+           pokemon {
+-            id: GASTRODON
++            id: WEEZING
++            forms: WEEZING_GALARIAN
+           }
+           pokemon {
+-            id: SERPERIOR
++            id: MALAMAR
+           }
+           pokemon {
+-            id: GRENINJA
++            id: JUMPLUFF
++            forms: JUMPLUFF_NORMAL
+           }
+         }
+       }
+@@ -116717,46 +116729,41 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-04-03T10:00:00"
+-        eventEndTime: "2025-04-07T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_desc_stunning_styles"
++        eventStartTime: "2025-04-27T14:00:00"
++        eventEndTime: "2025-04-27T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Vanillite25"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250311_pgo_ticket_shellos_espurr_1024x512.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250311_pgo_ticket_shellos_espurr_1024x512.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_stunning_styles"
+-        textRewardsKey: "text_rewards_key_stunning_styles"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CD_Vanillite25"
++        textRewardsKey: "text_rewards_key_CD_Vanillite25"
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemonEncounter {
+-            pokemon_id: SHELLOS
+-            pokemonDisplay {
+-              form: SHELLOS_EAST_SEA
+-            }
++            pokemon_id: VANILLUXE
+           }
+         }
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemon_id: SHELLOS
+-            pokemonDisplay {
+-              form: SHELLOS_WEST_SEA
+-            }
++          type: ITEM
++          item {
++            item: ITEM_LUCKY_EGG
++            amount: 1
+           }
+         }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_PAID_RAID_TICKET
+-            amount: 4
++            item: ITEM_XL_RARE_CANDY
++            amount: 1
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1743674400000
+-        clientEventEndTimeUtcMs: 1744056000000
++        clientEventStartTimeUtcMs: 1745762400000
++        clientEventEndTimeUtcMs: 1745773200000
+       }
+-      descriptionOverride: "item_event_ticket_desc_stunning_styles"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Vanillite25"
      }
    }
  }
--batch_id: 1744264264136
-+batch_id: 1744272678280
+@@ -116769,16 +116776,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-04-03T10:00:00"
+-        eventEndTime: "2025-04-07T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_desc_stunning_styles"
++        eventStartTime: "2025-04-27T14:00:00"
++        eventEndTime: "2025-04-27T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Vanillite25"
+         ticketItem: ITEM_EVENT_TICKET_03
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250311_pgo_ticket_shellos_espurr_1024x512.jpg"
+-        clientEventStartTimeUtcMs: 1743674400000
+-        clientEventEndTimeUtcMs: 1744056000000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
++        clientEventStartTimeUtcMs: 1745762400000
++        clientEventEndTimeUtcMs: 1745773200000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_desc_stunning_styles"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Vanillite25"
+     }
+   }
+ }
+@@ -117127,29 +117134,28 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-02-01T10:00:00"
+-        eventEndTime: "2025-02-28T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_FebMonthly2025"
++        eventStartTime: "2025-04-19T14:00:00"
++        eventEndTime: "2025-04-19T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_gmaxsnorlax25"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_09_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_GMAX_Snorlax_2025_nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_FebMonthly2025"
+-        textRewardsKey: "text_rewards_key_FebMonthly2025"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo_GMAX_Snorlax_2025_nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_gmaxsnorlax25"
++        textRewardsKey: "text_rewards_key_gmaxsnorlax25"
+         iconRewards {
+-          type: EXPERIENCE
+-          exp: 15000
+-        }
+-        iconRewards {
+-          type: STARDUST
+-          stardust: 15000
++          type: ITEM
++          item {
++            item: ITEM_MAX_BOOST
++            amount: 1
++          }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1738404000000
+-        clientEventEndTimeUtcMs: 1740772800000
++        clientEventStartTimeUtcMs: 1745071200000
++        clientEventEndTimeUtcMs: 1745082000000
+       }
+-      descriptionOverride: "item_event_ticket_gray_desc_FebMonthly2025"
++      descriptionOverride: "item_event_ticket_gray_desc_gmaxsnorlax25"
+     }
+   }
+ }
+@@ -117162,16 +117168,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-02-01T10:00:00"
+-        eventEndTime: "2025-02-28T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_FebMonthly2025"
++        eventStartTime: "2025-04-19T14:00:00"
++        eventEndTime: "2025-04-19T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_details_gmaxsnorlax25"
+         ticketItem: ITEM_EVENT_TICKET_09
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
+-        clientEventStartTimeUtcMs: 1738404000000
+-        clientEventEndTimeUtcMs: 1740772800000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_GMAX_Snorlax_2025_nologo.jpg"
++        clientEventStartTimeUtcMs: 1745071200000
++        clientEventEndTimeUtcMs: 1745082000000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_FebMonthly2025"
++      descriptionOverride: "item_event_ticket_gray_details_gmaxsnorlax25"
+     }
+   }
+ }
+@@ -117488,7 +117494,7 @@
+     itemExpirationSettings {
+       item: ITEM_LUCKY_FRIEND_APPLICATOR
+       expirationTime: "2025-05-11T23:59:00"
+-      emergencyExpirationTime: "2025-05-12T23:59:00"
++      emergencyExpirationTime: "2025-05-12T10:00:00"
+     }
+   }
+ }
+@@ -118312,6 +118318,8 @@
+       itemType: ITEM_TYPE_POSTCARD_INVENTORY
+       category: ITEM_CATEGORY_POSTCARD_INVENTORY
+       dropTrainerLevel: 100
++      nameOverride: "item_postcard_inventory_name_stamp"
++      descriptionOverride: "item_postcard_inventory_desc_stamp"
+     }
+   }
+ }
+@@ -167746,10 +167754,11 @@
+   data {
+     template_id: "STAMP_COLLECTION_SETTINGS"
+     stampCollectionSettings {
+-      defaultColorPool: "#0f03fc"
+-      defaultColorPool: "#fc0328"
+-      defaultColorPool: "#205723"
+-      defaultColorPool: "#ffb700"
++      version: -6344194
++      defaultColorPool: "#2200CF"
++      defaultColorPool: "#F14400"
++      defaultColorPool: "#28AF3C"
++      defaultColorPool: "#FF9D00"
+       giftingMinFriendshipLevel: 2
+       minPlayerLevel: 5
+     }
+@@ -329959,12 +329968,16 @@
+       kmBuddyDistance: 5
+       modelHeight: 0.2
+       evolutionBranch {
+-        evolution: FLAPPLE
+-        candyCost: 400
++        evolution: APPLETUN
++        evolutionItemRequirement: 1151
++        candyCost: 200
++        evolutionItemRequirementCost: 20
+       }
+       evolutionBranch {
+-        evolution: APPLETUN
+-        candyCost: 400
++        evolution: FLAPPLE
++        evolutionItemRequirement: 1152
++        candyCost: 200
++        evolutionItemRequirementCost: 20
+       }
+       modelScaleV2: 2
+       buddyOffsetMale: 0
+@@ -340912,13 +340925,19 @@
+       type: POKEMON_TYPE_FAIRY
+       type2: POKEMON_TYPE_STEEL
+       camera {
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.54
+       }
+       encounter {
++        collisionRadiusM: 0.2
++        collisionHeightM: 0.5
++        collisionHeadRadiusM: 0.2
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+@@ -340937,10 +340956,16 @@
+       weightStdDev: 1.1125
+       familyId: FAMILY_TINKATINK
+       kmBuddyDistance: 3
++      modelHeight: 0.44
+       evolutionBranch {
+         evolution: TINKATUFF
+         candyCost: 25
+       }
++      modelScaleV2: 1.1
++      buddyScale: 12
++      buddyPortraitOffset: 50
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 200
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+@@ -340948,6 +340973,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 1
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -340963,8 +340989,13 @@
+       type: POKEMON_TYPE_FAIRY
+       type2: POKEMON_TYPE_STEEL
+       camera {
++        cylinderRadiusM: 0.88
++        cylinderHeightM: 0.88
+       }
+       encounter {
++        collisionRadiusM: 0.25
++        collisionHeightM: 0.2
++        collisionHeadRadiusM: 0.2
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         bonusCandyCaptureReward: 2
+@@ -340972,6 +341003,7 @@
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 4
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
+@@ -340992,10 +341024,16 @@
+       weightStdDev: 7.3875
+       familyId: FAMILY_TINKATINK
+       kmBuddyDistance: 3
++      modelHeight: 0.7
+       evolutionBranch {
+         evolution: TINKATON
+         candyCost: 100
+       }
++      modelScaleV2: 1
++      buddyScale: 12
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+@@ -341003,6 +341041,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 1
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -341018,8 +341057,13 @@
+       type: POKEMON_TYPE_FAIRY
+       type2: POKEMON_TYPE_STEEL
+       camera {
++        cylinderRadiusM: 2.6
++        cylinderHeightM: 1.6
+       }
+       encounter {
++        collisionRadiusM: 0.2
++        collisionHeightM: 0.2
++        collisionHeadRadiusM: 0.2
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         bonusCandyCaptureReward: 7
+@@ -341027,6 +341071,7 @@
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 6.1
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 2
+@@ -341049,6 +341094,12 @@
+       weightStdDev: 14.1
+       familyId: FAMILY_TINKATINK
+       kmBuddyDistance: 3
++      modelHeight: 0.7
++      modelScaleV2: 1
++      buddyScale: 12
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 50
++      buddyPortraitOffset: -1200
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+@@ -341056,6 +341107,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 1
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -352334,16 +352386,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general2.ticket.3"
+-      title: "general2.ticket._stunning_styles_ticket_title"
+-      description: "item_event_ticket_desc_stunning_styles"
+-      skuEnableTime: "2023-01-01T11:00:02"
+-      skuDisableTime: "2025-04-07T20:00:00"
+-      skuEnableTimeUtcMs: 1672570802000
+-      skuDisableTimeUtcMs: 1744056000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250311_pgo_ticket_shellos_espurr_1024x512.jpg"
++      spriteId: "general1.ticket.2"
++      title: "general1.ticket.2_vanillite_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-04-27T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1745773200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
+     }
+   }
+ }
+@@ -352354,16 +352405,14 @@
+     iapItemDisplay {
+       sku: "general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general2.ticket.3"
+-      title: "general2.ticket._stunning_styles_ticket_title"
+-      description: "item_event_ticket_desc_stunning_styles"
+-      skuEnableTime: "2023-01-01T11:00:02"
+-      skuDisableTime: "2025-04-07T20:00:00"
+-      skuEnableTimeUtcMs: 1672570802000
+-      skuDisableTimeUtcMs: 1744056000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250311_pgo_ticket_shellos_espurr_1024x512.jpg"
++      spriteId: "general1.ticket.2"
++      title: "general1.ticket.2_vanillite_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-04-27T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1745773200000
+     }
+   }
+ }
+@@ -352485,6 +352534,7 @@
+       sku: "general2.ticket.7"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.7"
+       title: "general2.ticket.7_AprilMonthly2025_title"
+       description: "item_event_ticket_gray_details_AprilMonthly2025"
+@@ -352504,6 +352554,7 @@
+       sku: "general2.ticket.7.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.7"
+       title: "general2.ticket.7_AprilMonthly2025_title"
+       description: "item_event_ticket_gray_details_AprilMonthly2025"
+@@ -352562,16 +352613,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general1.ticket.5_FebMonthly2025_title"
+-      description: "general1.ticket.5_FebMonthly2025_description"
++      title: "general1.ticket.5_gmaxsnorlax25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-02-10T20:00:00"
++      skuDisableTime: "2025-04-19T16:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1739217600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++      skuDisableTimeUtcMs: 1745078400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_GMAX_Snorlax_2025_nologo.jpg"
+     }
+   }
+ }
+@@ -352582,16 +352632,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general1.ticket.5_FebMonthly2025_title"
+-      description: "general1.ticket.5_FebMonthly2025_description"
++      title: "general1.ticket.5_gmaxsnorlax25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-02-10T20:00:00"
++      skuDisableTime: "2025-04-19T16:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1739217600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++      skuDisableTimeUtcMs: 1745078400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_GMAX_Snorlax_2025_nologo.jpg"
+     }
+   }
+ }
+@@ -354032,16 +354081,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general2.ticket.3"
+-      title: "general2.ticket._stunning_styles_ticket_title"
+-      description: "item_event_ticket_desc_stunning_styles"
+-      skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-04-07T20:00:00"
+-      skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1744056000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250311_pgo_ticket_shellos_espurr_1024x512.jpg"
++      spriteId: "general1.ticket.2"
++      title: "general1.ticket.2_vanillite_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-04-27T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1745773200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
+     }
+   }
+ }
+@@ -354052,16 +354100,14 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+-      spriteId: "general2.ticket.3"
+-      title: "general2.ticket._stunning_styles_ticket_title"
+-      description: "item_event_ticket_desc_stunning_styles"
+-      skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-04-07T20:00:00"
+-      skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1744056000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250311_pgo_ticket_shellos_espurr_1024x512.jpg"
++      spriteId: "general1.ticket.2"
++      title: "general1.ticket.2_vanillite_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-04-27T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1745773200000
+     }
+   }
+ }
+@@ -354183,6 +354229,7 @@
+       sku: "pgorelease.general2.ticket.7"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.7"
+       title: "general2.ticket.7_AprilMonthly2025_title"
+       description: "item_event_ticket_gray_details_AprilMonthly2025"
+@@ -354202,6 +354249,7 @@
+       sku: "pgorelease.general2.ticket.7.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.7"
+       title: "general2.ticket.7_AprilMonthly2025_title"
+       description: "item_event_ticket_gray_details_AprilMonthly2025"
+@@ -354260,16 +354308,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general1.ticket.5_FebMonthly2025_title"
+-      description: "general1.ticket.5_FebMonthly2025_description"
++      title: "general1.ticket.5_gmaxsnorlax25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-02-10T20:00:00"
++      skuDisableTime: "2025-04-19T16:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1739217600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++      skuDisableTimeUtcMs: 1745078400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_GMAX_Snorlax_2025_nologo.jpg"
+     }
+   }
+ }
+@@ -354280,16 +354327,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general1.ticket.5_FebMonthly2025_title"
+-      description: "general1.ticket.5_FebMonthly2025_description"
++      title: "general1.ticket.5_gmaxsnorlax25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-02-10T20:00:00"
++      skuDisableTime: "2025-04-19T16:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1739217600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-eggspeditionpass-2024.jpg"
++      skuDisableTimeUtcMs: 1745078400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_GMAX_Snorlax_2025_nologo.jpg"
+     }
+   }
+ }
+@@ -359836,9 +359882,15 @@
+       sku: "bundle.rrpstar.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general.remotebox.medium.1"
+       title: "great_raid_box_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-04-13T17:00:00"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1744563600000
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 490
+     }
+   }
+ }
+@@ -369025,7 +369077,47 @@
+     }
+   }
+ }
+-batch_id: 1744272678280
++template {
++  template_id: "ITEM_OTHER_EVOLUTION_STONE_MAPLE_A"
++  data {
++    template_id: "ITEM_OTHER_EVOLUTION_STONE_MAPLE_A"
++    itemSettings {
++      itemId: 1151
++      itemType: ITEM_TYPE_EVOLUTION_REQUIREMENT
++      category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
++      dropTrainerLevel: 10
++      ignoreInventorySpace: true
++    }
++  }
++}
++template {
++  template_id: "ITEM_OTHER_EVOLUTION_STONE_MAPLE_B"
++  data {
++    template_id: "ITEM_OTHER_EVOLUTION_STONE_MAPLE_B"
++    itemSettings {
++      itemId: 1152
++      itemType: ITEM_TYPE_EVOLUTION_REQUIREMENT
++      category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
++      dropTrainerLevel: 10
++      ignoreInventorySpace: true
++    }
++  }
++}
++template {
++  template_id: "bundle.songkran2025.1"
++  data {
++    template_id: "bundle.songkran2025.1"
++    iapItemDisplay {
++      sku: "bundle.songkran2025.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.xmas.medium.1"
++      title: "bundle.regional.box.1_title"
++    }
++  }
++}
++batch_id: 1744419470963
  experiment_id: 1
  experiment_id: 6
  experiment_id: 8
-@@ -369071,7 +369071,6 @@
+@@ -369046,6 +369138,7 @@
+ experiment_id: 807
+ experiment_id: 1699
+ experiment_id: 1820
++experiment_id: 2230
+ experiment_id: 2248
+ experiment_id: 2297
+ experiment_id: 2301
+@@ -369066,7 +369159,7 @@
+ experiment_id: 3527
+ experiment_id: 3536
+ experiment_id: 3599
+-experiment_id: 3600
++experiment_id: 3601
+ experiment_id: 3604
  experiment_id: 3685
  experiment_id: 4691
- experiment_id: 4979
--experiment_id: 4993
- experiment_id: 4998
+@@ -369075,6 +369168,7 @@
  experiment_id: 5160
  experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5210
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
+@@ -369085,8 +369179,9 @@
+ experiment_id: 7015
+ experiment_id: 7018
+ experiment_id: 7020
+-experiment_id: 8911
++experiment_id: 7021
+ experiment_id: 8925
++experiment_id: 8926
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
