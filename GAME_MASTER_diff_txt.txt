@@ -1,34 +1,126 @@
---- GAME_MASTER_old.txt	2025-04-12 12:58:15.989898678 +0200
-+++ GAME_MASTER.txt	2025-04-13 10:05:39.950943310 +0200
-@@ -141281,7 +141281,7 @@
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
-       enabled: true
--      dailySquashLimit: 5
-+      dailySquashLimit: 20
+--- GAME_MASTER_old.txt	2025-04-13 10:05:39.950943310 +0200
++++ GAME_MASTER.txt	2025-04-13 20:14:26.612806536 +0200
+@@ -233390,6 +233390,7 @@
+       cinematicMoves: CLOSE_COMBAT
+       cinematicMoves: EARTHQUAKE
+       cinematicMoves: ROCK_BLAST
++      cinematicMoves: UPPER_HAND
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -248148,6 +248149,7 @@
+       cinematicMoves: HEAVY_SLAM
+       cinematicMoves: LOW_SWEEP
+       cinematicMoves: CROSS_CHOP
++      cinematicMoves: UPPER_HAND
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -248242,6 +248244,7 @@
+       cinematicMoves: HEAVY_SLAM
+       cinematicMoves: LOW_SWEEP
+       cinematicMoves: CROSS_CHOP
++      cinematicMoves: UPPER_HAND
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -248363,6 +248366,7 @@
+       cinematicMoves: CLOSE_COMBAT
+       cinematicMoves: DYNAMIC_PUNCH
+       cinematicMoves: SUPER_POWER
++      cinematicMoves: UPPER_HAND
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -248457,6 +248461,7 @@
+       cinematicMoves: CLOSE_COMBAT
+       cinematicMoves: DYNAMIC_PUNCH
+       cinematicMoves: SUPER_POWER
++      cinematicMoves: UPPER_HAND
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -291156,6 +291161,7 @@
+       cinematicMoves: BRICK_BREAK
+       cinematicMoves: FOUL_PLAY
+       cinematicMoves: THUNDER_PUNCH
++      cinematicMoves: UPPER_HAND
+       animationTime: 1.9
+       animationTime: 0.6667
+       animationTime: 1.8
+@@ -291244,6 +291250,7 @@
+       cinematicMoves: POWER_UP_PUNCH
+       cinematicMoves: FOUL_PLAY
+       cinematicMoves: THUNDER_PUNCH
++      cinematicMoves: UPPER_HAND
+       animationTime: 1.9
+       animationTime: 0.6667
+       animationTime: 1.8
+@@ -352462,6 +352469,7 @@
+       sku: "general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._SparringPartnersRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -352480,6 +352488,7 @@
+       sku: "general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._SparringPartnersRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -354157,6 +354166,7 @@
+       sku: "pgorelease.general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._SparringPartnersRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -354175,6 +354185,7 @@
+       sku: "pgorelease.general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._SparringPartnersRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -359882,15 +359893,9 @@
+       sku: "bundle.rrpstar.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
++      hidden: true
+       spriteId: "bundle.general.remotebox.medium.1"
+       title: "great_raid_box_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2025-04-13T17:00:00"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1744563600000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 490
      }
    }
  }
-@@ -369117,7 +369117,7 @@
-     }
-   }
- }
--batch_id: 1744419470963
-+batch_id: 1744461331628
- experiment_id: 1
- experiment_id: 6
- experiment_id: 8
-@@ -369159,11 +369159,12 @@
- experiment_id: 3527
- experiment_id: 3536
- experiment_id: 3599
--experiment_id: 3601
-+experiment_id: 3602
+@@ -369138,7 +369143,6 @@
+ experiment_id: 807
+ experiment_id: 1699
+ experiment_id: 1820
+-experiment_id: 2230
+ experiment_id: 2248
+ experiment_id: 2297
+ experiment_id: 2301
+@@ -369163,8 +369167,9 @@
  experiment_id: 3604
  experiment_id: 3685
  experiment_id: 4691
- experiment_id: 4979
-+experiment_id: 4980
+-experiment_id: 4979
++experiment_id: 4977
+ experiment_id: 4980
++experiment_id: 4981
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
