@@ -1,320 +1,181 @@
---- GAME_MASTER_old.txt	2025-04-23 20:22:08.203099657 +0200
-+++ GAME_MASTER.txt	2025-04-24 20:11:03.617867743 +0200
-@@ -125026,7 +125026,7 @@
-     iapCategoryDisplay {
-       category: IAP_CATEGORY_AVATAR
-       sortOrder: 5
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_avatar_captainpikachu.jpg"
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_avatar_applinset.jpg"
-       description: "avatar_shop_description_new"
-     }
-   }
-@@ -127484,6 +127484,7 @@
-       category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
-       dropTrainerLevel: 10
-       ignoreInventorySpace: true
-+      hideItemInInventory: true
+--- GAME_MASTER_old.txt	2025-04-24 20:11:03.617867743 +0200
++++ GAME_MASTER.txt	2025-04-25 19:54:25.215629537 +0200
+@@ -42961,6 +42961,7 @@
+       catchCardShareCampfireEnabled: true
+       arCatchCardShareCampfireEnabled: true
+       meetupQueryTimerMs: 3600000
++      12: 1
      }
    }
  }
-@@ -127497,6 +127498,7 @@
-       category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
-       dropTrainerLevel: 10
-       ignoreInventorySpace: true
-+      hideItemInInventory: true
+@@ -69241,7 +69242,9 @@
+       minPlayerLevelForExternalLink: 5
+       minPlayerLevelForNotificationLink: 5
+       actionsThatIgnoreMinLevel: FILL_REFERRAL_CODE
++      actionsThatIgnoreMinLevel: 34
+       actionsThatExecuteBeforeMapLoads: FILL_REFERRAL_CODE
++      actionsThatExecuteBeforeMapLoads: 34
+       iosActionButtonEnabled: true
+     }
+   }
+@@ -359065,10 +359068,13 @@
+       sku: "bundle.cd2022.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       sale: true
+-      spriteId: "bundle.halloween.small.1"
+-      title: "bundle.halloween.small.1_title"
++      spriteId: "bundle.general4.small.1"
++      title: "bundle.general4.small.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-04-27T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1745798399000
      }
    }
  }
-@@ -132880,7 +132882,7 @@
-   data {
-     template_id: "N_DISPLAY_n_belt_default_a_0"
+@@ -359080,10 +359086,13 @@
+       sku: "bundle.cd2022.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 2
+-      hidden: true
+       sale: true
+-      spriteId: "bundle.halloween.adventure.1"
+-      title: "bundle.halloween.adventure.1_title"
++      spriteId: "bundle.general1.medium.1"
++      title: "bundle.general1.medium.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-04-27T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1745798399000
+     }
+   }
+ }
+@@ -360238,9 +360247,15 @@
+       sku: "bundle.hatchbox2024.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general.adventure.1"
+       title: "hatch_box"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-05-09T17:00:00"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1746810000000
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 1910
+     }
+   }
+ }
+@@ -369359,7 +369374,7 @@
+     template_id: "N_DISPLAY_n_hat_applinitems_0"
      avatarItemDisplay {
--      iconAddress: "n_belt_default_0_icon"
-+      iconAddress: "n_belt_default_a_0_icon"
-       displayStringId: "n_belt_default_a_0_display_name"
-     }
-   }
-@@ -355552,9 +355554,9 @@
-       durationMs: 2500
-       damageWindowStartMs: 2000
-       damageWindowEndMs: 3400
--      obMoveSettingsNumber18: 0
--      obMoveSettingsNumber18: 0
--      obMoveSettingsNumber18: 0
-+      obMoveSettingsNumber18: 250
-+      obMoveSettingsNumber18: 300
-+      obMoveSettingsNumber18: 350
+       iconAddress: "n_hat_applinitems_0_icon"
+-      displayStringId: "avatar_hat_applinitems"
++      displayStringId: "avatar_hat_applinheadband"
      }
    }
  }
-@@ -355574,9 +355576,9 @@
-       durationMs: 2500
-       damageWindowStartMs: 2000
-       damageWindowEndMs: 3400
--      obMoveSettingsNumber18: 0
--      obMoveSettingsNumber18: 0
--      obMoveSettingsNumber18: 0
-+      obMoveSettingsNumber18: 250
-+      obMoveSettingsNumber18: 300
-+      obMoveSettingsNumber18: 350
+@@ -369379,7 +369394,7 @@
+     template_id: "N_DISPLAY_n_shirt_applinitems_0"
+     avatarItemDisplay {
+       iconAddress: "n_shirt_applinitems_0_icon"
+-      displayStringId: "avatar_shirt_applinitems"
++      displayStringId: "avatar_shirt_applinapron"
      }
    }
  }
-@@ -362143,7 +362145,6 @@
-       sku: "general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vanillite25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -362162,7 +362163,6 @@
-       sku: "general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vanillite25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -363841,7 +363841,6 @@
-       sku: "pgorelease.general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vanillite25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -363860,7 +363859,6 @@
-       sku: "pgorelease.general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vanillite25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -364502,8 +364500,8 @@
-     template_id: "sequence_behemoth_blade"
-     move_sequence_settings {
-       sequence: "anim attacker atk-move"
--      sequence: "wait 0.5"
-       sequence: "vfx behemoth_blade"
-+      sequence: "wait 1"
-       sequence: "sfx attacker 126-0_fire_blast"
-       sequence: "wait 2.0"
-       sequence: "sys ui-sync"
-@@ -369229,7 +369227,185 @@
+@@ -369405,7 +369420,69 @@
      }
    }
  }
--batch_id: 1745413615125
+-batch_id: 1745513273997
 +template {
-+  template_id: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
++  template_id: "AGE_CONFIRM_CODE_GATE"
 +  data {
-+    template_id: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
-+    evolution_quest_template {
-+      questTemplateId: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
-+      questType: QUEST_COMPLETE_BATTLE
-+      goals {
-+        condition {
-+          type: WITH_WIN_BATTLE_STATUS
-+        }
-+        condition {
-+          type: WITH_COMBAT_TYPE
-+          with_combat_type {
-+            combat_type: 7
-+          }
-+        }
-+        condition {
-+          type: WITH_POKEMON_TYPE
-+          with_pokemon_type {
-+            pokemonType: POKEMON_TYPE_DARK
-+            pokemonType: POKEMON_TYPE_STEEL
-+          }
-+        }
-+        target: 15
-+      }
-+      context: EVOLUTION_QUEST
-+      display {
-+        description: "quest_defeat_dark_or_steel_type_raid"
-+        title: "quest_defeat_dark_or_steel_type_raid"
++    template_id: "AGE_CONFIRM_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++      subCodeGateList {
++        name: "USE_MESSAGE"
++        isEnabled: true
 +      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "HOME_WIDGET_SETTINGS"
++  template_id: "BADGE_EVENT_0119"
 +  data {
-+    template_id: "HOME_WIDGET_SETTINGS"
-+    154 {
-+      1: 1
-+      2 {
-+        1: 0x3f000000
-+        2: 3
-+        3: "sweet_discoveries_2025"
++    template_id: "BADGE_EVENT_0119"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0119
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
 +      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001"
++  template_id: "BADGE_EVENT_0120"
 +  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001"
-+    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
-+      imageUrl: "sb_GoTour2025_black"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_goFest_2025_shield"
++    template_id: "BADGE_EVENT_0120"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0120
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
 +    }
 +  }
 +}
 +template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001"
++  template_id: "mp_replenish_rrp.1"
 +  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001"
-+    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
-+      imageUrl: "sb_GoTour2025_black"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_goFest_2025_shield_c"
++    template_id: "mp_replenish_rrp.1"
++    iapItemDisplay {
++      sku: "mp_replenish_rrp.1"
++      category: IAP_CATEGORY_ITEMS
++      hidden: true
 +    }
 +  }
 +}
 +template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001"
++  template_id: "mp_replenish_rrp.3"
 +  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001"
-+    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
-+      imageUrl: "sb_GoTour2025_black"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_goFest_2025_sword"
++    template_id: "mp_replenish_rrp.3"
++    iapItemDisplay {
++      sku: "mp_replenish_rrp.3"
++      category: IAP_CATEGORY_ITEMS
++      hidden: true
 +    }
 +  }
 +}
-+template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001"
-+  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001"
-+    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
-+      imageUrl: "sb_GoTour2025_black"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_goFest_2025_sword_c"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_backpack_goruckgengar_0"
-+  data {
-+    template_id: "N_DISPLAY_n_backpack_goruckgengar_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_goruckgengar_0_icon"
-+      displayStringId: "avatar_backpack_goruckgengar"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_backpack_goruckpikachu_0"
-+  data {
-+    template_id: "N_DISPLAY_n_backpack_goruckpikachu_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_goruckpikachu_0_icon"
-+      displayStringId: "avatar_backpack_goruckpikachu"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_backpack_goruckwobbuffet_0"
-+  data {
-+    template_id: "N_DISPLAY_n_backpack_goruckwobbuffet_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_goruckwobbuffet_0_icon"
-+      displayStringId: "avatar_backpack_goruckwobbuffet"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_hat_applinitems_0"
-+  data {
-+    template_id: "N_DISPLAY_n_hat_applinitems_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_hat_applinitems_0_icon"
-+      displayStringId: "avatar_hat_applinitems"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_pose_growingup"
-+  data {
-+    template_id: "N_DISPLAY_n_pose_growingup"
-+    avatarItemDisplay {
-+      iconAddress: "n_pose_growingup_icon"
-+      displayStringId: "avatar_pose_growingup"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shirt_applinitems_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_applinitems_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_applinitems_0_icon"
-+      displayStringId: "avatar_shirt_applinitems"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_set_applinitems"
-+  data {
-+    template_id: "N_DISPLAY_set_applinitems"
-+    avatarItemDisplay {
-+      iconAddress: "set_applinitems"
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_KR_DITTO"
-+  data {
-+    template_id: "STICKER_KR_DITTO"
-+    stickerMetadata {
-+      stickerId: "STICKER_KR_DITTO"
-+      maxCount: 25
-+      pokemonId: DITTO
-+      category: "Pokemon"
-+      releaseDate: 20250428
-+    }
-+  }
-+}
-+batch_id: 1745513273997
++batch_id: 1745596315839
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -369270,10 +369446,11 @@
- experiment_id: 3536
- experiment_id: 3562
- experiment_id: 3592
-+experiment_id: 3609
- experiment_id: 3611
- experiment_id: 3685
-+experiment_id: 4691
- experiment_id: 4998
--experiment_id: 5016
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-@@ -369288,6 +369465,7 @@
- experiment_id: 7018
- experiment_id: 7020
- experiment_id: 7021
-+experiment_id: 8735
- experiment_id: 8925
- experiment_id: 8926
- experiment_id: 8927
-@@ -369303,7 +369481,6 @@
- experiment_id: 314160
- experiment_id: 3500035
- experiment_id: 3500037
--experiment_id: 4500005
- experiment_id: 4610000
- experiment_id: 4700000
+@@ -369428,6 +369505,7 @@
+ experiment_id: 1699
+ experiment_id: 1820
+ experiment_id: 2248
++experiment_id: 2254
+ experiment_id: 2255
+ experiment_id: 2297
+ experiment_id: 2399
+@@ -369436,6 +369514,7 @@
+ experiment_id: 2650
+ experiment_id: 2800
+ experiment_id: 2825
++experiment_id: 3025
+ experiment_id: 3032
+ experiment_id: 3033
+ experiment_id: 3063
+@@ -369486,3 +369565,4 @@
  experiment_id: 5000301
+ experiment_id: 6600407
+ experiment_id: 6600417
++experiment_id: 6600418
