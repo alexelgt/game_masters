@@ -1,181 +1,105 @@
---- GAME_MASTER_old.txt	2025-04-24 20:11:03.617867743 +0200
-+++ GAME_MASTER.txt	2025-04-25 19:54:25.215629537 +0200
-@@ -42961,6 +42961,7 @@
-       catchCardShareCampfireEnabled: true
-       arCatchCardShareCampfireEnabled: true
-       meetupQueryTimerMs: 3600000
-+      12: 1
+--- GAME_MASTER_old.txt	2025-04-25 19:54:25.215629537 +0200
++++ GAME_MASTER.txt	2025-04-26 13:45:44.800692408 +0200
+@@ -131391,12 +131391,12 @@
+     template_id: "MP_SHARED_SETTINGS"
+     mpSettings {
+       numMpFromWalkQuest: 300
+-      numMetersGoal: 2000
++      numMetersGoal: 500
+       debugAllowRemoveWalkQuest: true
+-      numMpFromLootStation: 100
++      numMpFromLootStation: 800
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1000
+-      mpBaseDailyLimit: 800
++      mpBaseDailyLimit: 1600
+       mpClaimParticleSpeedMultiplier: 1
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 250
+@@ -369482,7 +369482,69 @@
      }
    }
  }
-@@ -69241,7 +69242,9 @@
-       minPlayerLevelForExternalLink: 5
-       minPlayerLevelForNotificationLink: 5
-       actionsThatIgnoreMinLevel: FILL_REFERRAL_CODE
-+      actionsThatIgnoreMinLevel: 34
-       actionsThatExecuteBeforeMapLoads: FILL_REFERRAL_CODE
-+      actionsThatExecuteBeforeMapLoads: 34
-       iosActionButtonEnabled: true
-     }
-   }
-@@ -359065,10 +359068,13 @@
-       sku: "bundle.cd2022.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       sale: true
--      spriteId: "bundle.halloween.small.1"
--      title: "bundle.halloween.small.1_title"
-+      spriteId: "bundle.general4.small.1"
-+      title: "bundle.general4.small.1_title"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2025-04-27T23:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1745798399000
-     }
-   }
- }
-@@ -359080,10 +359086,13 @@
-       sku: "bundle.cd2022.2"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 2
--      hidden: true
-       sale: true
--      spriteId: "bundle.halloween.adventure.1"
--      title: "bundle.halloween.adventure.1_title"
-+      spriteId: "bundle.general1.medium.1"
-+      title: "bundle.general1.medium.1_title"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2025-04-27T23:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1745798399000
-     }
-   }
- }
-@@ -360238,9 +360247,15 @@
-       sku: "bundle.hatchbox2024.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle.general.adventure.1"
-       title: "hatch_box"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2025-05-09T17:00:00"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1746810000000
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 1910
-     }
-   }
- }
-@@ -369359,7 +369374,7 @@
-     template_id: "N_DISPLAY_n_hat_applinitems_0"
-     avatarItemDisplay {
-       iconAddress: "n_hat_applinitems_0_icon"
--      displayStringId: "avatar_hat_applinitems"
-+      displayStringId: "avatar_hat_applinheadband"
-     }
-   }
- }
-@@ -369379,7 +369394,7 @@
-     template_id: "N_DISPLAY_n_shirt_applinitems_0"
-     avatarItemDisplay {
-       iconAddress: "n_shirt_applinitems_0_icon"
--      displayStringId: "avatar_shirt_applinitems"
-+      displayStringId: "avatar_shirt_applinapron"
-     }
-   }
- }
-@@ -369405,7 +369420,69 @@
-     }
-   }
- }
--batch_id: 1745513273997
+-batch_id: 1745596315839
 +template {
-+  template_id: "AGE_CONFIRM_CODE_GATE"
++  template_id: "STICKER_PGO_FEST_2025"
 +  data {
-+    template_id: "AGE_CONFIRM_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+      subCodeGateList {
-+        name: "USE_MESSAGE"
-+        isEnabled: true
-+      }
++    template_id: "STICKER_PGO_FEST_2025"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_FEST_2025"
++      maxCount: 25
++      category: "Pokemon"
++      regionId: 7
 +    }
 +  }
 +}
 +template {
-+  template_id: "BADGE_EVENT_0119"
++  template_id: "STICKER_PGO_FEST_2025_1"
 +  data {
-+    template_id: "BADGE_EVENT_0119"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0119
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
++    template_id: "STICKER_PGO_FEST_2025_1"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_FEST_2025_1"
++      maxCount: 25
++      pokemonId: VOLCANION
++      category: "Pokemon"
++      regionId: 5
 +    }
 +  }
 +}
 +template {
-+  template_id: "BADGE_EVENT_0120"
++  template_id: "STICKER_PGO_FEST_2025_2"
 +  data {
-+    template_id: "BADGE_EVENT_0120"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0120
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
++    template_id: "STICKER_PGO_FEST_2025_2"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_FEST_2025_2"
++      maxCount: 25
++      pokemonId: ZAMAZENTA
++      category: "Pokemon"
++      regionId: 7
 +    }
 +  }
 +}
 +template {
-+  template_id: "mp_replenish_rrp.1"
++  template_id: "STICKER_PGO_FEST_2025_3"
 +  data {
-+    template_id: "mp_replenish_rrp.1"
-+    iapItemDisplay {
-+      sku: "mp_replenish_rrp.1"
-+      category: IAP_CATEGORY_ITEMS
-+      hidden: true
++    template_id: "STICKER_PGO_FEST_2025_3"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_FEST_2025_3"
++      maxCount: 25
++      pokemonId: ZACIAN
++      category: "Pokemon"
++      regionId: 7
 +    }
 +  }
 +}
 +template {
-+  template_id: "mp_replenish_rrp.3"
++  template_id: "STICKER_PGO_FEST_2025_LOGO"
 +  data {
-+    template_id: "mp_replenish_rrp.3"
-+    iapItemDisplay {
-+      sku: "mp_replenish_rrp.3"
-+      category: IAP_CATEGORY_ITEMS
-+      hidden: true
++    template_id: "STICKER_PGO_FEST_2025_LOGO"
++    stickerMetadata {
++      stickerId: "STICKER_PGO_FEST_2025_LOGO"
++      maxCount: 25
++      category: "Misc"
 +    }
 +  }
 +}
-+batch_id: 1745596315839
++batch_id: 1745609488245
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -369428,6 +369505,7 @@
- experiment_id: 1699
- experiment_id: 1820
- experiment_id: 2248
-+experiment_id: 2254
- experiment_id: 2255
- experiment_id: 2297
- experiment_id: 2399
-@@ -369436,6 +369514,7 @@
- experiment_id: 2650
- experiment_id: 2800
- experiment_id: 2825
-+experiment_id: 3025
- experiment_id: 3032
- experiment_id: 3033
- experiment_id: 3063
-@@ -369486,3 +369565,4 @@
- experiment_id: 5000301
- experiment_id: 6600407
- experiment_id: 6600417
-+experiment_id: 6600418
+@@ -369524,6 +369586,7 @@
+ experiment_id: 3529
+ experiment_id: 3536
+ experiment_id: 3562
++experiment_id: 3563
+ experiment_id: 3592
+ experiment_id: 3609
+ experiment_id: 3611
+@@ -369533,6 +369596,7 @@
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5214
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
