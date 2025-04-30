@@ -1,733 +1,2110 @@
---- GAME_MASTER_old.txt	2025-04-27 11:49:08.764018620 +0200
-+++ GAME_MASTER.txt	2025-04-29 18:48:05.026259435 +0200
-@@ -56,6 +56,19 @@
-   }
- }
- template {
-+  template_id: "AGE_CONFIRM_CODE_GATE"
-+  data {
-+    template_id: "AGE_CONFIRM_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+      subCodeGateList {
-+        name: "USE_MESSAGE"
-+        isEnabled: true
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "ANNIHILAPE_CD_EVOLUTION_QUEST"
-   data {
-     template_id: "ANNIHILAPE_CD_EVOLUTION_QUEST"
-@@ -33811,6 +33824,33 @@
-   }
- }
- template {
-+  template_id: "BADGE_EVENT_0119"
-+  data {
-+    template_id: "BADGE_EVENT_0119"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0119
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0120"
-+  data {
-+    template_id: "BADGE_EVENT_0120"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0120
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-   template_id: "BADGE_EVOLVED_TOTAL"
-   data {
-     template_id: "BADGE_EVOLVED_TOTAL"
-@@ -40471,6 +40511,40 @@
-   }
- }
- template {
-+  template_id: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
-+  data {
-+    template_id: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
-+    evolution_quest_template {
-+      questTemplateId: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
-+      questType: QUEST_COMPLETE_BATTLE
-+      goals {
-+        condition {
-+          type: WITH_WIN_BATTLE_STATUS
+--- GAME_MASTER_old.txt	2025-04-29 18:48:05.026259435 +0200
++++ GAME_MASTER.txt	2025-04-30 10:06:37.763697956 +0200
+@@ -58499,15 +58499,18 @@
+           pokemon {
+             id: DRAPION
+             forms: DRAPION_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: CRADILY
+             forms: CRADILY_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: LAPRAS
+             forms: LAPRAS_NORMAL
+             forms: LAPRAS_COSTUME_2020
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: SERPERIOR
+@@ -58519,11 +58522,13 @@
+             id: BLASTOISE
+             forms: BLASTOISE_NORMAL
+             forms: BLASTOISE_COPY_2019
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: SABLEYE
+             forms: SABLEYE_NORMAL
+             forms: SABLEYE_COSTUME_2020
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: ANNIHILAPE
+@@ -58551,10 +58556,12 @@
+           pokemon {
+             id: MAROWAK
+             forms: MAROWAK_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: FERALIGATR
+             forms: FERALIGATR_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: MORPEKO
+@@ -58570,6 +58577,7 @@
+           pokemon {
+             id: JUMPLUFF
+             forms: JUMPLUFF_NORMAL
++            forms: FORM_UNSET
+           }
+         }
+       }
+@@ -81606,6 +81614,23 @@
+         xlUpperBound: 1.05
+         xxlUpperBound: 1.225
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x419851ec
++          2: 0x41c80000
++          3: 0x41600000
 +        }
-+        condition {
-+          type: WITH_COMBAT_TYPE
-+          with_combat_type {
-+            combat_type: 7
-+          }
++        10 {
++          1: 0x421851ec
 +        }
-+        condition {
-+          type: WITH_POKEMON_TYPE
-+          with_pokemon_type {
-+            pokemonType: POKEMON_TYPE_DARK
-+            pokemonType: POKEMON_TYPE_STEEL
-+          }
++        11 {
++          4: 0xc0a00000
 +        }
-+        target: 15
++        12 {
++          1: 0x4025c28f
++        }
 +      }
-+      context: EVOLUTION_QUEST
-+      display {
-+        description: "quest_defeat_dark_or_steel_type_raid"
-+        title: "quest_defeat_dark_or_steel_type_raid"
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "BREAD_BATTLE_CLIENT_SETTINGS"
-   data {
-     template_id: "BREAD_BATTLE_CLIENT_SETTINGS"
-@@ -40557,42 +40631,42 @@
-         candyCost: 1
-       }
-       aSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 100
-         xpRewards: 6000
-       }
-       aSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 40
-         xpRewards: 8000
-       }
-       bSettings {
--        mpCost: 300
-+        mpCost: 400
-         candyCost: 50
-         xpRewards: 4000
-       }
-       bSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 100
-         xpRewards: 6000
-       }
-       bSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 40
-         xpRewards: 8000
-       }
-       cSettings {
--        mpCost: 300
-+        mpCost: 400
-         candyCost: 50
-         xpRewards: 4000
-       }
-       cSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 100
-         xpRewards: 6000
-       }
-       cSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 40
-         xpRewards: 8000
-       }
-@@ -40610,42 +40684,42 @@
-         candyCost: 1
-       }
-       aSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 110
-         xpRewards: 6000
-       }
-       aSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 45
-         xpRewards: 8000
-       }
-       bSettings {
--        mpCost: 300
-+        mpCost: 400
-         candyCost: 60
-         xpRewards: 4000
-       }
-       bSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 110
-         xpRewards: 6000
-       }
-       bSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 45
-         xpRewards: 8000
-       }
-       cSettings {
--        mpCost: 300
-+        mpCost: 400
-         candyCost: 60
-         xpRewards: 4000
-       }
-       cSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 110
-         xpRewards: 6000
-       }
-       cSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 45
-         xpRewards: 8000
-       }
-@@ -40663,42 +40737,42 @@
-         candyCost: 1
-       }
-       aSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 120
-         xpRewards: 6000
-       }
-       aSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 50
-         xpRewards: 8000
-       }
-       bSettings {
--        mpCost: 300
-+        mpCost: 400
-         candyCost: 70
-         xpRewards: 4000
-       }
-       bSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 120
-         xpRewards: 6000
-       }
-       bSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 50
-         xpRewards: 8000
-       }
-       cSettings {
--        mpCost: 300
-+        mpCost: 400
-         candyCost: 70
-         xpRewards: 4000
-       }
-       cSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 120
-         xpRewards: 6000
-       }
-       cSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 50
-         xpRewards: 8000
-       }
-@@ -40716,42 +40790,42 @@
-         candyCost: 1
-       }
-       aSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 130
-         xpRewards: 6000
-       }
-       aSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 55
-         xpRewards: 8000
-       }
-       bSettings {
--        mpCost: 300
-+        mpCost: 400
-         candyCost: 80
-         xpRewards: 4000
-       }
-       bSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 130
-         xpRewards: 6000
-       }
-       bSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 55
-         xpRewards: 8000
-       }
-       cSettings {
--        mpCost: 300
-+        mpCost: 400
-         candyCost: 80
-         xpRewards: 4000
-       }
-       cSettings {
--        mpCost: 450
-+        mpCost: 600
-         candyCost: 130
-         xpRewards: 6000
-       }
-       cSettings {
--        mpCost: 600
-+        mpCost: 800
-         xlCandyCost: 55
-         xpRewards: 8000
-       }
-@@ -125013,6 +125087,20 @@
-   }
- }
- template {
-+  template_id: "HOME_WIDGET_SETTINGS"
-+  data {
-+    template_id: "HOME_WIDGET_SETTINGS"
-+    154 {
-+      1: 1
-+      2 {
-+        1: 0x3f000000
-+        2: 3
-+        3: "sweet_discoveries_2025"
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "Hindi"
-   data {
-     template_id: "Hindi"
-@@ -128552,6 +128640,54 @@
-   }
- }
- template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001"
-+  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001"
-+    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
-+      imageUrl: "sb_GoTour2025_black"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_goFest_2025_shield"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001"
-+  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001"
-+    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
-+      imageUrl: "sb_GoTour2025_black"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_goFest_2025_shield_c"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001"
-+  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001"
-+    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
-+      imageUrl: "sb_GoTour2025_black"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_goFest_2025_sword"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001"
-+  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001"
-+    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
-+      imageUrl: "sb_GoTour2025_black"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_goFest_2025_sword_c"
-+    }
-+  }
-+}
-+template {
-   template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOTOUR_BLACK_001"
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOTOUR_BLACK_001"
-@@ -131391,12 +131527,12 @@
-     template_id: "MP_SHARED_SETTINGS"
-     mpSettings {
-       numMpFromWalkQuest: 300
--      numMetersGoal: 500
-+      numMetersGoal: 2000
-       debugAllowRemoveWalkQuest: true
--      numMpFromLootStation: 800
-+      numMpFromLootStation: 100
-       numExtraMpFromFirstLootStation: 20
-       mpCapacity: 1000
--      mpBaseDailyLimit: 1600
-+      mpBaseDailyLimit: 800
-       mpClaimParticleSpeedMultiplier: 1
-       battleMpCostPerTier {
-         breadBattleCatchMpCost: 250
-@@ -132501,6 +132637,36 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_backpack_goruckgengar_0"
-+  data {
-+    template_id: "N_DISPLAY_n_backpack_goruckgengar_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_goruckgengar_0_icon"
-+      displayStringId: "avatar_backpack_goruckgengar"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_backpack_goruckpikachu_0"
-+  data {
-+    template_id: "N_DISPLAY_n_backpack_goruckpikachu_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_goruckpikachu_0_icon"
-+      displayStringId: "avatar_backpack_goruckpikachu"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_backpack_goruckwobbuffet_0"
-+  data {
-+    template_id: "N_DISPLAY_n_backpack_goruckwobbuffet_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_goruckwobbuffet_0_icon"
-+      displayStringId: "avatar_backpack_goruckwobbuffet"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_backpack_guccibackpack_0"
-   data {
-     template_id: "N_DISPLAY_n_backpack_guccibackpack_0"
-@@ -134759,6 +134925,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_hat_applinitems_0"
-+  data {
-+    template_id: "N_DISPLAY_n_hat_applinitems_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_hat_applinitems_0_icon"
-+      displayStringId: "avatar_hat_applinheadband"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_hat_aseries_0"
-   data {
-     template_id: "N_DISPLAY_n_hat_aseries_0"
-@@ -138779,6 +138955,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_pose_growingup"
-+  data {
-+    template_id: "N_DISPLAY_n_pose_growingup"
-+    avatarItemDisplay {
-+      iconAddress: "n_pose_growingup_icon"
-+      displayStringId: "avatar_pose_growingup"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_pose_idle"
-   data {
-     template_id: "N_DISPLAY_n_pose_idle"
-@@ -138949,6 +139135,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_shirt_applinitems_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_applinitems_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_applinitems_0_icon"
-+      displayStringId: "avatar_shirt_applinapron"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_shirt_aseries_0"
-   data {
-     template_id: "N_DISPLAY_n_shirt_aseries_0"
-@@ -144548,6 +144744,15 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_set_applinitems"
-+  data {
-+    template_id: "N_DISPLAY_set_applinitems"
-+    avatarItemDisplay {
-+      iconAddress: "set_applinitems"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_set_backpacker_f"
-   data {
-     template_id: "N_DISPLAY_set_backpacker_f"
-@@ -183627,6 +183832,19 @@
-   }
- }
- template {
-+  template_id: "STICKER_KR_DITTO"
-+  data {
-+    template_id: "STICKER_KR_DITTO"
-+    stickerMetadata {
-+      stickerId: "STICKER_KR_DITTO"
-+      maxCount: 25
-+      pokemonId: DITTO
-+      category: "Pokemon"
-+      releaseDate: 20250428
-+    }
-+  }
-+}
-+template {
-   template_id: "STICKER_KURTASAREE_1"
-   data {
-     template_id: "STICKER_KURTASAREE_1"
-@@ -185981,6 +186199,68 @@
-   }
- }
- template {
-+  template_id: "STICKER_PGO_FEST_2025"
-+  data {
-+    template_id: "STICKER_PGO_FEST_2025"
-+    stickerMetadata {
-+      stickerId: "STICKER_PGO_FEST_2025"
-+      maxCount: 25
-+      category: "Pokemon"
-+      regionId: 7
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_PGO_FEST_2025_1"
-+  data {
-+    template_id: "STICKER_PGO_FEST_2025_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_PGO_FEST_2025_1"
-+      maxCount: 25
-+      pokemonId: VOLCANION
-+      category: "Pokemon"
-+      regionId: 5
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_PGO_FEST_2025_2"
-+  data {
-+    template_id: "STICKER_PGO_FEST_2025_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_PGO_FEST_2025_2"
-+      maxCount: 25
-+      pokemonId: ZAMAZENTA
-+      category: "Pokemon"
-+      regionId: 7
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_PGO_FEST_2025_3"
-+  data {
-+    template_id: "STICKER_PGO_FEST_2025_3"
-+    stickerMetadata {
-+      stickerId: "STICKER_PGO_FEST_2025_3"
-+      maxCount: 25
-+      pokemonId: ZACIAN
-+      category: "Pokemon"
-+      regionId: 7
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_PGO_FEST_2025_LOGO"
-+  data {
-+    template_id: "STICKER_PGO_FEST_2025_LOGO"
-+    stickerMetadata {
-+      stickerId: "STICKER_PGO_FEST_2025_LOGO"
-+      maxCount: 25
-+      category: "Misc"
-+    }
-+  }
-+}
-+template {
-   template_id: "STICKER_PGO_FEST_VICTINI_05"
-   data {
-     template_id: "STICKER_PGO_FEST_VICTINI_05"
-@@ -303441,6 +303721,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      eliteCinematicMove: AVALANCHE
-       useIrisFlyingPlacement: true
-       irisFlyingHeightLimitMeters: 3
-       ibfc {
-@@ -359068,13 +359349,10 @@
-       sku: "bundle.cd2022.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-+      hidden: true
-       sale: true
--      spriteId: "bundle.general4.small.1"
--      title: "bundle.general4.small.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2025-04-27T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1745798399000
-+      spriteId: "bundle.halloween.small.1"
-+      title: "bundle.halloween.small.1_title"
      }
    }
  }
-@@ -359086,13 +359364,10 @@
-       sku: "bundle.cd2022.2"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 2
-+      hidden: true
-       sale: true
--      spriteId: "bundle.general1.medium.1"
--      title: "bundle.general1.medium.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2025-04-27T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1745798399000
-+      spriteId: "bundle.halloween.adventure.1"
-+      title: "bundle.halloween.adventure.1_title"
+@@ -81641,6 +81666,23 @@
+         xlUpperBound: 1.5
+         xxlUpperBound: 1.75
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x415b5c29
++          2: 0x41d93333
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41db5c29
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x3fee147b
++        }
++      }
      }
    }
  }
-@@ -362157,6 +362432,7 @@
-       sku: "general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vanillite25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -362175,6 +362451,7 @@
-       sku: "general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vanillite25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -362632,6 +362909,28 @@
+@@ -81717,6 +81759,24 @@
+         xxlUpperBound: 3.5
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x411851ec
++          2: 0x41f5c28f
++          3: 0x41600000
++        }
++        10 {
++          1: 0x419851ec
++        }
++        11 {
++          4: 0x40a00000
++          5: 0x40a00000
++        }
++        12 {
++          1: 0x3fa66666
++        }
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 24
+         camera {
+@@ -81725,6 +81785,22 @@
+         }
+         modelScaleV2: 1.1
+         modelHeight: 1.9
++        9 {
++          1: 0x412bd70a
++          2: 0x42013333
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41abc28f
++          5: 0xc0e00000
++        }
++        11 {
++          4: 0x40a00000
++          5: 0x40a00000
++        }
++        12 {
++          1: 0x3fbae148
++        }
+       }
+     }
+   }
+@@ -81779,6 +81855,23 @@
+         xlUpperBound: 0.9
+         xxlUpperBound: 1.05
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41b1c28f
++          2: 0x41c80000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4231b852
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x404147ae
++        }
++      }
+     }
+   }
+ }
+@@ -81814,6 +81907,23 @@
+         xlUpperBound: 1.65
+         xxlUpperBound: 1.925
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41851eb8
++          2: 0x41d3999a
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4205147b
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x4010a3d7
++        }
++      }
+     }
+   }
+ }
+@@ -81912,6 +82022,20 @@
+         xxlUpperBound: 2.975
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41323d71
++          2: 0x41fd3333
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41b23d71
++        }
++        12 {
++          1: 0x3fc28f5c
++        }
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 28
+         camera {
+@@ -81920,6 +82044,20 @@
+         }
+         modelScaleV2: 1.2
+         modelHeight: 2
++        9 {
++          1: 0x41487ae1
++          2: 0x41ef3333
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41c87ae1
++        }
++        11 {
++          4: 0x3fc00000
++        }
++        12 {
++          1: 0x3fd9999a
++        }
+       }
+     }
+   }
+@@ -81974,6 +82112,23 @@
+         xlUpperBound: 0.75
+         xxlUpperBound: 0.875
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41d26666
++          2: 0x41c80000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42526666
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x40651eb8
++        }
++      }
+     }
+   }
+ }
+@@ -82009,6 +82164,23 @@
+         xlUpperBound: 1.5
+         xxlUpperBound: 1.75
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41891eb8
++          2: 0x41da8f5c
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4209147b
++        }
++        11 {
++          4: 0xc0400000
++        }
++        12 {
++          1: 0x40151eb8
++        }
++      }
+     }
+   }
+ }
+@@ -82085,6 +82257,20 @@
+         xxlUpperBound: 2.8
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x4174a3d7
++          2: 0x42080000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41f4a3d7
++        }
++        12 {
++          1: 0x40051eb8
++        }
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 25
+         camera {
+@@ -82093,6 +82279,22 @@
+         }
+         modelScaleV2: 0.8
+         modelHeight: 1.2
++        9 {
++          1: 0x41228f5c
++          2: 0x421ccccd
++          3: 0x41b00000
++        }
++        10 {
++          1: 0x41a28f5c
++          4: 0x4119999a
++        }
++        11 {
++          4: 0x40a00000
++        }
++        12 {
++          1: 0x3fb0a3d7
++          4: 0x3f000000
++        }
+       }
+     }
+   }
+@@ -82111,6 +82313,20 @@
+         xlUpperBound: 0.45
+         xxlUpperBound: 0.525
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x4267147b
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42e7147b
++        }
++        12 {
++          1: 0x40f5c28f
++        }
++      }
+     }
+   }
+ }
+@@ -82128,6 +82344,20 @@
+         xlUpperBound: 1.05
+         xxlUpperBound: 1.225
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x419851ec
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x421851ec
++        }
++        12 {
++          1: 0x4025c28f
++        }
++      }
+     }
+   }
+ }
+@@ -82145,6 +82375,20 @@
+         xlUpperBound: 1.65
+         xxlUpperBound: 1.925
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x419051ec
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x421051ec
++        }
++        12 {
++          1: 0x401ccccd
++        }
++      }
+     }
+   }
+ }
+@@ -84864,6 +85108,20 @@
+         xlUpperBound: 1.2
+         xxlUpperBound: 1.4
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41a1d70a
++          2: 0x41e40000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4221d70a
++        }
++        12 {
++          1: 0x40300000
++        }
++      }
+     }
+   }
+ }
+@@ -84899,6 +85157,20 @@
+         xlUpperBound: 2.25
+         xxlUpperBound: 2.625
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x414ec083
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41cec083
++        }
++        12 {
++          1: 0x3fe00000
++        }
++      }
+     }
+   }
+ }
+@@ -84934,6 +85206,46 @@
+         xlUpperBound: 2.4
+         xxlUpperBound: 2.8
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x4140f5c3
++          2: 0x42020000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41c0f9db
++        }
++        12 {
++          1: 0x3fd1eb85
++        }
++      }
++      breadOverrides {
++        breadMode: BREAD_DOUGH_MODE
++        averageHeightM: 25
++        camera {
++          cylinderRadiusM: 1.5
++          cylinderHeightM: 3
++        }
++        modelScaleV2: 0.86
++        modelHeight: 3
++        9 {
++          1: 0x412ac083
++          2: 0x42200000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41ab3333
++          4: 0x41700000
++          5: 0xc2700000
++        }
++        12 {
++          1: 0x3f8b851f
++        }
++        13 {
++          1: 0x3faccccd
++        }
++      }
+     }
+   }
+ }
+@@ -85897,6 +86209,23 @@
+         xlUpperBound: 1.95
+         xxlUpperBound: 2.6
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x416b0a3d
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41eb0a3d
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x40000000
++        }
++      }
+     }
+   }
+ }
+@@ -85914,6 +86243,20 @@
+         xlUpperBound: 2.4
+         xxlUpperBound: 3.2
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x411c28f6
++          2: 0x421af5c3
++          3: 0x41600000
++        }
++        10 {
++          1: 0x419c147b
++        }
++        12 {
++          1: 0x3faa3d71
++        }
++      }
+     }
+   }
+ }
+@@ -86001,6 +86344,23 @@
+         xxlUpperBound: 3
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x412570a4
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41a570a4
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x3fb47ae1
++        }
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 20
+         camera {
+@@ -86009,6 +86369,17 @@
+         }
+         modelScaleV2: 0.86
+         modelHeight: 1.77
++        9 {
++          1: 0x412ab852
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41aaa3d7
++        }
++        12 {
++          1: 0x3fb9999a
++        }
+       }
+     }
+   }
+@@ -86150,6 +86521,20 @@
+         xlUpperBound: 0.6
+         xxlUpperBound: 0.7
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41963333
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42163333
++        }
++        12 {
++          1: 0x40233333
++        }
++      }
+     }
+   }
+ }
+@@ -86186,6 +86571,20 @@
+         xxlUpperBound: 2.6
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41480000
++          2: 0x420c0000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41c80000
++        }
++        12 {
++          1: 0x3fd9999a
++        }
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 19
+         camera {
+@@ -86194,6 +86593,17 @@
+         }
+         modelScaleV2: 1
+         modelHeight: 1
++        9 {
++          1: 0x4131999a
++          2: 0x420c0000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41b1851f
++        }
++        12 {
++          1: 0x3fc147ae
++        }
+       }
+     }
+   }
+@@ -86739,6 +87149,20 @@
+         xlUpperBound: 1.65
+         xxlUpperBound: 1.925
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x417947ae
++          2: 0x42020000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41f93333
++        }
++        12 {
++          1: 0x4007ae14
++        }
++      }
+     }
+   }
+ }
+@@ -87436,15 +87860,29 @@
+         xxlUpperBound: 4.375
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41500000
++          2: 0x420c0000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41d00000
++        }
++        12 {
++          1: 0x41200000
++        }
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 24
++        averageWeightKg: 23.833
+         sizeSettings {
+-          xxsLowerBound: 23.833
+-          xsLowerBound: 23.85
+-          mLowerBound: 24.275
+-          mUpperBound: 25.125
+-          xlUpperBound: 25.55
+-          xxlUpperBound: 25.975
++          xxsLowerBound: 23.85
++          xsLowerBound: 24.275
++          mLowerBound: 25.125
++          mUpperBound: 25.55
++          xlUpperBound: 25.975
+         }
+         camera {
+           cylinderRadiusM: 1.35
+@@ -87452,6 +87890,17 @@
+         }
+         modelScaleV2: 1
+         modelHeight: 2.17
++        9 {
++          1: 0x40ef0a3d
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x416f0a3d
++        }
++        12 {
++          1: 0x3f828f5c
++        }
+       }
+     }
+   }
+@@ -87662,6 +88111,20 @@
+         xlUpperBound: 0.6
+         xxlUpperBound: 0.8
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41fae148
++          2: 0x41d80000
++          3: 0x41400000
++        }
++        10 {
++          1: 0x427ae148
++        }
++        12 {
++          1: 0x4088a3d7
++        }
++      }
+     }
+   }
+ }
+@@ -87697,6 +88160,20 @@
+         xlUpperBound: 1.5
+         xxlUpperBound: 2
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41891eb8
++          2: 0x41f00000
++          3: 0x41400000
++        }
++        10 {
++          1: 0x4209147b
++        }
++        12 {
++          1: 0x40151eb8
++        }
++      }
+     }
+   }
+ }
+@@ -87732,6 +88209,23 @@
+         xlUpperBound: 0.75
+         xxlUpperBound: 1
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41c8b852
++          2: 0x41b80000
++          3: 0x41400000
++        }
++        10 {
++          1: 0x4248b852
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x405a3d71
++        }
++      }
+     }
+   }
+ }
+@@ -87767,6 +88261,23 @@
+         xlUpperBound: 1.95
+         xxlUpperBound: 2.6
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x415b5c29
++          2: 0x41c80000
++          3: 0x41400000
++        }
++        10 {
++          1: 0x41d91eb8
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x3fee147b
++        }
++      }
+     }
+   }
+ }
+@@ -87860,6 +88371,12 @@
+         xxlUpperBound: 3.675
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9: ""
++        10: ""
++        12: ""
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 35
+         camera {
+@@ -87873,6 +88390,17 @@
+           collisionHeightM: 1.11
+           collisionHeadRadiusM: 0.74
+         }
++        9 {
++          1: 0x40a00000
++          2: 0x41b60000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41840000
++        }
++        12 {
++          1: 0x3f8ccccd
++        }
+       }
+     }
+   }
+@@ -87945,6 +88473,20 @@
+         xlUpperBound: 2.55
+         xxlUpperBound: 2.975
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x4109eb85
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4189d70a
++        }
++        12 {
++          1: 0x3f800000
++        }
++      }
+     }
+   }
+ }
+@@ -87998,6 +88540,20 @@
+         xlUpperBound: 2.4
+         xxlUpperBound: 2.8
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x4117d70a
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4197d70a
++        }
++        12 {
++          1: 0x3f800000
++        }
++      }
+     }
+   }
+ }
+@@ -88051,6 +88607,20 @@
+         xlUpperBound: 3
+         xxlUpperBound: 3.5
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x40ef0a3d
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x416f0a3d
++        }
++        12 {
++          1: 0x3f4ccccd
++        }
++      }
+     }
+   }
+ }
+@@ -90653,6 +91223,20 @@
+         xlUpperBound: 0.915
+         xxlUpperBound: 1.0675
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41b1ae14
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4231ae14
++        }
++        12 {
++          1: 0x404147ae
++        }
++      }
+     }
+   }
+ }
+@@ -91467,6 +92051,20 @@
+         xlUpperBound: 2.25
+         xxlUpperBound: 2.625
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x4140f5c3
++          2: 0x42020000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41c0f5c3
++        }
++        12 {
++          1: 0x3f800000
++        }
++      }
+     }
+   }
+ }
+@@ -91502,6 +92100,20 @@
+         xlUpperBound: 2.865
+         xxlUpperBound: 3.3425
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x4120cccd
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41a0cccd
++        }
++        12 {
++          1: 0x3f800000
++        }
++      }
+     }
+   }
+ }
+@@ -91555,6 +92167,20 @@
+         xlUpperBound: 3.165
+         xxlUpperBound: 3.6925
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41111eb8
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41910a3d
++        }
++        12 {
++          1: 0x3f800000
++        }
++      }
+     }
+   }
+ }
+@@ -91608,6 +92234,20 @@
+         xlUpperBound: 3.015
+         xxlUpperBound: 3.5175
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41111eb8
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41910a3d
++        }
++        12 {
++          1: 0x3f800000
++        }
++      }
+     }
+   }
+ }
+@@ -93321,6 +93961,20 @@
+         xlUpperBound: 0.765
+         xxlUpperBound: 0.8925
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41c80000
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4248b852
++        }
++        12 {
++          1: 0x405a3d71
++        }
++      }
+     }
+   }
+ }
+@@ -93848,6 +94502,20 @@
+         xlUpperBound: 3.015
+         xxlUpperBound: 4.02
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x40400000
++          2: 0x41400000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41a00000
++        }
++        12 {
++          1: 0x3f800000
++        }
++      }
+     }
+   }
+ }
+@@ -93865,6 +94533,22 @@
+         xlUpperBound: 21.75
+         xxlUpperBound: 29
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x3ff47ae1
++          2: 0x41e80000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x40747ae1
++          4: 0xc0a00000
++          5: 0xc0a00000
++        }
++        12 {
++          1: 0x3e851eb8
++        }
++      }
+     }
+   }
+ }
+@@ -95685,6 +96369,20 @@
+         xlUpperBound: 0.915
+         xxlUpperBound: 1.22
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41d43d71
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42543d71
++        }
++        12 {
++          1: 0x40670a3d
++        }
++      }
+     }
+   }
+ }
+@@ -95720,6 +96418,20 @@
+         xlUpperBound: 1.785
+         xxlUpperBound: 2.38
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x413d47ae
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41bd3333
++        }
++        12 {
++          1: 0x3fce147b
++        }
++      }
+     }
+   }
+ }
+@@ -95755,6 +96467,20 @@
+         xlUpperBound: 2.4
+         xxlUpperBound: 3.2
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x40ea3d71
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x416a3d71
++        }
++        12 {
++          1: 0x3f800000
++        }
++      }
+     }
+   }
+ }
+@@ -95863,6 +96589,20 @@
+         xlUpperBound: 2.1
+         xxlUpperBound: 2.17
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41880000
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42080000
++        }
++        12 {
++          1: 0x40147ae1
++        }
++      }
+     }
+   }
+ }
+@@ -95949,6 +96689,20 @@
+         xlUpperBound: 3.015
+         xxlUpperBound: 3.1155
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41400000
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41c00000
++        }
++        12 {
++          1: 0x3fd1eb85
++        }
++      }
+     }
+   }
+ }
+@@ -100011,6 +100765,20 @@
+         xlUpperBound: 0.45
+         xxlUpperBound: 0.525
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x42223333
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42a23333
++        }
++        12 {
++          1: 0x40b0a3d7
++        }
++      }
+     }
+   }
+ }
+@@ -100028,6 +100796,20 @@
+         xlUpperBound: 0.9
+         xxlUpperBound: 1.05
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41990a3d
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42190a3d
++        }
++        12 {
++          1: 0x40266666
++        }
++      }
+     }
+   }
+ }
+@@ -100045,6 +100827,20 @@
+         xlUpperBound: 1.8
+         xxlUpperBound: 2.1
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x417947ae
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41f93333
++        }
++        12 {
++          1: 0x4007ae14
++        }
++      }
+     }
+   }
+ }
+@@ -100181,6 +100977,23 @@
+         xlUpperBound: 0.45
+         xxlUpperBound: 0.525
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x421ccccd
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x429ccccd
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x40aa8f5c
++        }
++      }
+     }
+   }
+ }
+@@ -100198,6 +101011,20 @@
+         xlUpperBound: 1.05
+         xxlUpperBound: 1.225
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41c147ae
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42413d71
++        }
++        12 {
++          1: 0x40528f5c
++        }
++      }
+     }
+   }
+ }
+@@ -100707,6 +101534,20 @@
+         xlUpperBound: 0.9
+         xxlUpperBound: 0.93
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41aa0000
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x422a0000
++        }
++        12 {
++          1: 0x40400000
++        }
++      }
+     }
+   }
+ }
+@@ -100778,6 +101619,20 @@
+         xlUpperBound: 1.95
+         xxlUpperBound: 2.015
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x415bd70a
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41dbd70a
++        }
++        12 {
++          1: 0x3ff33333
++        }
++      }
+     }
+   }
+ }
+@@ -101071,6 +101926,20 @@
+         xlUpperBound: 0.9
+         xxlUpperBound: 0.93
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41d7c28f
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4257c28f
++        }
++        12 {
++          1: 0x406ae148
++        }
++      }
+     }
+   }
+ }
+@@ -101088,6 +101957,20 @@
+         xlUpperBound: 2.85
+         xxlUpperBound: 2.945
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x411851ec
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x419851ec
++        }
++        12 {
++          1: 0x3fa66666
++        }
++      }
+     }
+   }
+ }
+@@ -102122,6 +103005,20 @@
+         xlUpperBound: 1.65
+         xxlUpperBound: 2.2
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x416a3d71
++          2: 0x420c0000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41ea3d71
++        }
++        12 {
++          1: 0x3faccccd
++        }
++      }
+     }
+   }
+ }
+@@ -107317,6 +108214,20 @@
+         xlUpperBound: 3
+         xxlUpperBound: 3.1
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41000000
++          2: 0x41a00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41c80000
++        }
++        12 {
++          1: 0x3fd851ec
++        }
++      }
+     }
+   }
+ }
+@@ -108659,6 +109570,23 @@
+         xlUpperBound: 0.45
+         xxlUpperBound: 0.465
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x421ccccd
++          2: 0x41ca28f6
++          3: 0x41600000
++        }
++        10 {
++          1: 0x429ccccd
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x40aa8f5c
++        }
++      }
+     }
+   }
+ }
+@@ -108676,6 +109604,23 @@
+         xlUpperBound: 1.05
+         xxlUpperBound: 1.085
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x418d70a4
++          2: 0x41d9eb85
++          3: 0x41600000
++        }
++        10 {
++          1: 0x420d70a4
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x401a3d71
++        }
++      }
+     }
+   }
+ }
+@@ -108693,6 +109638,36 @@
+         xlUpperBound: 3.15
+         xxlUpperBound: 3.255
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41111eb8
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41910a3d
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x3f9d70a4
++        }
++      }
++      breadOverrides {
++        breadMode: BREAD_DOUGH_MODE
++        averageHeightM: 28
++        9 {
++          1: 0x412ab852
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41aaa3d7
++        }
++        12 {
++          1: 0x3fb9999a
++        }
++      }
+     }
+   }
+ }
+@@ -108710,6 +109685,23 @@
+         xlUpperBound: 0.45
+         xxlUpperBound: 0.525
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x421ccccd
++          2: 0x41d40000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x429ccccd
++        }
++        11 {
++          4: 0xc0f00000
++        }
++        12 {
++          1: 0x40aa8f5c
++        }
++      }
+     }
+   }
+ }
+@@ -108727,6 +109719,23 @@
+         xlUpperBound: 0.9
+         xxlUpperBound: 1.05
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41b1ae14
++          2: 0x41c7851f
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4231ae14
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x404147ae
++        }
++      }
+     }
+   }
+ }
+@@ -108744,6 +109753,50 @@
+         xlUpperBound: 2.1
+         xxlUpperBound: 2.45
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x414eb852
++          2: 0x41d40000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41ceb852
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x3fe147ae
++        }
++      }
++      breadOverrides {
++        breadMode: BREAD_DOUGH_MODE
++        averageHeightM: 27
++        camera {
++          cylinderRadiusM: 1.25
++          cylinderHeightM: 2.5
++        }
++        modelScaleV2: 0.65
++        modelHeight: 1.5
++        9 {
++          1: 0x40e00000
++          2: 0x41d40000
++          3: 0x41800000
++        }
++        10 {
++          1: 0x417dc28f
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x3f933333
++        }
++        13 {
++          1: 0x3f266666
++        }
++      }
+     }
+   }
+ }
+@@ -108761,6 +109814,23 @@
+         xlUpperBound: 0.45
+         xxlUpperBound: 0.465
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x421ccccd
++          2: 0x41b1d70a
++          3: 0x41600000
++        }
++        10 {
++          1: 0x429ccccd
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x40aa8f5c
++        }
++      }
+     }
+   }
+ }
+@@ -108778,6 +109848,23 @@
+         xlUpperBound: 1.05
+         xxlUpperBound: 1.085
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x419b3333
++          2: 0x41c8cccd
++          3: 0x41600000
++        }
++        10 {
++          1: 0x421851ec
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x4025c28f
++        }
++      }
+     }
+   }
+ }
+@@ -108795,6 +109882,38 @@
+         xlUpperBound: 2.85
+         xxlUpperBound: 2.945
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x411851ec
++          2: 0x41c63d71
++          3: 0x41600000
++        }
++        10 {
++          1: 0x419851ec
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x3fa66666
++        }
++      }
++      breadOverrides {
++        breadMode: BREAD_DOUGH_MODE
++        averageHeightM: 40
++        9 {
++          1: 0x4186b852
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4206b852
++        }
++        12 {
++          1: 0x40128f5c
++        }
++      }
+     }
+   }
+ }
+@@ -108812,6 +109931,23 @@
+         xlUpperBound: 0.45
+         xxlUpperBound: 0.525
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x421ccccd
++          2: 0x41dbd70a
++          3: 0x41600000
++        }
++        10 {
++          1: 0x429ccccd
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x40aa8f5c
++        }
++      }
+     }
+   }
+ }
+@@ -108829,6 +109965,23 @@
+         xlUpperBound: 0.9
+         xxlUpperBound: 1.05
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41cb1eb8
++          2: 0x41f5c28f
++          3: 0x41600000
++        }
++        10 {
++          1: 0x424b147b
++        }
++        11 {
++          4: 0xc0a00000
++        }
++        12 {
++          1: 0x405ccccd
++        }
++      }
+     }
+   }
+ }
+@@ -108846,6 +109999,20 @@
+         xlUpperBound: 0.3
+         xxlUpperBound: 0.35
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x426b3333
++          2: 0x41dc0000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42eb3333
++        }
++        12 {
++          1: 0x41000000
++        }
++      }
+     }
+   }
+ }
+@@ -108863,6 +110030,20 @@
+         xlUpperBound: 1.2
+         xxlUpperBound: 1.4
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41900000
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42100000
++        }
++        12 {
++          1: 0x401e6666
++        }
++      }
+     }
+   }
+ }
+@@ -108880,6 +110061,23 @@
+         xlUpperBound: 3.3
+         xxlUpperBound: 3.41
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x40d00000
++          2: 0x421b0000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41500000
++        }
++        12 {
++          1: 0x3f6147ae
++        }
++        13 {
++          1: 0x3f5c28f6
++        }
++      }
+     }
+   }
+ }
+@@ -109016,6 +110214,20 @@
+         xlUpperBound: 0.9
+         xxlUpperBound: 1.05
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41b1ae14
++          2: 0x41f5c28f
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4231ae14
++        }
++        12 {
++          1: 0x404147ae
++        }
++      }
+     }
+   }
+ }
+@@ -109033,6 +110245,20 @@
+         xlUpperBound: 1.95
+         xxlUpperBound: 2.015
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x4152e148
++          2: 0x41f5c28f
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41d2e148
++        }
++        12 {
++          1: 0x3fe51eb8
++        }
++      }
+     }
+   }
+ }
+@@ -109305,6 +110531,23 @@
+         xlUpperBound: 0.6
+         xxlUpperBound: 0.7
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41fae148
++          2: 0x41c73333
++          3: 0x41600000
++        }
++        10 {
++          1: 0x427ae148
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x4088a3d7
++        }
++      }
+     }
+   }
+ }
+@@ -109341,6 +110584,23 @@
+         xxlUpperBound: 2.48
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x4134f5c3
++          2: 0x41b5999a
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41b4e148
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x3fc51eb8
++        }
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 24
+         sizeSettings {
+@@ -109357,6 +110617,21 @@
+         }
+         modelScaleV2: 0.86
+         modelHeight: 3
++        9 {
++          1: 0x41400000
++          2: 0x41f00000
++          3: 0x41400000
++        }
++        10 {
++          1: 0x41c00000
++          5: 0xc0a00000
++        }
++        11 {
++          4: 0x40a00000
++        }
++        12 {
++          1: 0x3fd0a3d7
++        }
+       }
+     }
+   }
+@@ -109377,6 +110652,23 @@
+         xxlUpperBound: 2.48
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x4134f5c3
++          2: 0x41b5999a
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41b4e148
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x3fc51eb8
++        }
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 24
+         sizeSettings {
+@@ -109393,6 +110685,21 @@
+         }
+         modelScaleV2: 0.86
+         modelHeight: 3
++        9 {
++          1: 0x41400000
++          2: 0x41f00000
++          3: 0x41400000
++        }
++        10 {
++          1: 0x41c00000
++          5: 0xc0a00000
++        }
++        11 {
++          4: 0x40a00000
++        }
++        12 {
++          1: 0x3fd0a3d7
++        }
+       }
+     }
+   }
+@@ -109585,6 +110892,20 @@
+         xlUpperBound: 0.6
+         xxlUpperBound: 0.7
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41fae148
++          2: 0x41c80000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x427ae148
++        }
++        12 {
++          1: 0x4088a3d7
++        }
++      }
+     }
+   }
+ }
+@@ -109602,6 +110923,20 @@
+         xlUpperBound: 0.9
+         xxlUpperBound: 1.05
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41b1ae14
++          2: 0x41c80000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x4231ae14
++        }
++        12 {
++          1: 0x404147ae
++        }
++      }
+     }
+   }
+ }
+@@ -109619,6 +110954,20 @@
+         xlUpperBound: 3.15
+         xxlUpperBound: 3.255
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41111eb8
++          2: 0x41c80000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41910a3d
++        }
++        12 {
++          1: 0x3f9d70a4
++        }
++      }
+     }
+   }
+ }
+@@ -109931,6 +111280,20 @@
+         xlUpperBound: 4.5
+         xxlUpperBound: 4.65
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x40fe147b
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x417deb85
++        }
++        12 {
++          1: 0x3f8a3d71
++        }
++      }
+     }
+   }
+ }
+@@ -110504,6 +111867,23 @@
+         xlUpperBound: 0.9
+         xxlUpperBound: 0.93
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x41f00000
++          2: 0x41d00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x42200000
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x4078f5c3
++        }
++      }
+     }
+   }
+ }
+@@ -110540,6 +111920,23 @@
+         xxlUpperBound: 2.945
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x410e6666
++          2: 0x41c80000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41b1851f
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x3fd33333
++        }
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 26
+         sizeSettings {
+@@ -110570,6 +111967,23 @@
+         xxlUpperBound: 2.945
+       }
+       breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x410e6666
++          2: 0x41c80000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x41b1851f
++        }
++        11 {
++          4: 0xc1200000
++        }
++        12 {
++          1: 0x3fd33333
++        }
++      }
++      breadOverrides {
+         breadMode: BREAD_DOUGH_MODE_2
+         averageHeightM: 29
+       }
+@@ -125087,15 +126501,33 @@
    }
  }
  template {
-+  template_id: "mp_replenish_rrp.1"
-+  data {
-+    template_id: "mp_replenish_rrp.1"
-+    iapItemDisplay {
-+      sku: "mp_replenish_rrp.1"
-+      category: IAP_CATEGORY_ITEMS
-+      hidden: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "mp_replenish_rrp.3"
-+  data {
-+    template_id: "mp_replenish_rrp.3"
-+    iapItemDisplay {
-+      sku: "mp_replenish_rrp.3"
-+      category: IAP_CATEGORY_ITEMS
-+      hidden: true
-+    }
-+  }
-+}
-+template {
-   template_id: "paidraidticket.3"
-   data {
-     template_id: "paidraidticket.3"
-@@ -363853,6 +364152,7 @@
-       sku: "pgorelease.general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vanillite25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -363871,6 +364171,7 @@
-       sku: "pgorelease.general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vanillite25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -369239,309 +369540,7 @@
-     }
-   }
- }
--template {
--  template_id: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
--  data {
--    template_id: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
--    evolution_quest_template {
--      questTemplateId: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
--      questType: QUEST_COMPLETE_BATTLE
--      goals {
--        condition {
--          type: WITH_WIN_BATTLE_STATUS
--        }
--        condition {
--          type: WITH_COMBAT_TYPE
--          with_combat_type {
--            combat_type: 7
--          }
--        }
--        condition {
--          type: WITH_POKEMON_TYPE
--          with_pokemon_type {
--            pokemonType: POKEMON_TYPE_DARK
--            pokemonType: POKEMON_TYPE_STEEL
--          }
--        }
--        target: 15
--      }
--      context: EVOLUTION_QUEST
--      display {
--        description: "quest_defeat_dark_or_steel_type_raid"
--        title: "quest_defeat_dark_or_steel_type_raid"
--      }
--    }
--  }
--}
--template {
 -  template_id: "HOME_WIDGET_SETTINGS"
--  data {
++  template_id: "EXTENDED_V0870_POKEMON_FALINKS_NORMAL"
+   data {
 -    template_id: "HOME_WIDGET_SETTINGS"
 -    154 {
 -      1: 1
@@ -735,316 +2112,936 @@
 -        1: 0x3f000000
 -        2: 3
 -        3: "sweet_discoveries_2025"
--      }
--    }
--  }
--}
--template {
--  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001"
--  data {
--    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001"
--    locationCardSettings {
--      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
--      imageUrl: "sb_GoTour2025_black"
--      cardType: SPECIAL_BACKGROUND
--      vfxAddress: "bgfx_goFest_2025_shield"
--    }
--  }
--}
--template {
--  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001"
--  data {
--    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001"
--    locationCardSettings {
--      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
--      imageUrl: "sb_GoTour2025_black"
--      cardType: SPECIAL_BACKGROUND
--      vfxAddress: "bgfx_goFest_2025_shield_c"
--    }
--  }
--}
--template {
--  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001"
--  data {
--    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001"
--    locationCardSettings {
--      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
--      imageUrl: "sb_GoTour2025_black"
--      cardType: SPECIAL_BACKGROUND
--      vfxAddress: "bgfx_goFest_2025_sword"
--    }
--  }
--}
--template {
--  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001"
--  data {
--    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001"
--    locationCardSettings {
--      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
--      imageUrl: "sb_GoTour2025_black"
--      cardType: SPECIAL_BACKGROUND
--      vfxAddress: "bgfx_goFest_2025_sword_c"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_backpack_goruckgengar_0"
--  data {
--    template_id: "N_DISPLAY_n_backpack_goruckgengar_0"
--    avatarItemDisplay {
--      iconAddress: "n_backpack_goruckgengar_0_icon"
--      displayStringId: "avatar_backpack_goruckgengar"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_backpack_goruckpikachu_0"
--  data {
--    template_id: "N_DISPLAY_n_backpack_goruckpikachu_0"
--    avatarItemDisplay {
--      iconAddress: "n_backpack_goruckpikachu_0_icon"
--      displayStringId: "avatar_backpack_goruckpikachu"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_backpack_goruckwobbuffet_0"
--  data {
--    template_id: "N_DISPLAY_n_backpack_goruckwobbuffet_0"
--    avatarItemDisplay {
--      iconAddress: "n_backpack_goruckwobbuffet_0_icon"
--      displayStringId: "avatar_backpack_goruckwobbuffet"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_hat_applinitems_0"
--  data {
--    template_id: "N_DISPLAY_n_hat_applinitems_0"
--    avatarItemDisplay {
--      iconAddress: "n_hat_applinitems_0_icon"
--      displayStringId: "avatar_hat_applinheadband"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_pose_growingup"
--  data {
--    template_id: "N_DISPLAY_n_pose_growingup"
--    avatarItemDisplay {
--      iconAddress: "n_pose_growingup_icon"
--      displayStringId: "avatar_pose_growingup"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_shirt_applinitems_0"
--  data {
--    template_id: "N_DISPLAY_n_shirt_applinitems_0"
--    avatarItemDisplay {
--      iconAddress: "n_shirt_applinitems_0_icon"
--      displayStringId: "avatar_shirt_applinapron"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_set_applinitems"
--  data {
--    template_id: "N_DISPLAY_set_applinitems"
--    avatarItemDisplay {
--      iconAddress: "set_applinitems"
--    }
--  }
--}
--template {
--  template_id: "STICKER_KR_DITTO"
--  data {
--    template_id: "STICKER_KR_DITTO"
--    stickerMetadata {
--      stickerId: "STICKER_KR_DITTO"
--      maxCount: 25
--      pokemonId: DITTO
--      category: "Pokemon"
--      releaseDate: 20250428
--    }
--  }
--}
--template {
--  template_id: "AGE_CONFIRM_CODE_GATE"
--  data {
--    template_id: "AGE_CONFIRM_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--      subCodeGateList {
--        name: "USE_MESSAGE"
--        isEnabled: true
--      }
--    }
--  }
--}
--template {
--  template_id: "BADGE_EVENT_0119"
--  data {
--    template_id: "BADGE_EVENT_0119"
--    badgeSettings {
--      badgeType: BADGE_EVENT_0119
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--      eventBadgeSettings {
--        obEventBadgeSettingsNumber6: 1
--      }
--    }
--  }
--}
--template {
--  template_id: "BADGE_EVENT_0120"
--  data {
--    template_id: "BADGE_EVENT_0120"
--    badgeSettings {
--      badgeType: BADGE_EVENT_0120
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--    }
--  }
--}
--template {
--  template_id: "mp_replenish_rrp.1"
--  data {
--    template_id: "mp_replenish_rrp.1"
--    iapItemDisplay {
--      sku: "mp_replenish_rrp.1"
--      category: IAP_CATEGORY_ITEMS
++    template_id: "EXTENDED_V0870_POKEMON_FALINKS_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: FALINKS
++      form: 2325
++      sizeSettings {
++        xxsLowerBound: 1.47
++        xsLowerBound: 1.5
++        mLowerBound: 2.25
++        mUpperBound: 3.75
++        xlUpperBound: 4.5
++        xxlUpperBound: 4.65
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        9 {
++          1: 0x40fe147b
++          2: 0x41f00000
++          3: 0x41600000
++        }
++        10 {
++          1: 0x417deb85
++        }
++        12 {
++          1: 0x3f8a3d71
++        }
+       }
+     }
+   }
+@@ -355872,8 +357304,7 @@
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_REMIX"
+     }
+   }
+ }
+@@ -355886,31 +357317,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+     }
+@@ -355925,31 +357356,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -355965,7 +357396,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 530
+         }
+       }
+       reward {
+@@ -355983,7 +357414,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+     }
+@@ -355998,7 +357429,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+       reward {
+@@ -356016,7 +357447,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 8480
++          count: 2120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356032,7 +357463,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 530
+         }
+       }
+       reward {
+@@ -356050,7 +357481,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+     }
+@@ -356065,7 +357496,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+       reward {
+@@ -356083,7 +357514,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 8480
++          count: 2120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356099,7 +357530,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 570
+         }
+       }
+       reward {
+@@ -356117,7 +357548,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4560
++          count: 1140
+         }
+       }
+     }
+@@ -356132,7 +357563,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4560
++          count: 1140
+         }
+       }
+       reward {
+@@ -356150,7 +357581,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 9120
++          count: 2280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356166,7 +357597,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+       reward {
+@@ -356184,7 +357615,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+     }
+@@ -356199,7 +357630,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+       reward {
+@@ -356217,7 +357648,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 9600
++          count: 2400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356312,7 +357743,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 700
+         }
+       }
+       reward {
+@@ -356330,7 +357761,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5600
++          count: 1400
+         }
+       }
+     }
+@@ -356345,7 +357776,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5600
++          count: 1400
+         }
+       }
+       reward {
+@@ -356363,7 +357794,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 11200
++          count: 2800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356379,7 +357810,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 730
+         }
+       }
+       reward {
+@@ -356397,7 +357828,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5840
++          count: 1460
+         }
+       }
+     }
+@@ -356412,7 +357843,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5840
++          count: 1460
+         }
+       }
+       reward {
+@@ -356430,7 +357861,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 11680
++          count: 2920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356446,7 +357877,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 770
+         }
+       }
+       reward {
+@@ -356464,7 +357895,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6160
++          count: 1540
+         }
+       }
+     }
+@@ -356479,7 +357910,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6160
++          count: 1540
+         }
+       }
+       reward {
+@@ -356497,7 +357928,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 12320
++          count: 3080
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356562,7 +357993,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 300
+         }
+       }
+       reward {
+@@ -356580,7 +358011,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+     }
+@@ -356595,7 +358026,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+       reward {
+@@ -356613,7 +358044,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356629,7 +358060,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 870
+         }
+       }
+       reward {
+@@ -356647,7 +358078,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6960
++          count: 1740
+         }
+       }
+     }
+@@ -356662,7 +358093,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6960
++          count: 1740
+         }
+       }
+       reward {
+@@ -356680,7 +358111,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 13920
++          count: 3480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356696,7 +358127,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -356714,7 +358145,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -356729,7 +358160,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -356747,7 +358178,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356763,7 +358194,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -356781,7 +358212,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -356796,7 +358227,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -356814,7 +358245,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356830,7 +358261,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -356848,7 +358279,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -356863,7 +358294,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -356881,7 +358312,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356897,7 +358328,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -356915,7 +358346,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -356930,7 +358361,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -356948,7 +358379,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356964,7 +358395,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 330
+         }
+       }
+       reward {
+@@ -356982,7 +358413,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+     }
+@@ -356997,7 +358428,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+       reward {
+@@ -357015,7 +358446,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5280
++          count: 1320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -357031,7 +358462,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 330
+         }
+       }
+       reward {
+@@ -357049,7 +358480,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+     }
+@@ -357064,7 +358495,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+       reward {
+@@ -357082,7 +358513,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5280
++          count: 1320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -357098,7 +358529,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 370
+         }
+       }
+       reward {
+@@ -357116,7 +358547,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2960
++          count: 740
+         }
+       }
+     }
+@@ -357131,7 +358562,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2960
++          count: 740
+         }
+       }
+       reward {
+@@ -357149,7 +358580,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5920
++          count: 1480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -357214,7 +358645,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 400
+         }
+       }
+       reward {
+@@ -357232,7 +358663,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3200
++          count: 800
+         }
+       }
+     }
+@@ -357247,7 +358678,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3200
++          count: 800
+         }
+       }
+       reward {
+@@ -357265,7 +358696,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6400
++          count: 1600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -357281,7 +358712,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 430
+         }
+       }
+       reward {
+@@ -357299,7 +358730,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+     }
+@@ -357314,7 +358745,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+       reward {
+@@ -357332,7 +358763,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6880
++          count: 1720
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -357348,7 +358779,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 430
+         }
+       }
+       reward {
+@@ -357366,7 +358797,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+     }
+@@ -357381,7 +358812,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+       reward {
+@@ -357399,7 +358830,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6880
++          count: 1720
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -357415,7 +358846,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 470
+         }
+       }
+       reward {
+@@ -357433,7 +358864,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3760
++          count: 940
+         }
+       }
+     }
+@@ -357448,7 +358879,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3760
++          count: 940
+         }
+       }
+       reward {
+@@ -357466,7 +358897,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7520
++          count: 1880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362092,6 +363523,7 @@
+       sku: "evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._Sweet_Discoveries_APR25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -362110,6 +363542,7 @@
+       sku: "evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2025-04-29T20:00:00"
+@@ -362507,7 +363940,6 @@
+       sku: "general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
 -      hidden: true
--    }
--  }
--}
--template {
--  template_id: "mp_replenish_rrp.3"
--  data {
--    template_id: "mp_replenish_rrp.3"
--    iapItemDisplay {
--      sku: "mp_replenish_rrp.3"
--      category: IAP_CATEGORY_ITEMS
+       spriteId: "general2.ticket.5"
+       title: "general2.ticket.5_MegaKangaskhanRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -362526,7 +363958,6 @@
+       sku: "general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
 -      hidden: true
--    }
--  }
--}
--template {
--  template_id: "STICKER_PGO_FEST_2025"
--  data {
--    template_id: "STICKER_PGO_FEST_2025"
--    stickerMetadata {
--      stickerId: "STICKER_PGO_FEST_2025"
--      maxCount: 25
--      category: "Pokemon"
--      regionId: 7
--    }
--  }
--}
--template {
--  template_id: "STICKER_PGO_FEST_2025_1"
--  data {
--    template_id: "STICKER_PGO_FEST_2025_1"
--    stickerMetadata {
--      stickerId: "STICKER_PGO_FEST_2025_1"
--      maxCount: 25
--      pokemonId: VOLCANION
--      category: "Pokemon"
--      regionId: 5
--    }
--  }
--}
--template {
--  template_id: "STICKER_PGO_FEST_2025_2"
--  data {
--    template_id: "STICKER_PGO_FEST_2025_2"
--    stickerMetadata {
--      stickerId: "STICKER_PGO_FEST_2025_2"
--      maxCount: 25
--      pokemonId: ZAMAZENTA
--      category: "Pokemon"
--      regionId: 7
--    }
--  }
--}
--template {
--  template_id: "STICKER_PGO_FEST_2025_3"
--  data {
--    template_id: "STICKER_PGO_FEST_2025_3"
--    stickerMetadata {
--      stickerId: "STICKER_PGO_FEST_2025_3"
--      maxCount: 25
--      pokemonId: ZACIAN
--      category: "Pokemon"
--      regionId: 7
--    }
--  }
--}
--template {
--  template_id: "STICKER_PGO_FEST_2025_LOGO"
--  data {
--    template_id: "STICKER_PGO_FEST_2025_LOGO"
--    stickerMetadata {
--      stickerId: "STICKER_PGO_FEST_2025_LOGO"
--      maxCount: 25
--      category: "Misc"
--    }
--  }
--}
--batch_id: 1745609488245
-+batch_id: 1745887955804
+       spriteId: "general2.ticket.5"
+       title: "general2.ticket.5_MegaKangaskhanRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -363848,6 +365279,7 @@
+       sku: "pgorelease.evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._Sweet_Discoveries_APR25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -363866,6 +365298,7 @@
+       sku: "pgorelease.evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2025-04-29T20:00:00"
+@@ -364227,7 +365660,6 @@
+       sku: "pgorelease.general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general2.ticket.5_MegaKangaskhanRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -364246,7 +365678,6 @@
+       sku: "pgorelease.general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general2.ticket.5_MegaKangaskhanRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -369540,7 +370971,7 @@
+     }
+   }
+ }
+-batch_id: 1745887955804
++batch_id: 1745982007963
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -369570,29 +369569,25 @@
- experiment_id: 2400
- experiment_id: 2600
- experiment_id: 2650
--experiment_id: 2800
- experiment_id: 2825
--experiment_id: 3025
- experiment_id: 3032
- experiment_id: 3033
- experiment_id: 3063
- experiment_id: 3502
- experiment_id: 3512
+@@ -369549,7 +370980,7 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 170
+-experiment_id: 179
++experiment_id: 180
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 361
+@@ -369578,16 +371009,14 @@
  experiment_id: 3519
--experiment_id: 3529
-+experiment_id: 3530
+ experiment_id: 3530
  experiment_id: 3536
--experiment_id: 3562
--experiment_id: 3563
--experiment_id: 3592
- experiment_id: 3609
- experiment_id: 3611
+-experiment_id: 3609
+-experiment_id: 3611
++experiment_id: 3612
  experiment_id: 3685
  experiment_id: 4691
++experiment_id: 4919
  experiment_id: 4998
-+experiment_id: 5040
+-experiment_id: 5040
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
--experiment_id: 5214
-+experiment_id: 5215
+-experiment_id: 5215
  experiment_id: 5506
  experiment_id: 5508
  experiment_id: 5510
-@@ -369604,7 +369599,7 @@
- experiment_id: 7018
- experiment_id: 7020
- experiment_id: 7021
--experiment_id: 8735
-+experiment_id: 8736
- experiment_id: 8925
- experiment_id: 8926
- experiment_id: 8927
-@@ -369612,6 +369607,7 @@
- experiment_id: 9552
- experiment_id: 9553
- experiment_id: 9554
-+experiment_id: 12345
- experiment_id: 20947
- experiment_id: 55571
- experiment_id: 55751
