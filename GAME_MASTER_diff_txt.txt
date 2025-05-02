@@ -1,269 +1,323 @@
---- GAME_MASTER_old.txt	2025-04-30 19:06:19.956878668 +0200
-+++ GAME_MASTER.txt	2025-05-01 11:00:05.211887799 +0200
-@@ -40560,6 +40560,8 @@
-       prepareBreadLobbyCutoffMs: 15000
-       prepareBreadLobbySoloMs: 80000
-       rvnVersion: 1
-+      28: 1
-+      29: 40
-     }
-   }
- }
-@@ -44561,6 +44563,7 @@
-       bannedPokemon: DITTO
-       bannedPokemon: SHEDINJA
-       bannedPokemon: XERNEAS
-+      bannedPokemon: YVELTAL
-       badgeType: BADGE_GREAT_LEAGUE
-       leagueType: STANDARD
-       allowTempEvos: true
-@@ -53387,7 +53390,8 @@
-       pokemonCount: 3
-       bannedPokemon: DITTO
-       bannedPokemon: SHEDINJA
--      bannedPokemon: NIHILEGO
-+      bannedPokemon: XERNEAS
-+      bannedPokemon: YVELTAL
-       badgeType: BADGE_GREAT_LEAGUE
-       battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
-       leagueType: STANDARD
-@@ -359514,7 +359518,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: CRESSELIA
-+          pokemon_id: TAPU_FINI
+--- GAME_MASTER_old.txt	2025-05-01 11:00:05.211887799 +0200
++++ GAME_MASTER.txt	2025-05-02 20:12:46.283703640 +0200
+@@ -78543,6 +78543,16 @@
+           messageSendTime: TIMESLOT_EARLY
          }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -360146,7 +360150,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: CRESSELIA
-+          pokemon_id: TAPU_FINI
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -364056,7 +364060,6 @@
-       sku: "general2.ticket.8"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.8"
-       title: "general2.ticket.8_MayMonthly2025_title"
-       description: "item_event_ticket_gray_details_MayMonthly2025"
-@@ -364076,7 +364079,6 @@
-       sku: "general2.ticket.8.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.8"
-       title: "general2.ticket.8_MayMonthly2025_title"
-       description: "item_event_ticket_gray_details_MayMonthly2025"
-@@ -365776,7 +365778,6 @@
-       sku: "pgorelease.general2.ticket.8"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.8"
-       title: "general2.ticket.8_MayMonthly2025_title"
-       description: "item_event_ticket_gray_details_MayMonthly2025"
-@@ -365796,7 +365797,6 @@
-       sku: "pgorelease.general2.ticket.8.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.8"
-       title: "general2.ticket.8_MayMonthly2025_title"
-       description: "item_event_ticket_gray_details_MayMonthly2025"
-@@ -370974,7 +370974,156 @@
-     }
-   }
- }
--batch_id: 1745982007963
-+template {
-+  template_id: "BADGE_EVENT_0115"
-+  data {
-+    template_id: "BADGE_EVENT_0115"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0115
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOFEST_2025_EVENT_PASS_DELUXE"
-+  data {
-+    template_id: "BADGE_GOFEST_2025_EVENT_PASS_DELUXE"
-+    badgeSettings {
-+      badgeType: 5798
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOFEST_2025_GLOBAL"
-+  data {
-+    template_id: "BADGE_GOFEST_2025_GLOBAL"
-+    badgeSettings {
-+      badgeType: 5796
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOFEST_2025_GLOBAL_TEST"
-+  data {
-+    template_id: "BADGE_GOFEST_2025_GLOBAL_TEST"
-+    badgeSettings {
-+      badgeType: 5797
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_MONTH3_SEASON_STORE_REDIRECT"
-+  data {
-+    template_id: "EVENT_PASS_MONTH3_SEASON_STORE_REDIRECT"
-+    iapItemDisplay {
-+      sku: "pgorelease.month3_deluxe_event_pass_track_redirect"
-+      sortOrder: 1
-+      hidden: true
-+      title: "season_pass_premium_track_title_may"
-+      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-+      skuEnableTime: "2024-05-06T10:00:00"
-+      skuDisableTime: "2024-06-05T10:00:00"
-+      skuEnableTimeUtcMs: 1714989600000
-+      skuDisableTimeUtcMs: 1717581600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-gopass-may-2025.jpg"
-+    }
-+  }
-+}
-+template {
-+  template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_03"
-+  data {
-+    template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_03"
-+    itemSettings {
-+      itemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_03
-+      itemType: ITEM_TYPE_EVENT_PASS_POINT
-+      category: ITEM_CATEGORY_EVENT_PASS_POINT
-+      ignoreInventorySpace: true
-+      itemCap: 999999
-+      eventPassPoint {
-+        eventPassId: "EVENT_PASS_MAY2025_SEASON"
-+      }
-+      timePeriodCounters {
-+        playerActivity {
-+          limit: 300
++      eventSettings {
++        messageTiming {
++          messageSendTime: TIMESLOT_START
 +        }
++        messageTiming {
++          messageSendBeforeEventSeconds: 600
++          messageSendTime: TIMESLOT_EARLY
++        }
++        1: 1
 +      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_03"
-+  data {
-+    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_03"
-+    itemExpirationSettings {
-+      item: ITEM_EVENT_PASS_POINT_LIVE_OPS_03
-+      expirationTime: "2025-06-05T10:00:00"
-+      emergencyExpirationTime: "2025-06-07T10:00:00"
-+    }
-+  }
-+}
-+template {
-+  template_id: "MONTH3_DELUXE_EVENT_PASS_TRACK_UNLOCK"
-+  data {
-+    template_id: "MONTH3_DELUXE_EVENT_PASS_TRACK_UNLOCK"
-+    iapItemDisplay {
-+      sku: "pgorelease.month3_deluxe_event_pass_track_unlock"
+     }
+   }
+ }
+@@ -127492,26 +127502,26 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-04-27T14:00:00"
+-        eventEndTime: "2025-04-27T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Vanillite25"
++        eventStartTime: "2025-05-11T14:00:00"
++        eventEndTime: "2025-05-11T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Pawmi25"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-pawmi-cd-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_CD_Vanillite25"
+-        textRewardsKey: "text_rewards_key_CD_Vanillite25"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-pawmi-cd-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CD_Pawmi25"
++        textRewardsKey: "text_rewards_key_CD_Pawmi25"
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemonEncounter {
+-            pokemon_id: VANILLUXE
++            pokemon_id: PAWMOT
+           }
+         }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_LUCKY_EGG
++            item: ITEM_INCUBATOR_BASIC
+             amount: 1
+           }
+         }
+@@ -127523,10 +127533,10 @@
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1745762400000
+-        clientEventEndTimeUtcMs: 1745773200000
++        clientEventStartTimeUtcMs: 1746972000000
++        clientEventEndTimeUtcMs: 1746982800000
+       }
+-      descriptionOverride: "item_event_ticket_pink_details_CD_Vanillite25"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Pawmi25"
+     }
+   }
+ }
+@@ -127539,16 +127549,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-04-27T14:00:00"
+-        eventEndTime: "2025-04-27T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Vanillite25"
++        eventStartTime: "2025-05-11T14:00:00"
++        eventEndTime: "2025-05-11T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Pawmi25"
+         ticketItem: ITEM_EVENT_TICKET_03
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
+-        clientEventStartTimeUtcMs: 1745762400000
+-        clientEventEndTimeUtcMs: 1745773200000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-pawmi-cd-2025.jpg"
++        clientEventStartTimeUtcMs: 1746972000000
++        clientEventEndTimeUtcMs: 1746982800000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_pink_details_CD_Vanillite25"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Pawmi25"
+     }
+   }
+ }
+@@ -148473,15 +148483,6 @@
+   }
+ }
+ template {
+-  template_id: "PARTY_CREATION_REFACTOR_CODE_GATE"
+-  data {
+-    template_id: "PARTY_CREATION_REFACTOR_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-    }
+-  }
+-}
+-template {
+   template_id: "PARTY_GET_REFACTOR_CODE_GATE"
+   data {
+     template_id: "PARTY_GET_REFACTOR_CODE_GATE"
+@@ -148559,15 +148560,6 @@
+   }
+ }
+ template {
+-  template_id: "PARTY_PLAY_GET_PARTY_MOVED_RESPONSE_CODE_GATE"
+-  data {
+-    template_id: "PARTY_PLAY_GET_PARTY_MOVED_RESPONSE_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-    }
+-  }
+-}
+-template {
+   template_id: "PARTY_PLAY_IAP_BOOSTS_SETTINGS"
+   data {
+     template_id: "PARTY_PLAY_IAP_BOOSTS_SETTINGS"
+@@ -148603,15 +148595,6 @@
+   }
+ }
+ template {
+-  template_id: "PARTY_TRACKING_REFACTOR_CODE_GATE"
+-  data {
+-    template_id: "PARTY_TRACKING_REFACTOR_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-    }
+-  }
+-}
+-template {
+   template_id: "PAWMOT_EVOLUTION_QUEST"
+   data {
+     template_id: "PAWMOT_EVOLUTION_QUEST"
+@@ -363296,9 +363279,15 @@
+       sku: "bundle.ultrabeastraid.2024"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general.premiumbox.small.1"
+       title: "raiding_box"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-05-04T11:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1746359999000
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 785
+     }
+   }
+ }
+@@ -363874,12 +363863,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Vanillite25_title"
++      title: "general1.ticket_CD_Pawmi25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-04-27T17:00:00"
++      skuDisableTime: "2025-05-11T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1745773200000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
++      skuDisableTimeUtcMs: 1746982800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-pawmi-cd-2025.jpg"
+     }
+   }
+ }
+@@ -363893,11 +363882,11 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Vanillite25_title"
++      title: "general1.ticket_CD_Pawmi25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-04-27T17:00:00"
++      skuDisableTime: "2025-05-11T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1745773200000
++      skuDisableTimeUtcMs: 1746982800000
+     }
+   }
+ }
+@@ -364098,7 +364087,6 @@
+       sku: "general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_GrowingUp0525_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -364117,7 +364105,6 @@
+       sku: "general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_GrowingUp0525_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -364248,7 +364235,8 @@
+     iapItemDisplay {
+       sku: "max_boost.1"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 1
++      sortOrder: 3
++      spriteId: "max_boost.1"
+     }
+   }
+ }
+@@ -364259,7 +364247,11 @@
+     iapItemDisplay {
+       sku: "max_boost.3"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 2
++      sortOrder: 4
++      spriteId: "max_boost.3"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 1200
+     }
+   }
+ }
+@@ -364326,7 +364318,8 @@
+     iapItemDisplay {
+       sku: "mp_replenish.1"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 3
 +      sortOrder: 1
-+      hidden: true
-+      title: "season_pass_premium_track_title_may"
-+      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-+      skuEnableTime: "2024-05-06T10:00:00"
-+      skuDisableTime: "2024-06-05T10:00:00"
-+      skuEnableTimeUtcMs: 1714989600000
-+      skuDisableTimeUtcMs: 1717581600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-gopass-may-2025.jpg"
-+    }
-+  }
-+}
-+template {
-+  template_id: "MONTH3_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
-+  data {
-+    template_id: "MONTH3_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
-+    iapItemDisplay {
-+      sku: "pgorelease.month3_deluxe_event_pass_track_unlock_plus_points"
-+      sortOrder: 1
-+      hidden: true
-+      title: "season_pass_premium_track_plus_ten_ranks_title_may"
-+      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
-+      skuEnableTime: "2024-05-06T10:00:00"
-+      skuDisableTime: "2024-06-05T10:00:00"
-+      skuEnableTimeUtcMs: 1714989600000
-+      skuDisableTimeUtcMs: 1717581600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-gopass-may-2025.jpg"
-+    }
-+  }
-+}
-+template {
-+  template_id: "USE_EXTENDED_SETTINGS_FOR_MAX_SCALE_CODE_GATE"
-+  data {
-+    template_id: "USE_EXTENDED_SETTINGS_FOR_MAX_SCALE_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+batch_id: 1746062590345
++      spriteId: "mp_replenish.1"
+     }
+   }
+ }
+@@ -364337,7 +364330,8 @@
+     iapItemDisplay {
+       sku: "mp_replenish.3"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 4
++      sortOrder: 2
++      spriteId: "mp_replenish.3"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 450
+@@ -365592,12 +365586,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Vanillite25_title"
++      title: "general1.ticket_CD_Pawmi25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-04-27T17:00:00"
++      skuDisableTime: "2025-05-11T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1745773200000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
++      skuDisableTimeUtcMs: 1746982800000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-pawmi-cd-2025.jpg"
+     }
+   }
+ }
+@@ -365611,11 +365605,11 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Vanillite25_title"
++      title: "general1.ticket_CD_Pawmi25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-04-27T17:00:00"
++      skuDisableTime: "2025-05-11T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1745773200000
++      skuDisableTimeUtcMs: 1746982800000
+     }
+   }
+ }
+@@ -365816,7 +365810,6 @@
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_GrowingUp0525_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -365835,7 +365828,6 @@
+       sku: "pgorelease.general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_GrowingUp0525_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -371123,7 +371115,7 @@
+     }
+   }
+ }
+-batch_id: 1746062590345
++batch_id: 1746204341027
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -371008,7 +371157,7 @@
- experiment_id: 3033
- experiment_id: 3063
- experiment_id: 3502
--experiment_id: 3512
-+experiment_id: 3513
- experiment_id: 3519
+@@ -371145,6 +371137,7 @@
+ experiment_id: 807
+ experiment_id: 1699
+ experiment_id: 1820
++experiment_id: 2221
+ experiment_id: 2248
+ experiment_id: 2254
+ experiment_id: 2297
+@@ -371162,6 +371155,8 @@
  experiment_id: 3530
  experiment_id: 3536
-@@ -371017,7 +371166,6 @@
+ experiment_id: 3612
++experiment_id: 3617
++experiment_id: 3619
+ experiment_id: 3685
  experiment_id: 4691
  experiment_id: 4919
- experiment_id: 4998
--experiment_id: 5017
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-@@ -371033,6 +371181,7 @@
- experiment_id: 7020
- experiment_id: 7021
- experiment_id: 8736
-+experiment_id: 8913
- experiment_id: 8925
- experiment_id: 8926
- experiment_id: 8927
-@@ -371052,6 +371201,5 @@
- experiment_id: 4610000
- experiment_id: 4700000
- experiment_id: 5000301
--experiment_id: 6600407
- experiment_id: 6600417
- experiment_id: 6600418
