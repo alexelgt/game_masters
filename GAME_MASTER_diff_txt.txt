@@ -1,323 +1,48 @@
---- GAME_MASTER_old.txt	2025-05-01 11:00:05.211887799 +0200
-+++ GAME_MASTER.txt	2025-05-02 20:12:46.283703640 +0200
-@@ -78543,6 +78543,16 @@
-           messageSendTime: TIMESLOT_EARLY
-         }
-       }
-+      eventSettings {
-+        messageTiming {
-+          messageSendTime: TIMESLOT_START
-+        }
-+        messageTiming {
-+          messageSendBeforeEventSeconds: 600
-+          messageSendTime: TIMESLOT_EARLY
-+        }
-+        1: 1
-+      }
+--- GAME_MASTER_old.txt	2025-05-02 20:12:46.283703640 +0200
++++ GAME_MASTER.txt	2025-05-03 12:31:48.698032129 +0200
+@@ -152305,7 +152305,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 5
++      dailySquashLimit: 20
      }
    }
  }
-@@ -127492,26 +127502,26 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-04-27T14:00:00"
--        eventEndTime: "2025-04-27T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Vanillite25"
-+        eventStartTime: "2025-05-11T14:00:00"
-+        eventEndTime: "2025-05-11T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Pawmi25"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-pawmi-cd-2025.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CD_Vanillite25"
--        textRewardsKey: "text_rewards_key_CD_Vanillite25"
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-pawmi-cd-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CD_Pawmi25"
-+        textRewardsKey: "text_rewards_key_CD_Pawmi25"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemon_id: VANILLUXE
-+            pokemon_id: PAWMOT
-           }
-         }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_LUCKY_EGG
-+            item: ITEM_INCUBATOR_BASIC
-             amount: 1
-           }
-         }
-@@ -127523,10 +127533,10 @@
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1745762400000
--        clientEventEndTimeUtcMs: 1745773200000
-+        clientEventStartTimeUtcMs: 1746972000000
-+        clientEventEndTimeUtcMs: 1746982800000
-       }
--      descriptionOverride: "item_event_ticket_pink_details_CD_Vanillite25"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Pawmi25"
+@@ -371115,7 +371115,7 @@
      }
    }
  }
-@@ -127539,16 +127549,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-04-27T14:00:00"
--        eventEndTime: "2025-04-27T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Vanillite25"
-+        eventStartTime: "2025-05-11T14:00:00"
-+        eventEndTime: "2025-05-11T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Pawmi25"
-         ticketItem: ITEM_EVENT_TICKET_03
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
--        clientEventStartTimeUtcMs: 1745762400000
--        clientEventEndTimeUtcMs: 1745773200000
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-pawmi-cd-2025.jpg"
-+        clientEventStartTimeUtcMs: 1746972000000
-+        clientEventEndTimeUtcMs: 1746982800000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_pink_details_CD_Vanillite25"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Pawmi25"
-     }
-   }
- }
-@@ -148473,15 +148483,6 @@
-   }
- }
- template {
--  template_id: "PARTY_CREATION_REFACTOR_CODE_GATE"
--  data {
--    template_id: "PARTY_CREATION_REFACTOR_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
-   template_id: "PARTY_GET_REFACTOR_CODE_GATE"
-   data {
-     template_id: "PARTY_GET_REFACTOR_CODE_GATE"
-@@ -148559,15 +148560,6 @@
-   }
- }
- template {
--  template_id: "PARTY_PLAY_GET_PARTY_MOVED_RESPONSE_CODE_GATE"
--  data {
--    template_id: "PARTY_PLAY_GET_PARTY_MOVED_RESPONSE_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
-   template_id: "PARTY_PLAY_IAP_BOOSTS_SETTINGS"
-   data {
-     template_id: "PARTY_PLAY_IAP_BOOSTS_SETTINGS"
-@@ -148603,15 +148595,6 @@
-   }
- }
- template {
--  template_id: "PARTY_TRACKING_REFACTOR_CODE_GATE"
--  data {
--    template_id: "PARTY_TRACKING_REFACTOR_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
-   template_id: "PAWMOT_EVOLUTION_QUEST"
-   data {
-     template_id: "PAWMOT_EVOLUTION_QUEST"
-@@ -363296,9 +363279,15 @@
-       sku: "bundle.ultrabeastraid.2024"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle.general.premiumbox.small.1"
-       title: "raiding_box"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2025-05-04T11:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1746359999000
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 785
-     }
-   }
- }
-@@ -363874,12 +363863,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Vanillite25_title"
-+      title: "general1.ticket_CD_Pawmi25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-04-27T17:00:00"
-+      skuDisableTime: "2025-05-11T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1745773200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
-+      skuDisableTimeUtcMs: 1746982800000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-pawmi-cd-2025.jpg"
-     }
-   }
- }
-@@ -363893,11 +363882,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Vanillite25_title"
-+      title: "general1.ticket_CD_Pawmi25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-04-27T17:00:00"
-+      skuDisableTime: "2025-05-11T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1745773200000
-+      skuDisableTimeUtcMs: 1746982800000
-     }
-   }
- }
-@@ -364098,7 +364087,6 @@
-       sku: "general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general2.ticket.9_GrowingUp0525_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -364117,7 +364105,6 @@
-       sku: "general2.ticket.9.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general2.ticket.9_GrowingUp0525_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -364248,7 +364235,8 @@
-     iapItemDisplay {
-       sku: "max_boost.1"
-       category: IAP_CATEGORY_ITEMS
--      sortOrder: 1
-+      sortOrder: 3
-+      spriteId: "max_boost.1"
-     }
-   }
- }
-@@ -364259,7 +364247,11 @@
-     iapItemDisplay {
-       sku: "max_boost.3"
-       category: IAP_CATEGORY_ITEMS
--      sortOrder: 2
-+      sortOrder: 4
-+      spriteId: "max_boost.3"
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 1200
-     }
-   }
- }
-@@ -364326,7 +364318,8 @@
-     iapItemDisplay {
-       sku: "mp_replenish.1"
-       category: IAP_CATEGORY_ITEMS
--      sortOrder: 3
-+      sortOrder: 1
-+      spriteId: "mp_replenish.1"
-     }
-   }
- }
-@@ -364337,7 +364330,8 @@
-     iapItemDisplay {
-       sku: "mp_replenish.3"
-       category: IAP_CATEGORY_ITEMS
--      sortOrder: 4
-+      sortOrder: 2
-+      spriteId: "mp_replenish.3"
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 450
-@@ -365592,12 +365586,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Vanillite25_title"
-+      title: "general1.ticket_CD_Pawmi25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-04-27T17:00:00"
-+      skuDisableTime: "2025-05-11T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1745773200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_VanilliteCD_2025.jpg"
-+      skuDisableTimeUtcMs: 1746982800000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-pawmi-cd-2025.jpg"
-     }
-   }
- }
-@@ -365611,11 +365605,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Vanillite25_title"
-+      title: "general1.ticket_CD_Pawmi25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-04-27T17:00:00"
-+      skuDisableTime: "2025-05-11T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1745773200000
-+      skuDisableTimeUtcMs: 1746982800000
-     }
-   }
- }
-@@ -365816,7 +365810,6 @@
-       sku: "pgorelease.general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general2.ticket.9_GrowingUp0525_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -365835,7 +365828,6 @@
-       sku: "pgorelease.general2.ticket.9.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general2.ticket.9_GrowingUp0525_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -371123,7 +371115,7 @@
-     }
-   }
- }
--batch_id: 1746062590345
-+batch_id: 1746204341027
+-batch_id: 1746204341027
++batch_id: 1746215511489
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -371145,6 +371137,7 @@
- experiment_id: 807
- experiment_id: 1699
- experiment_id: 1820
-+experiment_id: 2221
+@@ -371141,8 +371141,6 @@
  experiment_id: 2248
  experiment_id: 2254
  experiment_id: 2297
-@@ -371162,6 +371155,8 @@
+-experiment_id: 2399
+-experiment_id: 2400
+ experiment_id: 2600
+ experiment_id: 2650
+ experiment_id: 2825
+@@ -371154,16 +371152,17 @@
+ experiment_id: 3519
  experiment_id: 3530
  experiment_id: 3536
- experiment_id: 3612
-+experiment_id: 3617
-+experiment_id: 3619
+-experiment_id: 3612
+ experiment_id: 3617
+ experiment_id: 3619
  experiment_id: 3685
  experiment_id: 4691
  experiment_id: 4919
++experiment_id: 4920
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5216
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
