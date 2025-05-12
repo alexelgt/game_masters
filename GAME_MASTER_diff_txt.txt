@@ -1,49 +1,427 @@
---- GAME_MASTER_old.txt	2025-05-10 14:27:42.314723727 +0200
-+++ GAME_MASTER.txt	2025-05-11 10:35:18.932593627 +0200
-@@ -347398,14 +347398,20 @@
-       type: POKEMON_TYPE_DARK
-       type2: POKEMON_TYPE_STEEL
-       camera {
-+        cylinderRadiusM: 0.9
-+        cylinderHeightM: 1.9
+--- GAME_MASTER_old.txt	2025-05-11 10:35:18.932593627 +0200
++++ GAME_MASTER.txt	2025-05-12 19:30:29.955164423 +0200
+@@ -41623,42 +41623,42 @@
+         candyCost: 1
        }
-       encounter {
-+        collisionRadiusM: 0.6
-+        collisionHeightM: 1
-+        collisionHeadRadiusM: 0.3
-         jumpTimeS: 1
-         bonusCandyCaptureReward: 7
-         bonusStardustCaptureReward: 400
-         attackProbability: 0.1
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-+        cameraDistance: 4
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 2
-@@ -347430,6 +347436,8 @@
-       weightStdDev: 15
-       familyId: FAMILY_PAWNIARD
-       kmBuddyDistance: 5
-+      modelHeight: 0.74
-+      modelScaleV2: 1
-       third_move {
-         stardustToUnlock: 75000
-         candyToUnlock: 75
-@@ -347437,6 +347445,7 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      raidBossDistanceOffset: 4
-       ibfc {
+       aSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 100
+         xpRewards: 6000
        }
-       breadTierGroup: GROUP_3
-@@ -373445,7 +373454,7 @@
+       aSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 40
+         xpRewards: 8000
+       }
+       bSettings {
+-        mpCost: 300
++        mpCost: 400
+         candyCost: 50
+         xpRewards: 4000
+       }
+       bSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 100
+         xpRewards: 6000
+       }
+       bSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 40
+         xpRewards: 8000
+       }
+       cSettings {
+-        mpCost: 300
++        mpCost: 400
+         candyCost: 50
+         xpRewards: 4000
+       }
+       cSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 100
+         xpRewards: 6000
+       }
+       cSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 40
+         xpRewards: 8000
+       }
+@@ -41676,42 +41676,42 @@
+         candyCost: 1
+       }
+       aSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 110
+         xpRewards: 6000
+       }
+       aSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 45
+         xpRewards: 8000
+       }
+       bSettings {
+-        mpCost: 300
++        mpCost: 400
+         candyCost: 60
+         xpRewards: 4000
+       }
+       bSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 110
+         xpRewards: 6000
+       }
+       bSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 45
+         xpRewards: 8000
+       }
+       cSettings {
+-        mpCost: 300
++        mpCost: 400
+         candyCost: 60
+         xpRewards: 4000
+       }
+       cSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 110
+         xpRewards: 6000
+       }
+       cSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 45
+         xpRewards: 8000
+       }
+@@ -41729,42 +41729,42 @@
+         candyCost: 1
+       }
+       aSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 120
+         xpRewards: 6000
+       }
+       aSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 50
+         xpRewards: 8000
+       }
+       bSettings {
+-        mpCost: 300
++        mpCost: 400
+         candyCost: 70
+         xpRewards: 4000
+       }
+       bSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 120
+         xpRewards: 6000
+       }
+       bSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 50
+         xpRewards: 8000
+       }
+       cSettings {
+-        mpCost: 300
++        mpCost: 400
+         candyCost: 70
+         xpRewards: 4000
+       }
+       cSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 120
+         xpRewards: 6000
+       }
+       cSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 50
+         xpRewards: 8000
+       }
+@@ -41782,42 +41782,42 @@
+         candyCost: 1
+       }
+       aSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 130
+         xpRewards: 6000
+       }
+       aSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 55
+         xpRewards: 8000
+       }
+       bSettings {
+-        mpCost: 300
++        mpCost: 400
+         candyCost: 80
+         xpRewards: 4000
+       }
+       bSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 130
+         xpRewards: 6000
+       }
+       bSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 55
+         xpRewards: 8000
+       }
+       cSettings {
+-        mpCost: 300
++        mpCost: 400
+         candyCost: 80
+         xpRewards: 4000
+       }
+       cSettings {
+-        mpCost: 450
++        mpCost: 600
+         candyCost: 130
+         xpRewards: 6000
+       }
+       cSettings {
+-        mpCost: 600
++        mpCost: 800
+         xlCandyCost: 55
+         xpRewards: 8000
+       }
+@@ -120480,8 +120480,8 @@
+     template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
+     itemExpirationSettings {
+       item: ITEM_LUCKY_FRIEND_APPLICATOR
+-      expirationTime: "2025-05-11T23:59:00"
+-      emergencyExpirationTime: "2025-05-12T10:00:00"
++      expirationTime: "2025-06-08T23:59:00"
++      emergencyExpirationTime: "2025-06-09T10:00:00"
      }
    }
  }
--batch_id: 1746844582905
-+batch_id: 1746917555295
+@@ -125243,12 +125243,12 @@
+     template_id: "MP_SHARED_SETTINGS"
+     mpSettings {
+       numMpFromWalkQuest: 300
+-      numMetersGoal: 500
++      numMetersGoal: 2000
+       debugAllowRemoveWalkQuest: true
+-      numMpFromLootStation: 800
++      numMpFromLootStation: 100
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1000
+-      mpBaseDailyLimit: 1600
++      mpBaseDailyLimit: 800
+       mpClaimParticleSpeedMultiplier: 1
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 250
+@@ -342797,6 +342797,7 @@
+       isDeployable: true
+       isTradable: true
+       buddyGroupNumber: 3
++      eliteCinematicMove: BRICK_BREAK
+       raidBossDistanceOffset: 2
+       ibfc {
+       }
+@@ -342855,9 +342856,9 @@
+       evolutionBranch {
+         evolution: PAWMOT
+         candyCost: 100
+-        kmBuddyDistanceRequirement: 25
++        kmBuddyDistanceRequirement: 1
+         questDisplay {
+-          questRequirementTemplateId: "PAWMOT_EVOLUTION_QUEST"
++          questRequirementTemplateId: "PAWMOT_CD_EVOLUTION_QUEST"
+         }
+       }
+       modelScaleV2: 1.1
+@@ -342935,6 +342936,7 @@
+       isDeployable: true
+       isTradable: true
+       buddyGroupNumber: 3
++      eliteCinematicMove: BRICK_BREAK
+       raidBossDistanceOffset: 2
+       ibfc {
+       }
+@@ -352702,7 +352704,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: TAPU_FINI
++          pokemon_id: MESPRIT
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -353334,7 +353336,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: TAPU_FINI
++          pokemon_id: MESPRIT
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -353971,13 +353973,10 @@
+       sku: "bundle.cd2022.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
++      hidden: true
+       sale: true
+-      spriteId: "bundle.general4.small.1"
+-      title: "bundle.general4.small.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2025-05-11T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1747007999000
++      spriteId: "bundle.halloween.small.1"
++      title: "bundle.halloween.small.1_title"
+     }
+   }
+ }
+@@ -353989,13 +353988,10 @@
+       sku: "bundle.cd2022.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 2
++      hidden: true
+       sale: true
+-      spriteId: "bundle.general1.medium.1"
+-      title: "bundle.general1.medium.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2025-05-11T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1747007999000
++      spriteId: "bundle.halloween.adventure.1"
++      title: "bundle.halloween.adventure.1_title"
+     }
+   }
+ }
+@@ -357064,6 +357060,7 @@
+       sku: "general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Pawmi25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -357082,6 +357079,7 @@
+       sku: "general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Pawmi25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -357248,6 +357246,7 @@
+       sku: "general2.ticket.8"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.8"
+       title: "general2.ticket.8_MayMonthly2025_title"
+       description: "item_event_ticket_gray_details_MayMonthly2025"
+@@ -357267,6 +357266,7 @@
+       sku: "general2.ticket.8.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.8"
+       title: "general2.ticket.8_MayMonthly2025_title"
+       description: "item_event_ticket_gray_details_MayMonthly2025"
+@@ -358785,6 +358785,7 @@
+       sku: "pgorelease.general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Pawmi25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358803,6 +358804,7 @@
+       sku: "pgorelease.general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Pawmi25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358969,6 +358971,7 @@
+       sku: "pgorelease.general2.ticket.8"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.8"
+       title: "general2.ticket.8_MayMonthly2025_title"
+       description: "item_event_ticket_gray_details_MayMonthly2025"
+@@ -358988,6 +358991,7 @@
+       sku: "pgorelease.general2.ticket.8.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.8"
+       title: "general2.ticket.8_MayMonthly2025_title"
+       description: "item_event_ticket_gray_details_MayMonthly2025"
+@@ -373454,7 +373458,7 @@
+     }
+   }
+ }
+-batch_id: 1746917555295
++batch_id: 1747067802594
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
+@@ -373483,24 +373487,23 @@
+ experiment_id: 2600
+ experiment_id: 2650
+ experiment_id: 2825
+-experiment_id: 3025
+ experiment_id: 3032
+ experiment_id: 3033
+ experiment_id: 3063
+ experiment_id: 3502
+-experiment_id: 3513
++experiment_id: 3515
+ experiment_id: 3520
+-experiment_id: 3531
++experiment_id: 3532
+ experiment_id: 3536
+-experiment_id: 3614
+-experiment_id: 3615
+ experiment_id: 3685
+ experiment_id: 3809
++experiment_id: 3810
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5218
++experiment_id: 5219
++experiment_id: 5269
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
+@@ -373510,8 +373513,8 @@
+ experiment_id: 7025
+ experiment_id: 7031
+ experiment_id: 7035
+-experiment_id: 8742
+-experiment_id: 8913
++experiment_id: 7040
++experiment_id: 8743
+ experiment_id: 8929
+ experiment_id: 9521
+ experiment_id: 9552
