@@ -1,32 +1,2044 @@
---- GAME_MASTER_old.txt	2025-05-12 19:30:29.955164423 +0200
-+++ GAME_MASTER.txt	2025-05-13 19:02:06.539587586 +0200
-@@ -342797,7 +342797,6 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 3
--      eliteCinematicMove: BRICK_BREAK
-       raidBossDistanceOffset: 2
-       ibfc {
+--- GAME_MASTER_old.txt	2025-05-13 19:02:06.539587586 +0200
++++ GAME_MASTER.txt	2025-05-15 13:42:08.176546833 +0200
+@@ -59820,12 +59820,18 @@
+           }
+           pokemon {
+             id: BELDUM
++            forms: BELDUM_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: METANG
++            forms: METANG_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: METAGROSS
++            forms: METAGROSS_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: REGISTEEL
+@@ -60213,6 +60219,30 @@
+             id: SAMUROTT
+             forms: SAMUROTT_HISUIAN
+           }
++          pokemon {
++            id: FIDOUGH
++          }
++          pokemon {
++            id: DACHSBUN
++          }
++          pokemon {
++            id: VAROOM
++          }
++          pokemon {
++            id: REVAVROOM
++          }
++          pokemon {
++            id: TINKATINK
++          }
++          pokemon {
++            id: TINKATUFF
++          }
++          pokemon {
++            id: TINKATON
++          }
++          pokemon {
++            id: KINGAMBIT
++          }
+         }
        }
-@@ -373458,7 +373457,7 @@
+       iconUrl: "https://storage.googleapis.com/prod-public-images/LeagueIcons/GBL_retrocup.png"
+@@ -80442,6 +80472,35 @@
+   }
+ }
+ template {
++  template_id: "EXTENDED_V0142_POKEMON_AERODACTYL_SUMMER_2023"
++  data {
++    template_id: "EXTENDED_V0142_POKEMON_AERODACTYL_SUMMER_2023"
++    pokemonExtendedSettings {
++      uniqueId: AERODACTYL
++      form: AERODACTYL_SUMMER_2023
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 1.029
++          xsLowerBound: 1.05
++          mLowerBound: 1.575
++          mUpperBound: 2.625
++          xlUpperBound: 3.15
++          xxlUpperBound: 3.255
++        }
++      }
++      sizeSettings {
++        xxsLowerBound: 0.882
++        xsLowerBound: 0.9
++        mLowerBound: 1.35
++        mUpperBound: 2.25
++        xlUpperBound: 2.7
++        xxlUpperBound: 3.6
++      }
++    }
++  }
++}
++template {
+   template_id: "EXTENDED_V0143_POKEMON_SNORLAX"
+   data {
+     template_id: "EXTENDED_V0143_POKEMON_SNORLAX"
+@@ -95098,6 +95157,42 @@
+   }
+ }
+ template {
++  template_id: "EXTENDED_V0614_POKEMON_BEARTIC_NORMAL"
++  data {
++    template_id: "EXTENDED_V0614_POKEMON_BEARTIC_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: BEARTIC
++      form: BEARTIC_NORMAL
++      sizeSettings {
++        xxsLowerBound: 1.274
++        xsLowerBound: 1.3
++        mLowerBound: 1.95
++        mUpperBound: 3.25
++        xlUpperBound: 3.9
++        xxlUpperBound: 4.03
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0614_POKEMON_BEARTIC_WINTER_2020"
++  data {
++    template_id: "EXTENDED_V0614_POKEMON_BEARTIC_WINTER_2020"
++    pokemonExtendedSettings {
++      uniqueId: BEARTIC
++      form: BEARTIC_WINTER_2020
++      sizeSettings {
++        xxsLowerBound: 1.274
++        xsLowerBound: 1.3
++        mLowerBound: 1.95
++        mUpperBound: 3.25
++        xlUpperBound: 3.9
++        xxlUpperBound: 4.03
++      }
++    }
++  }
++}
++template {
+   template_id: "EXTENDED_V0615_POKEMON_CRYOGONAL"
+   data {
+     template_id: "EXTENDED_V0615_POKEMON_CRYOGONAL"
+@@ -99050,6 +99145,42 @@
+   }
+ }
+ template {
++  template_id: "EXTENDED_V0713_POKEMON_AVALUGG_HISUIAN"
++  data {
++    template_id: "EXTENDED_V0713_POKEMON_AVALUGG_HISUIAN"
++    pokemonExtendedSettings {
++      uniqueId: AVALUGG
++      form: AVALUGG_HISUIAN
++      sizeSettings {
++        xxsLowerBound: 0.98
++        xsLowerBound: 1
++        mLowerBound: 1.5
++        mUpperBound: 2.5
++        xlUpperBound: 3
++        xxlUpperBound: 3.1
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0713_POKEMON_AVALUGG_NORMAL"
++  data {
++    template_id: "EXTENDED_V0713_POKEMON_AVALUGG_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: AVALUGG
++      form: AVALUGG_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.98
++        xsLowerBound: 1
++        mLowerBound: 1.5
++        mUpperBound: 2.5
++        xlUpperBound: 3
++        xxlUpperBound: 3.1
++      }
++    }
++  }
++}
++template {
+   template_id: "EXTENDED_V0714_POKEMON_NOIBAT"
+   data {
+     template_id: "EXTENDED_V0714_POKEMON_NOIBAT"
+@@ -118427,6 +118558,15 @@
+   }
+ }
+ template {
++  template_id: "FOUR_SHIELD_BREAD_GUI_CODE_GATE"
++  data {
++    template_id: "FOUR_SHIELD_BREAD_GUI_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++    }
++  }
++}
++template {
+   template_id: "FRIENDSHIP_LEVEL_0"
+   data {
+     template_id: "FRIENDSHIP_LEVEL_0"
+@@ -119025,207 +119165,11 @@
+   data {
+     template_id: "IRIS_SOCIAL_SETTINGS"
+     irisSocialSettings {
+-      maxNumPokemonPerPlayer: 3
+-      maxNumPokemonPerScene: 7
+-      pokemonExpireAfterMs: 172800000
+-      bannedPokedexIds: WAILORD
+-      bannedPokedexIds: KYOGRE
+-      bannedPokedexIds: CELESTEELA
+-      bannedPokedexIds: WISHIWASHI
+-      bannedPokedexIds: GUZZLORD
+-      bannedPokedexIds: STAKATAKA
+-      bannedPokedexIds: GROUDON
+-      bannedPokedexIds: ZYGARDE
+-      bannedPokedexIds: XURKITREE
+-      bannedPokedexIds: SANDACONDA
+-      bannedPokedexIds: NAGANADEL
+-      bannedPokedexIds: MIRAIDON
+-      bannedPokedexIds: ARAQUANID
+-      bannedPokedexIds: CENTISKORCH
+-      bannedPokedexIds: COPPERAJAH
+-      bannedPokedexIds: BUZZWOLE
+-      bannedPokedexIds: BLACEPHALON
+-      bannedPokedexIds: NIHILEGO
+-      bannedPokedexIds: UNOWN
+-      bannedPokedexIds: ZAPDOS
+-      bannedPokedexIds: MOLTRES
+-      minBoundaryAreaSqMeters: 49
+-      maxBoundaryAreaSqMeters: 400
+-      pushGatewayEnabled: true
+-      useBoundaryVerticesFromDataFlow: true
+-      irisSocialEnabled: true
+-      maxTimeBgModeBeforeExpulsionMs: 15000
+-      maxDistanceAllowLocalizationMeters: 8111222333
+       maxTimeNoActivityPlayerInactiveMs: 60000
+-      limitedPokedexIds: URSARING
+-      limitedPokedexIds: WAILMER
+-      limitedPokedexIds: EXEGGUTOR
+-      limitedPokedexIds: SNORLAX
+-      limitedPokedexIds: DONDOZO
+-      limitedPokedexIds: EXEGGUTOR
+-      limitedPokedexIds: RAYQUAZA
+-      limitedPokedexIds: STEELIX
+-      limitedPokedexIds: ONIX
+-      limitedPokedexIds: DIALGA
+-      limitedPokedexIds: NECROZMA
+-      limitedPokedexIds: GIRATINA
+-      limitedPokedexIds: PALKIA
+-      limitedPokedexIds: MILOTIC
+-      limitedPokedexIds: YVELTAL
+-      limitedPokedexIds: CETITAN
+-      limitedPokedexIds: DUDUNSPARCE
+-      limitedPokedexIds: DRAGONAIR
+-      limitedPokedexIds: DRAGONITE
+-      limitedPokedexIds: DHELMISE
+-      limitedPokedexIds: HO_OH
+-      limitedPokedexIds: REGIGIGAS
+-      limitedPokedexIds: KYUREM
+-      limitedPokedexIds: SOLGALEO
+-      limitedPokedexIds: ARCEUS
+-      limitedPokedexIds: RESHIRAM
+-      limitedPokedexIds: FARIGIRAF
+-      limitedPokedexIds: THUNDURUS
+-      limitedPokedexIds: XERNEAS
+-      limitedPokedexIds: DRAMPA
+-      limitedPokedexIds: FALINKS
+-      limitedPokedexIds: DRAGAPULT
+-      limitedPokedexIds: BASCULEGION
+-      limitedPokedexIds: ZEKROM
+-      limitedPokedexIds: ZAMAZENTA
+-      limitedPokedexIds: GOLURK
+-      limitedPokedexIds: COALOSSAL
+-      limitedPokedexIds: ZACIAN
+-      limitedPokedexIds: SEVIPER
+-      limitedPokedexIds: ABOMASNOW
+-      limitedPokedexIds: AURORUS
+-      limitedPokedexIds: URSALUNA
+-      limitedPokedexIds: TINGLU
+-      limitedPokedexIds: BEARTIC
+-      limitedPokedexIds: VIKAVOLT
+-      limitedPokedexIds: LAPRAS
+-      limitedPokedexIds: MAMOSWINE
+-      limitedPokedexIds: SCOLIPEDE
+-      limitedPokedexIds: TYRANTRUM
+-      limitedPokedexIds: MUDSDALE
+-      limitedPokedexIds: MELMETAL
+-      limitedPokedexIds: STONJOURNER
+-      limitedPokedexIds: OVERQWIL
+-      limitedPokedexIds: ORTHWORM
+-      limitedPokedexIds: VELUZA
+-      limitedPokedexIds: KORAIDON
+-      limitedPokedexIds: RHYPERIOR
+-      limitedPokedexIds: NECROZMA
+-      limitedPokedexIds: CALYREX
+-      limitedPokedexIds: URSALUNA
+-      limitedPokedexIds: FERALIGATR
+-      limitedPokedexIds: HARIYAMA
+-      limitedPokedexIds: LATIOS
+-      limitedPokedexIds: SILVALLY
+-      limitedPokedexIds: ARCTOZOLT
+-      limitedPokedexIds: DRACOVISH
+-      limitedPokedexIds: GARGANACL
+-      limitedPokedexIds: SANDYSHOCKS
+-      limitedPokedexIds: KANGASKHAN
+-      limitedPokedexIds: AGGRON
+-      limitedPokedexIds: TORTERRA
+-      limitedPokedexIds: DUSKNOIR
+-      limitedPokedexIds: JELLICENT
+-      limitedPokedexIds: KOMMO_O
+-      limitedPokedexIds: CORVIKNIGHT
+-      limitedPokedexIds: SILICOBRA
+-      limitedPokedexIds: GLASTRIER
+-      limitedPokedexIds: GREATTUSK
+-      limitedPokedexIds: SNORLAX
+-      limitedPokedexIds: MANTINE
+-      limitedPokedexIds: ENTEI
+-      limitedPokedexIds: EELEKTROSS
+-      limitedPokedexIds: COBALION
+-      limitedPokedexIds: PANGORO
+-      limitedPokedexIds: SALAZZLE
+-      limitedPokedexIds: BEWEAR
+-      limitedPokedexIds: RILLABOOM
+-      limitedPokedexIds: HATTERENE
+-      limitedPokedexIds: REGIDRAGO
+-      limitedPokedexIds: BAXCALIBUR
+-      limitedPokedexIds: VENUSAUR
+-      limitedPokedexIds: MOLTRES
+-      limitedPokedexIds: MEWTWO
+-      limitedPokedexIds: SLOWKING
+-      limitedPokedexIds: SUICUNE
+-      limitedPokedexIds: EKANS
+-      limitedPokedexIds: HIPPOWDON
+-      limitedPokedexIds: TANGROWTH
+-      limitedPokedexIds: GLISCOR
+-      limitedPokedexIds: VIRIZION
+-      limitedPokedexIds: GOODRA
+-      limitedPokedexIds: AVALUGG
+-      limitedPokedexIds: PASSIMIAN
+-      limitedPokedexIds: GOLISOPOD
+-      limitedPokedexIds: TURTONATOR
+-      limitedPokedexIds: ARCTOVISH
+-      limitedPokedexIds: SPECTRIER
+-      limitedPokedexIds: HOUNDSTONE
+-      limitedPokedexIds: KINGAMBIT
+-      limitedPokedexIds: ROARINGMOON
+-      limitedPokedexIds: ARCANINE
+-      limitedPokedexIds: RAIKOU
+-      limitedPokedexIds: BLAZIKEN
+-      limitedPokedexIds: YANMEGA
+-      limitedPokedexIds: GARBODOR
+-      limitedPokedexIds: SAWSBUCK
+-      limitedPokedexIds: TERRAKION
+-      limitedPokedexIds: TYPE_NULL
+-      limitedPokedexIds: TAPU_BULU
+-      limitedPokedexIds: URSHIFU
+-      limitedPokedexIds: TOEDSCRUEL
+-      limitedPokedexIds: ESPATHRA
+-      limitedPokedexIds: CHIENPAO
+-      limitedPokedexIds: MEGANIUM
+-      limitedPokedexIds: SHARPEDO
+-      limitedPokedexIds: GOREBYSS
+-      limitedPokedexIds: REGICE
+-      limitedPokedexIds: ELECTIVIRE
+-      limitedPokedexIds: HAXORUS
+-      limitedPokedexIds: HYDREIGON
+-      limitedPokedexIds: DRAGALGE
+-      limitedPokedexIds: INCINEROAR
+-      limitedPokedexIds: PRIMARINA
+-      limitedPokedexIds: ARAQUANID
+-      limitedPokedexIds: TAPU_KOKO
+-      limitedPokedexIds: DRACOZOLT
+-      limitedPokedexIds: DURALUDON
+-      limitedPokedexIds: ZARUDE
+-      limitedPokedexIds: WYRDEER
+-      limitedPokedexIds: KLEAVOR
+-      limitedPokedexIds: QUAQUAVAL
+-      limitedPokedexIds: PALAFIN
+-      limitedPokedexIds: REVAVROOM
+-      limitedPokedexIds: CLODSIRE
+-      limitedPokedexIds: IRONHANDS
+-      limitedPokedexIds: KARTANA
+-      pokemonSpawnStaggerDurationMs: 500
+       useVpsEnabledStatus: true
+       sunThresholdCheckEnabled: true
+-      sunriseThresholdOffsetMs: -5400000
+-      sunsetThresholdOffsetMs: 1800000
+       irisSocialPoiDeactivationCooldownMs: 1209600000
+-      combinedShadowsEnabled: true
+-      ftueVersion: MVP_AUG_30
+-      expressionUpdateBroadcastMethod: BROADCAST_TO_ALL_POKEMON
+-      localizationGuidancePathEnabled: true
+-      groundFocusGuardrailEnabled: true
+-      groundFocusGuardrailEnterAngle: 60
+-      groundFocusGuardrailExitAngle: 40
+-      localizationTimeoutDurationMs: 12000
+-      limitedLocalizationTimeoutDurationMs: 30000
+-      pokeballPingTimeDelayMs: 3000
+-      addPokemonModalDelayMs: 8000
+-      guidancePathNearbyFinishDelayMs: 1000
+-      guidancePathNearbyFinishDistanceMeters: 1
+-      guidanceInCarThreshold: 0.8
+-      locationManagerJpegCompressionQuality: 50
+-      gameplayReportsActive: true
+-      enableSqcGuidance: true
++      minVpsScore: 0.4
      }
    }
  }
--batch_id: 1747067802594
-+batch_id: 1747148614986
+@@ -119609,12 +119553,13 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-03-05T10:00:00"
++        eventStartTime: "2025-05-21T10:00:00"
+         eventEndTime: "2025-05-29T20:00:00"
+         itemBagDescriptionKey: "item_event_ticket_evergreen_desc_FFSR0325"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_02_TO_GIFT
+         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
++        conflictStoryQuestIds: "FUZZY_FIGHTER_SR_MAR25_0"
+         displayV2Enabled: true
+         backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
+         eventDatetimeRangeKey: "event_datetime_range_key_FFSR0325"
+@@ -119629,6 +119574,7 @@
+           type: CANDY
+           candy {
+             pokemonId: KUBFU
++            amount: 30
+           }
+         }
+         iconRewards {
+@@ -119639,7 +119585,7 @@
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1741168800000
++        clientEventStartTimeUtcMs: 1747821600000
+         clientEventEndTimeUtcMs: 1748548800000
+       }
+       descriptionOverride: "item_event_ticket_evergreen_desc_FFSR0325"
+@@ -119655,16 +119601,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-03-05T10:00:00"
++        eventStartTime: "2025-05-21T10:00:00"
+         eventEndTime: "2025-05-29T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_details_FFSR0325"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_FFSR0325"
+         ticketItem: ITEM_EVENT_TICKET_02
+         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
+-        clientEventStartTimeUtcMs: 1741168800000
++        clientEventStartTimeUtcMs: 1747821600000
+         clientEventEndTimeUtcMs: 1748548800000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_evergreen_details_FFSR0325"
++      descriptionOverride: "item_event_ticket_evergreen_desc_FFSR0325"
+     }
+   }
+ }
+@@ -120591,35 +120537,42 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-04-06T14:00:00"
+-        eventEndTime: "2025-04-06T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Tyrogue0425"
++        eventStartTime: "2025-05-21T10:00:00"
++        eventEndTime: "2025-05-27T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_global_desc_FinalStrike0525"
+         giftable: true
+         giftItem: ITEM_GLOBAL_EVENT_TICKET_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_Tyrogue0425"
+-        textRewardsKey: "text_rewards_key_Tyrogue0425"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_FinalStrike0525"
++        textRewardsKey: "text_rewards_key_FinalStrike0525"
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_STAR_PIECE
+-            amount: 1
++            item: ITEM_PAID_RAID_TICKET
++            amount: 2
++          }
++        }
++        iconRewards {
++          type: ITEM
++          item {
++            item: ITEM_LUCKY_EGG
++            amount: 4
+           }
+         }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_INCUBATOR_SUPER
++            item: ITEM_MP_REPLENISH
+             amount: 1
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1743948000000
+-        clientEventEndTimeUtcMs: 1743958800000
++        clientEventStartTimeUtcMs: 1747821600000
++        clientEventEndTimeUtcMs: 1748376000000
+       }
+-      descriptionOverride: "item_event_ticket_evergreen_desc_Tyrogue0425"
++      descriptionOverride: "item_event_ticket_global_desc_FinalStrike0525"
+     }
+   }
+ }
+@@ -120632,16 +120585,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-04-06T14:00:00"
+-        eventEndTime: "2025-04-06T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_details_Tyrogue0425"
++        eventStartTime: "2025-05-21T10:00:00"
++        eventEndTime: "2025-05-27T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_global_details_FinalStrike0525"
+         ticketItem: ITEM_GLOBAL_EVENT_TICKET
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
+-        clientEventStartTimeUtcMs: 1743948000000
+-        clientEventEndTimeUtcMs: 1743958800000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
++        clientEventStartTimeUtcMs: 1747821600000
++        clientEventEndTimeUtcMs: 1748376000000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_evergreen_details_Tyrogue0425"
++      descriptionOverride: "item_event_ticket_global_details_FinalStrike0525"
+     }
+   }
+ }
+@@ -121527,6 +121480,21 @@
+   }
+ }
+ template {
++  template_id: "ITEM_SINGLE_STAT_INCREASE"
++  data {
++    template_id: "ITEM_SINGLE_STAT_INCREASE"
++    itemSettings {
++      itemId: ITEM_SINGLE_STAT_INCREASE
++      itemType: ITEM_TYPE_STAT_INCREASE
++      category: ITEM_CATEGORY_STAT_INCREASE
++      ignoreInventorySpace: true
++      statIncrease_ {
++        statsToIncreaseLimit: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "ITEM_SPECIAL_CAMERA"
+   data {
+     template_id: "ITEM_SPECIAL_CAMERA"
+@@ -121681,6 +121649,21 @@
+   }
+ }
+ template {
++  template_id: "ITEM_TRIPLE_STAT_INCREASE"
++  data {
++    template_id: "ITEM_TRIPLE_STAT_INCREASE"
++    itemSettings {
++      itemId: ITEM_TRIPLE_STAT_INCREASE
++      itemType: ITEM_TYPE_STAT_INCREASE
++      category: ITEM_CATEGORY_STAT_INCREASE
++      ignoreInventorySpace: true
++      statIncrease_ {
++        statsToIncreaseLimit: 3
++      }
++    }
++  }
++}
++template {
+   template_id: "ITEM_TROY_DISK"
+   data {
+     template_id: "ITEM_TROY_DISK"
+@@ -122311,6 +122294,78 @@
+   }
+ }
+ template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001
++      imageUrl: "sb_GoTour2025_black"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_goFest_2025_rock_001"
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_002"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_002"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_002
++      imageUrl: "sb_GoTour2025_black"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_goFest_2025_rock_002"
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_003"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_003"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_003
++      imageUrl: "sb_GoTour2025_black"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_goFest_2025_rock_003"
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_004"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_004"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_004
++      imageUrl: "sb_GoTour2025_black"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_goFest_2025_rock_004"
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_005"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_005"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_005
++      imageUrl: "sb_GoTour2025_black"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_goFest_2025_rock_005"
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_006"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_006"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_006
++      imageUrl: "sb_GoTour2025_black"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_goFest_2025_rock_006"
++    }
++  }
++}
++template {
+   template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001"
+   data {
+     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001"
+@@ -140913,6 +140968,24 @@
+   }
+ }
+ template {
++  template_id: "PAWMOT_CD_EVOLUTION_QUEST"
++  data {
++    template_id: "PAWMOT_CD_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "PAWMOT_CD_EVOLUTION_QUEST"
++      questType: QUEST_BUDDY_EVOLUTION_WALK
++      goals {
++        target: 1
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "quest_buddy_walk_km_plural"
++        title: "quest_buddy_walk_km_plural"
++      }
++    }
++  }
++}
++template {
+   template_id: "PAWMOT_EVOLUTION_QUEST"
+   data {
+     template_id: "PAWMOT_EVOLUTION_QUEST"
+@@ -140937,7 +141010,7 @@
+     photoSettings {
+       screenCaptureSize: 2
+       isIrisEnabled: true
+-      irisFlags: 2011175120
++      irisFlags: 2009075920
+       bannerImageUrl: "PokemonSetsHeaderImage007"
+       bannerImageUrl: "PokemonSetsHeaderImage008"
+       bannerImageUrl: "PokemonSetsHeaderImage009"
+@@ -144387,14 +144460,8 @@
+       maxNumFriendInvitesPerAction: 5
+       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_EXTENDED_EGG
+       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_4
+-      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_1_SHADOW
+-      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_3_SHADOW
+-      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_5_SHADOW
+       unsupportedRemoteRaidLevels: RAID_LEVEL_EXTENDED_EGG
+       unsupportedRemoteRaidLevels: RAID_LEVEL_4
+-      unsupportedRemoteRaidLevels: RAID_LEVEL_1_SHADOW
+-      unsupportedRemoteRaidLevels: RAID_LEVEL_3_SHADOW
+-      unsupportedRemoteRaidLevels: RAID_LEVEL_5_SHADOW
+       raidLevelMusicOverrides {
+         raidLevel: RAID_LEVEL_ULTRA_BEAST
+         battleMusicKey: "GoFest2022Music_Battle"
+@@ -144603,7 +144670,16 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 5
++      dailySquashLimit: 10
++    }
++  }
++}
++template {
++  template_id: "REQUIRE_STAMP_COLLECTION_LIST_CODE_GATE"
++  data {
++    template_id: "REQUIRE_STAMP_COLLECTION_LIST_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
+     }
+   }
+ }
+@@ -256781,7 +256857,6 @@
+       damageWindowStartMs: 1000
+       damageWindowEndMs: 1800
+       energyDelta: -33
+-      isLocked: true
+     }
+   }
+ }
+@@ -350495,8 +350570,8 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_REMIX"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
+     }
+   }
+ }
+@@ -350509,31 +350584,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+     }
+@@ -350548,31 +350623,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -350588,7 +350663,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -350606,7 +350681,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -350621,7 +350696,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -350639,7 +350714,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -350655,7 +350730,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -350673,7 +350748,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -350688,7 +350763,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -350706,7 +350781,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -350722,7 +350797,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 570
++          count: 2280
+         }
+       }
+       reward {
+@@ -350740,7 +350815,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+     }
+@@ -350755,7 +350830,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+       reward {
+@@ -350773,7 +350848,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 9120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -350789,7 +350864,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -350807,7 +350882,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+     }
+@@ -350822,7 +350897,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       reward {
+@@ -350840,7 +350915,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 9600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -350935,7 +351010,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 700
++          count: 2800
+         }
+       }
+       reward {
+@@ -350953,7 +351028,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+     }
+@@ -350968,7 +351043,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+       reward {
+@@ -350986,7 +351061,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 11200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351002,7 +351077,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 730
++          count: 2920
+         }
+       }
+       reward {
+@@ -351020,7 +351095,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+     }
+@@ -351035,7 +351110,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+       reward {
+@@ -351053,7 +351128,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 11680
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351069,7 +351144,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 770
++          count: 3080
+         }
+       }
+       reward {
+@@ -351087,7 +351162,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+     }
+@@ -351102,7 +351177,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+       reward {
+@@ -351120,7 +351195,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 12320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351185,7 +351260,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 300
++          count: 1200
+         }
+       }
+       reward {
+@@ -351203,7 +351278,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+     }
+@@ -351218,7 +351293,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -351236,7 +351311,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351252,7 +351327,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 870
++          count: 3480
+         }
+       }
+       reward {
+@@ -351270,7 +351345,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+     }
+@@ -351285,7 +351360,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+       reward {
+@@ -351303,7 +351378,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 13920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351319,7 +351394,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -351337,7 +351412,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -351352,7 +351427,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -351370,7 +351445,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351386,7 +351461,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -351404,7 +351479,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -351419,7 +351494,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -351437,7 +351512,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351453,7 +351528,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -351471,7 +351546,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -351486,7 +351561,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -351504,7 +351579,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351520,7 +351595,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -351538,7 +351613,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -351553,7 +351628,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -351571,7 +351646,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351587,7 +351662,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -351605,7 +351680,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -351620,7 +351695,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -351638,7 +351713,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351654,7 +351729,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -351672,7 +351747,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -351687,7 +351762,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -351705,7 +351780,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351721,7 +351796,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 370
++          count: 1480
+         }
+       }
+       reward {
+@@ -351739,7 +351814,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+     }
+@@ -351754,7 +351829,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+       reward {
+@@ -351772,7 +351847,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 5920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351837,7 +351912,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 400
++          count: 1600
+         }
+       }
+       reward {
+@@ -351855,7 +351930,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+     }
+@@ -351870,7 +351945,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+       reward {
+@@ -351888,7 +351963,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 6400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351904,7 +351979,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -351922,7 +351997,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -351937,7 +352012,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -351955,7 +352030,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -351971,7 +352046,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -351989,7 +352064,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -352004,7 +352079,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -352022,7 +352097,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -352038,7 +352113,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 470
++          count: 1880
+         }
+       }
+       reward {
+@@ -352056,7 +352131,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+     }
+@@ -352071,7 +352146,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+       reward {
+@@ -352089,7 +352164,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 7520
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -356846,15 +356921,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 4
++      sortOrder: 1
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Tyrogue0425_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-04-06T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1743958800000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
++      title: "general1.ticket.4_FinalStrike0525_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2025-05-27T20:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1748376000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
+     }
+   }
+ }
+@@ -356865,15 +356940,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 4
++      sortOrder: 1
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Tyrogue0425_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-04-06T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1743958800000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
++      title: "general1.ticket.4_FinalStrike0525_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2025-05-27T20:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1748376000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
+     }
+   }
+ }
+@@ -357025,9 +357100,9 @@
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-03-10T20:00:00"
++      skuDisableTime: "2025-05-27T20:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1741636800000
++      skuDisableTimeUtcMs: 1748376000000
+       imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
+     }
+   }
+@@ -357044,9 +357119,9 @@
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-03-10T20:00:00"
++      skuDisableTime: "2025-05-27T20:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1741636800000
++      skuDisableTimeUtcMs: 1748376000000
+       imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
+     }
+   }
+@@ -357134,7 +357209,6 @@
+       sku: "general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._ShadowRegigigasRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -357153,7 +357227,6 @@
+       sku: "general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._ShadowRegigigasRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -357171,7 +357244,6 @@
+       sku: "general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._crown_clash_tgr"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -357190,7 +357262,6 @@
+       sku: "general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._crown_clash_tgr"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358590,15 +358661,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 4
++      sortOrder: 1
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Tyrogue0425_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-04-06T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1743958800000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
++      title: "general1.ticket.4_FinalStrike0525_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2025-05-27T20:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1748376000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
+     }
+   }
+ }
+@@ -358609,15 +358680,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 4
++      sortOrder: 1
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Tyrogue0425_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-04-06T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1743958800000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_Tyrogue_HatchDay_nologo.jpg"
++      title: "general1.ticket.4_FinalStrike0525_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2025-05-27T20:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1748376000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
+     }
+   }
+ }
+@@ -358750,9 +358821,9 @@
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-03-10T20:00:00"
++      skuDisableTime: "2025-05-27T20:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1741636800000
++      skuDisableTimeUtcMs: 1748376000000
+       imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
+     }
+   }
+@@ -358769,9 +358840,9 @@
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-03-10T20:00:00"
++      skuDisableTime: "2025-05-27T20:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1741636800000
++      skuDisableTimeUtcMs: 1748376000000
+       imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-powerful-potential-2025.jpg"
+     }
+   }
+@@ -358859,7 +358930,6 @@
+       sku: "pgorelease.general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._ShadowRegigigasRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358878,7 +358948,6 @@
+       sku: "pgorelease.general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket._ShadowRegigigasRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358896,7 +358965,6 @@
+       sku: "pgorelease.general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._crown_clash_tgr"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358915,7 +358983,6 @@
+       sku: "pgorelease.general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._crown_clash_tgr"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -364137,245 +364204,6 @@
+   }
+ }
+ template {
+-  template_id: "REQUIRE_STAMP_COLLECTION_LIST_CODE_GATE"
+-  data {
+-    template_id: "REQUIRE_STAMP_COLLECTION_LIST_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "PAWMOT_CD_EVOLUTION_QUEST"
+-  data {
+-    template_id: "PAWMOT_CD_EVOLUTION_QUEST"
+-    evolution_quest_template {
+-      questTemplateId: "PAWMOT_CD_EVOLUTION_QUEST"
+-      questType: QUEST_BUDDY_EVOLUTION_WALK
+-      goals {
+-        target: 1
+-      }
+-      context: EVOLUTION_QUEST
+-      display {
+-        description: "quest_buddy_walk_km_plural"
+-        title: "quest_buddy_walk_km_plural"
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_006"
+-  data {
+-    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_006"
+-    locationCardSettings {
+-      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_006
+-      imageUrl: "sb_GoTour2025_black"
+-      cardType: SPECIAL_BACKGROUND
+-      vfxAddress: "bgfx_goFest_2025_rock_006"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_005"
+-  data {
+-    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_005"
+-    locationCardSettings {
+-      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_005
+-      imageUrl: "sb_GoTour2025_black"
+-      cardType: SPECIAL_BACKGROUND
+-      vfxAddress: "bgfx_goFest_2025_rock_005"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_004"
+-  data {
+-    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_004"
+-    locationCardSettings {
+-      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_004
+-      imageUrl: "sb_GoTour2025_black"
+-      cardType: SPECIAL_BACKGROUND
+-      vfxAddress: "bgfx_goFest_2025_rock_004"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_003"
+-  data {
+-    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_003"
+-    locationCardSettings {
+-      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_003
+-      imageUrl: "sb_GoTour2025_black"
+-      cardType: SPECIAL_BACKGROUND
+-      vfxAddress: "bgfx_goFest_2025_rock_003"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_002"
+-  data {
+-    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_002"
+-    locationCardSettings {
+-      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_002
+-      imageUrl: "sb_GoTour2025_black"
+-      cardType: SPECIAL_BACKGROUND
+-      vfxAddress: "bgfx_goFest_2025_rock_002"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001"
+-  data {
+-    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001"
+-    locationCardSettings {
+-      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001
+-      imageUrl: "sb_GoTour2025_black"
+-      cardType: SPECIAL_BACKGROUND
+-      vfxAddress: "bgfx_goFest_2025_rock_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_TRIPLE_STAT_INCREASE"
+-  data {
+-    template_id: "ITEM_TRIPLE_STAT_INCREASE"
+-    itemSettings {
+-      itemId: ITEM_TRIPLE_STAT_INCREASE
+-      itemType: ITEM_TYPE_STAT_INCREASE
+-      category: ITEM_CATEGORY_STAT_INCREASE
+-      ignoreInventorySpace: true
+-      statIncrease_ {
+-        statsToIncreaseLimit: 3
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_SINGLE_STAT_INCREASE"
+-  data {
+-    template_id: "ITEM_SINGLE_STAT_INCREASE"
+-    itemSettings {
+-      itemId: ITEM_SINGLE_STAT_INCREASE
+-      itemType: ITEM_TYPE_STAT_INCREASE
+-      category: ITEM_CATEGORY_STAT_INCREASE
+-      ignoreInventorySpace: true
+-      statIncrease_ {
+-        statsToIncreaseLimit: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0713_POKEMON_AVALUGG_NORMAL"
+-  data {
+-    template_id: "EXTENDED_V0713_POKEMON_AVALUGG_NORMAL"
+-    pokemonExtendedSettings {
+-      uniqueId: AVALUGG
+-      form: AVALUGG_NORMAL
+-      sizeSettings {
+-        xxsLowerBound: 0.98
+-        xsLowerBound: 1
+-        mLowerBound: 1.5
+-        mUpperBound: 2.5
+-        xlUpperBound: 3
+-        xxlUpperBound: 3.1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0713_POKEMON_AVALUGG_HISUIAN"
+-  data {
+-    template_id: "EXTENDED_V0713_POKEMON_AVALUGG_HISUIAN"
+-    pokemonExtendedSettings {
+-      uniqueId: AVALUGG
+-      form: AVALUGG_HISUIAN
+-      sizeSettings {
+-        xxsLowerBound: 0.98
+-        xsLowerBound: 1
+-        mLowerBound: 1.5
+-        mUpperBound: 2.5
+-        xlUpperBound: 3
+-        xxlUpperBound: 3.1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0614_POKEMON_BEARTIC_WINTER_2020"
+-  data {
+-    template_id: "EXTENDED_V0614_POKEMON_BEARTIC_WINTER_2020"
+-    pokemonExtendedSettings {
+-      uniqueId: BEARTIC
+-      form: BEARTIC_WINTER_2020
+-      sizeSettings {
+-        xxsLowerBound: 1.274
+-        xsLowerBound: 1.3
+-        mLowerBound: 1.95
+-        mUpperBound: 3.25
+-        xlUpperBound: 3.9
+-        xxlUpperBound: 4.03
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0614_POKEMON_BEARTIC_NORMAL"
+-  data {
+-    template_id: "EXTENDED_V0614_POKEMON_BEARTIC_NORMAL"
+-    pokemonExtendedSettings {
+-      uniqueId: BEARTIC
+-      form: BEARTIC_NORMAL
+-      sizeSettings {
+-        xxsLowerBound: 1.274
+-        xsLowerBound: 1.3
+-        mLowerBound: 1.95
+-        mUpperBound: 3.25
+-        xlUpperBound: 3.9
+-        xxlUpperBound: 4.03
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0142_POKEMON_AERODACTYL_SUMMER_2023"
+-  data {
+-    template_id: "EXTENDED_V0142_POKEMON_AERODACTYL_SUMMER_2023"
+-    pokemonExtendedSettings {
+-      uniqueId: AERODACTYL
+-      form: AERODACTYL_SUMMER_2023
+-      temp_evo_overrides {
+-        tempEvoId: TEMP_EVOLUTION_MEGA
+-        sizeSettings {
+-          xxsLowerBound: 1.029
+-          xsLowerBound: 1.05
+-          mLowerBound: 1.575
+-          mUpperBound: 2.625
+-          xlUpperBound: 3.15
+-          xxlUpperBound: 3.255
+-        }
+-      }
+-      sizeSettings {
+-        xxsLowerBound: 0.882
+-        xsLowerBound: 0.9
+-        mLowerBound: 1.35
+-        mUpperBound: 2.25
+-        xlUpperBound: 2.7
+-        xxlUpperBound: 3.6
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "FOUR_SHIELD_BREAD_GUI_CODE_GATE"
+-  data {
+-    template_id: "FOUR_SHIELD_BREAD_GUI_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-    }
+-  }
+-}
+-template {
+   template_id: "EVENT_PASS_MAY2025_SEASON"
+   data {
+     template_id: "EVENT_PASS_MAY2025_SEASON"
+@@ -373457,7 +373285,7 @@
+     }
+   }
+ }
+-batch_id: 1747148614986
++batch_id: 1747284354687
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -373499,11 +373498,11 @@
+@@ -373466,7 +373294,7 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 170
+-experiment_id: 181
++experiment_id: 182
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 361
+@@ -373491,18 +373319,21 @@
+ experiment_id: 3063
+ experiment_id: 3502
+ experiment_id: 3515
+-experiment_id: 3520
++experiment_id: 3521
+ experiment_id: 3532
+ experiment_id: 3536
+ experiment_id: 3685
  experiment_id: 3809
  experiment_id: 3810
++experiment_id: 3811
++experiment_id: 3813
++experiment_id: 3814
++experiment_id: 3815
++experiment_id: 4905
  experiment_id: 4998
-+experiment_id: 5042
+-experiment_id: 5042
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
- experiment_id: 5219
--experiment_id: 5269
+-experiment_id: 5219
  experiment_id: 5506
  experiment_id: 5508
  experiment_id: 5510
+@@ -373515,6 +373346,7 @@
+ experiment_id: 7040
+ experiment_id: 8743
+ experiment_id: 8929
++experiment_id: 8930
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
+@@ -373528,7 +373360,6 @@
+ experiment_id: 314160
+ experiment_id: 3500035
+ experiment_id: 3500037
+-experiment_id: 4610000
+ experiment_id: 4700000
+ experiment_id: 5000301
+ experiment_id: 6600417
