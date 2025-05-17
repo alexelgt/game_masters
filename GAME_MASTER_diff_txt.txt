@@ -1,37 +1,339 @@
---- GAME_MASTER_old.txt	2025-05-16 08:36:28.433373873 +0200
-+++ GAME_MASTER.txt	2025-05-16 08:42:25.489546622 +0200
-@@ -41514,7 +41514,7 @@
-         condition {
-           type: WITH_COMBAT_TYPE
-           with_combat_type {
--            combat_type: 7
-+            combat_type: COMBAT_TYPE_RAID
-           }
-         }
-         condition {
-@@ -373302,9 +373302,9 @@
-         condition {
-           type: WITH_COMBAT_TYPE
-           with_combat_type {
--            combat_type: 7
--            combat_type: 8
--            combat_type: 9
+--- GAME_MASTER_old.txt	2025-05-16 08:42:25.489546622 +0200
++++ GAME_MASTER.txt	2025-05-17 16:05:32.384800176 +0200
+@@ -41835,42 +41835,42 @@
+         stardustCost: 1
+       }
+       aSettings {
+-        candyCost: 100
++        candyCost: 130
+         xpRewards: 6000
+         stardustCost: 50000
+       }
+       aSettings {
+-        xlCandyCost: 40
++        xlCandyCost: 55
+         xpRewards: 8000
+         stardustCost: 100000
+       }
+       bSettings {
+-        candyCost: 50
++        candyCost: 80
+         xpRewards: 4000
+         stardustCost: 25000
+       }
+       bSettings {
+-        candyCost: 100
++        candyCost: 130
+         xpRewards: 6000
+         stardustCost: 50000
+       }
+       bSettings {
+-        xlCandyCost: 40
++        xlCandyCost: 55
+         xpRewards: 8000
+         stardustCost: 100000
+       }
+       cSettings {
+-        candyCost: 50
++        candyCost: 80
+         xpRewards: 4000
+         stardustCost: 25000
+       }
+       cSettings {
+-        candyCost: 100
++        candyCost: 130
+         xpRewards: 6000
+         stardustCost: 50000
+       }
+       cSettings {
+-        xlCandyCost: 40
++        xlCandyCost: 55
+         xpRewards: 8000
+         stardustCost: 100000
+       }
+@@ -41888,42 +41888,42 @@
+         stardustCost: 1
+       }
+       aSettings {
+-        candyCost: 100
++        candyCost: 130
+         xpRewards: 6000
+         stardustCost: 50000
+       }
+       aSettings {
+-        xlCandyCost: 40
++        xlCandyCost: 55
+         xpRewards: 8000
+         stardustCost: 100000
+       }
+       bSettings {
+-        candyCost: 50
++        candyCost: 80
+         xpRewards: 4000
+         stardustCost: 25000
+       }
+       bSettings {
+-        candyCost: 100
++        candyCost: 130
+         xpRewards: 6000
+         stardustCost: 50000
+       }
+       bSettings {
+-        xlCandyCost: 40
++        xlCandyCost: 55
+         xpRewards: 8000
+         stardustCost: 100000
+       }
+       cSettings {
+-        candyCost: 50
++        candyCost: 80
+         xpRewards: 4000
+         stardustCost: 25000
+       }
+       cSettings {
+-        candyCost: 100
++        candyCost: 130
+         xpRewards: 6000
+         stardustCost: 50000
+       }
+       cSettings {
+-        xlCandyCost: 40
++        xlCandyCost: 55
+         xpRewards: 8000
+         stardustCost: 100000
+       }
+@@ -122302,7 +122302,7 @@
+     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001"
+     locationCardSettings {
+       locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001
+-      imageUrl: "sb_GoTour2025_black"
++      imageUrl: "sb_GoFest2025"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_goFest_2025_rock_001"
+     }
+@@ -122314,7 +122314,7 @@
+     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_002"
+     locationCardSettings {
+       locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_002
+-      imageUrl: "sb_GoTour2025_black"
++      imageUrl: "sb_GoFest2025"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_goFest_2025_rock_002"
+     }
+@@ -122326,7 +122326,7 @@
+     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_003"
+     locationCardSettings {
+       locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_003
+-      imageUrl: "sb_GoTour2025_black"
++      imageUrl: "sb_GoFest2025"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_goFest_2025_rock_003"
+     }
+@@ -122338,7 +122338,7 @@
+     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_004"
+     locationCardSettings {
+       locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_004
+-      imageUrl: "sb_GoTour2025_black"
++      imageUrl: "sb_GoFest2025"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_goFest_2025_rock_004"
+     }
+@@ -122350,7 +122350,7 @@
+     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_005"
+     locationCardSettings {
+       locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_005
+-      imageUrl: "sb_GoTour2025_black"
++      imageUrl: "sb_GoFest2025"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_goFest_2025_rock_005"
+     }
+@@ -122362,7 +122362,7 @@
+     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_006"
+     locationCardSettings {
+       locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_006
+-      imageUrl: "sb_GoTour2025_black"
++      imageUrl: "sb_GoFest2025"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_goFest_2025_rock_006"
+     }
+@@ -144673,7 +144673,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 20
+     }
+   }
+ }
+@@ -364207,6 +364207,76 @@
+   }
+ }
+ template {
++  template_id: "KUBFU_RAPID_STRIKE_EVOLUTION_QUEST"
++  data {
++    template_id: "KUBFU_RAPID_STRIKE_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "KUBFU_RAPID_STRIKE_EVOLUTION_QUEST"
++      questType: QUEST_COMPLETE_BATTLE
++      goals {
++        condition {
++          type: WITH_WIN_BATTLE_STATUS
++        }
++        condition {
++          type: WITH_COMBAT_TYPE
++          with_combat_type {
 +            combat_type: COMBAT_TYPE_RAID
 +            combat_type: COMBAT_TYPE_DMAX
 +            combat_type: COMBAT_TYPE_GMAX
-           }
-         }
-         condition {
-@@ -373337,9 +373337,9 @@
-         condition {
-           type: WITH_COMBAT_TYPE
-           with_combat_type {
--            combat_type: 7
--            combat_type: 8
--            combat_type: 9
++          }
++        }
++        condition {
++          type: WITH_POKEMON_TYPE
++          with_pokemon_type {
++            pokemonType: POKEMON_TYPE_WATER
++          }
++        }
++        target: 30
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "quest_defeat_water_type_raid_and_max_battle"
++        title: "quest_defeat_water_type_raid_and_max_battle"
++      }
++    }
++  }
++}
++template {
++  template_id: "KUBFU_SINGLE_STRIKE_EVOLUTION_QUEST"
++  data {
++    template_id: "KUBFU_SINGLE_STRIKE_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "KUBFU_SINGLE_STRIKE_EVOLUTION_QUEST"
++      questType: QUEST_COMPLETE_BATTLE
++      goals {
++        condition {
++          type: WITH_WIN_BATTLE_STATUS
++        }
++        condition {
++          type: WITH_COMBAT_TYPE
++          with_combat_type {
 +            combat_type: COMBAT_TYPE_RAID
 +            combat_type: COMBAT_TYPE_DMAX
 +            combat_type: COMBAT_TYPE_GMAX
-           }
-         }
-         condition {
++          }
++        }
++        condition {
++          type: WITH_POKEMON_TYPE
++          with_pokemon_type {
++            pokemonType: POKEMON_TYPE_DARK
++          }
++        }
++        target: 30
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "quest_defeat_dark_type_raid_and_max_battle"
++        title: "quest_defeat_dark_type_raid_and_max_battle"
++      }
++    }
++  }
++}
++template {
+   template_id: "EVENT_PASS_MAY2025_SEASON"
+   data {
+     template_id: "EVENT_PASS_MAY2025_SEASON"
+@@ -373288,77 +373358,7 @@
+     }
+   }
+ }
+-template {
+-  template_id: "KUBFU_RAPID_STRIKE_EVOLUTION_QUEST"
+-  data {
+-    template_id: "KUBFU_RAPID_STRIKE_EVOLUTION_QUEST"
+-    evolution_quest_template {
+-      questTemplateId: "KUBFU_RAPID_STRIKE_EVOLUTION_QUEST"
+-      questType: QUEST_COMPLETE_BATTLE
+-      goals {
+-        condition {
+-          type: WITH_WIN_BATTLE_STATUS
+-        }
+-        condition {
+-          type: WITH_COMBAT_TYPE
+-          with_combat_type {
+-            combat_type: COMBAT_TYPE_RAID
+-            combat_type: COMBAT_TYPE_DMAX
+-            combat_type: COMBAT_TYPE_GMAX
+-          }
+-        }
+-        condition {
+-          type: WITH_POKEMON_TYPE
+-          with_pokemon_type {
+-            pokemonType: POKEMON_TYPE_WATER
+-          }
+-        }
+-        target: 30
+-      }
+-      context: EVOLUTION_QUEST
+-      display {
+-        description: "quest_defeat_water_type_raid_and_max_battle"
+-        title: "quest_defeat_water_type_raid_and_max_battle"
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "KUBFU_SINGLE_STRIKE_EVOLUTION_QUEST"
+-  data {
+-    template_id: "KUBFU_SINGLE_STRIKE_EVOLUTION_QUEST"
+-    evolution_quest_template {
+-      questTemplateId: "KUBFU_SINGLE_STRIKE_EVOLUTION_QUEST"
+-      questType: QUEST_COMPLETE_BATTLE
+-      goals {
+-        condition {
+-          type: WITH_WIN_BATTLE_STATUS
+-        }
+-        condition {
+-          type: WITH_COMBAT_TYPE
+-          with_combat_type {
+-            combat_type: COMBAT_TYPE_RAID
+-            combat_type: COMBAT_TYPE_DMAX
+-            combat_type: COMBAT_TYPE_GMAX
+-          }
+-        }
+-        condition {
+-          type: WITH_POKEMON_TYPE
+-          with_pokemon_type {
+-            pokemonType: POKEMON_TYPE_DARK
+-          }
+-        }
+-        target: 30
+-      }
+-      context: EVOLUTION_QUEST
+-      display {
+-        description: "quest_defeat_dark_type_raid_and_max_battle"
+-        title: "quest_defeat_dark_type_raid_and_max_battle"
+-      }
+-    }
+-  }
+-}
+-batch_id: 1747367869430
++batch_id: 1747456592612
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -373402,11 +373402,15 @@
+ experiment_id: 3813
+ experiment_id: 3814
+ experiment_id: 3815
++experiment_id: 4900
++experiment_id: 4902
+ experiment_id: 4905
++experiment_id: 4908
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5220
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
