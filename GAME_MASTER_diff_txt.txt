@@ -1,96 +1,155 @@
---- GAME_MASTER_old.txt	2025-05-17 16:05:32.384800176 +0200
-+++ GAME_MASTER.txt	2025-05-18 12:02:54.311744700 +0200
-@@ -144673,7 +144673,7 @@
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
-       enabled: true
--      dailySquashLimit: 20
-+      dailySquashLimit: 10
+--- GAME_MASTER_old.txt	2025-05-18 12:02:54.311744700 +0200
++++ GAME_MASTER.txt	2025-05-19 19:26:14.744582669 +0200
+@@ -256860,6 +256860,7 @@
+       damageWindowStartMs: 1000
+       damageWindowEndMs: 1800
+       energyDelta: -33
++      isLocked: true
      }
    }
  }
-@@ -355626,12 +355626,9 @@
-       sku: "bundle.maxmonday.1"
-       category: IAP_CATEGORY_BUNDLE
+@@ -342933,9 +342934,9 @@
+       evolutionBranch {
+         evolution: PAWMOT
+         candyCost: 100
+-        kmBuddyDistanceRequirement: 1
++        kmBuddyDistanceRequirement: 25
+         questDisplay {
+-          questRequirementTemplateId: "PAWMOT_CD_EVOLUTION_QUEST"
++          questRequirementTemplateId: "PAWMOT_EVOLUTION_QUEST"
+         }
+       }
+       modelScaleV2: 1.1
+@@ -356917,7 +356918,6 @@
+       sku: "general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 1
-+      hidden: true
-       spriteId: "bundle3.sprite.d"
-       title: "max_battler_box"
--      skuEnableTime: "2019-10-31T21:00:00"
--      skuDisableTime: "2025-05-17T22:00:00"
--      skuEnableTimeUtcMs: 1572555600000
--      skuDisableTimeUtcMs: 1747519200000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 550
-@@ -356482,15 +356479,10 @@
-       sku: "bundle.tgrtakeover2024.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 4
-+      hidden: true
-+      sale: true
-       spriteId: "bundle.general1.rocket.1"
-       title: "bundle.general1.rocket.1_title"
--      skuEnableTime: "2022-12-11T10:00:00"
--      skuDisableTime: "2025-05-17T17:00:00"
--      skuEnableTimeUtcMs: 1670752800000
--      skuDisableTimeUtcMs: 1747501200000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 450
-     }
-   }
- }
-@@ -357212,6 +357204,7 @@
-       sku: "general2.ticket.5"
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_FinalStrike0525_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -356936,7 +356936,6 @@
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_FinalStrike0525_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -357091,7 +357090,6 @@
+       sku: "general2.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -357110,7 +357108,6 @@
+       sku: "general2.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -357241,6 +357238,7 @@
+       sku: "general2.ticket.6"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
 +      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general1.ticket._ShadowRegigigasRaidDay_title"
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._crown_clash_tgr"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -357230,6 +357223,7 @@
-       sku: "general2.ticket.5.giftable"
+@@ -357259,6 +357257,7 @@
+       sku: "general2.ticket.6.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
 +      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general1.ticket._ShadowRegigigasRaidDay_title"
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._crown_clash_tgr"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -358933,6 +358927,7 @@
-       sku: "pgorelease.general2.ticket.5"
+@@ -358659,7 +358658,6 @@
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_FinalStrike0525_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -358678,7 +358676,6 @@
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_FinalStrike0525_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -358814,7 +358811,6 @@
+       sku: "pgorelease.general2.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -358833,7 +358829,6 @@
+       sku: "pgorelease.general2.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -358964,6 +358959,7 @@
+       sku: "pgorelease.general2.ticket.6"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
 +      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general1.ticket._ShadowRegigigasRaidDay_title"
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._crown_clash_tgr"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -358951,6 +358946,7 @@
-       sku: "pgorelease.general2.ticket.5.giftable"
+@@ -358982,6 +358978,7 @@
+       sku: "pgorelease.general2.ticket.6.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
 +      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general1.ticket._ShadowRegigigasRaidDay_title"
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._crown_clash_tgr"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -373380,9 +373376,7 @@
- experiment_id: 807
- experiment_id: 1699
- experiment_id: 1820
--experiment_id: 2215
- experiment_id: 2248
--experiment_id: 2255
- experiment_id: 2297
- experiment_id: 2600
- experiment_id: 2650
-@@ -373402,10 +373396,6 @@
- experiment_id: 3813
+@@ -373387,20 +373384,19 @@
+ experiment_id: 3502
+ experiment_id: 3515
+ experiment_id: 3521
+-experiment_id: 3532
++experiment_id: 3533
+ experiment_id: 3536
+ experiment_id: 3685
+-experiment_id: 3809
+-experiment_id: 3810
+-experiment_id: 3811
+-experiment_id: 3813
++experiment_id: 3802
  experiment_id: 3814
  experiment_id: 3815
--experiment_id: 4900
--experiment_id: 4902
--experiment_id: 4905
--experiment_id: 4908
++experiment_id: 3819
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5220
++experiment_id: 5221
++experiment_id: 5270
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
+@@ -373411,9 +373407,9 @@
+ experiment_id: 7031
+ experiment_id: 7035
+ experiment_id: 7040
+-experiment_id: 8743
+ experiment_id: 8929
+ experiment_id: 8930
++experiment_id: 8931
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
