@@ -1,135 +1,437 @@
---- GAME_MASTER_old.txt	2025-05-24 17:19:07.673171792 +0200
-+++ GAME_MASTER.txt	2025-05-25 11:55:23.036277487 +0200
+--- GAME_MASTER_old.txt	2025-05-25 11:55:23.036277487 +0200
++++ GAME_MASTER.txt	2025-05-26 18:41:49.376557728 +0200
 @@ -41556,7 +41556,7 @@
        prepareBreadLobbySoloMs: 80000
        rvnVersion: 1
        maxRemotePlayersPerBreadDoughLobby: 40
--      maxRemoteBreadBattlePassesAllowed: 10
-+      maxRemoteBreadBattlePassesAllowed: 20
+-      maxRemoteBreadBattlePassesAllowed: 20
++      maxRemoteBreadBattlePassesAllowed: 10
        maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
        fetchProfileFromSocialEnabled: true
        maxPlayersToPrepareBreadDoughLobby: 40
-@@ -120999,8 +120999,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 1
-       incense {
--        incenseLifetimeSeconds: 10800
--        spawnTableProbability: 0.9
-+        incenseLifetimeSeconds: 3600
-       }
-     }
-   }
-@@ -125548,8 +125547,8 @@
+@@ -125547,8 +125547,8 @@
    data {
      template_id: "MP_SHARED_SETTINGS"
      mpSettings {
--      numMpFromWalkQuest: 300
--      numMetersGoal: 2000
-+      numMpFromWalkQuest: 600
-+      numMetersGoal: 500
+-      numMpFromWalkQuest: 600
+-      numMetersGoal: 500
++      numMpFromWalkQuest: 300
++      numMetersGoal: 2000
        debugAllowRemoveWalkQuest: true
        numMpFromLootStation: 100
        numExtraMpFromFirstLootStation: 20
-@@ -144927,7 +144926,7 @@
+@@ -144926,7 +144926,7 @@
      template_id: "REMOTE_RAID_LIMIT_SETTINGS"
      squashSettings {
        enabled: true
--      dailySquashLimit: 10
-+      dailySquashLimit: 20
+-      dailySquashLimit: 20
++      dailySquashLimit: 10
      }
    }
  }
-@@ -352985,7 +352984,7 @@
+@@ -339675,6 +339675,62 @@
+       isTradable: true
+       buddyGroupNumber: 3
+       raidBossDistanceOffset: 4
++      formChange {
++        availableForm: ZACIAN_CROWNED_SWORD
++        candyCost: 30
++        item: ITEM_RESOURCE_CROWNED_ZACIAN
++        itemCostCount: 1000
++        moveReassignment {
++          cinematicMoves {
++            existingMoves: IRON_HEAD
++            replacementMoves: BEHEMOTH_BLADE
++          }
++        }
++        10 {
++          1: "J"
++        }
++        13 {
++          1: 2576
++          2: 4
++          4 {
++            1: 1
++            2: 1
++          }
++        }
++        14 {
++          1: 87
++          2: 90
++        }
++      }
++      formChange {
++        availableForm: ZACIAN_CROWNED_SWORD
++        moveReassignment {
++          cinematicMoves {
++            existingMoves: IRON_HEAD
++            replacementMoves: BEHEMOTH_BLADE
++          }
++        }
++        10 {
++          1: "J"
++        }
++        11 {
++          1: "\001"
++          2: 1
++        }
++        12: 1
++        13 {
++          1: 2576
++          2: 4
++          4 {
++            1: 1
++            2: 1
++          }
++        }
++        14 {
++          1: 87
++          2: 90
++        }
++      }
+       ibfc {
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: MESPRIT
-+          pokemon_id: TAPU_BULU
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -353548,7 +353547,7 @@
+       breadTierGroup: 7
+@@ -339747,6 +339803,23 @@
+       buddyGroupNumber: 3
+       disableTransferToPokemonHome: true
+       raidBossDistanceOffset: 6
++      formChange {
++        availableForm: ZACIAN_HERO
++        moveReassignment {
++          cinematicMoves {
++            existingMoves: BEHEMOTH_BLADE
++            replacementMoves: IRON_HEAD
++          }
++        }
++        13 {
++          1: 2577
++          3: 1
++        }
++        14 {
++          1: 90
++          2: 87
++        }
++      }
+       ibfc {
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: MESPRIT
-+          pokemon_id: TAPU_BULU
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -357418,6 +357417,7 @@
-       sku: "general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
+       breadTierGroup: 7
+@@ -339821,6 +339894,62 @@
+       isTradable: true
+       buddyGroupNumber: 3
+       raidBossDistanceOffset: 4
++      formChange {
++        availableForm: ZACIAN_CROWNED_SWORD
++        candyCost: 30
++        item: ITEM_RESOURCE_CROWNED_ZACIAN
++        itemCostCount: 1000
++        moveReassignment {
++          cinematicMoves {
++            existingMoves: IRON_HEAD
++            replacementMoves: BEHEMOTH_BLADE
++          }
++        }
++        10 {
++          1: "J"
++        }
++        13 {
++          1: 2576
++          2: 4
++          4 {
++            1: 1
++            2: 1
++          }
++        }
++        14 {
++          1: 87
++          2: 90
++        }
++      }
++      formChange {
++        availableForm: ZACIAN_CROWNED_SWORD
++        moveReassignment {
++          cinematicMoves {
++            existingMoves: IRON_HEAD
++            replacementMoves: BEHEMOTH_BLADE
++          }
++        }
++        10 {
++          1: "J"
++        }
++        11 {
++          1: "\001"
++          2: 1
++        }
++        12: 1
++        13 {
++          1: 2576
++          2: 4
++          4 {
++            1: 1
++            2: 1
++          }
++        }
++        14 {
++          1: 87
++          2: 90
++        }
++      }
+       ibfc {
+       }
+       breadTierGroup: 7
+@@ -339905,6 +340034,62 @@
+       isTradable: true
+       buddyGroupNumber: 3
+       raidBossDistanceOffset: 4
++      formChange {
++        availableForm: ZAMAZENTA_CROWNED_SHIELD
++        candyCost: 30
++        item: ITEM_RESOURCE_CROWNED_ZAMAZENTA
++        itemCostCount: 1000
++        moveReassignment {
++          cinematicMoves {
++            existingMoves: IRON_HEAD
++            replacementMoves: BEHEMOTH_BASH
++          }
++        }
++        10 {
++          1: "J"
++        }
++        13 {
++          1: 2578
++          2: 4
++          4 {
++            1: 1
++            2: 1
++          }
++        }
++        14 {
++          1: 88
++          2: 91
++        }
++      }
++      formChange {
++        availableForm: ZAMAZENTA_CROWNED_SHIELD
++        moveReassignment {
++          cinematicMoves {
++            existingMoves: IRON_HEAD
++            replacementMoves: BEHEMOTH_BASH
++          }
++        }
++        10 {
++          1: "J"
++        }
++        11 {
++          1: "\001"
++          2: 1
++        }
++        12: 1
++        13 {
++          1: 2578
++          2: 4
++          4 {
++            1: 1
++            2: 1
++          }
++        }
++        14 {
++          1: 88
++          2: 91
++        }
++      }
+       ibfc {
+       }
+       breadTierGroup: 7
+@@ -339977,6 +340162,23 @@
+       buddyGroupNumber: 3
+       disableTransferToPokemonHome: true
+       raidBossDistanceOffset: 6
++      formChange {
++        availableForm: ZAMAZENTA_HERO
++        moveReassignment {
++          cinematicMoves {
++            existingMoves: BEHEMOTH_BASH
++            replacementMoves: IRON_HEAD
++          }
++        }
++        13 {
++          1: 2579
++          3: 1
++        }
++        14 {
++          1: 91
++          2: 88
++        }
++      }
+       ibfc {
+       }
+       breadTierGroup: 7
+@@ -340051,6 +340253,62 @@
+       isTradable: true
+       buddyGroupNumber: 3
+       raidBossDistanceOffset: 4
++      formChange {
++        availableForm: ZAMAZENTA_CROWNED_SHIELD
++        candyCost: 30
++        item: ITEM_RESOURCE_CROWNED_ZAMAZENTA
++        itemCostCount: 1000
++        moveReassignment {
++          cinematicMoves {
++            existingMoves: IRON_HEAD
++            replacementMoves: BEHEMOTH_BASH
++          }
++        }
++        10 {
++          1: "J"
++        }
++        13 {
++          1: 2578
++          2: 4
++          4 {
++            1: 1
++            2: 1
++          }
++        }
++        14 {
++          1: 88
++          2: 91
++        }
++      }
++      formChange {
++        availableForm: ZAMAZENTA_CROWNED_SHIELD
++        moveReassignment {
++          cinematicMoves {
++            existingMoves: IRON_HEAD
++            replacementMoves: BEHEMOTH_BASH
++          }
++        }
++        10 {
++          1: "J"
++        }
++        11 {
++          1: "\001"
++          2: 1
++        }
++        12: 1
++        13 {
++          1: 2578
++          2: 4
++          4 {
++            1: 1
++            2: 1
++          }
++        }
++        14 {
++          1: 88
++          2: 91
++        }
++      }
+       ibfc {
+       }
+       breadTierGroup: 7
+@@ -354184,13 +354442,10 @@
+       sku: "bundle.cd2022.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
 +      hidden: true
-       spriteId: "general2.ticket.7"
-       title: "general1.ticket_CDC_Machop25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -357436,6 +357436,7 @@
-       sku: "general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.7"
-       title: "general1.ticket_CDC_Machop25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359131,6 +359132,7 @@
-       sku: "pgorelease.general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.7"
-       title: "general1.ticket_CDC_Machop25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -359149,6 +359151,7 @@
-       sku: "pgorelease.general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.7"
-       title: "general1.ticket_CDC_Machop25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -373745,7 +373748,7 @@
+       sale: true
+-      spriteId: "bundle.general4.small.1"
+-      title: "bundle.general4.small.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2025-05-25T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1748217599000
++      spriteId: "bundle.halloween.small.1"
++      title: "bundle.halloween.small.1_title"
      }
    }
  }
--batch_id: 1748025642638
-+batch_id: 1748159901671
+@@ -354202,13 +354457,10 @@
+       sku: "bundle.cd2022.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 2
++      hidden: true
+       sale: true
+-      spriteId: "bundle.general1.medium.1"
+-      title: "bundle.general1.medium.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2025-05-25T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1748217599000
++      spriteId: "bundle.halloween.adventure.1"
++      title: "bundle.halloween.adventure.1_title"
+     }
+   }
+ }
+@@ -357494,6 +357746,7 @@
+       sku: "general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_gmaxMachamp25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -357512,6 +357765,7 @@
+       sku: "general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_gmaxMachamp25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -359209,6 +359463,7 @@
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_gmaxMachamp25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -359227,6 +359482,7 @@
+       sku: "pgorelease.general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_gmaxMachamp25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -373748,7 +374004,7 @@
+     }
+   }
+ }
+-batch_id: 1748159901671
++batch_id: 1748248136573
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -373780,17 +373783,18 @@
+@@ -373778,20 +374034,15 @@
+ experiment_id: 2600
+ experiment_id: 2650
+ experiment_id: 2825
+-experiment_id: 3025
+ experiment_id: 3032
  experiment_id: 3033
  experiment_id: 3063
  experiment_id: 3502
--experiment_id: 3515
-+experiment_id: 3517
+ experiment_id: 3517
  experiment_id: 3521
- experiment_id: 3533
+-experiment_id: 3533
++experiment_id: 3534
  experiment_id: 3536
  experiment_id: 3685
- experiment_id: 3802
-+experiment_id: 3803
- experiment_id: 3806
-+experiment_id: 3807
+-experiment_id: 3802
+-experiment_id: 3803
+-experiment_id: 3806
+-experiment_id: 3807
  experiment_id: 3814
  experiment_id: 3817
  experiment_id: 3819
--experiment_id: 3823
- experiment_id: 4998
+@@ -373799,7 +374050,7 @@
  experiment_id: 5160
  experiment_id: 5162
-@@ -373806,12 +373810,9 @@
- experiment_id: 7031
- experiment_id: 7035
- experiment_id: 7040
--experiment_id: 8746
--experiment_id: 8747
--experiment_id: 8748
- experiment_id: 8750
- experiment_id: 8917
--experiment_id: 8919
-+experiment_id: 8921
- experiment_id: 8929
- experiment_id: 8930
- experiment_id: 8931
+ experiment_id: 5163
+-experiment_id: 5222
++experiment_id: 5223
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
