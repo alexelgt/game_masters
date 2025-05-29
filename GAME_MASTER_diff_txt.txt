@@ -1,19 +1,2314 @@
---- GAME_MASTER_old.txt	2025-05-26 18:41:49.376557728 +0200
-+++ GAME_MASTER.txt	2025-05-27 18:57:13.284014928 +0200
-@@ -374004,7 +374004,7 @@
+--- GAME_MASTER_old.txt	2025-05-27 18:57:13.284014928 +0200
++++ GAME_MASTER.txt	2025-05-29 19:48:32.727245244 +0200
+@@ -45541,6 +45541,7 @@
+       seasonEndTimeTimestamp: 1733259600000
+       seasonEndTimeTimestamp: 1741122000000
+       seasonEndTimeTimestamp: 1748980800000
++      seasonEndTimeTimestamp: 1756843200000
+       seasonEndTimeTimestamp: 4070980800000
+       ratingAdjustmentPercentage: 0.9
+       rankingAdjustmentPercentage: 0.01
+@@ -55027,6 +55028,7 @@
+           }
+           pokemon {
+             id: WOOPER
++            forms: WOOPER_NORMAL
+           }
+           pokemon {
+             id: SLUGMA
+@@ -55241,6 +55243,70 @@
+           pokemon {
+             id: MAREANIE
+           }
++          pokemon {
++            id: LARVESTA
++          }
++          pokemon {
++            id: SKIDDO
++          }
++          pokemon {
++            id: BASCULIN
++            forms: BASCULIN_WHITE_STRIPED
++          }
++          pokemon {
++            id: GROOKEY
++          }
++          pokemon {
++            id: SCORBUNNY
++          }
++          pokemon {
++            id: SOBBLE
++          }
++          pokemon {
++            id: GOSSIFLEUR
++          }
++          pokemon {
++            id: CHEWTLE
++          }
++          pokemon {
++            id: APPLIN
++          }
++          pokemon {
++            id: ARROKUDA
++          }
++          pokemon {
++            id: SIZZLIPEDE
++          }
++          pokemon {
++            id: SPRIGATITO
++          }
++          pokemon {
++            id: FUECOCO
++          }
++          pokemon {
++            id: QUAXLY
++          }
++          pokemon {
++            id: SMOLIV
++          }
++          pokemon {
++            id: CHARCADET
++          }
++          pokemon {
++            id: BRAMBLIN
++          }
++          pokemon {
++            id: TOEDSCOOL
++          }
++          pokemon {
++            id: CAPSAKID
++          }
++          pokemon {
++            id: WIGLETT
++          }
++          pokemon {
++            id: FINIZEN
++          }
+         }
+       }
+       iconUrl: "https://storage.googleapis.com/prod-public-images/LeagueIcons/element_cup.png"
+@@ -118894,7 +118960,7 @@
+     iapCategoryDisplay {
+       category: IAP_CATEGORY_AVATAR
+       sortOrder: 5
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGOavatar_UrshifuPose.jpg"
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_GOFest2025_Avatar_Hairstyles.jpg"
+       description: "avatar_shop_description_new"
+     }
+   }
+@@ -119617,12 +119683,12 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-03-04T13:00:00"
+-        eventEndTime: "2025-03-18T14:00:00"
++        eventStartTime: "2025-06-03T13:00:00"
++        eventEndTime: "2025-06-17T14:00:00"
+         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-s17gbl-nologo-2024.jpg"
+-        clientEventStartTimeUtcMs: 1741093200000
+-        clientEventEndTimeUtcMs: 1742306400000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-gbl-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1748955600000
++        clientEventEndTimeUtcMs: 1750168800000
+       }
+     }
+   }
+@@ -120011,38 +120077,29 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-17T14:00:00"
+-        eventEndTime: "2025-05-17T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_ShadowRegigigasRaidDay"
++        eventStartTime: "2025-06-03T10:00:00"
++        eventEndTime: "2025-07-03T10:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_JuneMonthly2025"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_05_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_s18_tgr_shadow_regigigas_2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_s18_tgr_shadow_regigigas_2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_ShadowRegigigasRaidDay"
+-        textRewardsKey: "text_rewards_key_ShadowRegigigasRaidDay"
+-        iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_FREE_RAID_TICKET
+-            amount: 8
+-          }
+-        }
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_JuneMonthly2025"
++        textRewardsKey: "text_rewards_key_JuneMonthly2025"
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_XL_RARE_CANDY
+-          }
++          type: EXPERIENCE
++          exp: 15000
+         }
+         iconRewards {
+           type: STARDUST
+-          stardust: 2
++          stardust: 15000
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1747490400000
+-        clientEventEndTimeUtcMs: 1747501200000
++        clientEventStartTimeUtcMs: 1748944800000
++        clientEventEndTimeUtcMs: 1751536800000
+       }
+-      descriptionOverride: "item_event_ticket_gray_details_ShadowRegigigasRaidDay"
++      descriptionOverride: "item_event_ticket_gray_desc_JuneMonthly2025"
      }
    }
  }
--batch_id: 1748248136573
-+batch_id: 1748329809153
+@@ -120055,16 +120112,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-17T14:00:00"
+-        eventEndTime: "2025-05-17T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_ShadowRegigigasRaidDay"
++        eventStartTime: "2025-06-03T10:00:00"
++        eventEndTime: "2025-07-03T10:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_details_JuneMonthly2025"
+         ticketItem: ITEM_EVENT_TICKET_05
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_s18_tgr_shadow_regigigas_2025.jpg"
+-        clientEventStartTimeUtcMs: 1747490400000
+-        clientEventEndTimeUtcMs: 1747501200000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1748944800000
++        clientEventEndTimeUtcMs: 1751536800000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_ShadowRegigigasRaidDay"
++      descriptionOverride: "item_event_ticket_gray_details_JuneMonthly2025"
+     }
+   }
+ }
+@@ -120077,48 +120134,29 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-13T23:59:00"
+-        eventEndTime: "2025-05-18T23:59:00"
+-        itemBagDescriptionKey: "item_event_ticket_details_crown_clash_tgr"
++        eventStartTime: "2025-07-03T10:00:00"
++        eventEndTime: "2025-08-03T10:00:00"
++        itemBagDescriptionKey: "item_event_ticket_06_desc_JulyMonthly2025"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_06_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_crownclash_TGR_Ticket_2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_crownclash_TGR_Ticket_2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_crown_clash_tgr"
+-        textRewardsKey: "text_rewards_key_crown_clash_tgr"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_JulyMonthly2025"
++        textRewardsKey: "text_rewards_key_JulyMonthly2025"
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemon_id: NIDOQUEEN
+-            pokemonDisplay {
+-              costume: 83
+-              form: NIDOQUEEN_NORMAL
+-            }
+-          }
+-        }
+-        iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemon_id: NIDOKING
+-            pokemonDisplay {
+-              costume: 83
+-              form: NIDOKING_NORMAL
+-            }
+-          }
++          type: EXPERIENCE
++          exp: 15000
+         }
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_GIOVANNI_MAP
+-            amount: 1
+-          }
++          type: STARDUST
++          stardust: 15000
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1747180740000
+-        clientEventEndTimeUtcMs: 1747612740000
++        clientEventStartTimeUtcMs: 1751536800000
++        clientEventEndTimeUtcMs: 1754215200000
+       }
+-      descriptionOverride: "item_event_ticket_desc_crown_clash_tgr"
++      descriptionOverride: "item_event_ticket_06_desc_JulyMonthly2025"
+     }
+   }
+ }
+@@ -120131,16 +120169,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-13T23:59:00"
+-        eventEndTime: "2025-05-18T23:59:00"
+-        itemBagDescriptionKey: "item_event_ticket_details_crown_clash_tgr"
++        eventStartTime: "2025-07-03T10:00:00"
++        eventEndTime: "2025-08-03T10:00:00"
++        itemBagDescriptionKey: "item_event_ticket_06_details_JulyMonthly2025"
+         ticketItem: ITEM_EVENT_TICKET_06
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_crownclash_TGR_Ticket_2025.jpg"
+-        clientEventStartTimeUtcMs: 1747180740000
+-        clientEventEndTimeUtcMs: 1747612740000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1751536800000
++        clientEventEndTimeUtcMs: 1754215200000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_desc_crown_clash_tgr"
++      descriptionOverride: "item_event_ticket_06_details_JulyMonthly2025"
+     }
+   }
+ }
+@@ -120290,32 +120328,29 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-25T14:00:00"
+-        eventEndTime: "2025-05-25T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_gmaxMachamp25"
++        eventStartTime: "2025-08-03T10:00:00"
++        eventEndTime: "2025-09-03T10:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_AugMonthly2025"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_09_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GMAX_Machamp_2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GMAX_Machamp_2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_gmaxMachamp25"
+-        textRewardsKey: "text_rewards_key_gmaxMachamp25"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_AugMonthly2025"
++        textRewardsKey: "text_rewards_key_AugMonthly2025"
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_MAX_BOOST
+-            amount: 1
+-          }
++          type: EXPERIENCE
++          exp: 15000
+         }
+         iconRewards {
+-          type: EXPERIENCE
+-          exp: 25000
++          type: STARDUST
++          stardust: 15000
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1748181600000
+-        clientEventEndTimeUtcMs: 1748192400000
++        clientEventStartTimeUtcMs: 1754215200000
++        clientEventEndTimeUtcMs: 1756893600000
+       }
+-      descriptionOverride: "item_event_ticket_gray_details_gmaxMachamp25"
++      descriptionOverride: "item_event_ticket_gray_desc_AugMonthly2025"
+     }
+   }
+ }
+@@ -120328,16 +120363,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-25T14:00:00"
+-        eventEndTime: "2025-05-25T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_gmaxMachamp25"
++        eventStartTime: "2025-08-03T10:00:00"
++        eventEndTime: "2025-09-03T10:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_details_AugMonthly2025"
+         ticketItem: ITEM_EVENT_TICKET_09
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GMAX_Machamp_2025.jpg"
+-        clientEventStartTimeUtcMs: 1748181600000
+-        clientEventEndTimeUtcMs: 1748192400000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1754215200000
++        clientEventEndTimeUtcMs: 1756893600000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_gmaxMachamp25"
++      descriptionOverride: "item_event_ticket_gray_details_AugMonthly2025"
+     }
+   }
+ }
+@@ -130037,7 +130072,7 @@
+     template_id: "N_DISPLAY_n_hat_mustard_0"
+     avatarItemDisplay {
+       iconAddress: "n_hat_mustard_0_icon"
+-      displayStringId: "avatar_hat_mustard"
++      displayStringId: "avatar_hats_mustard"
+     }
+   }
+ }
+@@ -133007,7 +133042,7 @@
+     template_id: "N_DISPLAY_n_pose_growingup"
+     avatarItemDisplay {
+       iconAddress: "n_pose_growingup_icon"
+-      displayStringId: "avatar_pose_growingup"
++      displayStringId: "avatar_pose_paperplane"
+     }
+   }
+ }
+@@ -144884,15 +144919,6 @@
+   }
+ }
+ template {
+-  template_id: "RECORD_COMBAT_LEAGUE_PERFORMANCE_CODE_GATE"
+-  data {
+-    template_id: "RECORD_COMBAT_LEAGUE_PERFORMANCE_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-    }
+-  }
+-}
+-template {
+   template_id: "REFERRAL_SETTINGS"
+   data {
+     template_id: "REFERRAL_SETTINGS"
+@@ -145103,9 +145129,9 @@
+   }
+ }
+ template {
+-  template_id: "RSVP_SUBSCRIBE_BY_GEO_CODE_GATE"
++  template_id: "REWARD_ROAD_V1_1_CODE_GATE"
+   data {
+-    template_id: "RSVP_SUBSCRIBE_BY_GEO_CODE_GATE"
++    template_id: "REWARD_ROAD_V1_1_CODE_GATE"
+     codeGateProto {
+       isEnabled: true
+     }
+@@ -180360,7 +180386,6 @@
+       stickerId: "STICKER_PGO_FEST_2025"
+       maxCount: 25
+       category: "Pokemon"
+-      regionId: 7
+     }
+   }
+ }
+@@ -182825,7 +182850,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2025_1.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 488
++      sortOrder: 500
+     }
+   }
+ }
+@@ -182836,7 +182861,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2025_1.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 487
++      sortOrder: 499
+     }
+   }
+ }
+@@ -182860,7 +182885,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2025_2.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 486
++      sortOrder: 498
+     }
+   }
+ }
+@@ -182871,7 +182896,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2025_2.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 485
++      sortOrder: 497
+     }
+   }
+ }
+@@ -182895,7 +182920,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2025_3.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 484
++      sortOrder: 496
+     }
+   }
+ }
+@@ -182906,7 +182931,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2025_3.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 483
++      sortOrder: 495
+     }
+   }
+ }
+@@ -182931,7 +182956,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2025_4.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 482
++      sortOrder: 494
+     }
+   }
+ }
+@@ -182942,7 +182967,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2025_4.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 481
++      sortOrder: 493
+     }
+   }
+ }
+@@ -185702,6 +185727,7 @@
+   data {
+     template_id: "SURVEY_SETTINGS"
+     inAppSurveySettings {
++      featureEnabled: true
+       surveyPollFrequencyS: 30
+     }
+   }
+@@ -351104,7 +351130,8 @@
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+     }
+   }
+ }
+@@ -352723,16 +352750,19 @@
+         unlockedAtRank: 24
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352748,16 +352778,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352773,16 +352806,19 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352798,16 +352834,19 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352823,16 +352862,19 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352848,16 +352890,19 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352869,16 +352914,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352890,16 +352938,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352914,16 +352965,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352935,16 +352989,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352959,16 +353016,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -352980,16 +353040,19 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353004,16 +353067,19 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353025,16 +353091,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353046,16 +353115,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353070,16 +353142,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353094,16 +353169,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353118,16 +353196,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353142,16 +353223,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353163,16 +353247,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353184,16 +353271,19 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353205,16 +353295,19 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353226,16 +353319,19 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353286,16 +353382,19 @@
+         unlockedAtRank: 24
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353311,16 +353410,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353336,16 +353438,19 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353361,16 +353466,19 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353386,16 +353494,19 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353411,16 +353522,19 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353432,16 +353546,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353453,16 +353570,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353477,16 +353597,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353498,16 +353621,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353522,16 +353648,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353543,16 +353672,19 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353567,16 +353699,19 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353588,16 +353723,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353609,16 +353747,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353633,16 +353774,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353657,16 +353801,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353681,16 +353828,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353705,16 +353855,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353726,16 +353879,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353747,16 +353903,19 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353768,16 +353927,19 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -353789,16 +353951,19 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -356900,13 +357065,10 @@
+       sku: "bundle.tmexpert.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
++      hidden: true
+       sale: true
+       spriteId: "bundle.general2.medium.2"
+       title: "TM_Expert_Box"
+-      skuEnableTime: "2019-10-31T21:00:00"
+-      skuDisableTime: "2025-05-27T20:00:00"
+-      skuEnableTimeUtcMs: 1572555600000
+-      skuDisableTimeUtcMs: 1748376000000
+     }
+   }
+ }
+@@ -357190,6 +357352,8 @@
+       skuEnableTimeUtcMs: 1552550400000
+       skuDisableTimeUtcMs: 1748980800000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
++      22: "web-gofest-2025-apac-overlay-ticket-box"
++      23: 1990000
+     }
+   }
+ }
+@@ -357266,6 +357430,8 @@
+       skuEnableTimeUtcMs: 1552550400000
+       skuDisableTimeUtcMs: 1749672000000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-amer-overlay-ticket-nologo-2025.jpg"
++      22: "web-gofest-2025-amer-overlay-ticket-box"
++      23: 1990000
+     }
+   }
+ }
+@@ -357312,6 +357478,7 @@
+       sku: "general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_FinalStrike0525_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -357330,6 +357497,7 @@
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_FinalStrike0525_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -357415,6 +357583,8 @@
+       skuEnableTimeUtcMs: 1704067200000
+       skuDisableTimeUtcMs: 1751220000000
+       imageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/pgo_gofest_volcanion_1920x1080.jpg"
++      22: "web-go-fest-2025-ticket"
++      23: 14990000
+     }
+   }
+ }
+@@ -357484,6 +357654,7 @@
+       sku: "general2.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -357502,6 +357673,7 @@
+       sku: "general2.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -357597,12 +357769,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.5"
+-      title: "general1.ticket._ShadowRegigigasRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-05-17T16:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1747497600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_s18_tgr_shadow_regigigas_2025.jpg"
++      title: "general2.ticket.5_JuneMonthly2025_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-06-10T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1749585600000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -357616,11 +357788,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.5"
+-      title: "general1.ticket._ShadowRegigigasRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-05-17T16:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1747497600000
++      title: "general2.ticket.5_JuneMonthly2025_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-06-10T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1749585600000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -357634,12 +357807,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.6"
+-      title: "general2.ticket._crown_clash_tgr"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-05-18T23:59:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1747612740000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_crownclash_TGR_Ticket_2025.jpg"
++      title: "general2.ticket.6_JulyMonthly2025_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-07-10T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1752177600000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -357653,11 +357826,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.6"
+-      title: "general2.ticket._crown_clash_tgr"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-05-18T23:59:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1747612740000
++      title: "general2.ticket.6_JulyMonthly2025_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-07-10T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1752177600000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -357745,15 +357919,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general2.ticket.9_gmaxMachamp25_title"
++      title: "general1.ticket.5_AugMonthly2025_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-05-25T17:00:00"
++      skuDisableTime: "2025-08-10T20:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1748192400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GMAX_Machamp_2025.jpg"
++      skuDisableTimeUtcMs: 1754856000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -357764,15 +357938,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general2.ticket.9_gmaxMachamp25_title"
++      title: "general1.ticket.5_AugMonthly2025_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-05-25T17:00:00"
++      skuDisableTime: "2025-08-10T20:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1748192400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GMAX_Machamp_2025.jpg"
++      skuDisableTimeUtcMs: 1754856000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -358943,6 +359117,8 @@
+       skuEnableTimeUtcMs: 1552550400000
+       skuDisableTimeUtcMs: 1748980800000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
++      22: "web-gofest-2025-apac-overlay-ticket-box"
++      23: 1990000
+     }
+   }
+ }
+@@ -359019,6 +359195,8 @@
+       skuEnableTimeUtcMs: 1552550400000
+       skuDisableTimeUtcMs: 1749672000000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-amer-overlay-ticket-nologo-2025.jpg"
++      22: "web-gofest-2025-amer-overlay-ticket-box"
++      23: 1990000
+     }
+   }
+ }
+@@ -359048,6 +359226,7 @@
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_FinalStrike0525_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -359066,6 +359245,7 @@
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_FinalStrike0525_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -359132,6 +359312,8 @@
+       skuEnableTimeUtcMs: 1704067200000
+       skuDisableTimeUtcMs: 1751220000000
+       imageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/pgo_gofest_volcanion_1920x1080.jpg"
++      22: "web-go-fest-2025-ticket"
++      23: 14990000
+     }
+   }
+ }
+@@ -359201,6 +359383,7 @@
+       sku: "pgorelease.general2.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -359219,6 +359402,7 @@
+       sku: "pgorelease.general2.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket._FFSR0325_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -359314,12 +359498,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.5"
+-      title: "general1.ticket._ShadowRegigigasRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-05-17T16:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1747497600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_s18_tgr_shadow_regigigas_2025.jpg"
++      title: "general2.ticket.5_JuneMonthly2025_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-06-10T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1749585600000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -359333,11 +359517,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.5"
+-      title: "general1.ticket._ShadowRegigigasRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-05-17T16:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1747497600000
++      title: "general2.ticket.5_JuneMonthly2025_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-06-10T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1749585600000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -359351,12 +359536,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.6"
+-      title: "general2.ticket._crown_clash_tgr"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-05-18T23:59:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1747612740000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_crownclash_TGR_Ticket_2025.jpg"
++      title: "general2.ticket.6_JulyMonthly2025_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-07-10T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1752177600000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -359370,11 +359555,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.6"
+-      title: "general2.ticket._crown_clash_tgr"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-05-18T23:59:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1747612740000
++      title: "general2.ticket.6_JulyMonthly2025_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2025-07-10T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1752177600000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -359462,15 +359648,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general2.ticket.9_gmaxMachamp25_title"
++      title: "general1.ticket.5_AugMonthly2025_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-05-25T17:00:00"
++      skuDisableTime: "2025-08-10T20:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1748192400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GMAX_Machamp_2025.jpg"
++      skuDisableTimeUtcMs: 1754856000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -359481,15 +359667,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general2.ticket.9_gmaxMachamp25_title"
++      title: "general1.ticket.5_AugMonthly2025_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-05-25T17:00:00"
++      skuDisableTime: "2025-08-10T20:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1748192400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GMAX_Machamp_2025.jpg"
++      skuDisableTimeUtcMs: 1754856000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -364923,6 +365109,150 @@
+   }
+ }
+ template {
++  template_id: "COMBAT_RANKING_SETTINGS_S26"
++  data {
++    template_id: "COMBAT_RANKING_SETTINGS_S26"
++    combat_ranking_proto_settings {
++      rankLevel {
++        rankLevel: 1
++      }
++      rankLevel {
++        rankLevel: 2
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 3
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 4
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 5
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 6
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 7
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 8
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 9
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 10
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 11
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 12
++        additionalWinsRequired: 5
++      }
++      rankLevel {
++        rankLevel: 13
++        additionalWinsRequired: 6
++      }
++      rankLevel {
++        rankLevel: 14
++        additionalWinsRequired: 7
++      }
++      rankLevel {
++        rankLevel: 15
++        additionalWinsRequired: 8
++      }
++      rankLevel {
++        rankLevel: 16
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 17
++        additionalWinsRequired: 10
++      }
++      rankLevel {
++        rankLevel: 18
++        additionalWinsRequired: 15
++      }
++      rankLevel {
++        rankLevel: 19
++        additionalWinsRequired: 20
++      }
++      rankLevel {
++        rankLevel: 20
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 21
++        minRatingRequired: 2000
++      }
++      rankLevel {
++        rankLevel: 22
++        minRatingRequired: 2500
++      }
++      rankLevel {
++        rankLevel: 23
++        minRatingRequired: 2750
++      }
++      rankLevel {
++        rankLevel: 24
++        minRatingRequired: 3000
++      }
++      required_for_rewards {
++        rankLevel: 1
++        additionalTotalBattlesRequired: 5
++      }
++      minRankToDisplayRating: 20
++      minRatingRequired: 26
++    }
++  }
++}
++template {
++  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S19"
++  data {
++    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S19"
++    combat_league {
++      title: "catch_cup_s13_title"
++      enabled: true
++      unlockCondition {
++        type: WITH_UNIQUE_POKEMON
++        minPokemonCount: 3
++      }
++      pokemonCondition {
++        type: WITH_POKEMON_CP_LIMIT
++        withPokemonCpLimit {
++          maxCp: 1500
++        }
++      }
++      pokemonCondition {
++        type: WITH_UNIQUE_POKEMON
++      }
++      pokemonCondition {
++        type: POKEMON_CAUGHT_TIMESTAMP
++        pokemonCaughtTimestamp {
++          afterTimestamp: 1748980800000
++          beforeTimestamp: 1756843200000
++        }
++      }
++      iconUrl: "https://storage.googleapis.com/prod-public-images/premierball_sprite.png"
++      pokemonCount: 3
++      badgeType: BADGE_GREAT_LEAGUE
++      battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
++      leagueType: PREMIER
++    }
++  }
++}
++template {
+   template_id: "EVENT_PASS_MAY2025_SEASON"
+   data {
+     template_id: "EVENT_PASS_MAY2025_SEASON"
+@@ -374004,7 +374334,337 @@
+     }
+   }
+ }
+-batch_id: 1748329809153
++template {
++  template_id: "N_DISPLAY_n_hair_zacian_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_zacian_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_zacian_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_zamazenta_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_zamazenta_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_zamazenta_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_pants_s19gbl_0"
++  data {
++    template_id: "N_DISPLAY_n_pants_s19gbl_0"
++    avatarItemDisplay {
++      iconAddress: "n_pants_s19gbl_0_icon"
++      displayStringId: "avatar_pants_gbl19"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_pose_s19gbl"
++  data {
++    template_id: "N_DISPLAY_n_pose_s19gbl"
++    avatarItemDisplay {
++      iconAddress: "n_pose_s19gbl_icon"
++      displayStringId: "avatar_pose_gbl19"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_s19gbl_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_s19gbl_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_s19gbl_0_icon"
++      displayStringId: "avatar_shirt_gbl19"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shoes_s19gbl_0"
++  data {
++    template_id: "N_DISPLAY_n_shoes_s19gbl_0"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_s19gbl_0_icon"
++      displayStringId: "avatar_shoes_gbl19"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_set_s19gbl_0"
++  data {
++    template_id: "N_DISPLAY_set_s19gbl_0"
++    avatarItemDisplay {
++      iconAddress: "set_s19gbl"
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2025.3"
++  data {
++    template_id: "STICKER_PGO_FEST_2025.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2025.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 484
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2025.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2025.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2025.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 483
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2025_1.3"
++  data {
++    template_id: "STICKER_PGO_FEST_2025_1.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2025_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 481
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2025_1.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2025_1.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2025_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 481
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2025_2.3"
++  data {
++    template_id: "STICKER_PGO_FEST_2025_2.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2025_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 481
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2025_2.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2025_2.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2025_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 481
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2025_3.3"
++  data {
++    template_id: "STICKER_PGO_FEST_2025_3.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2025_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 481
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2025_3.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2025_3.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2025_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 481
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2025_LOGO.3"
++  data {
++    template_id: "STICKER_PGO_FEST_2025_LOGO.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2025_LOGO.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 482
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2025_LOGO.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2025_LOGO.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2025_LOGO.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 481
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_1"
++  data {
++    template_id: "STICKER_SUMMER_2025_1"
++    stickerMetadata {
++      stickerId: "STICKER_SUMMER_2025_1"
++      maxCount: 25
++      pokemonId: SHARPEDO
++      category: "Pokemon"
++      releaseDate: 20250603
++      regionId: 2
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_1.3"
++  data {
++    template_id: "STICKER_SUMMER_2025_1.3"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2025_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 492
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_1.5"
++  data {
++    template_id: "STICKER_SUMMER_2025_1.5"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2025_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 491
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_2"
++  data {
++    template_id: "STICKER_SUMMER_2025_2"
++    stickerMetadata {
++      stickerId: "STICKER_SUMMER_2025_2"
++      maxCount: 25
++      pokemonId: EXEGGUTOR
++      category: "Pokemon"
++      releaseDate: 20250603
++      regionId: 6
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_2.3"
++  data {
++    template_id: "STICKER_SUMMER_2025_2.3"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2025_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 490
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_2.5"
++  data {
++    template_id: "STICKER_SUMMER_2025_2.5"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2025_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 489
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_3"
++  data {
++    template_id: "STICKER_SUMMER_2025_3"
++    stickerMetadata {
++      stickerId: "STICKER_SUMMER_2025_3"
++      maxCount: 25
++      pokemonId: TOUCANNON
++      category: "Pokemon"
++      releaseDate: 20250603
++      regionId: 6
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_3.3"
++  data {
++    template_id: "STICKER_SUMMER_2025_3.3"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2025_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 488
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_3.5"
++  data {
++    template_id: "STICKER_SUMMER_2025_3.5"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2025_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 487
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_4"
++  data {
++    template_id: "STICKER_SUMMER_2025_4"
++    stickerMetadata {
++      stickerId: "STICKER_SUMMER_2025_4"
++      maxCount: 25
++      pokemonId: WIGLETT
++      category: "Pokemon"
++      releaseDate: 20250603
++      regionId: 1001
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_4.3"
++  data {
++    template_id: "STICKER_SUMMER_2025_4.3"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2025_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 486
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2025_4.5"
++  data {
++    template_id: "STICKER_SUMMER_2025_4.5"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2025_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 485
++    }
++  }
++}
++template {
++  template_id: "TWO_FOR_ONE_FLAGS"
++  data {
++    template_id: "TWO_FOR_ONE_FLAGS"
++    269 {
++      1: 1
++    }
++  }
++}
++batch_id: 1748502442983
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -374047,6 +374047,7 @@
- experiment_id: 3817
- experiment_id: 3819
+@@ -374013,7 +374673,7 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 170
+-experiment_id: 183
++experiment_id: 184
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 361
+@@ -374026,9 +374686,9 @@
+ experiment_id: 602
+ experiment_id: 805
+ experiment_id: 807
++experiment_id: 1403
+ experiment_id: 1699
+ experiment_id: 1820
+-experiment_id: 2246
+ experiment_id: 2248
+ experiment_id: 2297
+ experiment_id: 2600
+@@ -374044,14 +374704,11 @@
+ experiment_id: 3536
+ experiment_id: 3685
+ experiment_id: 3814
+-experiment_id: 3817
+-experiment_id: 3819
++experiment_id: 4691
  experiment_id: 4998
-+experiment_id: 5044
+-experiment_id: 5044
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
+-experiment_id: 5223
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
+@@ -374063,8 +374720,6 @@
+ experiment_id: 7035
+ experiment_id: 7040
+ experiment_id: 8750
+-experiment_id: 8917
+-experiment_id: 8921
+ experiment_id: 8929
+ experiment_id: 8930
+ experiment_id: 8931
