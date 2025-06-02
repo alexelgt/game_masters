@@ -1,47 +1,100 @@
---- GAME_MASTER_old.txt	2025-06-01 10:23:02.798945128 +0200
-+++ GAME_MASTER.txt	2025-06-01 10:35:28.544285756 +0200
-@@ -70506,7 +70506,7 @@
-   data {
-     template_id: "COMBAT_V0485_MOVE_CRUSH_GRIP"
-     combat_move {
--      uniqueId: 485
-+      uniqueId: CRUSH_GRIP
-       type: POKEMON_TYPE_NORMAL
-       power: 110
-       vfxName: "crush_grip"
-@@ -70519,7 +70519,7 @@
-   data {
-     template_id: "COMBAT_V0486_MOVE_DRAGON_ENERGY"
-     combat_move {
--      uniqueId: 486
-+      uniqueId: DRAGON_ENERGY
-       type: POKEMON_TYPE_DRAGON
-       power: 100
-       vfxName: "dragon_energy"
-@@ -123171,7 +123171,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2025_SEASON19"
-     locationCardSettings {
--      locationCard: 108
-+      locationCard: LC_SPECIALBACKGROUND_2025_SEASON19
-       imageUrl: "sb_Season19_DelightfulDays"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_DelightfulDays"
-@@ -286725,7 +286725,7 @@
-   data {
-     template_id: "V0485_MOVE_CRUSH_GRIP"
-     moveSettings {
--      movementId: 485
-+      movementId: CRUSH_GRIP
-       animationId: 5
-       pokemonType: POKEMON_TYPE_NORMAL
-       power: 1
-@@ -286850,7 +286850,7 @@
-   data {
-     template_id: "V0486_MOVE_DRAGON_ENERGY"
-     moveSettings {
--      movementId: 486
-+      movementId: DRAGON_ENERGY
-       animationId: 5
-       pokemonType: POKEMON_TYPE_DRAGON
-       power: 1
+--- GAME_MASTER_old.txt	2025-06-01 10:35:28.544285756 +0200
++++ GAME_MASTER.txt	2025-06-02 20:01:28.720230432 +0200
+@@ -120146,6 +120146,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 150
+         }
+       }
+     }
+@@ -180939,7 +180940,10 @@
+     stickerMetadata {
+       stickerId: "STICKER_PGO_FEST_2025"
+       maxCount: 25
++      pokemonId: ZACIAN
+       category: "Pokemon"
++      releaseDate: 20250529
++      regionId: 7
+     }
+   }
+ }
+@@ -180974,6 +180978,7 @@
+       maxCount: 25
+       pokemonId: VOLCANION
+       category: "Pokemon"
++      releaseDate: 20250529
+       regionId: 5
+     }
+   }
+@@ -181009,6 +181014,7 @@
+       maxCount: 25
+       pokemonId: ZAMAZENTA
+       category: "Pokemon"
++      releaseDate: 20250529
+       regionId: 7
+     }
+   }
+@@ -181044,6 +181050,7 @@
+       maxCount: 25
+       pokemonId: ZACIAN
+       category: "Pokemon"
++      releaseDate: 20250529
+       regionId: 7
+     }
+   }
+@@ -181078,6 +181085,7 @@
+       stickerId: "STICKER_PGO_FEST_2025_LOGO"
+       maxCount: 25
+       category: "Misc"
++      releaseDate: 20250529
+     }
+   }
+ }
+@@ -374808,7 +374816,7 @@
+     }
+   }
+ }
+-batch_id: 1748764172755
++batch_id: 1748881676886
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -374843,11 +374851,10 @@
+ experiment_id: 3502
+ experiment_id: 3517
+ experiment_id: 3521
+-experiment_id: 3534
++experiment_id: 3535
+ experiment_id: 3536
+ experiment_id: 3621
+ experiment_id: 3623
+-experiment_id: 3624
+ experiment_id: 3685
+ experiment_id: 3814
+ experiment_id: 3853
+@@ -374855,7 +374862,7 @@
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5224
++experiment_id: 5225
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
+@@ -374866,7 +374873,6 @@
+ experiment_id: 7031
+ experiment_id: 7035
+ experiment_id: 7040
+-experiment_id: 7041
+ experiment_id: 8929
+ experiment_id: 8930
+ experiment_id: 8931
+@@ -374879,6 +374885,7 @@
+ experiment_id: 55571
+ experiment_id: 55751
+ experiment_id: 80400
++experiment_id: 80500
+ experiment_id: 80817
+ experiment_id: 314159
+ experiment_id: 314160
