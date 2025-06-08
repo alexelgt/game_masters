@@ -1,112 +1,271 @@
---- GAME_MASTER_old.txt	2025-06-06 19:54:13.018474339 +0200
-+++ GAME_MASTER.txt	2025-06-07 09:18:45.698197794 +0200
-@@ -102531,9 +102531,9 @@
-           collisionHeadRadiusM: 0.9
-         }
-         maxEncounterVisualSettings {
--          scale: 8.42
--          cameraDistance: 32.5
--          maxReticleSize: 14
-+          scale: 1.5
-+          cameraDistance: 8
-+          maxReticleSize: 4
-         }
-         maxBattleVisualSettings {
-           scale: 17
-@@ -102545,6 +102545,9 @@
-         maxStationVisualSettings {
-           scale: 1.05
-         }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 0.9
-+        }
+--- GAME_MASTER_old.txt	2025-06-07 09:18:45.698197794 +0200
++++ GAME_MASTER.txt	2025-06-08 12:42:15.409626382 +0200
+@@ -126058,10 +126058,10 @@
+       numMpFromWalkQuest: 300
+       numMetersGoal: 2000
+       debugAllowRemoveWalkQuest: true
+-      numMpFromLootStation: 100
++      numMpFromLootStation: 800
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1500
+-      mpBaseDailyLimit: 800
++      mpBaseDailyLimit: 1600
+       mpClaimParticleSpeedMultiplier: 1
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 250
+@@ -317018,7 +317018,9 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      raidBossDistanceOffset: 3
+       formChange {
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317026,7 +317028,6 @@
        }
-     }
-   }
-@@ -118966,7 +118969,7 @@
-   data {
-     template_id: "FRIENDSHIP_LEVEL_0"
-     friendshipMilestoneSettings {
--      milestoneXpReward: 1000
-+      milestoneXpReward: 1500
-       attackBonusPercentage: 1
-       unlockedTrading: REGULAR_IN_POKEDEX
-     }
-@@ -118978,7 +118981,7 @@
-     template_id: "FRIENDSHIP_LEVEL_1"
-     friendshipMilestoneSettings {
-       minPointsToReach: 1
--      milestoneXpReward: 3000
-+      milestoneXpReward: 4500
-       attackBonusPercentage: 1.03
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -118998,7 +119001,7 @@
-     template_id: "FRIENDSHIP_LEVEL_2"
-     friendshipMilestoneSettings {
-       minPointsToReach: 7
--      milestoneXpReward: 10000
-+      milestoneXpReward: 15000
-       attackBonusPercentage: 1.05
-       raidBallBonus: 1
-       unlockedTrading: REGULAR_IN_POKEDEX
-@@ -119021,7 +119024,7 @@
-     template_id: "FRIENDSHIP_LEVEL_3"
-     friendshipMilestoneSettings {
-       minPointsToReach: 30
--      milestoneXpReward: 50000
-+      milestoneXpReward: 75000
-       attackBonusPercentage: 1.07
-       raidBallBonus: 2
-       unlockedTrading: REGULAR_IN_POKEDEX
-@@ -119044,7 +119047,7 @@
-     template_id: "FRIENDSHIP_LEVEL_4"
-     friendshipMilestoneSettings {
-       minPointsToReach: 90
--      milestoneXpReward: 100000
-+      milestoneXpReward: 150000
-       attackBonusPercentage: 1.1
-       raidBallBonus: 4
-       unlockedTrading: REGULAR_IN_POKEDEX
-@@ -372635,16 +372638,7 @@
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
      }
    }
  }
--template {
--  template_id: "EGG_RARITY_FORM_ROLL_BACK"
--  data {
--    template_id: "EGG_RARITY_FORM_ROLL_BACK"
--    265 {
--      1: 100
--    }
--  }
--}
--batch_id: 1749225064391
-+batch_id: 1749250154261
+@@ -317094,13 +317095,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317168,6 +317169,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317175,7 +317177,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317250,7 +317251,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317318,6 +317318,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317325,7 +317326,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317393,6 +317393,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317400,7 +317401,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317468,6 +317468,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317475,7 +317476,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317543,13 +317543,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317616,6 +317616,7 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317623,7 +317624,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317691,6 +317691,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317698,7 +317699,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317766,6 +317766,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317773,7 +317774,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -358387,7 +358387,6 @@
+       sku: "general1.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket._GO_Fest_AMER_JUNE25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358408,7 +358407,6 @@
+       sku: "general1.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket._GO_Fest_AMER_JUNE25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -360151,7 +360149,6 @@
+       sku: "pgorelease.general1.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket._GO_Fest_AMER_JUNE25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -360172,7 +360169,6 @@
+       sku: "pgorelease.general1.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket._GO_Fest_AMER_JUNE25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -372638,7 +372634,23 @@
+     }
+   }
+ }
+-batch_id: 1749250154261
++template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++batch_id: 1749321037425
++experiment_id: 1
++experiment_id: 6
++experiment_id: 8
++experiment_id: 11
++experiment_id: 21
  experiment_id: 101
  experiment_id: 149
  experiment_id: 150
-@@ -372662,7 +372656,6 @@
- experiment_id: 805
- experiment_id: 807
- experiment_id: 1699
--experiment_id: 1820
- experiment_id: 2248
- experiment_id: 2297
- experiment_id: 2600
-@@ -372676,6 +372669,7 @@
+@@ -372662,16 +372674,22 @@
+ experiment_id: 2650
+ experiment_id: 2875
+ experiment_id: 3032
++experiment_id: 3033
+ experiment_id: 3063
+ experiment_id: 3535
+ experiment_id: 3685
+ experiment_id: 3710
  experiment_id: 3711
++experiment_id: 3712
  experiment_id: 3715
  experiment_id: 3727
-+experiment_id: 3751
++experiment_id: 3748
++experiment_id: 3750
+ experiment_id: 3751
  experiment_id: 4691
++experiment_id: 4693
  experiment_id: 4998
++experiment_id: 5100
  experiment_id: 5160
-@@ -372691,6 +372685,7 @@
- experiment_id: 7046
- experiment_id: 8934
- experiment_id: 8940
-+experiment_id: 8976
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
+ experiment_id: 5162
+ experiment_id: 5163
+@@ -372703,6 +372721,7 @@
+ experiment_id: 3500037
+ experiment_id: 4610000
+ experiment_id: 4700000
++experiment_id: 5000301
+ experiment_id: 6600399
+ experiment_id: 6600417
+ experiment_id: 6600418
