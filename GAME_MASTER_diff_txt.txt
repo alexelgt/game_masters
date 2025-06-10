@@ -1,369 +1,585 @@
---- GAME_MASTER_old.txt	2025-06-08 12:42:15.409626382 +0200
-+++ GAME_MASTER.txt	2025-06-10 13:31:37.862962126 +0200
-@@ -121030,8 +121030,8 @@
-     template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
-     itemExpirationSettings {
-       item: ITEM_LUCKY_FRIEND_APPLICATOR
--      expirationTime: "2025-06-08T23:59:00"
--      emergencyExpirationTime: "2025-06-09T10:00:00"
-+      expirationTime: "2025-07-06T23:59:00"
-+      emergencyExpirationTime: "2025-07-07T10:00:00"
-     }
-   }
- }
-@@ -145343,6 +145343,10 @@
-         raidLevel: RAID_LEVEL_5_SHADOW
-         battleMusicKey: "RocketBossCombatMusic"
-       }
-+      raidLevelMusicOverrides {
-+        raidLevel: RAID_LEVEL_MEGA_5
-+        battleMusicKey: "GoTour2023Music02"
-+      }
-       raidFeatureFlags {
-         useCachedRaidBossPokemon: true
-       }
-@@ -145356,6 +145360,42 @@
+--- GAME_MASTER_old.txt	2025-06-10 13:31:37.862962126 +0200
++++ GAME_MASTER.txt	2025-06-10 14:21:24.937317855 +0200
+@@ -145360,41 +145360,48 @@
        bootSoloMs: 30000
        obRaidClientSettingsNumber1: 1
        obRaidClientSettingsNumber29: 1
-+      30 {
-+        1: 888
-+        2: "\221\024\220\024"
-+        3: "GoFest2025_Raid_Battle"
+-      30 {
+-        1: 888
+-        2: "\221\024\220\024"
+-        3: "GoFest2025_Raid_Battle"
+-      }
+-      30 {
+-        1: 889
+-        2: "\223\024\222\024"
+-        3: "GoFest2025_Raid_Battle"
+-      }
+-      30 {
+-        1: 646
+-        2: "\223\001\224\001\222\001"
+-        3: "GoTour2025Music01"
+-      }
+-      30 {
+-        1: 644
+-        3: "GoTour2025Music01"
+-      }
+-      30 {
+-        1: 643
+-        3: "GoTour2025Music01"
+-      }
+-      30 {
+-        1: 800
+-        2: "\235\025\236\025\237\025\240\025"
+-        3: "GoFest2024Music_Battle"
+-      }
+-      30 {
+-        1: 791
+-        3: "GoFest2024Music_Battle"
+-      }
+-      30 {
+-        1: 792
+-        3: "GoFest2024Music_Battle"
++      pokemonMusicOverrides {
++        pokemon: ZACIAN
++        forms: ZACIAN_HERO
++        forms: ZACIAN_CROWNED_SWORD
++        battleMusicKey: "GoFest2025_Raid_Battle"
 +      }
-+      30 {
-+        1: 889
-+        2: "\223\024\222\024"
-+        3: "GoFest2025_Raid_Battle"
++      pokemonMusicOverrides {
++        pokemon: ZAMAZENTA
++        forms: ZAMAZENTA_HERO
++        forms: ZAMAZENTA_CROWNED_SHIELD
++        battleMusicKey: "GoFest2025_Raid_Battle"
 +      }
-+      30 {
-+        1: 646
-+        2: "\223\001\224\001\222\001"
-+        3: "GoTour2025Music01"
++      pokemonMusicOverrides {
++        pokemon: KYUREM
++        forms: KYUREM_BLACK
++        forms: KYUREM_WHITE
++        forms: KYUREM_NORMAL
++        battleMusicKey: "GoTour2025Music01"
 +      }
-+      30 {
-+        1: 644
-+        3: "GoTour2025Music01"
++      pokemonMusicOverrides {
++        pokemon: ZEKROM
++        battleMusicKey: "GoTour2025Music01"
 +      }
-+      30 {
-+        1: 643
-+        3: "GoTour2025Music01"
++      pokemonMusicOverrides {
++        pokemon: RESHIRAM
++        battleMusicKey: "GoTour2025Music01"
 +      }
-+      30 {
-+        1: 800
-+        2: "\235\025\236\025\237\025\240\025"
-+        3: "GoFest2024Music_Battle"
++      pokemonMusicOverrides {
++        pokemon: NECROZMA
++        forms: NECROZMA_NORMAL
++        forms: NECROZMA_DUSK_MANE
++        forms: NECROZMA_DAWN_WINGS
++        forms: NECROZMA_ULTRA
++        battleMusicKey: "GoFest2024Music_Battle"
 +      }
-+      30 {
-+        1: 791
-+        3: "GoFest2024Music_Battle"
++      pokemonMusicOverrides {
++        pokemon: SOLGALEO
++        battleMusicKey: "GoFest2024Music_Battle"
 +      }
-+      30 {
-+        1: 792
-+        3: "GoFest2024Music_Battle"
-+      }
++      pokemonMusicOverrides {
++        pokemon: LUNALA
++        battleMusicKey: "GoFest2024Music_Battle"
+       }
+     }
+   }
+@@ -187607,8 +187614,8 @@
+   template_id: "TWO_FOR_ONE_FLAGS"
+   data {
+     template_id: "TWO_FOR_ONE_FLAGS"
+-    269 {
+-      1: 1
++    twoForOneFlags {
++      enabled: true
      }
    }
  }
-@@ -283972,7 +284012,7 @@
-       movementId: THUNDER_CAGE
-       animationId: 5
-       pokemonType: POKEMON_TYPE_ELECTRIC
--      power: 1
-+      power: 220
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-@@ -283981,7 +284021,7 @@
-       durationMs: 3300
-       damageWindowStartMs: 1880
-       damageWindowEndMs: 3200
--      energyDelta: -1
-+      energyDelta: -100
-     }
-   }
- }
-@@ -286785,7 +286825,7 @@
-       movementId: CRUSH_GRIP
-       animationId: 5
-       pokemonType: POKEMON_TYPE_NORMAL
--      power: 1
-+      power: 210
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-@@ -286794,7 +286834,7 @@
-       durationMs: 1800
-       damageWindowStartMs: 700
-       damageWindowEndMs: 1700
--      energyDelta: -1
-+      energyDelta: -100
-     }
-   }
- }
-@@ -286910,7 +286950,7 @@
-       movementId: DRAGON_ENERGY
-       animationId: 5
-       pokemonType: POKEMON_TYPE_DRAGON
--      power: 1
-+      power: 155
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-@@ -286919,7 +286959,7 @@
-       durationMs: 3300
-       damageWindowStartMs: 1880
-       damageWindowEndMs: 3200
--      energyDelta: -1
-+      energyDelta: -50
-     }
-   }
- }
-@@ -317018,9 +317058,7 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
--      raidBossDistanceOffset: 3
+@@ -340694,20 +340701,20 @@
+             replacementMoves: BEHEMOTH_BLADE
+           }
+         }
+-        10 {
+-          1: "J"
++        requiredCinematicMoves {
++          requiredMoves: IRON_HEAD
+         }
+-        13 {
+-          1: 2576
+-          2: 4
+-          4 {
+-            1: 1
+-            2: 1
++        formChangeBonusAttributes {
++          targetForm: ZACIAN_CROWNED_SWORD
++          breadMode: BREAD_SPECIAL_MODE
++          maxMoves {
++            moveType: A
++            moveLevel: LEVEL_1
+           }
+         }
+-        14 {
+-          1: 87
+-          2: 90
++        locationCardSettings {
++          existingLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
++          replacementLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
+         }
+       }
        formChange {
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -317028,6 +317066,7 @@
+@@ -340718,25 +340725,25 @@
+             replacementMoves: BEHEMOTH_BLADE
+           }
+         }
+-        10 {
+-          1: "J"
++        requiredCinematicMoves {
++          requiredMoves: IRON_HEAD
++        }
++        requiredBreadMoves {
++          moveTypes: A
++          moveLevel: LEVEL_1
++        }
++        priority: 1
++        formChangeBonusAttributes {
++          targetForm: ZACIAN_CROWNED_SWORD
++          breadMode: BREAD_SPECIAL_MODE
++          maxMoves {
++            moveType: A
++            moveLevel: LEVEL_1
++          }
+         }
+-        11 {
+-          1: "\001"
+-          2: 1
+-        }
+-        12: 1
+-        13 {
+-          1: 2576
+-          2: 4
+-          4 {
+-            1: 1
+-            2: 1
+-          }
+-        }
+-        14 {
+-          1: 87
+-          2: 90
++        locationCardSettings {
++          existingLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
++          replacementLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
+         }
        }
        ibfc {
+@@ -340819,13 +340826,13 @@
+             replacementMoves: IRON_HEAD
+           }
+         }
+-        13 {
+-          1: 2577
+-          3: 1
+-        }
+-        14 {
+-          1: 90
+-          2: 87
++        formChangeBonusAttributes {
++          targetForm: ZACIAN_HERO
++          clearBreadMode: true
++        }
++        locationCardSettings {
++          existingLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
++          replacementLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
+         }
        }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -317095,13 +317134,13 @@
-       raidBossDistanceOffset: 3
+       ibfc {
+@@ -340913,20 +340920,20 @@
+             replacementMoves: BEHEMOTH_BLADE
+           }
+         }
+-        10 {
+-          1: "J"
++        requiredCinematicMoves {
++          requiredMoves: IRON_HEAD
+         }
+-        13 {
+-          1: 2576
+-          2: 4
+-          4 {
+-            1: 1
+-            2: 1
++        formChangeBonusAttributes {
++          targetForm: ZACIAN_CROWNED_SWORD
++          breadMode: BREAD_SPECIAL_MODE
++          maxMoves {
++            moveType: A
++            moveLevel: LEVEL_1
+           }
+         }
+-        14 {
+-          1: 87
+-          2: 90
++        locationCardSettings {
++          existingLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
++          replacementLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
+         }
+       }
        formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         candyCost: 25
-         stardustCost: 10000
+@@ -340937,25 +340944,25 @@
+             replacementMoves: BEHEMOTH_BLADE
+           }
+         }
+-        10 {
+-          1: "J"
++        requiredCinematicMoves {
++          requiredMoves: IRON_HEAD
+         }
+-        11 {
+-          1: "\001"
+-          2: 1
+-        }
+-        12: 1
+-        13 {
+-          1: 2576
+-          2: 4
+-          4 {
+-            1: 1
+-            2: 1
+-          }
+-        }
+-        14 {
+-          1: 87
+-          2: 90
++        requiredBreadMoves {
++          moveTypes: A
++          moveLevel: LEVEL_1
++        }
++        priority: 1
++        formChangeBonusAttributes {
++          targetForm: ZACIAN_CROWNED_SWORD
++          breadMode: BREAD_SPECIAL_MODE
++          maxMoves {
++            moveType: A
++            moveLevel: LEVEL_1
++          }
++        }
++        locationCardSettings {
++          existingLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_001
++          replacementLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SWORD_CROWNED_001
+         }
        }
        ibfc {
+@@ -341053,20 +341060,20 @@
+             replacementMoves: BEHEMOTH_BASH
+           }
+         }
+-        10 {
+-          1: "J"
++        requiredCinematicMoves {
++          requiredMoves: IRON_HEAD
+         }
+-        13 {
+-          1: 2578
+-          2: 4
+-          4 {
+-            1: 1
+-            2: 1
++        formChangeBonusAttributes {
++          targetForm: ZAMAZENTA_CROWNED_SHIELD
++          breadMode: BREAD_SPECIAL_MODE
++          maxMoves {
++            moveType: A
++            moveLevel: LEVEL_1
+           }
+         }
+-        14 {
+-          1: 88
+-          2: 91
++        locationCardSettings {
++          existingLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
++          replacementLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
+         }
        }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -317169,7 +317208,6 @@
-       raidBossDistanceOffset: 3
        formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -317177,6 +317215,7 @@
+@@ -341077,25 +341084,25 @@
+             replacementMoves: BEHEMOTH_BASH
+           }
+         }
+-        10 {
+-          1: "J"
++        requiredCinematicMoves {
++          requiredMoves: IRON_HEAD
++        }
++        requiredBreadMoves {
++          moveTypes: A
++          moveLevel: LEVEL_1
+         }
+-        11 {
+-          1: "\001"
+-          2: 1
+-        }
+-        12: 1
+-        13 {
+-          1: 2578
+-          2: 4
+-          4 {
+-            1: 1
+-            2: 1
+-          }
+-        }
+-        14 {
+-          1: 88
+-          2: 91
++        priority: 1
++        formChangeBonusAttributes {
++          targetForm: ZAMAZENTA_CROWNED_SHIELD
++          breadMode: BREAD_SPECIAL_MODE
++          maxMoves {
++            moveType: A
++            moveLevel: LEVEL_1
++          }
++        }
++        locationCardSettings {
++          existingLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
++          replacementLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
+         }
        }
        ibfc {
-       }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -317251,6 +317290,7 @@
+@@ -341178,13 +341185,13 @@
+             replacementMoves: IRON_HEAD
+           }
+         }
+-        13 {
+-          1: 2579
+-          3: 1
+-        }
+-        14 {
+-          1: 91
+-          2: 88
++        formChangeBonusAttributes {
++          targetForm: ZAMAZENTA_HERO
++          clearBreadMode: true
++        }
++        locationCardSettings {
++          existingLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
++          replacementLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
+         }
        }
        ibfc {
+@@ -341272,20 +341279,20 @@
+             replacementMoves: BEHEMOTH_BASH
+           }
+         }
+-        10 {
+-          1: "J"
++        requiredCinematicMoves {
++          requiredMoves: IRON_HEAD
+         }
+-        13 {
+-          1: 2578
+-          2: 4
+-          4 {
+-            1: 1
+-            2: 1
++        formChangeBonusAttributes {
++          targetForm: ZAMAZENTA_CROWNED_SHIELD
++          breadMode: BREAD_SPECIAL_MODE
++          maxMoves {
++            moveType: A
++            moveLevel: LEVEL_1
+           }
+         }
+-        14 {
+-          1: 88
+-          2: 91
++        locationCardSettings {
++          existingLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
++          replacementLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
+         }
        }
-+      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -317318,7 +317358,6 @@
-       raidBossDistanceOffset: 3
        formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -317326,6 +317365,7 @@
+@@ -341296,25 +341303,25 @@
+             replacementMoves: BEHEMOTH_BASH
+           }
+         }
+-        10 {
+-          1: "J"
++        requiredCinematicMoves {
++          requiredMoves: IRON_HEAD
++        }
++        requiredBreadMoves {
++          moveTypes: A
++          moveLevel: LEVEL_1
++        }
++        priority: 1
++        formChangeBonusAttributes {
++          targetForm: ZAMAZENTA_CROWNED_SHIELD
++          breadMode: BREAD_SPECIAL_MODE
++          maxMoves {
++            moveType: A
++            moveLevel: LEVEL_1
++          }
+         }
+-        11 {
+-          1: "\001"
+-          2: 1
+-        }
+-        12: 1
+-        13 {
+-          1: 2578
+-          2: 4
+-          4 {
+-            1: 1
+-            2: 1
+-          }
+-        }
+-        14 {
+-          1: 88
+-          2: 91
++        locationCardSettings {
++          existingLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_001
++          replacementLocationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_SHIELD_CROWNED_001
+         }
        }
        ibfc {
-       }
-+      breadTierGroup: GROUP_3
+@@ -358357,8 +358364,8 @@
+       skuEnableTimeUtcMs: 1552550400000
+       skuDisableTimeUtcMs: 1748980800000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
+-      22: "web-gofest-2025-apac-overlay-ticket-box"
+-      23: 1990000
++      webstoreSkuId: "web-gofest-2025-apac-overlay-ticket-box"
++      webstoreSkuPriceE6: 1990000
      }
    }
  }
-@@ -317393,7 +317433,6 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -317401,6 +317440,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
+@@ -358434,8 +358441,8 @@
+       skuEnableTimeUtcMs: 1552550400000
+       skuDisableTimeUtcMs: 1749672000000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-amer-overlay-ticket-nologo-2025.jpg"
+-      22: "web-gofest-2025-amer-overlay-ticket-box"
+-      23: 1990000
++      webstoreSkuId: "web-gofest-2025-amer-overlay-ticket-box"
++      webstoreSkuPriceE6: 1990000
      }
    }
  }
-@@ -317468,7 +317508,6 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -317476,6 +317515,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
+@@ -358586,8 +358593,8 @@
+       skuEnableTimeUtcMs: 1704067200000
+       skuDisableTimeUtcMs: 1751220000000
+       imageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/pgo_gofest_volcanion_1920x1080.jpg"
+-      22: "web-go-fest-2025-ticket"
+-      23: 14990000
++      webstoreSkuId: "web-go-fest-2025-ticket"
++      webstoreSkuPriceE6: 14990000
      }
    }
  }
-@@ -317543,13 +317583,13 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-         stardustCost: 10000
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
+@@ -360119,8 +360126,8 @@
+       skuEnableTimeUtcMs: 1552550400000
+       skuDisableTimeUtcMs: 1748980800000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
+-      22: "web-gofest-2025-apac-overlay-ticket-box"
+-      23: 1990000
++      webstoreSkuId: "web-gofest-2025-apac-overlay-ticket-box"
++      webstoreSkuPriceE6: 1990000
      }
    }
  }
-@@ -317616,7 +317656,6 @@
-       isTradable: true
-       raidBossDistanceOffset: 3
-       formChange {
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -317624,6 +317663,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
+@@ -360196,8 +360203,8 @@
+       skuEnableTimeUtcMs: 1552550400000
+       skuDisableTimeUtcMs: 1749672000000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-amer-overlay-ticket-nologo-2025.jpg"
+-      22: "web-gofest-2025-amer-overlay-ticket-box"
+-      23: 1990000
++      webstoreSkuId: "web-gofest-2025-amer-overlay-ticket-box"
++      webstoreSkuPriceE6: 1990000
      }
    }
  }
-@@ -317691,7 +317731,6 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -317699,6 +317738,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
+@@ -360312,8 +360319,8 @@
+       skuEnableTimeUtcMs: 1704067200000
+       skuDisableTimeUtcMs: 1751220000000
+       imageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/pgo_gofest_volcanion_1920x1080.jpg"
+-      22: "web-go-fest-2025-ticket"
+-      23: 14990000
++      webstoreSkuId: "web-go-fest-2025-ticket"
++      webstoreSkuPriceE6: 14990000
      }
    }
  }
-@@ -317766,7 +317806,6 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -317774,6 +317813,7 @@
-       }
-       ibfc {
-       }
-+      breadTierGroup: GROUP_3
+@@ -365823,8 +365830,8 @@
+   template_id: "avatar_store_subcategory_filtering_flags"
+   data {
+     template_id: "avatar_store_subcategory_filtering_flags"
+-    268 {
+-      1: 1
++    avatarStoreSubcategoryFilteringFlags {
++      enabled: true
      }
    }
  }
-@@ -372634,25 +372674,8 @@
-     }
-   }
- }
--template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--batch_id: 1749321037425
--experiment_id: 1
--experiment_id: 6
--experiment_id: 8
--experiment_id: 11
--experiment_id: 21
-+batch_id: 1749554813692
- experiment_id: 101
--experiment_id: 149
- experiment_id: 150
- experiment_id: 152
- experiment_id: 300
-@@ -372674,22 +372697,18 @@
- experiment_id: 2650
- experiment_id: 2875
- experiment_id: 3032
--experiment_id: 3033
- experiment_id: 3063
--experiment_id: 3535
- experiment_id: 3685
- experiment_id: 3710
- experiment_id: 3711
--experiment_id: 3712
- experiment_id: 3715
- experiment_id: 3727
-+experiment_id: 3731
- experiment_id: 3748
- experiment_id: 3750
--experiment_id: 3751
- experiment_id: 4691
--experiment_id: 4693
- experiment_id: 4998
--experiment_id: 5100
-+experiment_id: 5101
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-@@ -372697,10 +372716,10 @@
- experiment_id: 5508
- experiment_id: 5510
- experiment_id: 6075
--experiment_id: 7040
- experiment_id: 7043
- experiment_id: 7044
- experiment_id: 7046
-+experiment_id: 7050
- experiment_id: 8934
- experiment_id: 8940
- experiment_id: 8976
-@@ -372714,6 +372733,7 @@
- experiment_id: 55751
- experiment_id: 80400
- experiment_id: 80500
-+experiment_id: 80600
- experiment_id: 80817
- experiment_id: 314159
- experiment_id: 314160
-@@ -372721,7 +372741,6 @@
- experiment_id: 3500037
- experiment_id: 4610000
- experiment_id: 4700000
--experiment_id: 5000301
- experiment_id: 6600399
- experiment_id: 6600417
- experiment_id: 6600418
+@@ -365839,16 +365846,15 @@
+         stardustCost: 5000
+       }
+       bonusEffect {
+-        5 {
+-          1 {
+-            1: "\007"
+-            3: 0x3f8ccccd
+-          }
+-          1 {
+-            1 {
+-              1: 9
+-            }
+-            3: 0x3f866666
++        attackDefenseBonus {
++          attributes {
++            combatTypes: COMBAT_TYPE_RAID
++            defenseMultiplier_: 1.1
++          }
++          attributes {
++            combatTypes: COMBAT_TYPE_DMAX
++            combatTypes: COMBAT_TYPE_GMAX
++            defenseMultiplier_: 1.05
+           }
+         }
+       }
+@@ -365870,16 +365876,15 @@
+         stardustCost: 5000
+       }
+       bonusEffect {
+-        5 {
+-          1 {
+-            1: "\007"
+-            2: 0x3f8ccccd
+-          }
+-          1 {
+-            1 {
+-              1: 9
+-            }
+-            2: 0x3f866666
++        attackDefenseBonus {
++          attributes {
++            combatTypes: COMBAT_TYPE_RAID
++            attackMultiplier: 1.1
++          }
++          attributes {
++            combatTypes: COMBAT_TYPE_DMAX
++            combatTypes: COMBAT_TYPE_GMAX
++            attackMultiplier: 1.05
+           }
+         }
+       }
+@@ -365971,9 +365976,9 @@
+               locationCard: LC_SPECIALBACKGROUND_2025_SEASON19
+             }
+           }
+-          11 {
+-            1: 20
+-            2: 20
++          statsLimitsOverride {
++            minPokemonLevel: 20
++            maxPokemonLevel: 20
+           }
+         }
+       }
