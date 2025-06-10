@@ -1,17 +1,38 @@
---- GAME_MASTER_old.txt	2025-06-10 14:21:24.937317855 +0200
-+++ GAME_MASTER.txt	2025-06-10 14:23:43.767889181 +0200
-@@ -365849,12 +365849,12 @@
-         attackDefenseBonus {
-           attributes {
-             combatTypes: COMBAT_TYPE_RAID
--            defenseMultiplier_: 1.1
-+            defenseMultiplier: 1.1
-           }
-           attributes {
-             combatTypes: COMBAT_TYPE_DMAX
-             combatTypes: COMBAT_TYPE_GMAX
--            defenseMultiplier_: 1.05
-+            defenseMultiplier: 1.05
-           }
+--- GAME_MASTER_old.txt	2025-06-10 14:23:43.767889181 +0200
++++ GAME_MASTER.txt	2025-06-10 14:26:04.118453902 +0200
+@@ -126798,7 +126798,7 @@
          }
        }
+       durationMs: 600000
+-      bonusType: 5
++      bonusType: FREEZE_BONUS
+       enableMultiUse: true
+       extraDurationMs: 4000
+       enableNonCombatMove: true
+@@ -126824,7 +126824,7 @@
+         }
+       }
+       durationMs: 600000
+-      bonusType: 6
++      bonusType: SLOW_BONUS
+       enableMultiUse: true
+       extraDurationMs: 4000
+       enableNonCombatMove: true
+@@ -365859,7 +365859,7 @@
+         }
+       }
+       durationMs: 360000
+-      bonusType: 8
++      bonusType: DEFENSE_BONUS
+       enableMultiUse: true
+       extraDurationMs: 4000
+     }
+@@ -365889,7 +365889,7 @@
+         }
+       }
+       durationMs: 360000
+-      bonusType: 7
++      bonusType: ATTACK_BONUS
+       enableMultiUse: true
+       extraDurationMs: 4000
+     }
