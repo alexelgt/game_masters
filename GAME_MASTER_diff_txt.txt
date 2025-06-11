@@ -1,38 +1,752 @@
---- GAME_MASTER_old.txt	2025-06-10 14:23:43.767889181 +0200
-+++ GAME_MASTER.txt	2025-06-10 14:26:04.118453902 +0200
-@@ -126798,7 +126798,7 @@
-         }
+--- GAME_MASTER_old.txt	2025-06-10 14:26:04.118453902 +0200
++++ GAME_MASTER.txt	2025-06-11 21:22:35.454404800 +0200
+@@ -120173,10 +120173,9 @@
+         itemBagDescriptionKey: "item_event_ticket_details_2025_ancientsrecovered_fleetinglegends"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_02_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGeneric%20GO%20Fest%20Logo.png"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/PGO-MCS_AncientsRecovered_GalarianBirds_v1-16x9.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGeneric%20GO%20Fest%20Logo.png"
+-        titleImageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/PGO_Fest25_Logo.png"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/PGO-MCS_AncientsRecovered_GalarianBirds_v1-16x9.jpg"
+         eventDatetimeRangeKey: "event_datetime_range_key_ancientsrecovered_fleetinglegends"
+         textRewardsKey: "text_rewards_key_ancientsrecovered_fleetinglegends"
+         iconRewards {
+@@ -120227,8 +120226,8 @@
+         eventEndTime: "2025-06-29T20:00:00"
+         itemBagDescriptionKey: "item_event_ticket_details_2025_ancientsrecovered_fleetinglegends"
+         ticketItem: ITEM_EVENT_TICKET_02
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGeneric%20GO%20Fest%20Logo.png"
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGeneric%20GO%20Fest%20Logo.png"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/PGO-MCS_AncientsRecovered_GalarianBirds_v1-16x9.jpg"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/PGO-MCS_AncientsRecovered_GalarianBirds_v1-16x9.jpg"
+         clientEventStartTimeUtcMs: 1750672800000
+         clientEventEndTimeUtcMs: 1751227200000
        }
-       durationMs: 600000
--      bonusType: 5
-+      bonusType: FREEZE_BONUS
-       enableMultiUse: true
-       extraDurationMs: 4000
-       enableNonCombatMove: true
-@@ -126824,7 +126824,7 @@
+@@ -120832,40 +120831,43 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-06-07T10:00:00"
+-        eventEndTime: "2025-06-11T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_GO_Fest_AMER_JUNE25"
++        eventStartTime: "2025-06-20T00:00:00"
++        eventEndTime: "2025-06-22T23:59:59"
++        itemBagDescriptionKey: "item_event_ticket_pink_details"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_PINK_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-amer-overlay-ticket-nologo-2025.jpg"
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pink-ticket-generic1024x512.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-amer-overlay-ticket-nologo-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_GO_Fest_AMER_JUNE25"
+-        textRewardsKey: "text_rewards_key_GO_Fest_AMER_JUNE25"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pink-ticket-generic1024x512.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_PawPrint_20250620"
++        textRewardsKey: "text_rewards_key_PawPrint_20250620"
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_PAID_RAID_TICKET
+-            amount: 5
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemon_id: YAMPER
++            pokemonDisplay {
++            }
+           }
          }
-       }
-       durationMs: 600000
--      bonusType: 6
-+      bonusType: SLOW_BONUS
-       enableMultiUse: true
-       extraDurationMs: 4000
-       enableNonCombatMove: true
-@@ -365859,7 +365859,7 @@
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemonEncounter {
+-            pokemon_id: FERROSEED
++            pokemon_id: ROCKRUFF
++            pokemonDisplay {
++            }
+           }
          }
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemon_id: FALINKS
++          type: ITEM
++          item {
++            item: ITEM_INCENSE_ORDINARY
++            amount: 4
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1749290400000
+-        clientEventEndTimeUtcMs: 1749672000000
++        clientEventStartTimeUtcMs: 1750377600000
++        clientEventEndTimeUtcMs: 1750636799000
        }
-       durationMs: 360000
--      bonusType: 8
-+      bonusType: DEFENSE_BONUS
-       enableMultiUse: true
-       extraDurationMs: 4000
+-      descriptionOverride: "item_event_ticket_evergreen_desc_GO_Fest_AMER_JUNE25"
      }
-@@ -365889,7 +365889,7 @@
-         }
+   }
+ }
+@@ -120878,16 +120880,15 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-06-07T10:00:00"
+-        eventEndTime: "2025-06-11T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_details_GO_Fest_AMER_JUNE25"
++        eventStartTime: "2025-06-20T00:00:00"
++        eventEndTime: "2025-06-22T23:59:59"
++        itemBagDescriptionKey: "item_event_ticket_pink_details"
+         ticketItem: ITEM_EVENT_TICKET_PINK
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-amer-overlay-ticket-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1749290400000
+-        clientEventEndTimeUtcMs: 1749672000000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pink-ticket-generic1024x512.jpg"
++        clientEventStartTimeUtcMs: 1750377600000
++        clientEventEndTimeUtcMs: 1750636799000
        }
-       durationMs: 360000
--      bonusType: 7
-+      bonusType: ATTACK_BONUS
-       enableMultiUse: true
-       extraDurationMs: 4000
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_evergreen_details_GO_Fest_AMER_JUNE25"
      }
+   }
+ }
+@@ -120900,40 +120901,40 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-30T10:00:00"
+-        eventEndTime: "2025-06-03T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_SereneRT0525"
++        eventStartTime: "2025-06-14T10:00:00"
++        eventEndTime: "2025-06-18T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_GO_Fest_EMEA_JUNE25"
+         giftable: true
+         giftItem: ITEM_EVERGREEN_TICKET_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-emea-overlay-ticket-nologo-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_SereneRT0525"
+-        textRewardsKey: "text_rewards_key_SereneRT0525"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-emea-overlay-ticket-nologo-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_GO_Fest_EMEA_JUNE25"
++        textRewardsKey: "text_rewards_key_GO_Fest_EMEA_JUNE25"
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemon_id: MUNNA
++          type: ITEM
++          item {
++            item: ITEM_INCENSE_ORDINARY
++            amount: 5
+           }
+         }
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemonEncounter {
+-            pokemon_id: MORELULL
++            pokemon_id: GOTHITA
+           }
+         }
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_INCUBATOR_SUPER
+-            amount: 2
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemon_id: PHANTUMP
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1748599200000
+-        clientEventEndTimeUtcMs: 1748980800000
++        clientEventStartTimeUtcMs: 1749895200000
++        clientEventEndTimeUtcMs: 1750276800000
+       }
+-      descriptionOverride: "item_event_ticket_evergreen_desc_SereneRT0525"
++      descriptionOverride: "item_event_ticket_evergreen_desc_GO_Fest_EMEA_JUNE25"
+     }
+   }
+ }
+@@ -120946,16 +120947,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-30T10:00:00"
+-        eventEndTime: "2025-06-03T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_details_SereneRT0525"
++        eventStartTime: "2025-06-14T10:00:00"
++        eventEndTime: "2025-06-18T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_GO_Fest_EMEA_JUNE25"
+         ticketItem: ITEM_EVERGREEN_TICKET
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
+-        clientEventStartTimeUtcMs: 1748599200000
+-        clientEventEndTimeUtcMs: 1748980800000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-emea-overlay-ticket-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1749895200000
++        clientEventEndTimeUtcMs: 1750276800000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_evergreen_details_SereneRT0525"
++      descriptionOverride: "item_event_ticket_evergreen_details_GO_Fest_EMEA_JUNE25"
+     }
+   }
+ }
+@@ -126058,10 +126059,10 @@
+       numMpFromWalkQuest: 300
+       numMetersGoal: 2000
+       debugAllowRemoveWalkQuest: true
+-      numMpFromLootStation: 800
++      numMpFromLootStation: 100
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1500
+-      mpBaseDailyLimit: 1600
++      mpBaseDailyLimit: 800
+       mpClaimParticleSpeedMultiplier: 1
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 250
+@@ -317065,7 +317066,9 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      raidBossDistanceOffset: 3
+       formChange {
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317073,7 +317076,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317141,13 +317143,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317215,6 +317217,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317222,7 +317225,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317297,7 +317299,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317365,6 +317366,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317372,7 +317374,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317440,6 +317441,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317447,7 +317449,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317515,6 +317516,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317522,7 +317524,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317590,13 +317591,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317663,6 +317664,7 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317670,7 +317672,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317738,6 +317739,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317745,7 +317747,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -317813,6 +317814,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -317820,7 +317822,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -352126,8 +352127,8 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_SUNSHINE_GREAT"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FOSSIL"
+     }
+   }
+ }
+@@ -358358,13 +358359,13 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "evergreenticket.1"
+-      title: "general1.ticket._SereneRT0525_title"
++      title: "general1.ticket._GO_Fest_EMEA_JUNE25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-06-03T20:00:00"
++      skuDisableTime: "2025-06-18T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1748980800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
+-      webstoreSkuId: "web-gofest-2025-apac-overlay-ticket-box"
++      skuDisableTimeUtcMs: 1750276800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-emea-overlay-ticket-nologo-2025.jpg"
++      webstoreSkuId: "web-gofest-2025-emea-overlay-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -358379,12 +358380,11 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "evergreenticket.1"
+-      title: "general1.ticket._SereneRT0525_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-06-03T20:00:00"
++      skuDisableTime: "2025-06-18T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1748980800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
++      skuDisableTimeUtcMs: 1750276800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-emea-overlay-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -358433,16 +358433,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 3
++      hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket._GO_Fest_AMER_JUNE25_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-06-11T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1749672000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-amer-overlay-ticket-nologo-2025.jpg"
+-      webstoreSkuId: "web-gofest-2025-amer-overlay-ticket-box"
+-      webstoreSkuPriceE6: 1990000
++      title: "pgorelease.general1.ticket.2_PawPrint_20250620_Title"
++      skuEnableTime: "2025-06-20T00:00:00"
++      skuDisableTime: "2025-06-22T23:59:59"
++      skuEnableTimeUtcMs: 1750377600000
++      skuDisableTimeUtcMs: 1750636799000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-yampers-paw-prints-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -358453,13 +358452,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 3
++      hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket._GO_Fest_AMER_JUNE25_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-06-11T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1749672000000
++      title: "pgorelease.general1.ticket.2_PawPrint_20250620_Title"
++      skuEnableTime: "2025-06-20T00:00:00"
++      skuDisableTime: "2025-06-22T23:59:59"
++      skuEnableTimeUtcMs: 1750377600000
++      skuDisableTimeUtcMs: 1750636799000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-yampers-paw-prints-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -358672,7 +358673,7 @@
+       skuDisableTime: "2025-06-29T18:00:00"
+       skuEnableTimeUtcMs: 1704067200000
+       skuDisableTimeUtcMs: 1751220000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGeneric%20GO%20Fest%20Logo.png"
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/PGO-MCS_AncientsRecovered_GalarianBirds_v1-16x9.jpg"
+     }
+   }
+ }
+@@ -358691,7 +358692,7 @@
+       skuDisableTime: "2025-06-29T18:00:00"
+       skuEnableTimeUtcMs: 1704067200000
+       skuDisableTimeUtcMs: 1751220000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGeneric%20GO%20Fest%20Logo.png"
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/PGO-MCS_AncientsRecovered_GalarianBirds_v1-16x9.jpg"
+     }
+   }
+ }
+@@ -358778,6 +358779,7 @@
+       sku: "general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general2.ticket.5_JuneMonthly2025_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -358796,6 +358798,7 @@
+       sku: "general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general2.ticket.5_JuneMonthly2025_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -360120,13 +360123,13 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "evergreenticket.1"
+-      title: "general1.ticket._SereneRT0525_title"
++      title: "general1.ticket._GO_Fest_EMEA_JUNE25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-06-03T20:00:00"
++      skuDisableTime: "2025-06-18T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1748980800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
+-      webstoreSkuId: "web-gofest-2025-apac-overlay-ticket-box"
++      skuDisableTimeUtcMs: 1750276800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-emea-overlay-ticket-nologo-2025.jpg"
++      webstoreSkuId: "web-gofest-2025-emea-overlay-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -360141,12 +360144,11 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "evergreenticket.1"
+-      title: "general1.ticket._SereneRT0525_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-06-03T20:00:00"
++      skuDisableTime: "2025-06-18T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1748980800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_GOFest2025_Global_LiveOp_APAC_TR.jpg"
++      skuDisableTimeUtcMs: 1750276800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-emea-overlay-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -360195,16 +360197,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 3
++      hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket._GO_Fest_AMER_JUNE25_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-06-11T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1749672000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-amer-overlay-ticket-nologo-2025.jpg"
+-      webstoreSkuId: "web-gofest-2025-amer-overlay-ticket-box"
+-      webstoreSkuPriceE6: 1990000
++      title: "pgorelease.general1.ticket.2_PawPrint_20250620_Title"
++      skuEnableTime: "2025-06-20T00:00:00"
++      skuDisableTime: "2025-06-22T23:59:59"
++      skuEnableTimeUtcMs: 1750377600000
++      skuDisableTimeUtcMs: 1750636799000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-yampers-paw-prints-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -360215,13 +360216,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 3
++      hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket._GO_Fest_AMER_JUNE25_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-06-11T20:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1749672000000
++      title: "pgorelease.general1.ticket.2_PawPrint_20250620_Title"
++      skuEnableTime: "2025-06-20T00:00:00"
++      skuDisableTime: "2025-06-22T23:59:59"
++      skuEnableTimeUtcMs: 1750377600000
++      skuDisableTimeUtcMs: 1750636799000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-yampers-paw-prints-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -360398,7 +360401,7 @@
+       skuDisableTime: "2025-06-29T18:00:00"
+       skuEnableTimeUtcMs: 1704067200000
+       skuDisableTimeUtcMs: 1751220000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGeneric%20GO%20Fest%20Logo.png"
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/PGO-MCS_AncientsRecovered_GalarianBirds_v1-16x9.jpg"
+     }
+   }
+ }
+@@ -360417,7 +360420,7 @@
+       skuDisableTime: "2025-06-29T18:00:00"
+       skuEnableTimeUtcMs: 1704067200000
+       skuDisableTimeUtcMs: 1751220000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGeneric%20GO%20Fest%20Logo.png"
++      imageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/PGO-MCS_AncientsRecovered_GalarianBirds_v1-16x9.jpg"
+     }
+   }
+ }
+@@ -360504,6 +360507,7 @@
+       sku: "pgorelease.general2.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general2.ticket.5_JuneMonthly2025_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -360522,6 +360526,7 @@
+       sku: "pgorelease.general2.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general2.ticket.5_JuneMonthly2025_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -372679,10 +372684,93 @@
+     }
+   }
+ }
+-batch_id: 1749554813692
++template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++template {
++  template_id: "VNEXT_BATTLE_CONFIG"
++  data {
++    template_id: "VNEXT_BATTLE_CONFIG"
++    277 {
++      1 {
++        3: 60
++      }
++      2 {
++        3: 60
++      }
++    }
++  }
++}
++template {
++  template_id: "COMBAT_V0484_MOVE_CLANGING_SCALES"
++  data {
++    template_id: "COMBAT_V0484_MOVE_CLANGING_SCALES"
++    combat_move {
++      uniqueId: 484
++      type: POKEMON_TYPE_DRAGON
++      power: 120
++      vfxName: "clanging_scales"
++      energyDelta: -45
++      buffs {
++        attackerDefenseStatStageChange: -1
++        buffActivationChance: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "V0484_MOVE_CLANGING_SCALES"
++  data {
++    template_id: "V0484_MOVE_CLANGING_SCALES"
++    moveSettings {
++      movementId: 484
++      animationId: 5
++      pokemonType: POKEMON_TYPE_DRAGON
++      power: 120
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "clanging_scales"
++      durationMs: 3300
++      damageWindowStartMs: 1880
++      damageWindowEndMs: 3200
++      energyDelta: -100
++    }
++  }
++}
++template {
++  template_id: "sequence_clanging_scales"
++  data {
++    template_id: "sequence_clanging_scales"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx clanging_scales"
++      sequence: "sfx attacker 054-0_mist"
++      sequence: "wait 1.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++batch_id: 1749669460149
++experiment_id: 1
++experiment_id: 6
++experiment_id: 8
++experiment_id: 11
++experiment_id: 21
+ experiment_id: 101
+ experiment_id: 150
+-experiment_id: 152
++experiment_id: 153
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 361
+@@ -372702,18 +372790,18 @@
+ experiment_id: 2650
+ experiment_id: 2875
+ experiment_id: 3032
++experiment_id: 3033
+ experiment_id: 3063
+ experiment_id: 3685
+ experiment_id: 3710
+ experiment_id: 3711
++experiment_id: 3712
+ experiment_id: 3715
+ experiment_id: 3727
+ experiment_id: 3731
+-experiment_id: 3748
+-experiment_id: 3750
+ experiment_id: 4691
++experiment_id: 4693
+ experiment_id: 4998
+-experiment_id: 5101
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+@@ -372726,7 +372814,6 @@
+ experiment_id: 7046
+ experiment_id: 7050
+ experiment_id: 8934
+-experiment_id: 8940
+ experiment_id: 8976
+ experiment_id: 9521
+ experiment_id: 9552
+@@ -372746,6 +372833,7 @@
+ experiment_id: 3500037
+ experiment_id: 4610000
+ experiment_id: 4700000
++experiment_id: 5000301
+ experiment_id: 6600399
+ experiment_id: 6600417
+ experiment_id: 6600418
