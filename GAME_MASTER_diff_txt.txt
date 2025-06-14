@@ -1,11 +1,80 @@
---- GAME_MASTER_old.txt	2025-06-12 19:46:07.975193349 +0200
-+++ GAME_MASTER.txt	2025-06-13 19:39:51.120367209 +0200
-@@ -372765,7 +372765,17 @@
+--- GAME_MASTER_old.txt	2025-06-13 19:39:51.120367209 +0200
++++ GAME_MASTER.txt	2025-06-14 12:44:53.396770659 +0200
+@@ -121357,6 +121357,7 @@
+       dropTrainerLevel: 1
+       incense {
+         incenseLifetimeSeconds: 3600
++        spawnTableProbability: 0.9
+       }
      }
    }
+@@ -126058,10 +126059,10 @@
+       numMpFromWalkQuest: 300
+       numMetersGoal: 2000
+       debugAllowRemoveWalkQuest: true
+-      numMpFromLootStation: 100
++      numMpFromLootStation: 800
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1500
+-      mpBaseDailyLimit: 800
++      mpBaseDailyLimit: 1600
+       mpClaimParticleSpeedMultiplier: 1
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 250
+@@ -354328,7 +354329,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GROUDON
++          pokemon_id: KYOGRE
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -354954,7 +354955,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: GROUDON
++          pokemon_id: KYOGRE
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -358356,7 +358357,6 @@
+       sku: "evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._GO_Fest_EMEA_JUNE25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -358377,7 +358377,6 @@
+       sku: "evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2025-06-18T20:00:00"
+@@ -360122,7 +360121,6 @@
+       sku: "pgorelease.evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._GO_Fest_EMEA_JUNE25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -360143,7 +360141,6 @@
+       sku: "pgorelease.evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "evergreenticket.1"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2025-06-18T20:00:00"
+@@ -372755,6 +372752,16 @@
+   }
  }
--batch_id: 1749746912694
-+template {
+ template {
 +  template_id: "N_DISPLAY_n_hat_partyhat_0"
 +  data {
 +    template_id: "N_DISPLAY_n_hat_partyhat_0"
@@ -15,15 +84,44 @@
 +    }
 +  }
 +}
-+batch_id: 1749828055279
++template {
+   template_id: "PTC_OAUTH_SETTINGS"
+   data {
+     template_id: "PTC_OAUTH_SETTINGS"
+@@ -372765,17 +372772,7 @@
+     }
+   }
+ }
+-template {
+-  template_id: "N_DISPLAY_n_hat_partyhat_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hat_partyhat_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hat_partyhat_0_icon"
+-      displayStringId: "avatar_hat_partyhat"
+-    }
+-  }
+-}
+-batch_id: 1749828055279
++batch_id: 1749886590987
  experiment_id: 1
  experiment_id: 6
  experiment_id: 8
-@@ -372818,6 +372828,7 @@
- experiment_id: 7050
- experiment_id: 8934
- experiment_id: 8976
-+experiment_id: 8977
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
+@@ -372809,12 +372806,16 @@
+ experiment_id: 3710
+ experiment_id: 3711
+ experiment_id: 3712
+-experiment_id: 3715
++experiment_id: 3716
+ experiment_id: 3727
+ experiment_id: 3731
++experiment_id: 3752
++experiment_id: 3754
++experiment_id: 3755
+ experiment_id: 4691
+ experiment_id: 4693
+ experiment_id: 4998
++experiment_id: 5102
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
