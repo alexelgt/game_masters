@@ -1,40 +1,318 @@
---- GAME_MASTER_old.txt	2025-06-19 19:50:46.949336306 +0200
-+++ GAME_MASTER.txt	2025-06-20 09:08:44.678209301 +0200
-@@ -129980,7 +129980,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_KR2025_LOTTE_01"
-     locationCardSettings {
--      locationCard: 100
-+      locationCard: LC_SPECIALBACKGROUND_KR2025_LOTTE_01
-       imageUrl: "lc_LotteGiants"
-     }
+--- GAME_MASTER_old.txt	2025-06-20 09:08:44.678209301 +0200
++++ GAME_MASTER.txt	2025-06-20 09:22:36.761755597 +0200
+@@ -152273,17 +152273,6 @@
    }
-@@ -152328,8 +152328,8 @@
-   template_id: "QUICK_INVITE_SETTINGS_RAID"
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
    data {
-     template_id: "QUICK_INVITE_SETTINGS_RAID"
--    272 {
--      2: "PGO_RAID_A_TEST_0611"
-+    quickInviteSettings {
-+      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+     template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
+@@ -324117,9 +324106,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
+-      raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -324127,6 +324114,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -357835,12 +357835,12 @@
-   template_id: "VNEXT_BATTLE_CONFIG"
-   data {
-     template_id: "VNEXT_BATTLE_CONFIG"
--    277 {
--      1 {
--        3: 60
-+    vnextBattleConfig {
-+      raidsBattleConfig {
-+        deadNetworkDisconnectThresholdTurns: 60
+@@ -324194,13 +324182,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
        }
--      2 {
--        3: 60
-+      maxBattleConfig {
-+        deadNetworkDisconnectThresholdTurns: 60
+       ibfc {
        }
++      breadTierGroup: GROUP_3
      }
    }
+ }
+@@ -324268,7 +324256,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -324276,6 +324263,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -324350,6 +324338,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -324417,7 +324406,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -324425,6 +324413,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -324492,7 +324481,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -324500,6 +324488,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -324567,7 +324556,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -324575,6 +324563,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -324642,13 +324631,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -324715,7 +324704,6 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -324723,6 +324711,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -324790,7 +324779,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -324798,6 +324786,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -324865,7 +324854,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -324873,6 +324861,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -342310,14 +342299,18 @@
+       pokemonId: YAMPER
+       type: POKEMON_TYPE_ELECTRIC
+       camera {
++        cylinderRadiusM: 0.45
++        cylinderHeightM: 0.37
+       }
+       encounter {
++        collisionRadiusM: 0.24
++        collisionHeadRadiusM: 0.18
+         movementType: MOVEMENT_JUMP
+         attackProbability: 0.2
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
+         dodgeDistance: 0.5
+-        cameraDistance: 4
++        cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+@@ -342336,12 +342329,12 @@
+       weightStdDev: 1.6875
+       familyId: FAMILY_YAMPER
+       kmBuddyDistance: 1
+-      modelHeight: 1
++      modelHeight: 0.44
+       evolutionBranch {
+         evolution: BOLTUND
+         candyCost: 50
+       }
+-      modelScaleV2: 1
++      modelScaleV2: 1.1
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -342349,6 +342342,9 @@
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+       buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: -30
++      buddyPortraitOffset: -500
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -342357,6 +342353,9 @@
+       isDeployable: true
+       isTradable: true
+       buddyGroupNumber: 2
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -365509,7 +365508,6 @@
+       sku: "general1.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 3
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "pgorelease.general1.ticket.2_PawPrint_20250620_Title"
+       skuEnableTime: "2025-06-02T00:00:00"
+@@ -365528,7 +365526,6 @@
+       sku: "general1.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 3
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "pgorelease.general1.ticket.2_PawPrint_20250620_Title"
+       skuEnableTime: "2025-06-02T00:00:00"
+@@ -367273,7 +367270,6 @@
+       sku: "pgorelease.general1.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 3
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "pgorelease.general1.ticket.2_PawPrint_20250620_Title"
+       skuEnableTime: "2025-06-02T00:00:00"
+@@ -367292,7 +367288,6 @@
+       sku: "pgorelease.general1.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 3
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "pgorelease.general1.ticket.2_PawPrint_20250620_Title"
+       skuEnableTime: "2025-06-02T00:00:00"
+@@ -372965,12 +372960,7 @@
+     }
+   }
+ }
+-batch_id: 1750349557484
+-experiment_id: 1
+-experiment_id: 6
+-experiment_id: 8
+-experiment_id: 11
+-experiment_id: 21
++batch_id: 1750356423418
+ experiment_id: 101
+ experiment_id: 150
+ experiment_id: 154
+@@ -372993,17 +372983,17 @@
+ experiment_id: 2650
+ experiment_id: 2875
+ experiment_id: 3032
+-experiment_id: 3033
+ experiment_id: 3063
+ experiment_id: 3685
+ experiment_id: 3710
+ experiment_id: 3711
+-experiment_id: 3712
+ experiment_id: 3716
+ experiment_id: 3727
+ experiment_id: 3732
++experiment_id: 3840
++experiment_id: 3842
++experiment_id: 3843
+ experiment_id: 4691
+-experiment_id: 4693
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+@@ -373039,7 +373029,6 @@
+ experiment_id: 3500037
+ experiment_id: 4610000
+ experiment_id: 4700000
+-experiment_id: 5000301
+ experiment_id: 6600399
+ experiment_id: 6600417
+ experiment_id: 6600418
