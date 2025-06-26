@@ -1,270 +1,761 @@
---- GAME_MASTER_old.txt	2025-06-24 15:18:54.576633352 +0200
-+++ GAME_MASTER.txt	2025-06-24 19:48:00.452449254 +0200
-@@ -127017,26 +127017,26 @@
+--- GAME_MASTER_old.txt	2025-06-25 19:41:46.769533581 +0200
++++ GAME_MASTER.txt	2025-06-26 20:18:07.867885278 +0200
+@@ -41601,7 +41601,7 @@
+       prepareBreadLobbySoloMs: 80000
+       rvnVersion: 2
+       maxRemotePlayersPerBreadDoughLobby: 40
+-      maxRemoteBreadBattlePassesAllowed: 30
++      maxRemoteBreadBattlePassesAllowed: 999999
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 40
+@@ -140733,6 +140733,12 @@
+     template_id: "FORMS_V0999_POKEMON_GIMMIGHOUL"
+     formSettings {
+       pokemon: GIMMIGHOUL
++      forms {
++        form: GIMMIGHOUL_NORMAL
++      }
++      forms {
++        form: 3018
++      }
+     }
+   }
+ }
+@@ -141471,8 +141477,8 @@
+   data {
+     template_id: "INVENTORY_SETTINGS"
+     inventorySettings {
+-      maxPokemon: 9800
+-      maxBagItems: 8800
++      maxPokemon: 10500
++      maxBagItems: 9500
+       basePokemon: 300
+       baseBagItems: 350
+       baseEggs: 9
+@@ -142269,45 +142275,44 @@
        itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
        category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
        globalEventTicket {
--        eventStartTime: "2025-06-21T14:00:00"
--        eventEndTime: "2025-06-21T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Jangmo_o25"
-+        eventStartTime: "2025-07-05T14:00:00"
-+        eventEndTime: "2025-07-06T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CDC_Eevee25"
+-        eventStartTime: "2025-03-29T14:00:00"
+-        eventEndTime: "2025-03-29T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_FuzzyRD2024"
++        eventStartTime: "2025-07-01T10:00:00"
++        eventEndTime: "2025-07-06T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_9THPARTY0725"
          giftable: true
-         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-june-cd-nologo-2025.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-eevee-cdc-2025-logo.jpg"
+         giftItem: ITEM_EVENT_TICKET_04_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gimmighoul-ticket-nologo-2025.jpg"
          displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-june-cd-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CD_Jangmo_o25"
--        textRewardsKey: "text_rewards_key_CD_Jangmo_o25"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-eevee-cdc-2025-logo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CDC_Eevee25"
-+        textRewardsKey: "text_rewards_key_CDC_Eevee25"
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_FuzzyRD2024"
+-        textRewardsKey: "text_rewards_key_FuzzyRD2024"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gimmighoul-ticket-nologo-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_9THPARTY0725"
++        textRewardsKey: "text_rewards_key_9THPARTY0725"
          iconRewards {
            type: POKEMON_ENCOUNTER
            pokemonEncounter {
--            pokemon_id: KOMMO_O
-+            pokemon_id: SYLVEON
+-            pokemon_id: PANCHAM
++            pokemon_id: GIMMIGHOUL
++            pokemonDisplay {
++              form: 3018
++            }
+           }
+         }
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemon_id: CUBCHOO
+-            pokemonDisplay {
+-              form: CUBCHOO_NORMAL
+-            }
++          type: ITEM
++          item {
++            item: ITEM_PAID_RAID_TICKET
++            amount: 1
+           }
+         }
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemon_id: TEDDIURSA
+-            pokemonDisplay {
+-              form: TEDDIURSA_NORMAL
+-            }
++          type: ITEM
++          item {
++            item: ITEM_INCUBATOR_SUPER
++            amount: 1
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1743256800000
+-        clientEventEndTimeUtcMs: 1743267600000
++        clientEventStartTimeUtcMs: 1751364000000
++        clientEventEndTimeUtcMs: 1751832000000
+       }
+-      descriptionOverride: "item_event_ticket_pink_desc_FuzzyRD2024"
++      descriptionOverride: "item_event_ticket_evergreen_desc_9THPARTY0725"
+     }
+   }
+ }
+@@ -142320,16 +142325,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-03-29T14:00:00"
+-        eventEndTime: "2025-03-29T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_details_FuzzyRD2024"
++        eventStartTime: "2025-07-01T10:00:00"
++        eventEndTime: "2025-07-06T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_9THPARTY0725"
+         ticketItem: ITEM_EVENT_TICKET_04
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1743256800000
+-        clientEventEndTimeUtcMs: 1743267600000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gimmighoul-ticket-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1751364000000
++        clientEventEndTimeUtcMs: 1751832000000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_pink_details_FuzzyRD2024"
++      descriptionOverride: "item_event_ticket_evergreen_details_9THPARTY0725"
+     }
+   }
+ }
+@@ -142686,6 +142691,7 @@
+         clientEventStartTimeUtcMs: 1751104800000
+         clientEventEndTimeUtcMs: 1751220000000
+       }
++      nameOverride: "general1.ticket._GOFest2025Ver1_title"
+       descriptionOverride: "item_event_ticket_10_desc_GOFest2025Ver1"
+     }
+   }
+@@ -142709,6 +142715,7 @@
+         clientEventEndTimeUtcMs: 1751220000000
+       }
+       ignoreInventorySpace: true
++      nameOverride: "general1.ticket._GOFest2025Ver1_title"
+       descriptionOverride: "item_event_ticket_10_desc_GOFest2025Ver1"
+     }
+   }
+@@ -143104,42 +143111,47 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-21T10:00:00"
+-        eventEndTime: "2025-05-27T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_global_desc_FinalStrike0525"
++        eventStartTime: "2025-07-01T10:00:00"
++        eventEndTime: "2025-07-06T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_SJSR0725"
+         giftable: true
+         giftItem: ITEM_GLOBAL_EVENT_TICKET_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
++        conflictStoryQuestIds: "MASTERWORK_SHINY_JIRACHI_SET_0_HEADER"
++        conflictStoryQuestIds: "MASTERWORK_9TH_ANNIVERSARY_SHINY_JIRACHI_SET_0_HEADER"
++        conflictStoryQuestIds: "MASTERWORK_SHINY_JIRACHI_EASY_SET_0_HEADER"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_FinalStrike0525"
+-        textRewardsKey: "text_rewards_key_FinalStrike0525"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_SJSR0725"
++        textRewardsKey: "text_rewards_key_SJSR0725"
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_PAID_RAID_TICKET
+-            amount: 2
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemon_id: JIRACHI
++            pokemonDisplay {
++              kglealcogbg: true
++            }
+           }
+         }
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_LUCKY_EGG
+-            amount: 4
++          type: CANDY
++          candy {
++            pokemonId: JIRACHI
++            amount: 20
            }
          }
          iconRewards {
            type: ITEM
            item {
--            item: ITEM_LUCKY_EGG
-+            item: ITEM_INCUBATOR_BASIC
-             amount: 1
-           }
-         }
-@@ -127048,10 +127048,10 @@
+-            item: ITEM_MP_REPLENISH
+-            amount: 1
++            item: ITEM_RARE_CANDY
++            amount: 9
            }
          }
          detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1750514400000
--        clientEventEndTimeUtcMs: 1750525200000
-+        clientEventStartTimeUtcMs: 1751724000000
-+        clientEventEndTimeUtcMs: 1751821200000
+-        clientEventStartTimeUtcMs: 1747821600000
+-        clientEventEndTimeUtcMs: 1748376000000
++        clientEventStartTimeUtcMs: 1751364000000
++        clientEventEndTimeUtcMs: 1751832000000
        }
--      descriptionOverride: "item_event_ticket_pink_details_CD_Jangmo_o25"
-+      descriptionOverride: "item_event_ticket_pink_details_CDC_Eevee25"
+-      descriptionOverride: "item_event_ticket_global_desc_FinalStrike0525"
++      descriptionOverride: "item_event_ticket_evergreen_desc_SJSR0725"
      }
    }
  }
-@@ -127064,16 +127064,16 @@
+@@ -143152,16 +143164,16 @@
        itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
        category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
        globalEventTicket {
--        eventStartTime: "2025-06-21T14:00:00"
--        eventEndTime: "2025-06-21T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Jangmo_o25"
-+        eventStartTime: "2025-07-05T14:00:00"
-+        eventEndTime: "2025-07-06T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CDC_Eevee25"
-         ticketItem: ITEM_EVENT_TICKET_03
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-june-cd-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1750514400000
--        clientEventEndTimeUtcMs: 1750525200000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-eevee-cdc-2025-logo.jpg"
-+        clientEventStartTimeUtcMs: 1751724000000
-+        clientEventEndTimeUtcMs: 1751821200000
+-        eventStartTime: "2025-05-21T10:00:00"
+-        eventEndTime: "2025-05-27T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_global_details_FinalStrike0525"
++        eventStartTime: "2025-07-01T10:00:00"
++        eventEndTime: "2025-07-06T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_SJSR0725"
+         ticketItem: ITEM_GLOBAL_EVENT_TICKET
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
+-        clientEventStartTimeUtcMs: 1747821600000
+-        clientEventEndTimeUtcMs: 1748376000000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1751364000000
++        clientEventEndTimeUtcMs: 1751832000000
        }
        ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_pink_details_CD_Jangmo_o25"
-+      descriptionOverride: "item_event_ticket_pink_details_CDC_Eevee25"
+-      descriptionOverride: "item_event_ticket_global_details_FinalStrike0525"
++      descriptionOverride: "item_event_ticket_evergreen_details_SJSR0725"
      }
    }
  }
-@@ -361407,55 +361407,7 @@
+@@ -167562,7 +167574,6 @@
+       friendRequestsEnabled: true
+       remoteRaidDistanceValidation: true
+       popupTimeMs: 30000
+-      failedFriendInviteInfoEnabled: true
+       minPlayersToBoot: 2
+       bootCutoffMs: 15000
+       bootSoloMs: 30000
+@@ -167571,45 +167582,22 @@
+       pokemonMusicOverrides {
+         pokemon: ZACIAN
+         forms: ZACIAN_HERO
++        battleMusicKey: "GoFest2025_Raid_Battle"
++      }
++      pokemonMusicOverrides {
++        pokemon: ZACIAN
+         forms: ZACIAN_CROWNED_SWORD
+         battleMusicKey: "GoFest2025_Raid_Battle"
+       }
+       pokemonMusicOverrides {
+         pokemon: ZAMAZENTA
+         forms: ZAMAZENTA_HERO
+-        forms: ZAMAZENTA_CROWNED_SHIELD
+         battleMusicKey: "GoFest2025_Raid_Battle"
+       }
+       pokemonMusicOverrides {
+-        pokemon: KYUREM
+-        forms: KYUREM_BLACK
+-        forms: KYUREM_WHITE
+-        forms: KYUREM_NORMAL
+-        battleMusicKey: "GoTour2025Music01"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: ZEKROM
+-        battleMusicKey: "GoTour2025Music01"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: RESHIRAM
+-        battleMusicKey: "GoTour2025Music01"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: NECROZMA
+-        forms: NECROZMA_NORMAL
+-        forms: NECROZMA_DUSK_MANE
+-        forms: NECROZMA_DAWN_WINGS
+-        forms: NECROZMA_ULTRA
+-        battleMusicKey: "GoFest2024Music_Battle"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: SOLGALEO
+-        battleMusicKey: "GoFest2024Music_Battle"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: LUNALA
+-        battleMusicKey: "GoFest2024Music_Battle"
++        pokemon: ZAMAZENTA
++        forms: ZAMAZENTA_CROWNED_SHIELD
++        battleMusicKey: "GoFest2025_Raid_Battle"
+       }
+     }
+   }
+@@ -167776,8 +167764,7 @@
+   data {
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+-      enabled: true
+-      dailySquashLimit: 30
++      dailySquashLimit: 999999
+     }
+   }
+ }
+@@ -376593,7 +376580,7 @@
        }
        availablePokemon {
          pokemon {
--          pokemon_id: REGIROCK
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: REGICE
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: REGISTEEL
-+          pokemon_id: REGIELEKI
+-          pokemon_id: REGIDRAGO
++          pokemon_id: REGIGIGAS
          }
          unlockedAtRank: 20
          attackIvOverride {
-@@ -362081,55 +362033,7 @@
+@@ -377219,7 +377206,7 @@
        }
        availablePokemon {
          pokemon {
--          pokemon_id: REGIROCK
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: REGICE
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemon_id: REGISTEEL
-+          pokemon_id: REGIELEKI
+-          pokemon_id: REGIDRAGO
++          pokemon_id: REGIGIGAS
          }
          unlockedAtRank: 20
          attackIvOverride {
-@@ -365923,13 +365827,13 @@
-       sortOrder: 2
+@@ -380713,15 +380700,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 4
        hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Jangmo_o25_title"
-+      title: "general1.ticket_CDC_Eevee25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-06-21T17:00:00"
-+      skuDisableTime: "2025-07-06T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1750525200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-june-cd-nologo-2025.jpg"
--      webstoreSkuId: "web-june-2025-cd-ticket-box"
-+      skuDisableTimeUtcMs: 1751821200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-eevee-cdc-2025-logo.jpg"
-+      webstoreSkuId: "web-july-2025-cdc-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -365944,11 +365848,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Jangmo_o25_title"
-+      title: "general1.ticket_CDC_Eevee25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-06-21T17:00:00"
-+      skuDisableTime: "2025-07-06T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1750525200000
-+      skuDisableTimeUtcMs: 1751821200000
+       spriteId: "general1.ticket.1"
+-      title: "gotour_2025_shiny_meloetta_masterwork_sr_title"
+-      skuEnableTime: "2025-01-25T10:00:00"
+-      skuDisableTime: "2025-03-02T18:00:00"
+-      skuEnableTimeUtcMs: 1737799200000
+-      skuDisableTimeUtcMs: 1740938400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/ShinyMeloetta_ticketBanner.png"
++      title: "masterwork_jirachi_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-07-06T20:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1751832000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
      }
    }
  }
-@@ -367651,13 +367555,13 @@
-       sortOrder: 2
+@@ -380732,15 +380719,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 4
        hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Jangmo_o25_title"
-+      title: "general1.ticket_CDC_Eevee25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-06-21T17:00:00"
-+      skuDisableTime: "2025-07-06T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1750525200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-june-cd-nologo-2025.jpg"
--      webstoreSkuId: "web-june-2025-cd-ticket-box"
-+      skuDisableTimeUtcMs: 1751821200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-eevee-cdc-2025-logo.jpg"
-+      webstoreSkuId: "web-july-2025-cdc-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -367672,11 +367576,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Jangmo_o25_title"
-+      title: "general1.ticket_CDC_Eevee25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-06-21T17:00:00"
-+      skuDisableTime: "2025-07-06T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1750525200000
-+      skuDisableTimeUtcMs: 1751821200000
+       spriteId: "general1.ticket.1"
+-      title: "gotour_2025_shiny_meloetta_masterwork_sr_title"
+-      skuEnableTime: "2025-01-25T10:00:00"
+-      skuDisableTime: "2025-03-02T18:00:00"
+-      skuEnableTimeUtcMs: 1737799200000
+-      skuDisableTimeUtcMs: 1740938400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/ShinyMeloetta_ticketBanner.png"
++      title: "masterwork_jirachi_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-07-06T20:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1751832000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
      }
    }
  }
-@@ -388343,6 +388247,15 @@
+@@ -381060,13 +381047,13 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+       hidden: true
+-      spriteId: "general2.ticket.2"
+-      title: "general1.ticket.2_FuzzyRD2024_title"
++      spriteId: "general2.ticket.4"
++      title: "general1.ticket.1_9THPARTY0725_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-03-29T17:00:00"
++      skuDisableTime: "2025-07-06T20:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1743267600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1751832000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gimmighoul-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -381079,13 +381066,13 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+       hidden: true
+-      spriteId: "general2.ticket.2"
+-      title: "general1.ticket.2_FuzzyRD2024_title"
++      spriteId: "general2.ticket.4"
++      title: "general1.ticket.1_9THPARTY0725_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-03-29T17:00:00"
++      skuDisableTime: "2025-07-06T20:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1743267600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1751832000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gimmighoul-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -382477,15 +382464,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.1"
+-      title: "gotour_2025_shiny_meloetta_masterwork_sr_title"
+-      skuEnableTime: "2025-01-25T10:00:00"
+-      skuDisableTime: "2025-03-02T18:00:00"
+-      skuEnableTimeUtcMs: 1737799200000
+-      skuDisableTimeUtcMs: 1740938400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/ShinyMeloetta_ticketBanner.png"
++      title: "masterwork_jirachi_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-07-06T20:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1751832000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -382496,15 +382483,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.1"
+-      title: "gotour_2025_shiny_meloetta_masterwork_sr_title"
+-      skuEnableTime: "2025-01-25T10:00:00"
+-      skuDisableTime: "2025-03-02T18:00:00"
+-      skuEnableTimeUtcMs: 1737799200000
+-      skuDisableTimeUtcMs: 1740938400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/banners/ShinyMeloetta_ticketBanner.png"
++      title: "masterwork_jirachi_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-07-06T20:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1751832000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -382788,13 +382775,13 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+       hidden: true
+-      spriteId: "general2.ticket.2"
+-      title: "general1.ticket.2_FuzzyRD2024_title"
++      spriteId: "general2.ticket.4"
++      title: "general1.ticket.1_9THPARTY0725_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-03-29T17:00:00"
++      skuDisableTime: "2025-07-06T20:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1743267600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1751832000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gimmighoul-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -382807,13 +382794,13 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+       hidden: true
+-      spriteId: "general2.ticket.2"
+-      title: "general1.ticket.2_FuzzyRD2024_title"
++      spriteId: "general2.ticket.4"
++      title: "general1.ticket.1_9THPARTY0725_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-03-29T17:00:00"
++      skuDisableTime: "2025-07-06T20:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1743267600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-FuzzyBuddy-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1751832000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gimmighoul-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -384712,7 +384699,7 @@
+     template_id: "sequence_fury_cutter_fast"
+     move_sequence_settings {
+       sequence: "anim attacker atk-move"
+-      sequence: "vfx defender fury_cutter_fast"
++      sequence: "vfx fury_cutter_fast"
+       sequence: "sfx attacker 210-0_fury_cutter"
+       sequence: "wait 0.5"
+       sequence: "sys ui-sync"
+@@ -385589,7 +385576,7 @@
+       sequence: "anim attacker atk-move"
+       sequence: "sfx attacker 232-0_metal_claw"
+       sequence: "wait 0.25"
+-      sequence: "vfx defender metal_claw_fast"
++      sequence: "vfx metal_claw_fast"
+       sequence: "wait 0.25"
+       sequence: "sys ui-sync"
+       sequence: "sys complete"
+@@ -388259,6 +388246,254 @@
    }
  }
  template {
-+  template_id: "avatar_store_footer_flags"
++  template_id: "EXTENDED_V0999_POKEMON_GIMMIGHOUL_COIN_A1"
 +  data {
-+    template_id: "avatar_store_footer_flags"
-+    267 {
-+      1: 1
++    template_id: "EXTENDED_V0999_POKEMON_GIMMIGHOUL_COIN_A1"
++    pokemonExtendedSettings {
++      uniqueId: GIMMIGHOUL
++      form: 3018
++      sizeSettings {
++        xxsLowerBound: 0.049
++        xsLowerBound: 0.05
++        mLowerBound: 0.075
++        mUpperBound: 0.125
++        xlUpperBound: 0.15
++        xxlUpperBound: 0.155
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0999_POKEMON_GIMMIGHOUL_NORMAL"
++  data {
++    template_id: "EXTENDED_V0999_POKEMON_GIMMIGHOUL_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: GIMMIGHOUL
++      form: GIMMIGHOUL_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.049
++        xsLowerBound: 0.05
++        mLowerBound: 0.075
++        mUpperBound: 0.125
++        xlUpperBound: 0.15
++        xxlUpperBound: 0.155
++      }
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2025_9THANNIVERSARY"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_9THANNIVERSARY"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2025_9THANNIVERSARY
++      imageUrl: "sb_9thAnniversary"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_9thAnni"
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0999_POKEMON_GIMMIGHOUL_COIN_A1"
++  data {
++    template_id: "SPAWN_V0999_POKEMON_GIMMIGHOUL_COIN_A1"
++    genderSettings {
++      pokemon: GIMMIGHOUL
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0999_POKEMON_GIMMIGHOUL_NORMAL"
++  data {
++    template_id: "SPAWN_V0999_POKEMON_GIMMIGHOUL_NORMAL"
++    genderSettings {
++      pokemon: GIMMIGHOUL
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "TAPPABLE_TYPE_HAT"
++  data {
++    template_id: "TAPPABLE_TYPE_HAT"
++    tappableSettings {
++      visibleRadiusMeters: 150
++      removeWhenTapped: true
++      tappableAssetKey: "TAPPABLE_TYPE_HAT"
++    }
++  }
++}
++template {
++  template_id: "V0999_POKEMON_GIMMIGHOUL_COIN_A1"
++  data {
++    template_id: "V0999_POKEMON_GIMMIGHOUL_COIN_A1"
++    pokemonSettings {
++      pokemonId: GIMMIGHOUL
++      modelScale: 1.09
++      type: POKEMON_TYPE_GHOST
++      camera {
++        diskRadiusM: 0.5723
++        cylinderRadiusM: 0.3
++        cylinderHeightM: 0.2
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.08
++        collisionHeightM: 0.08
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1.15
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 128
++        baseAttack: 140
++        baseDefense: 76
++      }
++      quickMoves: ASTONISH_FAST
++      cinematicMoves: SHADOW_BALL
++      animationTime: 1.6667
++      animationTime: 0.6667
++      animationTime: 1.6667
++      animationTime: 1.8333
++      animationTime: 0
++      animationTime: 2.1667
++      animationTime: 1.4
++      animationTime: 1.46666706
++      evolutionIds: GIMMIGHOUL
++      evolutionPips: 1
++      pokedexHeightM: 0.1
++      pokedexWeightKg: 0.1
++      heightStdDev: 0.0125
++      weightStdDev: 0.0125
++      familyId: FAMILY_GIMMIGHOUL
++      kmBuddyDistance: 5
++      modelHeight: 0.4
++      modelScaleV2: 1
++      form: 3018
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: -20
++      buddyPortraitOffset: -800
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0999_POKEMON_GIMMIGHOUL_NORMAL"
++  data {
++    template_id: "V0999_POKEMON_GIMMIGHOUL_NORMAL"
++    pokemonSettings {
++      pokemonId: GIMMIGHOUL
++      modelScale: 1.09
++      type: POKEMON_TYPE_GHOST
++      camera {
++        diskRadiusM: 0.5723
++        cylinderRadiusM: 0.3
++        cylinderHeightM: 0.2
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.08
++        collisionHeightM: 0.08
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1.15
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 128
++        baseAttack: 140
++        baseDefense: 76
++      }
++      quickMoves: ASTONISH_FAST
++      cinematicMoves: SHADOW_BALL
++      animationTime: 1.6667
++      animationTime: 0.6667
++      animationTime: 1.6667
++      animationTime: 1.8333
++      animationTime: 0
++      animationTime: 2.1667
++      animationTime: 1.4
++      animationTime: 1.46666706
++      evolutionIds: GIMMIGHOUL
++      evolutionPips: 1
++      pokedexHeightM: 0.1
++      pokedexWeightKg: 0.1
++      heightStdDev: 0.0125
++      weightStdDev: 0.0125
++      familyId: FAMILY_GIMMIGHOUL
++      kmBuddyDistance: 5
++      modelHeight: 0.4
++      evolutionBranch {
++        evolution: GHOLDENGO
++        evolutionItemRequirement: ITEM_OTHER_EVOLUTION_STONE_A
++        evolutionItemRequirementCost: 999
++      }
++      modelScaleV2: 1
++      form: GIMMIGHOUL_NORMAL
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: -20
++      buddyPortraitOffset: -800
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
 +    }
 +  }
 +}
@@ -272,23 +763,50 @@
    template_id: "PTC_OAUTH_SETTINGS"
    data {
      template_id: "PTC_OAUTH_SETTINGS"
-@@ -388353,7 +388266,7 @@
+@@ -388269,7 +388504,7 @@
      }
    }
  }
--batch_id: 1750656771038
-+batch_id: 1750719570554
+-batch_id: 1750866101444
++batch_id: 1750957395096
  experiment_id: 1
  experiment_id: 6
  experiment_id: 8
-@@ -388427,8 +388340,8 @@
+@@ -388280,9 +388515,9 @@
+ experiment_id: 155
+ experiment_id: 300
+ experiment_id: 320
+-experiment_id: 361
+ experiment_id: 408
+ experiment_id: 409
++experiment_id: 427
+ experiment_id: 500
+ experiment_id: 511
+ experiment_id: 513
+@@ -388313,7 +388548,6 @@
+ experiment_id: 4691
+ experiment_id: 4693
+ experiment_id: 4998
+-experiment_id: 5057
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+@@ -388339,15 +388573,15 @@
+ experiment_id: 55751
+ experiment_id: 80400
+ experiment_id: 80402
+-experiment_id: 80405
+ experiment_id: 80406
+ experiment_id: 80407
+ experiment_id: 80411
  experiment_id: 80412
  experiment_id: 80413
  experiment_id: 80414
--experiment_id: 80415
--experiment_id: 80417
-+experiment_id: 80418
-+experiment_id: 80419
+-experiment_id: 80421
+-experiment_id: 80422
++experiment_id: 80424
++experiment_id: 80426
++experiment_id: 80434
  experiment_id: 80494
  experiment_id: 80500
  experiment_id: 80600
