@@ -1,48 +1,148 @@
---- GAME_MASTER_old.txt	2025-07-03 18:41:33.984923936 +0200
-+++ GAME_MASTER.txt	2025-07-03 20:16:25.447484811 +0200
-@@ -355624,8 +355624,8 @@
-   template_id: "avatar_store_footer_flags"
+--- GAME_MASTER_old.txt	2025-07-05 10:20:43.803477048 +0200
++++ GAME_MASTER.txt	2025-07-06 09:56:42.163384922 +0200
+@@ -125921,7 +125921,7 @@
    data {
-     template_id: "avatar_store_footer_flags"
--    267 {
--      1: 1
-+    avatarStoreFooterFlags {
-+      enabled: true
+     template_id: "FRIENDSHIP_LEVEL_0"
+     friendshipMilestoneSettings {
+-      milestoneXpReward: 1000
++      milestoneXpReward: 1500
+       attackBonusPercentage: 1
+       unlockedTrading: REGULAR_IN_POKEDEX
      }
-   }
- }
-@@ -374035,16 +374035,24 @@
-   template_id: "EVENT_PLANNER_POPULAR_RAID_RSVP_SETTINGS"
-   data {
-     template_id: "EVENT_PLANNER_POPULAR_RAID_RSVP_SETTINGS"
--    270 {
--      1: 60
--      2: 60
--      3: 4
--      4: 1
--      5: 1
--      7: 3
--      8: 3600
--      9: 600
--      10: "\004\005\006\007\010\t\n\016\017"
-+    eventPlannerPopularNotificationSettings {
-+      scanIntervalSeconds: 60
-+      firstScanOffsetSeconds: 60
-+      nearbyPoiThreshold: 4
-+      urbanThreshold: 1
-+      ruralThreshold: 1
-+      maxNotifPerDay: 3
-+      notifDelayIntervalsSeconds: 3600
-+      timeslotBufferWindowSeconds: 600
-+      battleLevels: 4
-+      battleLevels: 5
-+      battleLevels: 6
-+      battleLevels: 7
-+      battleLevels: 8
-+      battleLevels: 9
-+      battleLevels: 10
-+      battleLevels: 14
-+      battleLevels: 15
-     }
-   }
- }
+@@ -125933,7 +125933,7 @@
+     template_id: "FRIENDSHIP_LEVEL_1"
+     friendshipMilestoneSettings {
+       minPointsToReach: 1
+-      milestoneXpReward: 3000
++      milestoneXpReward: 4500
+       attackBonusPercentage: 1.03
+       unlockedTrading: REGULAR_IN_POKEDEX
+       unlockedTrading: SPECIAL_IN_POKEDEX
+@@ -125953,7 +125953,7 @@
+     template_id: "FRIENDSHIP_LEVEL_2"
+     friendshipMilestoneSettings {
+       minPointsToReach: 7
+-      milestoneXpReward: 10000
++      milestoneXpReward: 15000
+       attackBonusPercentage: 1.05
+       raidBallBonus: 1
+       unlockedTrading: REGULAR_IN_POKEDEX
+@@ -125976,7 +125976,7 @@
+     template_id: "FRIENDSHIP_LEVEL_3"
+     friendshipMilestoneSettings {
+       minPointsToReach: 30
+-      milestoneXpReward: 50000
++      milestoneXpReward: 75000
+       attackBonusPercentage: 1.07
+       raidBallBonus: 2
+       unlockedTrading: REGULAR_IN_POKEDEX
+@@ -125999,7 +125999,7 @@
+     template_id: "FRIENDSHIP_LEVEL_4"
+     friendshipMilestoneSettings {
+       minPointsToReach: 90
+-      milestoneXpReward: 100000
++      milestoneXpReward: 150000
+       attackBonusPercentage: 1.1
+       raidBallBonus: 4
+       unlockedTrading: REGULAR_IN_POKEDEX
+@@ -229405,23 +229405,23 @@
+       evolutionBranch {
+         evolution: ESPEON
+         candyCost: 25
+-        kmBuddyDistanceRequirement: 10
++        kmBuddyDistanceRequirement: 1
+         mustBeBuddy: true
+         onlyDaytime: true
+         priority: 100
+         questDisplay {
+-          questRequirementTemplateId: "ESPEON_EVOLUTION_QUEST"
++          questRequirementTemplateId: "ESPEON_CD_EVOLUTION_QUEST"
+         }
+       }
+       evolutionBranch {
+         evolution: UMBREON
+         candyCost: 25
+-        kmBuddyDistanceRequirement: 10
++        kmBuddyDistanceRequirement: 1
+         mustBeBuddy: true
+         onlyNighttime: true
+         priority: 100
+         questDisplay {
+-          questRequirementTemplateId: "UMBREON_EVOLUTION_QUEST"
++          questRequirementTemplateId: "UMBREON_CD_EVOLUTION_QUEST"
+         }
+       }
+       evolutionBranch {
+@@ -229441,7 +229441,7 @@
+         candyCost: 25
+         priority: 100
+         questDisplay {
+-          questRequirementTemplateId: "SYLVEON_EVOLUTION_QUEST"
++          questRequirementTemplateId: "SYLVEON_CD_EVOLUTION_QUEST"
+         }
+       }
+       modelScaleV2: 1.27
+@@ -229707,23 +229707,23 @@
+       evolutionBranch {
+         evolution: ESPEON
+         candyCost: 25
+-        kmBuddyDistanceRequirement: 10
++        kmBuddyDistanceRequirement: 1
+         mustBeBuddy: true
+         onlyDaytime: true
+         priority: 100
+         questDisplay {
+-          questRequirementTemplateId: "ESPEON_EVOLUTION_QUEST"
++          questRequirementTemplateId: "ESPEON_CD_EVOLUTION_QUEST"
+         }
+       }
+       evolutionBranch {
+         evolution: UMBREON
+         candyCost: 25
+-        kmBuddyDistanceRequirement: 10
++        kmBuddyDistanceRequirement: 1
+         mustBeBuddy: true
+         onlyNighttime: true
+         priority: 100
+         questDisplay {
+-          questRequirementTemplateId: "UMBREON_EVOLUTION_QUEST"
++          questRequirementTemplateId: "UMBREON_CD_EVOLUTION_QUEST"
+         }
+       }
+       evolutionBranch {
+@@ -229743,7 +229743,7 @@
+         candyCost: 25
+         priority: 100
+         questDisplay {
+-          questRequirementTemplateId: "SYLVEON_EVOLUTION_QUEST"
++          questRequirementTemplateId: "SYLVEON_CD_EVOLUTION_QUEST"
+         }
+       }
+       modelScaleV2: 1.27
+@@ -374303,7 +374303,7 @@
+ experiment_id: 3728
+ experiment_id: 3734
+ experiment_id: 3762
+-experiment_id: 3764
++experiment_id: 3765
+ experiment_id: 3767
+ experiment_id: 3769
+ experiment_id: 3770
+@@ -374312,6 +374312,7 @@
+ experiment_id: 3773
+ experiment_id: 4693
+ experiment_id: 4998
++experiment_id: 5108
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+@@ -374322,7 +374323,9 @@
+ experiment_id: 7050
+ experiment_id: 7052
+ experiment_id: 8760
++experiment_id: 8761
+ experiment_id: 8942
++experiment_id: 8980
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
