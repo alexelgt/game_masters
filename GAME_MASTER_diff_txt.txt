@@ -1,273 +1,89 @@
---- GAME_MASTER_old.txt	2025-07-07 20:08:22.922035408 +0200
-+++ GAME_MASTER.txt	2025-07-07 22:57:36.117572893 +0200
-@@ -41609,14 +41609,18 @@
-   }
- }
- template {
--  template_id: "BREAD_CODE_GATE"
-+  template_id: "EXTENDED_V0549_POKEMON_LILLIGANT_HISUIAN"
-   data {
--    template_id: "BREAD_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--      subCodeGateList {
--        name: "tappable_orb_code_gate"
--        isEnabled: true
-+    template_id: "EXTENDED_V0549_POKEMON_LILLIGANT_HISUIAN"
-+    pokemonExtendedSettings {
-+      uniqueId: LILLIGANT
-+      sizeSettings {
-+        xxsLowerBound: 0.539
-+        xsLowerBound: 0.55
-+        mLowerBound: 0.825
-+        mUpperBound: 1.375
-+        xlUpperBound: 1.65
-+        xxlUpperBound: 1.705
+--- GAME_MASTER_old.txt	2025-07-07 22:57:36.117572893 +0200
++++ GAME_MASTER.txt	2025-07-08 20:04:22.565926624 +0200
+@@ -149174,12 +149174,12 @@
+         condition {
+           type: WITH_WIN_RAID_STATUS
+         }
+-        target: 10
++        target: 1
+       }
+       context: EVOLUTION_QUEST
+       display {
+-        description: "quest_win_raid_plural"
+-        title: "quest_win_raid_plural"
++        description: "quest_win_raid_singular"
++        title: "quest_win_raid_singular"
        }
      }
    }
-@@ -120697,6 +120701,12 @@
-     template_id: "FORMS_V0549_POKEMON_LILLIGANT"
-     formSettings {
-       pokemon: LILLIGANT
-+      forms {
-+        form: LILLIGANT_NORMAL
-+      }
-+      forms {
-+        form: LILLIGANT_HISUIAN
-+      }
+@@ -362628,7 +362628,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: COBALION
++          pokemon_id: SOLGALEO
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -363254,7 +363254,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: COBALION
++          pokemon_id: SOLGALEO
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -374267,17 +374267,6 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "EXTENDED_V0549_POKEMON_LILLIGANT_NORMAL"
+   data {
+     template_id: "EXTENDED_V0549_POKEMON_LILLIGANT_NORMAL"
+@@ -374492,7 +374481,18 @@
      }
    }
  }
-@@ -374267,7 +374277,222 @@
-     }
-   }
- }
--batch_id: 1751863026071
+-batch_id: 1751920999555
 +template {
-+  template_id: "EXTENDED_V0549_POKEMON_LILLIGANT_NORMAL"
++  template_id: "PTC_OAUTH_SETTINGS"
 +  data {
-+    template_id: "EXTENDED_V0549_POKEMON_LILLIGANT_NORMAL"
-+    pokemonExtendedSettings {
-+      uniqueId: LILLIGANT
-+      sizeSettings {
-+        xxsLowerBound: 0.539
-+        xsLowerBound: 0.55
-+        mLowerBound: 0.825
-+        mUpperBound: 1.375
-+        xlUpperBound: 1.65
-+        xxlUpperBound: 1.705
-+      }
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
 +    }
 +  }
 +}
-+template {
-+  template_id: "SPAWN_V0549_POKEMON_LILLIGANT_HISUIAN"
-+  data {
-+    template_id: "SPAWN_V0549_POKEMON_LILLIGANT_HISUIAN"
-+    genderSettings {
-+      pokemon: LILLIGANT
-+      gender {
-+        femalePercent: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "SPAWN_V0549_POKEMON_LILLIGANT_NORMAL"
-+  data {
-+    template_id: "SPAWN_V0549_POKEMON_LILLIGANT_NORMAL"
-+    genderSettings {
-+      pokemon: LILLIGANT
-+      gender {
-+        femalePercent: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "V0549_POKEMON_LILLIGANT_HISUIAN"
-+  data {
-+    template_id: "V0549_POKEMON_LILLIGANT_HISUIAN"
-+    pokemonSettings {
-+      pokemonId: LILLIGANT
-+      modelScale: 1.26
-+      type: POKEMON_TYPE_GRASS
-+      type2: POKEMON_TYPE_FIGHTING
-+      camera {
-+        diskRadiusM: 0.378
-+        cylinderRadiusM: 0.42
-+        cylinderHeightM: 1.1
-+        shoulderModeScale: 0.5
-+      }
-+      encounter {
-+        collisionRadiusM: 0.25
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.2
-+        movementType: MOVEMENT_JUMP
-+        movementTimerS: 10
-+        jumpTimeS: 1
-+        attackTimerS: 29
-+        bonusCandyCaptureReward: 2
-+        bonusStardustCaptureReward: 200
-+        attackProbability: 0.1
-+        dodgeProbability: 0.15
-+        dodgeDurationS: 1
-+        dodgeDistance: 1
-+        cameraDistance: 4.5
-+        minPokemonActionFrequencyS: 0.2
-+        maxPokemonActionFrequencyS: 1.6
-+        bonusXlCandyCaptureReward: 1
-+      }
-+      stats {
-+        baseStamina: 172
-+        baseAttack: 208
-+        baseDefense: 159
-+      }
-+      quickMoves: MAGICAL_LEAF_FAST
-+      quickMoves: BULLET_SEED_FAST
-+      cinematicMoves: PETAL_BLIZZARD
-+      cinematicMoves: CLOSE_COMBAT
-+      cinematicMoves: SOLAR_BEAM
-+      cinematicMoves: UPPER_HAND
-+      animationTime: 1.9
-+      animationTime: 0.6667
-+      animationTime: 1.8
-+      animationTime: 1.7667
-+      animationTime: 0
-+      animationTime: 2.4
-+      animationTime: 0.8667
-+      animationTime: 0
-+      evolutionPips: 1
-+      pokedexHeightM: 1.2
-+      pokedexWeightKg: 19.2
-+      parentPokemonId: PETILIL
-+      heightStdDev: 0.15
-+      weightStdDev: 2.4
-+      familyId: FAMILY_PETILIL
-+      candyToEvolve: 25
-+      kmBuddyDistance: 1
-+      modelHeight: 1.1
-+      modelScaleV2: 1
-+      form: LILLIGANT_HISUIAN
-+      buddyOffsetMale: 10.1
-+      buddyOffsetMale: 0
-+      buddyOffsetMale: -47.1
-+      buddyOffsetFemale: 10.1
-+      buddyOffsetFemale: 0
-+      buddyOffsetFemale: -47.1
-+      buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -70
-+      buddyPortraitOffset: 0
-+      third_move {
-+        stardustToUnlock: 10000
-+        candyToUnlock: 25
-+      }
-+      isTransferable: true
-+      isDeployable: true
-+      isTradable: true
-+      buddyGroupNumber: 2
-+      ibfc {
-+      }
-+      breadTierGroup: GROUP_1
-+    }
-+  }
-+}
-+template {
-+  template_id: "V0549_POKEMON_LILLIGANT_NORMAL"
-+  data {
-+    template_id: "V0549_POKEMON_LILLIGANT_NORMAL"
-+    pokemonSettings {
-+      pokemonId: LILLIGANT
-+      modelScale: 1.26
-+      type: POKEMON_TYPE_GRASS
-+      camera {
-+        diskRadiusM: 0.378
-+        cylinderRadiusM: 0.42
-+        cylinderHeightM: 1.1
-+        shoulderModeScale: 0.5
-+      }
-+      encounter {
-+        collisionRadiusM: 0.25
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.2
-+        movementType: MOVEMENT_JUMP
-+        movementTimerS: 10
-+        jumpTimeS: 1
-+        attackTimerS: 29
-+        bonusCandyCaptureReward: 2
-+        bonusStardustCaptureReward: 200
-+        attackProbability: 0.1
-+        dodgeProbability: 0.15
-+        dodgeDurationS: 1
-+        dodgeDistance: 1
-+        cameraDistance: 4.5
-+        minPokemonActionFrequencyS: 0.2
-+        maxPokemonActionFrequencyS: 1.6
-+        bonusXlCandyCaptureReward: 1
-+      }
-+      stats {
-+        baseStamina: 172
-+        baseAttack: 214
-+        baseDefense: 155
-+      }
-+      quickMoves: CHARM_FAST
-+      quickMoves: HIDDEN_POWER_FAST
-+      quickMoves: MAGICAL_LEAF_FAST
-+      cinematicMoves: PETAL_BLIZZARD
-+      cinematicMoves: HYPER_BEAM
-+      cinematicMoves: SOLAR_BEAM
-+      animationTime: 1.9
-+      animationTime: 0.6667
-+      animationTime: 1.8
-+      animationTime: 1.7667
-+      animationTime: 0
-+      animationTime: 2.4
-+      animationTime: 0.8667
-+      animationTime: 0
-+      evolutionPips: 1
-+      pokedexHeightM: 1.1
-+      pokedexWeightKg: 16.3
-+      parentPokemonId: PETILIL
-+      heightStdDev: 0.1375
-+      weightStdDev: 2.0375
-+      familyId: FAMILY_PETILIL
-+      candyToEvolve: 25
-+      kmBuddyDistance: 1
-+      modelHeight: 1.1
-+      modelScaleV2: 1
-+      form: LILLIGANT_NORMAL
-+      buddyOffsetMale: 10.1
-+      buddyOffsetMale: 0
-+      buddyOffsetMale: -47.1
-+      buddyOffsetFemale: 10.1
-+      buddyOffsetFemale: 0
-+      buddyOffsetFemale: -47.1
-+      buddyScale: 19
-+      third_move {
-+        stardustToUnlock: 10000
-+        candyToUnlock: 25
-+      }
-+      isTransferable: true
-+      isDeployable: true
-+      isTradable: true
-+      buddyGroupNumber: 2
-+      ibfc {
-+      }
-+      breadTierGroup: GROUP_1
-+    }
-+  }
-+}
-+batch_id: 1751920999555
++batch_id: 1751925348141
  experiment_id: 1
  experiment_id: 6
  experiment_id: 8
-@@ -374307,7 +374532,6 @@
- experiment_id: 3718
+@@ -374529,11 +374529,13 @@
+ experiment_id: 3710
+ experiment_id: 3711
+ experiment_id: 3712
+-experiment_id: 3718
++experiment_id: 3719
  experiment_id: 3728
  experiment_id: 3735
--experiment_id: 3772
++experiment_id: 3758
  experiment_id: 4693
  experiment_id: 4998
++experiment_id: 5087
  experiment_id: 5109
+ experiment_id: 5160
+ experiment_id: 5162
