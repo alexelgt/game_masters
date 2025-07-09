@@ -1,89 +1,278 @@
---- GAME_MASTER_old.txt	2025-07-07 22:57:36.117572893 +0200
-+++ GAME_MASTER.txt	2025-07-08 20:04:22.565926624 +0200
-@@ -149174,12 +149174,12 @@
-         condition {
-           type: WITH_WIN_RAID_STATUS
+--- GAME_MASTER_old.txt	2025-07-08 20:04:22.565926624 +0200
++++ GAME_MASTER.txt	2025-07-09 19:09:51.753169090 +0200
+@@ -127243,26 +127243,26 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-07-05T14:00:00"
+-        eventEndTime: "2025-07-06T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CDC_Eevee25"
++        eventStartTime: "2025-07-20T14:00:00"
++        eventEndTime: "2025-07-20T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Quaxly25"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-eevee-cdc-2025-logo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs19_quaxly_cd_nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-eevee-cdc-2025-logo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_CDC_Eevee25"
+-        textRewardsKey: "text_rewards_key_CDC_Eevee25"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs19_quaxly_cd_nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CD_Quaxly25"
++        textRewardsKey: "text_rewards_key_CD_Quaxly25"
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemonEncounter {
+-            pokemon_id: SYLVEON
++            pokemon_id: QUAQUAVAL
+           }
          }
--        target: 10
-+        target: 1
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_INCUBATOR_BASIC
++            item: ITEM_STAR_PIECE
+             amount: 1
+           }
+         }
+@@ -127274,10 +127274,10 @@
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1751724000000
+-        clientEventEndTimeUtcMs: 1751821200000
++        clientEventStartTimeUtcMs: 1753020000000
++        clientEventEndTimeUtcMs: 1753030800000
        }
-       context: EVOLUTION_QUEST
-       display {
--        description: "quest_win_raid_plural"
--        title: "quest_win_raid_plural"
-+        description: "quest_win_raid_singular"
-+        title: "quest_win_raid_singular"
-       }
+-      descriptionOverride: "item_event_ticket_pink_details_CDC_Eevee25"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Quaxly25"
      }
    }
-@@ -362628,7 +362628,7 @@
+ }
+@@ -127290,16 +127290,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-07-05T14:00:00"
+-        eventEndTime: "2025-07-06T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CDC_Eevee25"
++        eventStartTime: "2025-07-20T14:00:00"
++        eventEndTime: "2025-07-20T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Quaxly25"
+         ticketItem: ITEM_EVENT_TICKET_03
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-eevee-cdc-2025-logo.jpg"
+-        clientEventStartTimeUtcMs: 1751724000000
+-        clientEventEndTimeUtcMs: 1751821200000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs19_quaxly_cd_nologo.jpg"
++        clientEventStartTimeUtcMs: 1753020000000
++        clientEventEndTimeUtcMs: 1753030800000
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: COBALION
-+          pokemon_id: SOLGALEO
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -363254,7 +363254,7 @@
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_pink_details_CDC_Eevee25"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Quaxly25"
+     }
+   }
+ }
+@@ -127535,6 +127535,7 @@
+         clientEventStartTimeUtcMs: 1752573600000
+         clientEventEndTimeUtcMs: 1753041600000
        }
-       availablePokemon {
-         pokemon {
--          pokemon_id: COBALION
-+          pokemon_id: SOLGALEO
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -374267,17 +374267,6 @@
++      nameOverride: "general1.ticket._WaterFestival_JULY25_title"
+       descriptionOverride: "item_event_ticket_evergreen_desc_WaterFestival_JULY25"
+     }
+   }
+@@ -127557,6 +127558,7 @@
+         clientEventEndTimeUtcMs: 1753041600000
+       }
+       ignoreInventorySpace: true
++      nameOverride: "general1.ticket._WaterFestival_JULY25_title"
+       descriptionOverride: "item_event_ticket_evergreen_details_WaterFestival_JULY25"
+     }
+   }
+@@ -360426,8 +360428,8 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_ELEMENT"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HISUI"
+     }
+   }
+ }
+@@ -367071,13 +367073,13 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CDC_Eevee25_title"
++      title: "general1.ticket_CD_Quaxly25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-07-06T17:00:00"
++      skuDisableTime: "2025-07-20T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1751821200000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-eevee-cdc-2025-logo.jpg"
+-      webstoreSkuId: "web-july-2025-cdc-ticket-box"
++      skuDisableTimeUtcMs: 1753030800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs19_quaxly_cd_nologo.jpg"
++      webstoreSkuId: "web-july-2025-cd-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -367092,11 +367094,11 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CDC_Eevee25_title"
++      title: "general1.ticket_CD_Quaxly25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-07-06T17:00:00"
++      skuDisableTime: "2025-07-20T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1751821200000
++      skuDisableTimeUtcMs: 1753030800000
+     }
+   }
+ }
+@@ -368807,13 +368809,13 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CDC_Eevee25_title"
++      title: "general1.ticket_CD_Quaxly25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-07-06T17:00:00"
++      skuDisableTime: "2025-07-20T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1751821200000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-eevee-cdc-2025-logo.jpg"
+-      webstoreSkuId: "web-july-2025-cdc-ticket-box"
++      skuDisableTimeUtcMs: 1753030800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs19_quaxly_cd_nologo.jpg"
++      webstoreSkuId: "web-july-2025-cd-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -368828,11 +368830,11 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CDC_Eevee25_title"
++      title: "general1.ticket_CD_Quaxly25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-07-06T17:00:00"
++      skuDisableTime: "2025-07-20T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1751821200000
++      skuDisableTimeUtcMs: 1753030800000
+     }
+   }
+ }
+@@ -374482,6 +374484,76 @@
    }
  }
  template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
-   template_id: "EXTENDED_V0549_POKEMON_LILLIGANT_NORMAL"
-   data {
-     template_id: "EXTENDED_V0549_POKEMON_LILLIGANT_NORMAL"
-@@ -374492,7 +374481,18 @@
-     }
-   }
- }
--batch_id: 1751920999555
-+template {
-+  template_id: "PTC_OAUTH_SETTINGS"
++  template_id: "LC_2025_BERLIN_ROADTRIP_001"
 +  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    template_id: "LC_2025_BERLIN_ROADTRIP_001"
++    locationCardSettings {
++      locationCard: LC_2025_BERLIN_ROADTRIP_001
++      imageUrl: "lc_roadtrip2025_berlin"
 +    }
 +  }
 +}
-+batch_id: 1751925348141
++template {
++  template_id: "LC_2025_COLOGNE_ROADTRIP_001"
++  data {
++    template_id: "LC_2025_COLOGNE_ROADTRIP_001"
++    locationCardSettings {
++      locationCard: LC_2025_COLOGNE_ROADTRIP_001
++      imageUrl: "lc_roadtrip2025_cologne"
++    }
++  }
++}
++template {
++  template_id: "LC_2025_HAGUE_ROADTRIP_001"
++  data {
++    template_id: "LC_2025_HAGUE_ROADTRIP_001"
++    locationCardSettings {
++      locationCard: LC_2025_HAGUE_ROADTRIP_001
++      imageUrl: "lc_roadtrip2025_hague"
++    }
++  }
++}
++template {
++  template_id: "LC_2025_LONDON_ROADTRIP_001"
++  data {
++    template_id: "LC_2025_LONDON_ROADTRIP_001"
++    locationCardSettings {
++      locationCard: LC_2025_LONDON_ROADTRIP_001
++      imageUrl: "lc_roadtrip2025_london"
++    }
++  }
++}
++template {
++  template_id: "LC_2025_MANCHESTER_ROADTRIP_001"
++  data {
++    template_id: "LC_2025_MANCHESTER_ROADTRIP_001"
++    locationCardSettings {
++      locationCard: LC_2025_MANCHESTER_ROADTRIP_001
++      imageUrl: "lc_roadtrip2025_manchester"
++    }
++  }
++}
++template {
++  template_id: "LC_2025_PARIS_ROADTRIP_001"
++  data {
++    template_id: "LC_2025_PARIS_ROADTRIP_001"
++    locationCardSettings {
++      locationCard: LC_2025_PARIS_ROADTRIP_001
++      imageUrl: "lc_roadtrip2025_paris"
++    }
++  }
++}
++template {
++  template_id: "LC_2025_VALENCIA_ROADTRIP_001"
++  data {
++    template_id: "LC_2025_VALENCIA_ROADTRIP_001"
++    locationCardSettings {
++      locationCard: LC_2025_VALENCIA_ROADTRIP_001
++      imageUrl: "lc_roadtrip2025_valencia"
++    }
++  }
++}
++template {
+   template_id: "PTC_OAUTH_SETTINGS"
+   data {
+     template_id: "PTC_OAUTH_SETTINGS"
+@@ -374492,7 +374564,7 @@
+     }
+   }
+ }
+-batch_id: 1751925348141
++batch_id: 1752006086631
  experiment_id: 1
  experiment_id: 6
  experiment_id: 8
-@@ -374529,11 +374529,13 @@
- experiment_id: 3710
- experiment_id: 3711
- experiment_id: 3712
--experiment_id: 3718
-+experiment_id: 3719
- experiment_id: 3728
+@@ -374500,7 +374572,7 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 150
+-experiment_id: 156
++experiment_id: 157
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 408
+@@ -374534,9 +374606,9 @@
  experiment_id: 3735
-+experiment_id: 3758
+ experiment_id: 3758
  experiment_id: 4693
++experiment_id: 4891
  experiment_id: 4998
-+experiment_id: 5087
- experiment_id: 5109
+-experiment_id: 5087
+-experiment_id: 5109
++experiment_id: 5061
  experiment_id: 5160
  experiment_id: 5162
+ experiment_id: 5163
