@@ -1,20 +1,261 @@
---- GAME_MASTER_old.txt	2025-07-09 19:52:21.476472027 +0200
-+++ GAME_MASTER.txt	2025-07-09 19:56:33.490020475 +0200
-@@ -70485,7 +70485,7 @@
+--- GAME_MASTER_old.txt	2025-07-09 19:56:33.490020475 +0200
++++ GAME_MASTER.txt	2025-07-10 19:58:49.906469307 +0200
+@@ -127604,36 +127604,29 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-04T10:00:00"
+-        eventEndTime: "2025-06-04T10:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_MayMonthly2025"
++        eventStartTime: "2025-07-19T14:00:00"
++        eventEndTime: "2025-07-19T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_gmaxlapras25"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_08_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-lapras-nologo-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_MayMonthly2025"
+-        textRewardsKey: "text_rewards_key_MayMonthly2025"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-lapras-nologo-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_gmaxlapras25"
++        textRewardsKey: "text_rewards_key_gmaxlapras25"
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_PAID_RAID_TICKET
+-            amount: 8
++            item: ITEM_MAX_BOOST
++            amount: 1
+           }
+         }
+-        iconRewards {
+-          type: STARDUST
+-          stardust: 50000
+-        }
+-        iconRewards {
+-          type: EXPERIENCE
+-          exp: 50000
+-        }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1746352800000
+-        clientEventEndTimeUtcMs: 1749031200000
++        clientEventStartTimeUtcMs: 1752933600000
++        clientEventEndTimeUtcMs: 1752944400000
+       }
+-      descriptionOverride: "item_event_ticket_gray_desc_MayMonthly2025"
++      nameOverride: "general1.ticket.5_gmaxlapras24_title"
++      descriptionOverride: "item_event_ticket_gray_desc_gmaxlapras25"
+     }
+   }
+ }
+@@ -127646,16 +127639,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-05-04T10:00:00"
+-        eventEndTime: "2025-06-04T10:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_MayMonthly2025"
++        eventStartTime: "2025-07-19T14:00:00"
++        eventEndTime: "2025-07-19T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_details_gmaxlapras25"
+         ticketItem: ITEM_EVENT_TICKET_08
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
+-        clientEventStartTimeUtcMs: 1746352800000
+-        clientEventEndTimeUtcMs: 1749031200000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-lapras-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1752933600000
++        clientEventEndTimeUtcMs: 1752944400000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_desc_MayMonthly2025"
++      descriptionOverride: "item_event_ticket_gray_details_gmaxlapras25"
+     }
+   }
+ }
+@@ -152849,17 +152842,6 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
    data {
-     template_id: "COMBAT_V0482_MOVE_DYNAMAX_CANNON"
-     combat_move {
--      uniqueId: 482
-+      uniqueId: DYNAMAX_CANNON
-       type: POKEMON_TYPE_DRAGON
-       power: 80
-       vfxName: "dynamax_cannon"
-@@ -294018,7 +294018,7 @@
-   data {
-     template_id: "V0482_MOVE_DYNAMAX_CANNON"
-     moveSettings {
--      movementId: 482
-+      movementId: DYNAMAX_CANNON
-       animationId: 5
-       pokemonType: POKEMON_TYPE_DRAGON
-       power: 215
+     template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
+@@ -367221,7 +367203,6 @@
+       sku: "general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.5_HisuianLilligantRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -367242,7 +367223,6 @@
+       sku: "general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.5_HisuianLilligantRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -367591,16 +367571,17 @@
+     iapItemDisplay {
+       sku: "general2.ticket.8"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.8"
+-      title: "general2.ticket.8_MayMonthly2025_title"
+-      description: "item_event_ticket_gray_details_MayMonthly2025"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-05-11T20:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1746993600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++      title: "general1.ticket.5_gmaxlapras24_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-07-19T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1752944400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-lapras-nologo-2025.jpg"
++      webstoreSkuId: "web-july-max-battle-ticket-box"
++      webstoreSkuPriceE6: 4990000
+     }
+   }
+ }
+@@ -367611,16 +367592,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.8.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.8"
+-      title: "general2.ticket.8_MayMonthly2025_title"
+-      description: "item_event_ticket_gray_details_MayMonthly2025"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-05-11T20:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1746993600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++      title: "general1.ticket.5_gmaxlapras24_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-07-19T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1752944400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-lapras-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -368976,7 +368956,6 @@
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.5_HisuianLilligantRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -368997,7 +368976,6 @@
+       sku: "pgorelease.general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.5_HisuianLilligantRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -369327,16 +369305,17 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.8"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.8"
+-      title: "general2.ticket.8_MayMonthly2025_title"
+-      description: "item_event_ticket_gray_details_MayMonthly2025"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-05-11T20:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1746993600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++      title: "general1.ticket.5_gmaxlapras24_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-07-19T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1752944400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-lapras-nologo-2025.jpg"
++      webstoreSkuId: "web-july-max-battle-ticket-box"
++      webstoreSkuPriceE6: 4990000
+     }
+   }
+ }
+@@ -369347,16 +369326,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.8.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.8"
+-      title: "general2.ticket.8_MayMonthly2025_title"
+-      description: "item_event_ticket_gray_details_MayMonthly2025"
+-      skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-05-11T20:00:00"
+-      skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1746993600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++      title: "general1.ticket.5_gmaxlapras24_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-07-19T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1752944400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-lapras-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -374598,8 +374576,20 @@
+     }
+   }
+ }
+-batch_id: 1752082888467
++template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++batch_id: 1752098818741
+ experiment_id: 1
++experiment_id: 4
+ experiment_id: 6
+ experiment_id: 8
+ experiment_id: 11
+@@ -374639,11 +374629,11 @@
+ experiment_id: 3728
+ experiment_id: 3735
+ experiment_id: 3758
++experiment_id: 3782
+ experiment_id: 4691
+ experiment_id: 4693
+ experiment_id: 4891
+ experiment_id: 4998
+-experiment_id: 5062
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
