@@ -1,163 +1,60 @@
---- GAME_MASTER_old.txt	2025-07-10 22:29:44.853966466 +0200
-+++ GAME_MASTER.txt	2025-07-11 20:16:15.803027118 +0200
-@@ -149633,6 +149633,7 @@
-       partyCatchTagsEnabled: true
-       partyQuestEncounterRewardEnabled: true
-       maxStackedEncounterReward: 1
-+      22: 1
+--- GAME_MASTER_old.txt	2025-07-11 20:16:15.803027118 +0200
++++ GAME_MASTER.txt	2025-07-12 10:23:41.372173278 +0200
+@@ -41601,7 +41601,7 @@
+       prepareBreadLobbySoloMs: 80000
+       rvnVersion: 2
+       maxRemotePlayersPerBreadDoughLobby: 40
+-      maxRemoteBreadBattlePassesAllowed: 10
++      maxRemoteBreadBattlePassesAllowed: 20
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 40
+@@ -70726,6 +70726,7 @@
+       arPlusModeEnabled: true
+       arCloseProximityThreshold: 0.5
+       arLowAwarenessThreshold: 0.3
++      19: "GoTour2024ParkScene"
      }
    }
  }
-@@ -367174,9 +367175,15 @@
-       sku: "bundle.ultrabeastraid.2024"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle.general.premiumbox.small.1"
-       title: "raiding_box"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2025-07-12T11:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1752321599000
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 785
+@@ -131150,6 +131151,9 @@
+     template_id: "MAP_DISPLAY_SETTINGS"
+     mapDisplaySettings {
+       showEnhancedSky: true
++      showMapShoreLines: true
++      skyEffectName: "EventSkyFX_GoTour2024"
++      eventThemeName: "gotour2024"
      }
    }
  }
-@@ -374958,13 +374965,17 @@
-   }
- }
- template {
--  template_id: "PTC_OAUTH_SETTINGS"
-+  template_id: "BADGE_EVENT_0133"
-   data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    template_id: "BADGE_EVENT_0133"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0133
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
+@@ -153423,7 +153427,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 20
      }
    }
  }
-@@ -374978,7 +374989,87 @@
+@@ -375069,7 +375073,7 @@
      }
    }
  }
--batch_id: 1752178569707
-+template {
-+  template_id: "BADGE_EVENT_0134"
-+  data {
-+    template_id: "BADGE_EVENT_0134"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0134
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0135"
-+  data {
-+    template_id: "BADGE_EVENT_0135"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0135
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0137"
-+  data {
-+    template_id: "BADGE_EVENT_0137"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0137
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0138"
-+  data {
-+    template_id: "BADGE_EVENT_0138"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0138
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "PARTY_JOIN_REFACTOR_CODE_GATE"
-+  data {
-+    template_id: "PARTY_JOIN_REFACTOR_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "PTC_OAUTH_SETTINGS"
-+  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    }
-+  }
-+}
-+batch_id: 1752191793128
+-batch_id: 1752191793128
++batch_id: 1752290013581
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -374996,11 +375087,13 @@
- experiment_id: 500
- experiment_id: 511
- experiment_id: 513
-+experiment_id: 514
- experiment_id: 545
- experiment_id: 602
- experiment_id: 805
- experiment_id: 807
- experiment_id: 1699
-+experiment_id: 2221
- experiment_id: 2248
- experiment_id: 2297
- experiment_id: 2399
-@@ -375014,8 +375107,6 @@
- experiment_id: 3063
- experiment_id: 3685
- experiment_id: 3710
--experiment_id: 3711
--experiment_id: 3712
- experiment_id: 3719
+@@ -375111,10 +375115,9 @@
  experiment_id: 3728
  experiment_id: 3735
+ experiment_id: 3758
++experiment_id: 3759
+ experiment_id: 3782
+-experiment_id: 4691
+-experiment_id: 4693
+-experiment_id: 4891
++experiment_id: 3783
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
