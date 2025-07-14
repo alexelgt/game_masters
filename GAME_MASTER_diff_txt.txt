@@ -1,189 +1,59 @@
---- GAME_MASTER_old.txt	2025-07-12 10:23:41.372173278 +0200
-+++ GAME_MASTER.txt	2025-07-13 10:17:58.393281945 +0200
-@@ -41601,7 +41601,7 @@
-       prepareBreadLobbySoloMs: 80000
-       rvnVersion: 2
-       maxRemotePlayersPerBreadDoughLobby: 40
--      maxRemoteBreadBattlePassesAllowed: 20
-+      maxRemoteBreadBattlePassesAllowed: 10
-       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
-       fetchProfileFromSocialEnabled: true
-       maxPlayersToPrepareBreadDoughLobby: 40
-@@ -70726,7 +70726,6 @@
-       arPlusModeEnabled: true
-       arCloseProximityThreshold: 0.5
-       arLowAwarenessThreshold: 0.3
--      19: "GoTour2024ParkScene"
+--- GAME_MASTER_old.txt	2025-07-13 10:17:58.393281945 +0200
++++ GAME_MASTER.txt	2025-07-14 19:29:00.814548414 +0200
+@@ -363320,7 +363320,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: SOLGALEO
++          pokemon_id: TERRAKION
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -363946,7 +363946,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: SOLGALEO
++          pokemon_id: TERRAKION
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -375067,7 +375067,7 @@
      }
    }
  }
-@@ -131151,9 +131150,6 @@
-     template_id: "MAP_DISPLAY_SETTINGS"
-     mapDisplaySettings {
-       showEnhancedSky: true
--      showMapShoreLines: true
--      skyEffectName: "EventSkyFX_GoTour2024"
--      eventThemeName: "gotour2024"
-     }
-   }
- }
-@@ -153427,7 +153423,7 @@
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
-       enabled: true
--      dailySquashLimit: 20
-+      dailySquashLimit: 10
-     }
-   }
- }
-@@ -229804,23 +229800,23 @@
-       evolutionBranch {
-         evolution: ESPEON
-         candyCost: 25
--        kmBuddyDistanceRequirement: 1
-+        kmBuddyDistanceRequirement: 10
-         mustBeBuddy: true
-         onlyDaytime: true
-         priority: 100
-         questDisplay {
--          questRequirementTemplateId: "ESPEON_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "ESPEON_EVOLUTION_QUEST"
-         }
-       }
-       evolutionBranch {
-         evolution: UMBREON
-         candyCost: 25
--        kmBuddyDistanceRequirement: 1
-+        kmBuddyDistanceRequirement: 10
-         mustBeBuddy: true
-         onlyNighttime: true
-         priority: 100
-         questDisplay {
--          questRequirementTemplateId: "UMBREON_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "UMBREON_EVOLUTION_QUEST"
-         }
-       }
-       evolutionBranch {
-@@ -229840,7 +229836,7 @@
-         candyCost: 25
-         priority: 100
-         questDisplay {
--          questRequirementTemplateId: "SYLVEON_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "SYLVEON_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.27
-@@ -230106,23 +230102,23 @@
-       evolutionBranch {
-         evolution: ESPEON
-         candyCost: 25
--        kmBuddyDistanceRequirement: 1
-+        kmBuddyDistanceRequirement: 10
-         mustBeBuddy: true
-         onlyDaytime: true
-         priority: 100
-         questDisplay {
--          questRequirementTemplateId: "ESPEON_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "ESPEON_EVOLUTION_QUEST"
-         }
-       }
-       evolutionBranch {
-         evolution: UMBREON
-         candyCost: 25
--        kmBuddyDistanceRequirement: 1
-+        kmBuddyDistanceRequirement: 10
-         mustBeBuddy: true
-         onlyNighttime: true
-         priority: 100
-         questDisplay {
--          questRequirementTemplateId: "UMBREON_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "UMBREON_EVOLUTION_QUEST"
-         }
-       }
-       evolutionBranch {
-@@ -230142,7 +230138,7 @@
-         candyCost: 25
-         priority: 100
-         questDisplay {
--          questRequirementTemplateId: "SYLVEON_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "SYLVEON_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.27
-@@ -367179,15 +367175,9 @@
-       sku: "bundle.ultrabeastraid.2024"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-+      hidden: true
-       spriteId: "bundle.general.premiumbox.small.1"
-       title: "raiding_box"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2025-07-12T11:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1752321599000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 785
-     }
-   }
- }
-@@ -367591,6 +367581,7 @@
-       sku: "general1.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket.5_HisuianLilligantRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -367611,6 +367602,7 @@
-       sku: "general1.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket.5_HisuianLilligantRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -369346,6 +369338,7 @@
-       sku: "pgorelease.general1.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket.5_HisuianLilligantRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -369366,6 +369359,7 @@
-       sku: "pgorelease.general1.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket.5_HisuianLilligantRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -375097,7 +375091,6 @@
- experiment_id: 805
- experiment_id: 807
- experiment_id: 1699
--experiment_id: 2221
- experiment_id: 2248
- experiment_id: 2297
- experiment_id: 2399
-@@ -375115,10 +375108,8 @@
+-batch_id: 1752290013581
++batch_id: 1752509988088
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -375104,15 +375104,16 @@
+ experiment_id: 3063
+ experiment_id: 3685
+ experiment_id: 3710
+-experiment_id: 3719
++experiment_id: 3720
  experiment_id: 3728
- experiment_id: 3735
- experiment_id: 3758
--experiment_id: 3759
--experiment_id: 3782
--experiment_id: 3783
+-experiment_id: 3735
+-experiment_id: 3758
++experiment_id: 3736
++experiment_id: 3826
  experiment_id: 4998
-+experiment_id: 5110
+-experiment_id: 5110
++experiment_id: 5111
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -375128,7 +375119,6 @@
- experiment_id: 6075
- experiment_id: 7052
- experiment_id: 7055
--experiment_id: 8761
- experiment_id: 8980
- experiment_id: 8981
- experiment_id: 9521
++experiment_id: 5284
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
+@@ -375131,8 +375132,6 @@
+ experiment_id: 55751
+ experiment_id: 80436
+ experiment_id: 80494
+-experiment_id: 80700
+-experiment_id: 80817
+ experiment_id: 314159
+ experiment_id: 314160
+ experiment_id: 3500035
