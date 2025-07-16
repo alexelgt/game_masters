@@ -1,375 +1,1354 @@
---- GAME_MASTER_old.txt	2025-07-14 19:29:00.814548414 +0200
-+++ GAME_MASTER.txt	2025-07-15 20:10:45.586556535 +0200
-@@ -33911,6 +33911,81 @@
-   }
- }
- template {
-+  template_id: "BADGE_EVENT_0133"
-+  data {
-+    template_id: "BADGE_EVENT_0133"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0133
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
+--- GAME_MASTER_old.txt	2025-07-15 20:10:45.586556535 +0200
++++ GAME_MASTER.txt	2025-07-16 22:26:37.710518095 +0200
+@@ -66136,6 +66136,8 @@
+       combatExperiment: 17
+       combatExperiment: 18
+       combatExperiment: 21
++      combatExperiment: 19
++      combatExperiment: 20
+       showQuickSwapButtonsDuringCountdown: true
+       obCombatSettingsNotPushedBool2: true
+       clockSyncSettings {
+@@ -122745,6 +122747,12 @@
+     template_id: "FORMS_V0681_POKEMON_AEGISLASH"
+     formSettings {
+       pokemon: AEGISLASH
++      forms {
++        form: AEGISLASH_SHIELD
 +      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0134"
-+  data {
-+    template_id: "BADGE_EVENT_0134"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0134
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
++      forms {
++        form: AEGISLASH_BLADE
 +      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0135"
-+  data {
-+    template_id: "BADGE_EVENT_0135"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0135
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0137"
-+  data {
-+    template_id: "BADGE_EVENT_0137"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0137
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0138"
-+  data {
-+    template_id: "BADGE_EVENT_0138"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0138
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "BADGE_EVOLVED_TOTAL"
-   data {
-     template_id: "BADGE_EVOLVED_TOTAL"
-@@ -126533,7 +126608,7 @@
-     iapCategoryDisplay {
-       category: IAP_CATEGORY_AVATAR
-       sortOrder: 5
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-9th_Anniv_Wristbands.jpg"
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-WaterFestival_Tatsuguri_Backpack.jpg"
-       description: "avatar_shop_description_new"
      }
    }
-@@ -135075,6 +135150,36 @@
+ }
+@@ -327002,6 +327010,9 @@
+         maxPokemonActionFrequencyS: 1.6
+       }
+       stats {
++        baseStamina: 128
++        baseAttack: 135
++        baseDefense: 139
+       }
+       quickMoves: PSYCHO_CUT_FAST
+       quickMoves: TACKLE_FAST
+@@ -327071,6 +327082,9 @@
+         bonusXlCandyCaptureReward: 1
+       }
+       stats {
++        baseStamina: 153
++        baseAttack: 188
++        baseDefense: 206
+       }
+       quickMoves: PSYCHO_CUT_FAST
+       quickMoves: TACKLE_FAST
+@@ -327094,6 +327108,7 @@
+       evolutionBranch {
+         evolution: AEGISLASH
+         candyCost: 100
++        form: AEGISLASH_SHIELD
+       }
+       modelScaleV2: 1
+       third_move {
+@@ -327103,6 +327118,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      raidBossDistanceOffset: 4
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -327119,13 +327135,13 @@
+       type: POKEMON_TYPE_STEEL
+       type2: POKEMON_TYPE_GHOST
+       camera {
+-        cylinderRadiusM: 0.74
+-        cylinderHeightM: 1.8
++        cylinderRadiusM: 0.25
++        cylinderHeightM: 0.4
+       }
+       encounter {
+-        collisionRadiusM: 0.6
+-        collisionHeightM: 0.5
+-        collisionHeadRadiusM: 0.2
++        collisionRadiusM: 0.1
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.126
+         movementType: MOVEMENT_HOVERING
+         movementTimerS: 10
+         jumpTimeS: 0.9
+@@ -327140,6 +327156,9 @@
+         bonusXlCandyCaptureReward: 2
+       }
+       stats {
++        baseStamina: 155
++        baseAttack: 97
++        baseDefense: 272
+       }
+       quickMoves: PSYCHO_CUT_FAST
+       quickMoves: AIR_SLASH_FAST
+@@ -327162,9 +327181,6 @@
+       kmBuddyDistance: 5
+       modelHeight: 1.68
+       modelScaleV2: 1
+-      buddyPortraitOffset: 0
+-      buddyPortraitOffset: 240
+-      buddyPortraitOffset: 0
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+@@ -327172,8 +327188,20 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
+-      raidBossDistanceOffset: 4
+       ibfc {
++        combatEnable: true
++        defaultForm: AEGISLASH_SHIELD
++        alternateForm: AEGISLASH_BLADE
++        defaultToAlternateIbfcSettings {
++          animationDurationTurns: 5
++          animationPlayPoint: BEFORE_CM_ATTACKER
++          ibfcVfxKey: DEFAULT_TO_ALTERNATE
++        }
++        alternateToDefaultIbfcSettings {
++          animationDurationTurns: 5
++          animationPlayPoint: BEFORE_CM_ATTACKER
++          ibfcVfxKey: ALTERNATE_TO_DEFAULT
++        }
+       }
+       breadTierGroup: GROUP_3
+     }
+@@ -361253,8 +361281,8 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HISUI"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_SUNSHINE_GREAT"
+     }
    }
  }
- template {
-+  template_id: "N_DISPLAY_n_backpack_tatsugiribackpack-curly_0"
-+  data {
-+    template_id: "N_DISPLAY_n_backpack_tatsugiribackpack-curly_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_tatsugiribackpack-curly_0_icon"
-+      displayStringId: "avatar_backpack_tatsugiricurly"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_backpack_tatsugiribackpack-droopy_0"
-+  data {
-+    template_id: "N_DISPLAY_n_backpack_tatsugiribackpack-droopy_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_tatsugiribackpack-droopy_0_icon"
-+      displayStringId: "avatar_backpack_tatsugiridroopy"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_backpack_tatsugiribackpack-stretchy_0"
-+  data {
-+    template_id: "N_DISPLAY_n_backpack_tatsugiribackpack-stretchy_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_tatsugiribackpack-stretchy_0_icon"
-+      displayStringId: "avatar_backpack_tatsugiristretchy"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_backpack_togepibackpack_0"
-   data {
-     template_id: "N_DISPLAY_n_backpack_togepibackpack_0"
-@@ -141471,6 +141576,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_pose_waterfestival"
-+  data {
-+    template_id: "N_DISPLAY_n_pose_waterfestival"
-+    avatarItemDisplay {
-+      iconAddress: "n_pose_waterfestival_icon"
-+      displayStringId: "avatar_pose_icecream"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_shirt_6thanniversary_a_0"
-   data {
-     template_id: "N_DISPLAY_n_shirt_6thanniversary_a_0"
-@@ -149534,12 +149649,12 @@
-         condition {
-           type: WITH_WIN_RAID_STATUS
+@@ -361267,31 +361295,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
          }
--        target: 1
-+        target: 10
        }
-       context: EVOLUTION_QUEST
-       display {
--        description: "quest_win_raid_singular"
--        title: "quest_win_raid_singular"
-+        description: "quest_win_raid_plural"
-+        title: "quest_win_raid_plural"
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
        }
      }
-   }
-@@ -149569,6 +149684,15 @@
+@@ -361306,31 +361334,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361346,7 +361374,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -361364,7 +361392,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -361379,7 +361407,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -361397,7 +361425,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361413,7 +361441,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -361431,7 +361459,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -361446,7 +361474,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -361464,7 +361492,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361480,7 +361508,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 570
++          count: 2280
+         }
+       }
+       reward {
+@@ -361498,7 +361526,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+     }
+@@ -361513,7 +361541,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+       reward {
+@@ -361531,7 +361559,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 9120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361547,7 +361575,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -361565,7 +361593,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+     }
+@@ -361580,7 +361608,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       reward {
+@@ -361598,7 +361626,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 9600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361693,7 +361721,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 700
++          count: 2800
+         }
+       }
+       reward {
+@@ -361711,7 +361739,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+     }
+@@ -361726,7 +361754,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+       reward {
+@@ -361744,7 +361772,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 11200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361760,7 +361788,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 730
++          count: 2920
+         }
+       }
+       reward {
+@@ -361778,7 +361806,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+     }
+@@ -361793,7 +361821,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+       reward {
+@@ -361811,7 +361839,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 11680
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361827,7 +361855,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 770
++          count: 3080
+         }
+       }
+       reward {
+@@ -361845,7 +361873,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+     }
+@@ -361860,7 +361888,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+       reward {
+@@ -361878,7 +361906,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 12320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -361943,7 +361971,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 300
++          count: 1200
+         }
+       }
+       reward {
+@@ -361961,7 +361989,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+     }
+@@ -361976,7 +362004,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -361994,7 +362022,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362010,7 +362038,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 870
++          count: 3480
+         }
+       }
+       reward {
+@@ -362028,7 +362056,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+     }
+@@ -362043,7 +362071,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+       reward {
+@@ -362061,7 +362089,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 13920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362077,7 +362105,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -362095,7 +362123,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -362110,7 +362138,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -362128,7 +362156,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362144,7 +362172,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -362162,7 +362190,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -362177,7 +362205,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -362195,7 +362223,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362211,7 +362239,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -362229,7 +362257,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -362244,7 +362272,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -362262,7 +362290,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362278,7 +362306,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -362296,7 +362324,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -362311,7 +362339,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -362329,7 +362357,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362345,7 +362373,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -362363,7 +362391,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -362378,7 +362406,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -362396,7 +362424,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362412,7 +362440,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -362430,7 +362458,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -362445,7 +362473,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -362463,7 +362491,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362479,7 +362507,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 370
++          count: 1480
+         }
+       }
+       reward {
+@@ -362497,7 +362525,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+     }
+@@ -362512,7 +362540,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+       reward {
+@@ -362530,7 +362558,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 5920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362595,7 +362623,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 400
++          count: 1600
+         }
+       }
+       reward {
+@@ -362613,7 +362641,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+     }
+@@ -362628,7 +362656,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+       reward {
+@@ -362646,7 +362674,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 6400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362662,7 +362690,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -362680,7 +362708,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -362695,7 +362723,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -362713,7 +362741,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362729,7 +362757,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -362747,7 +362775,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -362762,7 +362790,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -362780,7 +362808,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362796,7 +362824,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 470
++          count: 1880
+         }
+       }
+       reward {
+@@ -362814,7 +362842,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+     }
+@@ -362829,7 +362857,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+       reward {
+@@ -362847,7 +362875,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 7520
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -365980,9 +366008,15 @@
+       sku: "bundle.hatchbox2024.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general.adventure.1"
+       title: "hatch_box"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-08-24T17:00:00"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1756054800000
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 1910
+     }
    }
  }
- template {
-+  template_id: "PARTY_JOIN_REFACTOR_CODE_GATE"
+@@ -375093,7 +375127,366 @@
+     }
+   }
+ }
+-batch_id: 1752598579755
++template {
++  template_id: "COMBAT_V0487_MOVE_AQUA_STEP"
 +  data {
-+    template_id: "PARTY_JOIN_REFACTOR_CODE_GATE"
++    template_id: "COMBAT_V0487_MOVE_AQUA_STEP"
++    combat_move {
++      uniqueId: 487
++      type: POKEMON_TYPE_WATER
++      power: 55
++      vfxName: "aqua_step"
++      energyDelta: -40
++      buffs {
++        attackerAttackStatStageChange: 1
++        buffActivationChance: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "EVOLUTION_V0679_POKEMON_HONEDGE"
++  data {
++    template_id: "EVOLUTION_V0679_POKEMON_HONEDGE"
++    evolution_chain_display_settings {
++      pokemon: HONEDGE
++      evolutionChains {
++        evolutionInfos {
++          pokemon: HONEDGE
++        }
++        evolutionInfos {
++          pokemon: DOUBLADE
++        }
++        evolutionInfos {
++          pokemon: AEGISLASH
++          form: AEGISLASH_SHIELD
++        }
++        evolutionInfos {
++          pokemon: AEGISLASH
++          form: AEGISLASH_BLADE
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVOLUTION_V0680_POKEMON_DOUBLADE"
++  data {
++    template_id: "EVOLUTION_V0680_POKEMON_DOUBLADE"
++    evolution_chain_display_settings {
++      pokemon: DOUBLADE
++      evolutionChains {
++        evolutionInfos {
++          pokemon: HONEDGE
++        }
++        evolutionInfos {
++          pokemon: DOUBLADE
++        }
++        evolutionInfos {
++          pokemon: AEGISLASH
++          form: AEGISLASH_SHIELD
++        }
++        evolutionInfos {
++          pokemon: AEGISLASH
++          form: AEGISLASH_BLADE
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVOLUTION_V0681_POKEMON_AEGISLASH"
++  data {
++    template_id: "EVOLUTION_V0681_POKEMON_AEGISLASH"
++    evolution_chain_display_settings {
++      pokemon: AEGISLASH
++      evolutionChains {
++        evolutionInfos {
++          pokemon: HONEDGE
++        }
++        evolutionInfos {
++          pokemon: DOUBLADE
++        }
++        evolutionInfos {
++          pokemon: AEGISLASH
++          form: AEGISLASH_SHIELD
++        }
++        evolutionInfos {
++          pokemon: AEGISLASH
++          form: AEGISLASH_BLADE
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0681_POKEMON_AEGISLASH_BLADE"
++  data {
++    template_id: "EXTENDED_V0681_POKEMON_AEGISLASH_BLADE"
++    pokemonExtendedSettings {
++      uniqueId: AEGISLASH
++      form: AEGISLASH_BLADE
++      sizeSettings {
++        xxsLowerBound: 0.833
++        xsLowerBound: 0.85
++        mLowerBound: 1.275
++        mUpperBound: 2.125
++        xlUpperBound: 2.55
++        xxlUpperBound: 2.975
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0681_POKEMON_AEGISLASH_SHIELD"
++  data {
++    template_id: "EXTENDED_V0681_POKEMON_AEGISLASH_SHIELD"
++    pokemonExtendedSettings {
++      uniqueId: AEGISLASH
++      form: AEGISLASH_SHIELD
++      sizeSettings {
++        xxsLowerBound: 0.833
++        xsLowerBound: 0.85
++        mLowerBound: 1.275
++        mUpperBound: 2.125
++        xlUpperBound: 2.55
++        xxlUpperBound: 2.975
++      }
++    }
++  }
++}
++template {
++  template_id: "IBFC_LWS_CODE_GATE"
++  data {
++    template_id: "IBFC_LWS_CODE_GATE"
 +    codeGateProto {
 +      isEnabled: true
 +    }
 +  }
 +}
 +template {
-   template_id: "PARTY_PLAY_DARK_LAUNCH_SETTINGS"
-   data {
-     template_id: "PARTY_PLAY_DARK_LAUNCH_SETTINGS"
-@@ -153106,6 +153230,17 @@
-   }
- }
- template {
-+  template_id: "PTC_OAUTH_SETTINGS"
++  template_id: "SPAWN_V0681_POKEMON_AEGISLASH_BLADE"
 +  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    template_id: "SPAWN_V0681_POKEMON_AEGISLASH_BLADE"
++    genderSettings {
++      pokemon: AEGISLASH
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
 +    }
 +  }
 +}
 +template {
-   template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
-   data {
-     template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
-@@ -367914,7 +368049,6 @@
-       sku: "general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket._WaterFestival_JULY25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -367935,7 +368069,6 @@
-       sku: "general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket._WaterFestival_JULY25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -369652,7 +369785,6 @@
-       sku: "pgorelease.general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket._WaterFestival_JULY25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -369673,7 +369805,6 @@
-       sku: "pgorelease.general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket._WaterFestival_JULY25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374962,112 +375093,7 @@
-     }
-   }
- }
--template {
--  template_id: "BADGE_EVENT_0133"
--  data {
--    template_id: "BADGE_EVENT_0133"
--    badgeSettings {
--      badgeType: BADGE_EVENT_0133
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--      eventBadgeSettings {
--        obEventBadgeSettingsNumber6: 1
--      }
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_pose_waterfestival"
--  data {
--    template_id: "N_DISPLAY_n_pose_waterfestival"
--    avatarItemDisplay {
--      iconAddress: "n_pose_waterfestival_icon"
--      displayStringId: "avatar_pose_icecream"
--    }
--  }
--}
--template {
--  template_id: "BADGE_EVENT_0134"
--  data {
--    template_id: "BADGE_EVENT_0134"
--    badgeSettings {
--      badgeType: BADGE_EVENT_0134
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--      eventBadgeSettings {
--        obEventBadgeSettingsNumber6: 1
--      }
--    }
--  }
--}
--template {
--  template_id: "BADGE_EVENT_0135"
--  data {
--    template_id: "BADGE_EVENT_0135"
--    badgeSettings {
--      badgeType: BADGE_EVENT_0135
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--      eventBadgeSettings {
--        obEventBadgeSettingsNumber6: 1
--      }
--    }
--  }
--}
--template {
--  template_id: "BADGE_EVENT_0137"
--  data {
--    template_id: "BADGE_EVENT_0137"
--    badgeSettings {
--      badgeType: BADGE_EVENT_0137
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--      eventBadgeSettings {
--        obEventBadgeSettingsNumber6: 1
--      }
--    }
--  }
--}
--template {
--  template_id: "BADGE_EVENT_0138"
--  data {
--    template_id: "BADGE_EVENT_0138"
--    badgeSettings {
--      badgeType: BADGE_EVENT_0138
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--      eventBadgeSettings {
--        obEventBadgeSettingsNumber6: 1
--      }
--    }
--  }
--}
--template {
--  template_id: "PARTY_JOIN_REFACTOR_CODE_GATE"
--  data {
--    template_id: "PARTY_JOIN_REFACTOR_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--batch_id: 1752509988088
-+batch_id: 1752598579755
++  template_id: "SPAWN_V0681_POKEMON_AEGISLASH_SHIELD"
++  data {
++    template_id: "SPAWN_V0681_POKEMON_AEGISLASH_SHIELD"
++    genderSettings {
++      pokemon: AEGISLASH
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++    }
++  }
++}
++template {
++  template_id: "V0487_MOVE_AQUA_STEP"
++  data {
++    template_id: "V0487_MOVE_AQUA_STEP"
++    moveSettings {
++      movementId: 487
++      animationId: 5
++      pokemonType: POKEMON_TYPE_WATER
++      power: 55
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "aqua_step"
++      durationMs: 3500
++      damageWindowStartMs: 2050
++      damageWindowEndMs: 3100
++      energyDelta: -40
++    }
++  }
++}
++template {
++  template_id: "V0681_POKEMON_AEGISLASH_BLADE"
++  data {
++    template_id: "V0681_POKEMON_AEGISLASH_BLADE"
++    pokemonSettings {
++      pokemonId: AEGISLASH
++      modelScale: 0.8
++      type: POKEMON_TYPE_STEEL
++      type2: POKEMON_TYPE_GHOST
++      camera {
++        cylinderRadiusM: 0.74
++        cylinderHeightM: 1.8
++      }
++      encounter {
++        collisionRadiusM: 0.6
++        collisionHeightM: 0.5
++        collisionHeadRadiusM: 0.2
++        movementType: MOVEMENT_HOVERING
++        movementTimerS: 10
++        jumpTimeS: 0.9
++        attackTimerS: 29
++        bonusCandyCaptureReward: 7
++        bonusStardustCaptureReward: 400
++        attackProbability: 0.2
++        dodgeProbability: 0.3
++        cameraDistance: 4
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        bonusXlCandyCaptureReward: 2
++      }
++      stats {
++        baseStamina: 155
++        baseAttack: 272
++        baseDefense: 97
++      }
++      quickMoves: PSYCHO_CUT_FAST
++      quickMoves: AIR_SLASH_FAST
++      cinematicMoves: FLASH_CANNON
++      cinematicMoves: GYRO_BALL
++      cinematicMoves: SHADOW_BALL
++      animationTime: 1.9
++      animationTime: 0.6666
++      animationTime: 1.7666
++      animationTime: 0
++      animationTime: 2.4
++      animationTime: 0.08667
++      animationTime: 0
++      pokedexHeightM: 1.7
++      pokedexWeightKg: 53
++      parentPokemonId: DOUBLADE
++      heightStdDev: 0.2125
++      weightStdDev: 6.625
++      familyId: FAMILY_HONEDGE
++      kmBuddyDistance: 5
++      modelHeight: 1.68
++      modelScaleV2: 1
++      form: AEGISLASH_BLADE
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 240
++      buddyPortraitOffset: 0
++      third_move {
++        stardustToUnlock: 75000
++        candyToUnlock: 75
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      raidBossDistanceOffset: 4
++      ibfc {
++      }
++      breadTierGroup: GROUP_3
++    }
++  }
++}
++template {
++  template_id: "V0681_POKEMON_AEGISLASH_SHIELD"
++  data {
++    template_id: "V0681_POKEMON_AEGISLASH_SHIELD"
++    pokemonSettings {
++      pokemonId: AEGISLASH
++      modelScale: 0.8
++      type: POKEMON_TYPE_STEEL
++      type2: POKEMON_TYPE_GHOST
++      camera {
++        cylinderRadiusM: 0.74
++        cylinderHeightM: 1.8
++      }
++      encounter {
++        collisionRadiusM: 0.6
++        collisionHeightM: 0.5
++        collisionHeadRadiusM: 0.2
++        movementType: MOVEMENT_HOVERING
++        movementTimerS: 10
++        jumpTimeS: 0.9
++        attackTimerS: 29
++        bonusCandyCaptureReward: 7
++        bonusStardustCaptureReward: 400
++        attackProbability: 0.2
++        dodgeProbability: 0.3
++        cameraDistance: 4
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        bonusXlCandyCaptureReward: 2
++      }
++      stats {
++        baseStamina: 155
++        baseAttack: 97
++        baseDefense: 272
++      }
++      quickMoves: PSYCHO_CUT_FAST
++      quickMoves: AIR_SLASH_FAST
++      cinematicMoves: FLASH_CANNON
++      cinematicMoves: GYRO_BALL
++      cinematicMoves: SHADOW_BALL
++      animationTime: 1.9
++      animationTime: 0.6666
++      animationTime: 1.7666
++      animationTime: 0
++      animationTime: 2.4
++      animationTime: 0.08667
++      animationTime: 0
++      pokedexHeightM: 1.7
++      pokedexWeightKg: 53
++      parentPokemonId: DOUBLADE
++      heightStdDev: 0.2125
++      weightStdDev: 6.625
++      familyId: FAMILY_HONEDGE
++      kmBuddyDistance: 5
++      modelHeight: 1.68
++      modelScaleV2: 1
++      form: AEGISLASH_SHIELD
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 240
++      buddyPortraitOffset: 0
++      third_move {
++        stardustToUnlock: 75000
++        candyToUnlock: 75
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      raidBossDistanceOffset: 4
++      ibfc {
++      }
++      breadTierGroup: GROUP_3
++    }
++  }
++}
++template {
++  template_id: "ibfc_lightweight_settings"
++  data {
++    template_id: "ibfc_lightweight_settings"
++    266 {
++      1: 0x42c80000
++      2: 0x43880000
++      6: 0x431b0000
++      8: 0x41200000
++    }
++  }
++}
++template {
++  template_id: "sequence_aqua_step"
++  data {
++    template_id: "sequence_aqua_step"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx aqua_step"
++      sequence: "sfx attacker 297-0_aqua_step"
++      sequence: "wait 1.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++batch_id: 1752696136238
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -375102,18 +375128,21 @@
- experiment_id: 3032
- experiment_id: 3033
- experiment_id: 3063
--experiment_id: 3685
- experiment_id: 3710
+@@ -375102,7 +375495,7 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 150
+-experiment_id: 157
++experiment_id: 158
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 408
+@@ -375118,6 +375511,7 @@
+ experiment_id: 807
+ experiment_id: 1699
+ experiment_id: 2248
++experiment_id: 2254
+ experiment_id: 2297
+ experiment_id: 2399
+ experiment_id: 2400
+@@ -375132,14 +375526,16 @@
  experiment_id: 3720
  experiment_id: 3728
  experiment_id: 3736
++experiment_id: 3746
++experiment_id: 3756
  experiment_id: 3826
-+experiment_id: 3833
-+experiment_id: 3835
-+experiment_id: 3838
-+experiment_id: 4693
-+experiment_id: 4891
+ experiment_id: 3833
+ experiment_id: 3835
+ experiment_id: 3838
+ experiment_id: 4693
++experiment_id: 4885
+ experiment_id: 4891
  experiment_id: 4998
- experiment_id: 5111
+-experiment_id: 5111
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
--experiment_id: 5284
- experiment_id: 5506
- experiment_id: 5508
- experiment_id: 5510
-@@ -375122,6 +375151,7 @@
- experiment_id: 7055
- experiment_id: 8980
- experiment_id: 8981
-+experiment_id: 8982
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
+@@ -375160,6 +375556,7 @@
+ experiment_id: 20947
+ experiment_id: 55571
+ experiment_id: 55751
++experiment_id: 70080
+ experiment_id: 80436
+ experiment_id: 80494
+ experiment_id: 314159
