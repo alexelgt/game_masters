@@ -1,37 +1,230 @@
---- GAME_MASTER_old.txt	2025-07-16 22:44:56.099158305 +0200
-+++ GAME_MASTER.txt	2025-07-17 08:25:38.605935811 +0200
-@@ -71033,7 +71033,7 @@
-         premiumRewardBannerImageUrl: "https://storage.googleapis.com/prod-public-images/lucky_trinket_small.png"
-         premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
-         todayViewSection: SEASONAL_EVENT_PASS_SECTION
--        14: 1
-+        sectionDisplayPriority: 1
+--- GAME_MASTER_old.txt	2025-07-17 08:25:38.605935811 +0200
++++ GAME_MASTER.txt	2025-07-18 20:06:22.780859899 +0200
+@@ -127959,7 +127959,7 @@
+         displayV2Enabled: true
+         backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-lapras-nologo-2025.jpg"
+         eventDatetimeRangeKey: "event_datetime_range_key_gmaxlapras25"
+-        textRewardsKey: "text_rewards_key_gmaxlapras25"
++        textRewardsKey: "text_rewards_key_gmaxlapras24"
+         iconRewards {
+           type: ITEM
+           item {
+@@ -364793,10 +364793,13 @@
+       sku: "bundle.cd2022.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       sale: true
+-      spriteId: "bundle.halloween.small.1"
+-      title: "bundle.halloween.small.1_title"
++      spriteId: "bundle.general4.small.1"
++      title: "bundle.general4.small.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-07-20T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1753055999000
+     }
+   }
+ }
+@@ -364808,10 +364811,13 @@
+       sku: "bundle.cd2022.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 2
+-      hidden: true
+       sale: true
+-      spriteId: "bundle.halloween.adventure.1"
+-      title: "bundle.halloween.adventure.1_title"
++      spriteId: "bundle.general1.medium.1"
++      title: "bundle.general1.medium.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-07-20T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1753055999000
+     }
+   }
+ }
+@@ -367930,7 +367936,6 @@
+       sku: "general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Quaxly25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -367951,7 +367956,6 @@
+       sku: "general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Quaxly25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -369666,7 +369670,6 @@
+       sku: "pgorelease.general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Quaxly25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -369687,7 +369690,6 @@
+       sku: "pgorelease.general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Quaxly25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -375161,10 +375163,6 @@
+           pokemon: AEGISLASH
+           form: AEGISLASH_SHIELD
+         }
+-        evolutionInfos {
+-          pokemon: AEGISLASH
+-          form: AEGISLASH_BLADE
+-        }
        }
-       gracePeriodEndTime: "2025-08-07T10:00:00"
      }
-@@ -149765,7 +149765,7 @@
-       partyCatchTagsEnabled: true
-       partyQuestEncounterRewardEnabled: true
-       maxStackedEncounterReward: 1
--      22: 1
-+      minNumPlayersToStartParty: 1
+   }
+@@ -375186,10 +375184,6 @@
+           pokemon: AEGISLASH
+           form: AEGISLASH_SHIELD
+         }
+-        evolutionInfos {
+-          pokemon: AEGISLASH
+-          form: AEGISLASH_BLADE
+-        }
+       }
+     }
+   }
+@@ -375211,10 +375205,6 @@
+           pokemon: AEGISLASH
+           form: AEGISLASH_SHIELD
+         }
+-        evolutionInfos {
+-          pokemon: AEGISLASH
+-          form: AEGISLASH_BLADE
+-        }
+       }
+     }
+   }
+@@ -375307,7 +375297,7 @@
+       durationMs: 3500
+       damageWindowStartMs: 2050
+       damageWindowEndMs: 3100
+-      energyDelta: -40
++      energyDelta: -33
      }
    }
  }
-@@ -375463,11 +375463,11 @@
-   template_id: "ibfc_lightweight_settings"
-   data {
-     template_id: "ibfc_lightweight_settings"
--    266 {
--      1: 0x42c80000
--      2: 0x43880000
--      6: 0x431b0000
--      8: 0x41200000
-+    ibfcLightweightSettings {
-+      defaultDefenseMultiplier: 100
-+      defaultDefenseOverride: 272
-+      defaultStaminaOverride: 155
-+      defaultEnergyChargeOverride: 10
+@@ -375486,7 +375476,93 @@
      }
    }
  }
+-batch_id: 1752696136238
++template {
++  template_id: "BADGE_EVENT_0139"
++  data {
++    template_id: "BADGE_EVENT_0139"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0139
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_EVENT_0144"
++  data {
++    template_id: "BADGE_EVENT_0144"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0144
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_EVENT_0145"
++  data {
++    template_id: "BADGE_EVENT_0145"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0145
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_EVENT_0146"
++  data {
++    template_id: "BADGE_EVENT_0146"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0146
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "CLIENT_VNEXT_BATTLE_CONFIG"
++  data {
++    template_id: "CLIENT_VNEXT_BATTLE_CONFIG"
++    vnextBattleConfig {
++      raidsBattleConfig {
++        battleEndTimeoutThresholdMs: 2000
++        badNetworkWarningThresholdTurns: 12
++        deadNetworkDisconnectThresholdTurns: 60
++        noOpponentConnectionDisconnectThresholdTurns: 12
++      }
++      maxBattleConfig {
++        battleEndTimeoutThresholdMs: 2000
++        badNetworkWarningThresholdTurns: 12
++        deadNetworkDisconnectThresholdTurns: 60
++        noOpponentConnectionDisconnectThresholdTurns: 12
++      }
++      pvpBattleConfig {
++        battleEndTimeoutThresholdMs: 2000
++        badNetworkWarningThresholdTurns: 12
++        deadNetworkDisconnectThresholdTurns: 60
++        noOpponentConnectionDisconnectThresholdTurns: 12
++      }
++    }
++  }
++}
++batch_id: 1752857663217
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -375519,6 +375595,7 @@
+ experiment_id: 2600
+ experiment_id: 2650
+ experiment_id: 2875
++experiment_id: 3025
+ experiment_id: 3032
+ experiment_id: 3033
+ experiment_id: 3063
+@@ -375545,6 +375622,7 @@
+ experiment_id: 6075
+ experiment_id: 7052
+ experiment_id: 7055
++experiment_id: 8766
+ experiment_id: 8980
+ experiment_id: 8981
+ experiment_id: 8982
