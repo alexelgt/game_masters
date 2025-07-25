@@ -1,47 +1,71 @@
---- GAME_MASTER_old.txt	2025-07-24 08:41:45.781746207 +0200
-+++ GAME_MASTER.txt	2025-07-24 20:18:05.902764509 +0200
-@@ -153912,15 +153912,6 @@
-   }
- }
- template {
--  template_id: "REQUIRE_STAMP_COLLECTION_LIST_CODE_GATE"
--  data {
--    template_id: "REQUIRE_STAMP_COLLECTION_LIST_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
-   template_id: "REWARD_ROAD_V1_1_CODE_GATE"
-   data {
-     template_id: "REWARD_ROAD_V1_1_CODE_GATE"
-@@ -196280,19 +196271,6 @@
-   }
- }
- template {
--  template_id: "USE_ITEM_MOVE_REROLL_CODE_GATE"
--  data {
--    template_id: "USE_ITEM_MOVE_REROLL_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--      subCodeGateList {
--        name: "UPDATE_FUSION_DETAILS_ONLY_FOR_VALID_BASE_MOVE"
--        isEnabled: true
--      }
--    }
--  }
--}
--template {
-   template_id: "V0001_FAMILY_BULBASAUR"
-   data {
-     template_id: "V0001_FAMILY_BULBASAUR"
-@@ -376199,7 +376177,7 @@
+--- GAME_MASTER_old.txt	2025-07-24 20:18:05.902764509 +0200
++++ GAME_MASTER.txt	2025-07-25 10:10:04.681086736 +0200
+@@ -130215,9 +130215,6 @@
+       minPlayerLevel: 5
+       minFriendshipScore: 7
+       friendActivitiesBackgroundUpdatePeriodMs: 10000
+-      maxBattleEnabled: true
+-      maxBattleMinPlayerLevel: 13
+-      maxBattleMinFriendshipScore: 7
      }
    }
  }
--batch_id: 1753336970765
-+batch_id: 1753375761515
+@@ -134039,6 +134036,11 @@
+         battleLevel: BREAD_DOUGH_BATTLE_LEVEL_1
+         breadBattleRemoteCatchMpCost: 800
+       }
++      battleMpCostPerTier {
++        breadBattleCatchMpCost: 800
++        battleLevel: 8
++        breadBattleRemoteCatchMpCost: 800
++      }
+       ftueMpCapacity: 250
+     }
+   }
+@@ -369116,6 +369118,8 @@
+     template_id: "mp_replenish_rrp.1"
+     iapItemDisplay {
+       sku: "mp_replenish_rrp.1"
++      category: IAP_CATEGORY_ITEMS
++      hidden: true
+     }
+   }
+ }
+@@ -369125,6 +369129,8 @@
+     template_id: "mp_replenish_rrp.3"
+     iapItemDisplay {
+       sku: "mp_replenish_rrp.3"
++      category: IAP_CATEGORY_ITEMS
++      hidden: true
+     }
+   }
+ }
+@@ -376177,7 +376183,27 @@
+     }
+   }
+ }
+-batch_id: 1753375761515
++template {
++  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_wcs2025anaheim-white_0_icon"
++      displayStringId: "avatar_n_shirt_wcs2025anaheim-white"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_wcs2025anaheim-yellow_0_icon"
++      displayStringId: "avatar_n_shirt_wcs2025anaheim-yellow"
++    }
++  }
++}
++batch_id: 1753407031155
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
