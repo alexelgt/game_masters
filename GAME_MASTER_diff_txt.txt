@@ -1,71 +1,50 @@
---- GAME_MASTER_old.txt	2025-07-24 20:18:05.902764509 +0200
-+++ GAME_MASTER.txt	2025-07-25 10:10:04.681086736 +0200
-@@ -130215,9 +130215,6 @@
-       minPlayerLevel: 5
-       minFriendshipScore: 7
-       friendActivitiesBackgroundUpdatePeriodMs: 10000
--      maxBattleEnabled: true
--      maxBattleMinPlayerLevel: 13
--      maxBattleMinFriendshipScore: 7
+--- GAME_MASTER_old.txt	2025-07-25 10:10:04.681086736 +0200
++++ GAME_MASTER.txt	2025-07-26 13:18:43.390851928 +0200
+@@ -133999,12 +133999,12 @@
+     template_id: "MP_SHARED_SETTINGS"
+     mpSettings {
+       numMpFromWalkQuest: 300
+-      numMetersGoal: 2000
++      numMetersGoal: 500
+       debugAllowRemoveWalkQuest: true
+-      numMpFromLootStation: 100
++      numMpFromLootStation: 800
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1500
+-      mpBaseDailyLimit: 800
++      mpBaseDailyLimit: 1600
+       mpClaimParticleSpeedMultiplier: 1
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 250
+@@ -350925,7 +350925,7 @@
+       familyId: FAMILY_ETERNATUS
+       kmBuddyDistance: 20
+       buddy_size: BUDDY_FLYING
+-      modelHeight: 4.5
++      modelHeight: 13
+       modelScaleV2: 0.38
+       form: ETERNATUS_NORMAL
+       buddyOffsetMale: 0
+@@ -376203,7 +376203,7 @@
      }
    }
  }
-@@ -134039,6 +134036,11 @@
-         battleLevel: BREAD_DOUGH_BATTLE_LEVEL_1
-         breadBattleRemoteCatchMpCost: 800
-       }
-+      battleMpCostPerTier {
-+        breadBattleCatchMpCost: 800
-+        battleLevel: 8
-+        breadBattleRemoteCatchMpCost: 800
-+      }
-       ftueMpCapacity: 250
-     }
-   }
-@@ -369116,6 +369118,8 @@
-     template_id: "mp_replenish_rrp.1"
-     iapItemDisplay {
-       sku: "mp_replenish_rrp.1"
-+      category: IAP_CATEGORY_ITEMS
-+      hidden: true
-     }
-   }
- }
-@@ -369125,6 +369129,8 @@
-     template_id: "mp_replenish_rrp.3"
-     iapItemDisplay {
-       sku: "mp_replenish_rrp.3"
-+      category: IAP_CATEGORY_ITEMS
-+      hidden: true
-     }
-   }
- }
-@@ -376177,7 +376183,27 @@
-     }
-   }
- }
--batch_id: 1753375761515
-+template {
-+  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_wcs2025anaheim-white_0_icon"
-+      displayStringId: "avatar_n_shirt_wcs2025anaheim-white"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_wcs2025anaheim-yellow_0_icon"
-+      displayStringId: "avatar_n_shirt_wcs2025anaheim-yellow"
-+    }
-+  }
-+}
-+batch_id: 1753407031155
+-batch_id: 1753407031155
++batch_id: 1753492173914
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
+@@ -376245,11 +376245,13 @@
+ experiment_id: 3746
+ experiment_id: 3756
+ experiment_id: 3774
++experiment_id: 3775
+ experiment_id: 3847
+ experiment_id: 4693
+ experiment_id: 4885
+ experiment_id: 4891
+ experiment_id: 4998
++experiment_id: 5114
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
