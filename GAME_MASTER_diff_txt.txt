@@ -1,113 +1,342 @@
---- GAME_MASTER_old.txt	2025-07-31 20:00:36.740583313 +0200
-+++ GAME_MASTER.txt	2025-08-01 20:08:39.135809174 +0200
-@@ -128042,14 +128042,14 @@
-       globalEventTicket {
-         eventStartTime: "2025-08-06T10:00:00"
-         eventEndTime: "2025-08-12T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CozyCO25"
-+        itemBagDescriptionKey: "text_rewards_key_CozyCO25"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_04_TO_GIFT
-         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-cozy-companions-ticket-nologo-2025.jpg"
-         displayV2Enabled: true
-         backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-cozy-companions-ticket-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CozyCO25"
--        textRewardsKey: "text_rewards_key_CozyCO25"
-+        eventDatetimeRangeKey: "item_event_ticket_pink_details_CozyCO25"
-+        textRewardsKey: "item_event_ticket_pink_desc_CozyCO25"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
-@@ -128073,7 +128073,7 @@
-         clientEventEndTimeUtcMs: 1755028800000
+--- GAME_MASTER_old.txt	2025-08-01 20:08:39.135809174 +0200
++++ GAME_MASTER.txt	2025-08-02 10:49:52.402268535 +0200
+@@ -127870,7 +127870,6 @@
        }
-       nameOverride: "general1.ticket.2_CozyCO25_title"
--      descriptionOverride: "item_event_ticket_pink_desc_CozyCO25"
-+      descriptionOverride: "text_rewards_key_CozyCO25"
+       timePeriodCounters {
+         playerActivity {
+-          limit: 250
+         }
+       }
+     }
+@@ -128875,47 +128874,36 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-07-01T10:00:00"
+-        eventEndTime: "2025-07-06T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_SJSR0725"
++        eventStartTime: "2025-08-09T11:00:00"
++        eventEndTime: "2025-08-09T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Munchlax0825"
+         giftable: true
+         giftItem: ITEM_GLOBAL_EVENT_TICKET_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
+-        conflictStoryQuestIds: "MASTERWORK_SHINY_JIRACHI_SET_0_HEADER"
+-        conflictStoryQuestIds: "MASTERWORK_9TH_ANNIVERSARY_SHINY_JIRACHI_SET_0_HEADER"
+-        conflictStoryQuestIds: "MASTERWORK_SHINY_JIRACHI_EASY_SET_0_HEADER"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_SJSR0725"
+-        textRewardsKey: "text_rewards_key_SJSR0725"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_Munchlax0825"
++        textRewardsKey: "text_rewards_key_Munchlax0825"
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemon_id: JIRACHI
+-            pokemonDisplay {
+-              kglealcogbg: true
+-            }
+-          }
+-        }
+-        iconRewards {
+-          type: CANDY
+-          candy {
+-            pokemonId: JIRACHI
+-            amount: 20
++          type: ITEM
++          item {
++            item: ITEM_STAR_PIECE
++            amount: 1
+           }
+         }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_RARE_CANDY
+-            amount: 9
++            item: ITEM_INCUBATOR_SUPER
++            amount: 2
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1751364000000
+-        clientEventEndTimeUtcMs: 1751832000000
++        clientEventStartTimeUtcMs: 1754737200000
++        clientEventEndTimeUtcMs: 1754758800000
+       }
+-      descriptionOverride: "item_event_ticket_evergreen_desc_SJSR0725"
++      nameOverride: "general1.ticket._Munchlax0825_title"
++      descriptionOverride: "item_event_ticket_evergreen_desc_Munchlax0825"
      }
    }
  }
-@@ -128088,14 +128088,14 @@
+@@ -128928,16 +128916,17 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
        globalEventTicket {
-         eventStartTime: "2025-08-06T10:00:00"
-         eventEndTime: "2025-08-12T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_details_CozyCO25"
-+        itemBagDescriptionKey: "event_datetime_range_key_CozyCO25"
-         ticketItem: ITEM_EVENT_TICKET_04
-         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-cozy-companions-ticket-nologo-2025.jpg"
-         clientEventStartTimeUtcMs: 1754474400000
-         clientEventEndTimeUtcMs: 1755028800000
+-        eventStartTime: "2025-07-01T10:00:00"
+-        eventEndTime: "2025-07-06T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_details_SJSR0725"
++        eventStartTime: "2025-08-09T11:00:00"
++        eventEndTime: "2025-08-09T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_Munchlax0825"
+         ticketItem: ITEM_GLOBAL_EVENT_TICKET
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1751364000000
+-        clientEventEndTimeUtcMs: 1751832000000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1754737200000
++        clientEventEndTimeUtcMs: 1754758800000
        }
        ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_pink_details_CozyCO25"
-+      descriptionOverride: "event_datetime_range_key_CozyCO25"
+-      descriptionOverride: "item_event_ticket_evergreen_details_SJSR0725"
++      nameOverride: "general1.ticket._Munchlax0825_title"
++      descriptionOverride: "item_event_ticket_evergreen_details_Munchlax0825"
      }
    }
  }
-@@ -368858,7 +368858,6 @@
-       sku: "general2.ticket.9"
+@@ -348511,13 +348500,18 @@
+       type: POKEMON_TYPE_ICE
+       type2: POKEMON_TYPE_BUG
+       camera {
++        cylinderRadiusM: 0.25
++        cylinderHeightM: 0.25
+       }
+       encounter {
++        collisionRadiusM: 0.1
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.1
+         attackProbability: 0.25
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
+         dodgeDistance: 0.5
+-        cameraDistance: 4
++        cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+@@ -348536,12 +348530,16 @@
+       weightStdDev: 0.475
+       familyId: FAMILY_SNOM
+       kmBuddyDistance: 5
+-      modelHeight: 1
++      modelHeight: 0.35
+       evolutionBranch {
+         evolution: FROSMOTH
+-        candyCost: 50
++        candyCost: 400
++        onlyNighttime: true
++        questDisplay {
++          questRequirementTemplateId: "SNOM_FROSMOTH_EVOLUTION_QUEST"
++        }
+       }
+-      modelScaleV2: 1
++      modelScaleV2: 1.54
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -348549,6 +348547,9 @@
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+       buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 200
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+@@ -348556,7 +348557,11 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
+-      buddyGroupNumber: 2
++      buddyGroupNumber: 1
++      raidBossDistanceOffset: 2
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -348572,8 +348577,14 @@
+       type: POKEMON_TYPE_ICE
+       type2: POKEMON_TYPE_BUG
+       camera {
++        cylinderRadiusM: 0.7
++        cylinderHeightM: 0.7
++        cylinderGroundM: 0.4
+       }
+       encounter {
++        collisionRadiusM: 0.15
++        collisionHeightM: 0.15
++        collisionHeadRadiusM: 0.15
+         movementType: MOVEMENT_FLYING
+         bonusCandyCaptureReward: 2
+         bonusStardustCaptureReward: 200
+@@ -348581,7 +348592,7 @@
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
+         dodgeDistance: 0.5
+-        cameraDistance: 4
++        cameraDistance: 3.5
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
+@@ -348604,8 +348615,8 @@
+       weightStdDev: 5.25
+       familyId: FAMILY_SNOM
+       kmBuddyDistance: 5
+-      modelHeight: 1
+-      modelScaleV2: 1
++      modelHeight: 0.74
++      modelScaleV2: 1.5
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -348613,6 +348624,9 @@
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+       buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+@@ -348621,6 +348635,10 @@
+       isDeployable: true
+       isTradable: true
+       buddyGroupNumber: 2
++      raidBossDistanceOffset: 2
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -368405,15 +368423,17 @@
+     iapItemDisplay {
+       sku: "general1.ticket.4"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket.5_AugMonthly2025_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -368877,7 +368876,6 @@
-       sku: "general2.ticket.9.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket.5_AugMonthly2025_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -370600,7 +370598,6 @@
-       sku: "pgorelease.general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket.5_AugMonthly2025_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -370619,7 +370616,6 @@
-       sku: "pgorelease.general2.ticket.9.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket.5_AugMonthly2025_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -376200,7 +376196,25 @@
+-      sortOrder: 1
++      sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket.4_FinalStrike0525_title"
+-      skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-05-27T20:00:00"
+-      skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1748376000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
++      title: "general1.ticket._Munchlax0825_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-08-09T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1754758800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
++      webstoreSkuId: "web-hatch-day-2025-ticket-box"
++      webstoreSkuPriceE6: 1990000
      }
    }
  }
--batch_id: 1753982565369
+@@ -368424,15 +368444,15 @@
+     iapItemDisplay {
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket.4_FinalStrike0525_title"
+-      skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-05-27T20:00:00"
+-      skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1748376000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
++      title: "general1.ticket._Munchlax0825_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-08-09T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1754758800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -370164,15 +370184,17 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket.4_FinalStrike0525_title"
+-      skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-05-27T20:00:00"
+-      skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1748376000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
++      title: "general1.ticket._Munchlax0825_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-08-09T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1754758800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
++      webstoreSkuId: "web-hatch-day-2025-ticket-box"
++      webstoreSkuPriceE6: 1990000
+     }
+   }
+ }
+@@ -370183,15 +370205,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket.4_FinalStrike0525_title"
+-      skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-05-27T20:00:00"
+-      skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1748376000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
++      title: "general1.ticket._Munchlax0825_title"
++      skuEnableTime: "2019-03-14T08:00:00"
++      skuDisableTime: "2025-08-09T17:00:00"
++      skuEnableTimeUtcMs: 1552550400000
++      skuDisableTimeUtcMs: 1754758800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -376214,7 +376236,17 @@
+     }
+   }
+ }
+-batch_id: 1754066771039
 +template {
-+  template_id: "SNOM_FROSMOTH_EVOLUTION_QUEST"
++  template_id: "N_DISPLAY_n_hat_eternatussuit_0"
 +  data {
-+    template_id: "SNOM_FROSMOTH_EVOLUTION_QUEST"
-+    evolution_quest_template {
-+      questTemplateId: "SNOM_FROSMOTH_EVOLUTION_QUEST"
-+      questType: QUEST_BUDDY_EARN_AFFECTION_POINTS
-+      goals {
-+        target: 10
-+      }
-+      context: EVOLUTION_QUEST
-+      display {
-+        description: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
-+        title: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
-+      }
++    template_id: "N_DISPLAY_n_hat_eternatussuit_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_eternatussuit_0_icon"
++      displayStringId: "avatar_hat_eternatus"
 +    }
 +  }
 +}
-+batch_id: 1754066771039
++batch_id: 1754093209684
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -376256,6 +376270,7 @@
+@@ -376269,6 +376301,7 @@
+ experiment_id: 5510
  experiment_id: 6075
  experiment_id: 7052
++experiment_id: 7054
  experiment_id: 7055
-+experiment_id: 8944
+ experiment_id: 8944
  experiment_id: 8980
- experiment_id: 8981
- experiment_id: 8982
