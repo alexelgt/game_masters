@@ -1,342 +1,59 @@
---- GAME_MASTER_old.txt	2025-08-01 20:08:39.135809174 +0200
-+++ GAME_MASTER.txt	2025-08-02 10:49:52.402268535 +0200
-@@ -127870,7 +127870,6 @@
-       }
-       timePeriodCounters {
-         playerActivity {
--          limit: 250
-         }
-       }
-     }
-@@ -128875,47 +128874,36 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-07-01T10:00:00"
--        eventEndTime: "2025-07-06T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_SJSR0725"
-+        eventStartTime: "2025-08-09T11:00:00"
-+        eventEndTime: "2025-08-09T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Munchlax0825"
-         giftable: true
-         giftItem: ITEM_GLOBAL_EVENT_TICKET_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
--        conflictStoryQuestIds: "MASTERWORK_SHINY_JIRACHI_SET_0_HEADER"
--        conflictStoryQuestIds: "MASTERWORK_9TH_ANNIVERSARY_SHINY_JIRACHI_SET_0_HEADER"
--        conflictStoryQuestIds: "MASTERWORK_SHINY_JIRACHI_EASY_SET_0_HEADER"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_SJSR0725"
--        textRewardsKey: "text_rewards_key_SJSR0725"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_Munchlax0825"
-+        textRewardsKey: "text_rewards_key_Munchlax0825"
-         iconRewards {
--          type: POKEMON_ENCOUNTER
--          pokemonEncounter {
--            pokemon_id: JIRACHI
--            pokemonDisplay {
--              kglealcogbg: true
--            }
--          }
--        }
--        iconRewards {
--          type: CANDY
--          candy {
--            pokemonId: JIRACHI
--            amount: 20
-+          type: ITEM
-+          item {
-+            item: ITEM_STAR_PIECE
-+            amount: 1
-           }
-         }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_RARE_CANDY
--            amount: 9
-+            item: ITEM_INCUBATOR_SUPER
-+            amount: 2
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1751364000000
--        clientEventEndTimeUtcMs: 1751832000000
-+        clientEventStartTimeUtcMs: 1754737200000
-+        clientEventEndTimeUtcMs: 1754758800000
-       }
--      descriptionOverride: "item_event_ticket_evergreen_desc_SJSR0725"
-+      nameOverride: "general1.ticket._Munchlax0825_title"
-+      descriptionOverride: "item_event_ticket_evergreen_desc_Munchlax0825"
+--- GAME_MASTER_old.txt	2025-08-02 10:49:52.402268535 +0200
++++ GAME_MASTER.txt	2025-08-03 19:50:27.049843790 +0200
+@@ -41736,7 +41736,7 @@
+       prepareBreadLobbySoloMs: 80000
+       rvnVersion: 2
+       maxRemotePlayersPerBreadDoughLobby: 40
+-      maxRemoteBreadBattlePassesAllowed: 10
++      maxRemoteBreadBattlePassesAllowed: 20
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 40
+@@ -153901,7 +153901,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 20
      }
    }
  }
-@@ -128928,16 +128916,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-07-01T10:00:00"
--        eventEndTime: "2025-07-06T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_evergreen_details_SJSR0725"
-+        eventStartTime: "2025-08-09T11:00:00"
-+        eventEndTime: "2025-08-09T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_details_Munchlax0825"
-         ticketItem: ITEM_GLOBAL_EVENT_TICKET
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-shiny-jirachi-masterwork-ticket-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1751364000000
--        clientEventEndTimeUtcMs: 1751832000000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
-+        clientEventStartTimeUtcMs: 1754737200000
-+        clientEventEndTimeUtcMs: 1754758800000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_evergreen_details_SJSR0725"
-+      nameOverride: "general1.ticket._Munchlax0825_title"
-+      descriptionOverride: "item_event_ticket_evergreen_details_Munchlax0825"
+@@ -376246,7 +376246,7 @@
      }
    }
  }
-@@ -348511,13 +348500,18 @@
-       type: POKEMON_TYPE_ICE
-       type2: POKEMON_TYPE_BUG
-       camera {
-+        cylinderRadiusM: 0.25
-+        cylinderHeightM: 0.25
-       }
-       encounter {
-+        collisionRadiusM: 0.1
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.1
-         attackProbability: 0.25
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 0.5
--        cameraDistance: 4
-+        cameraDistance: 3
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-       }
-@@ -348536,12 +348530,16 @@
-       weightStdDev: 0.475
-       familyId: FAMILY_SNOM
-       kmBuddyDistance: 5
--      modelHeight: 1
-+      modelHeight: 0.35
-       evolutionBranch {
-         evolution: FROSMOTH
--        candyCost: 50
-+        candyCost: 400
-+        onlyNighttime: true
-+        questDisplay {
-+          questRequirementTemplateId: "SNOM_FROSMOTH_EVOLUTION_QUEST"
-+        }
-       }
--      modelScaleV2: 1
-+      modelScaleV2: 1.54
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -348549,6 +348547,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 200
-       third_move {
-         stardustToUnlock: 75000
-         candyToUnlock: 75
-@@ -348556,7 +348557,11 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
--      buddyGroupNumber: 2
-+      buddyGroupNumber: 1
-+      raidBossDistanceOffset: 2
-+      buddyPortraitRotation: 0
-+      buddyPortraitRotation: 0
-+      buddyPortraitRotation: 0
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -348572,8 +348577,14 @@
-       type: POKEMON_TYPE_ICE
-       type2: POKEMON_TYPE_BUG
-       camera {
-+        cylinderRadiusM: 0.7
-+        cylinderHeightM: 0.7
-+        cylinderGroundM: 0.4
-       }
-       encounter {
-+        collisionRadiusM: 0.15
-+        collisionHeightM: 0.15
-+        collisionHeadRadiusM: 0.15
-         movementType: MOVEMENT_FLYING
-         bonusCandyCaptureReward: 2
-         bonusStardustCaptureReward: 200
-@@ -348581,7 +348592,7 @@
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 0.5
--        cameraDistance: 4
-+        cameraDistance: 3.5
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-@@ -348604,8 +348615,8 @@
-       weightStdDev: 5.25
-       familyId: FAMILY_SNOM
-       kmBuddyDistance: 5
--      modelHeight: 1
--      modelScaleV2: 1
-+      modelHeight: 0.74
-+      modelScaleV2: 1.5
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -348613,6 +348624,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 0
-       third_move {
-         stardustToUnlock: 75000
-         candyToUnlock: 75
-@@ -348621,6 +348635,10 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      raidBossDistanceOffset: 2
-+      buddyPortraitRotation: 0
-+      buddyPortraitRotation: 0
-+      buddyPortraitRotation: 0
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -368405,15 +368423,17 @@
-     iapItemDisplay {
-       sku: "general1.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket.4_FinalStrike0525_title"
--      skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-05-27T20:00:00"
--      skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1748376000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
-+      title: "general1.ticket._Munchlax0825_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-08-09T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1754758800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
-+      webstoreSkuId: "web-hatch-day-2025-ticket-box"
-+      webstoreSkuPriceE6: 1990000
-     }
-   }
- }
-@@ -368424,15 +368444,15 @@
-     iapItemDisplay {
-       sku: "general1.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket.4_FinalStrike0525_title"
--      skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-05-27T20:00:00"
--      skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1748376000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
-+      title: "general1.ticket._Munchlax0825_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-08-09T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1754758800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
-     }
-   }
- }
-@@ -370164,15 +370184,17 @@
-     iapItemDisplay {
-       sku: "pgorelease.general1.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket.4_FinalStrike0525_title"
--      skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-05-27T20:00:00"
--      skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1748376000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
-+      title: "general1.ticket._Munchlax0825_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-08-09T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1754758800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
-+      webstoreSkuId: "web-hatch-day-2025-ticket-box"
-+      webstoreSkuPriceE6: 1990000
-     }
-   }
- }
-@@ -370183,15 +370205,15 @@
-     iapItemDisplay {
-       sku: "pgorelease.general1.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket.4_FinalStrike0525_title"
--      skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-05-27T20:00:00"
--      skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1748376000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_generic_webstore_1024x576_logo.jpg"
-+      title: "general1.ticket._Munchlax0825_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-08-09T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1754758800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
-     }
-   }
- }
-@@ -376214,7 +376236,17 @@
-     }
-   }
- }
--batch_id: 1754066771039
-+template {
-+  template_id: "N_DISPLAY_n_hat_eternatussuit_0"
-+  data {
-+    template_id: "N_DISPLAY_n_hat_eternatussuit_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_hat_eternatussuit_0_icon"
-+      displayStringId: "avatar_hat_eternatus"
-+    }
-+  }
-+}
-+batch_id: 1754093209684
+-batch_id: 1754093209684
++batch_id: 1754137614908
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -376269,6 +376301,7 @@
- experiment_id: 5510
- experiment_id: 6075
- experiment_id: 7052
-+experiment_id: 7054
- experiment_id: 7055
- experiment_id: 8944
- experiment_id: 8980
+@@ -376283,16 +376283,17 @@
+ experiment_id: 3063
+ experiment_id: 3710
+ experiment_id: 3722
+-experiment_id: 3728
++experiment_id: 3729
+ experiment_id: 3738
+ experiment_id: 3746
+ experiment_id: 3756
+ experiment_id: 3861
+ experiment_id: 3863
+-experiment_id: 3877
+-experiment_id: 4693
+-experiment_id: 4891
++experiment_id: 3867
++experiment_id: 3868
++experiment_id: 3882
+ experiment_id: 4998
++experiment_id: 5116
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+@@ -376315,7 +376316,6 @@
+ experiment_id: 20947
+ experiment_id: 55571
+ experiment_id: 55751
+-experiment_id: 70040
+ experiment_id: 70080
+ experiment_id: 70095
+ experiment_id: 80436
