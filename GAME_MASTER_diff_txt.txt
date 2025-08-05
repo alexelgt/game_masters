@@ -1,59 +1,1157 @@
---- GAME_MASTER_old.txt	2025-08-02 10:49:52.402268535 +0200
-+++ GAME_MASTER.txt	2025-08-03 19:50:27.049843790 +0200
+--- GAME_MASTER_old.txt	2025-08-03 19:50:27.049843790 +0200
++++ GAME_MASTER.txt	2025-08-05 09:26:20.521928832 +0200
 @@ -41736,7 +41736,7 @@
        prepareBreadLobbySoloMs: 80000
        rvnVersion: 2
        maxRemotePlayersPerBreadDoughLobby: 40
--      maxRemoteBreadBattlePassesAllowed: 10
-+      maxRemoteBreadBattlePassesAllowed: 20
+-      maxRemoteBreadBattlePassesAllowed: 20
++      maxRemoteBreadBattlePassesAllowed: 10
        maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
        fetchProfileFromSocialEnabled: true
        maxPlayersToPrepareBreadDoughLobby: 40
-@@ -153901,7 +153901,7 @@
+@@ -42053,6 +42053,62 @@
+   }
+ }
+ template {
++  template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_8"
++  data {
++    template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_8"
++    breadMoveLevelSettings {
++      group: 8
++      aSettings {
++        mpCost: 1
++        candyCost: 1
++      }
++      aSettings {
++        mpCost: 600
++        candyCost: 1200
++        xpRewards: 6000
++      }
++      aSettings {
++        mpCost: 800
++        candyCost: 1200
++        xlCandyCost: 320
++        xpRewards: 8000
++      }
++      bSettings {
++        mpCost: 400
++        candyCost: 400
++        xpRewards: 4000
++      }
++      bSettings {
++        mpCost: 600
++        candyCost: 1200
++        xpRewards: 6000
++      }
++      bSettings {
++        mpCost: 800
++        candyCost: 1200
++        xlCandyCost: 320
++        xpRewards: 8000
++      }
++      cSettings {
++        mpCost: 400
++        candyCost: 400
++        xpRewards: 4000
++      }
++      cSettings {
++        mpCost: 600
++        candyCost: 1200
++        xpRewards: 6000
++      }
++      cSettings {
++        mpCost: 800
++        candyCost: 1200
++        xlCandyCost: 320
++        xpRewards: 8000
++      }
++    }
++  }
++}
++template {
+   template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_Z"
+   data {
+     template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_Z"
+@@ -127799,6 +127855,27 @@
+   }
+ }
+ template {
++  template_id: "ITEM_EVENT_PASS_POINT_GO_FEST_02"
++  data {
++    template_id: "ITEM_EVENT_PASS_POINT_GO_FEST_02"
++    itemSettings {
++      itemId: ITEM_EVENT_PASS_POINT_GO_FEST_02
++      itemType: ITEM_TYPE_EVENT_PASS_POINT
++      category: ITEM_CATEGORY_EVENT_PASS_POINT
++      ignoreInventorySpace: true
++      itemCap: 999999
++      eventPassPoint {
++        eventPassId: "EVENT_PASS_GOFEST2025_MAXFINALE"
++      }
++      timePeriodCounters {
++        playerActivity {
++          limit: 50
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "ITEM_EVENT_PASS_POINT_GO_TOUR_01"
+   data {
+     template_id: "ITEM_EVENT_PASS_POINT_GO_TOUR_01"
+@@ -127870,6 +127947,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 250
+         }
+       }
+     }
+@@ -128488,16 +128566,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-07-12T14:00:00"
+-        eventEndTime: "2025-07-12T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_HisuianLilligantRaidDay"
++        eventStartTime: "2025-08-10T11:00:00"
++        eventEndTime: "2025-08-10T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_OriginRaidDay"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_GRAY_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_HisuianLilligantRaidDay"
+-        textRewardsKey: "text_rewards_key_HisuianLilligantRaidDay"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_OriginRaidDay"
++        textRewardsKey: "text_rewards_key_OriginRaidDay"
+         iconRewards {
+           type: ITEM
+           item {
+@@ -128516,11 +128594,11 @@
+           stardust: 2
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1752328800000
+-        clientEventEndTimeUtcMs: 1752339600000
++        clientEventStartTimeUtcMs: 1754823600000
++        clientEventEndTimeUtcMs: 1754845200000
+       }
+-      nameOverride: "general1.ticket.5_HisuianLilligantRaidDay_title"
+-      descriptionOverride: "item_event_ticket_gray_desc_HisuianLilligantRaidDay"
++      nameOverride: "general1.ticket._OriginRaidDay_title"
++      descriptionOverride: "item_event_ticket_gray_desc_OriginRaidDay"
+     }
+   }
+ }
+@@ -128533,16 +128611,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-07-12T14:00:00"
+-        eventEndTime: "2025-07-12T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_HisuianLilligantRaidDay"
++        eventStartTime: "2025-08-10T11:00:00"
++        eventEndTime: "2025-08-10T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_details_OriginRaidDay"
+         ticketItem: ITEM_EVENT_TICKET_GRAY
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1752328800000
+-        clientEventEndTimeUtcMs: 1752339600000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1754823600000
++        clientEventEndTimeUtcMs: 1754845200000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_HisuianLilligantRaidDay"
++      descriptionOverride: "item_event_ticket_gray_details_OriginRaidDay"
+     }
+   }
+ }
+@@ -128697,6 +128775,17 @@
+   }
+ }
+ template {
++  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_FEST_02"
++  data {
++    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_FEST_02"
++    itemExpirationSettings {
++      item: ITEM_EVENT_PASS_POINT_GO_FEST_02
++      expirationTime: "2025-08-26T21:00:00"
++      emergencyExpirationTime: "2025-09-25T21:00:00"
++    }
++  }
++}
++template {
+   template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_TOUR_01"
+   data {
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_TOUR_01"
+@@ -129084,7 +129173,7 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 1
+       incense {
+-        incenseLifetimeSeconds: 7200
++        incenseLifetimeSeconds: 3600
+       }
+     }
+   }
+@@ -130703,6 +130792,16 @@
+   }
+ }
+ template {
++  template_id: "LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001"
++  data {
++    template_id: "LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001"
++    locationCardSettings {
++      locationCard: LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001
++      imageUrl: "lc_Wcs2025_anaheim"
++    }
++  }
++}
++template {
+   template_id: "LC_2025_BERLIN_ROADTRIP_001"
+   data {
+     template_id: "LC_2025_BERLIN_ROADTRIP_001"
+@@ -130743,6 +130842,16 @@
+   }
+ }
+ template {
++  template_id: "LC_2025_JANGHEUNG_SUMMER_FESTIVAL"
++  data {
++    template_id: "LC_2025_JANGHEUNG_SUMMER_FESTIVAL"
++    locationCardSettings {
++      locationCard: LC_2025_JANGHEUNG_SUMMER_FESTIVAL
++      imageUrl: "lc_Jangheung_Water_Festival_2025"
++    }
++  }
++}
++template {
+   template_id: "LC_2025_JERSEYCITY_GOFEST_001"
+   data {
+     template_id: "LC_2025_JERSEYCITY_GOFEST_001"
+@@ -130938,6 +131047,18 @@
+   }
+ }
+ template {
++  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001
++      imageUrl: "sb_GoFest2025_Eternatus"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_goFest_2025_eternatus"
++    }
++  }
++}
++template {
+   template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001"
+   data {
+     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001"
+@@ -134834,6 +134955,31 @@
+   }
+ }
+ template {
++  template_id: "NON_COMBAT_V0482_MOVE_DYNAMAX_CANNON"
++  data {
++    template_id: "NON_COMBAT_V0482_MOVE_DYNAMAX_CANNON"
++    nonCombatMoveSettings {
++      uniqueId: DYNAMAX_CANNON
++      cost {
++        candyCost: 30
++        stardustCost: 5000
++      }
++      bonusEffect {
++        maxMoveBonus {
++          excludedPokedexIds: ZACIAN
++          excludedPokedexIds: ZAMAZENTA
++          numAllMaxMoveLevelIncrease: 1
++        }
++      }
++      durationMs: 600000
++      bonusType: MAX_MOVE_BONUS
++      enableMultiUse: true
++      extraDurationMs: 4000
++      enableNonCombatMove: true
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_m_backpack_eggbackpack_0"
+   data {
+     template_id: "N_DISPLAY_m_backpack_eggbackpack_0"
+@@ -138010,6 +138156,16 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_hat_eternatussuit_0"
++  data {
++    template_id: "N_DISPLAY_n_hat_eternatussuit_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_eternatussuit_0_icon"
++      displayStringId: "avatar_hat_eternatus"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_hat_fedora_0"
+   data {
+     template_id: "N_DISPLAY_n_hat_fedora_0"
+@@ -145970,6 +146126,26 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_wcs2025anaheim-white_0_icon"
++      displayStringId: "avatar_n_shirt_wcs2025anaheim-white"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_wcs2025anaheim-yellow_0_icon"
++      displayStringId: "avatar_n_shirt_wcs2025anaheim-yellow"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_shirt_wcsyokohama_0"
+   data {
+     template_id: "N_DISPLAY_n_shirt_wcsyokohama_0"
+@@ -153395,6 +153571,133 @@
+   }
+ }
+ template {
++  template_id: "POKEMON_UPGRADE_OVERRIDE_SETTINGS_V0890_POKEMON_ETERNATUS"
++  data {
++    template_id: "POKEMON_UPGRADE_OVERRIDE_SETTINGS_V0890_POKEMON_ETERNATUS"
++    pokemon_upgrades {
++      upgradesPerLevel: 2
++      allowedLevelsAbovePlayer: 10
++      candyCost: 30
++      candyCost: 30
++      candyCost: 30
++      candyCost: 30
++      candyCost: 30
++      candyCost: 30
++      candyCost: 30
++      candyCost: 30
++      candyCost: 30
++      candyCost: 30
++      candyCost: 60
++      candyCost: 60
++      candyCost: 60
++      candyCost: 60
++      candyCost: 60
++      candyCost: 60
++      candyCost: 60
++      candyCost: 60
++      candyCost: 60
++      candyCost: 60
++      candyCost: 90
++      candyCost: 90
++      candyCost: 90
++      candyCost: 90
++      candyCost: 90
++      candyCost: 120
++      candyCost: 120
++      candyCost: 120
++      candyCost: 120
++      candyCost: 120
++      candyCost: 175
++      candyCost: 175
++      candyCost: 225
++      candyCost: 225
++      candyCost: 300
++      candyCost: 300
++      candyCost: 375
++      candyCost: 375
++      candyCost: 890
++      candyCost: 0
++      candyCost: 0
++      candyCost: 0
++      candyCost: 0
++      candyCost: 0
++      candyCost: 0
++      candyCost: 0
++      candyCost: 0
++      candyCost: 0
++      candyCost: 0
++      candyCost: 0
++      stardustCost: 200
++      stardustCost: 200
++      stardustCost: 400
++      stardustCost: 400
++      stardustCost: 600
++      stardustCost: 600
++      stardustCost: 800
++      stardustCost: 800
++      stardustCost: 1000
++      stardustCost: 1000
++      stardustCost: 1300
++      stardustCost: 1300
++      stardustCost: 1600
++      stardustCost: 1600
++      stardustCost: 1900
++      stardustCost: 1900
++      stardustCost: 2200
++      stardustCost: 2200
++      stardustCost: 2500
++      stardustCost: 2500
++      stardustCost: 3000
++      stardustCost: 3000
++      stardustCost: 3500
++      stardustCost: 3500
++      stardustCost: 4000
++      stardustCost: 4000
++      stardustCost: 4500
++      stardustCost: 4500
++      stardustCost: 5000
++      stardustCost: 5000
++      stardustCost: 6000
++      stardustCost: 6000
++      stardustCost: 7000
++      stardustCost: 7000
++      stardustCost: 8000
++      stardustCost: 8000
++      stardustCost: 9000
++      stardustCost: 9000
++      stardustCost: 10000
++      stardustCost: 10000
++      stardustCost: 11000
++      stardustCost: 11000
++      stardustCost: 12000
++      stardustCost: 12000
++      stardustCost: 13000
++      stardustCost: 13000
++      stardustCost: 14000
++      stardustCost: 14000
++      stardustCost: 15000
++      shadowStardustMultiplier: 1.2
++      shadowCandyMultiplier: 1.2
++      purifiedStardustMultiplier: 0.9
++      purifiedCandyMultiplier: 0.9
++      maxNormalUpgradeLevel: 50
++      defaultCpBoostAdditionalLevel: 1
++      xlCandyMinPlayerLevel: 31
++      xlCandyCost: 100
++      xlCandyCost: 100
++      xlCandyCost: 200
++      xlCandyCost: 200
++      xlCandyCost: 400
++      xlCandyCost: 400
++      xlCandyCost: 635
++      xlCandyCost: 635
++      xlCandyCost: 890
++      xlCandyCost: 890
++      xlCandyMinPokemonLevel: 40
++    }
++  }
++}
++template {
+   template_id: "POKEMON_UPGRADE_SETTINGS"
+   data {
+     template_id: "POKEMON_UPGRADE_SETTINGS"
+@@ -153584,6 +153887,17 @@
+   }
+ }
+ template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++template {
+   template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
+   data {
+     template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
+@@ -153901,7 +154215,7 @@
      template_id: "REMOTE_RAID_LIMIT_SETTINGS"
      squashSettings {
        enabled: true
--      dailySquashLimit: 10
-+      dailySquashLimit: 20
+-      dailySquashLimit: 20
++      dailySquashLimit: 10
      }
    }
  }
-@@ -376246,7 +376246,7 @@
+@@ -157960,6 +158274,24 @@
+   }
+ }
+ template {
++  template_id: "SNOM_FROSMOTH_EVOLUTION_QUEST"
++  data {
++    template_id: "SNOM_FROSMOTH_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "SNOM_FROSMOTH_EVOLUTION_QUEST"
++      questType: QUEST_BUDDY_EARN_AFFECTION_POINTS
++      goals {
++        target: 10
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
++        title: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
++      }
++    }
++  }
++}
++template {
+   template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
+   data {
+     template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
+@@ -183069,6 +183401,20 @@
+   }
+ }
+ template {
++  template_id: "STICKER_ETERNATUS"
++  data {
++    template_id: "STICKER_ETERNATUS"
++    stickerMetadata {
++      stickerId: "STICKER_ETERNATUS"
++      maxCount: 25
++      pokemonId: ETERNATUS
++      category: "Pokemon"
++      releaseDate: 20250718
++      regionId: 7
++    }
++  }
++}
++template {
+   template_id: "STICKER_FALL_2023_1"
+   data {
+     template_id: "STICKER_FALL_2023_1"
+@@ -350868,9 +351214,8 @@
+       quickMoves: DRAGON_TAIL_FAST
+       quickMoves: POISON_JAB_FAST
+       cinematicMoves: SLUDGE_BOMB
+-      cinematicMoves: DRAGON_PULSE
+-      cinematicMoves: FLAMETHROWER
+       cinematicMoves: HYPER_BEAM
++      cinematicMoves: FLAMETHROWER
+       pokemonClass: POKEMON_CLASS_LEGENDARY
+       pokedexHeightM: 20
+       pokedexWeightKg: 950
+@@ -350878,8 +351223,8 @@
+       weightStdDev: 118.75
+       familyId: FAMILY_ETERNATUS
+       kmBuddyDistance: 20
+-      modelHeight: 1
+-      modelScaleV2: 1
++      modelHeight: 4
++      modelScaleV2: 0.34
+       form: ETERNATUS_ETERNAMAX
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -361942,6 +362287,29 @@
+   }
+ }
+ template {
++  template_id: "VN_BM_062"
++  data {
++    template_id: "VN_BM_062"
++    moveSettings {
++      movementId: VN_BM_062
++      animationId: 5
++      pokemonType: POKEMON_TYPE_DRAGON
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "max_dynamax_cannon"
++      durationMs: 2500
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3400
++      obMoveSettingsNumber18: 250
++      obMoveSettingsNumber18: 300
++      obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 450
++    }
++  }
++}
++template {
+   template_id: "VS_SEEKER_CLIENT_SETTINGS"
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+@@ -364148,7 +364516,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: VIRIZION
++          pokemon_id: LUGIA
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -364798,7 +365166,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: VIRIZION
++          pokemon_id: LUGIA
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -368291,6 +368659,7 @@
+       sku: "evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._AdventureWK0729_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -368311,6 +368680,7 @@
+       sku: "evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._AdventureWK0729_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -368466,13 +368836,13 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket.5_HisuianLilligantRaidDay_title"
++      title: "general1.ticket._OriginRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-07-12T17:00:00"
++      skuDisableTime: "2025-08-10T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1752339600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
+-      webstoreSkuId: "web-liligant-raidday-ticket-box"
++      skuDisableTimeUtcMs: 1754845200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
++      webstoreSkuId: "web-origin-raid-day-ticket-box"
+       webstoreSkuPriceE6: 4990000
+     }
+   }
+@@ -368487,12 +368857,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket.5_HisuianLilligantRaidDay_title"
++      title: "general1.ticket._OriginRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-07-12T17:00:00"
++      skuDisableTime: "2025-08-10T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1752339600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1754845200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
      }
    }
  }
--batch_id: 1754093209684
-+batch_id: 1754137614908
+@@ -370069,6 +370439,7 @@
+       sku: "pgorelease.evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._AdventureWK0729_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -370089,6 +370460,7 @@
+       sku: "pgorelease.evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._AdventureWK0729_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -370227,13 +370599,13 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket.5_HisuianLilligantRaidDay_title"
++      title: "general1.ticket._OriginRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-07-12T17:00:00"
++      skuDisableTime: "2025-08-10T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1752339600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
+-      webstoreSkuId: "web-liligant-raidday-ticket-box"
++      skuDisableTimeUtcMs: 1754845200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
++      webstoreSkuId: "web-origin-raid-day-ticket-box"
+       webstoreSkuPriceE6: 4990000
+     }
+   }
+@@ -370248,12 +370620,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket.5_HisuianLilligantRaidDay_title"
++      title: "general1.ticket._OriginRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-07-12T17:00:00"
++      skuDisableTime: "2025-08-10T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1752339600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1754845200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
+     }
+   }
+ }
+@@ -371870,6 +372242,21 @@
+   }
+ }
+ template {
++  template_id: "sequence_dynamax_cannon"
++  data {
++    template_id: "sequence_dynamax_cannon"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx dynamax_cannon"
++      sequence: "sfx attacker 744-0_dynamax_cannon"
++      sequence: "wait 1.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++template {
+   template_id: "sequence_dynamic_punch"
+   data {
+     template_id: "sequence_dynamic_punch"
+@@ -375863,390 +376250,7 @@
+     }
+   }
+ }
+-template {
+-  template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_8"
+-  data {
+-    template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_8"
+-    breadMoveLevelSettings {
+-      group: 8
+-      aSettings {
+-        mpCost: 1
+-        candyCost: 1
+-      }
+-      aSettings {
+-        mpCost: 600
+-        candyCost: 1200
+-        xpRewards: 6000
+-      }
+-      aSettings {
+-        mpCost: 800
+-        candyCost: 1200
+-        xlCandyCost: 320
+-        xpRewards: 8000
+-      }
+-      bSettings {
+-        mpCost: 400
+-        candyCost: 400
+-        xpRewards: 4000
+-      }
+-      bSettings {
+-        mpCost: 600
+-        candyCost: 1200
+-        xpRewards: 6000
+-      }
+-      bSettings {
+-        mpCost: 800
+-        candyCost: 1200
+-        xlCandyCost: 320
+-        xpRewards: 8000
+-      }
+-      cSettings {
+-        mpCost: 400
+-        candyCost: 400
+-        xpRewards: 4000
+-      }
+-      cSettings {
+-        mpCost: 600
+-        candyCost: 1200
+-        xpRewards: 6000
+-      }
+-      cSettings {
+-        mpCost: 800
+-        candyCost: 1200
+-        xlCandyCost: 320
+-        xpRewards: 8000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_EVENT_PASS_POINT_GO_FEST_02"
+-  data {
+-    template_id: "ITEM_EVENT_PASS_POINT_GO_FEST_02"
+-    itemSettings {
+-      itemId: ITEM_EVENT_PASS_POINT_GO_FEST_02
+-      itemType: ITEM_TYPE_EVENT_PASS_POINT
+-      category: ITEM_CATEGORY_EVENT_PASS_POINT
+-      ignoreInventorySpace: true
+-      itemCap: 999999
+-      eventPassPoint {
+-        eventPassId: "EVENT_PASS_GOFEST2025_MAXFINALE"
+-      }
+-      timePeriodCounters {
+-        playerActivity {
+-          limit: 50
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_FEST_02"
+-  data {
+-    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_FEST_02"
+-    itemExpirationSettings {
+-      item: ITEM_EVENT_PASS_POINT_GO_FEST_02
+-      expirationTime: "2025-08-26T21:00:00"
+-      emergencyExpirationTime: "2025-09-25T21:00:00"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001"
+-  data {
+-    template_id: "LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001"
+-    locationCardSettings {
+-      locationCard: LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001
+-      imageUrl: "lc_Wcs2025_anaheim"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001"
+-  data {
+-    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001"
+-    locationCardSettings {
+-      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001
+-      imageUrl: "sb_GoFest2025_Eternatus"
+-      cardType: SPECIAL_BACKGROUND
+-      vfxAddress: "bgfx_goFest_2025_eternatus"
+-    }
+-  }
+-}
+-template {
+-  template_id: "NON_COMBAT_V0482_MOVE_DYNAMAX_CANNON"
+-  data {
+-    template_id: "NON_COMBAT_V0482_MOVE_DYNAMAX_CANNON"
+-    nonCombatMoveSettings {
+-      uniqueId: DYNAMAX_CANNON
+-      cost {
+-        candyCost: 30
+-        stardustCost: 5000
+-      }
+-      bonusEffect {
+-        maxMoveBonus {
+-          excludedPokedexIds: ZACIAN
+-          excludedPokedexIds: ZAMAZENTA
+-          numAllMaxMoveLevelIncrease: 1
+-        }
+-      }
+-      durationMs: 600000
+-      bonusType: MAX_MOVE_BONUS
+-      enableMultiUse: true
+-      extraDurationMs: 4000
+-      enableNonCombatMove: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "POKEMON_UPGRADE_OVERRIDE_SETTINGS_V0890_POKEMON_ETERNATUS"
+-  data {
+-    template_id: "POKEMON_UPGRADE_OVERRIDE_SETTINGS_V0890_POKEMON_ETERNATUS"
+-    pokemon_upgrades {
+-      upgradesPerLevel: 2
+-      allowedLevelsAbovePlayer: 10
+-      candyCost: 30
+-      candyCost: 30
+-      candyCost: 30
+-      candyCost: 30
+-      candyCost: 30
+-      candyCost: 30
+-      candyCost: 30
+-      candyCost: 30
+-      candyCost: 30
+-      candyCost: 30
+-      candyCost: 60
+-      candyCost: 60
+-      candyCost: 60
+-      candyCost: 60
+-      candyCost: 60
+-      candyCost: 60
+-      candyCost: 60
+-      candyCost: 60
+-      candyCost: 60
+-      candyCost: 60
+-      candyCost: 90
+-      candyCost: 90
+-      candyCost: 90
+-      candyCost: 90
+-      candyCost: 90
+-      candyCost: 120
+-      candyCost: 120
+-      candyCost: 120
+-      candyCost: 120
+-      candyCost: 120
+-      candyCost: 175
+-      candyCost: 175
+-      candyCost: 225
+-      candyCost: 225
+-      candyCost: 300
+-      candyCost: 300
+-      candyCost: 375
+-      candyCost: 375
+-      candyCost: 890
+-      candyCost: 0
+-      candyCost: 0
+-      candyCost: 0
+-      candyCost: 0
+-      candyCost: 0
+-      candyCost: 0
+-      candyCost: 0
+-      candyCost: 0
+-      candyCost: 0
+-      candyCost: 0
+-      candyCost: 0
+-      stardustCost: 200
+-      stardustCost: 200
+-      stardustCost: 400
+-      stardustCost: 400
+-      stardustCost: 600
+-      stardustCost: 600
+-      stardustCost: 800
+-      stardustCost: 800
+-      stardustCost: 1000
+-      stardustCost: 1000
+-      stardustCost: 1300
+-      stardustCost: 1300
+-      stardustCost: 1600
+-      stardustCost: 1600
+-      stardustCost: 1900
+-      stardustCost: 1900
+-      stardustCost: 2200
+-      stardustCost: 2200
+-      stardustCost: 2500
+-      stardustCost: 2500
+-      stardustCost: 3000
+-      stardustCost: 3000
+-      stardustCost: 3500
+-      stardustCost: 3500
+-      stardustCost: 4000
+-      stardustCost: 4000
+-      stardustCost: 4500
+-      stardustCost: 4500
+-      stardustCost: 5000
+-      stardustCost: 5000
+-      stardustCost: 6000
+-      stardustCost: 6000
+-      stardustCost: 7000
+-      stardustCost: 7000
+-      stardustCost: 8000
+-      stardustCost: 8000
+-      stardustCost: 9000
+-      stardustCost: 9000
+-      stardustCost: 10000
+-      stardustCost: 10000
+-      stardustCost: 11000
+-      stardustCost: 11000
+-      stardustCost: 12000
+-      stardustCost: 12000
+-      stardustCost: 13000
+-      stardustCost: 13000
+-      stardustCost: 14000
+-      stardustCost: 14000
+-      stardustCost: 15000
+-      shadowStardustMultiplier: 1.2
+-      shadowCandyMultiplier: 1.2
+-      purifiedStardustMultiplier: 0.9
+-      purifiedCandyMultiplier: 0.9
+-      maxNormalUpgradeLevel: 50
+-      defaultCpBoostAdditionalLevel: 1
+-      xlCandyMinPlayerLevel: 31
+-      xlCandyCost: 100
+-      xlCandyCost: 100
+-      xlCandyCost: 200
+-      xlCandyCost: 200
+-      xlCandyCost: 400
+-      xlCandyCost: 400
+-      xlCandyCost: 635
+-      xlCandyCost: 635
+-      xlCandyCost: 890
+-      xlCandyCost: 890
+-      xlCandyMinPokemonLevel: 40
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_ETERNATUS"
+-  data {
+-    template_id: "STICKER_ETERNATUS"
+-    stickerMetadata {
+-      stickerId: "STICKER_ETERNATUS"
+-      maxCount: 25
+-      pokemonId: ETERNATUS
+-      category: "Pokemon"
+-      releaseDate: 20250718
+-      regionId: 7
+-    }
+-  }
+-}
+-template {
+-  template_id: "VN_BM_062"
+-  data {
+-    template_id: "VN_BM_062"
+-    moveSettings {
+-      movementId: VN_BM_062
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_DRAGON
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "max_dynamax_cannon"
+-      durationMs: 2500
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+-    }
+-  }
+-}
+-template {
+-  template_id: "sequence_dynamax_cannon"
+-  data {
+-    template_id: "sequence_dynamax_cannon"
+-    move_sequence_settings {
+-      sequence: "anim attacker atk-move"
+-      sequence: "wait 0.5"
+-      sequence: "vfx dynamax_cannon"
+-      sequence: "sfx attacker 744-0_dynamax_cannon"
+-      sequence: "wait 1.0"
+-      sequence: "sys ui-sync"
+-      sequence: "sys complete"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2025_JANGHEUNG_SUMMER_FESTIVAL"
+-  data {
+-    template_id: "LC_2025_JANGHEUNG_SUMMER_FESTIVAL"
+-    locationCardSettings {
+-      locationCard: LC_2025_JANGHEUNG_SUMMER_FESTIVAL
+-      imageUrl: "lc_Jangheung_Water_Festival_2025"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
+-  data {
+-    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_shirt_wcs2025anaheim-white_0_icon"
+-      displayStringId: "avatar_n_shirt_wcs2025anaheim-white"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
+-  data {
+-    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_shirt_wcs2025anaheim-yellow_0_icon"
+-      displayStringId: "avatar_n_shirt_wcs2025anaheim-yellow"
+-    }
+-  }
+-}
+-template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+-  template_id: "SNOM_FROSMOTH_EVOLUTION_QUEST"
+-  data {
+-    template_id: "SNOM_FROSMOTH_EVOLUTION_QUEST"
+-    evolution_quest_template {
+-      questTemplateId: "SNOM_FROSMOTH_EVOLUTION_QUEST"
+-      questType: QUEST_BUDDY_EARN_AFFECTION_POINTS
+-      goals {
+-        target: 10
+-      }
+-      context: EVOLUTION_QUEST
+-      display {
+-        description: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
+-        title: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hat_eternatussuit_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hat_eternatussuit_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hat_eternatussuit_0_icon"
+-      displayStringId: "avatar_hat_eternatus"
+-    }
+-  }
+-}
+-batch_id: 1754137614908
++batch_id: 1754345506337
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -376283,16 +376283,17 @@
+@@ -376282,18 +376286,16 @@
+ experiment_id: 3033
  experiment_id: 3063
  experiment_id: 3710
- experiment_id: 3722
--experiment_id: 3728
-+experiment_id: 3729
- experiment_id: 3738
+-experiment_id: 3722
++experiment_id: 3723
+ experiment_id: 3729
+-experiment_id: 3738
++experiment_id: 3739
  experiment_id: 3746
  experiment_id: 3756
- experiment_id: 3861
- experiment_id: 3863
--experiment_id: 3877
--experiment_id: 4693
--experiment_id: 4891
-+experiment_id: 3867
-+experiment_id: 3868
-+experiment_id: 3882
+-experiment_id: 3861
+-experiment_id: 3863
++experiment_id: 3864
+ experiment_id: 3867
+-experiment_id: 3868
+-experiment_id: 3882
++experiment_id: 3869
  experiment_id: 4998
-+experiment_id: 5116
+-experiment_id: 5116
++experiment_id: 5117
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -376315,7 +376316,6 @@
- experiment_id: 20947
- experiment_id: 55571
- experiment_id: 55751
--experiment_id: 70040
- experiment_id: 70080
- experiment_id: 70095
- experiment_id: 80436
+@@ -376302,7 +376304,6 @@
+ experiment_id: 5510
+ experiment_id: 6075
+ experiment_id: 7052
+-experiment_id: 7054
+ experiment_id: 7055
+ experiment_id: 8944
+ experiment_id: 8980
