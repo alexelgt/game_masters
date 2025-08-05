@@ -1,1157 +1,6899 @@
---- GAME_MASTER_old.txt	2025-08-03 19:50:27.049843790 +0200
-+++ GAME_MASTER.txt	2025-08-05 09:26:20.521928832 +0200
-@@ -41736,7 +41736,7 @@
-       prepareBreadLobbySoloMs: 80000
-       rvnVersion: 2
-       maxRemotePlayersPerBreadDoughLobby: 40
--      maxRemoteBreadBattlePassesAllowed: 20
-+      maxRemoteBreadBattlePassesAllowed: 10
-       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
-       fetchProfileFromSocialEnabled: true
-       maxPlayersToPrepareBreadDoughLobby: 40
-@@ -42053,6 +42053,62 @@
+--- GAME_MASTER_old.txt	2025-08-05 09:26:20.521928832 +0200
++++ GAME_MASTER.txt	2025-08-05 20:37:39.352730414 +0200
+@@ -77915,14 +77915,14 @@
+     template_id: "EVENT_PASS_MONTH3_SEASON_STORE_REDIRECT"
+     iapItemDisplay {
+       sku: "pgorelease.month3_deluxe_event_pass_track_redirect"
++      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       title: "season_pass_premium_track_title_aug"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2024-08-05T10:00:00"
+-      skuDisableTime: "2024-09-04T10:00:00"
+-      skuEnableTimeUtcMs: 1722852000000
+-      skuDisableTimeUtcMs: 1725444000000
++      skuEnableTime: "2025-07-29T10:00:00"
++      skuDisableTime: "2025-09-04T10:00:00"
++      skuEnableTimeUtcMs: 1753783200000
++      skuDisableTimeUtcMs: 1756980000000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-go-pass-june-2025.jpg"
+     }
    }
- }
- template {
-+  template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_8"
-+  data {
-+    template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_8"
-+    breadMoveLevelSettings {
-+      group: 8
-+      aSettings {
-+        mpCost: 1
-+        candyCost: 1
-+      }
-+      aSettings {
-+        mpCost: 600
-+        candyCost: 1200
-+        xpRewards: 6000
-+      }
-+      aSettings {
-+        mpCost: 800
-+        candyCost: 1200
-+        xlCandyCost: 320
-+        xpRewards: 8000
-+      }
-+      bSettings {
-+        mpCost: 400
-+        candyCost: 400
-+        xpRewards: 4000
-+      }
-+      bSettings {
-+        mpCost: 600
-+        candyCost: 1200
-+        xpRewards: 6000
-+      }
-+      bSettings {
-+        mpCost: 800
-+        candyCost: 1200
-+        xlCandyCost: 320
-+        xpRewards: 8000
-+      }
-+      cSettings {
-+        mpCost: 400
-+        candyCost: 400
-+        xpRewards: 4000
-+      }
-+      cSettings {
-+        mpCost: 600
-+        candyCost: 1200
-+        xpRewards: 6000
-+      }
-+      cSettings {
-+        mpCost: 800
-+        candyCost: 1200
-+        xlCandyCost: 320
-+        xpRewards: 8000
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_Z"
+@@ -126706,7 +126706,7 @@
    data {
-     template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_Z"
-@@ -127799,6 +127855,27 @@
-   }
- }
- template {
-+  template_id: "ITEM_EVENT_PASS_POINT_GO_FEST_02"
-+  data {
-+    template_id: "ITEM_EVENT_PASS_POINT_GO_FEST_02"
-+    itemSettings {
-+      itemId: ITEM_EVENT_PASS_POINT_GO_FEST_02
-+      itemType: ITEM_TYPE_EVENT_PASS_POINT
-+      category: ITEM_CATEGORY_EVENT_PASS_POINT
-+      ignoreInventorySpace: true
-+      itemCap: 999999
-+      eventPassPoint {
-+        eventPassId: "EVENT_PASS_GOFEST2025_MAXFINALE"
-+      }
-+      timePeriodCounters {
-+        playerActivity {
-+          limit: 50
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "ITEM_EVENT_PASS_POINT_GO_TOUR_01"
-   data {
-     template_id: "ITEM_EVENT_PASS_POINT_GO_TOUR_01"
-@@ -127870,6 +127947,7 @@
+     template_id: "FRIENDSHIP_LEVEL_0"
+     friendshipMilestoneSettings {
+-      milestoneXpReward: 1500
++      milestoneXpReward: 1000
+       attackBonusPercentage: 1
+       unlockedTrading: REGULAR_IN_POKEDEX
+     }
+@@ -126718,7 +126718,7 @@
+     template_id: "FRIENDSHIP_LEVEL_1"
+     friendshipMilestoneSettings {
+       minPointsToReach: 1
+-      milestoneXpReward: 4500
++      milestoneXpReward: 3000
+       attackBonusPercentage: 1.03
+       unlockedTrading: REGULAR_IN_POKEDEX
+       unlockedTrading: SPECIAL_IN_POKEDEX
+@@ -126738,7 +126738,7 @@
+     template_id: "FRIENDSHIP_LEVEL_2"
+     friendshipMilestoneSettings {
+       minPointsToReach: 7
+-      milestoneXpReward: 15000
++      milestoneXpReward: 10000
+       attackBonusPercentage: 1.05
+       raidBallBonus: 1
+       unlockedTrading: REGULAR_IN_POKEDEX
+@@ -126761,7 +126761,7 @@
+     template_id: "FRIENDSHIP_LEVEL_3"
+     friendshipMilestoneSettings {
+       minPointsToReach: 30
+-      milestoneXpReward: 75000
++      milestoneXpReward: 50000
+       attackBonusPercentage: 1.07
+       raidBallBonus: 2
+       unlockedTrading: REGULAR_IN_POKEDEX
+@@ -126784,7 +126784,7 @@
+     template_id: "FRIENDSHIP_LEVEL_4"
+     friendshipMilestoneSettings {
+       minPointsToReach: 90
+-      milestoneXpReward: 150000
++      milestoneXpReward: 100000
+       attackBonusPercentage: 1.1
+       raidBallBonus: 4
+       unlockedTrading: REGULAR_IN_POKEDEX
+@@ -127968,7 +127968,7 @@
        }
        timePeriodCounters {
          playerActivity {
+-          limit: 300
 +          limit: 250
          }
        }
      }
-@@ -128488,16 +128566,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-07-12T14:00:00"
--        eventEndTime: "2025-07-12T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_HisuianLilligantRaidDay"
-+        eventStartTime: "2025-08-10T11:00:00"
-+        eventEndTime: "2025-08-10T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_OriginRaidDay"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_GRAY_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_HisuianLilligantRaidDay"
--        textRewardsKey: "text_rewards_key_HisuianLilligantRaidDay"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_OriginRaidDay"
-+        textRewardsKey: "text_rewards_key_OriginRaidDay"
-         iconRewards {
-           type: ITEM
-           item {
-@@ -128516,11 +128594,11 @@
-           stardust: 2
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1752328800000
--        clientEventEndTimeUtcMs: 1752339600000
-+        clientEventStartTimeUtcMs: 1754823600000
-+        clientEventEndTimeUtcMs: 1754845200000
-       }
--      nameOverride: "general1.ticket.5_HisuianLilligantRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_desc_HisuianLilligantRaidDay"
-+      nameOverride: "general1.ticket._OriginRaidDay_title"
-+      descriptionOverride: "item_event_ticket_gray_desc_OriginRaidDay"
+@@ -134077,13 +134077,12 @@
+     iapItemDisplay {
+       sku: "pgorelease.month3_deluxe_event_pass_track_unlock"
+       sortOrder: 1
+-      hidden: true
+       title: "season_pass_premium_track_title_aug"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2024-08-05T10:00:00"
+-      skuDisableTime: "2024-09-04T10:00:00"
+-      skuEnableTimeUtcMs: 1722852000000
+-      skuDisableTimeUtcMs: 1725444000000
++      skuEnableTime: "2025-07-29T10:00:00"
++      skuDisableTime: "2025-09-04T10:00:00"
++      skuEnableTimeUtcMs: 1753783200000
++      skuDisableTimeUtcMs: 1756980000000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-go-pass-june-2025.jpg"
+     }
+   }
+@@ -134095,13 +134094,12 @@
+     iapItemDisplay {
+       sku: "pgorelease.month3_deluxe_event_pass_track_unlock_plus_points"
+       sortOrder: 1
+-      hidden: true
+       title: "season_pass_premium_track_plus_ten_ranks_title_aug"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
+-      skuEnableTime: "2024-08-05T10:00:00"
+-      skuDisableTime: "2024-09-04T10:00:00"
+-      skuEnableTimeUtcMs: 1722852000000
+-      skuDisableTimeUtcMs: 1725444000000
++      skuEnableTime: "2025-07-29T10:00:00"
++      skuDisableTime: "2025-09-04T10:00:00"
++      skuEnableTimeUtcMs: 1753783200000
++      skuDisableTimeUtcMs: 1756980000000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-go-pass-june-2025.jpg"
+     }
+   }
+@@ -376250,6 +376248,6766 @@
      }
    }
  }
-@@ -128533,16 +128611,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-07-12T14:00:00"
--        eventEndTime: "2025-07-12T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_HisuianLilligantRaidDay"
-+        eventStartTime: "2025-08-10T11:00:00"
-+        eventEndTime: "2025-08-10T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_details_OriginRaidDay"
-         ticketItem: ITEM_EVENT_TICKET_GRAY
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1752328800000
--        clientEventEndTimeUtcMs: 1752339600000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
-+        clientEventStartTimeUtcMs: 1754823600000
-+        clientEventEndTimeUtcMs: 1754845200000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_HisuianLilligantRaidDay"
-+      descriptionOverride: "item_event_ticket_gray_details_OriginRaidDay"
-     }
-   }
- }
-@@ -128697,6 +128775,17 @@
-   }
- }
- template {
-+  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_FEST_02"
-+  data {
-+    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_FEST_02"
-+    itemExpirationSettings {
-+      item: ITEM_EVENT_PASS_POINT_GO_FEST_02
-+      expirationTime: "2025-08-26T21:00:00"
-+      emergencyExpirationTime: "2025-09-25T21:00:00"
-+    }
-+  }
-+}
 +template {
-   template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_TOUR_01"
-   data {
-     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_TOUR_01"
-@@ -129084,7 +129173,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 1
-       incense {
--        incenseLifetimeSeconds: 7200
-+        incenseLifetimeSeconds: 3600
-       }
-     }
-   }
-@@ -130703,6 +130792,16 @@
-   }
- }
- template {
-+  template_id: "LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001"
++  template_id: "EVENT_PASS_AUGUST2025_SEASON"
 +  data {
-+    template_id: "LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001"
-+    locationCardSettings {
-+      locationCard: LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001
-+      imageUrl: "lc_Wcs2025_anaheim"
-+    }
-+  }
-+}
-+template {
-   template_id: "LC_2025_BERLIN_ROADTRIP_001"
-   data {
-     template_id: "LC_2025_BERLIN_ROADTRIP_001"
-@@ -130743,6 +130842,16 @@
-   }
- }
- template {
-+  template_id: "LC_2025_JANGHEUNG_SUMMER_FESTIVAL"
-+  data {
-+    template_id: "LC_2025_JANGHEUNG_SUMMER_FESTIVAL"
-+    locationCardSettings {
-+      locationCard: LC_2025_JANGHEUNG_SUMMER_FESTIVAL
-+      imageUrl: "lc_Jangheung_Water_Festival_2025"
-+    }
-+  }
-+}
-+template {
-   template_id: "LC_2025_JERSEYCITY_GOFEST_001"
-   data {
-     template_id: "LC_2025_JERSEYCITY_GOFEST_001"
-@@ -130938,6 +131047,18 @@
-   }
- }
- template {
-+  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001"
-+  data {
-+    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001"
-+    locationCardSettings {
-+      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001
-+      imageUrl: "sb_GoFest2025_Eternatus"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_goFest_2025_eternatus"
-+    }
-+  }
-+}
-+template {
-   template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001"
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_REGI_001"
-@@ -134834,6 +134955,31 @@
-   }
- }
- template {
-+  template_id: "NON_COMBAT_V0482_MOVE_DYNAMAX_CANNON"
-+  data {
-+    template_id: "NON_COMBAT_V0482_MOVE_DYNAMAX_CANNON"
-+    nonCombatMoveSettings {
-+      uniqueId: DYNAMAX_CANNON
-+      cost {
-+        candyCost: 30
-+        stardustCost: 5000
++    template_id: "EVENT_PASS_AUGUST2025_SEASON"
++    eventPassSettings {
++      prefix: "EVENT_PASS_AUGUST2025_SEASON"
++      pointsItemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_03
++      trackConditions {
++        track: FREE
++        trackTitleKey: "season_pass_base_track_title_aug"
 +      }
-+      bonusEffect {
-+        maxMoveBonus {
-+          excludedPokedexIds: ZACIAN
-+          excludedPokedexIds: ZAMAZENTA
-+          numAllMaxMoveLevelIncrease: 1
++      trackConditions {
++        track: PREMIUM
++        badge: BADGE_EVENT_0130
++        trackTitleKey: "season_pass_premium_track_title_aug"
++      }
++      expirationTime: "2025-09-02T10:00:00"
++      maxTierLevel: 200
++      additionalBonusTiersLevel: 101
++      eventPassDisplaySettings {
++        bonusBoxes {
++          text: "quest_catch_pokemon_singular"
++          iconType: SPAWN_UNKNOWN
++          quantity: 5
++        }
++        bonusBoxes {
++          text: "quest_hatch_egg_singular"
++          iconType: EGG
++          quantity: 40
++        }
++        bonusBoxes {
++          text: "quest_win_raid_singular"
++          iconType: RAID
++          quantity: 100
++        }
++        eventPassTrackUpgradeDescriptions {
++          passTrackUpgradeHeaderDescription: "season_pass_track_upgrade_header_description_100"
++          eventPassTrackToUpgradeTo: PREMIUM
++          trackUnlockSkuId: "pgorelease.month3_deluxe_event_pass_track_unlock"
++          trackUnlockPlusPointsSkuId: "pgorelease.month3_deluxe_event_pass_track_unlock_plus_points"
++          eventDurationKey: "season_pass_aug2025_event_duration"
++          upgradeDescriptionKey: "season_pass_aug2025_upgrade_description"
++          ranksToHighlightRewards: 82
++          ranksToHighlightRewards: 99
++          ranksToHighlightRewards: 100
++          detailsLinkKey: "season_pass_details_link_aug"
++          trackUnlockImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
++          trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
++        }
++        eventPassTitleKey: "season_pass_base_track_title_aug"
++        headerIconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-delightfuldays-logo-2025.png"
++        premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
++        premiumRewardBannerMiddle: "event_pass_premium_reward_banner_middle_text"
++        premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text"
++        premiumRewardBannerImageUrl: "https://storage.googleapis.com/prod-public-images/lucky_trinket_small.png"
++        premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
++        todayViewSection: SEASONAL_EVENT_PASS_SECTION
++      }
++      gracePeriodEndTime: "2025-09-04T10:00:00"
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_100_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_100_FREE"
++    eventPassTierSettings {
++      rank: 100
++      track: FREE
++      minPointsRequired: 9900
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: MOLTRES
++          pokemonDisplay {
++            form: MOLTRES_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_2025_SEASON19
++            }
++          }
++          statsLimitsOverride {
++            minPokemonLevel: 20
++            maxPokemonLevel: 20
++          }
++          isFeaturedPokemon: true
 +        }
 +      }
-+      durationMs: 600000
-+      bonusType: MAX_MOVE_BONUS
-+      enableMultiUse: true
-+      extraDurationMs: 4000
-+      enableNonCombatMove: true
 +    }
 +  }
 +}
 +template {
-   template_id: "N_DISPLAY_m_backpack_eggbackpack_0"
-   data {
-     template_id: "N_DISPLAY_m_backpack_eggbackpack_0"
-@@ -138010,6 +138156,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_hat_eternatussuit_0"
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_100_PREMIUM"
 +  data {
-+    template_id: "N_DISPLAY_n_hat_eternatussuit_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_hat_eternatussuit_0_icon"
-+      displayStringId: "avatar_hat_eternatus"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_hat_fedora_0"
-   data {
-     template_id: "N_DISPLAY_n_hat_fedora_0"
-@@ -145970,6 +146126,26 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_wcs2025anaheim-white_0_icon"
-+      displayStringId: "avatar_n_shirt_wcs2025anaheim-white"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_wcs2025anaheim-yellow_0_icon"
-+      displayStringId: "avatar_n_shirt_wcs2025anaheim-yellow"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_shirt_wcsyokohama_0"
-   data {
-     template_id: "N_DISPLAY_n_shirt_wcsyokohama_0"
-@@ -153395,6 +153571,133 @@
-   }
- }
- template {
-+  template_id: "POKEMON_UPGRADE_OVERRIDE_SETTINGS_V0890_POKEMON_ETERNATUS"
-+  data {
-+    template_id: "POKEMON_UPGRADE_OVERRIDE_SETTINGS_V0890_POKEMON_ETERNATUS"
-+    pokemon_upgrades {
-+      upgradesPerLevel: 2
-+      allowedLevelsAbovePlayer: 10
-+      candyCost: 30
-+      candyCost: 30
-+      candyCost: 30
-+      candyCost: 30
-+      candyCost: 30
-+      candyCost: 30
-+      candyCost: 30
-+      candyCost: 30
-+      candyCost: 30
-+      candyCost: 30
-+      candyCost: 60
-+      candyCost: 60
-+      candyCost: 60
-+      candyCost: 60
-+      candyCost: 60
-+      candyCost: 60
-+      candyCost: 60
-+      candyCost: 60
-+      candyCost: 60
-+      candyCost: 60
-+      candyCost: 90
-+      candyCost: 90
-+      candyCost: 90
-+      candyCost: 90
-+      candyCost: 90
-+      candyCost: 120
-+      candyCost: 120
-+      candyCost: 120
-+      candyCost: 120
-+      candyCost: 120
-+      candyCost: 175
-+      candyCost: 175
-+      candyCost: 225
-+      candyCost: 225
-+      candyCost: 300
-+      candyCost: 300
-+      candyCost: 375
-+      candyCost: 375
-+      candyCost: 890
-+      candyCost: 0
-+      candyCost: 0
-+      candyCost: 0
-+      candyCost: 0
-+      candyCost: 0
-+      candyCost: 0
-+      candyCost: 0
-+      candyCost: 0
-+      candyCost: 0
-+      candyCost: 0
-+      candyCost: 0
-+      stardustCost: 200
-+      stardustCost: 200
-+      stardustCost: 400
-+      stardustCost: 400
-+      stardustCost: 600
-+      stardustCost: 600
-+      stardustCost: 800
-+      stardustCost: 800
-+      stardustCost: 1000
-+      stardustCost: 1000
-+      stardustCost: 1300
-+      stardustCost: 1300
-+      stardustCost: 1600
-+      stardustCost: 1600
-+      stardustCost: 1900
-+      stardustCost: 1900
-+      stardustCost: 2200
-+      stardustCost: 2200
-+      stardustCost: 2500
-+      stardustCost: 2500
-+      stardustCost: 3000
-+      stardustCost: 3000
-+      stardustCost: 3500
-+      stardustCost: 3500
-+      stardustCost: 4000
-+      stardustCost: 4000
-+      stardustCost: 4500
-+      stardustCost: 4500
-+      stardustCost: 5000
-+      stardustCost: 5000
-+      stardustCost: 6000
-+      stardustCost: 6000
-+      stardustCost: 7000
-+      stardustCost: 7000
-+      stardustCost: 8000
-+      stardustCost: 8000
-+      stardustCost: 9000
-+      stardustCost: 9000
-+      stardustCost: 10000
-+      stardustCost: 10000
-+      stardustCost: 11000
-+      stardustCost: 11000
-+      stardustCost: 12000
-+      stardustCost: 12000
-+      stardustCost: 13000
-+      stardustCost: 13000
-+      stardustCost: 14000
-+      stardustCost: 14000
-+      stardustCost: 15000
-+      shadowStardustMultiplier: 1.2
-+      shadowCandyMultiplier: 1.2
-+      purifiedStardustMultiplier: 0.9
-+      purifiedCandyMultiplier: 0.9
-+      maxNormalUpgradeLevel: 50
-+      defaultCpBoostAdditionalLevel: 1
-+      xlCandyMinPlayerLevel: 31
-+      xlCandyCost: 100
-+      xlCandyCost: 100
-+      xlCandyCost: 200
-+      xlCandyCost: 200
-+      xlCandyCost: 400
-+      xlCandyCost: 400
-+      xlCandyCost: 635
-+      xlCandyCost: 635
-+      xlCandyCost: 890
-+      xlCandyCost: 890
-+      xlCandyMinPokemonLevel: 40
-+    }
-+  }
-+}
-+template {
-   template_id: "POKEMON_UPGRADE_SETTINGS"
-   data {
-     template_id: "POKEMON_UPGRADE_SETTINGS"
-@@ -153584,6 +153887,17 @@
-   }
- }
- template {
-+  template_id: "PTC_OAUTH_SETTINGS"
-+  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    }
-+  }
-+}
-+template {
-   template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
-   data {
-     template_id: "QUEST_FIRST_CATCH_OF_THE_DAY"
-@@ -153901,7 +154215,7 @@
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
-       enabled: true
--      dailySquashLimit: 20
-+      dailySquashLimit: 10
-     }
-   }
- }
-@@ -157960,6 +158274,24 @@
-   }
- }
- template {
-+  template_id: "SNOM_FROSMOTH_EVOLUTION_QUEST"
-+  data {
-+    template_id: "SNOM_FROSMOTH_EVOLUTION_QUEST"
-+    evolution_quest_template {
-+      questTemplateId: "SNOM_FROSMOTH_EVOLUTION_QUEST"
-+      questType: QUEST_BUDDY_EARN_AFFECTION_POINTS
-+      goals {
-+        target: 10
-+      }
-+      context: EVOLUTION_QUEST
-+      display {
-+        description: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
-+        title: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_100_PREMIUM"
++    eventPassTierSettings {
++      rank: 100
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LUCKY_FRIEND_APPLICATOR
++          amount: 1
++        }
 +      }
 +    }
 +  }
 +}
 +template {
-   template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
-   data {
-     template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
-@@ -183069,6 +183401,20 @@
-   }
- }
- template {
-+  template_id: "STICKER_ETERNATUS"
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_101_FREE"
 +  data {
-+    template_id: "STICKER_ETERNATUS"
-+    stickerMetadata {
-+      stickerId: "STICKER_ETERNATUS"
-+      maxCount: 25
-+      pokemonId: ETERNATUS
-+      category: "Pokemon"
-+      releaseDate: 20250718
-+      regionId: 7
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_101_FREE"
++    eventPassTierSettings {
++      rank: 101
++      track: FREE
++      minPointsRequired: 10000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
 +    }
 +  }
 +}
 +template {
-   template_id: "STICKER_FALL_2023_1"
-   data {
-     template_id: "STICKER_FALL_2023_1"
-@@ -350868,9 +351214,8 @@
-       quickMoves: DRAGON_TAIL_FAST
-       quickMoves: POISON_JAB_FAST
-       cinematicMoves: SLUDGE_BOMB
--      cinematicMoves: DRAGON_PULSE
--      cinematicMoves: FLAMETHROWER
-       cinematicMoves: HYPER_BEAM
-+      cinematicMoves: FLAMETHROWER
-       pokemonClass: POKEMON_CLASS_LEGENDARY
-       pokedexHeightM: 20
-       pokedexWeightKg: 950
-@@ -350878,8 +351223,8 @@
-       weightStdDev: 118.75
-       familyId: FAMILY_ETERNATUS
-       kmBuddyDistance: 20
--      modelHeight: 1
--      modelScaleV2: 1
-+      modelHeight: 4
-+      modelScaleV2: 0.34
-       form: ETERNATUS_ETERNAMAX
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -361942,6 +362287,29 @@
-   }
- }
- template {
-+  template_id: "VN_BM_062"
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_101_PREMIUM"
 +  data {
-+    template_id: "VN_BM_062"
-+    moveSettings {
-+      movementId: VN_BM_062
-+      animationId: 5
-+      pokemonType: POKEMON_TYPE_DRAGON
-+      accuracyChance: 1
-+      staminaLossScalar: 0.01
-+      trainerLevelMin: 1
-+      trainerLevelMax: 100
-+      vfxName: "max_dynamax_cannon"
-+      durationMs: 2500
-+      damageWindowStartMs: 2000
-+      damageWindowEndMs: 3400
-+      obMoveSettingsNumber18: 250
-+      obMoveSettingsNumber18: 300
-+      obMoveSettingsNumber18: 350
-+      obMoveSettingsNumber18: 450
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_101_PREMIUM"
++    eventPassTierSettings {
++      rank: 101
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
 +    }
 +  }
 +}
 +template {
-   template_id: "VS_SEEKER_CLIENT_SETTINGS"
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-@@ -364148,7 +364516,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: VIRIZION
-+          pokemon_id: LUGIA
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -364798,7 +365166,7 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemon_id: VIRIZION
-+          pokemon_id: LUGIA
-         }
-         unlockedAtRank: 20
-         attackIvOverride {
-@@ -368291,6 +368659,7 @@
-       sku: "evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._AdventureWK0729_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -368311,6 +368680,7 @@
-       sku: "evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._AdventureWK0729_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -368466,13 +368836,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket.5_HisuianLilligantRaidDay_title"
-+      title: "general1.ticket._OriginRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-07-12T17:00:00"
-+      skuDisableTime: "2025-08-10T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1752339600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
--      webstoreSkuId: "web-liligant-raidday-ticket-box"
-+      skuDisableTimeUtcMs: 1754845200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
-+      webstoreSkuId: "web-origin-raid-day-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -368487,12 +368857,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket.5_HisuianLilligantRaidDay_title"
-+      title: "general1.ticket._OriginRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-07-12T17:00:00"
-+      skuDisableTime: "2025-08-10T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1752339600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1754845200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
-     }
-   }
- }
-@@ -370069,6 +370439,7 @@
-       sku: "pgorelease.evergreenticket.1"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._AdventureWK0729_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -370089,6 +370460,7 @@
-       sku: "pgorelease.evergreenticket.1.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 4
-+      hidden: true
-       spriteId: "evergreenticket.1"
-       title: "general1.ticket._AdventureWK0729_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -370227,13 +370599,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket.5_HisuianLilligantRaidDay_title"
-+      title: "general1.ticket._OriginRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-07-12T17:00:00"
-+      skuDisableTime: "2025-08-10T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1752339600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
--      webstoreSkuId: "web-liligant-raidday-ticket-box"
-+      skuDisableTimeUtcMs: 1754845200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
-+      webstoreSkuId: "web-origin-raid-day-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -370248,12 +370620,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket.5_HisuianLilligantRaidDay_title"
-+      title: "general1.ticket._OriginRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-07-12T17:00:00"
-+      skuDisableTime: "2025-08-10T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1752339600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-hisuian-lilligant-raid-day-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1754845200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
-     }
-   }
- }
-@@ -371870,6 +372242,21 @@
-   }
- }
- template {
-+  template_id: "sequence_dynamax_cannon"
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_102_FREE"
 +  data {
-+    template_id: "sequence_dynamax_cannon"
-+    move_sequence_settings {
-+      sequence: "anim attacker atk-move"
-+      sequence: "wait 0.5"
-+      sequence: "vfx dynamax_cannon"
-+      sequence: "sfx attacker 744-0_dynamax_cannon"
-+      sequence: "wait 1.0"
-+      sequence: "sys ui-sync"
-+      sequence: "sys complete"
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_102_FREE"
++    eventPassTierSettings {
++      rank: 102
++      track: FREE
++      minPointsRequired: 10100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
 +    }
 +  }
 +}
 +template {
-   template_id: "sequence_dynamic_punch"
-   data {
-     template_id: "sequence_dynamic_punch"
-@@ -375863,390 +376250,7 @@
-     }
-   }
- }
--template {
--  template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_8"
--  data {
--    template_id: "BREAD_MOVE_LEVEL_SETTINGS_GROUP_8"
--    breadMoveLevelSettings {
--      group: 8
--      aSettings {
--        mpCost: 1
--        candyCost: 1
--      }
--      aSettings {
--        mpCost: 600
--        candyCost: 1200
--        xpRewards: 6000
--      }
--      aSettings {
--        mpCost: 800
--        candyCost: 1200
--        xlCandyCost: 320
--        xpRewards: 8000
--      }
--      bSettings {
--        mpCost: 400
--        candyCost: 400
--        xpRewards: 4000
--      }
--      bSettings {
--        mpCost: 600
--        candyCost: 1200
--        xpRewards: 6000
--      }
--      bSettings {
--        mpCost: 800
--        candyCost: 1200
--        xlCandyCost: 320
--        xpRewards: 8000
--      }
--      cSettings {
--        mpCost: 400
--        candyCost: 400
--        xpRewards: 4000
--      }
--      cSettings {
--        mpCost: 600
--        candyCost: 1200
--        xpRewards: 6000
--      }
--      cSettings {
--        mpCost: 800
--        candyCost: 1200
--        xlCandyCost: 320
--        xpRewards: 8000
--      }
--    }
--  }
--}
--template {
--  template_id: "ITEM_EVENT_PASS_POINT_GO_FEST_02"
--  data {
--    template_id: "ITEM_EVENT_PASS_POINT_GO_FEST_02"
--    itemSettings {
--      itemId: ITEM_EVENT_PASS_POINT_GO_FEST_02
--      itemType: ITEM_TYPE_EVENT_PASS_POINT
--      category: ITEM_CATEGORY_EVENT_PASS_POINT
--      ignoreInventorySpace: true
--      itemCap: 999999
--      eventPassPoint {
--        eventPassId: "EVENT_PASS_GOFEST2025_MAXFINALE"
--      }
--      timePeriodCounters {
--        playerActivity {
--          limit: 50
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_FEST_02"
--  data {
--    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_FEST_02"
--    itemExpirationSettings {
--      item: ITEM_EVENT_PASS_POINT_GO_FEST_02
--      expirationTime: "2025-08-26T21:00:00"
--      emergencyExpirationTime: "2025-09-25T21:00:00"
--    }
--  }
--}
--template {
--  template_id: "LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001"
--  data {
--    template_id: "LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001"
--    locationCardSettings {
--      locationCard: LC_2025_ANAHEIM_WORLD_CHAMPIONSHIPS_001
--      imageUrl: "lc_Wcs2025_anaheim"
--    }
--  }
--}
--template {
--  template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001"
--  data {
--    template_id: "LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001"
--    locationCardSettings {
--      locationCard: LC_SPECIALBACKGROUND_2025_GLOBAL_GOFEST_DD_001
--      imageUrl: "sb_GoFest2025_Eternatus"
--      cardType: SPECIAL_BACKGROUND
--      vfxAddress: "bgfx_goFest_2025_eternatus"
--    }
--  }
--}
--template {
--  template_id: "NON_COMBAT_V0482_MOVE_DYNAMAX_CANNON"
--  data {
--    template_id: "NON_COMBAT_V0482_MOVE_DYNAMAX_CANNON"
--    nonCombatMoveSettings {
--      uniqueId: DYNAMAX_CANNON
--      cost {
--        candyCost: 30
--        stardustCost: 5000
--      }
--      bonusEffect {
--        maxMoveBonus {
--          excludedPokedexIds: ZACIAN
--          excludedPokedexIds: ZAMAZENTA
--          numAllMaxMoveLevelIncrease: 1
--        }
--      }
--      durationMs: 600000
--      bonusType: MAX_MOVE_BONUS
--      enableMultiUse: true
--      extraDurationMs: 4000
--      enableNonCombatMove: true
--    }
--  }
--}
--template {
--  template_id: "POKEMON_UPGRADE_OVERRIDE_SETTINGS_V0890_POKEMON_ETERNATUS"
--  data {
--    template_id: "POKEMON_UPGRADE_OVERRIDE_SETTINGS_V0890_POKEMON_ETERNATUS"
--    pokemon_upgrades {
--      upgradesPerLevel: 2
--      allowedLevelsAbovePlayer: 10
--      candyCost: 30
--      candyCost: 30
--      candyCost: 30
--      candyCost: 30
--      candyCost: 30
--      candyCost: 30
--      candyCost: 30
--      candyCost: 30
--      candyCost: 30
--      candyCost: 30
--      candyCost: 60
--      candyCost: 60
--      candyCost: 60
--      candyCost: 60
--      candyCost: 60
--      candyCost: 60
--      candyCost: 60
--      candyCost: 60
--      candyCost: 60
--      candyCost: 60
--      candyCost: 90
--      candyCost: 90
--      candyCost: 90
--      candyCost: 90
--      candyCost: 90
--      candyCost: 120
--      candyCost: 120
--      candyCost: 120
--      candyCost: 120
--      candyCost: 120
--      candyCost: 175
--      candyCost: 175
--      candyCost: 225
--      candyCost: 225
--      candyCost: 300
--      candyCost: 300
--      candyCost: 375
--      candyCost: 375
--      candyCost: 890
--      candyCost: 0
--      candyCost: 0
--      candyCost: 0
--      candyCost: 0
--      candyCost: 0
--      candyCost: 0
--      candyCost: 0
--      candyCost: 0
--      candyCost: 0
--      candyCost: 0
--      candyCost: 0
--      stardustCost: 200
--      stardustCost: 200
--      stardustCost: 400
--      stardustCost: 400
--      stardustCost: 600
--      stardustCost: 600
--      stardustCost: 800
--      stardustCost: 800
--      stardustCost: 1000
--      stardustCost: 1000
--      stardustCost: 1300
--      stardustCost: 1300
--      stardustCost: 1600
--      stardustCost: 1600
--      stardustCost: 1900
--      stardustCost: 1900
--      stardustCost: 2200
--      stardustCost: 2200
--      stardustCost: 2500
--      stardustCost: 2500
--      stardustCost: 3000
--      stardustCost: 3000
--      stardustCost: 3500
--      stardustCost: 3500
--      stardustCost: 4000
--      stardustCost: 4000
--      stardustCost: 4500
--      stardustCost: 4500
--      stardustCost: 5000
--      stardustCost: 5000
--      stardustCost: 6000
--      stardustCost: 6000
--      stardustCost: 7000
--      stardustCost: 7000
--      stardustCost: 8000
--      stardustCost: 8000
--      stardustCost: 9000
--      stardustCost: 9000
--      stardustCost: 10000
--      stardustCost: 10000
--      stardustCost: 11000
--      stardustCost: 11000
--      stardustCost: 12000
--      stardustCost: 12000
--      stardustCost: 13000
--      stardustCost: 13000
--      stardustCost: 14000
--      stardustCost: 14000
--      stardustCost: 15000
--      shadowStardustMultiplier: 1.2
--      shadowCandyMultiplier: 1.2
--      purifiedStardustMultiplier: 0.9
--      purifiedCandyMultiplier: 0.9
--      maxNormalUpgradeLevel: 50
--      defaultCpBoostAdditionalLevel: 1
--      xlCandyMinPlayerLevel: 31
--      xlCandyCost: 100
--      xlCandyCost: 100
--      xlCandyCost: 200
--      xlCandyCost: 200
--      xlCandyCost: 400
--      xlCandyCost: 400
--      xlCandyCost: 635
--      xlCandyCost: 635
--      xlCandyCost: 890
--      xlCandyCost: 890
--      xlCandyMinPokemonLevel: 40
--    }
--  }
--}
--template {
--  template_id: "STICKER_ETERNATUS"
--  data {
--    template_id: "STICKER_ETERNATUS"
--    stickerMetadata {
--      stickerId: "STICKER_ETERNATUS"
--      maxCount: 25
--      pokemonId: ETERNATUS
--      category: "Pokemon"
--      releaseDate: 20250718
--      regionId: 7
--    }
--  }
--}
--template {
--  template_id: "VN_BM_062"
--  data {
--    template_id: "VN_BM_062"
--    moveSettings {
--      movementId: VN_BM_062
--      animationId: 5
--      pokemonType: POKEMON_TYPE_DRAGON
--      accuracyChance: 1
--      staminaLossScalar: 0.01
--      trainerLevelMin: 1
--      trainerLevelMax: 100
--      vfxName: "max_dynamax_cannon"
--      durationMs: 2500
--      damageWindowStartMs: 2000
--      damageWindowEndMs: 3400
--      obMoveSettingsNumber18: 250
--      obMoveSettingsNumber18: 300
--      obMoveSettingsNumber18: 350
--      obMoveSettingsNumber18: 450
--    }
--  }
--}
--template {
--  template_id: "sequence_dynamax_cannon"
--  data {
--    template_id: "sequence_dynamax_cannon"
--    move_sequence_settings {
--      sequence: "anim attacker atk-move"
--      sequence: "wait 0.5"
--      sequence: "vfx dynamax_cannon"
--      sequence: "sfx attacker 744-0_dynamax_cannon"
--      sequence: "wait 1.0"
--      sequence: "sys ui-sync"
--      sequence: "sys complete"
--    }
--  }
--}
--template {
--  template_id: "LC_2025_JANGHEUNG_SUMMER_FESTIVAL"
--  data {
--    template_id: "LC_2025_JANGHEUNG_SUMMER_FESTIVAL"
--    locationCardSettings {
--      locationCard: LC_2025_JANGHEUNG_SUMMER_FESTIVAL
--      imageUrl: "lc_Jangheung_Water_Festival_2025"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
--  data {
--    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-white_0"
--    avatarItemDisplay {
--      iconAddress: "n_shirt_wcs2025anaheim-white_0_icon"
--      displayStringId: "avatar_n_shirt_wcs2025anaheim-white"
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
--  data {
--    template_id: "N_DISPLAY_n_shirt_wcs2025anaheim-yellow_0"
--    avatarItemDisplay {
--      iconAddress: "n_shirt_wcs2025anaheim-yellow_0_icon"
--      displayStringId: "avatar_n_shirt_wcs2025anaheim-yellow"
--    }
--  }
--}
--template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
--  template_id: "SNOM_FROSMOTH_EVOLUTION_QUEST"
--  data {
--    template_id: "SNOM_FROSMOTH_EVOLUTION_QUEST"
--    evolution_quest_template {
--      questTemplateId: "SNOM_FROSMOTH_EVOLUTION_QUEST"
--      questType: QUEST_BUDDY_EARN_AFFECTION_POINTS
--      goals {
--        target: 10
--      }
--      context: EVOLUTION_QUEST
--      display {
--        description: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
--        title: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
--      }
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_hat_eternatussuit_0"
--  data {
--    template_id: "N_DISPLAY_n_hat_eternatussuit_0"
--    avatarItemDisplay {
--      iconAddress: "n_hat_eternatussuit_0_icon"
--      displayStringId: "avatar_hat_eternatus"
--    }
--  }
--}
--batch_id: 1754137614908
-+batch_id: 1754345506337
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_102_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_102_PREMIUM"
++    eventPassTierSettings {
++      rank: 102
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_103_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_103_FREE"
++    eventPassTierSettings {
++      rank: 103
++      track: FREE
++      minPointsRequired: 10200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_103_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_103_PREMIUM"
++    eventPassTierSettings {
++      rank: 103
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_104_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_104_FREE"
++    eventPassTierSettings {
++      rank: 104
++      track: FREE
++      minPointsRequired: 10300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_104_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_104_PREMIUM"
++    eventPassTierSettings {
++      rank: 104
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_105_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_105_FREE"
++    eventPassTierSettings {
++      rank: 105
++      track: FREE
++      minPointsRequired: 10400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_105_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_105_PREMIUM"
++    eventPassTierSettings {
++      rank: 105
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_106_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_106_FREE"
++    eventPassTierSettings {
++      rank: 106
++      track: FREE
++      minPointsRequired: 10500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_106_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_106_PREMIUM"
++    eventPassTierSettings {
++      rank: 106
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_107_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_107_FREE"
++    eventPassTierSettings {
++      rank: 107
++      track: FREE
++      minPointsRequired: 10600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_107_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_107_PREMIUM"
++    eventPassTierSettings {
++      rank: 107
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_108_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_108_FREE"
++    eventPassTierSettings {
++      rank: 108
++      track: FREE
++      minPointsRequired: 10700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_108_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_108_PREMIUM"
++    eventPassTierSettings {
++      rank: 108
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_109_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_109_FREE"
++    eventPassTierSettings {
++      rank: 109
++      track: FREE
++      minPointsRequired: 10800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_109_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_109_PREMIUM"
++    eventPassTierSettings {
++      rank: 109
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_10_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_10_FREE"
++    eventPassTierSettings {
++      rank: 10
++      track: FREE
++      minPointsRequired: 900
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_INCENSE_ORDINARY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_10_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_10_PREMIUM"
++    eventPassTierSettings {
++      rank: 10
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_INCENSE_ORDINARY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_110_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_110_FREE"
++    eventPassTierSettings {
++      rank: 110
++      track: FREE
++      minPointsRequired: 10900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_110_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_110_PREMIUM"
++    eventPassTierSettings {
++      rank: 110
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_111_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_111_FREE"
++    eventPassTierSettings {
++      rank: 111
++      track: FREE
++      minPointsRequired: 11000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_111_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_111_PREMIUM"
++    eventPassTierSettings {
++      rank: 111
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_112_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_112_FREE"
++    eventPassTierSettings {
++      rank: 112
++      track: FREE
++      minPointsRequired: 11100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_112_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_112_PREMIUM"
++    eventPassTierSettings {
++      rank: 112
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_113_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_113_FREE"
++    eventPassTierSettings {
++      rank: 113
++      track: FREE
++      minPointsRequired: 11200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_113_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_113_PREMIUM"
++    eventPassTierSettings {
++      rank: 113
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_114_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_114_FREE"
++    eventPassTierSettings {
++      rank: 114
++      track: FREE
++      minPointsRequired: 11300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_114_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_114_PREMIUM"
++    eventPassTierSettings {
++      rank: 114
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_115_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_115_FREE"
++    eventPassTierSettings {
++      rank: 115
++      track: FREE
++      minPointsRequired: 11400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_115_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_115_PREMIUM"
++    eventPassTierSettings {
++      rank: 115
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_116_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_116_FREE"
++    eventPassTierSettings {
++      rank: 116
++      track: FREE
++      minPointsRequired: 11500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_116_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_116_PREMIUM"
++    eventPassTierSettings {
++      rank: 116
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_117_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_117_FREE"
++    eventPassTierSettings {
++      rank: 117
++      track: FREE
++      minPointsRequired: 11600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_117_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_117_PREMIUM"
++    eventPassTierSettings {
++      rank: 117
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_118_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_118_FREE"
++    eventPassTierSettings {
++      rank: 118
++      track: FREE
++      minPointsRequired: 11700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_118_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_118_PREMIUM"
++    eventPassTierSettings {
++      rank: 118
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_119_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_119_FREE"
++    eventPassTierSettings {
++      rank: 119
++      track: FREE
++      minPointsRequired: 11800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_119_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_119_PREMIUM"
++    eventPassTierSettings {
++      rank: 119
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_11_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_11_FREE"
++    eventPassTierSettings {
++      rank: 11
++      track: FREE
++      minPointsRequired: 1000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_POKE_BALL
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_11_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_11_PREMIUM"
++    eventPassTierSettings {
++      rank: 11
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_POKE_BALL
++          amount: 25
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_120_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_120_FREE"
++    eventPassTierSettings {
++      rank: 120
++      track: FREE
++      minPointsRequired: 11900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_120_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_120_PREMIUM"
++    eventPassTierSettings {
++      rank: 120
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_121_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_121_FREE"
++    eventPassTierSettings {
++      rank: 121
++      track: FREE
++      minPointsRequired: 12000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_121_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_121_PREMIUM"
++    eventPassTierSettings {
++      rank: 121
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_122_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_122_FREE"
++    eventPassTierSettings {
++      rank: 122
++      track: FREE
++      minPointsRequired: 12100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_122_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_122_PREMIUM"
++    eventPassTierSettings {
++      rank: 122
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_123_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_123_FREE"
++    eventPassTierSettings {
++      rank: 123
++      track: FREE
++      minPointsRequired: 12200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_123_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_123_PREMIUM"
++    eventPassTierSettings {
++      rank: 123
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_124_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_124_FREE"
++    eventPassTierSettings {
++      rank: 124
++      track: FREE
++      minPointsRequired: 12300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_124_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_124_PREMIUM"
++    eventPassTierSettings {
++      rank: 124
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_125_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_125_FREE"
++    eventPassTierSettings {
++      rank: 125
++      track: FREE
++      minPointsRequired: 12400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_125_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_125_PREMIUM"
++    eventPassTierSettings {
++      rank: 125
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_126_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_126_FREE"
++    eventPassTierSettings {
++      rank: 126
++      track: FREE
++      minPointsRequired: 12500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_126_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_126_PREMIUM"
++    eventPassTierSettings {
++      rank: 126
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_127_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_127_FREE"
++    eventPassTierSettings {
++      rank: 127
++      track: FREE
++      minPointsRequired: 12600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_127_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_127_PREMIUM"
++    eventPassTierSettings {
++      rank: 127
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_128_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_128_FREE"
++    eventPassTierSettings {
++      rank: 128
++      track: FREE
++      minPointsRequired: 12700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_128_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_128_PREMIUM"
++    eventPassTierSettings {
++      rank: 128
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_129_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_129_FREE"
++    eventPassTierSettings {
++      rank: 129
++      track: FREE
++      minPointsRequired: 12800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_129_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_129_PREMIUM"
++    eventPassTierSettings {
++      rank: 129
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_12_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_12_FREE"
++    eventPassTierSettings {
++      rank: 12
++      track: FREE
++      minPointsRequired: 1100
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: SKRELP
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_12_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_12_PREMIUM"
++    eventPassTierSettings {
++      rank: 12
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: SKRELP
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_130_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_130_FREE"
++    eventPassTierSettings {
++      rank: 130
++      track: FREE
++      minPointsRequired: 12900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_130_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_130_PREMIUM"
++    eventPassTierSettings {
++      rank: 130
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_131_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_131_FREE"
++    eventPassTierSettings {
++      rank: 131
++      track: FREE
++      minPointsRequired: 13000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_131_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_131_PREMIUM"
++    eventPassTierSettings {
++      rank: 131
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_132_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_132_FREE"
++    eventPassTierSettings {
++      rank: 132
++      track: FREE
++      minPointsRequired: 13100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_132_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_132_PREMIUM"
++    eventPassTierSettings {
++      rank: 132
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_133_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_133_FREE"
++    eventPassTierSettings {
++      rank: 133
++      track: FREE
++      minPointsRequired: 13200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_133_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_133_PREMIUM"
++    eventPassTierSettings {
++      rank: 133
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_134_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_134_FREE"
++    eventPassTierSettings {
++      rank: 134
++      track: FREE
++      minPointsRequired: 13300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_134_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_134_PREMIUM"
++    eventPassTierSettings {
++      rank: 134
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_135_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_135_FREE"
++    eventPassTierSettings {
++      rank: 135
++      track: FREE
++      minPointsRequired: 13400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_135_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_135_PREMIUM"
++    eventPassTierSettings {
++      rank: 135
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_136_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_136_FREE"
++    eventPassTierSettings {
++      rank: 136
++      track: FREE
++      minPointsRequired: 13500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_136_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_136_PREMIUM"
++    eventPassTierSettings {
++      rank: 136
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_137_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_137_FREE"
++    eventPassTierSettings {
++      rank: 137
++      track: FREE
++      minPointsRequired: 13600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_137_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_137_PREMIUM"
++    eventPassTierSettings {
++      rank: 137
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_138_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_138_FREE"
++    eventPassTierSettings {
++      rank: 138
++      track: FREE
++      minPointsRequired: 13700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_138_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_138_PREMIUM"
++    eventPassTierSettings {
++      rank: 138
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_139_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_139_FREE"
++    eventPassTierSettings {
++      rank: 139
++      track: FREE
++      minPointsRequired: 13800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_139_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_139_PREMIUM"
++    eventPassTierSettings {
++      rank: 139
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_13_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_13_FREE"
++    eventPassTierSettings {
++      rank: 13
++      track: FREE
++      minPointsRequired: 1200
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: SKRELP
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_13_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_13_PREMIUM"
++    eventPassTierSettings {
++      rank: 13
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: SKRELP
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_140_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_140_FREE"
++    eventPassTierSettings {
++      rank: 140
++      track: FREE
++      minPointsRequired: 13900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_140_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_140_PREMIUM"
++    eventPassTierSettings {
++      rank: 140
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_141_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_141_FREE"
++    eventPassTierSettings {
++      rank: 141
++      track: FREE
++      minPointsRequired: 14000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_141_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_141_PREMIUM"
++    eventPassTierSettings {
++      rank: 141
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_142_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_142_FREE"
++    eventPassTierSettings {
++      rank: 142
++      track: FREE
++      minPointsRequired: 14100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_142_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_142_PREMIUM"
++    eventPassTierSettings {
++      rank: 142
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_143_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_143_FREE"
++    eventPassTierSettings {
++      rank: 143
++      track: FREE
++      minPointsRequired: 14200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_143_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_143_PREMIUM"
++    eventPassTierSettings {
++      rank: 143
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_144_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_144_FREE"
++    eventPassTierSettings {
++      rank: 144
++      track: FREE
++      minPointsRequired: 14300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_144_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_144_PREMIUM"
++    eventPassTierSettings {
++      rank: 144
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_145_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_145_FREE"
++    eventPassTierSettings {
++      rank: 145
++      track: FREE
++      minPointsRequired: 14400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_145_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_145_PREMIUM"
++    eventPassTierSettings {
++      rank: 145
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_146_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_146_FREE"
++    eventPassTierSettings {
++      rank: 146
++      track: FREE
++      minPointsRequired: 14500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_146_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_146_PREMIUM"
++    eventPassTierSettings {
++      rank: 146
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_147_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_147_FREE"
++    eventPassTierSettings {
++      rank: 147
++      track: FREE
++      minPointsRequired: 14600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_147_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_147_PREMIUM"
++    eventPassTierSettings {
++      rank: 147
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_148_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_148_FREE"
++    eventPassTierSettings {
++      rank: 148
++      track: FREE
++      minPointsRequired: 14700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_148_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_148_PREMIUM"
++    eventPassTierSettings {
++      rank: 148
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_149_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_149_FREE"
++    eventPassTierSettings {
++      rank: 149
++      track: FREE
++      minPointsRequired: 14800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_149_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_149_PREMIUM"
++    eventPassTierSettings {
++      rank: 149
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_14_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_14_FREE"
++    eventPassTierSettings {
++      rank: 14
++      track: FREE
++      minPointsRequired: 1300
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RAZZ_BERRY
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_14_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_14_PREMIUM"
++    eventPassTierSettings {
++      rank: 14
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_RAZZ_BERRY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_150_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_150_FREE"
++    eventPassTierSettings {
++      rank: 150
++      track: FREE
++      minPointsRequired: 14900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_150_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_150_PREMIUM"
++    eventPassTierSettings {
++      rank: 150
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_151_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_151_FREE"
++    eventPassTierSettings {
++      rank: 151
++      track: FREE
++      minPointsRequired: 15000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_151_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_151_PREMIUM"
++    eventPassTierSettings {
++      rank: 151
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_152_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_152_FREE"
++    eventPassTierSettings {
++      rank: 152
++      track: FREE
++      minPointsRequired: 15100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_152_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_152_PREMIUM"
++    eventPassTierSettings {
++      rank: 152
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_153_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_153_FREE"
++    eventPassTierSettings {
++      rank: 153
++      track: FREE
++      minPointsRequired: 15200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_153_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_153_PREMIUM"
++    eventPassTierSettings {
++      rank: 153
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_154_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_154_FREE"
++    eventPassTierSettings {
++      rank: 154
++      track: FREE
++      minPointsRequired: 15300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_154_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_154_PREMIUM"
++    eventPassTierSettings {
++      rank: 154
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_155_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_155_FREE"
++    eventPassTierSettings {
++      rank: 155
++      track: FREE
++      minPointsRequired: 15400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_155_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_155_PREMIUM"
++    eventPassTierSettings {
++      rank: 155
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_156_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_156_FREE"
++    eventPassTierSettings {
++      rank: 156
++      track: FREE
++      minPointsRequired: 15500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_156_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_156_PREMIUM"
++    eventPassTierSettings {
++      rank: 156
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_157_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_157_FREE"
++    eventPassTierSettings {
++      rank: 157
++      track: FREE
++      minPointsRequired: 15600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_157_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_157_PREMIUM"
++    eventPassTierSettings {
++      rank: 157
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_158_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_158_FREE"
++    eventPassTierSettings {
++      rank: 158
++      track: FREE
++      minPointsRequired: 15700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_158_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_158_PREMIUM"
++    eventPassTierSettings {
++      rank: 158
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_159_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_159_FREE"
++    eventPassTierSettings {
++      rank: 159
++      track: FREE
++      minPointsRequired: 15800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_159_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_159_PREMIUM"
++    eventPassTierSettings {
++      rank: 159
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_15_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_15_FREE"
++    eventPassTierSettings {
++      rank: 15
++      track: FREE
++      minPointsRequired: 1400
++      rewards {
++        type: EXPERIENCE
++        exp: 750
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_15_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_15_PREMIUM"
++    eventPassTierSettings {
++      rank: 15
++      track: PREMIUM
++      rewards {
++        type: EXPERIENCE
++        exp: 2250
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_160_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_160_FREE"
++    eventPassTierSettings {
++      rank: 160
++      track: FREE
++      minPointsRequired: 15900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_160_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_160_PREMIUM"
++    eventPassTierSettings {
++      rank: 160
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_161_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_161_FREE"
++    eventPassTierSettings {
++      rank: 161
++      track: FREE
++      minPointsRequired: 16000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_161_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_161_PREMIUM"
++    eventPassTierSettings {
++      rank: 161
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_162_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_162_FREE"
++    eventPassTierSettings {
++      rank: 162
++      track: FREE
++      minPointsRequired: 16100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_162_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_162_PREMIUM"
++    eventPassTierSettings {
++      rank: 162
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_163_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_163_FREE"
++    eventPassTierSettings {
++      rank: 163
++      track: FREE
++      minPointsRequired: 16200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_163_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_163_PREMIUM"
++    eventPassTierSettings {
++      rank: 163
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_164_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_164_FREE"
++    eventPassTierSettings {
++      rank: 164
++      track: FREE
++      minPointsRequired: 16300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_164_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_164_PREMIUM"
++    eventPassTierSettings {
++      rank: 164
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_165_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_165_FREE"
++    eventPassTierSettings {
++      rank: 165
++      track: FREE
++      minPointsRequired: 16400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_165_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_165_PREMIUM"
++    eventPassTierSettings {
++      rank: 165
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_166_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_166_FREE"
++    eventPassTierSettings {
++      rank: 166
++      track: FREE
++      minPointsRequired: 16500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_166_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_166_PREMIUM"
++    eventPassTierSettings {
++      rank: 166
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_167_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_167_FREE"
++    eventPassTierSettings {
++      rank: 167
++      track: FREE
++      minPointsRequired: 16600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_167_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_167_PREMIUM"
++    eventPassTierSettings {
++      rank: 167
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_168_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_168_FREE"
++    eventPassTierSettings {
++      rank: 168
++      track: FREE
++      minPointsRequired: 16700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_168_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_168_PREMIUM"
++    eventPassTierSettings {
++      rank: 168
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_169_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_169_FREE"
++    eventPassTierSettings {
++      rank: 169
++      track: FREE
++      minPointsRequired: 16800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_169_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_169_PREMIUM"
++    eventPassTierSettings {
++      rank: 169
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_16_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_16_FREE"
++    eventPassTierSettings {
++      rank: 16
++      track: FREE
++      minPointsRequired: 1500
++      rewards {
++        type: STARDUST
++        stardust: 750
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_16_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_16_PREMIUM"
++    eventPassTierSettings {
++      rank: 16
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 2250
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_170_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_170_FREE"
++    eventPassTierSettings {
++      rank: 170
++      track: FREE
++      minPointsRequired: 16900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_170_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_170_PREMIUM"
++    eventPassTierSettings {
++      rank: 170
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_171_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_171_FREE"
++    eventPassTierSettings {
++      rank: 171
++      track: FREE
++      minPointsRequired: 17000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_171_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_171_PREMIUM"
++    eventPassTierSettings {
++      rank: 171
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_172_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_172_FREE"
++    eventPassTierSettings {
++      rank: 172
++      track: FREE
++      minPointsRequired: 17100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_172_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_172_PREMIUM"
++    eventPassTierSettings {
++      rank: 172
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_173_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_173_FREE"
++    eventPassTierSettings {
++      rank: 173
++      track: FREE
++      minPointsRequired: 17200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_173_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_173_PREMIUM"
++    eventPassTierSettings {
++      rank: 173
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_174_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_174_FREE"
++    eventPassTierSettings {
++      rank: 174
++      track: FREE
++      minPointsRequired: 17300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_174_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_174_PREMIUM"
++    eventPassTierSettings {
++      rank: 174
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_175_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_175_FREE"
++    eventPassTierSettings {
++      rank: 175
++      track: FREE
++      minPointsRequired: 17400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_175_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_175_PREMIUM"
++    eventPassTierSettings {
++      rank: 175
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_176_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_176_FREE"
++    eventPassTierSettings {
++      rank: 176
++      track: FREE
++      minPointsRequired: 17500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_176_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_176_PREMIUM"
++    eventPassTierSettings {
++      rank: 176
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_177_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_177_FREE"
++    eventPassTierSettings {
++      rank: 177
++      track: FREE
++      minPointsRequired: 17600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_177_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_177_PREMIUM"
++    eventPassTierSettings {
++      rank: 177
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_178_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_178_FREE"
++    eventPassTierSettings {
++      rank: 178
++      track: FREE
++      minPointsRequired: 17700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_178_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_178_PREMIUM"
++    eventPassTierSettings {
++      rank: 178
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_179_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_179_FREE"
++    eventPassTierSettings {
++      rank: 179
++      track: FREE
++      minPointsRequired: 17800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_179_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_179_PREMIUM"
++    eventPassTierSettings {
++      rank: 179
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_17_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_17_FREE"
++    eventPassTierSettings {
++      rank: 17
++      track: FREE
++      minPointsRequired: 1600
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: CHIMECHO
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_17_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_17_PREMIUM"
++    eventPassTierSettings {
++      rank: 17
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: CHIMECHO
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_180_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_180_FREE"
++    eventPassTierSettings {
++      rank: 180
++      track: FREE
++      minPointsRequired: 17900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_180_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_180_PREMIUM"
++    eventPassTierSettings {
++      rank: 180
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_181_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_181_FREE"
++    eventPassTierSettings {
++      rank: 181
++      track: FREE
++      minPointsRequired: 18000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_181_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_181_PREMIUM"
++    eventPassTierSettings {
++      rank: 181
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_182_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_182_FREE"
++    eventPassTierSettings {
++      rank: 182
++      track: FREE
++      minPointsRequired: 18100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_182_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_182_PREMIUM"
++    eventPassTierSettings {
++      rank: 182
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_183_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_183_FREE"
++    eventPassTierSettings {
++      rank: 183
++      track: FREE
++      minPointsRequired: 18200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_183_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_183_PREMIUM"
++    eventPassTierSettings {
++      rank: 183
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_184_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_184_FREE"
++    eventPassTierSettings {
++      rank: 184
++      track: FREE
++      minPointsRequired: 18300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_184_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_184_PREMIUM"
++    eventPassTierSettings {
++      rank: 184
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_185_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_185_FREE"
++    eventPassTierSettings {
++      rank: 185
++      track: FREE
++      minPointsRequired: 18400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_185_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_185_PREMIUM"
++    eventPassTierSettings {
++      rank: 185
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_186_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_186_FREE"
++    eventPassTierSettings {
++      rank: 186
++      track: FREE
++      minPointsRequired: 18500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_186_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_186_PREMIUM"
++    eventPassTierSettings {
++      rank: 186
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_187_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_187_FREE"
++    eventPassTierSettings {
++      rank: 187
++      track: FREE
++      minPointsRequired: 18600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_187_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_187_PREMIUM"
++    eventPassTierSettings {
++      rank: 187
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_188_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_188_FREE"
++    eventPassTierSettings {
++      rank: 188
++      track: FREE
++      minPointsRequired: 18700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_188_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_188_PREMIUM"
++    eventPassTierSettings {
++      rank: 188
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_189_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_189_FREE"
++    eventPassTierSettings {
++      rank: 189
++      track: FREE
++      minPointsRequired: 18800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_189_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_189_PREMIUM"
++    eventPassTierSettings {
++      rank: 189
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_18_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_18_FREE"
++    eventPassTierSettings {
++      rank: 18
++      track: FREE
++      minPointsRequired: 1700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: CHIMECHO
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_18_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_18_PREMIUM"
++    eventPassTierSettings {
++      rank: 18
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: CHIMECHO
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_190_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_190_FREE"
++    eventPassTierSettings {
++      rank: 190
++      track: FREE
++      minPointsRequired: 18900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_190_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_190_PREMIUM"
++    eventPassTierSettings {
++      rank: 190
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_191_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_191_FREE"
++    eventPassTierSettings {
++      rank: 191
++      track: FREE
++      minPointsRequired: 19000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_191_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_191_PREMIUM"
++    eventPassTierSettings {
++      rank: 191
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_192_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_192_FREE"
++    eventPassTierSettings {
++      rank: 192
++      track: FREE
++      minPointsRequired: 19100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_192_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_192_PREMIUM"
++    eventPassTierSettings {
++      rank: 192
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_193_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_193_FREE"
++    eventPassTierSettings {
++      rank: 193
++      track: FREE
++      minPointsRequired: 19200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_193_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_193_PREMIUM"
++    eventPassTierSettings {
++      rank: 193
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_194_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_194_FREE"
++    eventPassTierSettings {
++      rank: 194
++      track: FREE
++      minPointsRequired: 19300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_194_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_194_PREMIUM"
++    eventPassTierSettings {
++      rank: 194
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_195_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_195_FREE"
++    eventPassTierSettings {
++      rank: 195
++      track: FREE
++      minPointsRequired: 19400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_195_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_195_PREMIUM"
++    eventPassTierSettings {
++      rank: 195
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_196_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_196_FREE"
++    eventPassTierSettings {
++      rank: 196
++      track: FREE
++      minPointsRequired: 19500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_196_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_196_PREMIUM"
++    eventPassTierSettings {
++      rank: 196
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_197_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_197_FREE"
++    eventPassTierSettings {
++      rank: 197
++      track: FREE
++      minPointsRequired: 19600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_197_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_197_PREMIUM"
++    eventPassTierSettings {
++      rank: 197
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_198_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_198_FREE"
++    eventPassTierSettings {
++      rank: 198
++      track: FREE
++      minPointsRequired: 19700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_198_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_198_PREMIUM"
++    eventPassTierSettings {
++      rank: 198
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_199_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_199_FREE"
++    eventPassTierSettings {
++      rank: 199
++      track: FREE
++      minPointsRequired: 19800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_199_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_199_PREMIUM"
++    eventPassTierSettings {
++      rank: 199
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_19_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_19_FREE"
++    eventPassTierSettings {
++      rank: 19
++      track: FREE
++      minPointsRequired: 1800
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MP
++          amount: 100
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_19_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_19_PREMIUM"
++    eventPassTierSettings {
++      rank: 19
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MP
++          amount: 400
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_1_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_1_FREE"
++    eventPassTierSettings {
++      rank: 1
++      track: FREE
++      rewards {
++        type: EXPERIENCE
++        exp: 10000
++      }
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "august2025_season_pass_entitlement"
++          durationMins: 131487
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_1_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_1_PREMIUM"
++    eventPassTierSettings {
++      rank: 1
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 10000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_200_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_200_FREE"
++    eventPassTierSettings {
++      rank: 200
++      track: FREE
++      minPointsRequired: 19900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_200_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_200_PREMIUM"
++    eventPassTierSettings {
++      rank: 200
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_201_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_201_FREE"
++    eventPassTierSettings {
++      rank: 201
++      track: FREE
++      minPointsRequired: 20000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_201_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_201_PREMIUM"
++    eventPassTierSettings {
++      rank: 201
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_202_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_202_FREE"
++    eventPassTierSettings {
++      rank: 202
++      track: FREE
++      minPointsRequired: 20100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_202_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_202_PREMIUM"
++    eventPassTierSettings {
++      rank: 202
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_203_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_203_FREE"
++    eventPassTierSettings {
++      rank: 203
++      track: FREE
++      minPointsRequired: 20200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_203_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_203_PREMIUM"
++    eventPassTierSettings {
++      rank: 203
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_204_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_204_FREE"
++    eventPassTierSettings {
++      rank: 204
++      track: FREE
++      minPointsRequired: 20300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_204_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_204_PREMIUM"
++    eventPassTierSettings {
++      rank: 204
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_205_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_205_FREE"
++    eventPassTierSettings {
++      rank: 205
++      track: FREE
++      minPointsRequired: 20400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_205_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_205_PREMIUM"
++    eventPassTierSettings {
++      rank: 205
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_206_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_206_FREE"
++    eventPassTierSettings {
++      rank: 206
++      track: FREE
++      minPointsRequired: 20500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_206_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_206_PREMIUM"
++    eventPassTierSettings {
++      rank: 206
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_207_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_207_FREE"
++    eventPassTierSettings {
++      rank: 207
++      track: FREE
++      minPointsRequired: 20600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_207_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_207_PREMIUM"
++    eventPassTierSettings {
++      rank: 207
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_208_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_208_FREE"
++    eventPassTierSettings {
++      rank: 208
++      track: FREE
++      minPointsRequired: 20700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_208_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_208_PREMIUM"
++    eventPassTierSettings {
++      rank: 208
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_209_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_209_FREE"
++    eventPassTierSettings {
++      rank: 209
++      track: FREE
++      minPointsRequired: 20800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_209_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_209_PREMIUM"
++    eventPassTierSettings {
++      rank: 209
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_20_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_20_FREE"
++    eventPassTierSettings {
++      rank: 20
++      track: FREE
++      minPointsRequired: 1900
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MOVE_REROLL_FAST_ATTACK
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_20_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_20_PREMIUM"
++    eventPassTierSettings {
++      rank: 20
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LUCKY_EGG
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_210_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_210_FREE"
++    eventPassTierSettings {
++      rank: 210
++      track: FREE
++      minPointsRequired: 20900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_210_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_210_PREMIUM"
++    eventPassTierSettings {
++      rank: 210
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_21_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_21_FREE"
++    eventPassTierSettings {
++      rank: 21
++      track: FREE
++      minPointsRequired: 2000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LEADER_MAP_FRAGMENT
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_21_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_21_PREMIUM"
++    eventPassTierSettings {
++      rank: 21
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LEADER_MAP_FRAGMENT
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_22_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_22_FREE"
++    eventPassTierSettings {
++      rank: 22
++      track: FREE
++      minPointsRequired: 2100
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: AMAURA
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_22_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_22_PREMIUM"
++    eventPassTierSettings {
++      rank: 22
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: AMAURA
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_23_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_23_FREE"
++    eventPassTierSettings {
++      rank: 23
++      track: FREE
++      minPointsRequired: 2200
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: AMAURA
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_23_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_23_PREMIUM"
++    eventPassTierSettings {
++      rank: 23
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: AMAURA
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_24_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_24_FREE"
++    eventPassTierSettings {
++      rank: 24
++      track: FREE
++      minPointsRequired: 2300
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: AERODACTYL
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_24_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_24_PREMIUM"
++    eventPassTierSettings {
++      rank: 24
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: AERODACTYL
++          pokemonDisplay {
++            form: AERODACTYL_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_25_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_25_FREE"
++    eventPassTierSettings {
++      rank: 25
++      track: FREE
++      minPointsRequired: 2400
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "august2025_season_pass_rank_01"
++          durationMins: 131487
++        }
++      }
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_01"
++        bonusBoxes {
++          text: "bonus_friendship_levelup_1.5x"
++          iconType: FRIENDSHIP
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_25_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_25_PREMIUM"
++    eventPassTierSettings {
++      rank: 25
++      track: PREMIUM
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_26_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_26_FREE"
++    eventPassTierSettings {
++      rank: 26
++      track: FREE
++      minPointsRequired: 2500
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_26_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_26_PREMIUM"
++    eventPassTierSettings {
++      rank: 26
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 25
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_27_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_27_FREE"
++    eventPassTierSettings {
++      rank: 27
++      track: FREE
++      minPointsRequired: 2600
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: SABLEYE
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_27_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_27_PREMIUM"
++    eventPassTierSettings {
++      rank: 27
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: SABLEYE
++          pokemonDisplay {
++            form: SABLEYE_NORMAL
++            breadModeEnum: BREAD_MODE
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_28_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_28_FREE"
++    eventPassTierSettings {
++      rank: 28
++      track: FREE
++      minPointsRequired: 2700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: SABLEYE
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_28_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_28_PREMIUM"
++    eventPassTierSettings {
++      rank: 28
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: SABLEYE
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_29_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_29_FREE"
++    eventPassTierSettings {
++      rank: 29
++      track: FREE
++      minPointsRequired: 2800
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_NANAB_BERRY
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_29_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_29_PREMIUM"
++    eventPassTierSettings {
++      rank: 29
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_PINAP_BERRY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_2_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_2_FREE"
++    eventPassTierSettings {
++      rank: 2
++      track: FREE
++      minPointsRequired: 100
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_POKE_BALL
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_2_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_2_PREMIUM"
++    eventPassTierSettings {
++      rank: 2
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_POKE_BALL
++          amount: 25
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_30_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_30_FREE"
++    eventPassTierSettings {
++      rank: 30
++      track: FREE
++      minPointsRequired: 2900
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_30_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_30_PREMIUM"
++    eventPassTierSettings {
++      rank: 30
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_TROY_DISK
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_31_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_31_FREE"
++    eventPassTierSettings {
++      rank: 31
++      track: FREE
++      minPointsRequired: 3000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_POFFIN
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_31_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_31_PREMIUM"
++    eventPassTierSettings {
++      rank: 31
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_POFFIN
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_32_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_32_FREE"
++    eventPassTierSettings {
++      rank: 32
++      track: FREE
++      minPointsRequired: 3100
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: PAWMI
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_32_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_32_PREMIUM"
++    eventPassTierSettings {
++      rank: 32
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: PAWMI
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_33_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_33_FREE"
++    eventPassTierSettings {
++      rank: 33
++      track: FREE
++      minPointsRequired: 3200
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: PAWMI
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_33_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_33_PREMIUM"
++    eventPassTierSettings {
++      rank: 33
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: PAWMI
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_34_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_34_FREE"
++    eventPassTierSettings {
++      rank: 34
++      track: FREE
++      minPointsRequired: 3300
++      rewards {
++        type: EXPERIENCE
++        exp: 1000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_34_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_34_PREMIUM"
++    eventPassTierSettings {
++      rank: 34
++      track: PREMIUM
++      rewards {
++        type: EXPERIENCE
++        exp: 3000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_35_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_35_FREE"
++    eventPassTierSettings {
++      rank: 35
++      track: FREE
++      minPointsRequired: 3400
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_35_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_35_PREMIUM"
++    eventPassTierSettings {
++      rank: 35
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 40
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_36_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_36_FREE"
++    eventPassTierSettings {
++      rank: 36
++      track: FREE
++      minPointsRequired: 3500
++      rewards {
++        type: STARDUST
++        stardust: 1000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_36_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_36_PREMIUM"
++    eventPassTierSettings {
++      rank: 36
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 3000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_37_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_37_FREE"
++    eventPassTierSettings {
++      rank: 37
++      track: FREE
++      minPointsRequired: 3600
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: CHANSEY
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_37_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_37_PREMIUM"
++    eventPassTierSettings {
++      rank: 37
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: CHANSEY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_38_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_38_FREE"
++    eventPassTierSettings {
++      rank: 38
++      track: FREE
++      minPointsRequired: 3700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: CHANSEY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_38_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_38_PREMIUM"
++    eventPassTierSettings {
++      rank: 38
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: CHANSEY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_39_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_39_FREE"
++    eventPassTierSettings {
++      rank: 39
++      track: FREE
++      minPointsRequired: 3800
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: SKIDDO
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_39_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_39_PREMIUM"
++    eventPassTierSettings {
++      rank: 39
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: SKIDDO
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_3_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_3_FREE"
++    eventPassTierSettings {
++      rank: 3
++      track: FREE
++      minPointsRequired: 200
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: SOBBLE
++          pokemonDisplay {
++            breadModeEnum: BREAD_MODE
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_3_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_3_PREMIUM"
++    eventPassTierSettings {
++      rank: 3
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: SOBBLE
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_40_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_40_FREE"
++    eventPassTierSettings {
++      rank: 40
++      track: FREE
++      minPointsRequired: 3900
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RARE_CANDY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_40_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_40_PREMIUM"
++    eventPassTierSettings {
++      rank: 40
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_INCENSE_ORDINARY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_41_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_41_FREE"
++    eventPassTierSettings {
++      rank: 41
++      track: FREE
++      minPointsRequired: 4000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LEADER_MAP_FRAGMENT
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_41_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_41_PREMIUM"
++    eventPassTierSettings {
++      rank: 41
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LEADER_MAP_FRAGMENT
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_42_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_42_FREE"
++    eventPassTierSettings {
++      rank: 42
++      track: FREE
++      minPointsRequired: 4100
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: GOSSIFLEUR
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_42_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_42_PREMIUM"
++    eventPassTierSettings {
++      rank: 42
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: GOSSIFLEUR
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_43_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_43_FREE"
++    eventPassTierSettings {
++      rank: 43
++      track: FREE
++      minPointsRequired: 4200
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: GOSSIFLEUR
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_43_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_43_PREMIUM"
++    eventPassTierSettings {
++      rank: 43
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: GOSSIFLEUR
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_44_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_44_FREE"
++    eventPassTierSettings {
++      rank: 44
++      track: FREE
++      minPointsRequired: 4300
++      rewards {
++        type: EXPERIENCE
++        exp: 1500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_44_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_44_PREMIUM"
++    eventPassTierSettings {
++      rank: 44
++      track: PREMIUM
++      rewards {
++        type: EXPERIENCE
++        exp: 4500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_45_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_45_FREE"
++    eventPassTierSettings {
++      rank: 45
++      track: FREE
++      minPointsRequired: 4400
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_45_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_45_PREMIUM"
++    eventPassTierSettings {
++      rank: 45
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 40
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_46_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_46_FREE"
++    eventPassTierSettings {
++      rank: 46
++      track: FREE
++      minPointsRequired: 4500
++      rewards {
++        type: STARDUST
++        stardust: 1500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_46_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_46_PREMIUM"
++    eventPassTierSettings {
++      rank: 46
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 4500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_47_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_47_FREE"
++    eventPassTierSettings {
++      rank: 47
++      track: FREE
++      minPointsRequired: 4600
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: ZORUA
++          pokemonDisplay {
++            form: ZORUA_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_47_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_47_PREMIUM"
++    eventPassTierSettings {
++      rank: 47
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: ZORUA
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_48_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_48_FREE"
++    eventPassTierSettings {
++      rank: 48
++      track: FREE
++      minPointsRequired: 4700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: ZORUA
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_48_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_48_PREMIUM"
++    eventPassTierSettings {
++      rank: 48
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: ZORUA
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_49_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_49_FREE"
++    eventPassTierSettings {
++      rank: 49
++      track: FREE
++      minPointsRequired: 4800
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MP
++          amount: 100
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_49_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_49_PREMIUM"
++    eventPassTierSettings {
++      rank: 49
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MP
++          amount: 400
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_4_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_4_FREE"
++    eventPassTierSettings {
++      rank: 4
++      track: FREE
++      minPointsRequired: 300
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: SOBBLE
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_4_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_4_PREMIUM"
++    eventPassTierSettings {
++      rank: 4
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: SOBBLE
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_50_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_50_FREE"
++    eventPassTierSettings {
++      rank: 50
++      track: FREE
++      minPointsRequired: 4900
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "august2025_season_pass_rank_02"
++          durationMins: 131487
++        }
++      }
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_02"
++        bonusBoxes {
++          text: "research_breakthrough_bonus_xp_stardust"
++          iconType: FIELD_RESEARCH
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_50_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_50_PREMIUM"
++    eventPassTierSettings {
++      rank: 50
++      track: PREMIUM
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_51_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_51_FREE"
++    eventPassTierSettings {
++      rank: 51
++      track: FREE
++      minPointsRequired: 5000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 15
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_51_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_51_PREMIUM"
++    eventPassTierSettings {
++      rank: 51
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 50
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_52_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_52_FREE"
++    eventPassTierSettings {
++      rank: 52
++      track: FREE
++      minPointsRequired: 5100
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: CUBCHOO
++          pokemonDisplay {
++            form: CUBCHOO_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_52_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_52_PREMIUM"
++    eventPassTierSettings {
++      rank: 52
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: CUBCHOO
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_53_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_53_FREE"
++    eventPassTierSettings {
++      rank: 53
++      track: FREE
++      minPointsRequired: 5200
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: CUBCHOO
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_53_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_53_PREMIUM"
++    eventPassTierSettings {
++      rank: 53
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: CUBCHOO
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_54_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_54_FREE"
++    eventPassTierSettings {
++      rank: 54
++      track: FREE
++      minPointsRequired: 5300
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: DHELMISE
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_54_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_54_PREMIUM"
++    eventPassTierSettings {
++      rank: 54
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: DHELMISE
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_55_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_55_FREE"
++    eventPassTierSettings {
++      rank: 55
++      track: FREE
++      minPointsRequired: 5400
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LUCKY_EGG
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_55_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_55_PREMIUM"
++    eventPassTierSettings {
++      rank: 55
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RARE_CANDY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_56_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_56_FREE"
++    eventPassTierSettings {
++      rank: 56
++      track: FREE
++      minPointsRequired: 5500
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LEADER_MAP_FRAGMENT
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_56_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_56_PREMIUM"
++    eventPassTierSettings {
++      rank: 56
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LEADER_MAP_FRAGMENT
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_57_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_57_FREE"
++    eventPassTierSettings {
++      rank: 57
++      track: FREE
++      minPointsRequired: 5600
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: DARUMAKA
++          pokemonDisplay {
++            form: DARUMAKA_GALARIAN
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_57_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_57_PREMIUM"
++    eventPassTierSettings {
++      rank: 57
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: DARUMAKA
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_58_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_58_FREE"
++    eventPassTierSettings {
++      rank: 58
++      track: FREE
++      minPointsRequired: 5700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: DARUMAKA
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_58_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_58_PREMIUM"
++    eventPassTierSettings {
++      rank: 58
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: DARUMAKA
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_59_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_59_FREE"
++    eventPassTierSettings {
++      rank: 59
++      track: FREE
++      minPointsRequired: 5800
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MOVE_REROLL_FAST_ATTACK
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_59_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_59_PREMIUM"
++    eventPassTierSettings {
++      rank: 59
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MOVE_REROLL_FAST_ATTACK
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_5_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_5_FREE"
++    eventPassTierSettings {
++      rank: 5
++      track: FREE
++      minPointsRequired: 400
++      rewards {
++        type: EXPERIENCE
++        exp: 500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_5_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_5_PREMIUM"
++    eventPassTierSettings {
++      rank: 5
++      track: PREMIUM
++      rewards {
++        type: EXPERIENCE
++        exp: 1500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_60_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_60_FREE"
++    eventPassTierSettings {
++      rank: 60
++      track: FREE
++      minPointsRequired: 5900
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_STAR_PIECE
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_60_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_60_PREMIUM"
++    eventPassTierSettings {
++      rank: 60
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_PAID_RAID_TICKET
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_61_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_61_FREE"
++    eventPassTierSettings {
++      rank: 61
++      track: FREE
++      minPointsRequired: 6000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_61_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_61_PREMIUM"
++    eventPassTierSettings {
++      rank: 61
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MOVE_REROLL_SPECIAL_ATTACK
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_62_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_62_FREE"
++    eventPassTierSettings {
++      rank: 62
++      track: FREE
++      minPointsRequired: 6100
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: FARFETCHD
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_62_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_62_PREMIUM"
++    eventPassTierSettings {
++      rank: 62
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: FARFETCHD
++          pokemonDisplay {
++            form: FARFETCHD_GALARIAN
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_63_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_63_FREE"
++    eventPassTierSettings {
++      rank: 63
++      track: FREE
++      minPointsRequired: 6200
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: FARFETCHD
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_63_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_63_PREMIUM"
++    eventPassTierSettings {
++      rank: 63
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: FARFETCHD
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_64_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_64_FREE"
++    eventPassTierSettings {
++      rank: 64
++      track: FREE
++      minPointsRequired: 6300
++      rewards {
++        type: EXPERIENCE
++        exp: 2000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_64_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_64_PREMIUM"
++    eventPassTierSettings {
++      rank: 64
++      track: PREMIUM
++      rewards {
++        type: EXPERIENCE
++        exp: 6000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_65_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_65_FREE"
++    eventPassTierSettings {
++      rank: 65
++      track: FREE
++      minPointsRequired: 6400
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 15
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_65_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_65_PREMIUM"
++    eventPassTierSettings {
++      rank: 65
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 50
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_66_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_66_FREE"
++    eventPassTierSettings {
++      rank: 66
++      track: FREE
++      minPointsRequired: 6500
++      rewards {
++        type: STARDUST
++        stardust: 2000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_66_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_66_PREMIUM"
++    eventPassTierSettings {
++      rank: 66
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 6000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_67_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_67_FREE"
++    eventPassTierSettings {
++      rank: 67
++      track: FREE
++      minPointsRequired: 6600
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: GIBLE
++          pokemonDisplay {
++            form: GIBLE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_67_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_67_PREMIUM"
++    eventPassTierSettings {
++      rank: 67
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: GIBLE
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_68_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_68_FREE"
++    eventPassTierSettings {
++      rank: 68
++      track: FREE
++      minPointsRequired: 6700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: GIBLE
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_68_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_68_PREMIUM"
++    eventPassTierSettings {
++      rank: 68
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: GIBLE
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_69_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_69_FREE"
++    eventPassTierSettings {
++      rank: 69
++      track: FREE
++      minPointsRequired: 6800
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: DRAMPA
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_69_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_69_PREMIUM"
++    eventPassTierSettings {
++      rank: 69
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: DRAMPA
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_6_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_6_FREE"
++    eventPassTierSettings {
++      rank: 6
++      track: FREE
++      minPointsRequired: 500
++      rewards {
++        type: STARDUST
++        stardust: 500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_6_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_6_PREMIUM"
++    eventPassTierSettings {
++      rank: 6
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 1500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_70_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_70_FREE"
++    eventPassTierSettings {
++      rank: 70
++      track: FREE
++      minPointsRequired: 6900
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_TROY_DISK
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_70_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_70_PREMIUM"
++    eventPassTierSettings {
++      rank: 70
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_TROY_DISK
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_71_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_71_FREE"
++    eventPassTierSettings {
++      rank: 71
++      track: FREE
++      minPointsRequired: 7000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_PINAP_BERRY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_71_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_71_PREMIUM"
++    eventPassTierSettings {
++      rank: 71
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_PINAP_BERRY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_72_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_72_FREE"
++    eventPassTierSettings {
++      rank: 72
++      track: FREE
++      minPointsRequired: 7100
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: MAROWAK
++          pokemonDisplay {
++            form: MAROWAK_ALOLA
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_72_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_72_PREMIUM"
++    eventPassTierSettings {
++      rank: 72
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: CUBONE
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_73_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_73_FREE"
++    eventPassTierSettings {
++      rank: 73
++      track: FREE
++      minPointsRequired: 7200
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: CUBONE
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_73_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_73_PREMIUM"
++    eventPassTierSettings {
++      rank: 73
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: CUBONE
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_74_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_74_FREE"
++    eventPassTierSettings {
++      rank: 74
++      track: FREE
++      minPointsRequired: 7300
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MP
++          amount: 100
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_74_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_74_PREMIUM"
++    eventPassTierSettings {
++      rank: 74
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MP
++          amount: 400
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_75_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_75_FREE"
++    eventPassTierSettings {
++      rank: 75
++      track: FREE
++      minPointsRequired: 7400
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "august2025_season_pass_rank_03"
++          durationMins: 131487
++        }
++      }
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_03"
++        bonusBoxes {
++          text: "hatch_stardust_double"
++          iconType: EGG
++        }
++        bonusBoxes {
++          text: "hatch_xp_double"
++          iconType: EGG
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_75_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_75_PREMIUM"
++    eventPassTierSettings {
++      rank: 75
++      track: PREMIUM
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_76_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_76_FREE"
++    eventPassTierSettings {
++      rank: 76
++      track: FREE
++      minPointsRequired: 7500
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_76_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_76_PREMIUM"
++    eventPassTierSettings {
++      rank: 76
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 40
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_77_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_77_FREE"
++    eventPassTierSettings {
++      rank: 77
++      track: FREE
++      minPointsRequired: 7600
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: WAILMER
++          pokemonDisplay {
++            breadModeEnum: BREAD_MODE
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_77_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_77_PREMIUM"
++    eventPassTierSettings {
++      rank: 77
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: WAILMER
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_78_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_78_FREE"
++    eventPassTierSettings {
++      rank: 78
++      track: FREE
++      minPointsRequired: 7700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: WAILMER
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_78_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_78_PREMIUM"
++    eventPassTierSettings {
++      rank: 78
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: WAILMER
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_79_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_79_FREE"
++    eventPassTierSettings {
++      rank: 79
++      track: FREE
++      minPointsRequired: 7800
++      rewards {
++        type: EXPERIENCE
++        exp: 2500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_79_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_79_PREMIUM"
++    eventPassTierSettings {
++      rank: 79
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 7500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_7_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_7_FREE"
++    eventPassTierSettings {
++      rank: 7
++      track: FREE
++      minPointsRequired: 600
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: DIGLETT
++          pokemonDisplay {
++            form: DIGLETT_ALOLA
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_7_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_7_PREMIUM"
++    eventPassTierSettings {
++      rank: 7
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: DIGLETT
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_80_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_80_FREE"
++    eventPassTierSettings {
++      rank: 80
++      track: FREE
++      minPointsRequired: 7900
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LUCKY_EGG
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_80_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_80_PREMIUM"
++    eventPassTierSettings {
++      rank: 80
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_PAID_RAID_TICKET
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_81_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_81_FREE"
++    eventPassTierSettings {
++      rank: 81
++      track: FREE
++      minPointsRequired: 8000
++      rewards {
++        type: STARDUST
++        stardust: 2500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_81_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_81_PREMIUM"
++    eventPassTierSettings {
++      rank: 81
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 7500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_82_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_82_FREE"
++    eventPassTierSettings {
++      rank: 82
++      track: FREE
++      minPointsRequired: 8100
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: OSHAWOTT
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_82_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_82_PREMIUM"
++    eventPassTierSettings {
++      rank: 82
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: SAMUROTT
++          pokemonDisplay {
++            form: SAMUROTT_HISUIAN
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_83_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_83_FREE"
++    eventPassTierSettings {
++      rank: 83
++      track: FREE
++      minPointsRequired: 8200
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: OSHAWOTT
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_83_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_83_PREMIUM"
++    eventPassTierSettings {
++      rank: 83
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: OSHAWOTT
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_84_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_84_FREE"
++    eventPassTierSettings {
++      rank: 84
++      track: FREE
++      minPointsRequired: 8300
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: SNEASEL
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_84_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_84_PREMIUM"
++    eventPassTierSettings {
++      rank: 84
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: SNEASEL
++          pokemonDisplay {
++            form: SNEASEL_HISUIAN
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_85_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_85_FREE"
++    eventPassTierSettings {
++      rank: 85
++      track: FREE
++      minPointsRequired: 8400
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 15
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_85_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_85_PREMIUM"
++    eventPassTierSettings {
++      rank: 85
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 50
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_86_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_86_FREE"
++    eventPassTierSettings {
++      rank: 86
++      track: FREE
++      minPointsRequired: 8500
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MP
++          amount: 200
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_86_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_86_PREMIUM"
++    eventPassTierSettings {
++      rank: 86
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_MP
++          amount: 800
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_87_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_87_FREE"
++    eventPassTierSettings {
++      rank: 87
++      track: FREE
++      minPointsRequired: 8600
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: FRIGIBAX
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_87_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_87_PREMIUM"
++    eventPassTierSettings {
++      rank: 87
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: FRIGIBAX
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_88_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_88_FREE"
++    eventPassTierSettings {
++      rank: 88
++      track: FREE
++      minPointsRequired: 8700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: FRIGIBAX
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_88_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_88_PREMIUM"
++    eventPassTierSettings {
++      rank: 88
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: FRIGIBAX
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_89_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_89_FREE"
++    eventPassTierSettings {
++      rank: 89
++      track: FREE
++      minPointsRequired: 8800
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RARE_CANDY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_89_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_89_PREMIUM"
++    eventPassTierSettings {
++      rank: 89
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RARE_CANDY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_8_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_8_FREE"
++    eventPassTierSettings {
++      rank: 8
++      track: FREE
++      minPointsRequired: 700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: DIGLETT
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_8_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_8_PREMIUM"
++    eventPassTierSettings {
++      rank: 8
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: DIGLETT
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_90_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_90_FREE"
++    eventPassTierSettings {
++      rank: 90
++      track: FREE
++      minPointsRequired: 8900
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_PAID_RAID_TICKET
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_90_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_90_PREMIUM"
++    eventPassTierSettings {
++      rank: 90
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_INCUBATOR_BASIC
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_91_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_91_FREE"
++    eventPassTierSettings {
++      rank: 91
++      track: FREE
++      minPointsRequired: 9000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_XL_RARE_CANDY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_91_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_91_PREMIUM"
++    eventPassTierSettings {
++      rank: 91
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_XL_RARE_CANDY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_92_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_92_FREE"
++    eventPassTierSettings {
++      rank: 92
++      track: FREE
++      minPointsRequired: 9100
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: DREEPY
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_92_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_92_PREMIUM"
++    eventPassTierSettings {
++      rank: 92
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: DREEPY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_93_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_93_FREE"
++    eventPassTierSettings {
++      rank: 93
++      track: FREE
++      minPointsRequired: 9200
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: DREEPY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_93_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_93_PREMIUM"
++    eventPassTierSettings {
++      rank: 93
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: DREEPY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_94_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_94_FREE"
++    eventPassTierSettings {
++      rank: 94
++      track: FREE
++      minPointsRequired: 9300
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: SALANDIT
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_94_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_94_PREMIUM"
++    eventPassTierSettings {
++      rank: 94
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: SALANDIT
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_95_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_95_FREE"
++    eventPassTierSettings {
++      rank: 95
++      track: FREE
++      minPointsRequired: 9400
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RARE_CANDY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_95_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_95_PREMIUM"
++    eventPassTierSettings {
++      rank: 95
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_XL_RARE_CANDY
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_96_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_96_FREE"
++    eventPassTierSettings {
++      rank: 96
++      track: FREE
++      minPointsRequired: 9500
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RARE_CANDY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_96_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_96_PREMIUM"
++    eventPassTierSettings {
++      rank: 96
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_XL_RARE_CANDY
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_97_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_97_FREE"
++    eventPassTierSettings {
++      rank: 97
++      track: FREE
++      minPointsRequired: 9600
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: MOLTRES
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_97_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_97_PREMIUM"
++    eventPassTierSettings {
++      rank: 97
++      track: PREMIUM
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: MOLTRES
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_98_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_98_FREE"
++    eventPassTierSettings {
++      rank: 98
++      track: FREE
++      minPointsRequired: 9700
++      rewards {
++        type: STARDUST
++        stardust: 5000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_98_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_98_PREMIUM"
++    eventPassTierSettings {
++      rank: 98
++      track: PREMIUM
++      rewards {
++        type: XL_CANDY
++        xlCandy {
++          pokemonId: MOLTRES
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_99_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_99_FREE"
++    eventPassTierSettings {
++      rank: 99
++      track: FREE
++      minPointsRequired: 9800
++      rewards {
++        type: EXPERIENCE
++        exp: 5000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_99_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_99_PREMIUM"
++    eventPassTierSettings {
++      rank: 99
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_INCUBATOR_SUPER
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_9_FREE"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_9_FREE"
++    eventPassTierSettings {
++      rank: 9
++      track: FREE
++      minPointsRequired: 800
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: CLAMPERL
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AUGUST2025_SEASON_9_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AUGUST2025_SEASON_9_PREMIUM"
++    eventPassTierSettings {
++      rank: 9
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemon_id: CLAMPERL
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "pgorelease.month3_deluxe_event_pass_track_unlock"
++  data {
++    template_id: "pgorelease.month3_deluxe_event_pass_track_unlock"
++    iapItemDisplay {
++      sku: "pgorelease.month3_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      title: "season_pass_premium_track_title_aug"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-07-29T10:00:00"
++      skuDisableTime: "2025-09-04T10:00:00"
++      skuEnableTimeUtcMs: 1753783200000
++      skuDisableTimeUtcMs: 1756980000000
++    }
++  }
++}
++template {
++  template_id: "pgorelease.month3_deluxe_event_pass_track_unlock_plus_points"
++  data {
++    template_id: "pgorelease.month3_deluxe_event_pass_track_unlock_plus_points"
++    iapItemDisplay {
++      sku: "pgorelease.month3_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      title: "season_pass_premium_track_plus_ten_ranks_title_aug"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
++      skuEnableTime: "2025-07-29T10:00:00"
++      skuDisableTime: "2025-09-04T10:00:00"
++      skuEnableTimeUtcMs: 1753783200000
++      skuDisableTimeUtcMs: 1756980000000
++    }
++  }
++}
+ batch_id: 1754345506337
  experiment_id: 1
  experiment_id: 4
- experiment_id: 6
-@@ -376282,18 +376286,16 @@
- experiment_id: 3033
- experiment_id: 3063
- experiment_id: 3710
--experiment_id: 3722
-+experiment_id: 3723
- experiment_id: 3729
--experiment_id: 3738
-+experiment_id: 3739
- experiment_id: 3746
- experiment_id: 3756
--experiment_id: 3861
--experiment_id: 3863
-+experiment_id: 3864
+@@ -376295,7 +383053,6 @@
  experiment_id: 3867
--experiment_id: 3868
--experiment_id: 3882
-+experiment_id: 3869
+ experiment_id: 3869
  experiment_id: 4998
--experiment_id: 5116
-+experiment_id: 5117
+-experiment_id: 5117
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -376302,7 +376304,6 @@
- experiment_id: 5510
+@@ -376305,10 +383062,8 @@
  experiment_id: 6075
  experiment_id: 7052
--experiment_id: 7054
  experiment_id: 7055
++experiment_id: 7057
  experiment_id: 8944
- experiment_id: 8980
+-experiment_id: 8980
+-experiment_id: 8981
+-experiment_id: 8982
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
