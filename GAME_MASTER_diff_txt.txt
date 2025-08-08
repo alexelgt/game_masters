@@ -1,29 +1,104 @@
---- GAME_MASTER_old.txt	2025-08-07 22:21:24.525766556 +0200
-+++ GAME_MASTER.txt	2025-08-07 22:22:56.072845839 +0200
-@@ -71208,7 +71208,7 @@
-       buddy_size: BUDDY_SHOULDER
-       modelHeight: 0.4
-       modelScaleV2: 1.1
--      form: 3017
-+      form: PIKACHU_WCS_2025
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -108847,7 +108847,7 @@
-         isCostume: true
+--- GAME_MASTER_old.txt	2025-08-07 22:22:56.072845839 +0200
++++ GAME_MASTER.txt	2025-08-08 09:47:20.052811350 +0200
+@@ -342502,13 +342502,18 @@
+       type: POKEMON_TYPE_ICE
+       type2: POKEMON_TYPE_BUG
+       camera {
++        cylinderRadiusM: 0.25
++        cylinderHeightM: 0.25
        }
-       forms {
--        form: 3017
-+        form: PIKACHU_WCS_2025
-         isCostume: true
+       encounter {
++        collisionRadiusM: 0.1
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.1
+         attackProbability: 0.25
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
+         dodgeDistance: 0.5
+-        cameraDistance: 4
++        cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
        }
+@@ -342527,7 +342532,7 @@
+       weightStdDev: 0.475
+       familyId: FAMILY_SNOM
+       kmBuddyDistance: 5
+-      modelHeight: 1
++      modelHeight: 0.35
+       evolutionBranch {
+         evolution: FROSMOTH
+         candyCost: 400
+@@ -342536,7 +342541,7 @@
+           questRequirementTemplateId: "SNOM_FROSMOTH_EVOLUTION_QUEST"
+         }
+       }
+-      modelScaleV2: 1
++      modelScaleV2: 1.54
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -342544,6 +342549,9 @@
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+       buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 200
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+@@ -342551,7 +342559,11 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
+-      buddyGroupNumber: 2
++      buddyGroupNumber: 1
++      raidBossDistanceOffset: 2
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -376663,7 +376675,39 @@
      }
-@@ -147371,7 +147371,7 @@
-     template_id: "EXTENDED_V0025_POKEMON_PIKACHU_WCS_2025"
-     pokemonExtendedSettings {
-       uniqueId: PIKACHU
--      form: 3017
-+      form: PIKACHU_WCS_2025
-       sizeSettings {
-         xxsLowerBound: 0.196
-         xsLowerBound: 0.2
+   }
+ }
+-batch_id: 1754583633749
++template {
++  template_id: "ITEM_EXPIRATION_ITEM_INCUBATOR_TIMED"
++  data {
++    template_id: "ITEM_EXPIRATION_ITEM_INCUBATOR_TIMED"
++    itemExpirationSettings {
++      item: 904
++      expirationTime: "2024-08-12T23:59:00"
++    }
++  }
++}
++template {
++  template_id: "ITEM_INCUBATOR_TIMED"
++  data {
++    template_id: "ITEM_INCUBATOR_TIMED"
++    itemSettings {
++      itemId: 904
++      itemType: ITEM_TYPE_INCUBATOR
++      category: ITEM_CATEGORY_INCUBATOR
++      dropTrainerLevel: 100
++      egg_incubator {
++        incubatorType: INCUBATOR_DISTANCE
++        distanceMultiplier: 1
++        4 {
++          1: 902
++          2: 1
++        }
++        5: 1
++        6: 10
++      }
++    }
++  }
++}
++batch_id: 1754612047162
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
