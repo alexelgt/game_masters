@@ -1,104 +1,2881 @@
---- GAME_MASTER_old.txt	2025-08-07 22:22:56.072845839 +0200
-+++ GAME_MASTER.txt	2025-08-08 09:47:20.052811350 +0200
-@@ -342502,13 +342502,18 @@
-       type: POKEMON_TYPE_ICE
-       type2: POKEMON_TYPE_BUG
-       camera {
-+        cylinderRadiusM: 0.25
-+        cylinderHeightM: 0.25
-       }
-       encounter {
-+        collisionRadiusM: 0.1
-+        collisionHeightM: 0.1
-+        collisionHeadRadiusM: 0.1
-         attackProbability: 0.25
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 0.5
--        cameraDistance: 4
-+        cameraDistance: 3
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-       }
-@@ -342527,7 +342532,7 @@
-       weightStdDev: 0.475
-       familyId: FAMILY_SNOM
-       kmBuddyDistance: 5
--      modelHeight: 1
-+      modelHeight: 0.35
-       evolutionBranch {
-         evolution: FROSMOTH
-         candyCost: 400
-@@ -342536,7 +342541,7 @@
-           questRequirementTemplateId: "SNOM_FROSMOTH_EVOLUTION_QUEST"
-         }
-       }
--      modelScaleV2: 1
-+      modelScaleV2: 1.54
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -342544,6 +342549,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 200
-       third_move {
-         stardustToUnlock: 75000
-         candyToUnlock: 75
-@@ -342551,7 +342559,11 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
--      buddyGroupNumber: 2
-+      buddyGroupNumber: 1
-+      raidBossDistanceOffset: 2
-+      buddyPortraitRotation: 0
-+      buddyPortraitRotation: 0
-+      buddyPortraitRotation: 0
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -376663,7 +376675,39 @@
-     }
+--- GAME_MASTER_old.txt	2025-08-10 21:56:37.340049310 +0200
++++ GAME_MASTER.txt	2025-08-13 08:39:51.557697431 +0200
+@@ -34046,6 +34046,18 @@
    }
  }
--batch_id: 1754583633749
-+template {
-+  template_id: "ITEM_EXPIRATION_ITEM_INCUBATOR_TIMED"
+ template {
++  template_id: "BADGE_EVENT_0148"
 +  data {
-+    template_id: "ITEM_EXPIRATION_ITEM_INCUBATOR_TIMED"
-+    itemExpirationSettings {
-+      item: 904
-+      expirationTime: "2024-08-12T23:59:00"
++    template_id: "BADGE_EVENT_0148"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0148
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
 +    }
 +  }
 +}
 +template {
-+  template_id: "ITEM_INCUBATOR_TIMED"
+   template_id: "BADGE_EVOLVED_TOTAL"
+   data {
+     template_id: "BADGE_EVOLVED_TOTAL"
+@@ -41736,7 +41748,7 @@
+       prepareBreadLobbySoloMs: 80000
+       rvnVersion: 1
+       maxRemotePlayersPerBreadDoughLobby: 40
+-      maxRemoteBreadBattlePassesAllowed: 20
++      maxRemoteBreadBattlePassesAllowed: 10
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 40
+@@ -128956,8 +128968,8 @@
+     template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
+     itemExpirationSettings {
+       item: ITEM_LUCKY_FRIEND_APPLICATOR
+-      expirationTime: "2025-08-10T23:59:00"
+-      emergencyExpirationTime: "2025-08-11T10:00:00"
++      expirationTime: "1900-01-27T23:59:00"
++      emergencyExpirationTime: "1900-01-28T10:00:00"
+     }
+   }
+ }
+@@ -129232,7 +129244,7 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 6
+       incense {
+-        incenseLifetimeSeconds: 1800
++        incenseLifetimeSeconds: 3600
+         spawnTableProbability: 0.25
+       }
+       ignoreInventorySpace: true
+@@ -130767,7 +130779,7 @@
+     template_id: "LC_2024_MLB_008"
+     locationCardSettings {
+       locationCard: LC_2024_MLB_008
+-      imageUrl: "lc_MLB_chicagoWhitesox"
++      imageUrl: "lc_MLB_chicagoWhiteSox"
+     }
+   }
+ }
+@@ -130797,7 +130809,7 @@
+     template_id: "LC_2024_MLB_011"
+     locationCardSettings {
+       locationCard: LC_2024_MLB_011
+-      imageUrl: "lc_MLB_sanfranciscoGiants"
++      imageUrl: "lc_MLB_sanFranciscoGiants"
+     }
+   }
+ }
+@@ -130807,7 +130819,7 @@
+     template_id: "LC_2024_MLB_012"
+     locationCardSettings {
+       locationCard: LC_2024_MLB_012
+-      imageUrl: "lc_MLB_bostonRedsox"
++      imageUrl: "lc_MLB_bostonRedSox"
+     }
+   }
+ }
+@@ -131464,6 +131476,1689 @@
+   }
+ }
+ template {
++  template_id: "LEVEL_41_CAP"
 +  data {
-+    template_id: "ITEM_INCUBATOR_TIMED"
-+    itemSettings {
-+      itemId: 904
-+      itemType: ITEM_TYPE_INCUBATOR
-+      category: ITEM_CATEGORY_INCUBATOR
-+      dropTrainerLevel: 100
-+      egg_incubator {
-+        incubatorType: INCUBATOR_DISTANCE
-+        distanceMultiplier: 1
-+        4 {
-+          1: 902
-+          2: 1
++    template_id: "LEVEL_41_CAP"
++    260 {
++      1 {
++        1: 3
++        3 {
++          1 {
++            100: "LEVEL_41_CAP_SUB_0"
++          }
++          1 {
++            100: "LEVEL_41_CAP_SUB_1"
++          }
++          1 {
++            100: "LEVEL_41_CAP_SUB_2"
++          }
++          1 {
++            100: "LEVEL_41_CAP_SUB_3"
++          }
 +        }
-+        5: 1
-+        6: 10
++        100: "LEVEL_41_CAP"
++        102: 6
++        103: "LEVEL_41_CAP"
++        107 {
++          1: 10
++          11: 41
++        }
++      }
++      2 {
++        4: "title_level_41_cap"
++        6 {
++          1: "LEVEL_41_CAP_SUB_0"
++        }
++        6 {
++          1: "LEVEL_41_CAP_SUB_1"
++        }
++        6 {
++          1: "LEVEL_41_CAP_SUB_2"
++        }
++        6 {
++          1: "LEVEL_41_CAP_SUB_3"
++        }
 +      }
 +    }
 +  }
 +}
-+batch_id: 1754612047162
++template {
++  template_id: "LEVEL_41_CAP_SUB_0"
++  data {
++    template_id: "LEVEL_41_CAP_SUB_0"
++    260 {
++      1 {
++        1: 14
++        100: "LEVEL_41_CAP_SUB_0"
++        102: 6
++        103: "LEVEL_41_CAP_SUB_0"
++        105 {
++          1 {
++            1: 36
++          }
++          2: 20
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_power_up_legendary_plural"
++        4: "quest_power_up_legendary_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_41_CAP_SUB_1"
++  data {
++    template_id: "LEVEL_41_CAP_SUB_1"
++    260 {
++      1 {
++        1: 8
++        100: "LEVEL_41_CAP_SUB_1"
++        102: 6
++        103: "LEVEL_41_CAP_SUB_1"
++        105 {
++          1 {
++            1: 6
++          }
++          2: 30
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_win_raid_plural"
++        4: "quest_win_raid_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_41_CAP_SUB_2"
++  data {
++    template_id: "LEVEL_41_CAP_SUB_2"
++    260 {
++      1 {
++        1: 4
++        100: "LEVEL_41_CAP_SUB_2"
++        102: 6
++        103: "LEVEL_41_CAP_SUB_2"
++        105 {
++          1 {
++            1: 32
++          }
++          2: 200
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_catch_in_day_plural"
++        4: "quest_catch_in_day_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_41_CAP_SUB_3"
++  data {
++    template_id: "LEVEL_41_CAP_SUB_3"
++    260 {
++      1 {
++        1: 18
++        100: "LEVEL_41_CAP_SUB_3"
++        102: 6
++        103: "LEVEL_41_CAP_SUB_3"
++        105 {
++          1 {
++            1: 16
++            15 {
++              2: 3
++              4: "\352\007"
++            }
++          }
++          2: 5
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_gold_medal_plural"
++        4: "quest_gold_medal_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_42_CAP"
++  data {
++    template_id: "LEVEL_42_CAP"
++    260 {
++      1 {
++        1: 3
++        3 {
++          1 {
++            100: "LEVEL_42_CAP_SUB_0"
++          }
++          1 {
++            100: "LEVEL_42_CAP_SUB_1"
++          }
++          1 {
++            100: "LEVEL_42_CAP_SUB_2"
++          }
++          1 {
++            100: "LEVEL_42_CAP_SUB_3"
++          }
++        }
++        100: "LEVEL_42_CAP"
++        102: 6
++        103: "LEVEL_42_CAP"
++        107 {
++          1: 10
++          11: 42
++        }
++      }
++      2 {
++        4: "title_level_42_cap"
++        6 {
++          1: "LEVEL_42_CAP_SUB_0"
++        }
++        6 {
++          1: "LEVEL_42_CAP_SUB_1"
++        }
++        6 {
++          1: "LEVEL_42_CAP_SUB_2"
++        }
++        6 {
++          1: "LEVEL_42_CAP_SUB_3"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_42_CAP_SUB_0"
++  data {
++    template_id: "LEVEL_42_CAP_SUB_0"
++    260 {
++      1 {
++        1: 25
++        100: "LEVEL_42_CAP_SUB_0"
++        102: 6
++        103: "LEVEL_42_CAP_SUB_0"
++        105 {
++          1 {
++            1: 2
++            3 {
++              1: "all_eeveelutions"
++              2: "\206\001\207\001\210\001\305\001\304\001\327\003\326\003\274\005"
++            }
++          }
++          1 {
++            1: 21
++          }
++          2: 8
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_eevee_evolve_plural"
++        4: "quest_eevee_evolve_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_42_CAP_SUB_1"
++  data {
++    template_id: "LEVEL_42_CAP_SUB_1"
++    260 {
++      1 {
++        1: 15
++        100: "LEVEL_42_CAP_SUB_1"
++        102: 6
++        103: "LEVEL_42_CAP_SUB_1"
++        105 {
++          1 {
++            1: 11
++          }
++          2: 15
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_evolve_items_plural"
++        4: "quest_evolve_items_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_42_CAP_SUB_2"
++  data {
++    template_id: "LEVEL_42_CAP_SUB_2"
++    260 {
++      1 {
++        1: 16
++        100: "LEVEL_42_CAP_SUB_2"
++        102: 6
++        103: "LEVEL_42_CAP_SUB_2"
++        105 {
++          1 {
++            1: 8
++            9 {
++              1: 12
++            }
++          }
++          2: 3
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_land_excellent_plural"
++        4: "quest_land_excellent_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_42_CAP_SUB_3"
++  data {
++    template_id: "LEVEL_42_CAP_SUB_3"
++    260 {
++      1 {
++        1: 13
++        100: "LEVEL_42_CAP_SUB_3"
++        102: 6
++        103: "LEVEL_42_CAP_SUB_3"
++        105 {
++          2: 200
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_catch_feed_plural"
++        4: "quest_catch_feed_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_43_CAP"
++  data {
++    template_id: "LEVEL_43_CAP"
++    260 {
++      1 {
++        1: 3
++        3 {
++          1 {
++            100: "LEVEL_43_CAP_SUB_0"
++          }
++          1 {
++            100: "LEVEL_43_CAP_SUB_1"
++          }
++          1 {
++            100: "LEVEL_43_CAP_SUB_2"
++          }
++          1 {
++            100: "LEVEL_43_CAP_SUB_3"
++          }
++        }
++        100: "LEVEL_43_CAP"
++        102: 6
++        103: "LEVEL_43_CAP"
++        107 {
++          1: 10
++          11: 43
++        }
++      }
++      2 {
++        4: "title_level_43_cap"
++        6 {
++          1: "LEVEL_43_CAP_SUB_0"
++        }
++        6 {
++          1: "LEVEL_43_CAP_SUB_1"
++        }
++        6 {
++          1: "LEVEL_43_CAP_SUB_2"
++        }
++        6 {
++          1: "LEVEL_43_CAP_SUB_3"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_43_CAP_SUB_0"
++  data {
++    template_id: "LEVEL_43_CAP_SUB_0"
++    260 {
++      1 {
++        1: 44
++        100: "LEVEL_43_CAP_SUB_0"
++        102: 6
++        103: "LEVEL_43_CAP_SUB_0"
++        105 {
++          2: 100000
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_stardust_plural"
++        4: "quest_stardust_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_43_CAP_SUB_1"
++  data {
++    template_id: "LEVEL_43_CAP_SUB_1"
++    260 {
++      1 {
++        1: 53
++        100: "LEVEL_43_CAP_SUB_1"
++        102: 6
++        103: "LEVEL_43_CAP_SUB_1"
++        105 {
++          1 {
++            1: 10
++          }
++          2: 200
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_supereffective_charge_plural"
++        4: "quest_supereffective_charge_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_43_CAP_SUB_2"
++  data {
++    template_id: "LEVEL_43_CAP_SUB_2"
++    260 {
++      1 {
++        1: 4
++        100: "LEVEL_43_CAP_SUB_2"
++        102: 6
++        103: "LEVEL_43_CAP_SUB_2"
++        105 {
++          1 {
++            1: 36
++          }
++          2: 5
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_catch_legendary_plural"
++        4: "quest_catch_legendary_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_43_CAP_SUB_3"
++  data {
++    template_id: "LEVEL_43_CAP_SUB_3"
++    260 {
++      1 {
++        1: 18
++        100: "LEVEL_43_CAP_SUB_3"
++        102: 6
++        103: "LEVEL_43_CAP_SUB_3"
++        105 {
++          1 {
++            1: 16
++            15 {
++              2: 4
++              4: "\352\007"
++            }
++          }
++          2: 5
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_platinum_medal_plural"
++        4: "quest_platinum_medal_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_44_CAP"
++  data {
++    template_id: "LEVEL_44_CAP"
++    260 {
++      1 {
++        1: 3
++        3 {
++          1 {
++            100: "LEVEL_44_CAP_SUB_0"
++          }
++          1 {
++            100: "LEVEL_44_CAP_SUB_1"
++          }
++          1 {
++            100: "LEVEL_44_CAP_SUB_2"
++          }
++          1 {
++            100: "LEVEL_44_CAP_SUB_3"
++          }
++        }
++        100: "LEVEL_44_CAP"
++        102: 6
++        103: "LEVEL_44_CAP"
++        107 {
++          1: 10
++          11: 44
++        }
++      }
++      2 {
++        4: "title_level_44_cap"
++        6 {
++          1: "LEVEL_44_CAP_SUB_0"
++        }
++        6 {
++          1: "LEVEL_44_CAP_SUB_1"
++        }
++        6 {
++          1: "LEVEL_44_CAP_SUB_2"
++        }
++        6 {
++          1: "LEVEL_44_CAP_SUB_3"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_44_CAP_SUB_0"
++  data {
++    template_id: "LEVEL_44_CAP_SUB_0"
++    260 {
++      1 {
++        1: 27
++        100: "LEVEL_44_CAP_SUB_0"
++        102: 6
++        103: "LEVEL_44_CAP_SUB_0"
++        105 {
++          1 {
++            1: 23
++            20 {
++              1: 1
++              3: 52
++            }
++          }
++          1 {
++            1: 18
++          }
++          2: 30
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_battle_great_win_plural"
++        4: "quest_battle_great_win_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_44_CAP_SUB_1"
++  data {
++    template_id: "LEVEL_44_CAP_SUB_1"
++    260 {
++      1 {
++        1: 27
++        100: "LEVEL_44_CAP_SUB_1"
++        102: 6
++        103: "LEVEL_44_CAP_SUB_1"
++        105 {
++          1 {
++            1: 23
++            20 {
++              1: 1
++              3: 53
++            }
++          }
++          1 {
++            1: 18
++          }
++          2: 30
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_battle_ultra_win_plural"
++        4: "quest_battle_ultra_win_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_44_CAP_SUB_2"
++  data {
++    template_id: "LEVEL_44_CAP_SUB_2"
++    260 {
++      1 {
++        1: 27
++        100: "LEVEL_44_CAP_SUB_2"
++        102: 6
++        103: "LEVEL_44_CAP_SUB_2"
++        105 {
++          1 {
++            1: 23
++            20 {
++              1: 1
++              3: 54
++            }
++          }
++          1 {
++            1: 18
++          }
++          2: 30
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_battle_master_win_plural"
++        4: "quest_battle_master_win_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_44_CAP_SUB_3"
++  data {
++    template_id: "LEVEL_44_CAP_SUB_3"
++    260 {
++      1 {
++        1: 27
++        100: "LEVEL_44_CAP_SUB_3"
++        102: 6
++        103: "LEVEL_44_CAP_SUB_3"
++        105 {
++          1 {
++            1: 41
++            32 {
++              1: "\006"
++            }
++          }
++          2: 20
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_battle_gbl_plural"
++        4: "quest_battle_gbl_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_45_CAP"
++  data {
++    template_id: "LEVEL_45_CAP"
++    260 {
++      1 {
++        1: 3
++        3 {
++          1 {
++            100: "LEVEL_45_CAP_SUB_0"
++          }
++          1 {
++            100: "LEVEL_45_CAP_SUB_1"
++          }
++          1 {
++            100: "LEVEL_45_CAP_SUB_2"
++          }
++          1 {
++            100: "LEVEL_45_CAP_SUB_3"
++          }
++        }
++        100: "LEVEL_45_CAP"
++        102: 6
++        103: "LEVEL_45_CAP"
++        107 {
++          1: 10
++          11: 45
++        }
++      }
++      2 {
++        4: "title_level_45_cap"
++        6 {
++          1: "LEVEL_45_CAP_SUB_0"
++        }
++        6 {
++          1: "LEVEL_45_CAP_SUB_1"
++        }
++        6 {
++          1: "LEVEL_45_CAP_SUB_2"
++        }
++        6 {
++          1: "LEVEL_45_CAP_SUB_3"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_45_CAP_SUB_0"
++  data {
++    template_id: "LEVEL_45_CAP_SUB_0"
++    260 {
++      1 {
++        1: 29
++        100: "LEVEL_45_CAP_SUB_0"
++        102: 6
++        103: "LEVEL_45_CAP_SUB_0"
++        105 {
++          1 {
++            1: 27
++            23 {
++              1: "\002"
++            }
++          }
++          1 {
++            1: 18
++          }
++          2: 100
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_rocket_battle_win_plural"
++        4: "quest_rocket_battle_win_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_45_CAP_SUB_1"
++  data {
++    template_id: "LEVEL_45_CAP_SUB_1"
++    260 {
++      1 {
++        1: 30
++        100: "LEVEL_45_CAP_SUB_1"
++        102: 6
++        103: "LEVEL_45_CAP_SUB_1"
++        105 {
++          2: 100
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_rocket_purify_plural"
++        4: "quest_rocket_purify_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_45_CAP_SUB_2"
++  data {
++    template_id: "LEVEL_45_CAP_SUB_2"
++    260 {
++      1 {
++        1: 29
++        100: "LEVEL_45_CAP_SUB_2"
++        102: 6
++        103: "LEVEL_45_CAP_SUB_2"
++        105 {
++          1 {
++            1: 27
++            23 {
++              1: "\003\004\005"
++            }
++          }
++          1 {
++            1: 18
++          }
++          2: 50
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_ROCKETHQ1_leaders_win_plural"
++        4: "quest_ROCKETHQ1_leaders_win_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_45_CAP_SUB_3"
++  data {
++    template_id: "LEVEL_45_CAP_SUB_3"
++    260 {
++      1 {
++        1: 18
++        100: "LEVEL_45_CAP_SUB_3"
++        102: 6
++        103: "LEVEL_45_CAP_SUB_3"
++        105 {
++          1 {
++            1: 16
++            15 {
++              2: 4
++              4: "\352\007"
++            }
++          }
++          2: 10
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_platinum_medal_plural"
++        4: "quest_platinum_medal_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_46_CAP"
++  data {
++    template_id: "LEVEL_46_CAP"
++    260 {
++      1 {
++        1: 3
++        3 {
++          1 {
++            100: "LEVEL_46_CAP_SUB_0"
++          }
++          1 {
++            100: "LEVEL_46_CAP_SUB_1"
++          }
++          1 {
++            100: "LEVEL_46_CAP_SUB_2"
++          }
++          1 {
++            100: "LEVEL_46_CAP_SUB_3"
++          }
++        }
++        100: "LEVEL_46_CAP"
++        102: 6
++        103: "LEVEL_46_CAP"
++        107 {
++          1: 10
++          11: 46
++        }
++      }
++      2 {
++        4: "title_level_46_cap"
++        6 {
++          1: "LEVEL_46_CAP_SUB_0"
++        }
++        6 {
++          1: "LEVEL_46_CAP_SUB_1"
++        }
++        6 {
++          1: "LEVEL_46_CAP_SUB_2"
++        }
++        6 {
++          1: "LEVEL_46_CAP_SUB_3"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_46_CAP_SUB_0"
++  data {
++    template_id: "LEVEL_46_CAP_SUB_0"
++    260 {
++      1 {
++        1: 9
++        100: "LEVEL_46_CAP_SUB_0"
++        102: 6
++        103: "LEVEL_46_CAP_SUB_0"
++        105 {
++          1 {
++            1: 13
++            14 {
++              1: 2
++            }
++          }
++          2: 100
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_field_research_plural"
++        4: "quest_field_research_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_46_CAP_SUB_1"
++  data {
++    template_id: "LEVEL_46_CAP_SUB_1"
++    260 {
++      1 {
++        1: 28
++        100: "LEVEL_46_CAP_SUB_1"
++        102: 6
++        103: "LEVEL_46_CAP_SUB_1"
++        105 {
++          1 {
++            1: 20
++          }
++          2: 7
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_snapshots_inarow_plural"
++        4: "quest_snapshots_inarow_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_46_CAP_SUB_2"
++  data {
++    template_id: "LEVEL_46_CAP_SUB_2"
++    260 {
++      1 {
++        1: 16
++        100: "LEVEL_46_CAP_SUB_2"
++        102: 6
++        103: "LEVEL_46_CAP_SUB_2"
++        105 {
++          1 {
++            1: 8
++            9 {
++              1: 12
++            }
++          }
++          2: 50
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_land_excellent_plural"
++        4: "quest_land_excellent_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_46_CAP_SUB_3"
++  data {
++    template_id: "LEVEL_46_CAP_SUB_3"
++    260 {
++      1 {
++        1: 6
++        100: "LEVEL_46_CAP_SUB_3"
++        102: 6
++        103: "LEVEL_46_CAP_SUB_3"
++        105 {
++          2: 30
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_hatch_egg_plural"
++        4: "quest_hatch_egg_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_47_CAP"
++  data {
++    template_id: "LEVEL_47_CAP"
++    260 {
++      1 {
++        1: 3
++        3 {
++          1 {
++            100: "LEVEL_47_CAP_SUB_0"
++          }
++          1 {
++            100: "LEVEL_47_CAP_SUB_1"
++          }
++          1 {
++            100: "LEVEL_47_CAP_SUB_2"
++          }
++          1 {
++            100: "LEVEL_47_CAP_SUB_3"
++          }
++        }
++        100: "LEVEL_47_CAP"
++        102: 6
++        103: "LEVEL_47_CAP"
++        107 {
++          1: 10
++          11: 47
++        }
++      }
++      2 {
++        4: "title_level_47_cap"
++        6 {
++          1: "LEVEL_47_CAP_SUB_0"
++        }
++        6 {
++          1: "LEVEL_47_CAP_SUB_1"
++        }
++        6 {
++          1: "LEVEL_47_CAP_SUB_2"
++        }
++        6 {
++          1: "LEVEL_47_CAP_SUB_3"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_47_CAP_SUB_0"
++  data {
++    template_id: "LEVEL_47_CAP_SUB_0"
++    260 {
++      1 {
++        1: 8
++        100: "LEVEL_47_CAP_SUB_0"
++        102: 6
++        103: "LEVEL_47_CAP_SUB_0"
++        105 {
++          1 {
++            1: 6
++          }
++          1 {
++            1: 33
++          }
++          2: 30
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_win_raid_unique_plural"
++        4: "quest_win_raid_unique_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_47_CAP_SUB_1"
++  data {
++    template_id: "LEVEL_47_CAP_SUB_1"
++    260 {
++      1 {
++        1: 8
++        100: "LEVEL_47_CAP_SUB_1"
++        102: 6
++        103: "LEVEL_47_CAP_SUB_1"
++        105 {
++          1 {
++            1: 6
++          }
++          1 {
++            1: 7
++            8 {
++              1: "\003\004\005\006\007"
++            }
++          }
++          1 {
++            1: 34
++            28 {
++              1: 1500
++            }
++          }
++          2: 1
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_win_raid_lvl3plus_less1500cp_singular"
++        4: "quest_win_raid_lvl3plus_less1500cp_singular"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_47_CAP_SUB_2"
++  data {
++    template_id: "LEVEL_47_CAP_SUB_2"
++    260 {
++      1 {
++        1: 14
++        100: "LEVEL_47_CAP_SUB_2"
++        102: 6
++        103: "LEVEL_47_CAP_SUB_2"
++        105 {
++          1 {
++            1: 31
++            27 {
++              1: 1
++            }
++          }
++          2: 3
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_power_up_max_plural"
++        4: "quest_power_up_max_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_47_CAP_SUB_3"
++  data {
++    template_id: "LEVEL_47_CAP_SUB_3"
++    260 {
++      1 {
++        1: 18
++        100: "LEVEL_47_CAP_SUB_3"
++        102: 6
++        103: "LEVEL_47_CAP_SUB_3"
++        105 {
++          1 {
++            1: 16
++            15 {
++              2: 4
++              4: "\352\007"
++            }
++          }
++          2: 20
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_platinum_medal_plural"
++        4: "quest_platinum_medal_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_48_CAP"
++  data {
++    template_id: "LEVEL_48_CAP"
++    260 {
++      1 {
++        1: 3
++        3 {
++          1 {
++            100: "LEVEL_48_CAP_SUB_0"
++          }
++          1 {
++            100: "LEVEL_48_CAP_SUB_1"
++          }
++          1 {
++            100: "LEVEL_48_CAP_SUB_2"
++          }
++          1 {
++            100: "LEVEL_48_CAP_SUB_3"
++          }
++        }
++        100: "LEVEL_48_CAP"
++        102: 6
++        103: "LEVEL_48_CAP"
++        107 {
++          1: 10
++          11: 48
++        }
++      }
++      2 {
++        4: "title_level_48_cap"
++        6 {
++          1: "LEVEL_48_CAP_SUB_0"
++        }
++        6 {
++          1: "LEVEL_48_CAP_SUB_1"
++        }
++        6 {
++          1: "LEVEL_48_CAP_SUB_2"
++        }
++        6 {
++          1: "LEVEL_48_CAP_SUB_3"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_48_CAP_SUB_0"
++  data {
++    template_id: "LEVEL_48_CAP_SUB_0"
++    260 {
++      1 {
++        1: 40
++        100: "LEVEL_48_CAP_SUB_0"
++        102: 6
++        103: "LEVEL_48_CAP_SUB_0"
++        105 {
++          2: 10
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_buddy_souvenir_plural"
++        4: "quest_buddy_souvenir_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_48_CAP_SUB_1"
++  data {
++    template_id: "LEVEL_48_CAP_SUB_1"
++    260 {
++      1 {
++        1: 34
++        100: "LEVEL_48_CAP_SUB_1"
++        102: 6
++        103: "LEVEL_48_CAP_SUB_1"
++        105 {
++          2: 300
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
++        4: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_48_CAP_SUB_2"
++  data {
++    template_id: "LEVEL_48_CAP_SUB_2"
++    260 {
++      1 {
++        1: 42
++        100: "LEVEL_48_CAP_SUB_2"
++        102: 6
++        103: "LEVEL_48_CAP_SUB_2"
++        105 {
++          2: 200
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_buddy_walk_km_plural"
++        4: "quest_buddy_walk_km_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_48_CAP_SUB_3"
++  data {
++    template_id: "LEVEL_48_CAP_SUB_3"
++    260 {
++      1 {
++        1: 41
++        100: "LEVEL_48_CAP_SUB_3"
++        102: 6
++        103: "LEVEL_48_CAP_SUB_3"
++        105 {
++          1 {
++            1: 25
++            22 {
++              1: 0x4039000000000000
++            }
++          }
++          2: 8
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_walk_25km_inaweek_plural"
++        4: "quest_walk_25km_inaweek_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_49_CAP"
++  data {
++    template_id: "LEVEL_49_CAP"
++    260 {
++      1 {
++        1: 3
++        3 {
++          1 {
++            100: "LEVEL_49_CAP_SUB_0"
++          }
++          1 {
++            100: "LEVEL_49_CAP_SUB_1"
++          }
++          1 {
++            100: "LEVEL_49_CAP_SUB_2"
++          }
++          1 {
++            100: "LEVEL_49_CAP_SUB_3"
++          }
++        }
++        100: "LEVEL_49_CAP"
++        102: 6
++        103: "LEVEL_49_CAP"
++        107 {
++          1: 10
++          11: 49
++        }
++      }
++      2 {
++        4: "title_level_49_cap"
++        6 {
++          1: "LEVEL_49_CAP_SUB_0"
++        }
++        6 {
++          1: "LEVEL_49_CAP_SUB_1"
++        }
++        6 {
++          1: "LEVEL_49_CAP_SUB_2"
++        }
++        6 {
++          1: "LEVEL_49_CAP_SUB_3"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_49_CAP_SUB_0"
++  data {
++    template_id: "LEVEL_49_CAP_SUB_0"
++    260 {
++      1 {
++        1: 23
++        100: "LEVEL_49_CAP_SUB_0"
++        102: 6
++        103: "LEVEL_49_CAP_SUB_0"
++        105 {
++          1 {
++            1: 25
++            22 {
++              1: 0x4072c00000000000
++            }
++          }
++          2: 10
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_trade_300km_plural"
++        4: "quest_trade_300km_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_49_CAP_SUB_1"
++  data {
++    template_id: "LEVEL_49_CAP_SUB_1"
++    260 {
++      1 {
++        1: 23
++        100: "LEVEL_49_CAP_SUB_1"
++        102: 6
++        103: "LEVEL_49_CAP_SUB_1"
++        105 {
++          1 {
++            1: 35
++          }
++          2: 50
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_lucky_plural"
++        4: "quest_lucky_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_49_CAP_SUB_2"
++  data {
++    template_id: "LEVEL_49_CAP_SUB_2"
++    260 {
++      1 {
++        1: 24
++        100: "LEVEL_49_CAP_SUB_2"
++        102: 6
++        103: "LEVEL_49_CAP_SUB_2"
++        105 {
++          2: 500
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_send_gifts_plural"
++        4: "quest_send_gifts_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_49_CAP_SUB_3"
++  data {
++    template_id: "LEVEL_49_CAP_SUB_3"
++    260 {
++      1 {
++        1: 18
++        100: "LEVEL_49_CAP_SUB_3"
++        102: 6
++        103: "LEVEL_49_CAP_SUB_3"
++        105 {
++          1 {
++            1: 16
++            15 {
++              2: 4
++              4: "\352\007"
++            }
++          }
++          2: 35
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_platinum_medal_plural"
++        4: "quest_platinum_medal_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_50_CAP"
++  data {
++    template_id: "LEVEL_50_CAP"
++    260 {
++      1 {
++        1: 3
++        3 {
++          1 {
++            100: "LEVEL_50_CAP_SUB_0"
++          }
++          1 {
++            100: "LEVEL_50_CAP_SUB_1"
++          }
++          1 {
++            100: "LEVEL_50_CAP_SUB_2"
++          }
++          1 {
++            100: "LEVEL_50_CAP_SUB_3"
++          }
++        }
++        100: "LEVEL_50_CAP"
++        102: 6
++        103: "LEVEL_50_CAP"
++        107 {
++          1: 10
++          11: 50
++        }
++      }
++      2 {
++        4: "title_level_50_cap"
++        6 {
++          1: "LEVEL_50_CAP_SUB_0"
++        }
++        6 {
++          1: "LEVEL_50_CAP_SUB_1"
++        }
++        6 {
++          1: "LEVEL_50_CAP_SUB_2"
++        }
++        6 {
++          1: "LEVEL_50_CAP_SUB_3"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_50_CAP_SUB_0"
++  data {
++    template_id: "LEVEL_50_CAP_SUB_0"
++    260 {
++      1 {
++        1: 16
++        100: "LEVEL_50_CAP_SUB_0"
++        102: 6
++        103: "LEVEL_50_CAP_SUB_0"
++        105 {
++          1 {
++            1: 8
++            9 {
++              1: 12
++            }
++          }
++          2: 999
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_land_excellent_plural"
++        4: "quest_land_excellent_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_50_CAP_SUB_1"
++  data {
++    template_id: "LEVEL_50_CAP_SUB_1"
++    260 {
++      1 {
++        1: 4
++        100: "LEVEL_50_CAP_SUB_1"
++        102: 6
++        103: "LEVEL_50_CAP_SUB_1"
++        105 {
++          1 {
++            1: 36
++          }
++          1 {
++            1: 39
++          }
++          2: 5
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_catch_legendary_inarow_plural"
++        4: "quest_catch_legendary_inarow_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_50_CAP_SUB_2"
++  data {
++    template_id: "LEVEL_50_CAP_SUB_2"
++    260 {
++      1 {
++        1: 29
++        100: "LEVEL_50_CAP_SUB_2"
++        102: 6
++        103: "LEVEL_50_CAP_SUB_2"
++        105 {
++          1 {
++            1: 27
++            23 {
++              1: "\003\004\005"
++            }
++          }
++          1 {
++            1: 18
++          }
++          1 {
++            1: 34
++            28 {
++              1: 2500
++            }
++          }
++          2: 3
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_win_rocket_leader_less2500cp_plural"
++        4: "quest_win_rocket_leader_less2500cp_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "LEVEL_50_CAP_SUB_3"
++  data {
++    template_id: "LEVEL_50_CAP_SUB_3"
++    260 {
++      1 {
++        1: 51
++        100: "LEVEL_50_CAP_SUB_3"
++        102: 6
++        103: "LEVEL_50_CAP_SUB_3"
++        105 {
++          1 {
++            1: 38
++            30 {
++              1: 10
++            }
++          }
++          2: 1
++        }
++        107 {
++          1: 1
++          2: 500
++        }
++      }
++      2 {
++        3: "quest_gbl_rank_ten"
++        4: "quest_gbl_rank_ten"
++      }
++    }
++  }
++}
++template {
+   template_id: "LPSKU_bundle.flair.firsttime.1"
+   data {
+     template_id: "LPSKU_bundle.flair.firsttime.1"
+@@ -150424,6 +152119,15 @@
+   }
+ }
+ template {
++  template_id: "PARTY_PLAY_GET_PARTY_REMOVE_ORIGINAL_CODE_GATE"
++  data {
++    template_id: "PARTY_PLAY_GET_PARTY_REMOVE_ORIGINAL_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++    }
++  }
++}
++template {
+   template_id: "PARTY_PLAY_IAP_BOOSTS_SETTINGS"
+   data {
+     template_id: "PARTY_PLAY_IAP_BOOSTS_SETTINGS"
+@@ -154121,10 +155825,6 @@
+         raidLevel: RAID_LEVEL_5_SHADOW
+         battleMusicKey: "RocketBossCombatMusic"
+       }
+-      raidLevelMusicOverrides {
+-        raidLevel: RAID_LEVEL_MEGA_5
+-        battleMusicKey: "GoTour2023Music02"
+-      }
+       raidFeatureFlags {
+         useCachedRaidBossPokemon: true
+       }
+@@ -154138,49 +155838,6 @@
+       bootSoloMs: 30000
+       obRaidClientSettingsNumber1: 1
+       obRaidClientSettingsNumber29: 1
+-      pokemonMusicOverrides {
+-        pokemon: ZACIAN
+-        forms: ZACIAN_HERO
+-        forms: ZACIAN_CROWNED_SWORD
+-        battleMusicKey: "GoFest2025_Raid_Battle"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: ZAMAZENTA
+-        forms: ZAMAZENTA_HERO
+-        forms: ZAMAZENTA_CROWNED_SHIELD
+-        battleMusicKey: "GoFest2025_Raid_Battle"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: KYUREM
+-        forms: KYUREM_BLACK
+-        forms: KYUREM_WHITE
+-        forms: KYUREM_NORMAL
+-        battleMusicKey: "GoTour2025Music01"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: ZEKROM
+-        battleMusicKey: "GoTour2025Music01"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: RESHIRAM
+-        battleMusicKey: "GoTour2025Music01"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: NECROZMA
+-        forms: NECROZMA_NORMAL
+-        forms: NECROZMA_DUSK_MANE
+-        forms: NECROZMA_DAWN_WINGS
+-        forms: NECROZMA_ULTRA
+-        battleMusicKey: "GoFest2024Music_Battle"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: SOLGALEO
+-        battleMusicKey: "GoFest2024Music_Battle"
+-      }
+-      pokemonMusicOverrides {
+-        pokemon: LUNALA
+-        battleMusicKey: "GoFest2024Music_Battle"
+-      }
+     }
+   }
+ }
+@@ -154347,7 +156004,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 20
++      dailySquashLimit: 10
+     }
+   }
+ }
+@@ -267319,7 +268976,6 @@
+       damageWindowStartMs: 1000
+       damageWindowEndMs: 1800
+       energyDelta: -33
+-      isLocked: true
+     }
+   }
+ }
+@@ -336864,8 +338520,8 @@
+       familyId: FAMILY_DEWPIDER
+       kmBuddyDistance: 3
+       buddy_size: BUDDY_BIG
+-      modelHeight: 0.9
+-      modelScaleV2: 0.1
++      modelHeight: 1
++      modelScaleV2: 0.9
+       buddyOffsetMale: 3.6
+       buddyOffsetMale: 0
+       buddyOffsetMale: -37.1
+@@ -336875,7 +338531,7 @@
+       buddyScale: 19
+       buddyPortraitOffset: -30
+       buddyPortraitOffset: 30
+-      buddyPortraitOffset: -6500
++      buddyPortraitOffset: -1300
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -362755,10 +364411,10 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+       obMoveSettingsNumber18: 350
++      obMoveSettingsNumber18: 400
+       obMoveSettingsNumber18: 450
++      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -362767,8 +364423,9 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_SUMMER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+     }
+   }
+ }
+@@ -362781,31 +364438,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+     }
+@@ -362820,31 +364477,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362860,7 +364517,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -362878,7 +364535,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -362893,7 +364550,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -362911,7 +364568,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362927,7 +364584,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -362945,7 +364602,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -362960,7 +364617,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -362978,7 +364635,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -362994,7 +364651,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 570
++          count: 2280
+         }
+       }
+       reward {
+@@ -363012,7 +364669,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+     }
+@@ -363027,7 +364684,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+       reward {
+@@ -363045,7 +364702,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 9120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363061,7 +364718,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -363079,7 +364736,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+     }
+@@ -363094,7 +364751,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       reward {
+@@ -363112,7 +364769,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 9600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363207,7 +364864,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 700
++          count: 2800
+         }
+       }
+       reward {
+@@ -363225,7 +364882,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+     }
+@@ -363240,7 +364897,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+       reward {
+@@ -363258,7 +364915,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 11200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363274,7 +364931,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 730
++          count: 2920
+         }
+       }
+       reward {
+@@ -363292,7 +364949,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+     }
+@@ -363307,7 +364964,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+       reward {
+@@ -363325,7 +364982,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 11680
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363341,7 +364998,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 770
++          count: 3080
+         }
+       }
+       reward {
+@@ -363359,7 +365016,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+     }
+@@ -363374,7 +365031,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+       reward {
+@@ -363392,7 +365049,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 12320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363457,7 +365114,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 300
++          count: 1200
+         }
+       }
+       reward {
+@@ -363475,7 +365132,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+     }
+@@ -363490,7 +365147,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -363508,7 +365165,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363524,7 +365181,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 870
++          count: 3480
+         }
+       }
+       reward {
+@@ -363542,7 +365199,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+     }
+@@ -363557,7 +365214,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+       reward {
+@@ -363575,7 +365232,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 13920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363591,7 +365248,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -363609,7 +365266,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -363624,7 +365281,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -363642,7 +365299,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363658,7 +365315,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -363676,7 +365333,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -363691,7 +365348,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -363709,7 +365366,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363725,7 +365382,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -363743,7 +365400,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -363758,7 +365415,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -363776,7 +365433,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363792,7 +365449,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -363810,7 +365467,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -363825,7 +365482,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -363843,7 +365500,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363859,7 +365516,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -363877,7 +365534,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -363892,7 +365549,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -363910,7 +365567,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363926,7 +365583,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -363944,7 +365601,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -363959,7 +365616,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -363977,7 +365634,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -363993,7 +365650,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 370
++          count: 1480
+         }
+       }
+       reward {
+@@ -364011,7 +365668,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+     }
+@@ -364026,7 +365683,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+       reward {
+@@ -364044,7 +365701,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 5920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -364109,7 +365766,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 400
++          count: 1600
+         }
+       }
+       reward {
+@@ -364127,7 +365784,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+     }
+@@ -364142,7 +365799,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+       reward {
+@@ -364160,7 +365817,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 6400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -364176,7 +365833,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -364194,7 +365851,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -364209,7 +365866,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -364227,7 +365884,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -364243,7 +365900,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -364261,7 +365918,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -364276,7 +365933,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -364294,7 +365951,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -364310,7 +365967,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 470
++          count: 1880
+         }
+       }
+       reward {
+@@ -364328,7 +365985,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+     }
+@@ -364343,7 +366000,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+       reward {
+@@ -364361,7 +366018,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 7520
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -364969,7 +366626,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: LUGIA
++          pokemon_id: HO_OH
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -365619,7 +367276,7 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemon_id: LUGIA
++          pokemon_id: HO_OH
+         }
+         unlockedAtRank: 20
+         attackIvOverride {
+@@ -368833,10 +370490,13 @@
+       sku: "bundle.tmexpert.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       sale: true
+       spriteId: "bundle.general2.medium.2"
+       title: "TM_Expert_Box"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2025-08-17T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1755460800000
+     }
+   }
+ }
+@@ -369287,6 +370947,7 @@
+       sku: "general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._OriginRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -369307,6 +370968,7 @@
+       sku: "general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._OriginRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -369505,6 +371167,7 @@
+       sku: "general2.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket.2_CozyCO25_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -369525,6 +371188,7 @@
+       sku: "general2.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket.2_CozyCO25_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -371048,6 +372712,7 @@
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._OriginRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -371068,6 +372733,7 @@
+       sku: "pgorelease.general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._OriginRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -371247,6 +372913,7 @@
+       sku: "pgorelease.general2.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket.2_CozyCO25_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -371267,6 +372934,7 @@
+       sku: "pgorelease.general2.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket.2_CozyCO25_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -376612,6 +378280,20 @@
+   }
+ }
+ template {
++  template_id: "vista_general_settings"
++  data {
++    template_id: "vista_general_settings"
++    vistaGeneralSettings {
++      isFeatureEnabled: true
++      isVistaBattleEnabled: true
++      isVistaEncounterEnabled: true
++      isVistaMapEnabled: true
++      isVistaSpawnsEnabled: true
++      themeOverride: "WCS"
++    }
++  }
++}
++template {
+   template_id: "web-community-ambassador-bonus-bundle-2025"
+   data {
+     template_id: "web-community-ambassador-bonus-bundle-2025"
+@@ -376699,7 +378381,7 @@
+     }
+   }
+ }
+-batch_id: 1754811336641
++batch_id: 1755034495376
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
+@@ -376708,7 +378390,7 @@
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 150
+-experiment_id: 161
++experiment_id: 162
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 408
+@@ -376722,6 +378404,7 @@
+ experiment_id: 805
+ experiment_id: 807
+ experiment_id: 1699
++experiment_id: 2246
+ experiment_id: 2248
+ experiment_id: 2254
+ experiment_id: 2297
+@@ -376735,16 +378418,15 @@
+ experiment_id: 3033
+ experiment_id: 3063
+ experiment_id: 3710
+-experiment_id: 3723
++experiment_id: 3724
+ experiment_id: 3729
+-experiment_id: 3739
++experiment_id: 3740
+ experiment_id: 3746
+ experiment_id: 3756
+-experiment_id: 3872
+-experiment_id: 3874
+-experiment_id: 4885
+-experiment_id: 4905
+-experiment_id: 4906
++experiment_id: 3875
++experiment_id: 3889
++experiment_id: 4708
++experiment_id: 4709
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+@@ -376753,8 +378435,8 @@
+ experiment_id: 5508
+ experiment_id: 5510
+ experiment_id: 6075
+-experiment_id: 7055
+ experiment_id: 7057
++experiment_id: 7060
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
+@@ -376777,3 +378459,4 @@
+ experiment_id: 6600417
+ experiment_id: 6600418
+ experiment_id: 6600423
++experiment_id: 6600439
