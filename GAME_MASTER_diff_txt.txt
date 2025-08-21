@@ -1,1046 +1,298 @@
---- GAME_MASTER_old.txt	2025-08-19 20:12:41.226800151 +0200
-+++ GAME_MASTER.txt	2025-08-20 20:05:44.888141715 +0200
-@@ -70964,11 +70964,12 @@
-   }
- }
- template {
--  template_id: "DISABLE_POKEBALL_SOFTLOCK_FIX_CODE_GATE"
-+  template_id: "LC_2025_PARIS_002"
-   data {
--    template_id: "DISABLE_POKEBALL_SOFTLOCK_FIX_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
-+    template_id: "LC_2025_PARIS_002"
-+    locationCardSettings {
-+      locationCard: 152
-+      imageUrl: "lc_Paris2025_02"
-     }
-   }
- }
-@@ -128162,26 +128163,26 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-07-20T14:00:00"
--        eventEndTime: "2025-07-20T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Quaxly25"
-+        eventStartTime: "2025-08-30T14:00:00"
-+        eventEndTime: "2025-08-30T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Rookidee25"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs19_quaxly_cd_nologo.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-rookidee-cd-nologo-2025.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs19_quaxly_cd_nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CD_Quaxly25"
--        textRewardsKey: "text_rewards_key_CD_Quaxly25"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-rookidee-cd-nologo-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CD_Rookidee25"
-+        textRewardsKey: "text_rewards_key_CD_Rookidee25"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemonId: QUAQUAVAL
-+            pokemonId: CORVIKNIGHT
-           }
-         }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_STAR_PIECE
-+            item: ITEM_INCUBATOR_BASIC
-             amount: 1
-           }
-         }
-@@ -128193,11 +128194,11 @@
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1753020000000
--        clientEventEndTimeUtcMs: 1753030800000
-+        clientEventStartTimeUtcMs: 1756562400000
-+        clientEventEndTimeUtcMs: 1756573200000
-       }
--      nameOverride: "general1.ticket_CD_Quaxly25_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Quaxly25"
-+      nameOverride: "general1.ticket_CD_Rookidee25_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Rookidee25"
-     }
-   }
- }
-@@ -128210,17 +128211,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-07-20T14:00:00"
--        eventEndTime: "2025-07-20T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Quaxly25"
-+        eventStartTime: "2025-08-30T14:00:00"
-+        eventEndTime: "2025-08-30T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Rookidee25"
-         ticketItem: ITEM_EVENT_TICKET_03
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs19_quaxly_cd_nologo.jpg"
--        clientEventStartTimeUtcMs: 1753020000000
--        clientEventEndTimeUtcMs: 1753030800000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-rookidee-cd-nologo-2025.jpg"
-+        clientEventStartTimeUtcMs: 1756562400000
-+        clientEventEndTimeUtcMs: 1756573200000
+--- GAME_MASTER_old.txt	2025-08-20 20:05:44.888141715 +0200
++++ GAME_MASTER.txt	2025-08-21 19:52:03.233728223 +0200
+@@ -129285,7 +129285,7 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 6
+       incense {
+-        incenseLifetimeSeconds: 3600
++        incenseLifetimeSeconds: 1800
+         spawnTableProbability: 0.25
        }
        ignoreInventorySpace: true
--      nameOverride: "general1.ticket_CD_Quaxly25_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Quaxly25"
-+      nameOverride: "general1.ticket_CD_Rookidee25_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Rookidee25"
-     }
-   }
- }
-@@ -128233,40 +128234,44 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-08-06T10:00:00"
--        eventEndTime: "2025-08-12T20:00:00"
--        itemBagDescriptionKey: "text_rewards_key_CozyCO25"
-+        eventStartTime: "2025-08-25T10:00:00"
-+        eventEndTime: "2025-08-31T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_SunkissedETR0825"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_04_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-cozy-companions-ticket-nologo-2025.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-encounter-ticket-nologo-2025.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-cozy-companions-ticket-nologo-2025.jpg"
--        eventDatetimeRangeKey: "item_event_ticket_pink_details_CozyCO25"
--        textRewardsKey: "item_event_ticket_pink_desc_CozyCO25"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-encounter-ticket-nologo-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_SunkissedETR0825"
-+        textRewardsKey: "text_rewards_key_SunkissedETR0825"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemonId: TANDEMAUS
-+            pokemonId: SLAKOTH
-+            pokemonDisplay {
-+              costume: 77
-+            }
+@@ -135999,7 +135999,7 @@
+       numMpFromWalkQuest: 300
+       numMetersGoal: 2000
+       debugAllowRemoveWalkQuest: true
+-      numMpFromLootStation: 100
++      numMpFromLootStation: 800
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1600
+       mpBaseDailyLimit: 1600
+@@ -136791,12 +136791,12 @@
+         attackDefenseBonus {
+           attributes {
+             combatTypes: COMBAT_TYPE_RAID
+-            attackMultiplier: 1.2
++            attackMultiplier: 1.3
+           }
+           attributes {
+             combatTypes: COMBAT_TYPE_DMAX
+             combatTypes: COMBAT_TYPE_GMAX
+-            attackMultiplier: 1.1
++            attackMultiplier: 1.15
            }
          }
-         iconRewards {
--          type: POKEMON_ENCOUNTER
--          pokemonEncounter {
--            pokemonId: SNOM
-+          type: ITEM
-+          item {
-+            item: ITEM_PAID_RAID_TICKET
-+            amount: 2
+       }
+@@ -136822,12 +136822,12 @@
+         attackDefenseBonus {
+           attributes {
+             combatTypes: COMBAT_TYPE_RAID
+-            defenseMultiplier: 1.2
++            defenseMultiplier: 1.3
+           }
+           attributes {
+             combatTypes: COMBAT_TYPE_DMAX
+             combatTypes: COMBAT_TYPE_GMAX
+-            defenseMultiplier: 1.1
++            defenseMultiplier: 1.15
            }
          }
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemonId: CHARCADET
-+            pokemonId: DONDOZO
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1754474400000
--        clientEventEndTimeUtcMs: 1755028800000
-+        clientEventStartTimeUtcMs: 1756116000000
-+        clientEventEndTimeUtcMs: 1756670400000
        }
--      nameOverride: "general1.ticket.2_CozyCO25_title"
--      descriptionOverride: "text_rewards_key_CozyCO25"
-+      nameOverride: "general1.ticket._SunkissedETR0825_title"
-+      descriptionOverride: "item_event_ticket_evergreen_desc_SunkissedETR0825"
+@@ -156328,10 +156328,10 @@
+       ruleType: DEVICE_MODEL
+       sortOrder: 50
+       ruleValue: "Google Pixel 10"
+-      meshingEnabled: TRUE
+-      occlusionEnabled: TRUE
+-      semanticsEnabled: TRUE
+-      vpsEnabled: TRUE
++      meshingEnabled: FALSE
++      occlusionEnabled: FALSE
++      semanticsEnabled: FALSE
++      vpsEnabled: FALSE
      }
    }
  }
-@@ -128279,16 +128284,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-08-06T10:00:00"
--        eventEndTime: "2025-08-12T20:00:00"
--        itemBagDescriptionKey: "event_datetime_range_key_CozyCO25"
-+        eventStartTime: "2025-08-25T10:00:00"
-+        eventEndTime: "2025-08-31T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_details_SunkissedETR0825"
-         ticketItem: ITEM_EVENT_TICKET_04
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-cozy-companions-ticket-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1754474400000
--        clientEventEndTimeUtcMs: 1755028800000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-encounter-ticket-nologo-2025.jpg"
-+        clientEventStartTimeUtcMs: 1756116000000
-+        clientEventEndTimeUtcMs: 1756670400000
+@@ -156343,10 +156343,10 @@
+       ruleType: DEVICE_MODEL
+       sortOrder: 50
+       ruleValue: "Google Pixel 10 Pro"
+-      meshingEnabled: TRUE
+-      occlusionEnabled: TRUE
+-      semanticsEnabled: TRUE
+-      vpsEnabled: TRUE
++      meshingEnabled: FALSE
++      occlusionEnabled: FALSE
++      semanticsEnabled: FALSE
++      vpsEnabled: FALSE
+     }
+   }
+ }
+@@ -156358,10 +156358,10 @@
+       ruleType: DEVICE_MODEL
+       sortOrder: 50
+       ruleValue: "Google Pixel 10 Pro Fold"
+-      meshingEnabled: TRUE
+-      occlusionEnabled: TRUE
+-      semanticsEnabled: TRUE
+-      vpsEnabled: TRUE
++      meshingEnabled: FALSE
++      occlusionEnabled: FALSE
++      semanticsEnabled: FALSE
++      vpsEnabled: FALSE
+     }
+   }
+ }
+@@ -156373,10 +156373,10 @@
+       ruleType: DEVICE_MODEL
+       sortOrder: 50
+       ruleValue: "Google Pixel 10 Pro XL"
+-      meshingEnabled: TRUE
+-      occlusionEnabled: TRUE
+-      semanticsEnabled: TRUE
+-      vpsEnabled: TRUE
++      meshingEnabled: FALSE
++      occlusionEnabled: FALSE
++      semanticsEnabled: FALSE
++      vpsEnabled: FALSE
+     }
+   }
+ }
+@@ -294730,7 +294730,7 @@
+       movementId: BEHEMOTH_BLADE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 200
++      power: 210
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+@@ -294838,7 +294838,7 @@
+       movementId: BEHEMOTH_BASH
+       animationId: 5
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 125
++      power: 131.25
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+@@ -360456,13 +360456,20 @@
+       pokemonId: DONDOZO
+       type: POKEMON_TYPE_WATER
+       camera {
++        cylinderRadiusM: 6
++        cylinderHeightM: 4
++        cylinderGroundM: 0.5
        }
-       ignoreInventorySpace: true
--      descriptionOverride: "event_datetime_range_key_CozyCO25"
-+      descriptionOverride: "item_event_ticket_evergreen_details_SunkissedETR0825"
-     }
-   }
- }
-@@ -128301,29 +128306,49 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-06-03T10:00:00"
--        eventEndTime: "2025-07-03T10:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_JuneMonthly2025"
-+        eventStartTime: "2025-09-02T10:00:00"
-+        eventEndTime: "2025-09-07T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Kanto_CelebrationSEP25"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_05_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250731_pgo_s20_mega_kanto_002_1024x576_nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_JuneMonthly2025"
--        textRewardsKey: "text_rewards_key_JuneMonthly2025"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250731_pgo_s20_mega_kanto_002_1024x576_nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_Kanto_CelebrationSEP25"
-+        textRewardsKey: "text_rewards_key_Kanto_CelebrationSEP25"
-         iconRewards {
--          type: EXPERIENCE
--          exp: 15000
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemonId: ARTICUNO
-+            pokemonDisplay {
-+              form: ARTICUNO_NORMAL
-+            }
-+          }
-         }
-         iconRewards {
--          type: STARDUST
--          stardust: 15000
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemonId: ZAPDOS
-+            pokemonDisplay {
-+              form: ZAPDOS_NORMAL
-+            }
-+          }
-+        }
-+        iconRewards {
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemonId: MOLTRES
-+            pokemonDisplay {
-+              form: MOLTRES_NORMAL
-+            }
-+          }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1748944800000
--        clientEventEndTimeUtcMs: 1751536800000
-+        clientEventStartTimeUtcMs: 1756807200000
-+        clientEventEndTimeUtcMs: 1757275200000
+       encounter {
++        collisionRadiusM: 3
++        collisionHeightM: 0.6
++        collisionHeadRadiusM: 3
+         movementType: MOVEMENT_HOVERING
+         jumpTimeS: 1
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 8
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
        }
--      descriptionOverride: "item_event_ticket_gray_desc_JuneMonthly2025"
-+      nameOverride: "general1.ticket._Kanto_CelebrationSEP25_title"
-+      descriptionOverride: "item_event_ticket_evergreen_details_Kanto_CelebrationSEP25"
-     }
-   }
- }
-@@ -128336,16 +128361,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-06-03T10:00:00"
--        eventEndTime: "2025-07-03T10:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_JuneMonthly2025"
-+        eventStartTime: "2025-09-02T10:00:00"
-+        eventEndTime: "2025-09-07T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Kanto_CelebrationSEP25"
-         ticketItem: ITEM_EVENT_TICKET_05
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1748944800000
--        clientEventEndTimeUtcMs: 1751536800000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250731_pgo_s20_mega_kanto_002_1024x576_nologo.jpg"
-+        clientEventStartTimeUtcMs: 1756807200000
-+        clientEventEndTimeUtcMs: 1757275200000
+@@ -360483,6 +360490,13 @@
+       weightStdDev: 27.5
+       familyId: FAMILY_DONDOZO
+       kmBuddyDistance: 5
++      buddy_size: BUDDY_BIG
++      modelHeight: 3
++      modelScaleV2: 0.47
++      buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 1000
++      buddyPortraitOffset: -600
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+@@ -360490,6 +360504,14 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      combatOpponentFocusCameraAngle: 3
++      combatOpponentFocusCameraAngle: -0.5
++      combatOpponentFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: -3
++      combatPlayerFocusCameraAngle: -0.5
++      combatPlayerFocusCameraAngle: 0
++      buddyGroupNumber: 3
++      raidBossDistanceOffset: 12
+       ibfc {
        }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_JuneMonthly2025"
-+      nameOverride: "general1.ticket._Kanto_CelebrationSEP25_title"
-+      descriptionOverride: "item_event_ticket_evergreen_details_Kanto_CelebrationSEP25"
+       breadTierGroup: GROUP_3
+@@ -364470,10 +364492,10 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
++      obMoveSettingsNumber18: 262.5
++      obMoveSettingsNumber18: 315
++      obMoveSettingsNumber18: 367.5
++      obMoveSettingsNumber18: 472.5
      }
    }
  }
-@@ -128358,29 +128384,39 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-07-03T10:00:00"
--        eventEndTime: "2025-08-03T10:00:00"
--        itemBagDescriptionKey: "item_event_ticket_06_desc_JulyMonthly2025"
-+        eventStartTime: "2025-09-07T14:00:00"
-+        eventEndTime: "2025-09-07T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaSharpedoRaidDay"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_06_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_JulyMonthly2025"
--        textRewardsKey: "text_rewards_key_JulyMonthly2025"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_MegaSharpedoRaidDay"
-+        textRewardsKey: "text_rewards_key_MegaSharpedoRaidDay"
-         iconRewards {
--          type: EXPERIENCE
--          exp: 15000
-+          type: ITEM
-+          item {
-+            item: ITEM_FREE_RAID_TICKET
-+            amount: 8
-+          }
-+        }
-+        iconRewards {
-+          type: ITEM
-+          item {
-+            item: ITEM_XL_RARE_CANDY
-+          }
-         }
-         iconRewards {
-           type: STARDUST
--          stardust: 15000
-+          stardust: 2
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1751536800000
--        clientEventEndTimeUtcMs: 1754215200000
-+        clientEventStartTimeUtcMs: 1757253600000
-+        clientEventEndTimeUtcMs: 1757264400000
-       }
--      descriptionOverride: "item_event_ticket_06_desc_JulyMonthly2025"
-+      nameOverride: "general2.ticket.6_MegaSharpedoRaidDay_title"
-+      descriptionOverride: "item_event_ticket_gray_desc_MegaSharpedoRaidDay"
+@@ -364493,10 +364515,10 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
++      obMoveSettingsNumber18: 262.5
++      obMoveSettingsNumber18: 315
++      obMoveSettingsNumber18: 367.5
++      obMoveSettingsNumber18: 472.5
      }
    }
  }
-@@ -128393,16 +128429,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-07-03T10:00:00"
--        eventEndTime: "2025-08-03T10:00:00"
--        itemBagDescriptionKey: "item_event_ticket_06_details_JulyMonthly2025"
-+        eventStartTime: "2025-09-07T14:00:00"
-+        eventEndTime: "2025-09-07T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_details_MegaSharpedoRaidDay"
-         ticketItem: ITEM_EVENT_TICKET_06
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1751536800000
--        clientEventEndTimeUtcMs: 1754215200000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1757253600000
-+        clientEventEndTimeUtcMs: 1757264400000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_06_details_JulyMonthly2025"
-+      nameOverride: "general2.ticket.6_MegaSharpedoRaidDay_title"
-+      descriptionOverride: "item_event_ticket_gray_details_MegaSharpedoRaidDay"
+@@ -395364,7 +395386,58 @@
      }
    }
  }
-@@ -128676,16 +128713,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-08-10T11:00:00"
--        eventEndTime: "2025-08-10T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_OriginRaidDay"
-+        eventStartTime: "2025-08-31T14:00:00"
-+        eventEndTime: "2025-08-31T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaGyaradosRaidDay"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_GRAY_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-mega-gyarados-raid-day-nologo-2025.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_OriginRaidDay"
--        textRewardsKey: "text_rewards_key_OriginRaidDay"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-mega-gyarados-raid-day-nologo-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_MegaGyaradosRaidDay"
-+        textRewardsKey: "text_rewards_key_MegaGyaradosRaidDay"
-         iconRewards {
-           type: ITEM
-           item {
-@@ -128704,11 +128741,11 @@
-           stardust: 2
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1754823600000
--        clientEventEndTimeUtcMs: 1754845200000
-+        clientEventStartTimeUtcMs: 1756648800000
-+        clientEventEndTimeUtcMs: 1756659600000
-       }
--      nameOverride: "general1.ticket._OriginRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_desc_OriginRaidDay"
-+      nameOverride: "general1.ticket.5_MegaGyaradosRaidDay_title"
-+      descriptionOverride: "item_event_ticket_gray_desc_MegaGyaradosRaidDay"
-     }
-   }
- }
-@@ -128721,16 +128758,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-08-10T11:00:00"
--        eventEndTime: "2025-08-10T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_OriginRaidDay"
-+        eventStartTime: "2025-08-31T14:00:00"
-+        eventEndTime: "2025-08-31T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_details_MegaGyaradosRaidDay"
-         ticketItem: ITEM_EVENT_TICKET_GRAY
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1754823600000
--        clientEventEndTimeUtcMs: 1754845200000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-mega-gyarados-raid-day-nologo-2025.jpg"
-+        clientEventStartTimeUtcMs: 1756648800000
-+        clientEventEndTimeUtcMs: 1756659600000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_OriginRaidDay"
-+      descriptionOverride: "item_event_ticket_gray_details_MegaGyaradosRaidDay"
-     }
-   }
- }
-@@ -128814,41 +128851,47 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-07-29T10:00:00"
--        eventEndTime: "2025-08-03T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_AdventureWK0729"
-+        eventStartTime: "2025-08-25T10:00:00"
-+        eventEndTime: "2025-08-31T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_SunkissedCTR0825"
-         giftable: true
-         giftItem: ITEM_EVERGREEN_TICKET_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-adventure-week-ticket-nologo-2025.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-adventure-week-ticket-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_AdventureWK0729"
--        textRewardsKey: "text_rewards_key_AdventureWK0729"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_SunkissedCTR0825"
-+        textRewardsKey: "text_rewards_key_SunkissedCTR0825"
-         iconRewards {
--          type: POKEMON_ENCOUNTER
--          pokemonEncounter {
--            pokemonId: TRUBBISH
-+          type: AVATAR_CLOTHING
-+          neutralAvatarItemTemplate {
-+            itemTemplateId: "N_AVATAR_n_backpack_pinap_0"
-+            displayTemplateId: "N_DISPLAY_n_backpack_pinap_0"
-           }
-         }
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemonId: SANDYGAST
-+            pokemonId: MAROWAK
-+            pokemonDisplay {
-+              form: MAROWAK_ALOLA
-+            }
-           }
-         }
-         iconRewards {
--          type: ITEM
--          item {
--            item: ITEM_LUCKY_EGG
--            amount: 3
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemonId: SHELLDER
-+            pokemonDisplay {
-+              form: SHELLDER_NORMAL
-+            }
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1753783200000
--        clientEventEndTimeUtcMs: 1754251200000
-+        clientEventStartTimeUtcMs: 1756116000000
-+        clientEventEndTimeUtcMs: 1756670400000
-       }
--      nameOverride: "general1.ticket._AdventureWK0729_title"
--      descriptionOverride: "item_event_ticket_evergreen_desc_AdventureWK0729"
-+      nameOverride: "general1.ticket._SunkissedCTR0825_title"
-+      descriptionOverride: "item_event_ticket_evergreen_desc_SunkissedCTR0825"
-     }
-   }
- }
-@@ -128861,16 +128904,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-07-29T10:00:00"
--        eventEndTime: "2025-08-03T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_evergreen_details_AdventureWK0729"
-+        eventStartTime: "2025-08-25T10:00:00"
-+        eventEndTime: "2025-08-31T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_details_SunkissedCTR0825"
-         ticketItem: ITEM_EVERGREEN_TICKET
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-adventure-week-ticket-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1753783200000
--        clientEventEndTimeUtcMs: 1754251200000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
-+        clientEventStartTimeUtcMs: 1756116000000
-+        clientEventEndTimeUtcMs: 1756670400000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_evergreen_details_AdventureWK0729"
-+      descriptionOverride: "item_event_ticket_evergreen_details_SunkissedCTR0825"
-     }
-   }
- }
-@@ -155738,13 +155781,12 @@
-   }
- }
- template {
--  template_id: "PTC_OAUTH_SETTINGS"
-+  template_id: "LC_2025_PARIS_001"
-   data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    template_id: "LC_2025_PARIS_001"
-+    locationCardSettings {
-+      locationCard: 151
-+      imageUrl: "lc_Paris2025_01"
-     }
-   }
- }
-@@ -364486,9 +364528,8 @@
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
-       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S19"
-     }
-   }
- }
-@@ -370894,13 +370935,13 @@
-       sortOrder: 4
-       hidden: true
-       spriteId: "evergreenticket.1"
--      title: "general1.ticket._AdventureWK0729_title"
-+      title: "general1.ticket._SunkissedCTR0825_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-03T20:00:00"
-+      skuDisableTime: "2025-08-31T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754251200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-adventure-week-ticket-nologo-2025.jpg"
--      webstoreSkuId: "web-adventure-week-2025-ticket-box"
-+      skuDisableTimeUtcMs: 1756670400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
-+      webstoreSkuId: "web-cosmetic-2025-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -370915,12 +370956,12 @@
-       sortOrder: 4
-       hidden: true
-       spriteId: "evergreenticket.1"
--      title: "general1.ticket._AdventureWK0729_title"
-+      title: "general1.ticket._SunkissedCTR0825_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-03T20:00:00"
-+      skuDisableTime: "2025-08-31T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754251200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-adventure-week-ticket-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1756670400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
-     }
-   }
- }
-@@ -371068,14 +371109,14 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.4"
--      title: "general1.ticket._OriginRaidDay_title"
-+      spriteId: "general1.ticket.5"
-+      title: "general1.ticket.5_MegaGyaradosRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-10T17:00:00"
-+      skuDisableTime: "2025-08-31T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754845200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
--      webstoreSkuId: "web-origin-raid-day-ticket-box"
-+      skuDisableTimeUtcMs: 1756659600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-mega-gyarados-raid-day-nologo-2025.jpg"
-+      webstoreSkuId: "web-mega-gyarados-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -371089,13 +371130,13 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.4"
--      title: "general1.ticket._OriginRaidDay_title"
-+      spriteId: "general1.ticket.5"
-+      title: "general1.ticket.5_MegaGyaradosRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-10T17:00:00"
-+      skuDisableTime: "2025-08-31T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754845200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1756659600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-mega-gyarados-raid-day-nologo-2025.jpg"
-     }
-   }
- }
-@@ -371250,13 +371291,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Quaxly25_title"
-+      title: "general1.ticket_CD_Rookidee25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-07-20T17:00:00"
-+      skuDisableTime: "2025-08-30T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1753030800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs19_quaxly_cd_nologo.jpg"
--      webstoreSkuId: "web-july-2025-cd-ticket-box"
-+      skuDisableTimeUtcMs: 1756573200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-rookidee-cd-nologo-2025.jpg"
-+      webstoreSkuId: "web-august-cd-2025-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -371271,11 +371312,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Quaxly25_title"
-+      title: "general1.ticket_CD_Rookidee25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-07-20T17:00:00"
-+      skuDisableTime: "2025-08-30T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1753030800000
-+      skuDisableTimeUtcMs: 1756573200000
-     }
-   }
- }
-@@ -371288,13 +371329,13 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.2"
--      title: "general1.ticket.2_CozyCO25_title"
-+      spriteId: "general2.ticket.4"
-+      title: "general1.ticket._SunkissedETR0825_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-08-12T20:00:00"
-+      skuDisableTime: "2025-08-31T20:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1755028800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-cozy-companions-ticket-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1756670400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-encounter-ticket-nologo-2025.jpg"
-       webstoreSkuId: "web-encounter-2025-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-@@ -371309,13 +371350,13 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.2"
--      title: "general1.ticket.2_CozyCO25_title"
-+      spriteId: "general2.ticket.4"
-+      title: "general1.ticket._SunkissedETR0825_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-08-12T20:00:00"
-+      skuDisableTime: "2025-08-31T20:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1755028800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-cozy-companions-ticket-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1756670400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-encounter-ticket-nologo-2025.jpg"
-     }
-   }
- }
-@@ -371329,12 +371370,14 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.5"
--      title: "general2.ticket.5_JuneMonthly2025_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-06-10T20:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1749585600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
-+      title: "general1.ticket._Kanto_CelebrationSEP25_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-09-07T20:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1757275200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250731_pgo_s20_mega_kanto_002_1024x576_nologo.jpg"
-+      webstoreSkuId: "web-2025-kanto-birds-ticket-box"
-+      webstoreSkuPriceE6: 4990000
-     }
-   }
- }
-@@ -371348,12 +371391,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.5"
--      title: "general2.ticket.5_JuneMonthly2025_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-06-10T20:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1749585600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
-+      title: "general1.ticket._Kanto_CelebrationSEP25_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-09-07T20:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1757275200000
-     }
-   }
- }
-@@ -371367,12 +371409,14 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_JulyMonthly2025_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-07-10T20:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1752177600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
-+      title: "general2.ticket.6_MegaSharpedoRaidDay_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-09-07T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1757264400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
-+      webstoreSkuId: "web-mega-sharpedo-ticket-box"
-+      webstoreSkuPriceE6: 4990000
-     }
-   }
- }
-@@ -371386,12 +371430,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_JulyMonthly2025_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-07-10T20:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1752177600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
-+      title: "general2.ticket.6_MegaSharpedoRaidDay_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-09-07T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1757264400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
-     }
-   }
- }
-@@ -372676,13 +372720,13 @@
-       sortOrder: 4
-       hidden: true
-       spriteId: "evergreenticket.1"
--      title: "general1.ticket._AdventureWK0729_title"
-+      title: "general1.ticket._SunkissedCTR0825_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-03T20:00:00"
-+      skuDisableTime: "2025-08-31T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754251200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-adventure-week-ticket-nologo-2025.jpg"
--      webstoreSkuId: "web-adventure-week-2025-ticket-box"
-+      skuDisableTimeUtcMs: 1756670400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
-+      webstoreSkuId: "web-cosmetic-2025-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -372697,12 +372741,12 @@
-       sortOrder: 4
-       hidden: true
-       spriteId: "evergreenticket.1"
--      title: "general1.ticket._AdventureWK0729_title"
-+      title: "general1.ticket._SunkissedCTR0825_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-03T20:00:00"
-+      skuDisableTime: "2025-08-31T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754251200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-adventure-week-ticket-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1756670400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
-     }
-   }
- }
-@@ -372833,14 +372877,14 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.4"
--      title: "general1.ticket._OriginRaidDay_title"
-+      spriteId: "general1.ticket.5"
-+      title: "general1.ticket.5_MegaGyaradosRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-10T17:00:00"
-+      skuDisableTime: "2025-08-31T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754845200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
--      webstoreSkuId: "web-origin-raid-day-ticket-box"
-+      skuDisableTimeUtcMs: 1756659600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-mega-gyarados-raid-day-nologo-2025.jpg"
-+      webstoreSkuId: "web-mega-gyarados-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -372854,13 +372898,13 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.4"
--      title: "general1.ticket._OriginRaidDay_title"
-+      spriteId: "general1.ticket.5"
-+      title: "general1.ticket.5_MegaGyaradosRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-10T17:00:00"
-+      skuDisableTime: "2025-08-31T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754845200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-ultra-unlock-origin-raid-day-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1756659600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-mega-gyarados-raid-day-nologo-2025.jpg"
-     }
-   }
- }
-@@ -372996,13 +373040,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Quaxly25_title"
-+      title: "general1.ticket_CD_Rookidee25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-07-20T17:00:00"
-+      skuDisableTime: "2025-08-30T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1753030800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs19_quaxly_cd_nologo.jpg"
--      webstoreSkuId: "web-july-2025-cd-ticket-box"
-+      skuDisableTimeUtcMs: 1756573200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-rookidee-cd-nologo-2025.jpg"
-+      webstoreSkuId: "web-august-cd-2025-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -373017,11 +373061,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Quaxly25_title"
-+      title: "general1.ticket_CD_Rookidee25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-07-20T17:00:00"
-+      skuDisableTime: "2025-08-30T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1753030800000
-+      skuDisableTimeUtcMs: 1756573200000
-     }
-   }
- }
-@@ -373034,13 +373078,13 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.2"
--      title: "general1.ticket.2_CozyCO25_title"
-+      spriteId: "general2.ticket.4"
-+      title: "general1.ticket._SunkissedETR0825_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-08-12T20:00:00"
-+      skuDisableTime: "2025-08-31T20:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1755028800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-cozy-companions-ticket-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1756670400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-encounter-ticket-nologo-2025.jpg"
-       webstoreSkuId: "web-encounter-2025-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-@@ -373055,13 +373099,13 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.2"
--      title: "general1.ticket.2_CozyCO25_title"
-+      spriteId: "general2.ticket.4"
-+      title: "general1.ticket._SunkissedETR0825_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-08-12T20:00:00"
-+      skuDisableTime: "2025-08-31T20:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1755028800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-cozy-companions-ticket-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1756670400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-encounter-ticket-nologo-2025.jpg"
-     }
-   }
- }
-@@ -373075,12 +373119,14 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.5"
--      title: "general2.ticket.5_JuneMonthly2025_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-06-10T20:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1749585600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
-+      title: "general1.ticket._Kanto_CelebrationSEP25_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-09-07T20:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1757275200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250731_pgo_s20_mega_kanto_002_1024x576_nologo.jpg"
-+      webstoreSkuId: "web-2025-kanto-birds-ticket-box"
-+      webstoreSkuPriceE6: 4990000
-     }
-   }
- }
-@@ -373094,12 +373140,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.5"
--      title: "general2.ticket.5_JuneMonthly2025_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-06-10T20:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1749585600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
-+      title: "general1.ticket._Kanto_CelebrationSEP25_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-09-07T20:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1757275200000
-     }
-   }
- }
-@@ -373113,12 +373158,14 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_JulyMonthly2025_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-07-10T20:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1752177600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
-+      title: "general2.ticket.6_MegaSharpedoRaidDay_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-09-07T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1757264400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
-+      webstoreSkuId: "web-mega-sharpedo-ticket-box"
-+      webstoreSkuPriceE6: 4990000
-     }
-   }
- }
-@@ -373132,12 +373179,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_JulyMonthly2025_title"
--      skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-07-10T20:00:00"
--      skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1752177600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-eggspedition-nologo-2025.jpg"
-+      title: "general2.ticket.6_MegaSharpedoRaidDay_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2025-09-07T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1757264400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
-     }
-   }
- }
-@@ -395286,7 +395333,38 @@
-     }
-   }
- }
--batch_id: 1755625643606
+-batch_id: 1755708305655
 +template {
-+  template_id: "N_DISPLAY_n_backpack_pinap_0"
++  template_id: "bundle.midautumn.1"
 +  data {
-+    template_id: "N_DISPLAY_n_backpack_pinap_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_pinap_0_icon"
-+      displayStringId: "avatar_bag_pinapberry"
++    template_id: "bundle.midautumn.1"
++    iapItemDisplay {
++      sku: "bundle.midautumn.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general1.medium.2"
++      title: "bundle.midautumn.raid"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 6175
 +    }
 +  }
 +}
 +template {
-+  template_id: "N_DISPLAY_n_hat_flowercrown_0"
++  template_id: "bundle.midautumn.2"
 +  data {
-+    template_id: "N_DISPLAY_n_hat_flowercrown_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_hat_flowercrown_0_icon"
-+      displayStringId: "avatar_hat_flowercrown"
++    template_id: "bundle.midautumn.2"
++    iapItemDisplay {
++      sku: "bundle.midautumn.2"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle2.sprite.c"
++      title: "bundle.midautumn.maxparticle"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 2350
 +    }
 +  }
 +}
 +template {
-+  template_id: "PTC_OAUTH_SETTINGS"
++  template_id: "bundle.midautumn.3"
 +  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    template_id: "bundle.midautumn.3"
++    iapItemDisplay {
++      sku: "bundle.midautumn.3"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle1.sprite.d"
++      title: "bundle.midautumn.incubator"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 1910
 +    }
 +  }
 +}
-+batch_id: 1755708305655
++batch_id: 1755794526517
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -395295,7 +395373,7 @@
- experiment_id: 21
- experiment_id: 101
- experiment_id: 150
--experiment_id: 162
-+experiment_id: 163
- experiment_id: 300
- experiment_id: 308
- experiment_id: 320
-@@ -395356,7 +395434,7 @@
+@@ -395420,6 +395493,7 @@
+ experiment_id: 7057
+ experiment_id: 7060
+ experiment_id: 8984
++experiment_id: 8985
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
+@@ -395434,12 +395508,15 @@
  experiment_id: 70201
  experiment_id: 70209
  experiment_id: 70210
--experiment_id: 70213
-+experiment_id: 70215
+-experiment_id: 70215
++experiment_id: 70217
++experiment_id: 70218
  experiment_id: 70250
++experiment_id: 70252
  experiment_id: 80436
  experiment_id: 80494
+ experiment_id: 314159
+ experiment_id: 314160
++experiment_id: 1000890
+ experiment_id: 3500035
+ experiment_id: 3500037
+ experiment_id: 4610000
+@@ -395448,4 +395525,3 @@
+ experiment_id: 6600417
+ experiment_id: 6600418
+ experiment_id: 6600423
+-experiment_id: 6600439
