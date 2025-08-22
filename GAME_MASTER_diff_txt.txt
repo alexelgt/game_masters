@@ -1,298 +1,144 @@
---- GAME_MASTER_old.txt	2025-08-20 20:05:44.888141715 +0200
-+++ GAME_MASTER.txt	2025-08-21 19:52:03.233728223 +0200
-@@ -129285,7 +129285,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 6
-       incense {
--        incenseLifetimeSeconds: 3600
-+        incenseLifetimeSeconds: 1800
-         spawnTableProbability: 0.25
-       }
-       ignoreInventorySpace: true
-@@ -135999,7 +135999,7 @@
-       numMpFromWalkQuest: 300
-       numMetersGoal: 2000
-       debugAllowRemoveWalkQuest: true
--      numMpFromLootStation: 100
-+      numMpFromLootStation: 800
-       numExtraMpFromFirstLootStation: 20
-       mpCapacity: 1600
-       mpBaseDailyLimit: 1600
-@@ -136791,12 +136791,12 @@
-         attackDefenseBonus {
-           attributes {
-             combatTypes: COMBAT_TYPE_RAID
--            attackMultiplier: 1.2
-+            attackMultiplier: 1.3
-           }
-           attributes {
-             combatTypes: COMBAT_TYPE_DMAX
-             combatTypes: COMBAT_TYPE_GMAX
--            attackMultiplier: 1.1
-+            attackMultiplier: 1.15
-           }
-         }
-       }
-@@ -136822,12 +136822,12 @@
-         attackDefenseBonus {
-           attributes {
-             combatTypes: COMBAT_TYPE_RAID
--            defenseMultiplier: 1.2
-+            defenseMultiplier: 1.3
-           }
-           attributes {
-             combatTypes: COMBAT_TYPE_DMAX
-             combatTypes: COMBAT_TYPE_GMAX
--            defenseMultiplier: 1.1
-+            defenseMultiplier: 1.15
-           }
-         }
-       }
-@@ -156328,10 +156328,10 @@
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 10"
--      meshingEnabled: TRUE
--      occlusionEnabled: TRUE
--      semanticsEnabled: TRUE
--      vpsEnabled: TRUE
-+      meshingEnabled: FALSE
-+      occlusionEnabled: FALSE
-+      semanticsEnabled: FALSE
-+      vpsEnabled: FALSE
+--- GAME_MASTER_old.txt	2025-08-21 19:52:03.233728223 +0200
++++ GAME_MASTER.txt	2025-08-22 19:09:46.960523976 +0200
+@@ -41748,7 +41748,7 @@
+       prepareBreadLobbySoloMs: 80000
+       rvnVersion: 1
+       maxRemotePlayersPerBreadDoughLobby: 40
+-      maxRemoteBreadBattlePassesAllowed: 30
++      maxRemoteBreadBattlePassesAllowed: 999999
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 40
+@@ -155893,7 +155893,6 @@
+       friendRequestsEnabled: true
+       remoteRaidDistanceValidation: true
+       popupTimeMs: 30000
+-      failedFriendInviteInfoEnabled: true
+       minPlayersToBoot: 2
+       bootCutoffMs: 15000
+       bootSoloMs: 30000
+@@ -156107,8 +156106,7 @@
+   data {
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+-      enabled: true
+-      dailySquashLimit: 30
++      dailySquashLimit: 999999
      }
    }
  }
-@@ -156343,10 +156343,10 @@
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 10 Pro"
--      meshingEnabled: TRUE
--      occlusionEnabled: TRUE
--      semanticsEnabled: TRUE
--      vpsEnabled: TRUE
-+      meshingEnabled: FALSE
-+      occlusionEnabled: FALSE
-+      semanticsEnabled: FALSE
-+      vpsEnabled: FALSE
+@@ -191919,7 +191917,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2025_2.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 481
++      sortOrder: 16
      }
    }
  }
-@@ -156358,10 +156358,10 @@
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 10 Pro Fold"
--      meshingEnabled: TRUE
--      occlusionEnabled: TRUE
--      semanticsEnabled: TRUE
--      vpsEnabled: TRUE
-+      meshingEnabled: FALSE
-+      occlusionEnabled: FALSE
-+      semanticsEnabled: FALSE
-+      vpsEnabled: FALSE
+@@ -191930,7 +191928,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2025_2.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 481
++      sortOrder: 15
      }
    }
  }
-@@ -156373,10 +156373,10 @@
-       ruleType: DEVICE_MODEL
-       sortOrder: 50
-       ruleValue: "Google Pixel 10 Pro XL"
--      meshingEnabled: TRUE
--      occlusionEnabled: TRUE
--      semanticsEnabled: TRUE
--      vpsEnabled: TRUE
-+      meshingEnabled: FALSE
-+      occlusionEnabled: FALSE
-+      semanticsEnabled: FALSE
-+      vpsEnabled: FALSE
+@@ -191955,7 +191953,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2025_3.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 481
++      sortOrder: 14
      }
    }
  }
-@@ -294730,7 +294730,7 @@
-       movementId: BEHEMOTH_BLADE
-       animationId: 5
-       pokemonType: POKEMON_TYPE_STEEL
--      power: 200
-+      power: 210
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-@@ -294838,7 +294838,7 @@
-       movementId: BEHEMOTH_BASH
-       animationId: 5
-       pokemonType: POKEMON_TYPE_STEEL
--      power: 125
-+      power: 131.25
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-@@ -360456,13 +360456,20 @@
-       pokemonId: DONDOZO
-       type: POKEMON_TYPE_WATER
-       camera {
-+        cylinderRadiusM: 6
-+        cylinderHeightM: 4
-+        cylinderGroundM: 0.5
-       }
-       encounter {
-+        collisionRadiusM: 3
-+        collisionHeightM: 0.6
-+        collisionHeadRadiusM: 3
-         movementType: MOVEMENT_HOVERING
-         jumpTimeS: 1
-         attackProbability: 0.1
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-+        cameraDistance: 8
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-       }
-@@ -360483,6 +360490,13 @@
-       weightStdDev: 27.5
-       familyId: FAMILY_DONDOZO
-       kmBuddyDistance: 5
-+      buddy_size: BUDDY_BIG
-+      modelHeight: 3
-+      modelScaleV2: 0.47
-+      buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 1000
-+      buddyPortraitOffset: -600
-       third_move {
-         stardustToUnlock: 75000
-         candyToUnlock: 75
-@@ -360490,6 +360504,14 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      combatOpponentFocusCameraAngle: 3
-+      combatOpponentFocusCameraAngle: -0.5
-+      combatOpponentFocusCameraAngle: 0
-+      combatPlayerFocusCameraAngle: -3
-+      combatPlayerFocusCameraAngle: -0.5
-+      combatPlayerFocusCameraAngle: 0
-+      buddyGroupNumber: 3
-+      raidBossDistanceOffset: 12
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -364470,10 +364492,10 @@
-       durationMs: 2500
-       damageWindowStartMs: 2000
-       damageWindowEndMs: 3400
--      obMoveSettingsNumber18: 250
--      obMoveSettingsNumber18: 300
--      obMoveSettingsNumber18: 350
--      obMoveSettingsNumber18: 450
-+      obMoveSettingsNumber18: 262.5
-+      obMoveSettingsNumber18: 315
-+      obMoveSettingsNumber18: 367.5
-+      obMoveSettingsNumber18: 472.5
+@@ -191966,7 +191964,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2025_3.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 481
++      sortOrder: 13
      }
    }
  }
-@@ -364493,10 +364515,10 @@
-       durationMs: 2500
-       damageWindowStartMs: 2000
-       damageWindowEndMs: 3400
--      obMoveSettingsNumber18: 250
--      obMoveSettingsNumber18: 300
--      obMoveSettingsNumber18: 350
--      obMoveSettingsNumber18: 450
-+      obMoveSettingsNumber18: 262.5
-+      obMoveSettingsNumber18: 315
-+      obMoveSettingsNumber18: 367.5
-+      obMoveSettingsNumber18: 472.5
+@@ -378814,9 +378812,12 @@
+       sku: "bundle.maxfinale.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general1.large.2"
+       title: "remote_max_battler_box"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2025-08-24T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1756065600000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 2535
+@@ -378831,9 +378832,12 @@
+       sku: "bundle.maxfinale.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle1.sprite.c"
+       title: "max_battler_box"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2025-08-24T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1756065600000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 3500
+@@ -395376,17 +395380,6 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "bundle.midautumn.1"
+   data {
+     template_id: "bundle.midautumn.1"
+@@ -395437,7 +395430,18 @@
      }
    }
  }
-@@ -395364,7 +395386,58 @@
-     }
-   }
- }
--batch_id: 1755708305655
+-batch_id: 1755794526517
 +template {
-+  template_id: "bundle.midautumn.1"
++  template_id: "PTC_OAUTH_SETTINGS"
 +  data {
-+    template_id: "bundle.midautumn.1"
-+    iapItemDisplay {
-+      sku: "bundle.midautumn.1"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle.general1.medium.2"
-+      title: "bundle.midautumn.raid"
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 6175
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
 +    }
 +  }
 +}
-+template {
-+  template_id: "bundle.midautumn.2"
-+  data {
-+    template_id: "bundle.midautumn.2"
-+    iapItemDisplay {
-+      sku: "bundle.midautumn.2"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle2.sprite.c"
-+      title: "bundle.midautumn.maxparticle"
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 2350
-+    }
-+  }
-+}
-+template {
-+  template_id: "bundle.midautumn.3"
-+  data {
-+    template_id: "bundle.midautumn.3"
-+    iapItemDisplay {
-+      sku: "bundle.midautumn.3"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "bundle1.sprite.d"
-+      title: "bundle.midautumn.incubator"
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 1910
-+    }
-+  }
-+}
-+batch_id: 1755794526517
++batch_id: 1755877017742
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -395420,6 +395493,7 @@
- experiment_id: 7057
- experiment_id: 7060
- experiment_id: 8984
-+experiment_id: 8985
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
-@@ -395434,12 +395508,15 @@
+@@ -395508,10 +395512,10 @@
  experiment_id: 70201
  experiment_id: 70209
  experiment_id: 70210
--experiment_id: 70215
-+experiment_id: 70217
-+experiment_id: 70218
+-experiment_id: 70217
+-experiment_id: 70218
++experiment_id: 70219
  experiment_id: 70250
-+experiment_id: 70252
+ experiment_id: 70252
++experiment_id: 70260
  experiment_id: 80436
  experiment_id: 80494
  experiment_id: 314159
- experiment_id: 314160
-+experiment_id: 1000890
- experiment_id: 3500035
- experiment_id: 3500037
- experiment_id: 4610000
-@@ -395448,4 +395525,3 @@
- experiment_id: 6600417
- experiment_id: 6600418
- experiment_id: 6600423
--experiment_id: 6600439
