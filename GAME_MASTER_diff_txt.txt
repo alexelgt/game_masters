@@ -1,144 +1,340 @@
---- GAME_MASTER_old.txt	2025-08-21 19:52:03.233728223 +0200
-+++ GAME_MASTER.txt	2025-08-22 19:09:46.960523976 +0200
-@@ -41748,7 +41748,7 @@
+--- GAME_MASTER_old.txt	2025-08-22 19:09:46.960523976 +0200
++++ GAME_MASTER.txt	2025-08-23 14:04:08.258363707 +0200
+@@ -41747,11 +41747,12 @@
+       prepareBreadLobbyCutoffMs: 15000
        prepareBreadLobbySoloMs: 80000
        rvnVersion: 1
-       maxRemotePlayersPerBreadDoughLobby: 40
--      maxRemoteBreadBattlePassesAllowed: 30
-+      maxRemoteBreadBattlePassesAllowed: 999999
+-      maxRemotePlayersPerBreadDoughLobby: 40
++      maxRemotePlayersPerBreadDoughLobby: 100
+       maxRemoteBreadBattlePassesAllowed: 999999
        maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
        fetchProfileFromSocialEnabled: true
        maxPlayersToPrepareBreadDoughLobby: 40
-@@ -155893,7 +155893,6 @@
++      21: 100
+     }
+   }
+ }
+@@ -70825,7 +70826,7 @@
+         perContestMaxEntries: 150
+       }
+       defaultContestMaxEntries: 200
+-      minCooldownBeforeSeasonEndMs: 86400000
++      minCooldownBeforeSeasonEndMs: 50000000
+       contestWarmupAndCooldownDurationsMs {
+         contestOccurrence: DAILY
+         cycleWarmupDurationMs: 7200000
+@@ -94382,6 +94383,17 @@
+     template_id: "EXTENDED_V0319_POKEMON_SHARPEDO"
+     pokemonExtendedSettings {
+       uniqueId: SHARPEDO
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 1.225
++          xsLowerBound: 1.25
++          mLowerBound: 1.875
++          mUpperBound: 3.125
++          xlUpperBound: 3.75
++          xxlUpperBound: 5
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.882
+         xsLowerBound: 0.9
+@@ -94400,6 +94412,17 @@
+     pokemonExtendedSettings {
+       uniqueId: SHARPEDO
+       form: SHARPEDO_NORMAL
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 1.225
++          xsLowerBound: 1.25
++          mLowerBound: 1.875
++          mUpperBound: 3.125
++          xlUpperBound: 3.75
++          xxlUpperBound: 5
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.882
+         xsLowerBound: 0.9
+@@ -127986,7 +128009,6 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 50
+         }
+       }
+     }
+@@ -136001,8 +136023,8 @@
+       debugAllowRemoveWalkQuest: true
+       numMpFromLootStation: 800
+       numExtraMpFromFirstLootStation: 20
+-      mpCapacity: 1600
+-      mpBaseDailyLimit: 1600
++      mpCapacity: 3200
++      mpBaseDailyLimit: 3200
+       mpClaimParticleSpeedMultiplier: 1
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 250
+@@ -136791,12 +136813,12 @@
+         attackDefenseBonus {
+           attributes {
+             combatTypes: COMBAT_TYPE_RAID
+-            attackMultiplier: 1.3
++            attackMultiplier: 1.5
+           }
+           attributes {
+             combatTypes: COMBAT_TYPE_DMAX
+             combatTypes: COMBAT_TYPE_GMAX
+-            attackMultiplier: 1.15
++            attackMultiplier: 1.25
+           }
+         }
+       }
+@@ -136822,12 +136844,12 @@
+         attackDefenseBonus {
+           attributes {
+             combatTypes: COMBAT_TYPE_RAID
+-            defenseMultiplier: 1.3
++            defenseMultiplier: 1.5
+           }
+           attributes {
+             combatTypes: COMBAT_TYPE_DMAX
+             combatTypes: COMBAT_TYPE_GMAX
+-            defenseMultiplier: 1.15
++            defenseMultiplier: 1.25
+           }
+         }
+       }
+@@ -152162,8 +152184,8 @@
+       complianceZonesEnabled: true
+       enablePartyRaidInformation: true
        friendRequestsEnabled: true
-       remoteRaidDistanceValidation: true
-       popupTimeMs: 30000
--      failedFriendInviteInfoEnabled: true
-       minPlayersToBoot: 2
-       bootCutoffMs: 15000
-       bootSoloMs: 30000
-@@ -156107,8 +156106,7 @@
-   data {
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
--      enabled: true
--      dailySquashLimit: 30
-+      dailySquashLimit: 999999
+-      partyExpiryDurationMs: 10800000
+-      partyExpiryWarningMinutes: 10
++      partyExpiryDurationMs: 28800000
++      partyExpiryWarningMinutes: 30
+       enabledFriendStatusIncrease: true
+       restartPartyRejoinPromptEnabled: true
+       partyIapBoostsEnabled: true
+@@ -268370,6 +268392,7 @@
+     pokemonFamily {
+       familyId: FAMILY_CARVANHA
+       candyPerXlCandy: 100
++      megaEvolvablePokemonId: SHARPEDO
      }
    }
  }
-@@ -191919,7 +191917,7 @@
-     iapItemDisplay {
-       sku: "STICKER_PGO_FEST_2025_2.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 481
-+      sortOrder: 16
+@@ -268484,6 +268507,7 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 3
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -268581,6 +268605,7 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 3
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -268674,6 +268699,11 @@
+       kmBuddyDistance: 3
+       buddy_size: BUDDY_BIG
+       modelHeight: 1.35
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 200
++        temporaryEvolutionEnergyCostSubsequent: 40
++      }
+       modelScaleV2: 1
+       buddyOffsetMale: 20
+       buddyOffsetMale: 0
+@@ -268696,6 +268726,26 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 3
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 172
++          baseAttack: 289
++          baseDefense: 144
++        }
++        averageHeightM: 1.8
++        averageWeightKg: 88.8
++        typeOverride1: POKEMON_TYPE_WATER
++        typeOverride2: POKEMON_TYPE_DARK
++        camera {
++          cylinderRadiusM: 1.75
++          cylinderHeightM: 2.65
++          cylinderGroundM: 0.5
++        }
++        modelScaleV2: 1
++        modelHeight: 1.35
++      }
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -268768,6 +268818,11 @@
+       kmBuddyDistance: 3
+       buddy_size: BUDDY_BIG
+       modelHeight: 1.35
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 200
++        temporaryEvolutionEnergyCostSubsequent: 40
++      }
+       modelScaleV2: 1
+       form: SHARPEDO_NORMAL
+       buddyOffsetMale: 20
+@@ -268791,6 +268846,26 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 3
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 172
++          baseAttack: 289
++          baseDefense: 144
++        }
++        averageHeightM: 1.8
++        averageWeightKg: 88.8
++        typeOverride1: POKEMON_TYPE_WATER
++        typeOverride2: POKEMON_TYPE_DARK
++        camera {
++          cylinderRadiusM: 1.75
++          cylinderHeightM: 2.65
++          cylinderGroundM: 0.5
++        }
++        modelScaleV2: 1
++        modelHeight: 1.35
++      }
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -294728,7 +294803,7 @@
+       movementId: BEHEMOTH_BLADE
+       animationId: 5
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 210
++      power: 230
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+@@ -294836,7 +294911,7 @@
+       movementId: BEHEMOTH_BASH
+       animationId: 5
+       pokemonType: POKEMON_TYPE_STEEL
+-      power: 131.25
++      power: 143.75
+       accuracyChance: 1
+       staminaLossScalar: 0.01
+       trainerLevelMin: 1
+@@ -364490,10 +364565,10 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 262.5
+-      obMoveSettingsNumber18: 315
+-      obMoveSettingsNumber18: 367.5
+-      obMoveSettingsNumber18: 472.5
++      obMoveSettingsNumber18: 287.5
++      obMoveSettingsNumber18: 345
++      obMoveSettingsNumber18: 402.5
++      obMoveSettingsNumber18: 517.5
      }
    }
  }
-@@ -191930,7 +191928,7 @@
-     iapItemDisplay {
-       sku: "STICKER_PGO_FEST_2025_2.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 481
-+      sortOrder: 15
+@@ -364513,10 +364588,10 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 262.5
+-      obMoveSettingsNumber18: 315
+-      obMoveSettingsNumber18: 367.5
+-      obMoveSettingsNumber18: 472.5
++      obMoveSettingsNumber18: 287.5
++      obMoveSettingsNumber18: 345
++      obMoveSettingsNumber18: 402.5
++      obMoveSettingsNumber18: 517.5
      }
    }
  }
-@@ -191955,7 +191953,7 @@
-     iapItemDisplay {
-       sku: "STICKER_PGO_FEST_2025_3.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 481
-+      sortOrder: 14
-     }
-   }
- }
-@@ -191966,7 +191964,7 @@
-     iapItemDisplay {
-       sku: "STICKER_PGO_FEST_2025_3.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 481
-+      sortOrder: 13
-     }
-   }
- }
-@@ -378814,9 +378812,12 @@
-       sku: "bundle.maxfinale.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle.general1.large.2"
-       title: "remote_max_battler_box"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2025-08-24T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1756065600000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 2535
-@@ -378831,9 +378832,12 @@
-       sku: "bundle.maxfinale.2"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle1.sprite.c"
-       title: "max_battler_box"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2025-08-24T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1756065600000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 3500
-@@ -395376,17 +395380,6 @@
+@@ -378507,6 +378582,11 @@
+           quantity: 25
+         }
+         bonusBoxes {
++          text: "quest_directive_emax_win"
++          iconType: BREAD
++          quantity: 100
++        }
++        bonusBoxes {
+           text: "quest_raid_t1_win"
+           iconType: RAID
+           quantity: 10
+@@ -395431,6 +395511,19 @@
    }
  }
  template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
-   template_id: "bundle.midautumn.1"
-   data {
-     template_id: "bundle.midautumn.1"
-@@ -395437,7 +395430,18 @@
-     }
-   }
- }
--batch_id: 1755794526517
-+template {
-+  template_id: "PTC_OAUTH_SETTINGS"
++  template_id: "TEMPORARY_EVOLUTION_V0319_POKEMON_SHARPEDO"
 +  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    template_id: "TEMPORARY_EVOLUTION_V0319_POKEMON_SHARPEDO"
++    temporaryEvolutionSettings {
++      pokemonId: SHARPEDO
++      temporary_evolutions {
++        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
++        assetBundleValue: 51
++      }
 +    }
 +  }
 +}
-+batch_id: 1755877017742
++template {
+   template_id: "PTC_OAUTH_SETTINGS"
+   data {
+     template_id: "PTC_OAUTH_SETTINGS"
+@@ -395441,7 +395534,7 @@
+     }
+   }
+ }
+-batch_id: 1755877017742
++batch_id: 1755941151391
  experiment_id: 1
  experiment_id: 4
  experiment_id: 6
-@@ -395508,10 +395512,10 @@
+@@ -395487,6 +395580,7 @@
+ experiment_id: 4709
+ experiment_id: 4891
+ experiment_id: 4998
++experiment_id: 5122
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+@@ -395510,12 +395604,16 @@
+ experiment_id: 70080
+ experiment_id: 70095
  experiment_id: 70201
- experiment_id: 70209
- experiment_id: 70210
--experiment_id: 70217
--experiment_id: 70218
-+experiment_id: 70219
+-experiment_id: 70209
+-experiment_id: 70210
+-experiment_id: 70219
  experiment_id: 70250
++experiment_id: 70251
  experiment_id: 70252
-+experiment_id: 70260
++experiment_id: 70253
++experiment_id: 70254
+ experiment_id: 70260
++experiment_id: 70261
++experiment_id: 70262
++experiment_id: 70263
++experiment_id: 70273
  experiment_id: 80436
  experiment_id: 80494
  experiment_id: 314159
