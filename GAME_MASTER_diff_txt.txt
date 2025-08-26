@@ -1,57 +1,82 @@
---- GAME_MASTER_old.txt	2025-08-26 08:37:16.999113476 +0200
-+++ GAME_MASTER.txt	2025-08-26 09:08:35.500968776 +0200
-@@ -41747,12 +41747,12 @@
-       prepareBreadLobbyCutoffMs: 15000
-       prepareBreadLobbySoloMs: 80000
-       rvnVersion: 1
-+      maxPlayersPerBreadDoughLobby: 100
-       maxRemotePlayersPerBreadDoughLobby: 100
-       maxRemoteBreadBattlePassesAllowed: 10
-       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
-       fetchProfileFromSocialEnabled: true
-       maxPlayersToPrepareBreadDoughLobby: 40
--      21: 100
+--- GAME_MASTER_old.txt	2025-08-26 09:08:35.500968776 +0200
++++ GAME_MASTER.txt	2025-08-26 19:59:21.740734300 +0200
+@@ -176695,15 +176695,13 @@
+   }
+ }
+ template {
+-  template_id: "SHOW_RAID_GROUP_CODE_GATE"
++  template_id: "PTC_OAUTH_SETTINGS"
+   data {
+-    template_id: "SHOW_RAID_GROUP_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-      subCodeGateList {
+-        name: "SHOW_RRP_GROUP_CODE"
+-        isEnabled: true
+-      }
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
      }
    }
  }
-@@ -147679,7 +147679,7 @@
-   data {
-     template_id: "LC_2025_PARIS_001"
-     locationCardSettings {
--      locationCard: 151
-+      locationCard: LC_2025_PARIS_001
-       imageUrl: "lc_Paris2025_01"
+@@ -387583,9 +387581,13 @@
+       sku: "bundle.ukfeature.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 6
+-      hidden: true
++      sale: true
+       spriteId: "bundle.general5.small.1"
+       title: "bundle.general5.small.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2025-09-14T22:00:00"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1757887200000
      }
    }
-@@ -147689,7 +147689,7 @@
+ }
+@@ -396434,17 +396436,6 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "WEEKLY_CHALLENGE_PARTY_QUEST"
    data {
-     template_id: "LC_2025_PARIS_002"
-     locationCardSettings {
--      locationCard: 152
-+      locationCard: LC_2025_PARIS_002
-       imageUrl: "lc_Paris2025_02"
+     template_id: "WEEKLY_CHALLENGE_PARTY_QUEST"
+@@ -396474,7 +396465,7 @@
      }
    }
-@@ -396452,7 +396452,7 @@
-       quest {
-         questType: QUEST_CATCH_POKEMON
-         questId: "WEEKLY_CHALLENGE_PARTY_QUEST"
--        questContext: 20
-+        questContext: WEEKLY_CHALLENGE_QUEST
-         templateId: "WEEKLY_CHALLENGE_PARTY_QUEST"
-         goal {
-           target: 100
-@@ -396462,10 +396462,10 @@
-           stardust: 600
-         }
-         questRewards {
--          type: 19
--          23: 7
-+          type: FRIENDSHIP_POINTS
-+          friendshipPoints: 7
-         }
--        127: 2
-+        difficulty: EASY
-       }
-       questDisplay {
-         description: "quest_catch_pokemon_plural"
+ }
+-batch_id: 1756167130827
++batch_id: 1756226893731
+ experiment_id: 1
+ experiment_id: 4
+ experiment_id: 6
+@@ -396499,6 +396490,7 @@
+ experiment_id: 807
+ experiment_id: 1699
+ experiment_id: 2248
++experiment_id: 2272
+ experiment_id: 2297
+ experiment_id: 2399
+ experiment_id: 2400
+@@ -396536,6 +396528,7 @@
+ experiment_id: 7060
+ experiment_id: 8984
+ experiment_id: 8985
++experiment_id: 8986
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
