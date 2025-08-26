@@ -1,340 +1,1450 @@
---- GAME_MASTER_old.txt	2025-08-22 19:09:46.960523976 +0200
-+++ GAME_MASTER.txt	2025-08-23 14:04:08.258363707 +0200
-@@ -41747,11 +41747,12 @@
-       prepareBreadLobbyCutoffMs: 15000
-       prepareBreadLobbySoloMs: 80000
-       rvnVersion: 1
--      maxRemotePlayersPerBreadDoughLobby: 40
-+      maxRemotePlayersPerBreadDoughLobby: 100
-       maxRemoteBreadBattlePassesAllowed: 999999
-       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
-       fetchProfileFromSocialEnabled: true
-       maxPlayersToPrepareBreadDoughLobby: 40
-+      21: 100
-     }
-   }
- }
-@@ -70825,7 +70826,7 @@
-         perContestMaxEntries: 150
-       }
-       defaultContestMaxEntries: 200
--      minCooldownBeforeSeasonEndMs: 86400000
-+      minCooldownBeforeSeasonEndMs: 50000000
-       contestWarmupAndCooldownDurationsMs {
-         contestOccurrence: DAILY
-         cycleWarmupDurationMs: 7200000
-@@ -94382,6 +94383,17 @@
-     template_id: "EXTENDED_V0319_POKEMON_SHARPEDO"
-     pokemonExtendedSettings {
-       uniqueId: SHARPEDO
-+      temp_evo_overrides {
-+        tempEvoId: TEMP_EVOLUTION_MEGA
-+        sizeSettings {
-+          xxsLowerBound: 1.225
-+          xsLowerBound: 1.25
-+          mLowerBound: 1.875
-+          mUpperBound: 3.125
-+          xlUpperBound: 3.75
-+          xxlUpperBound: 5
-+        }
-+      }
-       sizeSettings {
-         xxsLowerBound: 0.882
-         xsLowerBound: 0.9
-@@ -94400,6 +94412,17 @@
-     pokemonExtendedSettings {
-       uniqueId: SHARPEDO
-       form: SHARPEDO_NORMAL
-+      temp_evo_overrides {
-+        tempEvoId: TEMP_EVOLUTION_MEGA
-+        sizeSettings {
-+          xxsLowerBound: 1.225
-+          xsLowerBound: 1.25
-+          mLowerBound: 1.875
-+          mUpperBound: 3.125
-+          xlUpperBound: 3.75
-+          xxlUpperBound: 5
-+        }
-+      }
-       sizeSettings {
-         xxsLowerBound: 0.882
-         xsLowerBound: 0.9
-@@ -127986,7 +128009,6 @@
-       }
-       timePeriodCounters {
-         playerActivity {
--          limit: 50
+--- GAME_MASTER_old.txt	2025-08-25 13:29:42.396650501 +0200
++++ GAME_MASTER.txt	2025-08-26 08:37:16.999113476 +0200
+@@ -45818,6 +45818,7 @@
+       seasonEndTimeTimestamp: 1741122000000
+       seasonEndTimeTimestamp: 1748980800000
+       seasonEndTimeTimestamp: 1756843200000
++      seasonEndTimeTimestamp: 1764709200000
+       seasonEndTimeTimestamp: 4070980800000
+       ratingAdjustmentPercentage: 0.9
+       rankingAdjustmentPercentage: 0.01
+@@ -59895,87 +59896,67 @@
+         type: POKEMON_BANLIST
+         pokemonBanList {
+           pokemon {
+-            id: DRAPION
+-            forms: DRAPION_NORMAL
+-            forms: FORM_UNSET
++            id: LANTURN
+           }
+           pokemon {
+-            id: CRADILY
+-            forms: CRADILY_NORMAL
+-            forms: FORM_UNSET
++            id: AZUMARILL
+           }
+           pokemon {
+-            id: LAPRAS
+-            forms: LAPRAS_NORMAL
+-            forms: LAPRAS_COSTUME_2020
+-            forms: FORM_UNSET
++            id: ALTARIA
+           }
+           pokemon {
+-            id: SERPERIOR
++            id: SKELEDIRGE
+           }
+           pokemon {
+-            id: MANDIBUZZ
++            id: POLIWRATH
+           }
+           pokemon {
+-            id: BLASTOISE
+-            forms: BLASTOISE_NORMAL
+-            forms: BLASTOISE_COPY_2019
+-            forms: FORM_UNSET
++            id: SKARMORY
+           }
+           pokemon {
+-            id: SABLEYE
+-            forms: SABLEYE_NORMAL
+-            forms: SABLEYE_COSTUME_2020
+-            forms: FORM_UNSET
++            id: GLIGAR
+           }
+           pokemon {
+-            id: ANNIHILAPE
++            id: WIGGLYTUFF
+           }
+           pokemon {
+-            id: GOLISOPOD
++            id: DEWGONG
+           }
+           pokemon {
+-            id: GASTRODON
+-            forms: GASTRODON_EAST_SEA
+-            forms: GASTRODON_WEST_SEA
++            id: SANDSLASH
++            forms: SANDSLASH_ALOLA
+           }
+           pokemon {
+-            id: CLODSIRE
++            id: TALONFLAME
+           }
+           pokemon {
+-            id: AZUMARILL
++            id: ANNIHILAPE
+           }
+           pokemon {
+-            id: WIGGLYTUFF
++            id: BASTIODON
+           }
+           pokemon {
+-            id: TALONFLAME
++            id: MANTINE
+           }
+           pokemon {
+-            id: MAROWAK
+-            forms: MAROWAK_NORMAL
+-            forms: FORM_UNSET
++            id: WHISCASH
+           }
+           pokemon {
+-            id: FERALIGATR
+-            forms: FERALIGATR_NORMAL
+-            forms: FORM_UNSET
++            id: QUAGSIRE
+           }
+           pokemon {
+-            id: MORPEKO
+-            forms: MORPEKO_FULL_BELLY
++            id: TYPHLOSION
++            forms: TYPHLOSION_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+-            id: WEEZING
+-            forms: WEEZING_GALARIAN
++            id: FERALIGATR
+           }
+           pokemon {
+-            id: MALAMAR
++            id: CHARJABUG
+           }
+           pokemon {
+-            id: JUMPLUFF
+-            forms: JUMPLUFF_NORMAL
+-            forms: FORM_UNSET
++            id: LICKITUNG
+           }
          }
        }
+@@ -144439,12 +144420,12 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-06-03T13:00:00"
+-        eventEndTime: "2025-06-17T14:00:00"
++        eventStartTime: "2025-09-02T13:00:00"
++        eventEndTime: "2025-09-17T14:00:00"
+         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s19-gbl-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1748955600000
+-        clientEventEndTimeUtcMs: 1750168800000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-s17gbl-nologo-2024.jpg"
++        clientEventStartTimeUtcMs: 1756818000000
++        clientEventEndTimeUtcMs: 1758117600000
+       }
      }
-@@ -136001,8 +136023,8 @@
-       debugAllowRemoveWalkQuest: true
-       numMpFromLootStation: 800
-       numExtraMpFromFirstLootStation: 20
--      mpCapacity: 1600
--      mpBaseDailyLimit: 1600
-+      mpCapacity: 3200
-+      mpBaseDailyLimit: 3200
-       mpClaimParticleSpeedMultiplier: 1
-       battleMpCostPerTier {
-         breadBattleCatchMpCost: 250
-@@ -136791,12 +136813,12 @@
-         attackDefenseBonus {
-           attributes {
-             combatTypes: COMBAT_TYPE_RAID
--            attackMultiplier: 1.3
-+            attackMultiplier: 1.5
+   }
+@@ -144874,9 +144855,9 @@
+         itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Kanto_CelebrationSEP25"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_05_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250731_pgo_s20_mega_kanto_002_1024x576_nologo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250818_pgo_dmax_legendarybirds_1024x576_nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250731_pgo_s20_mega_kanto_002_1024x576_nologo.jpg"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250818_pgo_dmax_legendarybirds_1024x576_nologo.jpg"
+         eventDatetimeRangeKey: "event_datetime_range_key_Kanto_CelebrationSEP25"
+         textRewardsKey: "text_rewards_key_Kanto_CelebrationSEP25"
+         iconRewards {
+@@ -144928,7 +144909,7 @@
+         eventEndTime: "2025-09-07T20:00:00"
+         itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Kanto_CelebrationSEP25"
+         ticketItem: ITEM_EVENT_TICKET_05
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250731_pgo_s20_mega_kanto_002_1024x576_nologo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250818_pgo_dmax_legendarybirds_1024x576_nologo.jpg"
+         clientEventStartTimeUtcMs: 1756807200000
+         clientEventEndTimeUtcMs: 1757275200000
+       }
+@@ -149438,7 +149419,7 @@
+               distanceKm: 25
+             }
            }
-           attributes {
-             combatTypes: COMBAT_TYPE_DMAX
-             combatTypes: COMBAT_TYPE_GMAX
--            attackMultiplier: 1.15
-+            attackMultiplier: 1.25
-           }
+-          target: 8
++          target: 2
          }
+         questRewards {
+           type: EXPERIENCE
+@@ -345600,7 +345581,9 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      raidBossDistanceOffset: 3
+       formChange {
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -345608,7 +345591,6 @@
        }
-@@ -136822,12 +136844,12 @@
-         attackDefenseBonus {
-           attributes {
-             combatTypes: COMBAT_TYPE_RAID
--            defenseMultiplier: 1.3
-+            defenseMultiplier: 1.5
-           }
-           attributes {
-             combatTypes: COMBAT_TYPE_DMAX
-             combatTypes: COMBAT_TYPE_GMAX
--            defenseMultiplier: 1.15
-+            defenseMultiplier: 1.25
-           }
-         }
+       ibfc {
        }
-@@ -152162,8 +152184,8 @@
-       complianceZonesEnabled: true
-       enablePartyRaidInformation: true
-       friendRequestsEnabled: true
--      partyExpiryDurationMs: 10800000
--      partyExpiryWarningMinutes: 10
-+      partyExpiryDurationMs: 28800000
-+      partyExpiryWarningMinutes: 30
-       enabledFriendStatusIncrease: true
-       restartPartyRejoinPromptEnabled: true
-       partyIapBoostsEnabled: true
-@@ -268370,6 +268392,7 @@
-     pokemonFamily {
-       familyId: FAMILY_CARVANHA
-       candyPerXlCandy: 100
-+      megaEvolvablePokemonId: SHARPEDO
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -268484,6 +268507,7 @@
-         shadowChargeMove: FRUSTRATION
+@@ -345676,13 +345658,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
        }
-       buddyGroupNumber: 3
-+      buddyWalkedMegaEnergyAward: 15
        ibfc {
        }
-       breadTierGroup: GROUP_2
-@@ -268581,6 +268605,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
-+      buddyWalkedMegaEnergyAward: 15
-       ibfc {
-       }
-       breadTierGroup: GROUP_2
-@@ -268674,6 +268699,11 @@
-       kmBuddyDistance: 3
-       buddy_size: BUDDY_BIG
-       modelHeight: 1.35
-+      evolutionBranch {
-+        temporaryEvolution: TEMP_EVOLUTION_MEGA
-+        temporaryEvolutionEnergyCost: 200
-+        temporaryEvolutionEnergyCostSubsequent: 40
-+      }
-       modelScaleV2: 1
-       buddyOffsetMale: 20
-       buddyOffsetMale: 0
-@@ -268696,6 +268726,26 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
-+      temp_evo_overrides {
-+        tempEvoId: TEMP_EVOLUTION_MEGA
-+        stats {
-+          baseStamina: 172
-+          baseAttack: 289
-+          baseDefense: 144
-+        }
-+        averageHeightM: 1.8
-+        averageWeightKg: 88.8
-+        typeOverride1: POKEMON_TYPE_WATER
-+        typeOverride2: POKEMON_TYPE_DARK
-+        camera {
-+          cylinderRadiusM: 1.75
-+          cylinderHeightM: 2.65
-+          cylinderGroundM: 0.5
-+        }
-+        modelScaleV2: 1
-+        modelHeight: 1.35
-+      }
-+      buddyWalkedMegaEnergyAward: 15
-       ibfc {
-       }
-       breadTierGroup: GROUP_2
-@@ -268768,6 +268818,11 @@
-       kmBuddyDistance: 3
-       buddy_size: BUDDY_BIG
-       modelHeight: 1.35
-+      evolutionBranch {
-+        temporaryEvolution: TEMP_EVOLUTION_MEGA
-+        temporaryEvolutionEnergyCost: 200
-+        temporaryEvolutionEnergyCostSubsequent: 40
-+      }
-       modelScaleV2: 1
-       form: SHARPEDO_NORMAL
-       buddyOffsetMale: 20
-@@ -268791,6 +268846,26 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
-+      temp_evo_overrides {
-+        tempEvoId: TEMP_EVOLUTION_MEGA
-+        stats {
-+          baseStamina: 172
-+          baseAttack: 289
-+          baseDefense: 144
-+        }
-+        averageHeightM: 1.8
-+        averageWeightKg: 88.8
-+        typeOverride1: POKEMON_TYPE_WATER
-+        typeOverride2: POKEMON_TYPE_DARK
-+        camera {
-+          cylinderRadiusM: 1.75
-+          cylinderHeightM: 2.65
-+          cylinderGroundM: 0.5
-+        }
-+        modelScaleV2: 1
-+        modelHeight: 1.35
-+      }
-+      buddyWalkedMegaEnergyAward: 15
-       ibfc {
-       }
-       breadTierGroup: GROUP_2
-@@ -294728,7 +294803,7 @@
-       movementId: BEHEMOTH_BLADE
-       animationId: 5
-       pokemonType: POKEMON_TYPE_STEEL
--      power: 210
-+      power: 230
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-@@ -294836,7 +294911,7 @@
-       movementId: BEHEMOTH_BASH
-       animationId: 5
-       pokemonType: POKEMON_TYPE_STEEL
--      power: 131.25
-+      power: 143.75
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-@@ -364490,10 +364565,10 @@
-       durationMs: 2500
-       damageWindowStartMs: 2000
-       damageWindowEndMs: 3400
--      obMoveSettingsNumber18: 262.5
--      obMoveSettingsNumber18: 315
--      obMoveSettingsNumber18: 367.5
--      obMoveSettingsNumber18: 472.5
-+      obMoveSettingsNumber18: 287.5
-+      obMoveSettingsNumber18: 345
-+      obMoveSettingsNumber18: 402.5
-+      obMoveSettingsNumber18: 517.5
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -364513,10 +364588,10 @@
-       durationMs: 2500
-       damageWindowStartMs: 2000
-       damageWindowEndMs: 3400
--      obMoveSettingsNumber18: 262.5
--      obMoveSettingsNumber18: 315
--      obMoveSettingsNumber18: 367.5
--      obMoveSettingsNumber18: 472.5
-+      obMoveSettingsNumber18: 287.5
-+      obMoveSettingsNumber18: 345
-+      obMoveSettingsNumber18: 402.5
-+      obMoveSettingsNumber18: 517.5
+@@ -345750,6 +345732,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -345757,7 +345740,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -378507,6 +378582,11 @@
-           quantity: 25
-         }
-         bonusBoxes {
-+          text: "quest_directive_emax_win"
-+          iconType: BREAD
-+          quantity: 100
-+        }
-+        bonusBoxes {
-           text: "quest_raid_t1_win"
-           iconType: RAID
-           quantity: 10
-@@ -395431,6 +395511,19 @@
+@@ -345832,7 +345814,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
    }
  }
- template {
-+  template_id: "TEMPORARY_EVOLUTION_V0319_POKEMON_SHARPEDO"
+@@ -345900,6 +345881,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -345907,7 +345889,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -345975,6 +345956,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -345982,7 +345964,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -346050,6 +346031,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -346057,7 +346039,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -346125,13 +346106,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -346198,6 +346179,7 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -346205,7 +346187,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -346273,6 +346254,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -346280,7 +346262,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -346348,6 +346329,7 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
++        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -346355,7 +346337,6 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -388288,7 +388269,7 @@
+       skuDisableTime: "2025-09-07T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+       skuDisableTimeUtcMs: 1757275200000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250731_pgo_s20_mega_kanto_002_1024x576_nologo.jpg"
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250818_pgo_dmax_legendarybirds_1024x576_nologo.jpg"
+       webstoreSkuId: "web-2025-kanto-birds-ticket-box"
+       webstoreSkuPriceE6: 4990000
+     }
+@@ -390033,7 +390014,7 @@
+       skuDisableTime: "2025-09-07T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+       skuDisableTimeUtcMs: 1757275200000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250731_pgo_s20_mega_kanto_002_1024x576_nologo.jpg"
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250818_pgo_dmax_legendarybirds_1024x576_nologo.jpg"
+       webstoreSkuId: "web-2025-kanto-birds-ticket-box"
+       webstoreSkuPriceE6: 4990000
+     }
+@@ -395445,7 +395426,1061 @@
+     }
+   }
+ }
+-batch_id: 1756095844993
++template {
++  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S20"
 +  data {
-+    template_id: "TEMPORARY_EVOLUTION_V0319_POKEMON_SHARPEDO"
-+    temporaryEvolutionSettings {
-+      pokemonId: SHARPEDO
-+      temporary_evolutions {
-+        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
-+        assetBundleValue: 51
++    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S20"
++    combat_league {
++      title: "catch_cup_s13_title"
++      enabled: true
++      unlockCondition {
++        type: WITH_UNIQUE_POKEMON
++        minPokemonCount: 3
 +      }
++      pokemonCondition {
++        type: WITH_POKEMON_CP_LIMIT
++        withPokemonCpLimit {
++          maxCp: 1500
++        }
++      }
++      pokemonCondition {
++        type: WITH_UNIQUE_POKEMON
++      }
++      pokemonCondition {
++        type: POKEMON_CAUGHT_TIMESTAMP
++        pokemonCaughtTimestamp {
++          afterTimestamp: 1756843200000
++          beforeTimestamp: 1764709200000
++        }
++      }
++      iconUrl: "https://storage.googleapis.com/prod-public-images/premierball_sprite.png"
++      pokemonCount: 3
++      bannedPokemon: DITTO
++      bannedPokemon: SHEDINJA
++      bannedPokemon: MEW
++      bannedPokemon: CELEBI
++      bannedPokemon: JIRACHI
++      bannedPokemon: DEOXYS
++      bannedPokemon: DARKRAI
++      bannedPokemon: VICTINI
++      bannedPokemon: MELOETTA
++      bannedPokemon: GENESECT
++      bannedPokemon: HOOPA
++      bannedPokemon: MELTAN
++      bannedPokemon: MELMETAL
++      bannedPokemon: ZARUDE
++      bannedPokemon: DIANCIE
++      bannedPokemon: SHAYMIN
++      badgeType: BADGE_GREAT_LEAGUE
++      battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
++      leagueType: PREMIER
 +    }
 +  }
 +}
 +template {
-   template_id: "PTC_OAUTH_SETTINGS"
-   data {
-     template_id: "PTC_OAUTH_SETTINGS"
-@@ -395441,7 +395534,7 @@
-     }
-   }
- }
--batch_id: 1755877017742
-+batch_id: 1755941151391
- experiment_id: 1
- experiment_id: 4
- experiment_id: 6
-@@ -395487,6 +395580,7 @@
++  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_SERIES"
++  data {
++    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_SERIES"
++    combat_league {
++      title: "great_league_championship_series"
++      enabled: true
++      unlockCondition {
++        type: WITH_UNIQUE_POKEMON
++        minPokemonCount: 3
++      }
++      pokemonCondition {
++        type: WITH_POKEMON_CP_LIMIT
++        withPokemonCpLimit {
++          maxCp: 1500
++        }
++      }
++      pokemonCondition {
++        type: WITH_UNIQUE_POKEMON
++      }
++      pokemonCondition {
++        type: POKEMON_BANLIST
++        pokemonBanList {
++          pokemon {
++            id: RATTATA
++          }
++          pokemon {
++            id: RATICATE
++            forms: RATTATA_ALOLA
++          }
++          pokemon {
++            id: SANDSHREW
++            forms: RATICATE_ALOLA
++          }
++          pokemon {
++            id: SANDSLASH
++            forms: SANDSHREW_ALOLA
++          }
++          pokemon {
++            id: NINETALES
++            forms: SANDSLASH_ALOLA
++          }
++          pokemon {
++            id: MEOWTH
++            forms: NINETALES_ALOLA
++          }
++          pokemon {
++            id: PERSIAN
++            forms: MEOWTH_ALOLA
++          }
++          pokemon {
++            id: GROWLITHE
++            forms: PERSIAN_ALOLA
++          }
++          pokemon {
++            id: ARCANINE
++            forms: GROWLITHE_HISUIAN
++          }
++          pokemon {
++            id: GEODUDE
++            forms: ARCANINE_HISUIAN
++          }
++          pokemon {
++            id: GRAVELER
++          }
++          pokemon {
++            id: GOLEM
++          }
++          pokemon {
++            id: GRIMER
++          }
++          pokemon {
++            id: MUK
++            forms: GRIMER_ALOLA
++          }
++          pokemon {
++            id: ONIX
++            forms: MUK_ALOLA
++          }
++          pokemon {
++            id: RHYHORN
++          }
++          pokemon {
++            id: RHYDON
++          }
++          pokemon {
++            id: LAPRAS
++          }
++          pokemon {
++            id: OMANYTE
++          }
++          pokemon {
++            id: OMASTAR
++          }
++          pokemon {
++            id: KABUTO
++          }
++          pokemon {
++            id: KABUTOPS
++          }
++          pokemon {
++            id: AERODACTYL
++          }
++          pokemon {
++            id: ARTICUNO
++          }
++          pokemon {
++            id: ZAPDOS
++          }
++          pokemon {
++            id: MOLTRES
++          }
++          pokemon {
++            id: MEWTWO
++          }
++          pokemon {
++            id: MEW
++          }
++          pokemon {
++            id: SUDOWOODO
++          }
++          pokemon {
++            id: UMBREON
++          }
++          pokemon {
++            id: MURKROW
++          }
++          pokemon {
++            id: QWILFISH
++          }
++          pokemon {
++            id: SHUCKLE
++            forms: QWILFISH_HISUIAN
++          }
++          pokemon {
++            id: SNEASEL
++          }
++          pokemon {
++            id: MAGCARGO
++          }
++          pokemon {
++            id: CORSOLA
++          }
++          pokemon {
++            id: HOUNDOUR
++          }
++          pokemon {
++            id: HOUNDOOM
++          }
++          pokemon {
++            id: KINGDRA
++          }
++          pokemon {
++            id: RAIKOU
++          }
++          pokemon {
++            id: ENTEI
++          }
++          pokemon {
++            id: SUICUNE
++          }
++          pokemon {
++            id: LARVITAR
++          }
++          pokemon {
++            id: PUPITAR
++          }
++          pokemon {
++            id: TYRANITAR
++          }
++          pokemon {
++            id: LUGIA
++          }
++          pokemon {
++            id: HO_OH
++          }
++          pokemon {
++            id: CELEBI
++          }
++          pokemon {
++            id: POOCHYENA
++          }
++          pokemon {
++            id: MIGHTYENA
++          }
++          pokemon {
++            id: ZIGZAGOON
++          }
++          pokemon {
++            id: LINOONE
++            forms: ZIGZAGOON_GALARIAN
++          }
++          pokemon {
++            id: NUZLEAF
++            forms: LINOONE_GALARIAN
++          }
++          pokemon {
++            id: SHIFTRY
++          }
++          pokemon {
++            id: NOSEPASS
++          }
++          pokemon {
++            id: SABLEYE
++          }
++          pokemon {
++            id: ARON
++          }
++          pokemon {
++            id: LAIRON
++          }
++          pokemon {
++            id: AGGRON
++          }
++          pokemon {
++            id: CARVANHA
++          }
++          pokemon {
++            id: SHARPEDO
++          }
++          pokemon {
++            id: CACTURNE
++          }
++          pokemon {
++            id: LUNATONE
++          }
++          pokemon {
++            id: SOLROCK
++          }
++          pokemon {
++            id: CRAWDAUNT
++          }
++          pokemon {
++            id: LILEEP
++          }
++          pokemon {
++            id: CRADILY
++          }
++          pokemon {
++            id: ANORITH
++          }
++          pokemon {
++            id: ARMALDO
++          }
++          pokemon {
++            id: ABSOL
++          }
++          pokemon {
++            id: RELICANTH
++          }
++          pokemon {
++            id: REGIROCK
++          }
++          pokemon {
++            id: REGICE
++          }
++          pokemon {
++            id: REGISTEEL
++          }
++          pokemon {
++            id: LATIAS
++          }
++          pokemon {
++            id: LATIOS
++          }
++          pokemon {
++            id: KYOGRE
++          }
++          pokemon {
++            id: GROUDON
++          }
++          pokemon {
++            id: RAYQUAZA
++          }
++          pokemon {
++            id: JIRACHI
++          }
++          pokemon {
++            id: DEOXYS
++          }
++          pokemon {
++            id: CRANIDOS
++          }
++          pokemon {
++            id: RAMPARDOS
++          }
++          pokemon {
++            id: SHIELDON
++          }
++          pokemon {
++            id: BASTIODON
++          }
++          pokemon {
++            id: HONCHKROW
++          }
++          pokemon {
++            id: STUNKY
++          }
++          pokemon {
++            id: SKUNTANK
++          }
++          pokemon {
++            id: BONSLY
++          }
++          pokemon {
++            id: SPIRITOMB
++          }
++          pokemon {
++            id: DRAPION
++          }
++          pokemon {
++            id: WEAVILE
++          }
++          pokemon {
++            id: RHYPERIOR
++          }
++          pokemon {
++            id: PROBOPASS
++          }
++          pokemon {
++            id: UXIE
++          }
++          pokemon {
++            id: MESPRIT
++          }
++          pokemon {
++            id: AZELF
++          }
++          pokemon {
++            id: DIALGA
++          }
++          pokemon {
++            id: PALKIA
++          }
++          pokemon {
++            id: HEATRAN
++          }
++          pokemon {
++            id: REGIGIGAS
++          }
++          pokemon {
++            id: GIRATINA
++          }
++          pokemon {
++            id: CRESSELIA
++          }
++          pokemon {
++            id: PHIONE
++          }
++          pokemon {
++            id: MANAPHY
++          }
++          pokemon {
++            id: DARKRAI
++          }
++          pokemon {
++            id: SHAYMIN
++          }
++          pokemon {
++            id: ARCEUS
++          }
++          pokemon {
++            id: VICTINI
++          }
++          pokemon {
++            id: SAMUROTT
++          }
++          pokemon {
++            id: PURRLOIN
++            forms: SAMUROTT_HISUIAN
++          }
++          pokemon {
++            id: LIEPARD
++          }
++          pokemon {
++            id: ROGGENROLA
++          }
++          pokemon {
++            id: BOLDORE
++          }
++          pokemon {
++            id: GIGALITH
++          }
++          pokemon {
++            id: SANDILE
++          }
++          pokemon {
++            id: KROKOROK
++          }
++          pokemon {
++            id: KROOKODILE
++          }
++          pokemon {
++            id: DWEBBLE
++          }
++          pokemon {
++            id: CRUSTLE
++          }
++          pokemon {
++            id: SCRAGGY
++          }
++          pokemon {
++            id: SCRAFTY
++          }
++          pokemon {
++            id: TIRTOUGA
++          }
++          pokemon {
++            id: CARRACOSTA
++          }
++          pokemon {
++            id: ARCHEN
++          }
++          pokemon {
++            id: ARCHEOPS
++          }
++          pokemon {
++            id: ZORUA
++          }
++          pokemon {
++            id: ZOROARK
++          }
++          pokemon {
++            id: JELLICENT
++          }
++          pokemon {
++            id: PAWNIARD
++          }
++          pokemon {
++            id: BISHARP
++          }
++          pokemon {
++            id: VULLABY
++          }
++          pokemon {
++            id: MANDIBUZZ
++          }
++          pokemon {
++            id: DEINO
++          }
++          pokemon {
++            id: ZWEILOUS
++          }
++          pokemon {
++            id: HYDREIGON
++          }
++          pokemon {
++            id: COBALION
++          }
++          pokemon {
++            id: TERRAKION
++          }
++          pokemon {
++            id: VIRIZION
++          }
++          pokemon {
++            id: TORNADUS
++          }
++          pokemon {
++            id: THUNDURUS
++          }
++          pokemon {
++            id: RESHIRAM
++          }
++          pokemon {
++            id: ZEKROM
++          }
++          pokemon {
++            id: LANDORUS
++          }
++          pokemon {
++            id: KYUREM
++          }
++          pokemon {
++            id: KELDEO
++          }
++          pokemon {
++            id: MELOETTA
++          }
++          pokemon {
++            id: GENESECT
++          }
++          pokemon {
++            id: GRENINJA
++          }
++          pokemon {
++            id: PANGORO
++          }
++          pokemon {
++            id: HONEDGE
++          }
++          pokemon {
++            id: DOUBLADE
++          }
++          pokemon {
++            id: AEGISLASH
++          }
++          pokemon {
++            id: INKAY
++          }
++          pokemon {
++            id: MALAMAR
++          }
++          pokemon {
++            id: BINACLE
++          }
++          pokemon {
++            id: BARBARACLE
++          }
++          pokemon {
++            id: TYRUNT
++          }
++          pokemon {
++            id: TYRANTRUM
++          }
++          pokemon {
++            id: AMAURA
++          }
++          pokemon {
++            id: AURORUS
++          }
++          pokemon {
++            id: CARBINK
++          }
++          pokemon {
++            id: AVALUGG
++          }
++          pokemon {
++            id: XERNEAS
++            forms: AVALUGG_HISUIAN
++          }
++          pokemon {
++            id: YVELTAL
++          }
++          pokemon {
++            id: ZYGARDE
++          }
++          pokemon {
++            id: DIANCIE
++          }
++          pokemon {
++            id: HOOPA
++          }
++          pokemon {
++            id: VOLCANION
++          }
++          pokemon {
++            id: INCINEROAR
++          }
++          pokemon {
++            id: ROCKRUFF
++          }
++          pokemon {
++            id: LYCANROC
++          }
++          pokemon {
++            id: SILVALLY
++          }
++          pokemon {
++            id: MINIOR
++          }
++          pokemon {
++            id: TAPU_KOKO
++          }
++          pokemon {
++            id: TAPU_LELE
++          }
++          pokemon {
++            id: TAPU_BULU
++          }
++          pokemon {
++            id: TAPU_FINI
++          }
++          pokemon {
++            id: COSMOG
++          }
++          pokemon {
++            id: COSMOEM
++          }
++          pokemon {
++            id: SOLGALEO
++          }
++          pokemon {
++            id: LUNALA
++          }
++          pokemon {
++            id: NIHILEGO
++          }
++          pokemon {
++            id: BUZZWOLE
++          }
++          pokemon {
++            id: PHEROMOSA
++          }
++          pokemon {
++            id: XURKITREE
++          }
++          pokemon {
++            id: CELESTEELA
++          }
++          pokemon {
++            id: KARTANA
++          }
++          pokemon {
++            id: GUZZLORD
++          }
++          pokemon {
++            id: NECROZMA
++          }
++          pokemon {
++            id: NECROZMA
++          }
++          pokemon {
++            id: MAGEARNA
++          }
++          pokemon {
++            id: MARSHADOW
++          }
++          pokemon {
++            id: POIPOLE
++          }
++          pokemon {
++            id: NAGANADEL
++          }
++          pokemon {
++            id: STAKATAKA
++          }
++          pokemon {
++            id: BLACEPHALON
++          }
++          pokemon {
++            id: ZERAORA
++          }
++          pokemon {
++            id: MELTAN
++          }
++          pokemon {
++            id: MELMETAL
++          }
++          pokemon {
++            id: CORVIKNIGHT
++          }
++          pokemon {
++            id: NICKIT
++          }
++          pokemon {
++            id: THIEVUL
++          }
++          pokemon {
++            id: DREDNAW
++          }
++          pokemon {
++            id: ROLYCOLY
++          }
++          pokemon {
++            id: CARKOL
++          }
++          pokemon {
++            id: COALOSSAL
++          }
++          pokemon {
++            id: IMPIDIMP
++          }
++          pokemon {
++            id: MORGREM
++          }
++          pokemon {
++            id: GRIMMSNARL
++          }
++          pokemon {
++            id: OBSTAGOON
++          }
++          pokemon {
++            id: STONJOURNER
++          }
++          pokemon {
++            id: MORPEKO
++          }
++          pokemon {
++            id: ZACIAN
++          }
++          pokemon {
++            id: ZAMAZENTA
++          }
++          pokemon {
++            id: ETERNATUS
++          }
++          pokemon {
++            id: KUBFU
++          }
++          pokemon {
++            id: URSHIFU
++          }
++          pokemon {
++            id: ZARUDE
++          }
++          pokemon {
++            id: REGIELEKI
++          }
++          pokemon {
++            id: REGIDRAGO
++          }
++          pokemon {
++            id: GLASTRIER
++          }
++          pokemon {
++            id: SPECTRIER
++          }
++          pokemon {
++            id: CALYREX
++          }
++          pokemon {
++            id: KLEAVOR
++          }
++          pokemon {
++            id: OVERQWIL
++          }
++          pokemon {
++            id: ENAMORUS
++          }
++          pokemon {
++            id: MEOWSCARADA
++          }
++          pokemon {
++            id: LOKIX
++          }
++          pokemon {
++            id: NACLI
++          }
++          pokemon {
++            id: NACLSTACK
++          }
++          pokemon {
++            id: GARGANACL
++          }
++          pokemon {
++            id: MASCHIFF
++          }
++          pokemon {
++            id: MABOSSTIFF
++          }
++          pokemon {
++            id: KLAWF
++          }
++          pokemon {
++            id: BOMBIRDIER
++          }
++          pokemon {
++            id: GLIMMET
++          }
++          pokemon {
++            id: GLIMMORA
++          }
++          pokemon {
++            id: KINGAMBIT
++          }
++          pokemon {
++            id: BRUTEBONNET
++          }
++          pokemon {
++            id: IRONJUGULIS
++          }
++          pokemon {
++            id: IRONTHORNS
++          }
++          pokemon {
++            id: WOCHIEN
++          }
++          pokemon {
++            id: CHIENPAO
++          }
++          pokemon {
++            id: TINGLU
++          }
++          pokemon {
++            id: CHIYU
++          }
++          pokemon {
++            id: ROARINGMOON
++          }
++          pokemon {
++            id: KORAIDON
++          }
++          pokemon {
++            id: MIRAIDON
++          }
++        }
++      }
++      pokemonCondition {
++        type: WITH_POKEMON_TYPE
++        withPokemonType {
++          pokemonType: POKEMON_TYPE_DRAGON
++          pokemonType: POKEMON_TYPE_FLYING
++          pokemonType: POKEMON_TYPE_GHOST
++          pokemonType: POKEMON_TYPE_ICE
++          pokemonType: POKEMON_TYPE_PSYCHIC
++        }
++      }
++      iconUrl: "https://storage.googleapis.com/prod-public-images/premierball_sprite.png"
++      pokemonCount: 3
++      bannedPokemon: DITTO
++      bannedPokemon: SHEDINJA
++      badgeType: BADGE_GREAT_LEAGUE
++      battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
++      leagueType: STANDARD
++    }
++  }
++}
++template {
++  template_id: "COMBAT_RANKING_SETTINGS_S27"
++  data {
++    template_id: "COMBAT_RANKING_SETTINGS_S27"
++    combat_ranking_proto_settings {
++      rankLevel {
++        rankLevel: 1
++      }
++      rankLevel {
++        rankLevel: 2
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 3
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 4
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 5
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 6
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 7
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 8
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 9
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 10
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 11
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 12
++        additionalWinsRequired: 5
++      }
++      rankLevel {
++        rankLevel: 13
++        additionalWinsRequired: 6
++      }
++      rankLevel {
++        rankLevel: 14
++        additionalWinsRequired: 7
++      }
++      rankLevel {
++        rankLevel: 15
++        additionalWinsRequired: 8
++      }
++      rankLevel {
++        rankLevel: 16
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 17
++        additionalWinsRequired: 10
++      }
++      rankLevel {
++        rankLevel: 18
++        additionalWinsRequired: 15
++      }
++      rankLevel {
++        rankLevel: 19
++        additionalWinsRequired: 20
++      }
++      rankLevel {
++        rankLevel: 20
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 21
++        minRatingRequired: 2000
++      }
++      rankLevel {
++        rankLevel: 22
++        minRatingRequired: 2500
++      }
++      rankLevel {
++        rankLevel: 23
++        minRatingRequired: 2750
++      }
++      rankLevel {
++        rankLevel: 24
++        minRatingRequired: 3000
++      }
++      required_for_rewards {
++        rankLevel: 1
++        additionalTotalBattlesRequired: 5
++      }
++      minRankToDisplayRating: 20
++      minRatingRequired: 27
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_pants_eternatussuit_0"
++  data {
++    template_id: "N_DISPLAY_n_pants_eternatussuit_0"
++    avatarItemDisplay {
++      iconAddress: "n_pants_eternatussuit_0_icon"
++      displayStringId: "avatar_pants_eternatus"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_eternatussuit_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_eternatussuit_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_eternatussuit_0_icon"
++      displayStringId: "avatar_shirt_eternatus"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shoes_eternatussuit_0"
++  data {
++    template_id: "N_DISPLAY_n_shoes_eternatussuit_0"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_eternatussuit_0_icon"
++      displayStringId: "avatar_shoes_eternatus"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_set_eternatussuit_0"
++  data {
++    template_id: "N_DISPLAY_set_eternatussuit_0"
++    avatarItemDisplay {
++      iconAddress: "set_eternatussuit_0"
++    }
++  }
++}
++template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++template {
++  template_id: "WEEKLY_CHALLENGE_PARTY_QUEST"
++  data {
++    template_id: "WEEKLY_CHALLENGE_PARTY_QUEST"
++    clientQuestTemplate {
++      quest {
++        questType: QUEST_CATCH_POKEMON
++        questId: "WEEKLY_CHALLENGE_PARTY_QUEST"
++        questContext: 20
++        templateId: "WEEKLY_CHALLENGE_PARTY_QUEST"
++        goal {
++          target: 100
++        }
++        questRewards {
++          type: STARDUST
++          stardust: 600
++        }
++        questRewards {
++          type: 19
++          23: 7
++        }
++        127: 2
++      }
++      questDisplay {
++        description: "quest_catch_pokemon_plural"
++        title: "quest_catch_pokemon_plural"
++      }
++    }
++  }
++}
++batch_id: 1756167130827
++experiment_id: 1
++experiment_id: 4
++experiment_id: 6
++experiment_id: 8
++experiment_id: 11
++experiment_id: 21
+ experiment_id: 101
+ experiment_id: 150
+ experiment_id: 163
+@@ -395471,16 +396506,23 @@
+ experiment_id: 2600
+ experiment_id: 2650
+ experiment_id: 3032
++experiment_id: 3033
+ experiment_id: 3063
++experiment_id: 3400
+ experiment_id: 3710
+ experiment_id: 3726
+ experiment_id: 3730
+ experiment_id: 3742
+ experiment_id: 3746
++experiment_id: 3756
++experiment_id: 4693
  experiment_id: 4709
- experiment_id: 4891
+ experiment_id: 4711
+ experiment_id: 4713
+ experiment_id: 4715
++experiment_id: 4717
++experiment_id: 4891
++experiment_id: 4902
  experiment_id: 4998
-+experiment_id: 5122
+ experiment_id: 5123
  experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-@@ -395510,12 +395604,16 @@
- experiment_id: 70080
- experiment_id: 70095
- experiment_id: 70201
--experiment_id: 70209
--experiment_id: 70210
--experiment_id: 70219
- experiment_id: 70250
-+experiment_id: 70251
- experiment_id: 70252
-+experiment_id: 70253
-+experiment_id: 70254
- experiment_id: 70260
-+experiment_id: 70261
-+experiment_id: 70262
-+experiment_id: 70263
-+experiment_id: 70273
- experiment_id: 80436
- experiment_id: 80494
- experiment_id: 314159
+@@ -395513,6 +396555,7 @@
+ experiment_id: 3500037
+ experiment_id: 4610000
+ experiment_id: 4700000
++experiment_id: 5000301
+ experiment_id: 6600417
+ experiment_id: 6600418
+ experiment_id: 6600423
