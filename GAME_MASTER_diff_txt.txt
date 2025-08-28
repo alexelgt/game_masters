@@ -1,698 +1,726 @@
---- GAME_MASTER_old.txt	2025-08-26 22:52:13.226951136 +0200
-+++ GAME_MASTER.txt	2025-08-27 20:02:51.708972157 +0200
-@@ -77819,36 +77819,28 @@
-   }
- }
- template {
--  template_id: "EVENT_PASS_GOFEST2025_GLOBAL_80_FREE"
-+  template_id: "STICKER_CONCIERGE_PSYDUCK"
-   data {
--    template_id: "EVENT_PASS_GOFEST2025_GLOBAL_80_FREE"
--    eventPassTierSettings {
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: PIKACHU
--          pokemonDisplay {
--            form: PIKACHU_GOFEST_2025_GOGGLES_RED
--          }
--        }
--      }
-+    template_id: "STICKER_CONCIERGE_PSYDUCK"
-+    stickerMetadata {
-+      stickerId: "STICKER_CONCIERGE_PSYDUCK"
-+      maxCount: 25
-+      pokemonId: PSYDUCK
-+      category: "Pokemon"
-+      releaseDate: 20250830
-     }
-   }
- }
- template {
--  template_id: "EVENT_PASS_GOFEST2025_GLOBAL_90_FREE"
-+  template_id: "STICKER_CONCIERGE_EEVEE"
-   data {
--    template_id: "EVENT_PASS_GOFEST2025_GLOBAL_90_FREE"
--    eventPassTierSettings {
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: PIKACHU
--          pokemonDisplay {
--            form: PIKACHU_GOFEST_2025_GOGGLES_RED
--          }
--        }
--      }
-+    template_id: "STICKER_CONCIERGE_EEVEE"
-+    stickerMetadata {
-+      stickerId: "STICKER_CONCIERGE_EEVEE"
-+      maxCount: 25
-+      pokemonId: EEVEE
-+      category: "Pokemon"
-+      releaseDate: 20250830
-     }
-   }
- }
-@@ -127942,11 +127934,11 @@
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
-         eventStartTime: "2025-09-02T13:00:00"
--        eventEndTime: "2025-09-17T14:00:00"
-+        eventEndTime: "2025-09-07T13:00:00"
-         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
-         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-s17gbl-nologo-2024.jpg"
-         clientEventStartTimeUtcMs: 1756818000000
--        clientEventEndTimeUtcMs: 1758117600000
-+        clientEventEndTimeUtcMs: 1757250000000
+--- GAME_MASTER_old.txt	2025-08-27 20:02:51.708972157 +0200
++++ GAME_MASTER.txt	2025-08-28 19:49:18.641632582 +0200
+@@ -70937,10 +70937,20 @@
+     template_id: "DEFAULT_BATTLE_INPUT_BUFFER_SETTINGS"
+     battleInputBufferSettings {
+       raidsInputBufferPriorityList {
++        eventPriority: ACTOR_ABILITY
++        eventPriority: ITEM
+         eventPriority: DODGE
++        eventPriority: SWAP_POKEMON
++        2: "\007\006\003\005\002"
+       }
+       breadInputBufferPriorityList {
+         eventPriority: DODGE
++        eventPriority: SWAP_POKEMON
++        2: "\003\005\002"
++      }
++      3 {
++        1: "\007"
++        2: "\005\002"
        }
      }
    }
-@@ -128704,44 +128696,35 @@
+@@ -94559,6 +94569,17 @@
+     template_id: "EXTENDED_V0323_POKEMON_CAMERUPT"
+     pokemonExtendedSettings {
+       uniqueId: CAMERUPT
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 1.225
++          xsLowerBound: 1.25
++          mLowerBound: 1.875
++          mUpperBound: 3.125
++          xlUpperBound: 3.75
++          xxlUpperBound: 5
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.9359
+         xsLowerBound: 0.955
+@@ -96425,6 +96446,17 @@
+     template_id: "EXTENDED_V0376_POKEMON_METAGROSS"
+     pokemonExtendedSettings {
+       uniqueId: METAGROSS
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 1.225
++          xsLowerBound: 1.25
++          mLowerBound: 1.875
++          mUpperBound: 3.125
++          xlUpperBound: 3.75
++          xxlUpperBound: 5
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.784
+         xsLowerBound: 0.8
+@@ -96443,6 +96475,17 @@
+     pokemonExtendedSettings {
+       uniqueId: METAGROSS
+       form: METAGROSS_NORMAL
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 1.225
++          xsLowerBound: 1.25
++          mLowerBound: 1.875
++          mUpperBound: 3.125
++          xlUpperBound: 3.75
++          xxlUpperBound: 5
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.784
+         xsLowerBound: 0.8
+@@ -115873,6 +115916,9 @@
+       forms {
+         form: PSYDUCK_NORMAL
+       }
++      forms {
++        form: 3019
++      }
+     }
+   }
+ }
+@@ -128509,39 +128555,45 @@
        itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
        category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
        globalEventTicket {
--        eventBadge: BADGE_GOFEST_2025_GLOBAL
--        grantBadgeBeforeEventStartMs: 6638822000
--        eventStartTime: "2025-06-28T10:00:00"
--        eventEndTime: "2025-06-29T18:00:00"
--        itemBagDescriptionKey: "item_event_ticket_10_details_GOFest2025Ver1"
-+        eventStartTime: "2025-11-15T10:00:00"
-+        eventEndTime: "2025-11-16T18:00:00"
-+        itemBagDescriptionKey: "item_global_event_ticket_desc_GOWA25"
+-        eventStartTime: "2025-08-15T10:00:00"
+-        eventEndTime: "2025-08-17T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_GBW_WCS_AUG25"
++        eventStartTime: "2025-09-09T10:00:00"
++        eventEndTime: "2025-09-14T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_ConciergeCB0925"
          giftable: true
-         giftItem: ITEM_EVENT_TICKET_10_TO_GIFT
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/pgo_gofest_volcanion_1920x1080.jpg"
--        displayV2Enabled: true
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/pgo_gofest_volcanion_1024x512_nologo.jpg"
--        titleImageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/PGO_Fest25_Logo.png"
--        eventDatetimeRangeKey: "event_datetime_range_key_GOFest2025Ver1"
--        textRewardsKey: "text_rewards_key_GOFest2025Ver1"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_1024x512_logo.png"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_1024x512_nologo.png"
-+        titleImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_logo_250x250.png"
-+        eventDatetimeRangeKey: "event_datetime_range_key_GOWA25"
-+        textRewardsKey: "text_rewards_key_GOWA25"
+         giftItem: ITEM_EVENT_TICKET_07_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-wcs-go-battle-weekend-ticket-nologo-2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-wcs-go-battle-weekend-ticket-nologo-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_GBW_WCS_AUG25"
+-        textRewardsKey: "text_rewards_key_GBW_WCS_AUG25"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_ConciergeCB0925"
++        textRewardsKey: "text_rewards_key_ConciergeCB0925"
          iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemonId: VOLCANION
-+            pokemonId: GRIMMSNARL
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemonId: GUZZLORD
++          type: AVATAR_CLOTHING
++          neutralAvatarItemTemplate {
++            itemTemplateId: "N_AVATAR_n_pose_concierge"
++            displayTemplateId: "N_DISPLAY_n_pose_concierge"
            }
+         }
+         iconRewards {
+-          type: STARDUST
+-          stardust: 25000
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemonId: PSYDUCK
++            pokemonDisplay {
++              form: 3019
++            }
++          }
          }
          iconRewards {
            type: ITEM
            item {
-             item: ITEM_FREE_RAID_TICKET
--            amount: 18
--          }
--        }
--        iconRewards {
--          type: POKEMON_ENCOUNTER
--          pokemonEncounter {
--            pokemonId: SKIDDO
-+            amount: 12
+-            item: ITEM_PAID_RAID_TICKET
+-            amount: 1
++            item: ITEM_GOLDEN_RAZZ_BERRY
++            amount: 5
            }
          }
          detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1751104800000
--        clientEventEndTimeUtcMs: 1751220000000
-+        clientEventStartTimeUtcMs: 1763200800000
-+        clientEventEndTimeUtcMs: 1763316000000
+-        clientEventStartTimeUtcMs: 1755252000000
+-        clientEventEndTimeUtcMs: 1755460800000
++        clientEventStartTimeUtcMs: 1757412000000
++        clientEventEndTimeUtcMs: 1757880000000
        }
--      nameOverride: "general1.ticket._GOFest2025Ver1_title"
--      descriptionOverride: "item_event_ticket_10_desc_GOFest2025Ver1"
-+      nameOverride: "general2.ticket._GOWA25_title"
-+      descriptionOverride: "item_global_event_ticket_details_GOWA25"
+-      nameOverride: "general1.ticket._GBW_WCS_AUG25_title"
+-      descriptionOverride: "item_event_ticket_evergreen_desc_GBW_WCS_AUG25"
++      nameOverride: "general2.ticket.6_ConciergeCB0925_title"
++      descriptionOverride: "item_event_ticket_evergreen_desc_ConciergeCB0925"
      }
    }
  }
-@@ -128754,18 +128737,18 @@
+@@ -128554,17 +128606,16 @@
        itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
        category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
        globalEventTicket {
--        eventStartTime: "2025-06-28T10:00:00"
--        eventEndTime: "2025-06-29T18:00:00"
--        itemBagDescriptionKey: "item_event_ticket_10_details_GOFest2025Ver1"
-+        eventStartTime: "2025-11-15T10:00:00"
-+        eventEndTime: "2025-11-16T18:00:00"
-+        itemBagDescriptionKey: "item_global_event_ticket_desc_GOWA25"
-         ticketItem: ITEM_EVENT_TICKET_10
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/pgo_gofest_volcanion_1920x1080.jpg"
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/gofest2025/pgo_gofest_volcanion_1024x512_nologo.jpg"
--        clientEventStartTimeUtcMs: 1751104800000
--        clientEventEndTimeUtcMs: 1751220000000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_1024x512_logo.png"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_1024x512_nologo.png"
-+        clientEventStartTimeUtcMs: 1763200800000
-+        clientEventEndTimeUtcMs: 1763316000000
+-        eventStartTime: "2025-08-15T10:00:00"
+-        eventEndTime: "2025-08-17T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_details_GBW_WCS_AUG25"
++        eventStartTime: "2025-09-09T10:00:00"
++        eventEndTime: "2025-09-14T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_ConciergeCB0925"
+         ticketItem: ITEM_EVENT_TICKET_07
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-wcs-go-battle-weekend-ticket-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1755252000000
+-        clientEventEndTimeUtcMs: 1755460800000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
++        clientEventStartTimeUtcMs: 1757412000000
++        clientEventEndTimeUtcMs: 1757880000000
        }
        ignoreInventorySpace: true
--      nameOverride: "general1.ticket._GOFest2025Ver1_title"
--      descriptionOverride: "item_event_ticket_10_desc_GOFest2025Ver1"
-+      nameOverride: "general2.ticket._GOWA25_title"
-+      descriptionOverride: "item_global_event_ticket_details_GOWA25"
+-      nameOverride: "general1.ticket._GBW_WCS_AUG25_title"
+-      descriptionOverride: "item_event_ticket_evergreen_details_GBW_WCS_AUG25"
++      descriptionOverride: "item_event_ticket_evergreen_details_ConciergeCB0925"
      }
    }
  }
-@@ -129489,7 +129472,7 @@
-           usesCountOverride: 1
-         }
-         useBonusIncubatorAttributes: true
--        maxHatchSummaryEntries: 6
-+        maxHatchSummaryEntries: 10
+@@ -269397,6 +269448,7 @@
+     pokemonFamily {
+       familyId: FAMILY_NUMEL
+       candyPerXlCandy: 100
++      megaEvolvablePokemonId: CAMERUPT
+     }
+   }
+ }
+@@ -269509,6 +269561,7 @@
+         shadowChargeMove: FRUSTRATION
        }
-     }
-   }
-@@ -195595,7 +195578,7 @@
-     iapItemDisplay {
-       sku: "STICKER_SUMMER_2025_1.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 492
-+      sortOrder: 500
-     }
-   }
- }
-@@ -195606,7 +195589,7 @@
-     iapItemDisplay {
-       sku: "STICKER_SUMMER_2025_1.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 491
-+      sortOrder: 499
-     }
-   }
- }
-@@ -195631,7 +195614,7 @@
-     iapItemDisplay {
-       sku: "STICKER_SUMMER_2025_2.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 490
-+      sortOrder: 498
-     }
-   }
- }
-@@ -195642,7 +195625,7 @@
-     iapItemDisplay {
-       sku: "STICKER_SUMMER_2025_2.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 489
-+      sortOrder: 497
-     }
-   }
- }
-@@ -195667,7 +195650,7 @@
-     iapItemDisplay {
-       sku: "STICKER_SUMMER_2025_3.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 488
-+      sortOrder: 496
-     }
-   }
- }
-@@ -195678,7 +195661,7 @@
-     iapItemDisplay {
-       sku: "STICKER_SUMMER_2025_3.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 487
-+      sortOrder: 495
+       buddyGroupNumber: 2
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -269601,6 +269654,11 @@
+       kmBuddyDistance: 3
+       buddy_size: BUDDY_BIG
+       modelHeight: 1.84615386
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 200
++        temporaryEvolutionEnergyCostSubsequent: 40
++      }
+       modelScaleV2: 1
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -269623,6 +269681,25 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 3
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 172
++          baseAttack: 253
++          baseDefense: 183
++        }
++        averageHeightM: 2.5
++        averageWeightKg: 320.5
++        typeOverride1: POKEMON_TYPE_FIRE
++        typeOverride2: POKEMON_TYPE_GROUND
++        camera {
++          cylinderRadiusM: 2
++          cylinderHeightM: 2.25
++        }
++        modelScaleV2: 1
++        modelHeight: 1.8
++      }
++      buddyWalkedMegaEnergyAward: 15
+       raidBossDistanceOffset: 3
+       ibfc {
+       }
+@@ -279513,6 +279590,7 @@
+     pokemonFamily {
+       familyId: FAMILY_BELDUM
+       candyPerXlCandy: 100
++      megaEvolvablePokemonId: METAGROSS
      }
    }
  }
-@@ -195703,7 +195686,7 @@
-     iapItemDisplay {
-       sku: "STICKER_SUMMER_2025_4.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 486
-+      sortOrder: 494
-     }
-   }
- }
-@@ -195714,7 +195697,7 @@
-     iapItemDisplay {
-       sku: "STICKER_SUMMER_2025_4.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 485
-+      sortOrder: 493
-     }
-   }
- }
-@@ -371587,16 +371570,16 @@
+@@ -279623,6 +279701,7 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 2
++      buddyWalkedMegaEnergyAward: 25
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -279716,6 +279795,7 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 2
++      buddyWalkedMegaEnergyAward: 25
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -371510,7 +371590,6 @@
+       sku: "general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_MegaGyaradosRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -371531,7 +371610,6 @@
+       sku: "general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_MegaGyaradosRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -371569,8 +371647,7 @@
+       sku: "general2.ticket.1"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.1"
--      title: "iap_general2_ticket1_name"
--      description: "general2_ticket1_IAP_description"
--      skuEnableTime: "2023-01-01T11:00:00"
--      skuDisableTime: "2023-01-01T17:00:00"
--      skuEnableTimeUtcMs: 1672570800000
--      skuDisableTimeUtcMs: 1672592400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-+      spriteId: "general1.ticket.1"
-+      title: "general2.ticket._GOWA25_title"
-+      description: "text_rewards_key_GOWA25"
-+      skuEnableTime: "2024-01-01T00:00:00"
-+      skuDisableTime: "2025-11-16T18:00:00"
-+      skuEnableTimeUtcMs: 1704067200000
-+      skuDisableTimeUtcMs: 1763316000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_1024x512_logo.png"
-       webstoreSkuId: "web-go-fest-2025-ticket"
--      webstoreSkuPriceE6: 14990000
-+      webstoreSkuPriceE6: 11990000
-     }
-   }
- }
-@@ -371609,14 +371592,13 @@
+-      hidden: true
+-      spriteId: "general1.ticket.1"
++      spriteId: "general2.ticket.10"
+       title: "general2.ticket._GOWA25_title"
+       description: "text_rewards_key_GOWA25"
+       skuEnableTime: "2024-01-01T00:00:00"
+@@ -371591,8 +371668,7 @@
+       sku: "general2.ticket.1.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 1
+-      hidden: true
+-      spriteId: "general1.ticket.1"
++      spriteId: "general2.ticket.10"
+       title: "general2.ticket._GOWA25_title"
+       skuEnableTime: "2024-01-01T00:00:00"
+       skuDisableTime: "2025-11-16T18:00:00"
+@@ -371690,7 +371766,6 @@
+       sku: "general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Rookidee25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -371711,7 +371786,6 @@
+       sku: "general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Rookidee25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -371848,13 +371922,13 @@
+       sortOrder: 2
        hidden: true
--      spriteId: "general2.ticket.1"
--      title: "iap_general2_ticket1_name"
--      description: "general2_ticket1_IAP_description"
--      skuEnableTime: "2023-01-01T11:00:00"
--      skuDisableTime: "2023-01-01T17:00:00"
--      skuEnableTimeUtcMs: 1672570800000
--      skuDisableTimeUtcMs: 1672592400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-+      spriteId: "general1.ticket.1"
-+      title: "general2.ticket._GOWA25_title"
-+      skuEnableTime: "2024-01-01T00:00:00"
-+      skuDisableTime: "2025-11-16T18:00:00"
-+      skuEnableTimeUtcMs: 1704067200000
-+      skuDisableTimeUtcMs: 1763316000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_1024x512_logo.png"
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._GBW_WCS_AUG25_title"
++      title: "general2.ticket.6_ConciergeCB0925_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-17T20:00:00"
++      skuDisableTime: "2025-09-14T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1755460800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-wcs-go-battle-weekend-ticket-nologo-2025.jpg"
+-      webstoreSkuId: "web-wcs-2025-ticket-box"
++      skuDisableTimeUtcMs: 1757880000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
++      webstoreSkuId: "web-avatar-ticket-2025-box"
+       webstoreSkuPriceE6: 4990000
+     }
+   }
+@@ -371869,12 +371943,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._GBW_WCS_AUG25_title"
++      title: "general2.ticket.6_ConciergeCB0925_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-17T20:00:00"
++      skuDisableTime: "2025-09-14T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1755460800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-wcs-go-battle-weekend-ticket-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1757880000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
      }
    }
  }
-@@ -373332,16 +373314,16 @@
+@@ -373273,7 +373347,6 @@
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_MegaGyaradosRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -373294,7 +373367,6 @@
+       sku: "pgorelease.general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_MegaGyaradosRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -373313,8 +373385,7 @@
+       sku: "pgorelease.general2.ticket.1"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.1"
--      title: "iap_general2_ticket1_name"
--      description: "general2_ticket1_IAP_description"
--      skuEnableTime: "2023-01-01T11:00:00"
--      skuDisableTime: "2023-01-01T17:00:00"
--      skuEnableTimeUtcMs: 1672570800000
--      skuDisableTimeUtcMs: 1672592400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-+      spriteId: "general1.ticket.1"
-+      title: "general2.ticket._GOWA25_title"
-+      description: "text_rewards_key_GOWA25"
-+      skuEnableTime: "2024-01-01T00:00:00"
-+      skuDisableTime: "2025-11-16T18:00:00"
-+      skuEnableTimeUtcMs: 1704067200000
-+      skuDisableTimeUtcMs: 1763316000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_1024x512_logo.png"
-       webstoreSkuId: "web-go-fest-2025-ticket"
--      webstoreSkuPriceE6: 14990000
-+      webstoreSkuPriceE6: 11990000
-     }
-   }
- }
-@@ -373354,14 +373336,13 @@
+-      hidden: true
+-      spriteId: "general1.ticket.1"
++      spriteId: "general2.ticket.10"
+       title: "general2.ticket._GOWA25_title"
+       description: "text_rewards_key_GOWA25"
+       skuEnableTime: "2024-01-01T00:00:00"
+@@ -373335,8 +373406,7 @@
+       sku: "pgorelease.general2.ticket.1.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 1
+-      hidden: true
+-      spriteId: "general1.ticket.1"
++      spriteId: "general2.ticket.10"
+       title: "general2.ticket._GOWA25_title"
+       skuEnableTime: "2024-01-01T00:00:00"
+       skuDisableTime: "2025-11-16T18:00:00"
+@@ -373434,7 +373504,6 @@
+       sku: "pgorelease.general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Rookidee25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -373455,7 +373524,6 @@
+       sku: "pgorelease.general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Rookidee25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -373592,13 +373660,13 @@
+       sortOrder: 2
        hidden: true
--      spriteId: "general2.ticket.1"
--      title: "iap_general2_ticket1_name"
--      description: "general2_ticket1_IAP_description"
--      skuEnableTime: "2023-01-01T11:00:00"
--      skuDisableTime: "2023-01-01T17:00:00"
--      skuEnableTimeUtcMs: 1672570800000
--      skuDisableTimeUtcMs: 1672592400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/MegaHoenn_RaidDay.jpg"
-+      spriteId: "general1.ticket.1"
-+      title: "general2.ticket._GOWA25_title"
-+      skuEnableTime: "2024-01-01T00:00:00"
-+      skuDisableTime: "2025-11-16T18:00:00"
-+      skuEnableTimeUtcMs: 1704067200000
-+      skuDisableTimeUtcMs: 1763316000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_1024x512_logo.png"
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._GBW_WCS_AUG25_title"
++      title: "general2.ticket.6_ConciergeCB0925_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-17T20:00:00"
++      skuDisableTime: "2025-09-14T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1755460800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-wcs-go-battle-weekend-ticket-nologo-2025.jpg"
+-      webstoreSkuId: "web-wcs-2025-ticket-box"
++      skuDisableTimeUtcMs: 1757880000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
++      webstoreSkuId: "web-avatar-ticket-2025-box"
+       webstoreSkuPriceE6: 4990000
+     }
+   }
+@@ -373613,12 +373681,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._GBW_WCS_AUG25_title"
++      title: "general2.ticket.6_ConciergeCB0925_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-17T20:00:00"
++      skuDisableTime: "2025-09-14T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1755460800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-wcs-go-battle-weekend-ticket-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1757880000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
      }
    }
  }
-@@ -373733,11 +373714,16 @@
-   }
- }
- template {
--  template_id: "AVATAR_FEATURE_FLAGS"
-+  template_id: "STICKER_CONCIERGE_SEALEO"
-   data {
--    template_id: "AVATAR_FEATURE_FLAGS"
--    273 {
--      1: 1
-+    template_id: "STICKER_CONCIERGE_SEALEO"
-+    stickerMetadata {
-+      stickerId: "STICKER_CONCIERGE_SEALEO"
-+      maxCount: 25
-+      pokemonId: SEALEO
-+      category: "Pokemon"
-+      releaseDate: 20250830
-+      regionId: 2
+@@ -380171,11 +380239,264 @@
      }
    }
  }
-@@ -379017,42 +379003,42 @@
-         pokemonBanList {
-           pokemon {
-             id: RATTATA
-+            forms: RATTATA_ALOLA
-           }
-           pokemon {
-             id: RATICATE
--            forms: RATTATA_ALOLA
-+            forms: RATICATE_ALOLA
-           }
-           pokemon {
-             id: SANDSHREW
--            forms: RATICATE_ALOLA
-+            forms: SANDSHREW_ALOLA
-           }
-           pokemon {
-             id: SANDSLASH
--            forms: SANDSHREW_ALOLA
-+            forms: SANDSLASH_ALOLA
-           }
-           pokemon {
-             id: NINETALES
--            forms: SANDSLASH_ALOLA
-+            forms: NINETALES_ALOLA
-           }
-           pokemon {
-             id: MEOWTH
--            forms: NINETALES_ALOLA
-+            forms: MEOWTH_ALOLA
-           }
-           pokemon {
-             id: PERSIAN
--            forms: MEOWTH_ALOLA
-+            forms: PERSIAN_ALOLA
-           }
-           pokemon {
-             id: GROWLITHE
--            forms: PERSIAN_ALOLA
-+            forms: GROWLITHE_HISUIAN
-           }
-           pokemon {
-             id: ARCANINE
--            forms: GROWLITHE_HISUIAN
-+            forms: ARCANINE_HISUIAN
-           }
-           pokemon {
-             id: GEODUDE
--            forms: ARCANINE_HISUIAN
-           }
-           pokemon {
-             id: GRAVELER
-@@ -379062,14 +379048,14 @@
-           }
-           pokemon {
-             id: GRIMER
-+            forms: GRIMER_ALOLA
-           }
-           pokemon {
-             id: MUK
--            forms: GRIMER_ALOLA
-+            forms: MUK_ALOLA
-           }
-           pokemon {
-             id: ONIX
--            forms: MUK_ALOLA
-           }
-           pokemon {
-             id: RHYHORN
-@@ -379121,10 +379107,10 @@
-           }
-           pokemon {
-             id: QWILFISH
-+            forms: QWILFISH_HISUIAN
-           }
-           pokemon {
-             id: SHUCKLE
--            forms: QWILFISH_HISUIAN
-           }
-           pokemon {
-             id: SNEASEL
-@@ -379179,14 +379165,14 @@
-           }
-           pokemon {
-             id: ZIGZAGOON
-+            forms: ZIGZAGOON_GALARIAN
-           }
-           pokemon {
-             id: LINOONE
--            forms: ZIGZAGOON_GALARIAN
-+            forms: LINOONE_GALARIAN
-           }
-           pokemon {
-             id: NUZLEAF
--            forms: LINOONE_GALARIAN
-           }
-           pokemon {
-             id: SHIFTRY
-@@ -379358,10 +379344,10 @@
-           }
-           pokemon {
-             id: SAMUROTT
-+            forms: SAMUROTT_HISUIAN
-           }
-           pokemon {
-             id: PURRLOIN
--            forms: SAMUROTT_HISUIAN
-           }
-           pokemon {
-             id: LIEPARD
-@@ -379518,10 +379504,10 @@
-           }
-           pokemon {
-             id: AVALUGG
-+            forms: AVALUGG_HISUIAN
-           }
-           pokemon {
-             id: XERNEAS
--            forms: AVALUGG_HISUIAN
-           }
-           pokemon {
-             id: YVELTAL
-@@ -379989,7 +379975,203 @@
-     }
-   }
- }
--batch_id: 1756239757107
+-batch_id: 1756314841323
+-experiment_id: 1
+-experiment_id: 4
+-experiment_id: 6
+-experiment_id: 8
 +template {
-+  template_id: "STICKER_CONCIERGE_SHINX"
++  template_id: "BADGE_EVENT_0149"
 +  data {
-+    template_id: "STICKER_CONCIERGE_SHINX"
-+    stickerMetadata {
-+      stickerId: "STICKER_CONCIERGE_SHINX"
-+      maxCount: 25
-+      pokemonId: SHINX
-+      category: "Pokemon"
-+      releaseDate: 20250830
-+      regionId: 3
++    template_id: "BADGE_EVENT_0149"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0149
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_1"
++  template_id: "COMBAT_V0488_MOVE_CHILLING_WATER"
 +  data {
-+    template_id: "STICKER_FALL_2025_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_FALL_2025_1"
-+      maxCount: 25
-+      pokemonId: GREAVARD
-+      category: "Pokemon"
-+      releaseDate: 20250902
-+      regionId: 1001
++    template_id: "COMBAT_V0488_MOVE_CHILLING_WATER"
++    combat_move {
++      uniqueId: 488
++      type: POKEMON_TYPE_WATER
++      power: 60
++      vfxName: "chilling_water"
++      energyDelta: -45
++      buffs {
++        targetAttackStatStageChange: -1
++        buffActivationChance: 1
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_1.3"
++  template_id: "EXTENDED_V0054_POKEMON_PSYDUCK_SWIM_2025"
 +  data {
-+    template_id: "STICKER_FALL_2025_1.3"
-+    iapItemDisplay {
-+      sku: "STICKER_FALL_2025_1.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 492
++    template_id: "EXTENDED_V0054_POKEMON_PSYDUCK_SWIM_2025"
++    pokemonExtendedSettings {
++      uniqueId: PSYDUCK
++      form: 3019
++      sizeSettings {
++        xxsLowerBound: 0.392
++        xsLowerBound: 0.4
++        mLowerBound: 0.6
++        mUpperBound: 1
++        xlUpperBound: 1.2
++        xxlUpperBound: 1.4
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_1.5"
++  template_id: "FLORGES_CD_EVOLUTION_QUEST"
 +  data {
-+    template_id: "STICKER_FALL_2025_1.5"
-+    iapItemDisplay {
-+      sku: "STICKER_FALL_2025_1.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 491
++    template_id: "FLORGES_CD_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
++      questType: QUEST_BUDDY_EARN_AFFECTION_POINTS
++      goals {
++        target: 7
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "CHALLENGE_BUDDY_AFFECTION_SINGLE"
++        title: "CHALLENGE_BUDDY_AFFECTION_SINGLE"
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_2"
++  template_id: "LC_SPECIALBACKGROUND_2025_SEASON20"
 +  data {
-+    template_id: "STICKER_FALL_2025_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_FALL_2025_2"
-+      maxCount: 25
-+      pokemonId: NICKIT
-+      category: "Pokemon"
-+      releaseDate: 20250902
-+      regionId: 7
++    template_id: "LC_SPECIALBACKGROUND_2025_SEASON20"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2025_SEASON20
++      imageUrl: "sb_Season20_TalesOfTransformation"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_TalesOfTransformation"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_2.3"
++  template_id: "LC_SPECIALBACKGROUND_CON2025"
 +  data {
-+    template_id: "STICKER_FALL_2025_2.3"
-+    iapItemDisplay {
-+      sku: "STICKER_FALL_2025_2.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 490
++    template_id: "LC_SPECIALBACKGROUND_CON2025"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_CON2025
++      imageUrl: "sb_Concierge2025"
++      cardType: SPECIAL_BACKGROUND
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_2.5"
++  template_id: "SPAWN_V0054_POKEMON_PSYDUCK_SWIM_2025"
 +  data {
-+    template_id: "STICKER_FALL_2025_2.5"
-+    iapItemDisplay {
-+      sku: "STICKER_FALL_2025_2.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 489
++    template_id: "SPAWN_V0054_POKEMON_PSYDUCK_SWIM_2025"
++    genderSettings {
++      pokemon: PSYDUCK
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_3"
++  template_id: "TEMPORARY_EVOLUTION_V0323_POKEMON_CAMERUPT"
 +  data {
-+    template_id: "STICKER_FALL_2025_3"
-+    stickerMetadata {
-+      stickerId: "STICKER_FALL_2025_3"
-+      maxCount: 25
-+      pokemonId: CLEFAIRY
-+      category: "Pokemon"
-+      releaseDate: 20250902
++    template_id: "TEMPORARY_EVOLUTION_V0323_POKEMON_CAMERUPT"
++    temporaryEvolutionSettings {
++      pokemonId: CAMERUPT
++      temporary_evolutions {
++        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
++        assetBundleValue: 51
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_3.3"
++  template_id: "TEMPORARY_EVOLUTION_V0376_POKEMON_METAGROSS"
 +  data {
-+    template_id: "STICKER_FALL_2025_3.3"
-+    iapItemDisplay {
-+      sku: "STICKER_FALL_2025_3.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 488
++    template_id: "TEMPORARY_EVOLUTION_V0376_POKEMON_METAGROSS"
++    temporaryEvolutionSettings {
++      pokemonId: METAGROSS
++      temporary_evolutions {
++        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
++        assetBundleValue: 51
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_3.5"
++  template_id: "V0054_POKEMON_PSYDUCK_SWIM_2025"
 +  data {
-+    template_id: "STICKER_FALL_2025_3.5"
-+    iapItemDisplay {
-+      sku: "STICKER_FALL_2025_3.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 487
++    template_id: "V0054_POKEMON_PSYDUCK_SWIM_2025"
++    pokemonSettings {
++      pokemonId: PSYDUCK
++      modelScale: 0.97
++      type: POKEMON_TYPE_WATER
++      camera {
++        diskRadiusM: 0.5456
++        cylinderRadiusM: 0.5
++        cylinderHeightM: 0.97
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.291
++        collisionHeightM: 0.60625
++        collisionHeadRadiusM: 0.3395
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 3.75
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
++      }
++      stats {
++        baseStamina: 137
++        baseAttack: 122
++        baseDefense: 95
++      }
++      quickMoves: WATER_GUN_FAST
++      quickMoves: ZEN_HEADBUTT_FAST
++      cinematicMoves: PSYBEAM
++      cinematicMoves: AQUA_TAIL
++      cinematicMoves: CROSS_CHOP
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6667
++      animationTime: 1.5
++      animationTime: 0
++      animationTime: 2.6
++      animationTime: 1.6667
++      animationTime: 0
++      evolutionIds: GOLDUCK
++      evolutionPips: 1
++      pokedexHeightM: 0.8
++      pokedexWeightKg: 19.6
++      heightStdDev: 0.1
++      weightStdDev: 2.45
++      familyId: FAMILY_PSYDUCK
++      candyToEvolve: 50
++      kmBuddyDistance: 3
++      modelHeight: 0.9
++      modelScaleV2: 0.87
++      form: 3019
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 10
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 10
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
++      buddyGroupNumber: 2
++      raidBossDistanceOffset: 1
++      ibfc {
++      }
++      breadTierGroup: GROUP_2
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_4"
++  template_id: "V0488_MOVE_CHILLING_WATER"
 +  data {
-+    template_id: "STICKER_FALL_2025_4"
-+    stickerMetadata {
-+      stickerId: "STICKER_FALL_2025_4"
-+      maxCount: 25
-+      pokemonId: APPLETUN
-+      category: "Pokemon"
-+      releaseDate: 20250902
-+      regionId: 7
++    template_id: "V0488_MOVE_CHILLING_WATER"
++    moveSettings {
++      movementId: 488
++      animationId: 5
++      pokemonType: POKEMON_TYPE_WATER
++      power: 65
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "chilling_water"
++      durationMs: 3500
++      damageWindowStartMs: 2050
++      damageWindowEndMs: 3100
++      energyDelta: -33
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_FALL_2025_4.3"
++  template_id: "sequence_chilling_water"
 +  data {
-+    template_id: "STICKER_FALL_2025_4.3"
-+    iapItemDisplay {
-+      sku: "STICKER_FALL_2025_4.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 486
++    template_id: "sequence_chilling_water"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx chilling_water"
++      sequence: "sfx attacker 297-0_aqua_step"
++      sequence: "wait 1.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
 +    }
 +  }
 +}
-+template {
-+  template_id: "STICKER_FALL_2025_4.5"
-+  data {
-+    template_id: "STICKER_FALL_2025_4.5"
-+    iapItemDisplay {
-+      sku: "STICKER_FALL_2025_4.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 485
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_MEGAEVOLUTION_PARIS_1"
-+  data {
-+    template_id: "STICKER_MEGAEVOLUTION_PARIS_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_MEGAEVOLUTION_PARIS_1"
-+      maxCount: 25
-+      pokemonId: CHARIZARD
-+      category: "Pokemon"
-+      releaseDate: 20250912
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_MEGAEVOLUTION_PARIS_2"
-+  data {
-+    template_id: "STICKER_MEGAEVOLUTION_PARIS_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_MEGAEVOLUTION_PARIS_2"
-+      maxCount: 25
-+      pokemonId: CHARIZARD
-+      category: "Pokemon"
-+      releaseDate: 20250912
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_MEGAEVOLUTION_PARIS_3"
-+  data {
-+    template_id: "STICKER_MEGAEVOLUTION_PARIS_3"
-+    stickerMetadata {
-+      stickerId: "STICKER_MEGAEVOLUTION_PARIS_3"
-+      maxCount: 25
-+      pokemonId: PIKACHU
-+      category: "Pokemon"
-+      releaseDate: 20250912
-+    }
-+  }
-+}
-+batch_id: 1756314841323
- experiment_id: 1
- experiment_id: 4
- experiment_id: 6
-@@ -380040,6 +380222,7 @@
++batch_id: 1756400734914
+ experiment_id: 11
+ experiment_id: 21
+ experiment_id: 101
+@@ -380221,8 +380542,8 @@
+ experiment_id: 4717
  experiment_id: 4891
  experiment_id: 4902
++experiment_id: 4919
  experiment_id: 4998
-+experiment_id: 5076
+-experiment_id: 5076
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -380061,8 +380244,6 @@
+@@ -380232,6 +380553,7 @@
+ experiment_id: 6075
+ experiment_id: 7057
+ experiment_id: 7060
++experiment_id: 8772
+ experiment_id: 8984
+ experiment_id: 8985
+ experiment_id: 8986
+@@ -380244,6 +380566,7 @@
  experiment_id: 20947
  experiment_id: 55571
  experiment_id: 55751
--experiment_id: 80436
--experiment_id: 80494
++experiment_id: 90000
  experiment_id: 314159
  experiment_id: 314160
  experiment_id: 1000890
