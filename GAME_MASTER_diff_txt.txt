@@ -1,79 +1,223 @@
---- GAME_MASTER_old.txt	2025-08-30 10:55:48.158274297 +0200
-+++ GAME_MASTER.txt	2025-08-31 09:54:23.383007280 +0200
+--- GAME_MASTER_old.txt	2025-08-31 09:54:23.383007280 +0200
++++ GAME_MASTER.txt	2025-09-01 20:00:44.723110129 +0200
 @@ -41749,7 +41749,7 @@
        rvnVersion: 1
        maxPlayersPerBreadDoughLobby: 100
        maxRemotePlayersPerBreadDoughLobby: 100
--      maxRemoteBreadBattlePassesAllowed: 10
-+      maxRemoteBreadBattlePassesAllowed: 20
+-      maxRemoteBreadBattlePassesAllowed: 20
++      maxRemoteBreadBattlePassesAllowed: 10
        maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
        fetchProfileFromSocialEnabled: true
        maxPlayersToPrepareBreadDoughLobby: 40
-@@ -156293,7 +156293,7 @@
+@@ -128188,6 +128188,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 250
+         }
+       }
+     }
+@@ -156293,7 +156294,7 @@
      template_id: "REMOTE_RAID_LIMIT_SETTINGS"
      squashSettings {
        enabled: true
--      dailySquashLimit: 10
-+      dailySquashLimit: 20
+-      dailySquashLimit: 20
++      dailySquashLimit: 10
      }
    }
  }
-@@ -346811,6 +346811,7 @@
-       isTradable: true
-       buddyGroupNumber: 3
-       eliteCinematicMove: IRON_HEAD
-+      eliteCinematicMove: AIR_CUTTER
-       raidBossDistanceOffset: 3
-       ibfc {
-       }
-@@ -371777,6 +371778,7 @@
-       sku: "general2.ticket.3"
+@@ -368535,13 +368536,10 @@
+       sku: "bundle.cd2022.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
++      hidden: true
+       sale: true
+-      spriteId: "bundle.general4.small.1"
+-      title: "bundle.general4.small.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2025-08-31T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1756684799000
++      spriteId: "bundle.halloween.small.1"
++      title: "bundle.halloween.small.1_title"
+     }
+   }
+ }
+@@ -368553,13 +368551,10 @@
+       sku: "bundle.cd2022.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 2
++      hidden: true
+       sale: true
+-      spriteId: "bundle.general1.medium.1"
+-      title: "bundle.general1.medium.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2025-08-31T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1756684799000
++      spriteId: "bundle.halloween.adventure.1"
++      title: "bundle.halloween.adventure.1_title"
+     }
+   }
+ }
+@@ -371395,15 +371390,9 @@
+       sku: "bundle.zzraid.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
++      hidden: true
+       spriteId: "bundle.general.premiumbox.medium.1"
+       title: "standard_raid_box_title"
+-      skuEnableTime: "2019-10-31T21:00:00"
+-      skuDisableTime: "2025-08-31T20:00:00"
+-      skuEnableTimeUtcMs: 1572555600000
+-      skuDisableTimeUtcMs: 1756670400000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 590
+     }
+   }
+ }
+@@ -371429,6 +371418,7 @@
+       sku: "evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._SunkissedCTR0825_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -371449,6 +371439,7 @@
+       sku: "evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._SunkissedCTR0825_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -371602,6 +371593,7 @@
+       sku: "general1.ticket.5"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
 +      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Rookidee25_title"
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_MegaGyaradosRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -371797,6 +371799,7 @@
-       sku: "general2.ticket.3.giftable"
+@@ -371622,6 +371614,7 @@
+       sku: "general1.ticket.5.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
 +      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Rookidee25_title"
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_MegaGyaradosRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -373515,6 +373518,7 @@
-       sku: "pgorelease.general2.ticket.3"
+@@ -371817,6 +371810,7 @@
+       sku: "general2.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.4"
+       title: "general1.ticket._SunkissedETR0825_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -371837,6 +371831,7 @@
+       sku: "general2.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.4"
+       title: "general1.ticket._SunkissedETR0825_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -373205,6 +373200,7 @@
+       sku: "pgorelease.evergreenticket.1"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._SunkissedCTR0825_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -373225,6 +373221,7 @@
+       sku: "pgorelease.evergreenticket.1.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "evergreenticket.1"
+       title: "general1.ticket._SunkissedCTR0825_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -373361,6 +373358,7 @@
+       sku: "pgorelease.general1.ticket.5"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
 +      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Rookidee25_title"
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_MegaGyaradosRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -373535,6 +373539,7 @@
-       sku: "pgorelease.general2.ticket.3.giftable"
+@@ -373381,6 +373379,7 @@
+       sku: "pgorelease.general1.ticket.5.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
 +      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Rookidee25_title"
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_MegaGyaradosRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -380557,7 +380562,9 @@
+@@ -373557,6 +373556,7 @@
+       sku: "pgorelease.general2.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.4"
+       title: "general1.ticket._SunkissedETR0825_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -373577,6 +373577,7 @@
+       sku: "pgorelease.general2.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.4"
+       title: "general1.ticket._SunkissedETR0825_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -380533,7 +380534,6 @@
+ experiment_id: 805
+ experiment_id: 807
+ experiment_id: 1699
+-experiment_id: 2231
+ experiment_id: 2248
+ experiment_id: 2272
+ experiment_id: 2297
+@@ -380542,7 +380542,6 @@
+ experiment_id: 2402
+ experiment_id: 2600
+ experiment_id: 2650
+-experiment_id: 3025
+ experiment_id: 3032
+ experiment_id: 3033
+ experiment_id: 3063
+@@ -380550,21 +380549,15 @@
+ experiment_id: 3710
+ experiment_id: 3726
+ experiment_id: 3730
+-experiment_id: 3742
++experiment_id: 3743
+ experiment_id: 3746
+ experiment_id: 3756
+ experiment_id: 4693
+ experiment_id: 4709
+-experiment_id: 4711
+-experiment_id: 4713
+-experiment_id: 4715
+-experiment_id: 4717
  experiment_id: 4891
  experiment_id: 4902
- experiment_id: 4919
-+experiment_id: 4920
+-experiment_id: 4919
+-experiment_id: 4920
  experiment_id: 4998
-+experiment_id: 5124
+-experiment_id: 5124
++experiment_id: 5125
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -380568,7 +380575,7 @@
+@@ -380573,7 +380566,6 @@
+ experiment_id: 5510
+ experiment_id: 6075
  experiment_id: 7057
- experiment_id: 7059
+-experiment_id: 7059
  experiment_id: 7060
--experiment_id: 8772
-+experiment_id: 8773
+ experiment_id: 8773
  experiment_id: 8984
- experiment_id: 8985
- experiment_id: 8986
