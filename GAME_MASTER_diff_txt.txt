@@ -1,56 +1,138 @@
---- GAME_MASTER_old.txt	2025-09-02 22:01:27.520767956 +0200
-+++ GAME_MASTER.txt	2025-09-02 22:22:16.377779203 +0200
-@@ -115904,7 +115904,7 @@
-         form: PSYDUCK_NORMAL
+--- GAME_MASTER_old.txt	2025-09-02 22:22:16.377779203 +0200
++++ GAME_MASTER.txt	2025-09-03 08:19:25.961233125 +0200
+@@ -70948,8 +70948,8 @@
+         eventPriority: SWAP_POKEMON
+         2: "\003\005\002"
        }
-       forms {
--        form: 3019
-+        form: PSYDUCK_SWIM_2025
+-      3 {
+-        1: "\007"
++      combatInputBufferPriorityList {
++        eventPriority: SWAP_POKEMON
+         2: "\005\002"
        }
      }
-   }
-@@ -128567,7 +128567,7 @@
-           pokemonEncounter {
-             pokemonId: PSYDUCK
-             pokemonDisplay {
--              form: 3019
-+              form: PSYDUCK_SWIM_2025
-             }
-           }
+@@ -384448,18 +384448,18 @@
+           iconType: GIFT
          }
-@@ -380395,7 +380395,7 @@
-   data {
-     template_id: "COMBAT_V0488_MOVE_CHILLING_WATER"
-     combat_move {
--      uniqueId: 488
-+      uniqueId: CHILLING_WATER
-       type: POKEMON_TYPE_WATER
-       power: 60
-       vfxName: "chilling_water"
-@@ -380413,7 +380413,7 @@
-     template_id: "EXTENDED_V0054_POKEMON_PSYDUCK_SWIM_2025"
-     pokemonExtendedSettings {
-       uniqueId: PSYDUCK
--      form: 3019
-+      form: PSYDUCK_SWIM_2025
-       sizeSettings {
-         xxsLowerBound: 0.392
-         xsLowerBound: 0.4
-@@ -380567,7 +380567,7 @@
-       kmBuddyDistance: 3
-       modelHeight: 0.9
-       modelScaleV2: 0.87
--      form: 3019
-+      form: PSYDUCK_SWIM_2025
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 10
-@@ -380602,7 +380602,7 @@
-   data {
-     template_id: "V0488_MOVE_CHILLING_WATER"
-     moveSettings {
--      movementId: 488
-+      movementId: CHILLING_WATER
-       animationId: 5
-       pokemonType: POKEMON_TYPE_WATER
-       power: 65
+       }
+-      6 {
+-        2 {
+-          1: "gift_send_more_daily"
+-          2: 10
+-        }
+-        2 {
+-          1: "gift_open_more_daily"
+-          2: 10
+-        }
+-        2 {
+-          1: "gift_storage_more"
+-          2: 10
++      activeBonusDisplaySettings {
++        bonusBoxes {
++          text: "gift_send_more_daily"
++          iconType: GIFT
++        }
++        bonusBoxes {
++          text: "gift_open_more_daily"
++          iconType: GIFT
++        }
++        bonusBoxes {
++          text: "gift_storage_more"
++          iconType: GIFT
+         }
+       }
+     }
+@@ -385435,22 +385435,22 @@
+           iconType: INCENSE
+         }
+       }
+-      6 {
+-        2 {
+-          1: "dai_duration_double"
+-          2: 11
+-        }
+-        2 {
+-          1: "gift_send_more_daily"
+-          2: 10
+-        }
+-        2 {
+-          1: "gift_open_more_daily"
+-          2: 10
+-        }
+-        2 {
+-          1: "gift_storage_more"
+-          2: 10
++      activeBonusDisplaySettings {
++        bonusBoxes {
++          text: "dai_duration_double"
++          iconType: INCENSE
++        }
++        bonusBoxes {
++          text: "gift_send_more_daily"
++          iconType: GIFT
++        }
++        bonusBoxes {
++          text: "gift_open_more_daily"
++          iconType: GIFT
++        }
++        bonusBoxes {
++          text: "gift_storage_more"
++          iconType: GIFT
+         }
+       }
+     }
+@@ -386390,30 +386390,30 @@
+           iconType: EGG
+         }
+       }
+-      6 {
+-        2 {
+-          1: "hatch_stardust_double"
+-          2: 4
+-        }
+-        2 {
+-          1: "hatch_xp_double"
+-          2: 4
+-        }
+-        2 {
+-          1: "dai_duration_double"
+-          2: 11
+-        }
+-        2 {
+-          1: "gift_send_more_daily"
+-          2: 10
+-        }
+-        2 {
+-          1: "gift_open_more_daily"
+-          2: 10
+-        }
+-        2 {
+-          1: "gift_storage_more"
+-          2: 10
++      activeBonusDisplaySettings {
++        bonusBoxes {
++          text: "hatch_stardust_double"
++          iconType: EGG
++        }
++        bonusBoxes {
++          text: "hatch_xp_double"
++          iconType: EGG
++        }
++        bonusBoxes {
++          text: "dai_duration_double"
++          iconType: INCENSE
++        }
++        bonusBoxes {
++          text: "gift_send_more_daily"
++          iconType: GIFT
++        }
++        bonusBoxes {
++          text: "gift_open_more_daily"
++          iconType: GIFT
++        }
++        bonusBoxes {
++          text: "gift_storage_more"
++          iconType: GIFT
+         }
+       }
+     }
