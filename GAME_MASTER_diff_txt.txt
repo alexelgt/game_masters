@@ -1,178 +1,269 @@
---- GAME_MASTER_old.txt	2025-09-08 19:32:07.521076969 +0200
-+++ GAME_MASTER.txt	2025-09-09 19:27:00.831501466 +0200
-@@ -128329,7 +128329,7 @@
-     iapCategoryDisplay {
-       category: IAP_CATEGORY_AVATAR
-       sortOrder: 5
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_WCS2025_Avatar_Jersey_Visor.jpg"
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_Concierge_Shirt.jpg"
-       description: "avatar_shop_description_new"
+--- GAME_MASTER_old.txt	2025-09-09 19:27:00.831501466 +0200
++++ GAME_MASTER.txt	2025-09-10 19:21:59.817965899 +0200
+@@ -71998,6 +71998,7 @@
+       arPlusModeEnabled: true
+       arCloseProximityThreshold: 0.5
+       arLowAwarenessThreshold: 0.3
++      31: 1
+       36: ""
      }
    }
-@@ -129789,14 +129789,14 @@
+@@ -129074,11 +129075,11 @@
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
        globalEventTicket {
-         eventStartTime: "2025-09-20T06:00:00"
-         eventEndTime: "2025-09-21T21:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_ShadowGroudonRaidDay"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_ShadowGroudonRaidWeekend"
+         eventStartTime: "2025-09-02T13:00:00"
+-        eventEndTime: "2025-09-07T13:00:00"
++        eventEndTime: "2025-09-16T13:00:00"
+         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
+         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-s17gbl-nologo-2024.jpg"
+         clientEventStartTimeUtcMs: 1756818000000
+-        clientEventEndTimeUtcMs: 1757250000000
++        clientEventEndTimeUtcMs: 1758027600000
+       }
+     }
+   }
+@@ -130329,36 +130330,35 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-08-09T11:00:00"
+-        eventEndTime: "2025-08-09T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Munchlax0825"
++        eventStartTime: "2025-09-23T10:00:00"
++        eventEndTime: "2025-09-27T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_CompletelyNormal_SEP25"
          giftable: true
-         giftItem: ITEM_EVENT_TICKET_09_TO_GIFT
-         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20280822_pgo_tgr_shadowgroudon_1024x576_nologo.jpg"
+         giftItem: ITEM_GLOBAL_EVENT_TICKET_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
          displayV2Enabled: true
-         backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20280822_pgo_tgr_shadowgroudon_1024x576_nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_ShadowGroudonRaidDay"
--        textRewardsKey: "text_rewards_key_ShadowGroudonRaidDay"
-+        eventDatetimeRangeKey: "event_datetime_range_key_ShadowGroudonRaidWeekend"
-+        textRewardsKey: "text_rewards_key_ShadowGroudonRaidWeekend"
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_Munchlax0825"
+-        textRewardsKey: "text_rewards_key_Munchlax0825"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CompletelyNormal_SEP25"
++        textRewardsKey: "text_rewards_key_CompletelyNormal_SEP25"
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_STAR_PIECE
+-            amount: 1
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemonId: DUNSPARCE
+           }
+         }
          iconRewards {
            type: ITEM
            item {
-@@ -129812,8 +129812,8 @@
-         clientEventStartTimeUtcMs: 1758348000000
-         clientEventEndTimeUtcMs: 1758488400000
+-            item: ITEM_INCUBATOR_SUPER
++            item: ITEM_LUCKY_EGG
+             amount: 2
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1754737200000
+-        clientEventEndTimeUtcMs: 1754758800000
++        clientEventStartTimeUtcMs: 1758621600000
++        clientEventEndTimeUtcMs: 1759003200000
        }
--      nameOverride: "general1.ticket._ShadowGroudonRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_desc_ShadowGroudonRaidDay"
-+      nameOverride: "general1.ticket._ShadowGroudonRaidWeekend_title"
-+      descriptionOverride: "item_event_ticket_gray_desc_ShadowGroudonRaidWeekend"
+-      nameOverride: "general1.ticket._Munchlax0825_title"
+-      descriptionOverride: "item_event_ticket_evergreen_desc_Munchlax0825"
++      nameOverride: "general1.ticket._CompletelyNormal_SEP25_title"
++      descriptionOverride: "item_event_ticket_evergreen_desc_CompletelyNormal_SEP25"
      }
    }
  }
-@@ -129828,14 +129828,14 @@
+@@ -130371,17 +130371,17 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
        globalEventTicket {
-         eventStartTime: "2025-09-20T06:00:00"
-         eventEndTime: "2025-09-21T21:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_ShadowGroudonRaidDay"
-+        itemBagDescriptionKey: "item_event_ticket_gray_details_ShadowGroudonRaidWeekend"
-         ticketItem: ITEM_EVENT_TICKET_09
-         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20280822_pgo_tgr_shadowgroudon_1024x576_nologo.jpg"
-         clientEventStartTimeUtcMs: 1758348000000
-         clientEventEndTimeUtcMs: 1758488400000
+-        eventStartTime: "2025-08-09T11:00:00"
+-        eventEndTime: "2025-08-09T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_details_Munchlax0825"
++        eventStartTime: "2025-09-23T10:00:00"
++        eventEndTime: "2025-09-27T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_CompletelyNormal_SEP25"
+         ticketItem: ITEM_GLOBAL_EVENT_TICKET
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1754737200000
+-        clientEventEndTimeUtcMs: 1754758800000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
++        clientEventStartTimeUtcMs: 1758621600000
++        clientEventEndTimeUtcMs: 1759003200000
        }
        ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_ShadowGroudonRaidDay"
-+      descriptionOverride: "item_event_ticket_gray_details_ShadowGroudonRaidWeekend"
+-      nameOverride: "general1.ticket._Munchlax0825_title"
+-      descriptionOverride: "item_event_ticket_evergreen_details_Munchlax0825"
++      nameOverride: "general1.ticket._CompletelyNormal_SEP25_title"
++      descriptionOverride: "item_event_ticket_evergreen_details_CompletelyNormal_SEP25"
      }
    }
  }
-@@ -158331,11 +158331,15 @@
+@@ -367530,8 +367530,8 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SUMMER"
+     }
    }
  }
- template {
--  template_id: "REWARD_ROAD_V1_1_CODE_GATE"
-+  template_id: "BATTLE_ACCESSIBILITY_CODE_GATE"
-   data {
--    template_id: "REWARD_ROAD_V1_1_CODE_GATE"
-+    template_id: "BATTLE_ACCESSIBILITY_CODE_GATE"
-     codeGateProto {
-       isEnabled: true
+@@ -370645,15 +370645,14 @@
+       sku: "battlepassticket.1"
+       category: IAP_CATEGORY_FREE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "battlepassticket.1"
+       title: "iap_battle_pass_ticket_name"
+       description: "battle_pass_ticket_IAP_description"
+       skuEnableTime: "2023-02-27T20:00:00"
+-      skuDisableTime: "2024-06-15T13:00:00"
++      skuDisableTime: "2025-09-16T13:00:00"
+       skuEnableTimeUtcMs: 1677528000000
+-      skuDisableTimeUtcMs: 1718456400000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/GBL_SharedSkies_2024.jpeg"
++      skuDisableTimeUtcMs: 1758027600000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_s18_gbl_2025.jpg"
+     }
+   }
+ }
+@@ -374103,13 +374102,13 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Munchlax0825_title"
++      title: "general1.ticket._CompletelyNormal_SEP25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-09T17:00:00"
++      skuDisableTime: "2025-09-27T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1754758800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
+-      webstoreSkuId: "web-hatch-day-2025-ticket-box"
++      skuDisableTimeUtcMs: 1759003200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
++      webstoreSkuId: "web-dunsparce-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -374124,12 +374123,12 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Munchlax0825_title"
++      title: "general1.ticket._CompletelyNormal_SEP25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-09T17:00:00"
++      skuDisableTime: "2025-09-27T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1754758800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1759003200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
+     }
+   }
+ }
+@@ -375868,13 +375867,13 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Munchlax0825_title"
++      title: "general1.ticket._CompletelyNormal_SEP25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-09T17:00:00"
++      skuDisableTime: "2025-09-27T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1754758800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
+-      webstoreSkuId: "web-hatch-day-2025-ticket-box"
++      skuDisableTimeUtcMs: 1759003200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
++      webstoreSkuId: "web-dunsparce-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -375889,12 +375888,12 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "general1.ticket.4"
+-      title: "general1.ticket._Munchlax0825_title"
++      title: "general1.ticket._CompletelyNormal_SEP25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-09T17:00:00"
++      skuDisableTime: "2025-09-27T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1754758800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1759003200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
+     }
+   }
+ }
+@@ -381546,13 +381545,35 @@
+     }
+   }
+ }
+-batch_id: 1757370140252
++template {
++  template_id: "POKEMON_INFO_PANEL_SETTINGS"
++  data {
++    template_id: "POKEMON_INFO_PANEL_SETTINGS"
++    pokemonInfoPanelSettings {
++      originSectionV2Enabled: true
++    }
++  }
++}
++template {
++  template_id: "SPECIAL_TRADE_SURFACING_CODE_GATE"
++  data {
++    template_id: "SPECIAL_TRADE_SURFACING_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
 +      subCodeGateList {
-+        name: "show_move_effectiveness"
++        name: "UPDATED_MODAL"
 +        isEnabled: true
 +      }
-     }
-   }
- }
-@@ -374473,7 +374477,6 @@
-       sku: "general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general2.ticket.6_ConciergeCB0925_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374494,7 +374497,6 @@
-       sku: "general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general2.ticket.6_ConciergeCB0925_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374553,7 +374555,7 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.9"
--      title: "general1.ticket._ShadowGroudonRaidDay_title"
-+      title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-09-21T22:00:00"
-       skuEnableTimeUtcMs: 1552550400000
-@@ -374574,7 +374576,7 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.9"
--      title: "general1.ticket._ShadowGroudonRaidDay_title"
-+      title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-09-21T22:00:00"
-       skuEnableTimeUtcMs: 1552550400000
-@@ -376221,7 +376223,6 @@
-       sku: "pgorelease.general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general2.ticket.6_ConciergeCB0925_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376242,7 +376243,6 @@
-       sku: "pgorelease.general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general2.ticket.6_ConciergeCB0925_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376301,7 +376301,7 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.9"
--      title: "general1.ticket._ShadowGroudonRaidDay_title"
-+      title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-09-21T22:00:00"
-       skuEnableTimeUtcMs: 1552550400000
-@@ -376322,7 +376322,7 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.9"
--      title: "general1.ticket._ShadowGroudonRaidDay_title"
-+      title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-       skuDisableTime: "2025-09-21T22:00:00"
-       skuEnableTimeUtcMs: 1552550400000
-@@ -381546,7 +381546,7 @@
-     }
-   }
- }
--batch_id: 1757349706279
-+batch_id: 1757370140252
++    }
++  }
++}
++batch_id: 1757481016706
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -381580,13 +381580,16 @@
- experiment_id: 3400
- experiment_id: 3500
- experiment_id: 3501
--experiment_id: 3504
-+experiment_id: 3505
- experiment_id: 3517
- experiment_id: 3521
- experiment_id: 3534
- experiment_id: 3538
-+experiment_id: 3558
-+experiment_id: 3561
+ experiment_id: 101
+ experiment_id: 170
+-experiment_id: 172
++experiment_id: 173
+ experiment_id: 300
+ experiment_id: 308
+ experiment_id: 320
+@@ -381589,7 +381610,7 @@
+ experiment_id: 3561
  experiment_id: 4693
  experiment_id: 4998
-+experiment_id: 5033
+-experiment_id: 5033
++experiment_id: 5003
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -381608,6 +381611,7 @@
- experiment_id: 55571
+@@ -381601,6 +381622,7 @@
+ experiment_id: 7067
+ experiment_id: 7070
+ experiment_id: 8908
++experiment_id: 8946
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
+@@ -381612,8 +381634,8 @@
  experiment_id: 55751
  experiment_id: 90000
-+experiment_id: 99998
- experiment_id: 314160
+ experiment_id: 99998
+-experiment_id: 314160
  experiment_id: 1000890
++experiment_id: 3000000
  experiment_id: 3500035
+ experiment_id: 3500037
+ experiment_id: 4610000
