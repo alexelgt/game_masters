@@ -1,269 +1,699 @@
---- GAME_MASTER_old.txt	2025-09-09 19:27:00.831501466 +0200
-+++ GAME_MASTER.txt	2025-09-10 19:21:59.817965899 +0200
-@@ -71998,6 +71998,7 @@
-       arPlusModeEnabled: true
-       arCloseProximityThreshold: 0.5
-       arLowAwarenessThreshold: 0.3
-+      31: 1
-       36: ""
-     }
-   }
-@@ -129074,11 +129075,11 @@
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
-         eventStartTime: "2025-09-02T13:00:00"
--        eventEndTime: "2025-09-07T13:00:00"
-+        eventEndTime: "2025-09-16T13:00:00"
-         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
-         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-s17gbl-nologo-2024.jpg"
-         clientEventStartTimeUtcMs: 1756818000000
--        clientEventEndTimeUtcMs: 1757250000000
-+        clientEventEndTimeUtcMs: 1758027600000
+--- GAME_MASTER_old.txt	2025-09-10 19:21:59.817965899 +0200
++++ GAME_MASTER.txt	2025-09-11 19:02:32.406990169 +0200
+@@ -94297,6 +94297,26 @@
+         xlUpperBound: 0.615
+         xxlUpperBound: 0.7175
        }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 31
++          cameraDistance: 18
++          maxReticleSize: 10
++        }
++        maxBattleVisualSettings {
++          scale: 90
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 6.5
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 1
++        }
++      }
      }
    }
-@@ -130329,36 +130330,35 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-08-09T11:00:00"
--        eventEndTime: "2025-08-09T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Munchlax0825"
-+        eventStartTime: "2025-09-23T10:00:00"
-+        eventEndTime: "2025-09-27T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_CompletelyNormal_SEP25"
-         giftable: true
-         giftItem: ITEM_GLOBAL_EVENT_TICKET_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_Munchlax0825"
--        textRewardsKey: "text_rewards_key_Munchlax0825"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CompletelyNormal_SEP25"
-+        textRewardsKey: "text_rewards_key_CompletelyNormal_SEP25"
-         iconRewards {
--          type: ITEM
--          item {
--            item: ITEM_STAR_PIECE
--            amount: 1
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemonId: DUNSPARCE
-           }
+ }
+@@ -94352,6 +94372,26 @@
+         xlUpperBound: 1.185
+         xxlUpperBound: 1.3825
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 16
++          cameraDistance: 18
++          maxReticleSize: 12
++        }
++        maxBattleVisualSettings {
++          scale: 50
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -10
++        }
++        maxStationVisualSettings {
++          scale: 3
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 1
++        }
++      }
+     }
+   }
+ }
+@@ -94418,6 +94458,26 @@
+         xlUpperBound: 2.4
+         xxlUpperBound: 2.48
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 9
++          cameraDistance: 20
++          maxReticleSize: 12
++        }
++        maxBattleVisualSettings {
++          scale: 28
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -10
++        }
++        maxStationVisualSettings {
++          scale: 2
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 1
++        }
++      }
+     }
+   }
+ }
+@@ -100458,6 +100518,26 @@
+         xlUpperBound: 2.4
+         xxlUpperBound: 2.48
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 8
++          cameraDistance: 20
++          maxReticleSize: 12
++        }
++        maxBattleVisualSettings {
++          scale: 28
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -10
++        }
++        maxStationVisualSettings {
++          scale: 1.75
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 1
++        }
++      }
+     }
+   }
+ }
+@@ -128284,6 +128364,28 @@
+       maxNumberRecentSearches: 4
+       maxNumberFavoriteSearches: 12
+       maxQueryLength: 1024
++      7: "niantic.helpshift.com/hc/faq/1486-searching-filtering-your-pokemon-inventory/"
++      8: "en-US,2"
++      8 {
++        14: 116
++        5: 0x322c5242
++      }
++      8: "zh-TW,2"
++      8: "fr-FR,2"
++      8: "de-DE,2"
++      8: "it-IT,2"
++      8: "ja-JP,2"
++      8: "ko-KR,2"
++      8: "es-ES,2"
++      8: "th-TH,2"
++      8: "ru-RU,2"
++      8: "tr-TR,2"
++      8 {
++        13: 105
++        5: 0x322c4e49
++      }
++      8: "id-ID,2"
++      8: "es-MX,2"
+     }
+   }
+ }
+@@ -251771,6 +251873,9 @@
+         cameraDistance: 4.125
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 163
+@@ -251816,6 +251921,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -251854,6 +251965,9 @@
+         cameraDistance: 4.125
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 163
+@@ -251889,6 +252003,7 @@
+         questDisplay {
+           questRequirementTemplateId: "OVERQWIL_EVOLUTION_QUEST"
          }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_INCUBATOR_SUPER
-+            item: ITEM_LUCKY_EGG
-             amount: 2
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1754737200000
--        clientEventEndTimeUtcMs: 1754758800000
-+        clientEventStartTimeUtcMs: 1758621600000
-+        clientEventEndTimeUtcMs: 1759003200000
++        candyCostPurified: 45
        }
--      nameOverride: "general1.ticket._Munchlax0825_title"
--      descriptionOverride: "item_event_ticket_evergreen_desc_Munchlax0825"
-+      nameOverride: "general1.ticket._CompletelyNormal_SEP25_title"
-+      descriptionOverride: "item_event_ticket_evergreen_desc_CompletelyNormal_SEP25"
-     }
-   }
- }
-@@ -130371,17 +130371,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-08-09T11:00:00"
--        eventEndTime: "2025-08-09T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_evergreen_details_Munchlax0825"
-+        eventStartTime: "2025-09-23T10:00:00"
-+        eventEndTime: "2025-09-27T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_details_CompletelyNormal_SEP25"
-         ticketItem: ITEM_GLOBAL_EVENT_TICKET
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1754737200000
--        clientEventEndTimeUtcMs: 1754758800000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
-+        clientEventStartTimeUtcMs: 1758621600000
-+        clientEventEndTimeUtcMs: 1759003200000
+       modelScaleV2: 1
+       form: QWILFISH_HISUIAN
+@@ -251906,6 +252021,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
        }
-       ignoreInventorySpace: true
--      nameOverride: "general1.ticket._Munchlax0825_title"
--      descriptionOverride: "item_event_ticket_evergreen_details_Munchlax0825"
-+      nameOverride: "general1.ticket._CompletelyNormal_SEP25_title"
-+      descriptionOverride: "item_event_ticket_evergreen_details_CompletelyNormal_SEP25"
-     }
-   }
- }
-@@ -367530,8 +367530,8 @@
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SUMMER"
-     }
-   }
- }
-@@ -370645,15 +370645,14 @@
-       sku: "battlepassticket.1"
-       category: IAP_CATEGORY_FREE
-       sortOrder: 1
+@@ -251944,6 +252065,9 @@
+         cameraDistance: 4.125
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 163
+@@ -251990,6 +252114,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -275392,6 +275522,9 @@
+         cameraDistance: 4
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 128
+@@ -275423,6 +275556,7 @@
+       evolutionBranch {
+         evolution: ALTARIA
+         candyCost: 400
++        candyCostPurified: 360
+       }
+       modelScaleV2: 1
+       buddyOffsetMale: 10
+@@ -275439,6 +275573,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 4
+       buddyWalkedMegaEnergyAward: 5
+       useIrisFlyingPlacement: true
+@@ -275504,6 +275644,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 181
+@@ -275554,6 +275697,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       eliteCinematicMove: MOONBLAST
+       temp_evo_overrides {
+@@ -276579,6 +276728,9 @@
+         cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 120
+@@ -276609,6 +276761,7 @@
+       evolutionBranch {
+         evolution: CLAYDOL
+         candyCost: 50
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1
+       buddyOffsetMale: 0
+@@ -276625,6 +276778,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -276687,6 +276846,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 155
+@@ -276740,6 +276902,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       ibfc {
+       }
+@@ -301735,6 +301903,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 3
++        shadowBaseCaptureRate: 0.02
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 172
+@@ -301777,6 +301948,12 @@
+         candyToUnlock: 100
+       }
+       isTransferable: true
++      shadow {
++        purificationStardustNeeded: 20000
++        purificationCandyNeeded: 20
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       eliteCinematicMove: SLUDGE_BOMB
+       useIrisFlyingPlacement: true
+@@ -320383,6 +320560,9 @@
+         cameraDistance: 4
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 141
+@@ -320414,6 +320594,7 @@
+       evolutionBranch {
+         evolution: ZWEILOUS
+         candyCost: 25
++        candyCostPurified: 22
+       }
+       modelScaleV2: 1
+       buddyOffsetMale: 5.5
+@@ -320430,6 +320611,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 5000
++        purificationCandyNeeded: 5
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -320470,6 +320657,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.25
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 176
+@@ -320503,6 +320693,7 @@
+       evolutionBranch {
+         evolution: HYDREIGON
+         candyCost: 100
++        candyCostPurified: 90
+       }
+       modelScaleV2: 0.96
+       buddyOffsetMale: 35
+@@ -320522,6 +320713,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 5000
++        purificationCandyNeeded: 5
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       ibfc {
+       }
+@@ -320563,6 +320760,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 2
++        shadowBaseCaptureRate: 0.125
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 211
+@@ -320608,6 +320808,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 5000
++        purificationCandyNeeded: 5
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 6
+       eliteCinematicMove: BRUTAL_SWING
+       useIrisFlyingPlacement: true
+@@ -321122,6 +321328,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 3
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 188
+@@ -321166,6 +321375,12 @@
+       }
+       isTransferable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 20000
++        purificationCandyNeeded: 20
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 5
+       ibfc {
+       }
+@@ -321204,6 +321419,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 3
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 188
+@@ -321249,6 +321467,12 @@
+       }
+       isTransferable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 20000
++        purificationCandyNeeded: 20
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 5
+       useIrisFlyingPlacement: true
+       ibfc {
+@@ -321288,6 +321512,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 3
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 188
+@@ -321334,6 +321561,12 @@
+       }
+       isTransferable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 20000
++        purificationCandyNeeded: 20
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 5
+       eliteCinematicMove: BLEAKWIND_STORM
+       useIrisFlyingPlacement: true
+@@ -357865,6 +358098,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 198
+@@ -357915,6 +358151,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       raidBossDistanceOffset: 1
+       ibfc {
+@@ -364060,8 +364302,13 @@
+       pokemonId: DUDUNSPARCE
+       type: POKEMON_TYPE_NORMAL
+       camera {
++        cylinderRadiusM: 2
++        cylinderHeightM: 1.76
+       }
+       encounter {
++        collisionRadiusM: 0.25
++        collisionHeightM: 0.25
++        collisionHeadRadiusM: 0.25
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         bonusCandyCaptureReward: 2
+@@ -364069,6 +364316,7 @@
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
+@@ -364091,7 +364339,13 @@
+       weightStdDev: 5.925
+       familyId: FAMILY_DUNSPARCE
+       kmBuddyDistance: 3
++      modelHeight: 2
++      modelScaleV2: 0.7
+       form: DUDUNSPARCE_THREE
++      buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: -350
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -364099,6 +364353,8 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 2
++      raidBossDistanceOffset: 6
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -364113,8 +364369,13 @@
+       pokemonId: DUDUNSPARCE
+       type: POKEMON_TYPE_NORMAL
+       camera {
++        cylinderRadiusM: 1.63
++        cylinderHeightM: 1.51
+       }
+       encounter {
++        collisionRadiusM: 0.25
++        collisionHeightM: 0.25
++        collisionHeadRadiusM: 0.25
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         bonusCandyCaptureReward: 2
+@@ -364122,6 +364383,7 @@
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
+@@ -364144,7 +364406,13 @@
+       weightStdDev: 4.9
+       familyId: FAMILY_DUNSPARCE
+       kmBuddyDistance: 3
++      modelHeight: 2
++      modelScaleV2: 0.6
+       form: DUDUNSPARCE_TWO
++      buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: -350
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -364152,6 +364420,8 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 2
++      raidBossDistanceOffset: 6
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -374318,7 +374588,6 @@
+       sku: "general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
 -      hidden: true
-       spriteId: "battlepassticket.1"
-       title: "iap_battle_pass_ticket_name"
-       description: "battle_pass_ticket_IAP_description"
-       skuEnableTime: "2023-02-27T20:00:00"
--      skuDisableTime: "2024-06-15T13:00:00"
-+      skuDisableTime: "2025-09-16T13:00:00"
-       skuEnableTimeUtcMs: 1677528000000
--      skuDisableTimeUtcMs: 1718456400000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/GBL_SharedSkies_2024.jpeg"
-+      skuDisableTimeUtcMs: 1758027600000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_s18_gbl_2025.jpg"
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Flabebe25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -374339,7 +374608,6 @@
+       sku: "general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Flabebe25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -376064,7 +376332,6 @@
+       sku: "pgorelease.general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Flabebe25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -376085,7 +376352,6 @@
+       sku: "pgorelease.general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Flabebe25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -381567,7 +381833,20 @@
      }
    }
  }
-@@ -374103,13 +374102,13 @@
-       sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket._Munchlax0825_title"
-+      title: "general1.ticket._CompletelyNormal_SEP25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-09T17:00:00"
-+      skuDisableTime: "2025-09-27T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754758800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
--      webstoreSkuId: "web-hatch-day-2025-ticket-box"
-+      skuDisableTimeUtcMs: 1759003200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
-+      webstoreSkuId: "web-dunsparce-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -374124,12 +374123,12 @@
-       sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket._Munchlax0825_title"
-+      title: "general1.ticket._CompletelyNormal_SEP25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-09T17:00:00"
-+      skuDisableTime: "2025-09-27T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754758800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1759003200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
-     }
-   }
- }
-@@ -375868,13 +375867,13 @@
-       sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket._Munchlax0825_title"
-+      title: "general1.ticket._CompletelyNormal_SEP25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-09T17:00:00"
-+      skuDisableTime: "2025-09-27T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754758800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
--      webstoreSkuId: "web-hatch-day-2025-ticket-box"
-+      skuDisableTimeUtcMs: 1759003200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
-+      webstoreSkuId: "web-dunsparce-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -375889,12 +375888,12 @@
-       sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "general1.ticket._Munchlax0825_title"
-+      title: "general1.ticket._CompletelyNormal_SEP25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-08-09T17:00:00"
-+      skuDisableTime: "2025-09-27T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1754758800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-munchlax-hatch-day-ticket-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1759003200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Completely_Normal_2025_Ticket_v1-1024x576_nologo.jpg"
-     }
-   }
- }
-@@ -381546,13 +381545,35 @@
-     }
-   }
- }
--batch_id: 1757370140252
+-batch_id: 1757481016706
 +template {
-+  template_id: "POKEMON_INFO_PANEL_SETTINGS"
++  template_id: "INPUT_TRACKER_CODE_GATE"
 +  data {
-+    template_id: "POKEMON_INFO_PANEL_SETTINGS"
-+    pokemonInfoPanelSettings {
-+      originSectionV2Enabled: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "SPECIAL_TRADE_SURFACING_CODE_GATE"
-+  data {
-+    template_id: "SPECIAL_TRADE_SURFACING_CODE_GATE"
++    template_id: "INPUT_TRACKER_CODE_GATE"
 +    codeGateProto {
 +      isEnabled: true
 +      subCodeGateList {
-+        name: "UPDATED_MODAL"
++        name: "trade_sub_code_gate"
 +        isEnabled: true
 +      }
 +    }
 +  }
 +}
-+batch_id: 1757481016706
++batch_id: 1757546143860
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
- experiment_id: 101
- experiment_id: 170
--experiment_id: 172
-+experiment_id: 173
- experiment_id: 300
- experiment_id: 308
- experiment_id: 320
-@@ -381589,7 +381610,7 @@
+@@ -381610,17 +381889,16 @@
  experiment_id: 3561
  experiment_id: 4693
  experiment_id: 4998
--experiment_id: 5033
-+experiment_id: 5003
+-experiment_id: 5003
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -381601,6 +381622,7 @@
+-experiment_id: 5201
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
+ experiment_id: 6075
  experiment_id: 7067
  experiment_id: 7070
++experiment_id: 8781
  experiment_id: 8908
-+experiment_id: 8946
+ experiment_id: 8946
  experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
-@@ -381612,8 +381634,8 @@
- experiment_id: 55751
- experiment_id: 90000
- experiment_id: 99998
--experiment_id: 314160
- experiment_id: 1000890
-+experiment_id: 3000000
+@@ -381638,9 +381916,11 @@
+ experiment_id: 3000000
  experiment_id: 3500035
  experiment_id: 3500037
++experiment_id: 3500041
  experiment_id: 4610000
+ experiment_id: 4700000
+ experiment_id: 5000301
+ experiment_id: 6600417
+ experiment_id: 6600418
++experiment_id: 6600421
+ experiment_id: 6600423
