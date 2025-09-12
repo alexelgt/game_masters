@@ -1,699 +1,2364 @@
---- GAME_MASTER_old.txt	2025-09-10 19:21:59.817965899 +0200
-+++ GAME_MASTER.txt	2025-09-11 19:02:32.406990169 +0200
-@@ -94297,6 +94297,26 @@
-         xlUpperBound: 0.615
-         xxlUpperBound: 0.7175
-       }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 31
-+          cameraDistance: 18
-+          maxReticleSize: 10
-+        }
-+        maxBattleVisualSettings {
-+          scale: 90
-+        }
-+        maxBattleTrainerVisualSettings {
-+          xOffset: -5
-+        }
-+        maxStationVisualSettings {
-+          scale: 6.5
-+        }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 1
-+        }
-+      }
+--- GAME_MASTER_old.txt	2025-09-11 19:02:32.406990169 +0200
++++ GAME_MASTER.txt	2025-09-12 09:14:15.649211781 +0200
+@@ -128052,11 +128052,14 @@
+   }
+ }
+ template {
+-  template_id: "FOUR_SHIELD_BREAD_GUI_CODE_GATE"
++  template_id: "BADGE_SAFARI_2025_AMSTERDAM_ADD_ON_HATCH"
+   data {
+-    template_id: "FOUR_SHIELD_BREAD_GUI_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
++    template_id: "BADGE_SAFARI_2025_AMSTERDAM_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: 5996
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
      }
    }
  }
-@@ -94352,6 +94372,26 @@
-         xlUpperBound: 1.185
-         xxlUpperBound: 1.3825
-       }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 16
-+          cameraDistance: 18
-+          maxReticleSize: 12
-+        }
-+        maxBattleVisualSettings {
-+          scale: 50
-+        }
-+        maxBattleTrainerVisualSettings {
-+          xOffset: -10
-+        }
-+        maxStationVisualSettings {
-+          scale: 3
-+        }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 1
-+        }
-+      }
-     }
-   }
- }
-@@ -94418,6 +94458,26 @@
-         xlUpperBound: 2.4
-         xxlUpperBound: 2.48
-       }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 9
-+          cameraDistance: 20
-+          maxReticleSize: 12
-+        }
-+        maxBattleVisualSettings {
-+          scale: 28
-+        }
-+        maxBattleTrainerVisualSettings {
-+          xOffset: -10
-+        }
-+        maxStationVisualSettings {
-+          scale: 2
-+        }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 1
-+        }
-+      }
-     }
-   }
- }
-@@ -100458,6 +100518,26 @@
-         xlUpperBound: 2.4
-         xxlUpperBound: 2.48
-       }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 8
-+          cameraDistance: 20
-+          maxReticleSize: 12
-+        }
-+        maxBattleVisualSettings {
-+          scale: 28
-+        }
-+        maxBattleTrainerVisualSettings {
-+          xOffset: -10
-+        }
-+        maxStationVisualSettings {
-+          scale: 1.75
-+        }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 1
-+        }
-+      }
-     }
-   }
- }
-@@ -128284,6 +128364,28 @@
-       maxNumberRecentSearches: 4
-       maxNumberFavoriteSearches: 12
-       maxQueryLength: 1024
-+      7: "niantic.helpshift.com/hc/faq/1486-searching-filtering-your-pokemon-inventory/"
-+      8: "en-US,2"
-+      8 {
-+        14: 116
-+        5: 0x322c5242
-+      }
-+      8: "zh-TW,2"
-+      8: "fr-FR,2"
-+      8: "de-DE,2"
-+      8: "it-IT,2"
-+      8: "ja-JP,2"
-+      8: "ko-KR,2"
-+      8: "es-ES,2"
-+      8: "th-TH,2"
-+      8: "ru-RU,2"
-+      8: "tr-TR,2"
-+      8 {
-+        13: 105
-+        5: 0x322c4e49
-+      }
-+      8: "id-ID,2"
-+      8: "es-MX,2"
-     }
-   }
- }
-@@ -251771,6 +251873,9 @@
-         cameraDistance: 4.125
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.5
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 163
-@@ -251816,6 +251921,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
-@@ -251854,6 +251965,9 @@
-         cameraDistance: 4.125
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.5
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 163
-@@ -251889,6 +252003,7 @@
-         questDisplay {
-           questRequirementTemplateId: "OVERQWIL_EVOLUTION_QUEST"
+@@ -129609,49 +129612,39 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-09-02T10:00:00"
+-        eventEndTime: "2025-09-07T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Kanto_CelebrationSEP25"
++        eventStartTime: "2025-09-28T14:00:00"
++        eventEndTime: "2025-09-28T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaCameruptRaidDay"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_05_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250818_pgo_dmax_legendarybirds_1024x576_nologo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250818_pgo_dmax_legendarybirds_1024x576_nologo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_Kanto_CelebrationSEP25"
+-        textRewardsKey: "text_rewards_key_Kanto_CelebrationSEP25"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_MegaCameruptRaidDay"
++        textRewardsKey: "text_rewards_key_MegaCameruptRaidDay"
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemonId: ARTICUNO
+-            pokemonDisplay {
+-              form: ARTICUNO_NORMAL
+-            }
++          type: ITEM
++          item {
++            item: ITEM_FREE_RAID_TICKET
++            amount: 8
+           }
          }
-+        candyCostPurified: 45
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemonId: ZAPDOS
+-            pokemonDisplay {
+-              form: ZAPDOS_NORMAL
+-            }
++          type: ITEM
++          item {
++            item: ITEM_XL_RARE_CANDY
+           }
+         }
+         iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemonId: MOLTRES
+-            pokemonDisplay {
+-              form: MOLTRES_NORMAL
+-            }
+-          }
++          type: STARDUST
++          stardust: 2
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1756807200000
+-        clientEventEndTimeUtcMs: 1757275200000
++        clientEventStartTimeUtcMs: 1759068000000
++        clientEventEndTimeUtcMs: 1759078800000
        }
-       modelScaleV2: 1
-       form: QWILFISH_HISUIAN
-@@ -251906,6 +252021,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
-@@ -251944,6 +252065,9 @@
-         cameraDistance: 4.125
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.5
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 163
-@@ -251990,6 +252114,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
-@@ -275392,6 +275522,9 @@
-         cameraDistance: 4
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.5
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 128
-@@ -275423,6 +275556,7 @@
-       evolutionBranch {
-         evolution: ALTARIA
-         candyCost: 400
-+        candyCostPurified: 360
-       }
-       modelScaleV2: 1
-       buddyOffsetMale: 10
-@@ -275439,6 +275573,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 1000
-+        purificationCandyNeeded: 1
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 4
-       buddyWalkedMegaEnergyAward: 5
-       useIrisFlyingPlacement: true
-@@ -275504,6 +275644,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-+        shadowBaseCaptureRate: 0.2
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 181
-@@ -275554,6 +275697,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 1000
-+        purificationCandyNeeded: 1
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 3
-       eliteCinematicMove: MOONBLAST
-       temp_evo_overrides {
-@@ -276579,6 +276728,9 @@
-         cameraDistance: 3
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.5
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 120
-@@ -276609,6 +276761,7 @@
-       evolutionBranch {
-         evolution: CLAYDOL
-         candyCost: 50
-+        candyCostPurified: 45
-       }
-       modelScaleV2: 1
-       buddyOffsetMale: 0
-@@ -276625,6 +276778,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
-@@ -276687,6 +276846,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-+        shadowBaseCaptureRate: 0.2
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 155
-@@ -276740,6 +276902,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 3
-       ibfc {
-       }
-@@ -301735,6 +301903,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-+        shadowBaseCaptureRate: 0.02
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 172
-@@ -301777,6 +301948,12 @@
-         candyToUnlock: 100
-       }
-       isTransferable: true
-+      shadow {
-+        purificationStardustNeeded: 20000
-+        purificationCandyNeeded: 20
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       eliteCinematicMove: SLUDGE_BOMB
-       useIrisFlyingPlacement: true
-@@ -320383,6 +320560,9 @@
-         cameraDistance: 4
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-+        shadowBaseCaptureRate: 0.5
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 141
-@@ -320414,6 +320594,7 @@
-       evolutionBranch {
-         evolution: ZWEILOUS
-         candyCost: 25
-+        candyCostPurified: 22
-       }
-       modelScaleV2: 1
-       buddyOffsetMale: 5.5
-@@ -320430,6 +320611,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 5000
-+        purificationCandyNeeded: 5
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 2
-       ibfc {
-       }
-@@ -320470,6 +320657,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-+        shadowBaseCaptureRate: 0.25
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 176
-@@ -320503,6 +320693,7 @@
-       evolutionBranch {
-         evolution: HYDREIGON
-         candyCost: 100
-+        candyCostPurified: 90
-       }
-       modelScaleV2: 0.96
-       buddyOffsetMale: 35
-@@ -320522,6 +320713,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 5000
-+        purificationCandyNeeded: 5
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 3
-       ibfc {
-       }
-@@ -320563,6 +320760,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 2
-+        shadowBaseCaptureRate: 0.125
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 211
-@@ -320608,6 +320808,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 5000
-+        purificationCandyNeeded: 5
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 6
-       eliteCinematicMove: BRUTAL_SWING
-       useIrisFlyingPlacement: true
-@@ -321122,6 +321328,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-+        shadowBaseCaptureRate: 0.2
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 188
-@@ -321166,6 +321375,12 @@
-       }
-       isTransferable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 20000
-+        purificationCandyNeeded: 20
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 5
-       ibfc {
-       }
-@@ -321204,6 +321419,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-+        shadowBaseCaptureRate: 0.2
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 188
-@@ -321249,6 +321467,12 @@
-       }
-       isTransferable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 20000
-+        purificationCandyNeeded: 20
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 5
-       useIrisFlyingPlacement: true
-       ibfc {
-@@ -321288,6 +321512,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-+        shadowBaseCaptureRate: 0.2
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 188
-@@ -321334,6 +321561,12 @@
-       }
-       isTransferable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 20000
-+        purificationCandyNeeded: 20
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 5
-       eliteCinematicMove: BLEAKWIND_STORM
-       useIrisFlyingPlacement: true
-@@ -357865,6 +358098,9 @@
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-+        shadowBaseCaptureRate: 0.2
-+        shadowAttackProbability: 0.7
-+        shadowDodgeProbability: 0.2
-       }
-       stats {
-         baseStamina: 198
-@@ -357915,6 +358151,12 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      shadow {
-+        purificationStardustNeeded: 3000
-+        purificationCandyNeeded: 3
-+        purifiedChargeMove: RETURN
-+        shadowChargeMove: FRUSTRATION
-+      }
-       buddyGroupNumber: 3
-       raidBossDistanceOffset: 1
-       ibfc {
-@@ -364060,8 +364302,13 @@
-       pokemonId: DUDUNSPARCE
-       type: POKEMON_TYPE_NORMAL
-       camera {
-+        cylinderRadiusM: 2
-+        cylinderHeightM: 1.76
-       }
-       encounter {
-+        collisionRadiusM: 0.25
-+        collisionHeightM: 0.25
-+        collisionHeadRadiusM: 0.25
-         movementType: MOVEMENT_JUMP
-         jumpTimeS: 1
-         bonusCandyCaptureReward: 2
-@@ -364069,6 +364316,7 @@
-         attackProbability: 0.1
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-+        cameraDistance: 3
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-@@ -364091,7 +364339,13 @@
-       weightStdDev: 5.925
-       familyId: FAMILY_DUNSPARCE
-       kmBuddyDistance: 3
-+      modelHeight: 2
-+      modelScaleV2: 0.7
-       form: DUDUNSPARCE_THREE
-+      buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -350
-       third_move {
-         stardustToUnlock: 50000
-         candyToUnlock: 50
-@@ -364099,6 +364353,8 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      buddyGroupNumber: 2
-+      raidBossDistanceOffset: 6
-       ibfc {
-       }
-       breadTierGroup: GROUP_2
-@@ -364113,8 +364369,13 @@
-       pokemonId: DUDUNSPARCE
-       type: POKEMON_TYPE_NORMAL
-       camera {
-+        cylinderRadiusM: 1.63
-+        cylinderHeightM: 1.51
-       }
-       encounter {
-+        collisionRadiusM: 0.25
-+        collisionHeightM: 0.25
-+        collisionHeadRadiusM: 0.25
-         movementType: MOVEMENT_JUMP
-         jumpTimeS: 1
-         bonusCandyCaptureReward: 2
-@@ -364122,6 +364383,7 @@
-         attackProbability: 0.1
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-+        cameraDistance: 3
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 1
-@@ -364144,7 +364406,13 @@
-       weightStdDev: 4.9
-       familyId: FAMILY_DUNSPARCE
-       kmBuddyDistance: 3
-+      modelHeight: 2
-+      modelScaleV2: 0.6
-       form: DUDUNSPARCE_TWO
-+      buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -350
-       third_move {
-         stardustToUnlock: 50000
-         candyToUnlock: 50
-@@ -364152,6 +364420,8 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      buddyGroupNumber: 2
-+      raidBossDistanceOffset: 6
-       ibfc {
-       }
-       breadTierGroup: GROUP_2
-@@ -374318,7 +374588,6 @@
-       sku: "general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Flabebe25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374339,7 +374608,6 @@
-       sku: "general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Flabebe25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376064,7 +376332,6 @@
-       sku: "pgorelease.general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Flabebe25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376085,7 +376352,6 @@
-       sku: "pgorelease.general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Flabebe25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -381567,7 +381833,20 @@
+-      nameOverride: "general1.ticket._Kanto_CelebrationSEP25_title"
+-      descriptionOverride: "item_event_ticket_evergreen_details_Kanto_CelebrationSEP25"
++      nameOverride: "general2.ticket.5_MegaCameruptRaidDay_title"
++      descriptionOverride: "item_event_ticket_gray_details_MegaCameruptRaidDay"
      }
    }
  }
--batch_id: 1757481016706
+@@ -129664,17 +129657,17 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-09-02T10:00:00"
+-        eventEndTime: "2025-09-07T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Kanto_CelebrationSEP25"
++        eventStartTime: "2025-09-28T14:00:00"
++        eventEndTime: "2025-09-28T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_details_MegaCameruptRaidDay"
+         ticketItem: ITEM_EVENT_TICKET_05
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250818_pgo_dmax_legendarybirds_1024x576_nologo.jpg"
+-        clientEventStartTimeUtcMs: 1756807200000
+-        clientEventEndTimeUtcMs: 1757275200000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
++        clientEventStartTimeUtcMs: 1759068000000
++        clientEventEndTimeUtcMs: 1759078800000
+       }
+       ignoreInventorySpace: true
+-      nameOverride: "general1.ticket._Kanto_CelebrationSEP25_title"
+-      descriptionOverride: "item_event_ticket_evergreen_details_Kanto_CelebrationSEP25"
++      nameOverride: "general2.ticket.5_MegaCameruptRaidDay_title"
++      descriptionOverride: "item_event_ticket_gray_details_MegaCameruptRaidDay"
+     }
+   }
+ }
+@@ -131805,6 +131798,7 @@
+       itemType: ITEM_TYPE_CAMERA
+       category: ITEM_CATEGORY_CAMERA
+       dropTrainerLevel: 100
++      ignoreInventorySpace: true
+     }
+   }
+ }
+@@ -154417,11 +154411,14 @@
+   }
+ }
+ template {
+-  template_id: "PARTY_JOIN_REFACTOR_CODE_GATE"
++  template_id: "BADGE_GOWA_2025_SPECIAL_RESEARCH_B"
+   data {
+-    template_id: "PARTY_JOIN_REFACTOR_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
++    template_id: "BADGE_GOWA_2025_SPECIAL_RESEARCH_B"
++    badgeSettings {
++      badgeType: 6030
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
+     }
+   }
+ }
+@@ -158286,11 +158283,14 @@
+   }
+ }
+ template {
+-  template_id: "RAID_LOCATION_VERIFICATION_CODE_GATE"
++  template_id: "BADGE_GOWA_2025_GLOBAL_TEST"
+   data {
+-    template_id: "RAID_LOCATION_VERIFICATION_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
++    template_id: "BADGE_GOWA_2025_GLOBAL_TEST"
++    badgeSettings {
++      badgeType: 6044
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
+     }
+   }
+ }
+@@ -186768,7 +186768,7 @@
+       maxCount: 25
+       pokemonId: EEVEE
+       category: "Pokemon"
+-      releaseDate: 20250830
++      releaseDate: 20250909
+     }
+   }
+ }
+@@ -186781,7 +186781,7 @@
+       maxCount: 25
+       pokemonId: PSYDUCK
+       category: "Pokemon"
+-      releaseDate: 20250830
++      releaseDate: 20250909
+     }
+   }
+ }
+@@ -186794,7 +186794,7 @@
+       maxCount: 25
+       pokemonId: SEALEO
+       category: "Pokemon"
+-      releaseDate: 20250830
++      releaseDate: 20250909
+       regionId: 2
+     }
+   }
+@@ -186808,7 +186808,7 @@
+       maxCount: 25
+       pokemonId: SHINX
+       category: "Pokemon"
+-      releaseDate: 20250830
++      releaseDate: 20250909
+       regionId: 3
+     }
+   }
+@@ -279583,7 +279583,6 @@
+       cinematicMoves: ENERGY_BALL
+       cinematicMoves: SHADOW_BALL
+       cinematicMoves: PSYSHOCK
+-      cinematicMoves: PSYSHOCK
+       animationTime: 1.3333
+       animationTime: 0.6667
+       animationTime: 1.6667
+@@ -374667,13 +374666,13 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.5"
+-      title: "general1.ticket._Kanto_CelebrationSEP25_title"
++      title: "general2.ticket.5_MegaCameruptRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-09-07T20:00:00"
++      skuDisableTime: "2025-09-28T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1757275200000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250818_pgo_dmax_legendarybirds_1024x576_nologo.jpg"
+-      webstoreSkuId: "web-2025-kanto-birds-ticket-box"
++      skuDisableTimeUtcMs: 1759078800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
++      webstoreSkuId: "web-mega-camerup-ticket-box"
+       webstoreSkuPriceE6: 4990000
+     }
+   }
+@@ -374688,11 +374687,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.5"
+-      title: "general1.ticket._Kanto_CelebrationSEP25_title"
++      title: "general2.ticket.5_MegaCameruptRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-09-07T20:00:00"
++      skuDisableTime: "2025-09-28T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1757275200000
++      skuDisableTimeUtcMs: 1759078800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -376411,13 +376411,13 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.5"
+-      title: "general1.ticket._Kanto_CelebrationSEP25_title"
++      title: "general2.ticket.5_MegaCameruptRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-09-07T20:00:00"
++      skuDisableTime: "2025-09-28T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1757275200000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250818_pgo_dmax_legendarybirds_1024x576_nologo.jpg"
+-      webstoreSkuId: "web-2025-kanto-birds-ticket-box"
++      skuDisableTimeUtcMs: 1759078800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
++      webstoreSkuId: "web-mega-camerup-ticket-box"
+       webstoreSkuPriceE6: 4990000
+     }
+   }
+@@ -376432,11 +376432,12 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.5"
+-      title: "general1.ticket._Kanto_CelebrationSEP25_title"
++      title: "general2.ticket.5_MegaCameruptRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-09-07T20:00:00"
++      skuDisableTime: "2025-09-28T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1757275200000
++      skuDisableTimeUtcMs: 1759078800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -381812,11 +381813,14 @@
+   }
+ }
+ template {
+-  template_id: "POKEMON_INFO_PANEL_SETTINGS"
++  template_id: "BADGE_GOWA_2025_SPECIAL_RESEARCH_A"
+   data {
+-    template_id: "POKEMON_INFO_PANEL_SETTINGS"
+-    pokemonInfoPanelSettings {
+-      originSectionV2Enabled: true
++    template_id: "BADGE_GOWA_2025_SPECIAL_RESEARCH_A"
++    badgeSettings {
++      badgeType: 6029
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
+     }
+   }
+ }
+@@ -381846,7 +381850,2066 @@
+     }
+   }
+ }
+-batch_id: 1757546143860
 +template {
-+  template_id: "INPUT_TRACKER_CODE_GATE"
++  template_id: "BADGE_SAFARI_2025_AMSTERDAM_ADD_ON_HATCH_TEST"
 +  data {
-+    template_id: "INPUT_TRACKER_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+      subCodeGateList {
-+        name: "trade_sub_code_gate"
-+        isEnabled: true
++    template_id: "BADGE_SAFARI_2025_AMSTERDAM_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: 5995
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_AMSTERDAM_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_AMSTERDAM_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: 5998
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_AMSTERDAM_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_AMSTERDAM_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: 5997
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_AMSTERDAM_SATURDAY"
++  data {
++    template_id: "BADGE_SAFARI_2025_AMSTERDAM_SATURDAY"
++    badgeSettings {
++      badgeType: 5993
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_AMSTERDAM_SUNDAY"
++  data {
++    template_id: "BADGE_SAFARI_2025_AMSTERDAM_SUNDAY"
++    badgeSettings {
++      badgeType: 5994
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_AMSTERDAM_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_AMSTERDAM_TEST"
++    badgeSettings {
++      badgeType: 5992
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_BANGKOK_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_BANGKOK_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: 6003
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_BANGKOK_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_BANGKOK_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: 6002
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_BANGKOK_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_BANGKOK_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: 6005
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_BANGKOK_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_BANGKOK_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: 6004
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_BANGKOK_SATURDAY"
++  data {
++    template_id: "BADGE_SAFARI_2025_BANGKOK_SATURDAY"
++    badgeSettings {
++      badgeType: 6000
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_BANGKOK_SUNDAY"
++  data {
++    template_id: "BADGE_SAFARI_2025_BANGKOK_SUNDAY"
++    badgeSettings {
++      badgeType: 6001
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_BANGKOK_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_BANGKOK_TEST"
++    badgeSettings {
++      badgeType: 5999
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_CANCUN_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_CANCUN_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: 6010
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_CANCUN_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_CANCUN_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: 6009
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_CANCUN_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_CANCUN_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: 6012
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_CANCUN_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_CANCUN_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: 6011
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_CANCUN_SATURDAY"
++  data {
++    template_id: "BADGE_SAFARI_2025_CANCUN_SATURDAY"
++    badgeSettings {
++      badgeType: 6007
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_CANCUN_SUNDAY"
++  data {
++    template_id: "BADGE_SAFARI_2025_CANCUN_SUNDAY"
++    badgeSettings {
++      badgeType: 6008
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_CANCUN_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_CANCUN_TEST"
++    badgeSettings {
++      badgeType: 6006
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VALENCIA_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_VALENCIA_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: 6017
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VALENCIA_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_VALENCIA_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: 6016
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VALENCIA_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_VALENCIA_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: 6019
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VALENCIA_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_VALENCIA_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: 6018
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VALENCIA_SATURDAY"
++  data {
++    template_id: "BADGE_SAFARI_2025_VALENCIA_SATURDAY"
++    badgeSettings {
++      badgeType: 6014
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VALENCIA_SUNDAY"
++  data {
++    template_id: "BADGE_SAFARI_2025_VALENCIA_SUNDAY"
++    badgeSettings {
++      badgeType: 6015
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VALENCIA_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_VALENCIA_TEST"
++    badgeSettings {
++      badgeType: 6013
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VANCOUVER_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_SAFARI_2025_VANCOUVER_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: 6024
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VANCOUVER_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_VANCOUVER_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: 6023
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VANCOUVER_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_SAFARI_2025_VANCOUVER_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: 6026
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VANCOUVER_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_VANCOUVER_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: 6025
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VANCOUVER_SATURDAY"
++  data {
++    template_id: "BADGE_SAFARI_2025_VANCOUVER_SATURDAY"
++    badgeSettings {
++      badgeType: 6021
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VANCOUVER_SUNDAY"
++  data {
++    template_id: "BADGE_SAFARI_2025_VANCOUVER_SUNDAY"
++    badgeSettings {
++      badgeType: 6022
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_SAFARI_2025_VANCOUVER_TEST"
++  data {
++    template_id: "BADGE_SAFARI_2025_VANCOUVER_TEST"
++    badgeSettings {
++      badgeType: 6020
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "DIPPLIN_EVOLUTION_QUEST"
++  data {
++    template_id: "DIPPLIN_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "DIPPLIN_EVOLUTION_QUEST"
++      questType: QUEST_CATCH_POKEMON
++      goals {
++        condition {
++          type: WITH_POKEMON_TYPE
++          with_pokemon_type {
++            pokemonType: POKEMON_TYPE_DRAGON
++          }
++        }
++        target: 7
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "quest_catch_type_dragon_plural"
++        title: "quest_catch_type_dragon_plural"
 +      }
 +    }
 +  }
 +}
-+batch_id: 1757546143860
++template {
++  template_id: "EXTENDED_V1009_POKEMON_WALKINGWAKE"
++  data {
++    template_id: "EXTENDED_V1009_POKEMON_WALKINGWAKE"
++    pokemonExtendedSettings {
++      uniqueId: 1009
++      sizeSettings {
++        xxsLowerBound: 1.715
++        xsLowerBound: 1.75
++        mLowerBound: 2.625
++        mUpperBound: 4.375
++        xlUpperBound: 5.25
++        xxlUpperBound: 5.425
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1010_POKEMON_IRONLEAVES"
++  data {
++    template_id: "EXTENDED_V1010_POKEMON_IRONLEAVES"
++    pokemonExtendedSettings {
++      uniqueId: 1010
++      sizeSettings {
++        xxsLowerBound: 0.735
++        xsLowerBound: 0.75
++        mLowerBound: 1.125
++        mUpperBound: 1.875
++        xlUpperBound: 2.25
++        xxlUpperBound: 2.325
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1011_POKEMON_DIPPLIN"
++  data {
++    template_id: "EXTENDED_V1011_POKEMON_DIPPLIN"
++    pokemonExtendedSettings {
++      uniqueId: 1011
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.62
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1012_POKEMON_POLTCHAGEIST"
++  data {
++    template_id: "EXTENDED_V1012_POKEMON_POLTCHAGEIST"
++    pokemonExtendedSettings {
++      uniqueId: 1012
++      sizeSettings {
++        xxsLowerBound: 0.049
++        xsLowerBound: 0.05
++        mLowerBound: 0.075
++        mUpperBound: 0.125
++        xlUpperBound: 0.15
++        xxlUpperBound: 0.155
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1013_POKEMON_SINISTCHA"
++  data {
++    template_id: "EXTENDED_V1013_POKEMON_SINISTCHA"
++    pokemonExtendedSettings {
++      uniqueId: 1013
++      sizeSettings {
++        xxsLowerBound: 0.098
++        xsLowerBound: 0.1
++        mLowerBound: 0.15
++        mUpperBound: 0.25
++        xlUpperBound: 0.3
++        xxlUpperBound: 0.31
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1014_POKEMON_OKIDOGI"
++  data {
++    template_id: "EXTENDED_V1014_POKEMON_OKIDOGI"
++    pokemonExtendedSettings {
++      uniqueId: 1014
++      sizeSettings {
++        xxsLowerBound: 0.882
++        xsLowerBound: 0.9
++        mLowerBound: 1.35
++        mUpperBound: 2.25
++        xlUpperBound: 2.7
++        xxlUpperBound: 2.79
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1015_POKEMON_MUNKIDORI"
++  data {
++    template_id: "EXTENDED_V1015_POKEMON_MUNKIDORI"
++    pokemonExtendedSettings {
++      uniqueId: 1015
++      sizeSettings {
++        xxsLowerBound: 0.49
++        xsLowerBound: 0.5
++        mLowerBound: 0.75
++        mUpperBound: 1.25
++        xlUpperBound: 1.5
++        xxlUpperBound: 1.55
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1016_POKEMON_FEZANDIPITI"
++  data {
++    template_id: "EXTENDED_V1016_POKEMON_FEZANDIPITI"
++    pokemonExtendedSettings {
++      uniqueId: 1016
++      sizeSettings {
++        xxsLowerBound: 0.686
++        xsLowerBound: 0.7
++        mLowerBound: 1.05
++        mUpperBound: 1.75
++        xlUpperBound: 2.1
++        xxlUpperBound: 2.17
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1017_POKEMON_OGERPON"
++  data {
++    template_id: "EXTENDED_V1017_POKEMON_OGERPON"
++    pokemonExtendedSettings {
++      uniqueId: 1017
++      sizeSettings {
++        xxsLowerBound: 0.588
++        xsLowerBound: 0.6
++        mLowerBound: 0.9
++        mUpperBound: 1.5
++        xlUpperBound: 1.8
++        xxlUpperBound: 1.86
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1018_POKEMON_ARCHALUDON"
++  data {
++    template_id: "EXTENDED_V1018_POKEMON_ARCHALUDON"
++    pokemonExtendedSettings {
++      uniqueId: 1018
++      sizeSettings {
++        xxsLowerBound: 0.98
++        xsLowerBound: 1
++        mLowerBound: 1.5
++        mUpperBound: 2.5
++        xlUpperBound: 3
++        xxlUpperBound: 3.1
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1019_POKEMON_HYDRAPPLE"
++  data {
++    template_id: "EXTENDED_V1019_POKEMON_HYDRAPPLE"
++    pokemonExtendedSettings {
++      uniqueId: 1019
++      sizeSettings {
++        xxsLowerBound: 0.882
++        xsLowerBound: 0.9
++        mLowerBound: 1.35
++        mUpperBound: 2.25
++        xlUpperBound: 2.7
++        xxlUpperBound: 2.79
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1020_POKEMON_GOUGINGFIRE"
++  data {
++    template_id: "EXTENDED_V1020_POKEMON_GOUGINGFIRE"
++    pokemonExtendedSettings {
++      uniqueId: 1020
++      sizeSettings {
++        xxsLowerBound: 1.715
++        xsLowerBound: 1.75
++        mLowerBound: 2.625
++        mUpperBound: 4.375
++        xlUpperBound: 5.25
++        xxlUpperBound: 5.425
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1021_POKEMON_RAGINGBOLT"
++  data {
++    template_id: "EXTENDED_V1021_POKEMON_RAGINGBOLT"
++    pokemonExtendedSettings {
++      uniqueId: 1021
++      sizeSettings {
++        xxsLowerBound: 2.548
++        xsLowerBound: 2.6
++        mLowerBound: 3.9
++        mUpperBound: 6.5
++        xlUpperBound: 7.8
++        xxlUpperBound: 8.06
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1022_POKEMON_IRONBOULDER"
++  data {
++    template_id: "EXTENDED_V1022_POKEMON_IRONBOULDER"
++    pokemonExtendedSettings {
++      uniqueId: 1022
++      sizeSettings {
++        xxsLowerBound: 0.735
++        xsLowerBound: 0.75
++        mLowerBound: 1.125
++        mUpperBound: 1.875
++        xlUpperBound: 2.25
++        xxlUpperBound: 2.325
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1023_POKEMON_IRONCROWN"
++  data {
++    template_id: "EXTENDED_V1023_POKEMON_IRONCROWN"
++    pokemonExtendedSettings {
++      uniqueId: 1023
++      sizeSettings {
++        xxsLowerBound: 0.784
++        xsLowerBound: 0.8
++        mLowerBound: 1.2
++        mUpperBound: 2
++        xlUpperBound: 2.4
++        xxlUpperBound: 2.48
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1024_POKEMON_TERAPAGOS"
++  data {
++    template_id: "EXTENDED_V1024_POKEMON_TERAPAGOS"
++    pokemonExtendedSettings {
++      uniqueId: 1024
++      sizeSettings {
++        xxsLowerBound: 0.098
++        xsLowerBound: 0.1
++        mLowerBound: 0.15
++        mUpperBound: 0.25
++        xlUpperBound: 0.3
++        xxlUpperBound: 0.31
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1025_POKEMON_PECHARUNT"
++  data {
++    template_id: "EXTENDED_V1025_POKEMON_PECHARUNT"
++    pokemonExtendedSettings {
++      uniqueId: 1025
++      sizeSettings {
++        xxsLowerBound: 0.147
++        xsLowerBound: 0.15
++        mLowerBound: 0.225
++        mUpperBound: 0.375
++        xlUpperBound: 0.45
++        xxlUpperBound: 0.465
++      }
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1009_POKEMON_WALKINGWAKE"
++  data {
++    template_id: "FORMS_V1009_POKEMON_WALKINGWAKE"
++    formSettings {
++      pokemon: 1009
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1010_POKEMON_IRONLEAVES"
++  data {
++    template_id: "FORMS_V1010_POKEMON_IRONLEAVES"
++    formSettings {
++      pokemon: 1010
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1011_POKEMON_DIPPLIN"
++  data {
++    template_id: "FORMS_V1011_POKEMON_DIPPLIN"
++    formSettings {
++      pokemon: 1011
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1012_POKEMON_POLTCHAGEIST"
++  data {
++    template_id: "FORMS_V1012_POKEMON_POLTCHAGEIST"
++    formSettings {
++      pokemon: 1012
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1013_POKEMON_SINISTCHA"
++  data {
++    template_id: "FORMS_V1013_POKEMON_SINISTCHA"
++    formSettings {
++      pokemon: 1013
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1014_POKEMON_OKIDOGI"
++  data {
++    template_id: "FORMS_V1014_POKEMON_OKIDOGI"
++    formSettings {
++      pokemon: 1014
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1015_POKEMON_MUNKIDORI"
++  data {
++    template_id: "FORMS_V1015_POKEMON_MUNKIDORI"
++    formSettings {
++      pokemon: 1015
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1016_POKEMON_FEZANDIPITI"
++  data {
++    template_id: "FORMS_V1016_POKEMON_FEZANDIPITI"
++    formSettings {
++      pokemon: 1016
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1017_POKEMON_OGERPON"
++  data {
++    template_id: "FORMS_V1017_POKEMON_OGERPON"
++    formSettings {
++      pokemon: 1017
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1018_POKEMON_ARCHALUDON"
++  data {
++    template_id: "FORMS_V1018_POKEMON_ARCHALUDON"
++    formSettings {
++      pokemon: 1018
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1019_POKEMON_HYDRAPPLE"
++  data {
++    template_id: "FORMS_V1019_POKEMON_HYDRAPPLE"
++    formSettings {
++      pokemon: 1019
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1020_POKEMON_GOUGINGFIRE"
++  data {
++    template_id: "FORMS_V1020_POKEMON_GOUGINGFIRE"
++    formSettings {
++      pokemon: 1020
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1021_POKEMON_RAGINGBOLT"
++  data {
++    template_id: "FORMS_V1021_POKEMON_RAGINGBOLT"
++    formSettings {
++      pokemon: 1021
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1022_POKEMON_IRONBOULDER"
++  data {
++    template_id: "FORMS_V1022_POKEMON_IRONBOULDER"
++    formSettings {
++      pokemon: 1022
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1023_POKEMON_IRONCROWN"
++  data {
++    template_id: "FORMS_V1023_POKEMON_IRONCROWN"
++    formSettings {
++      pokemon: 1023
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1024_POKEMON_TERAPAGOS"
++  data {
++    template_id: "FORMS_V1024_POKEMON_TERAPAGOS"
++    formSettings {
++      pokemon: 1024
++    }
++  }
++}
++template {
++  template_id: "FORMS_V1025_POKEMON_PECHARUNT"
++  data {
++    template_id: "FORMS_V1025_POKEMON_PECHARUNT"
++    formSettings {
++      pokemon: 1025
++    }
++  }
++}
++template {
++  template_id: "ITEM_OTHER_EVOLUTION_STONE_MAPLE_C"
++  data {
++    template_id: "ITEM_OTHER_EVOLUTION_STONE_MAPLE_C"
++    itemSettings {
++      itemId: ITEM_OTHER_EVOLUTION_STONE_MAPLE_C
++      itemType: ITEM_TYPE_EVOLUTION_REQUIREMENT
++      category: ITEM_CATEGORY_EVOLUTION_REQUIREMENT
++      dropTrainerLevel: 10
++      ignoreInventorySpace: true
++      hideItemInInventory: true
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1009_POKEMON_WALKINGWAKE"
++  data {
++    template_id: "SPAWN_V1009_POKEMON_WALKINGWAKE"
++    genderSettings {
++      pokemon: 1009
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1010_POKEMON_IRONLEAVES"
++  data {
++    template_id: "SPAWN_V1010_POKEMON_IRONLEAVES"
++    genderSettings {
++      pokemon: 1010
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1011_POKEMON_DIPPLIN"
++  data {
++    template_id: "SPAWN_V1011_POKEMON_DIPPLIN"
++    genderSettings {
++      pokemon: 1011
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1012_POKEMON_POLTCHAGEIST"
++  data {
++    template_id: "SPAWN_V1012_POKEMON_POLTCHAGEIST"
++    genderSettings {
++      pokemon: 1012
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1013_POKEMON_SINISTCHA"
++  data {
++    template_id: "SPAWN_V1013_POKEMON_SINISTCHA"
++    genderSettings {
++      pokemon: 1013
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1014_POKEMON_OKIDOGI"
++  data {
++    template_id: "SPAWN_V1014_POKEMON_OKIDOGI"
++    genderSettings {
++      pokemon: 1014
++      gender {
++        malePercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1015_POKEMON_MUNKIDORI"
++  data {
++    template_id: "SPAWN_V1015_POKEMON_MUNKIDORI"
++    genderSettings {
++      pokemon: 1015
++      gender {
++        malePercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1016_POKEMON_FEZANDIPITI"
++  data {
++    template_id: "SPAWN_V1016_POKEMON_FEZANDIPITI"
++    genderSettings {
++      pokemon: 1016
++      gender {
++        malePercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1017_POKEMON_OGERPON"
++  data {
++    template_id: "SPAWN_V1017_POKEMON_OGERPON"
++    genderSettings {
++      pokemon: 1017
++      gender {
++        femalePercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1018_POKEMON_ARCHALUDON"
++  data {
++    template_id: "SPAWN_V1018_POKEMON_ARCHALUDON"
++    genderSettings {
++      pokemon: 1018
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1019_POKEMON_HYDRAPPLE"
++  data {
++    template_id: "SPAWN_V1019_POKEMON_HYDRAPPLE"
++    genderSettings {
++      pokemon: 1019
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1020_POKEMON_GOUGINGFIRE"
++  data {
++    template_id: "SPAWN_V1020_POKEMON_GOUGINGFIRE"
++    genderSettings {
++      pokemon: 1020
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1021_POKEMON_RAGINGBOLT"
++  data {
++    template_id: "SPAWN_V1021_POKEMON_RAGINGBOLT"
++    genderSettings {
++      pokemon: 1021
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1022_POKEMON_IRONBOULDER"
++  data {
++    template_id: "SPAWN_V1022_POKEMON_IRONBOULDER"
++    genderSettings {
++      pokemon: 1022
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1023_POKEMON_IRONCROWN"
++  data {
++    template_id: "SPAWN_V1023_POKEMON_IRONCROWN"
++    genderSettings {
++      pokemon: 1023
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1024_POKEMON_TERAPAGOS"
++  data {
++    template_id: "SPAWN_V1024_POKEMON_TERAPAGOS"
++    genderSettings {
++      pokemon: 1024
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1025_POKEMON_PECHARUNT"
++  data {
++    template_id: "SPAWN_V1025_POKEMON_PECHARUNT"
++    genderSettings {
++      pokemon: 1025
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "STICKER_HAWLUCHA_01"
++  data {
++    template_id: "STICKER_HAWLUCHA_01"
++    stickerMetadata {
++      stickerId: "STICKER_HAWLUCHA_01"
++      maxCount: 25
++      pokemonId: HAWLUCHA
++      category: "Pokemon"
++      releaseDate: 20250919
++      regionId: 5
++    }
++  }
++}
++template {
++  template_id: "V1009_FAMILY_WALKINGWAKE"
++  data {
++    template_id: "V1009_FAMILY_WALKINGWAKE"
++    pokemonFamily {
++      familyId: 1009
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1009_POKEMON_WALKINGWAKE"
++  data {
++    template_id: "V1009_POKEMON_WALKINGWAKE"
++    pokemonSettings {
++      pokemonId: 1009
++      type: POKEMON_TYPE_WATER
++      type2: POKEMON_TYPE_DRAGON
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 203
++        baseAttack: 233
++        baseDefense: 171
++      }
++      quickMoves: SPLASH_FAST
++      cinematicMoves: STRUGGLE
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 3.5
++      pokedexWeightKg: 280
++      heightStdDev: 0.4375
++      weightStdDev: 35
++      familyId: 1009
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1010_FAMILY_IRONLEAVES"
++  data {
++    template_id: "V1010_FAMILY_IRONLEAVES"
++    pokemonFamily {
++      familyId: 1010
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1010_POKEMON_IRONLEAVES"
++  data {
++    template_id: "V1010_POKEMON_IRONLEAVES"
++    pokemonSettings {
++      pokemonId: 1010
++      type: POKEMON_TYPE_GRASS
++      type2: POKEMON_TYPE_PSYCHIC
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 189
++        baseAttack: 236
++        baseDefense: 194
++      }
++      quickMoves: SPLASH_FAST
++      cinematicMoves: STRUGGLE
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 1.5
++      pokedexWeightKg: 125
++      heightStdDev: 0.1875
++      weightStdDev: 15.625
++      familyId: 1010
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1011_POKEMON_DIPPLIN"
++  data {
++    template_id: "V1011_POKEMON_DIPPLIN"
++    pokemonSettings {
++      pokemonId: 1011
++      type: POKEMON_TYPE_GRASS
++      type2: POKEMON_TYPE_DRAGON
++      camera {
++      }
++      encounter {
++        bonusCandyCaptureReward: 2
++        bonusStardustCaptureReward: 200
++        bonusXlCandyCaptureReward: 1
++      }
++      stats {
++        baseStamina: 190
++        baseAttack: 173
++        baseDefense: 184
++      }
++      quickMoves: BULLET_SEED_FAST
++      quickMoves: DRAGON_TAIL_FAST
++      quickMoves: ROLLOUT_FAST
++      cinematicMoves: DRAGON_PULSE
++      cinematicMoves: OUTRAGE
++      cinematicMoves: SEED_BOMB
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 4.4
++      heightStdDev: 0.05
++      weightStdDev: 0.55
++      familyId: FAMILY_APPLIN
++      kmBuddyDistance: 5
++      third_move {
++        stardustToUnlock: 75000
++        candyToUnlock: 75
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1012_FAMILY_POLTCHAGEIST"
++  data {
++    template_id: "V1012_FAMILY_POLTCHAGEIST"
++    pokemonFamily {
++      familyId: 1012
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1012_POKEMON_POLTCHAGEIST"
++  data {
++    template_id: "V1012_POKEMON_POLTCHAGEIST"
++    pokemonSettings {
++      pokemonId: 1012
++      type: POKEMON_TYPE_GRASS
++      type2: POKEMON_TYPE_GHOST
++      camera {
++      }
++      encounter {
++      }
++      stats {
++        baseStamina: 120
++        baseAttack: 134
++        baseDefense: 96
++      }
++      quickMoves: ASTONISH_FAST
++      quickMoves: MAGICAL_LEAF_FAST
++      cinematicMoves: SHADOW_BALL
++      cinematicMoves: ENERGY_BALL
++      cinematicMoves: POLTERGEIST
++      pokedexHeightM: 0.1
++      pokedexWeightKg: 1.1
++      heightStdDev: 0.0125
++      weightStdDev: 0.1375
++      familyId: 1012
++      kmBuddyDistance: 3
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1013_POKEMON_SINISTCHA"
++  data {
++    template_id: "V1013_POKEMON_SINISTCHA"
++    pokemonSettings {
++      pokemonId: 1013
++      type: POKEMON_TYPE_GRASS
++      type2: POKEMON_TYPE_GHOST
++      camera {
++      }
++      encounter {
++        bonusCandyCaptureReward: 2
++        bonusStardustCaptureReward: 200
++        bonusXlCandyCaptureReward: 1
++      }
++      stats {
++        baseStamina: 174
++        baseAttack: 225
++        baseDefense: 191
++      }
++      quickMoves: ASTONISH_FAST
++      quickMoves: MAGICAL_LEAF_FAST
++      cinematicMoves: SHADOW_BALL
++      cinematicMoves: ENERGY_BALL
++      cinematicMoves: POLTERGEIST
++      pokedexHeightM: 0.2
++      pokedexWeightKg: 2.2
++      heightStdDev: 0.025
++      weightStdDev: 0.275
++      familyId: 1012
++      kmBuddyDistance: 3
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1014_FAMILY_OKIDOGI"
++  data {
++    template_id: "V1014_FAMILY_OKIDOGI"
++    pokemonFamily {
++      familyId: 1014
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1014_POKEMON_OKIDOGI"
++  data {
++    template_id: "V1014_POKEMON_OKIDOGI"
++    pokemonSettings {
++      pokemonId: 1014
++      type: POKEMON_TYPE_POISON
++      type2: POKEMON_TYPE_FIGHTING
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 186
++        baseAttack: 220
++        baseDefense: 191
++      }
++      quickMoves: POISON_JAB_FAST
++      quickMoves: FORCE_PALM_FAST
++      cinematicMoves: SUPER_POWER
++      cinematicMoves: UPPER_HAND
++      cinematicMoves: SLUDGE_BOMB
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 1.8
++      pokedexWeightKg: 92.2
++      heightStdDev: 0.225
++      weightStdDev: 11.525
++      familyId: 1014
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1015_FAMILY_MUNKIDORI"
++  data {
++    template_id: "V1015_FAMILY_MUNKIDORI"
++    pokemonFamily {
++      familyId: 1015
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1015_POKEMON_MUNKIDORI"
++  data {
++    template_id: "V1015_POKEMON_MUNKIDORI"
++    pokemonSettings {
++      pokemonId: 1015
++      type: POKEMON_TYPE_POISON
++      type2: POKEMON_TYPE_PSYCHIC
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 186
++        baseAttack: 238
++        baseDefense: 157
++      }
++      quickMoves: POISON_JAB_FAST
++      quickMoves: CONFUSION_FAST
++      cinematicMoves: FUTURESIGHT
++      cinematicMoves: PSYCHIC
++      cinematicMoves: SLUDGE_BOMB
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 1
++      pokedexWeightKg: 12.2
++      heightStdDev: 0.125
++      weightStdDev: 1.525
++      familyId: 1015
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1016_FAMILY_FEZANDIPITI"
++  data {
++    template_id: "V1016_FAMILY_FEZANDIPITI"
++    pokemonFamily {
++      familyId: 1016
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1016_POKEMON_FEZANDIPITI"
++  data {
++    template_id: "V1016_POKEMON_FEZANDIPITI"
++    pokemonSettings {
++      pokemonId: 1016
++      type: POKEMON_TYPE_POISON
++      type2: POKEMON_TYPE_FAIRY
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 186
++        baseAttack: 169
++        baseDefense: 208
++      }
++      quickMoves: POISON_JAB_FAST
++      quickMoves: CHARM_FAST
++      cinematicMoves: MOONBLAST
++      cinematicMoves: DISARMING_VOICE
++      cinematicMoves: SLUDGE_BOMB
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 1.4
++      pokedexWeightKg: 30.1
++      heightStdDev: 0.175
++      weightStdDev: 3.7625
++      familyId: 1016
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1017_FAMILY_OGERPON"
++  data {
++    template_id: "V1017_FAMILY_OGERPON"
++    pokemonFamily {
++      familyId: 1017
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1017_POKEMON_OGERPON"
++  data {
++    template_id: "V1017_POKEMON_OGERPON"
++    pokemonSettings {
++      pokemonId: 1017
++      type: POKEMON_TYPE_GRASS
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 173
++        baseAttack: 219
++        baseDefense: 178
++      }
++      quickMoves: VINE_WHIP_FAST
++      quickMoves: MAGICAL_LEAF_FAST
++      quickMoves: DOUBLE_KICK_FAST
++      cinematicMoves: POWER_WHIP
++      cinematicMoves: GRASS_KNOT
++      cinematicMoves: PLAY_ROUGH
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 1.2
++      pokedexWeightKg: 39.8
++      heightStdDev: 0.15
++      weightStdDev: 4.975
++      familyId: 1017
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1018_POKEMON_ARCHALUDON"
++  data {
++    template_id: "V1018_POKEMON_ARCHALUDON"
++    pokemonSettings {
++      pokemonId: 1018
++      type: POKEMON_TYPE_STEEL
++      type2: POKEMON_TYPE_DRAGON
++      camera {
++      }
++      encounter {
++        bonusCandyCaptureReward: 2
++        bonusStardustCaptureReward: 200
++        bonusXlCandyCaptureReward: 1
++      }
++      stats {
++        baseStamina: 207
++        baseAttack: 250
++        baseDefense: 215
++      }
++      quickMoves: DRAGON_TAIL_FAST
++      quickMoves: METAL_CLAW_FAST
++      cinematicMoves: FLASH_CANNON
++      cinematicMoves: DRAGON_CLAW
++      cinematicMoves: HYPER_BEAM
++      pokedexHeightM: 2
++      pokedexWeightKg: 60
++      heightStdDev: 0.25
++      weightStdDev: 7.5
++      familyId: FAMILY_DURALUDON
++      kmBuddyDistance: 5
++      third_move {
++        stardustToUnlock: 75000
++        candyToUnlock: 75
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1019_POKEMON_HYDRAPPLE"
++  data {
++    template_id: "V1019_POKEMON_HYDRAPPLE"
++    pokemonSettings {
++      pokemonId: 1019
++      type: POKEMON_TYPE_GRASS
++      type2: POKEMON_TYPE_DRAGON
++      camera {
++      }
++      encounter {
++        bonusCandyCaptureReward: 7
++        bonusStardustCaptureReward: 700
++        bonusXlCandyCaptureReward: 2
++      }
++      stats {
++        baseStamina: 235
++        baseAttack: 216
++        baseDefense: 186
++      }
++      quickMoves: BULLET_SEED_FAST
++      quickMoves: DRAGON_TAIL_FAST
++      quickMoves: ROLLOUT_FAST
++      cinematicMoves: DRAGON_PULSE
++      cinematicMoves: OUTRAGE
++      cinematicMoves: SEED_BOMB
++      pokedexHeightM: 1.8
++      pokedexWeightKg: 93
++      heightStdDev: 0.225
++      weightStdDev: 11.625
++      familyId: FAMILY_APPLIN
++      kmBuddyDistance: 5
++      third_move {
++        stardustToUnlock: 75000
++        candyToUnlock: 75
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1020_FAMILY_GOUGINGFIRE"
++  data {
++    template_id: "V1020_FAMILY_GOUGINGFIRE"
++    pokemonFamily {
++      familyId: 1020
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1020_POKEMON_GOUGINGFIRE"
++  data {
++    template_id: "V1020_POKEMON_GOUGINGFIRE"
++    pokemonSettings {
++      pokemonId: 1020
++      type: POKEMON_TYPE_FIRE
++      type2: POKEMON_TYPE_DRAGON
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 213
++        baseAttack: 205
++        baseDefense: 208
++      }
++      quickMoves: SPLASH_FAST
++      cinematicMoves: STRUGGLE
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 3.5
++      pokedexWeightKg: 590
++      heightStdDev: 0.4375
++      weightStdDev: 73.75
++      familyId: 1020
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1021_FAMILY_RAGINGBOLT"
++  data {
++    template_id: "V1021_FAMILY_RAGINGBOLT"
++    pokemonFamily {
++      familyId: 1021
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1021_POKEMON_RAGINGBOLT"
++  data {
++    template_id: "V1021_POKEMON_RAGINGBOLT"
++    pokemonSettings {
++      pokemonId: 1021
++      type: POKEMON_TYPE_ELECTRIC
++      type2: POKEMON_TYPE_DRAGON
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 245
++        baseAttack: 235
++        baseDefense: 165
++      }
++      quickMoves: SPLASH_FAST
++      cinematicMoves: STRUGGLE
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 5.2
++      pokedexWeightKg: 480
++      heightStdDev: 0.65
++      weightStdDev: 60
++      familyId: 1021
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1022_FAMILY_IRONBOULDER"
++  data {
++    template_id: "V1022_FAMILY_IRONBOULDER"
++    pokemonFamily {
++      familyId: 1022
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1022_POKEMON_IRONBOULDER"
++  data {
++    template_id: "V1022_POKEMON_IRONBOULDER"
++    pokemonSettings {
++      pokemonId: 1022
++      type: POKEMON_TYPE_ROCK
++      type2: POKEMON_TYPE_PSYCHIC
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 189
++        baseAttack: 227
++        baseDefense: 195
++      }
++      quickMoves: SPLASH_FAST
++      cinematicMoves: STRUGGLE
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 1.5
++      pokedexWeightKg: 162.5
++      heightStdDev: 0.1875
++      weightStdDev: 20.3125
++      familyId: 1022
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1023_FAMILY_IRONCROWN"
++  data {
++    template_id: "V1023_FAMILY_IRONCROWN"
++    pokemonFamily {
++      familyId: 1023
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1023_POKEMON_IRONCROWN"
++  data {
++    template_id: "V1023_POKEMON_IRONCROWN"
++    pokemonSettings {
++      pokemonId: 1023
++      type: POKEMON_TYPE_STEEL
++      type2: POKEMON_TYPE_PSYCHIC
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 189
++        baseAttack: 221
++        baseDefense: 200
++      }
++      quickMoves: SPLASH_FAST
++      cinematicMoves: STRUGGLE
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 1.6
++      pokedexWeightKg: 156
++      heightStdDev: 0.2
++      weightStdDev: 19.5
++      familyId: 1023
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1024_FAMILY_TERAPAGOS"
++  data {
++    template_id: "V1024_FAMILY_TERAPAGOS"
++    pokemonFamily {
++      familyId: 1024
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1024_POKEMON_TERAPAGOS"
++  data {
++    template_id: "V1024_POKEMON_TERAPAGOS"
++    pokemonSettings {
++      pokemonId: 1024
++      type: POKEMON_TYPE_NORMAL
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 207
++        baseAttack: 126
++        baseDefense: 165
++      }
++      quickMoves: TAKE_DOWN_FAST
++      cinematicMoves: STRUGGLE
++      pokemonClass: POKEMON_CLASS_LEGENDARY
++      pokedexHeightM: 0.2
++      pokedexWeightKg: 6.5
++      heightStdDev: 0.025
++      weightStdDev: 0.8125
++      familyId: 1024
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1025_FAMILY_PECHARUNT"
++  data {
++    template_id: "V1025_FAMILY_PECHARUNT"
++    pokemonFamily {
++      familyId: 1025
++      candyPerXlCandy: 100
++    }
++  }
++}
++template {
++  template_id: "V1025_POKEMON_PECHARUNT"
++  data {
++    template_id: "V1025_POKEMON_PECHARUNT"
++    pokemonSettings {
++      pokemonId: 1025
++      type: POKEMON_TYPE_POISON
++      type2: POKEMON_TYPE_GHOST
++      camera {
++      }
++      encounter {
++        bonusXlCandyCaptureReward: 3
++      }
++      stats {
++        baseStamina: 186
++        baseAttack: 164
++        baseDefense: 248
++      }
++      quickMoves: ASTONISH_FAST
++      cinematicMoves: SHADOW_BALL
++      cinematicMoves: GUNK_SHOT
++      cinematicMoves: POLTERGEIST
++      pokemonClass: POKEMON_CLASS_MYTHIC
++      pokedexHeightM: 0.3
++      pokedexWeightKg: 0.3
++      heightStdDev: 0.0375
++      weightStdDev: 0.0375
++      familyId: 1025
++      kmBuddyDistance: 20
++      third_move {
++        stardustToUnlock: 100000
++        candyToUnlock: 100
++      }
++      isTransferable: true
++      isTradable: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK1"
++  data {
++    template_id: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK1"
++    clientQuestTemplate {
++      quest {
++        questType: QUEST_CATCH_POKEMON
++        questId: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK1"
++        questContext: WEEKLY_CHALLENGE_QUEST
++        templateId: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK1"
++        goal {
++          target: 100
++        }
++        questRewards {
++          type: STARDUST
++          stardust: 600
++        }
++        questRewards {
++          type: FRIENDSHIP_POINTS
++          friendshipPoints: 7
++        }
++        difficulty: EASY
++      }
++      questDisplay {
++        description: "quest_catch_pokemon_plural"
++        title: "quest_catch_pokemon_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK2"
++  data {
++    template_id: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK2"
++    clientQuestTemplate {
++      quest {
++        questType: QUEST_CATCH_POKEMON
++        questId: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK2"
++        questContext: WEEKLY_CHALLENGE_QUEST
++        templateId: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK2"
++        goal {
++          target: 100
++        }
++        questRewards {
++          type: STARDUST
++          stardust: 600
++        }
++        questRewards {
++          type: FRIENDSHIP_POINTS
++          friendshipPoints: 7
++        }
++        difficulty: EASY
++      }
++      questDisplay {
++        description: "quest_catch_pokemon_plural"
++        title: "quest_catch_pokemon_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK3"
++  data {
++    template_id: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK3"
++    clientQuestTemplate {
++      quest {
++        questType: QUEST_CATCH_POKEMON
++        questId: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK3"
++        questContext: WEEKLY_CHALLENGE_QUEST
++        templateId: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK3"
++        goal {
++          target: 100
++        }
++        questRewards {
++          type: STARDUST
++          stardust: 600
++        }
++        questRewards {
++          type: FRIENDSHIP_POINTS
++          friendshipPoints: 7
++        }
++        difficulty: EASY
++      }
++      questDisplay {
++        description: "quest_catch_pokemon_plural"
++        title: "quest_catch_pokemon_plural"
++      }
++    }
++  }
++}
++template {
++  template_id: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK4"
++  data {
++    template_id: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK4"
++    clientQuestTemplate {
++      quest {
++        questType: QUEST_CATCH_POKEMON
++        questId: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK4"
++        questContext: WEEKLY_CHALLENGE_QUEST
++        templateId: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK4"
++        goal {
++          target: 100
++        }
++        questRewards {
++          type: STARDUST
++          stardust: 600
++        }
++        questRewards {
++          type: FRIENDSHIP_POINTS
++          friendshipPoints: 7
++        }
++        difficulty: EASY
++      }
++      questDisplay {
++        description: "quest_catch_pokemon_plural"
++        title: "quest_catch_pokemon_plural"
++      }
++    }
++  }
++}
++batch_id: 1757635530021
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -381610,17 +381889,16 @@
- experiment_id: 3561
- experiment_id: 4693
- experiment_id: 4998
--experiment_id: 5003
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
--experiment_id: 5201
- experiment_id: 5506
- experiment_id: 5508
- experiment_id: 5510
- experiment_id: 6075
- experiment_id: 7067
- experiment_id: 7070
-+experiment_id: 8781
- experiment_id: 8908
- experiment_id: 8946
- experiment_id: 9521
-@@ -381638,9 +381916,11 @@
- experiment_id: 3000000
- experiment_id: 3500035
- experiment_id: 3500037
-+experiment_id: 3500041
- experiment_id: 4610000
- experiment_id: 4700000
- experiment_id: 5000301
- experiment_id: 6600417
- experiment_id: 6600418
-+experiment_id: 6600421
- experiment_id: 6600423
