@@ -1,328 +1,213 @@
---- GAME_MASTER_old.txt	2025-09-14 10:40:58.277797748 +0200
-+++ GAME_MASTER.txt	2025-09-15 19:58:36.888055295 +0200
-@@ -330593,7 +330593,7 @@
-         candyCost: 100
-         form: FLORGES_RED
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
+--- GAME_MASTER_old.txt	2025-09-15 19:58:36.888055295 +0200
++++ GAME_MASTER.txt	2025-09-16 19:47:48.467491469 +0200
+@@ -130668,7 +130668,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+       }
+     }
+   }
+@@ -130684,7 +130684,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+       }
+     }
+   }
+@@ -130701,7 +130701,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 0.666666687
++        distanceMultiplier: 0.333333343
+       }
+     }
+   }
+@@ -130717,7 +130717,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+         expiredIncubatorReplacement {
+           incubatorReplacement: ITEM_INCUBATOR_BASIC
+           usesCountOverride: 1
+@@ -272029,7 +272029,6 @@
+       damageWindowStartMs: 1000
+       damageWindowEndMs: 1800
+       energyDelta: -33
+-      isLocked: true
+     }
+   }
+ }
+@@ -370011,9 +370010,36 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: PALKIA
++          pokemonId: LATIAS
++          pokemonDisplay {
++            form: LATIAS_NORMAL
++          }
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
++          pokemonId: LATIOS
+           pokemonDisplay {
+-            form: PALKIA_NORMAL
++            form: LATIOS_NORMAL
+           }
          }
+         unlockedAtRank: 20
+@@ -370643,9 +370669,36 @@
        }
-       modelScaleV2: 1.17
-@@ -330675,7 +330675,7 @@
-         candyCost: 100
-         form: FLORGES_BLUE
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
+       availablePokemon {
+         pokemon {
+-          pokemonId: PALKIA
++          pokemonId: LATIAS
++          pokemonDisplay {
++            form: LATIAS_NORMAL
++          }
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
++          pokemonId: LATIOS
+           pokemonDisplay {
+-            form: PALKIA_NORMAL
++            form: LATIOS_NORMAL
+           }
          }
-       }
-       modelScaleV2: 1.17
-@@ -330760,7 +330760,7 @@
-         candyCost: 100
-         form: FLORGES_ORANGE
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.17
-@@ -330845,7 +330845,7 @@
-         candyCost: 100
-         form: FLORGES_RED
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.17
-@@ -330930,7 +330930,7 @@
-         candyCost: 100
-         form: FLORGES_WHITE
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.17
-@@ -331015,7 +331015,7 @@
-         candyCost: 100
-         form: FLORGES_YELLOW
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.17
-@@ -331114,6 +331114,7 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      eliteCinematicMove: CHILLING_WATER
-       ibfc {
-       }
-       breadTierGroup: GROUP_2
-@@ -331195,6 +331196,7 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      eliteCinematicMove: CHILLING_WATER
-       useIrisFlyingPlacement: true
-       irisFlyingHeightLimitMeters: 2
-       ibfc {
-@@ -331278,6 +331280,7 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      eliteCinematicMove: CHILLING_WATER
-       useIrisFlyingPlacement: true
-       irisFlyingHeightLimitMeters: 2
-       ibfc {
-@@ -331361,6 +331364,7 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      eliteCinematicMove: CHILLING_WATER
-       useIrisFlyingPlacement: true
-       irisFlyingHeightLimitMeters: 2
-       ibfc {
-@@ -331444,6 +331448,7 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      eliteCinematicMove: CHILLING_WATER
-       useIrisFlyingPlacement: true
-       irisFlyingHeightLimitMeters: 2
-       ibfc {
-@@ -331527,6 +331532,7 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      eliteCinematicMove: CHILLING_WATER
-       useIrisFlyingPlacement: true
-       irisFlyingHeightLimitMeters: 2
-       ibfc {
-@@ -371353,13 +371359,10 @@
-       sku: "bundle.cd2022.1"
-       category: IAP_CATEGORY_BUNDLE
+         unlockedAtRank: 20
+@@ -370921,14 +370974,15 @@
+       sku: "battlepassticket.1"
+       category: IAP_CATEGORY_FREE
        sortOrder: 1
 +      hidden: true
-       sale: true
--      spriteId: "bundle.general4.small.1"
--      title: "bundle.general4.small.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2025-09-14T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1757894399000
-+      spriteId: "bundle.halloween.small.1"
-+      title: "bundle.halloween.small.1_title"
+       spriteId: "battlepassticket.1"
+       title: "iap_battle_pass_ticket_name"
+       description: "battle_pass_ticket_IAP_description"
+       skuEnableTime: "2023-02-27T20:00:00"
+-      skuDisableTime: "2025-09-16T13:00:00"
++      skuDisableTime: "2024-06-15T13:00:00"
+       skuEnableTimeUtcMs: 1677528000000
+-      skuDisableTimeUtcMs: 1758027600000
+-      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_s18_gbl_2025.jpg"
++      skuDisableTimeUtcMs: 1718456400000
++      imageUrl: "https://storage.googleapis.com/prod-public-images/GBL_SharedSkies_2024.jpeg"
      }
    }
  }
-@@ -371371,13 +371374,10 @@
-       sku: "bundle.cd2022.2"
-       category: IAP_CATEGORY_BUNDLE
+@@ -374412,7 +374466,6 @@
+       sku: "general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-+      hidden: true
-       sale: true
--      spriteId: "bundle.general1.medium.1"
--      title: "bundle.general1.medium.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2025-09-14T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1757894399000
-+      spriteId: "bundle.halloween.adventure.1"
-+      title: "bundle.halloween.adventure.1_title"
+-      hidden: true
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_PsychicSpecTGR_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -374433,7 +374486,6 @@
+       sku: "general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_PsychicSpecTGR_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -376180,7 +376232,6 @@
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_PsychicSpecTGR_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -376201,7 +376252,6 @@
+       sku: "pgorelease.general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5_PsychicSpecTGR_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -383979,7 +384029,7 @@
      }
    }
  }
-@@ -373989,13 +373989,9 @@
-       sku: "bundle.ukfeature.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 6
--      sale: true
-+      hidden: true
-       spriteId: "bundle.general5.small.1"
-       title: "bundle.general5.small.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2025-09-14T22:00:00"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1757887200000
-     }
-   }
- }
-@@ -374594,6 +374590,7 @@
-       sku: "general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Flabebe25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374614,6 +374611,7 @@
-       sku: "general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Flabebe25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374751,6 +374749,7 @@
-       sku: "general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general2.ticket.6_ConciergeCB0925_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374771,6 +374770,7 @@
-       sku: "general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general2.ticket.6_ConciergeCB0925_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376339,6 +376339,7 @@
-       sku: "pgorelease.general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Flabebe25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376359,6 +376360,7 @@
-       sku: "pgorelease.general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Flabebe25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376496,6 +376498,7 @@
-       sku: "pgorelease.general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general2.ticket.6_ConciergeCB0925_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376516,6 +376519,7 @@
-       sku: "pgorelease.general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general2.ticket.6_ConciergeCB0925_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -383916,7 +383920,66 @@
-     }
-   }
- }
--batch_id: 1757749915488
-+template {
-+  template_id: "AVATAR_FEATURE_FLAGS"
-+  data {
-+    template_id: "AVATAR_FEATURE_FLAGS"
-+    273 {
-+      1: 1
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_2025_AMSTERDAM_CITYSAFARI_001"
-+  data {
-+    template_id: "LC_2025_AMSTERDAM_CITYSAFARI_001"
-+    locationCardSettings {
-+      locationCard: LC_2025_AMSTERDAM_CITYSAFARI_001
-+      imageUrl: "lc_CitySafari2025_amsterdam"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_2025_BANGKOK_CITYSAFARI_001"
-+  data {
-+    template_id: "LC_2025_BANGKOK_CITYSAFARI_001"
-+    locationCardSettings {
-+      locationCard: LC_2025_BANGKOK_CITYSAFARI_001
-+      imageUrl: "lc_CitySafari2025_bangkok"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_2025_CANCUN_CITYSAFARI_001"
-+  data {
-+    template_id: "LC_2025_CANCUN_CITYSAFARI_001"
-+    locationCardSettings {
-+      locationCard: LC_2025_CANCUN_CITYSAFARI_001
-+      imageUrl: "lc_CitySafari2025_cancun"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_2025_VALENCIA_CITYSAFARI_001"
-+  data {
-+    template_id: "LC_2025_VALENCIA_CITYSAFARI_001"
-+    locationCardSettings {
-+      locationCard: LC_2025_VALENCIA_CITYSAFARI_001
-+      imageUrl: "lc_CitySafari2025_valencia"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_2025_VANCOUVER_CITYSAFARI_001"
-+  data {
-+    template_id: "LC_2025_VANCOUVER_CITYSAFARI_001"
-+    locationCardSettings {
-+      locationCard: LC_2025_VANCOUVER_CITYSAFARI_001
-+      imageUrl: "lc_CitySafari2025_vancouver"
-+    }
-+  }
-+}
-+batch_id: 1757956408354
+-batch_id: 1757956408354
++batch_id: 1757999472566
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -383938,13 +384001,11 @@
- experiment_id: 807
- experiment_id: 1699
- experiment_id: 2248
--experiment_id: 2272
- experiment_id: 2297
- experiment_id: 2399
- experiment_id: 2402
- experiment_id: 2600
- experiment_id: 2650
--experiment_id: 3025
- experiment_id: 3032
- experiment_id: 3033
+@@ -384011,13 +384061,17 @@
  experiment_id: 3063
-@@ -383953,25 +384014,21 @@
- experiment_id: 3501
- experiment_id: 3505
- experiment_id: 3517
--experiment_id: 3521
-+experiment_id: 3522
+ experiment_id: 3400
+ experiment_id: 3500
+-experiment_id: 3501
+-experiment_id: 3505
+-experiment_id: 3517
++experiment_id: 3506
++experiment_id: 3518
+ experiment_id: 3522
  experiment_id: 3534
--experiment_id: 3537
  experiment_id: 3538
--experiment_id: 3558
--experiment_id: 3561
--experiment_id: 4693
++experiment_id: 3564
++experiment_id: 3565
++experiment_id: 3566
++experiment_id: 3568
  experiment_id: 4998
++experiment_id: 5034
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
--experiment_id: 5202
-+experiment_id: 5203
- experiment_id: 5506
- experiment_id: 5508
- experiment_id: 5510
- experiment_id: 6075
- experiment_id: 7067
- experiment_id: 7070
--experiment_id: 8781
-+experiment_id: 8782
+@@ -384031,7 +384085,6 @@
+ experiment_id: 8782
  experiment_id: 8908
  experiment_id: 8910
- experiment_id: 8946
+-experiment_id: 8946
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
