@@ -1,213 +1,83 @@
---- GAME_MASTER_old.txt	2025-09-15 19:58:36.888055295 +0200
-+++ GAME_MASTER.txt	2025-09-16 19:47:48.467491469 +0200
-@@ -130668,7 +130668,7 @@
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
-         uses: 3
--        distanceMultiplier: 1
-+        distanceMultiplier: 0.5
+--- GAME_MASTER_old.txt	2025-09-16 19:47:48.467491469 +0200
++++ GAME_MASTER.txt	2025-09-17 14:09:56.516615838 +0200
+@@ -355949,7 +355949,7 @@
        }
-     }
-   }
-@@ -130684,7 +130684,7 @@
-       dropTrainerLevel: 100
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
--        distanceMultiplier: 1
-+        distanceMultiplier: 0.5
+       ibfc {
        }
-     }
-   }
-@@ -130701,7 +130701,7 @@
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
-         uses: 3
--        distanceMultiplier: 0.666666687
-+        distanceMultiplier: 0.333333343
-       }
-     }
-   }
-@@ -130717,7 +130717,7 @@
-       dropTrainerLevel: 100
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
--        distanceMultiplier: 1
-+        distanceMultiplier: 0.5
-         expiredIncubatorReplacement {
-           incubatorReplacement: ITEM_INCUBATOR_BASIC
-           usesCountOverride: 1
-@@ -272029,7 +272029,6 @@
-       damageWindowStartMs: 1000
-       damageWindowEndMs: 1800
-       energyDelta: -33
--      isLocked: true
+-      breadTierGroup: 7
++      breadTierGroup: GROUP_Z
      }
    }
  }
-@@ -370011,9 +370010,36 @@
+@@ -356038,7 +356038,7 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemonId: PALKIA
-+          pokemonId: LATIAS
-+          pokemonDisplay {
-+            form: LATIAS_NORMAL
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-+      availablePokemon {
-+        pokemon {
-+          pokemonId: LATIOS
-           pokemonDisplay {
--            form: PALKIA_NORMAL
-+            form: LATIOS_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -370643,9 +370669,36 @@
+       ibfc {
        }
-       availablePokemon {
-         pokemon {
--          pokemonId: PALKIA
-+          pokemonId: LATIAS
-+          pokemonDisplay {
-+            form: LATIAS_NORMAL
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-+      availablePokemon {
-+        pokemon {
-+          pokemonId: LATIOS
-           pokemonDisplay {
--            form: PALKIA_NORMAL
-+            form: LATIOS_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -370921,14 +370974,15 @@
-       sku: "battlepassticket.1"
-       category: IAP_CATEGORY_FREE
-       sortOrder: 1
-+      hidden: true
-       spriteId: "battlepassticket.1"
-       title: "iap_battle_pass_ticket_name"
-       description: "battle_pass_ticket_IAP_description"
-       skuEnableTime: "2023-02-27T20:00:00"
--      skuDisableTime: "2025-09-16T13:00:00"
-+      skuDisableTime: "2024-06-15T13:00:00"
-       skuEnableTimeUtcMs: 1677528000000
--      skuDisableTimeUtcMs: 1758027600000
--      imageUrl: "https://storage.googleapis.com/prod-public-images/pgo_s18_gbl_2025.jpg"
-+      skuDisableTimeUtcMs: 1718456400000
-+      imageUrl: "https://storage.googleapis.com/prod-public-images/GBL_SharedSkies_2024.jpeg"
+-      breadTierGroup: 7
++      breadTierGroup: GROUP_Z
      }
    }
  }
-@@ -374412,7 +374466,6 @@
-       sku: "general1.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_PsychicSpecTGR_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374433,7 +374486,6 @@
-       sku: "general1.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_PsychicSpecTGR_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376180,7 +376232,6 @@
-       sku: "pgorelease.general1.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_PsychicSpecTGR_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376201,7 +376252,6 @@
-       sku: "pgorelease.general1.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_PsychicSpecTGR_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -383979,7 +384029,7 @@
+@@ -356168,7 +356168,7 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: 7
++      breadTierGroup: GROUP_Z
      }
    }
  }
--batch_id: 1757956408354
-+batch_id: 1757999472566
- experiment_id: 4
- experiment_id: 11
- experiment_id: 21
-@@ -384011,13 +384061,17 @@
- experiment_id: 3063
- experiment_id: 3400
- experiment_id: 3500
--experiment_id: 3501
--experiment_id: 3505
--experiment_id: 3517
-+experiment_id: 3506
-+experiment_id: 3518
- experiment_id: 3522
- experiment_id: 3534
- experiment_id: 3538
-+experiment_id: 3564
-+experiment_id: 3565
-+experiment_id: 3566
-+experiment_id: 3568
- experiment_id: 4998
-+experiment_id: 5034
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-@@ -384031,7 +384085,6 @@
- experiment_id: 8782
- experiment_id: 8908
- experiment_id: 8910
--experiment_id: 8946
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
+@@ -356308,7 +356308,7 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: 7
++      breadTierGroup: GROUP_Z
+     }
+   }
+ }
+@@ -356397,7 +356397,7 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: 7
++      breadTierGroup: GROUP_Z
+     }
+   }
+ }
+@@ -356527,7 +356527,7 @@
+       }
+       ibfc {
+       }
+-      breadTierGroup: 7
++      breadTierGroup: GROUP_Z
+     }
+   }
+ }
+@@ -356608,7 +356608,7 @@
+       raidBossDistanceOffset: 12
+       ibfc {
+       }
+-      breadTierGroup: 8
++      breadTierGroup: GROUP_8
+     }
+   }
+ }
+@@ -356674,7 +356674,7 @@
+       disableTransferToPokemonHome: true
+       ibfc {
+       }
+-      breadTierGroup: 8
++      breadTierGroup: GROUP_8
+     }
+   }
+ }
+@@ -356745,7 +356745,7 @@
+       raidBossDistanceOffset: 12
+       ibfc {
+       }
+-      breadTierGroup: 8
++      breadTierGroup: GROUP_8
+     }
+   }
+ }
