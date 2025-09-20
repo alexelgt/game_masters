@@ -1,244 +1,681 @@
---- GAME_MASTER_old.txt	2025-09-17 20:17:00.425395563 +0200
-+++ GAME_MASTER.txt	2025-09-19 20:11:22.245475156 +0200
-@@ -129681,16 +129681,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-09-07T14:00:00"
--        eventEndTime: "2025-09-07T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaSharpedoRaidDay"
-+        eventStartTime: "2025-10-04T14:00:00"
-+        eventEndTime: "2025-10-04T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaMetagrossRaidDay"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_06_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_MegaSharpedoRaidDay"
--        textRewardsKey: "text_rewards_key_MegaSharpedoRaidDay"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_MegaMetagrossRaidDay"
-+        textRewardsKey: "text_rewards_key_MegaMetagrossRaidDay"
-         iconRewards {
-           type: ITEM
-           item {
-@@ -129709,11 +129709,11 @@
-           stardust: 2
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1757253600000
--        clientEventEndTimeUtcMs: 1757264400000
-+        clientEventStartTimeUtcMs: 1759586400000
-+        clientEventEndTimeUtcMs: 1759597200000
+--- GAME_MASTER_old.txt	2025-09-19 20:11:22.245475156 +0200
++++ GAME_MASTER.txt	2025-09-20 10:47:44.177228641 +0200
+@@ -71903,6 +71903,30 @@
+         appraisalKey: "appraise_polteageist_phony"
+         addToStart: true
        }
--      nameOverride: "general2.ticket.6_MegaSharpedoRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_desc_MegaSharpedoRaidDay"
-+      nameOverride: "general2.ticket.6_MegaMetagrossRaidDay_title"
-+      descriptionOverride: "item_event_ticket_gray_desc_MegaMetagrossRaidDay"
++      pokemonFormAppraisalOverrides {
++        id: POLTCHAGEIST
++        form: 2872
++        appraisalKey: "appraise_poltchageist_artisan"
++        addToStart: true
++      }
++      pokemonFormAppraisalOverrides {
++        id: POLTCHAGEIST
++        form: 2871
++        appraisalKey: "appraise_poltchageist_counterfeit"
++        addToStart: true
++      }
++      pokemonFormAppraisalOverrides {
++        id: SINISTCHA
++        form: 2874
++        appraisalKey: "appraise_sinistcha_masterpiece"
++        addToStart: true
++      }
++      pokemonFormAppraisalOverrides {
++        id: SINISTCHA
++        form: 2873
++        appraisalKey: "appraise_sinistcha_unremarkable"
++        addToStart: true
++      }
      }
    }
  }
-@@ -129726,17 +129726,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-09-07T14:00:00"
--        eventEndTime: "2025-09-07T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_MegaSharpedoRaidDay"
-+        eventStartTime: "2025-10-04T14:00:00"
-+        eventEndTime: "2025-10-04T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_details_MegaMetagrossRaidDay"
-         ticketItem: ITEM_EVENT_TICKET_06
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
--        clientEventStartTimeUtcMs: 1757253600000
--        clientEventEndTimeUtcMs: 1757264400000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1759586400000
-+        clientEventEndTimeUtcMs: 1759597200000
-       }
-       ignoreInventorySpace: true
--      nameOverride: "general2.ticket.6_MegaSharpedoRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_details_MegaSharpedoRaidDay"
-+      nameOverride: "general2.ticket.6_MegaMetagrossRaidDay_title"
-+      descriptionOverride: "item_event_ticket_gray_details_MegaMetagrossRaidDay"
+@@ -382673,6 +382697,20 @@
+     template_id: "FORMS_V1012_POKEMON_POLTCHAGEIST"
+     formSettings {
+       pokemon: POLTCHAGEIST
++      forms {
++        form: 2871
++        sillouetteObfuscationGroup {
++          groupNumber: 1
++          overrideDisplayForm: 2871
++        }
++      }
++      forms {
++        form: 2872
++        sillouetteObfuscationGroup {
++          groupNumber: 1
++          overrideDisplayForm: 2871
++        }
++      }
      }
    }
  }
-@@ -355526,8 +355526,14 @@
-       type: POKEMON_TYPE_STEEL
-       type2: POKEMON_TYPE_DRAGON
+@@ -382682,6 +382720,12 @@
+     template_id: "FORMS_V1013_POKEMON_SINISTCHA"
+     formSettings {
+       pokemon: SINISTCHA
++      forms {
++        form: 2873
++      }
++      forms {
++        form: 2874
++      }
+     }
+   }
+ }
+@@ -383190,8 +383234,22 @@
+       type: POKEMON_TYPE_GRASS
+       type2: POKEMON_TYPE_GHOST
        camera {
-+        cylinderRadiusM: 1.48
-+        cylinderHeightM: 2.13
++        cylinderRadiusM: 0.15
++        cylinderHeightM: 0.2
++        cylinderGroundM: 0.04
        }
        encounter {
-+        collisionRadiusM: 0.25
-+        collisionHeightM: 0.25
-+        collisionHeadRadiusM: 0.25
-+        jumpTimeS: 0.95
-         attackProbability: 0.1
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-@@ -355553,7 +355559,7 @@
-       familyId: FAMILY_DURALUDON
-       kmBuddyDistance: 5
-       modelHeight: 1
--      modelScaleV2: 1
-+      modelScaleV2: 0.86
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -374263,9 +374269,15 @@
-       sku: "bundle.zzraid.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle.general.premiumbox.medium.1"
-       title: "standard_raid_box_title"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2025-09-21T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1758484800000
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 590
++        collisionRadiusM: 0.15
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.1
++        movementType: MOVEMENT_HOVERING
++        attackProbability: 0.3
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 0.5
++        cameraDistance: 4
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
+       }
+       stats {
+         baseStamina: 120
+@@ -383209,6 +383267,14 @@
+       weightStdDev: 0.1375
+       familyId: FAMILY_POLTCHAGEIST
+       kmBuddyDistance: 3
++      modelHeight: 0.2
++      evolutionBranch {
++        evolution: SINISTCHA
++        candyCost: 50
++        form: 2873
++      }
++      modelScaleV2: 2
++      buddyScale: 19
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -383216,6 +383282,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 2
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -383231,10 +383298,24 @@
+       type: POKEMON_TYPE_GRASS
+       type2: POKEMON_TYPE_GHOST
+       camera {
++        cylinderRadiusM: 0.3
++        cylinderHeightM: 0.3
++        cylinderGroundM: 0.1
+       }
+       encounter {
++        collisionRadiusM: 0.2
++        collisionHeightM: 0.2
++        collisionHeadRadiusM: 0.1
++        movementType: MOVEMENT_HOVERING
+         bonusCandyCaptureReward: 2
+         bonusStardustCaptureReward: 200
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 0.5
++        cameraDistance: 4
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
+       }
+       stats {
+@@ -383253,6 +383334,9 @@
+       weightStdDev: 0.275
+       familyId: FAMILY_POLTCHAGEIST
+       kmBuddyDistance: 3
++      modelHeight: 0.32
++      modelScaleV2: 2.2
++      buddyScale: 19
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -383260,6 +383344,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 2
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -384037,7 +384122,510 @@
      }
    }
  }
-@@ -374763,13 +374775,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_MegaSharpedoRaidDay_title"
-+      title: "general2.ticket.6_MegaMetagrossRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-07T17:00:00"
-+      skuDisableTime: "2025-10-04T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1757264400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
--      webstoreSkuId: "web-mega-sharpedo-ticket-box"
-+      skuDisableTimeUtcMs: 1759597200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
-+      webstoreSkuId: "web-mega-Metagross-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -374784,12 +374796,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_MegaSharpedoRaidDay_title"
-+      title: "general2.ticket.6_MegaMetagrossRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-07T17:00:00"
-+      skuDisableTime: "2025-10-04T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1757264400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
-+      skuDisableTimeUtcMs: 1759597200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
-     }
-   }
- }
-@@ -374879,7 +374891,6 @@
-       sku: "general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374900,7 +374911,6 @@
-       sku: "general2.ticket.9.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376510,13 +376520,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_MegaSharpedoRaidDay_title"
-+      title: "general2.ticket.6_MegaMetagrossRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-07T17:00:00"
-+      skuDisableTime: "2025-10-04T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1757264400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
--      webstoreSkuId: "web-mega-sharpedo-ticket-box"
-+      skuDisableTimeUtcMs: 1759597200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
-+      webstoreSkuId: "web-mega-Metagross-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -376531,12 +376541,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_MegaSharpedoRaidDay_title"
-+      title: "general2.ticket.6_MegaMetagrossRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-07T17:00:00"
-+      skuDisableTime: "2025-10-04T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1757264400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaSharpedo_RaidDay_v1_1024x576-nologo.jpg"
-+      skuDisableTimeUtcMs: 1759597200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
-     }
-   }
- }
-@@ -376626,7 +376636,6 @@
-       sku: "pgorelease.general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376647,7 +376656,6 @@
-       sku: "pgorelease.general2.ticket.9.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -384029,7 +384037,7 @@
-     }
-   }
- }
--batch_id: 1758124947278
-+batch_id: 1758171514379
+-batch_id: 1758171514379
++template {
++  template_id: "ANDROID_SENSORS_ROLL_BACK"
++  data {
++    template_id: "ANDROID_SENSORS_ROLL_BACK"
++    265 {
++      1: 100
++    }
++  }
++}
++template {
++  template_id: "EVOLUTION_V1012_POKEMON_POLTCHAGEIST"
++  data {
++    template_id: "EVOLUTION_V1012_POKEMON_POLTCHAGEIST"
++    evolution_chain_display_settings {
++      pokemon: POLTCHAGEIST
++      evolutionChains {
++        headerMessage: "form_counterfeit"
++        evolutionInfos {
++          pokemon: POLTCHAGEIST
++          form: 2871
++        }
++        evolutionInfos {
++          pokemon: SINISTCHA
++          form: 2873
++        }
++      }
++      evolutionChains {
++        headerMessage: "form_masterpiece"
++        evolutionInfos {
++          pokemon: POLTCHAGEIST
++          form: 2872
++        }
++        evolutionInfos {
++          pokemon: SINISTCHA
++          form: 2874
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVOLUTION_V1013_POKEMON_SINISTCHA"
++  data {
++    template_id: "EVOLUTION_V1013_POKEMON_SINISTCHA"
++    evolution_chain_display_settings {
++      pokemon: SINISTCHA
++      evolutionChains {
++        headerMessage: "form_artisan"
++        evolutionInfos {
++          pokemon: POLTCHAGEIST
++          form: 2871
++        }
++        evolutionInfos {
++          pokemon: SINISTCHA
++          form: 2873
++        }
++      }
++      evolutionChains {
++        headerMessage: "form_masterpiece"
++        evolutionInfos {
++          pokemon: POLTCHAGEIST
++          form: 2872
++        }
++        evolutionInfos {
++          pokemon: SINISTCHA
++          form: 2874
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1012_POKEMON_POLTCHAGEIST_ARTISAN"
++  data {
++    template_id: "EXTENDED_V1012_POKEMON_POLTCHAGEIST_ARTISAN"
++    pokemonExtendedSettings {
++      uniqueId: POLTCHAGEIST
++      form: 2872
++      sizeSettings {
++        xxsLowerBound: 0.049
++        xsLowerBound: 0.05
++        mLowerBound: 0.075
++        mUpperBound: 0.125
++        xlUpperBound: 0.15
++        xxlUpperBound: 0.155
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1012_POKEMON_POLTCHAGEIST_COUNTERFEIT"
++  data {
++    template_id: "EXTENDED_V1012_POKEMON_POLTCHAGEIST_COUNTERFEIT"
++    pokemonExtendedSettings {
++      uniqueId: POLTCHAGEIST
++      form: 2871
++      sizeSettings {
++        xxsLowerBound: 0.049
++        xsLowerBound: 0.05
++        mLowerBound: 0.075
++        mUpperBound: 0.125
++        xlUpperBound: 0.15
++        xxlUpperBound: 0.155
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1013_POKEMON_SINISTCHA_MASTERPIECE"
++  data {
++    template_id: "EXTENDED_V1013_POKEMON_SINISTCHA_MASTERPIECE"
++    pokemonExtendedSettings {
++      uniqueId: SINISTCHA
++      form: 2874
++      sizeSettings {
++        xxsLowerBound: 0.098
++        xsLowerBound: 0.1
++        mLowerBound: 0.15
++        mUpperBound: 0.25
++        xlUpperBound: 0.3
++        xxlUpperBound: 0.31
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V1013_POKEMON_SINISTCHA_UNREMARKABLE"
++  data {
++    template_id: "EXTENDED_V1013_POKEMON_SINISTCHA_UNREMARKABLE"
++    pokemonExtendedSettings {
++      uniqueId: SINISTCHA
++      form: 2873
++      sizeSettings {
++        xxsLowerBound: 0.098
++        xsLowerBound: 0.1
++        mLowerBound: 0.15
++        mUpperBound: 0.25
++        xlUpperBound: 0.3
++        xxlUpperBound: 0.31
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1012_POKEMON_POLTCHAGEIST_ARTISAN"
++  data {
++    template_id: "SPAWN_V1012_POKEMON_POLTCHAGEIST_ARTISAN"
++    genderSettings {
++      pokemon: POLTCHAGEIST
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1012_POKEMON_POLTCHAGEIST_COUNTERFEIT"
++  data {
++    template_id: "SPAWN_V1012_POKEMON_POLTCHAGEIST_COUNTERFEIT"
++    genderSettings {
++      pokemon: POLTCHAGEIST
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1013_POKEMON_SINISTCHA_MASTERPIECE"
++  data {
++    template_id: "SPAWN_V1013_POKEMON_SINISTCHA_MASTERPIECE"
++    genderSettings {
++      pokemon: SINISTCHA
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V1013_POKEMON_SINISTCHA_UNREMARKABLE"
++  data {
++    template_id: "SPAWN_V1013_POKEMON_SINISTCHA_UNREMARKABLE"
++    genderSettings {
++      pokemon: SINISTCHA
++      gender {
++        genderlessPercent: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "V1012_POKEMON_POLTCHAGEIST_ARTISAN"
++  data {
++    template_id: "V1012_POKEMON_POLTCHAGEIST_ARTISAN"
++    pokemonSettings {
++      pokemonId: POLTCHAGEIST
++      type: POKEMON_TYPE_GRASS
++      type2: POKEMON_TYPE_GHOST
++      camera {
++        cylinderRadiusM: 0.15
++        cylinderHeightM: 0.2
++        cylinderGroundM: 0.04
++      }
++      encounter {
++        collisionRadiusM: 0.15
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.1
++        movementType: MOVEMENT_HOVERING
++        attackProbability: 0.3
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 0.5
++        cameraDistance: 4
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 120
++        baseAttack: 134
++        baseDefense: 96
++      }
++      quickMoves: ASTONISH_FAST
++      quickMoves: MAGICAL_LEAF_FAST
++      cinematicMoves: SHADOW_BALL
++      cinematicMoves: ENERGY_BALL
++      cinematicMoves: POLTERGEIST
++      pokedexHeightM: 0.1
++      pokedexWeightKg: 1.1
++      heightStdDev: 0.0125
++      weightStdDev: 0.1375
++      familyId: FAMILY_POLTCHAGEIST
++      kmBuddyDistance: 3
++      modelHeight: 0.2
++      evolutionBranch {
++        evolution: SINISTCHA
++        candyCost: 400
++        form: 2874
++      }
++      modelScaleV2: 2
++      form: 2872
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 2
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1012_POKEMON_POLTCHAGEIST_COUNTERFEIT"
++  data {
++    template_id: "V1012_POKEMON_POLTCHAGEIST_COUNTERFEIT"
++    pokemonSettings {
++      pokemonId: POLTCHAGEIST
++      type: POKEMON_TYPE_GRASS
++      type2: POKEMON_TYPE_GHOST
++      camera {
++        cylinderRadiusM: 0.15
++        cylinderHeightM: 0.2
++        cylinderGroundM: 0.04
++      }
++      encounter {
++        collisionRadiusM: 0.15
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.1
++        movementType: MOVEMENT_HOVERING
++        attackProbability: 0.3
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 0.5
++        cameraDistance: 4
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 120
++        baseAttack: 134
++        baseDefense: 96
++      }
++      quickMoves: ASTONISH_FAST
++      quickMoves: MAGICAL_LEAF_FAST
++      cinematicMoves: SHADOW_BALL
++      cinematicMoves: ENERGY_BALL
++      cinematicMoves: POLTERGEIST
++      pokedexHeightM: 0.1
++      pokedexWeightKg: 1.1
++      heightStdDev: 0.0125
++      weightStdDev: 0.1375
++      familyId: FAMILY_POLTCHAGEIST
++      kmBuddyDistance: 3
++      modelHeight: 0.2
++      evolutionBranch {
++        evolution: SINISTCHA
++        candyCost: 50
++        form: 2873
++      }
++      modelScaleV2: 2
++      form: 2871
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 2
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1013_POKEMON_SINISTCHA_MASTERPIECE"
++  data {
++    template_id: "V1013_POKEMON_SINISTCHA_MASTERPIECE"
++    pokemonSettings {
++      pokemonId: SINISTCHA
++      type: POKEMON_TYPE_GRASS
++      type2: POKEMON_TYPE_GHOST
++      camera {
++        cylinderRadiusM: 0.3
++        cylinderHeightM: 0.3
++        cylinderGroundM: 0.1
++      }
++      encounter {
++        collisionRadiusM: 0.2
++        collisionHeightM: 0.2
++        collisionHeadRadiusM: 0.1
++        movementType: MOVEMENT_HOVERING
++        bonusCandyCaptureReward: 2
++        bonusStardustCaptureReward: 200
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 0.5
++        cameraDistance: 4
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        bonusXlCandyCaptureReward: 1
++      }
++      stats {
++        baseStamina: 174
++        baseAttack: 225
++        baseDefense: 191
++      }
++      quickMoves: ASTONISH_FAST
++      quickMoves: MAGICAL_LEAF_FAST
++      cinematicMoves: SHADOW_BALL
++      cinematicMoves: ENERGY_BALL
++      cinematicMoves: POLTERGEIST
++      pokedexHeightM: 0.2
++      pokedexWeightKg: 2.2
++      heightStdDev: 0.025
++      weightStdDev: 0.275
++      familyId: FAMILY_POLTCHAGEIST
++      kmBuddyDistance: 3
++      modelHeight: 0.32
++      modelScaleV2: 2.2
++      form: 2874
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 2
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V1013_POKEMON_SINISTCHA_UNREMARKABLE"
++  data {
++    template_id: "V1013_POKEMON_SINISTCHA_UNREMARKABLE"
++    pokemonSettings {
++      pokemonId: SINISTCHA
++      type: POKEMON_TYPE_GRASS
++      type2: POKEMON_TYPE_GHOST
++      camera {
++        cylinderRadiusM: 0.3
++        cylinderHeightM: 0.3
++        cylinderGroundM: 0.1
++      }
++      encounter {
++        collisionRadiusM: 0.2
++        collisionHeightM: 0.2
++        collisionHeadRadiusM: 0.1
++        movementType: MOVEMENT_HOVERING
++        bonusCandyCaptureReward: 2
++        bonusStardustCaptureReward: 200
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 0.5
++        cameraDistance: 4
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        bonusXlCandyCaptureReward: 1
++      }
++      stats {
++        baseStamina: 174
++        baseAttack: 225
++        baseDefense: 191
++      }
++      quickMoves: ASTONISH_FAST
++      quickMoves: MAGICAL_LEAF_FAST
++      cinematicMoves: SHADOW_BALL
++      cinematicMoves: ENERGY_BALL
++      cinematicMoves: POLTERGEIST
++      pokedexHeightM: 0.2
++      pokedexWeightKg: 2.2
++      heightStdDev: 0.025
++      weightStdDev: 0.275
++      familyId: FAMILY_POLTCHAGEIST
++      kmBuddyDistance: 3
++      modelHeight: 0.32
++      modelScaleV2: 2.2
++      form: 2873
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 2
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "bundle.diwali2025.1"
++  data {
++    template_id: "bundle.diwali2025.1"
++    iapItemDisplay {
++      sku: "bundle.diwali2025.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general5.small.1"
++      title: "bundle.general5.small.1_title"
++    }
++  }
++}
++template {
++  template_id: "bundle.diwali2025.2"
++  data {
++    template_id: "bundle.diwali2025.2"
++    iapItemDisplay {
++      sku: "bundle.diwali2025.2"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.general5.small.1"
++      title: "bundle.general5.small.1_title"
++    }
++  }
++}
++template {
++  template_id: "bundle.hawlucha2025.1"
++  data {
++    template_id: "bundle.hawlucha2025.1"
++    iapItemDisplay {
++      sku: "bundle.hawlucha2025.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.latam.small.1"
++      title: "bundle.wicker.box.1_title"
++    }
++  }
++}
++template {
++  template_id: "bundle.hawlucha2025.2"
++  data {
++    template_id: "bundle.hawlucha2025.2"
++    iapItemDisplay {
++      sku: "bundle.hawlucha2025.2"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.latam.small.1"
++      title: "bundle.wicker.box.1_title"
++    }
++  }
++}
++batch_id: 1758326387245
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -384050,6 +384058,7 @@
- experiment_id: 805
- experiment_id: 807
- experiment_id: 1699
-+experiment_id: 2231
- experiment_id: 2248
- experiment_id: 2297
- experiment_id: 2399
-@@ -384070,12 +384079,11 @@
+@@ -384079,6 +384667,7 @@
  experiment_id: 3565
  experiment_id: 3566
  experiment_id: 3568
-+experiment_id: 4952
++experiment_id: 4949
+ experiment_id: 4952
  experiment_id: 4998
--experiment_id: 5006
  experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
--experiment_id: 5203
- experiment_id: 5506
- experiment_id: 5508
- experiment_id: 5510
+@@ -384117,3 +384706,4 @@
+ experiment_id: 6600418
+ experiment_id: 6600421
+ experiment_id: 6600423
++experiment_id: 6600433
