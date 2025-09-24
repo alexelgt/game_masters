@@ -1,238 +1,2898 @@
---- GAME_MASTER_old.txt	2025-09-21 10:40:12.068231870 +0200
-+++ GAME_MASTER.txt	2025-09-22 20:00:33.540664604 +0200
-@@ -130692,7 +130692,7 @@
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
-         uses: 3
--        distanceMultiplier: 0.5
-+        distanceMultiplier: 1
+--- GAME_MASTER_old.txt	2025-09-22 20:00:33.540664604 +0200
++++ GAME_MASTER.txt	2025-09-24 09:07:01.174935625 +0200
+@@ -71905,25 +71905,25 @@
        }
-     }
-   }
-@@ -130708,7 +130708,7 @@
-       dropTrainerLevel: 100
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
--        distanceMultiplier: 0.5
-+        distanceMultiplier: 1
+       pokemonFormAppraisalOverrides {
+         id: POLTCHAGEIST
+-        form: 2872
++        form: POLTCHAGEIST_ARTISAN
+         appraisalKey: "appraise_poltchageist_artisan"
+         addToStart: true
        }
-     }
-   }
-@@ -130725,7 +130725,7 @@
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
-         uses: 3
--        distanceMultiplier: 0.333333343
-+        distanceMultiplier: 0.666666687
+       pokemonFormAppraisalOverrides {
+         id: POLTCHAGEIST
+-        form: 2871
++        form: POLTCHAGEIST_COUNTERFEIT
+         appraisalKey: "appraise_poltchageist_counterfeit"
+         addToStart: true
        }
-     }
-   }
-@@ -130741,7 +130741,7 @@
-       dropTrainerLevel: 100
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
--        distanceMultiplier: 0.5
-+        distanceMultiplier: 1
-         expiredIncubatorReplacement {
-           incubatorReplacement: ITEM_INCUBATOR_BASIC
-           usesCountOverride: 1
-@@ -272053,6 +272053,7 @@
-       damageWindowStartMs: 1000
-       damageWindowEndMs: 1800
-       energyDelta: -33
-+      isLocked: true
+       pokemonFormAppraisalOverrides {
+         id: SINISTCHA
+-        form: 2874
++        form: SINISTCHA_MASTERPIECE
+         appraisalKey: "appraise_sinistcha_masterpiece"
+         addToStart: true
+       }
+       pokemonFormAppraisalOverrides {
+         id: SINISTCHA
+-        form: 2873
++        form: SINISTCHA_UNREMARKABLE
+         appraisalKey: "appraise_sinistcha_unremarkable"
+         addToStart: true
+       }
+@@ -116376,6 +116376,9 @@
+     template_id: "FORMS_V0010_POKEMON_CATERPIE"
+     formSettings {
+       pokemon: CATERPIE
++      forms {
++        form: CATERPIE_NORMAL
++      }
      }
    }
  }
-@@ -330616,7 +330617,7 @@
-         candyCost: 100
-         form: FLORGES_RED
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.17
-@@ -330698,7 +330699,7 @@
-         candyCost: 100
-         form: FLORGES_BLUE
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.17
-@@ -330783,7 +330784,7 @@
-         candyCost: 100
-         form: FLORGES_ORANGE
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.17
-@@ -330868,7 +330869,7 @@
-         candyCost: 100
-         form: FLORGES_RED
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.17
-@@ -330953,7 +330954,7 @@
-         candyCost: 100
-         form: FLORGES_WHITE
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.17
-@@ -331038,7 +331039,7 @@
-         candyCost: 100
-         form: FLORGES_YELLOW
-         questDisplay {
--          questRequirementTemplateId: "FLORGES_CD_EVOLUTION_QUEST"
-+          questRequirementTemplateId: "FLORGES_EVOLUTION_QUEST"
-         }
-       }
-       modelScaleV2: 1.17
-@@ -374293,15 +374294,9 @@
-       sku: "bundle.zzraid.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-+      hidden: true
-       spriteId: "bundle.general.premiumbox.medium.1"
-       title: "standard_raid_box_title"
--      skuEnableTime: "2019-10-31T21:00:00"
--      skuDisableTime: "2025-09-21T20:00:00"
--      skuEnableTimeUtcMs: 1572555600000
--      skuDisableTimeUtcMs: 1758484800000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 590
+@@ -116385,6 +116388,9 @@
+     template_id: "FORMS_V0011_POKEMON_METAPOD"
+     formSettings {
+       pokemon: METAPOD
++      forms {
++        form: METAPOD_NORMAL
++      }
      }
    }
  }
-@@ -374502,6 +374497,7 @@
-       sku: "general1.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_PsychicSpecTGR_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374522,6 +374518,7 @@
-       sku: "general1.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_PsychicSpecTGR_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374915,6 +374912,7 @@
-       sku: "general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374935,6 +374933,7 @@
-       sku: "general2.ticket.9.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376266,6 +376265,7 @@
-       sku: "pgorelease.general1.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_PsychicSpecTGR_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376286,6 +376286,7 @@
-       sku: "pgorelease.general1.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.5"
-       title: "general1.ticket.5_PsychicSpecTGR_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376660,6 +376661,7 @@
-       sku: "pgorelease.general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376680,6 +376682,7 @@
-       sku: "pgorelease.general2.ticket.9.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._ShadowGroudonRaidWeekend_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -384625,7 +384628,7 @@
+@@ -116394,6 +116400,9 @@
+     template_id: "FORMS_V0012_POKEMON_BUTTERFREE"
+     formSettings {
+       pokemon: BUTTERFREE
++      forms {
++        form: BUTTERFREE_NORMAL
++      }
      }
    }
  }
--batch_id: 1758405265079
-+batch_id: 1758561568664
- experiment_id: 4
- experiment_id: 11
- experiment_id: 21
-@@ -384646,11 +384649,8 @@
- experiment_id: 805
- experiment_id: 807
- experiment_id: 1699
--experiment_id: 2231
- experiment_id: 2248
- experiment_id: 2297
--experiment_id: 2399
--experiment_id: 2402
+@@ -117610,6 +117619,9 @@
+     template_id: "FORMS_V0092_POKEMON_GASTLY"
+     formSettings {
+       pokemon: GASTLY
++      forms {
++        form: GASTLY_NORMAL
++      }
+     }
+   }
+ }
+@@ -117619,6 +117631,9 @@
+     template_id: "FORMS_V0093_POKEMON_HAUNTER"
+     formSettings {
+       pokemon: HAUNTER
++      forms {
++        form: HAUNTER_NORMAL
++      }
+     }
+   }
+ }
+@@ -117876,6 +117891,9 @@
+     template_id: "FORMS_V0113_POKEMON_CHANSEY"
+     formSettings {
+       pokemon: CHANSEY
++      forms {
++        form: CHANSEY_NORMAL
++      }
+     }
+   }
+ }
+@@ -119466,6 +119484,9 @@
+     template_id: "FORMS_V0242_POKEMON_BLISSEY"
+     formSettings {
+       pokemon: BLISSEY
++      forms {
++        form: BLISSEY_NORMAL
++      }
+     }
+   }
+ }
+@@ -120313,6 +120334,9 @@
+     template_id: "FORMS_V0320_POKEMON_WAILMER"
+     formSettings {
+       pokemon: WAILMER
++      forms {
++        form: WAILMER_NORMAL
++      }
+     }
+   }
+ }
+@@ -120322,6 +120346,9 @@
+     template_id: "FORMS_V0321_POKEMON_WAILORD"
+     formSettings {
+       pokemon: WAILORD
++      forms {
++        form: WAILORD_NORMAL
++      }
+     }
+   }
+ }
+@@ -121682,6 +121709,9 @@
+     template_id: "FORMS_V0440_POKEMON_HAPPINY"
+     formSettings {
+       pokemon: HAPPINY
++      forms {
++        form: HAPPINY_NORMAL
++      }
+     }
+   }
+ }
+@@ -122680,6 +122710,9 @@
+     template_id: "FORMS_V0529_POKEMON_DRILBUR"
+     formSettings {
+       pokemon: DRILBUR
++      forms {
++        form: DRILBUR_NORMAL
++      }
+     }
+   }
+ }
+@@ -122689,6 +122722,9 @@
+     template_id: "FORMS_V0530_POKEMON_EXCADRILL"
+     formSettings {
+       pokemon: EXCADRILL
++      forms {
++        form: EXCADRILL_NORMAL
++      }
+     }
+   }
+ }
+@@ -123578,6 +123614,9 @@
+     template_id: "FORMS_V0615_POKEMON_CRYOGONAL"
+     formSettings {
+       pokemon: CRYOGONAL
++      forms {
++        form: CRYOGONAL_NORMAL
++      }
+     }
+   }
+ }
+@@ -127780,9 +127819,17 @@
+       pokemon: DUDUNSPARCE
+       forms {
+         form: DUDUNSPARCE_TWO
++        sillouetteObfuscationGroup {
++          groupNumber: 1
++          overrideDisplayForm: DUDUNSPARCE_TWO
++        }
+       }
+       forms {
+         form: DUDUNSPARCE_THREE
++        sillouetteObfuscationGroup {
++          groupNumber: 1
++          overrideDisplayForm: DUDUNSPARCE_TWO
++        }
+       }
+     }
+   }
+@@ -128460,7 +128507,7 @@
+     iapCategoryDisplay {
+       category: IAP_CATEGORY_AVATAR
+       sortOrder: 5
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_Concierge_Shirt.jpg"
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_avatar_dunsparce.jpg"
+       description: "avatar_shop_description_new"
+     }
+   }
+@@ -130175,47 +130222,47 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-08-25T10:00:00"
+-        eventEndTime: "2025-08-31T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_SunkissedCTR0825"
++        eventStartTime: "2025-09-30T10:00:00"
++        eventEndTime: "2025-10-07T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_SteelSkyline0925"
+         giftable: true
+         giftItem: ITEM_EVERGREEN_TICKET_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Steel_Skyline_Keyart_v2_1024x576-nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_SunkissedCTR0825"
+-        textRewardsKey: "text_rewards_key_SunkissedCTR0825"
+-        iconRewards {
+-          type: AVATAR_CLOTHING
+-          neutralAvatarItemTemplate {
+-            itemTemplateId: "N_AVATAR_n_backpack_pinap_0"
+-            displayTemplateId: "N_DISPLAY_n_backpack_pinap_0"
+-          }
+-        }
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Steel_Skyline_Keyart_v2_1024x576-nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_SteelSkyline0925"
++        textRewardsKey: "text_rewards_key_SteelSkyline0925"
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemonEncounter {
+-            pokemonId: MAROWAK
++            pokemonId: DURALUDON
+             pokemonDisplay {
+-              form: MAROWAK_ALOLA
++              breadModeEnum: BREAD_MODE
+             }
+           }
+         }
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemonEncounter {
+-            pokemonId: SHELLDER
++            pokemonId: MEOWTH
+             pokemonDisplay {
+-              form: SHELLDER_NORMAL
++              form: MEOWTH_GALARIAN
+             }
+           }
+         }
++        iconRewards {
++          type: ITEM
++          item {
++            item: ITEM_MP
++            amount: 800
++          }
++        }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1756116000000
+-        clientEventEndTimeUtcMs: 1756670400000
++        clientEventStartTimeUtcMs: 1759226400000
++        clientEventEndTimeUtcMs: 1759867200000
+       }
+-      nameOverride: "general1.ticket._SunkissedCTR0825_title"
+-      descriptionOverride: "item_event_ticket_evergreen_desc_SunkissedCTR0825"
++      nameOverride: "general1.ticket._SteelSkyline0925_title"
++      descriptionOverride: "item_event_ticket_evergreen_desc_SteelSkyline0925"
+     }
+   }
+ }
+@@ -130228,16 +130275,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-08-25T10:00:00"
+-        eventEndTime: "2025-08-31T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_details_SunkissedCTR0825"
++        eventStartTime: "2025-09-30T10:00:00"
++        eventEndTime: "2025-10-07T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_SteelSkyline0925"
+         ticketItem: ITEM_EVERGREEN_TICKET
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1756116000000
+-        clientEventEndTimeUtcMs: 1756670400000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Steel_Skyline_Keyart_v2_1024x576-nologo.jpg"
++        clientEventStartTimeUtcMs: 1759226400000
++        clientEventEndTimeUtcMs: 1759867200000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_evergreen_details_SunkissedCTR0825"
++      descriptionOverride: "item_event_ticket_evergreen_details_SteelSkyline0925"
+     }
+   }
+ }
+@@ -158122,13 +158169,34 @@
+   }
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
++  template_id: "EXTENDED_V0010_POKEMON_CATERPIE_NORMAL"
+   data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    template_id: "EXTENDED_V0010_POKEMON_CATERPIE_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: CATERPIE
++      form: CATERPIE_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.147
++        xsLowerBound: 0.15
++        mLowerBound: 0.225
++        mUpperBound: 0.375
++        xlUpperBound: 0.45
++        xxlUpperBound: 0.525
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 57.77
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 115.54
++        }
++        maxStationVisualSettings {
++          scale: 7.68
++        }
++      }
+     }
+   }
+ }
+@@ -204051,6 +204119,7 @@
+       evolutionBranch {
+         evolution: METAPOD
+         candyCost: 12
++        form: METAPOD_NORMAL
+         candyCostPurified: 10
+       }
+       modelScaleV2: 1.63
+@@ -204143,6 +204212,7 @@
+       evolutionBranch {
+         evolution: BUTTERFREE
+         candyCost: 50
++        form: BUTTERFREE_NORMAL
+         candyCostPurified: 45
+       }
+       modelScaleV2: 1
+@@ -226485,6 +226555,7 @@
+       evolutionBranch {
+         evolution: HAUNTER
+         candyCost: 25
++        form: HAUNTER_NORMAL
+         candyCostPurified: 22
+       }
+       modelScaleV2: 1
+@@ -226596,6 +226667,7 @@
+       evolutionBranch {
+         evolution: GENGAR
+         candyCost: 100
++        form: GENGAR_NORMAL
+         noCandyCostViaTrade: true
+         candyCostPurified: 90
+       }
+@@ -231409,6 +231481,7 @@
+       evolutionBranch {
+         evolution: BLISSEY
+         candyCost: 50
++        form: BLISSEY_NORMAL
+       }
+       modelScaleV2: 1
+       buddyOffsetMale: 20
+@@ -250890,6 +250963,18 @@
+       familyId: FAMILY_DUNSPARCE
+       kmBuddyDistance: 3
+       modelHeight: 1.5
++      evolutionBranch {
++        evolution: DUDUNSPARCE
++        candyCost: 50
++        form: DUDUNSPARCE_TWO
++        evolutionLikelihoodWeight: 99
++      }
++      evolutionBranch {
++        evolution: DUDUNSPARCE
++        candyCost: 50
++        form: DUDUNSPARCE_THREE
++        evolutionLikelihoodWeight: 1
++      }
+       modelScaleV2: 1
+       buddyOffsetMale: 3.5
+       buddyOffsetMale: 0
+@@ -271868,6 +271953,7 @@
+       evolutionBranch {
+         evolution: WAILORD
+         candyCost: 400
++        form: WAILORD_NORMAL
+         candyCostPurified: 360
+       }
+       modelScaleV2: 0.74
+@@ -293359,6 +293445,7 @@
+         evolution: CHANSEY
+         candyCost: 25
+         kmBuddyDistanceRequirement: 15
++        form: CHANSEY_NORMAL
+         questDisplay {
+           questRequirementTemplateId: "CHANSEY_EVOLUTION_QUEST"
+         }
+@@ -307368,6 +307455,7 @@
+       evolutionBranch {
+         evolution: EXCADRILL
+         candyCost: 50
++        form: EXCADRILL_NORMAL
+         candyCostPurified: 45
+       }
+       modelScaleV2: 1.27
+@@ -331957,9 +332045,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
+-      raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -331967,6 +332053,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -332034,13 +332121,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -332108,7 +332195,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -332116,6 +332202,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -332190,6 +332277,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -332257,7 +332345,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -332265,6 +332352,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -332332,7 +332420,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -332340,6 +332427,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -332407,7 +332495,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -332415,6 +332502,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -332482,13 +332570,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -332555,7 +332643,6 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -332563,6 +332650,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -332630,7 +332718,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -332638,6 +332725,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -332705,7 +332793,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -332713,6 +332800,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -367836,8 +367924,9 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_WILLPOWER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+     }
+   }
+ }
+@@ -370041,36 +370130,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: LATIAS
++          pokemonId: DIALGA
+           pokemonDisplay {
+-            form: LATIAS_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: LATIOS
+-          pokemonDisplay {
+-            form: LATIOS_NORMAL
++            form: DIALGA_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -370700,36 +370762,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: LATIAS
+-          pokemonDisplay {
+-            form: LATIAS_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: LATIOS
++          pokemonId: DIALGA
+           pokemonDisplay {
+-            form: LATIOS_NORMAL
++            form: DIALGA_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -374324,13 +374359,13 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "evergreenticket.1"
+-      title: "general1.ticket._SunkissedCTR0825_title"
++      title: "general1.ticket._SteelSkyline0925_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-31T20:00:00"
++      skuDisableTime: "2025-10-07T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1756670400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
+-      webstoreSkuId: "web-cosmetic-2025-ticket-box"
++      skuDisableTimeUtcMs: 1759867200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Steel_Skyline_Keyart_v2_1024x576-nologo.jpg"
++      webstoreSkuId: "web-2025-steel-skyline-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -374345,12 +374380,14 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "evergreenticket.1"
+-      title: "general1.ticket._SunkissedCTR0825_title"
++      title: "general1.ticket._SteelSkyline0925_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-31T20:00:00"
++      skuDisableTime: "2025-10-07T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1756670400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1759867200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Steel_Skyline_Keyart_v2_1024x576-nologo.jpg"
++      webstoreSkuId: "web-2025-steel-skyline-ticket-box"
++      webstoreSkuPriceE6: 1990000
+     }
+   }
+ }
+@@ -374457,7 +374494,6 @@
+       sku: "general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._CompletelyNormal_SEP25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -374478,7 +374514,6 @@
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._CompletelyNormal_SEP25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -374564,7 +374599,7 @@
+       skuEnableTimeUtcMs: 1704067200000
+       skuDisableTimeUtcMs: 1763316000000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_1024x512_logo.png"
+-      webstoreSkuId: "web-go-fest-2025-ticket"
++      webstoreSkuId: "web-2025-gowa-ticket-box"
+       webstoreSkuPriceE6: 11990000
+     }
+   }
+@@ -376109,13 +376144,13 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "evergreenticket.1"
+-      title: "general1.ticket._SunkissedCTR0825_title"
++      title: "general1.ticket._SteelSkyline0925_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-31T20:00:00"
++      skuDisableTime: "2025-10-07T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1756670400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
+-      webstoreSkuId: "web-cosmetic-2025-ticket-box"
++      skuDisableTimeUtcMs: 1759867200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Steel_Skyline_Keyart_v2_1024x576-nologo.jpg"
++      webstoreSkuId: "web-2025-steel-skyline-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -376130,12 +376165,14 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "evergreenticket.1"
+-      title: "general1.ticket._SunkissedCTR0825_title"
++      title: "general1.ticket._SteelSkyline0925_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-08-31T20:00:00"
++      skuDisableTime: "2025-10-07T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1756670400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-pinap-bag-ticket-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1759867200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Steel_Skyline_Keyart_v2_1024x576-nologo.jpg"
++      webstoreSkuId: "web-2025-steel-skyline-ticket-box"
++      webstoreSkuPriceE6: 1990000
+     }
+   }
+ }
+@@ -376225,7 +376262,6 @@
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._CompletelyNormal_SEP25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -376246,7 +376282,6 @@
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._CompletelyNormal_SEP25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -376313,7 +376348,7 @@
+       skuEnableTimeUtcMs: 1704067200000
+       skuDisableTimeUtcMs: 1763316000000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_1024x512_logo.png"
+-      webstoreSkuId: "web-go-fest-2025-ticket"
++      webstoreSkuId: "web-2025-gowa-ticket-box"
+       webstoreSkuPriceE6: 11990000
+     }
+   }
+@@ -382701,17 +382736,17 @@
+     formSettings {
+       pokemon: POLTCHAGEIST
+       forms {
+-        form: 2871
++        form: POLTCHAGEIST_COUNTERFEIT
+         sillouetteObfuscationGroup {
+           groupNumber: 1
+-          overrideDisplayForm: 2871
++          overrideDisplayForm: POLTCHAGEIST_COUNTERFEIT
+         }
+       }
+       forms {
+-        form: 2872
++        form: POLTCHAGEIST_ARTISAN
+         sillouetteObfuscationGroup {
+           groupNumber: 1
+-          overrideDisplayForm: 2871
++          overrideDisplayForm: POLTCHAGEIST_COUNTERFEIT
+         }
+       }
+     }
+@@ -382724,10 +382759,10 @@
+     formSettings {
+       pokemon: SINISTCHA
+       forms {
+-        form: 2873
++        form: SINISTCHA_UNREMARKABLE
+       }
+       forms {
+-        form: 2874
++        form: SINISTCHA_MASTERPIECE
+       }
+     }
+   }
+@@ -383274,7 +383309,7 @@
+       evolutionBranch {
+         evolution: SINISTCHA
+         candyCost: 50
+-        form: 2873
++        form: SINISTCHA_UNREMARKABLE
+       }
+       modelScaleV2: 2
+       buddyScale: 19
+@@ -384081,7 +384116,7 @@
+     template_id: "LC_2025_AMSTERDAM_CITYSAFARI_001"
+     locationCardSettings {
+       locationCard: LC_2025_AMSTERDAM_CITYSAFARI_001
+-      imageUrl: "lc_CitySafari2025_amsterdam"
++      imageUrl: "lc_citysafari2025_amsterdam"
+     }
+   }
+ }
+@@ -384091,7 +384126,7 @@
+     template_id: "LC_2025_BANGKOK_CITYSAFARI_001"
+     locationCardSettings {
+       locationCard: LC_2025_BANGKOK_CITYSAFARI_001
+-      imageUrl: "lc_CitySafari2025_bangkok"
++      imageUrl: "lc_citysafari2025_bangkok"
+     }
+   }
+ }
+@@ -384101,7 +384136,7 @@
+     template_id: "LC_2025_CANCUN_CITYSAFARI_001"
+     locationCardSettings {
+       locationCard: LC_2025_CANCUN_CITYSAFARI_001
+-      imageUrl: "lc_CitySafari2025_cancun"
++      imageUrl: "lc_citysafari2025_cancun"
+     }
+   }
+ }
+@@ -384111,7 +384146,7 @@
+     template_id: "LC_2025_VALENCIA_CITYSAFARI_001"
+     locationCardSettings {
+       locationCard: LC_2025_VALENCIA_CITYSAFARI_001
+-      imageUrl: "lc_CitySafari2025_valencia"
++      imageUrl: "lc_citysafari2025_valencia"
+     }
+   }
+ }
+@@ -384121,7 +384156,7 @@
+     template_id: "LC_2025_VANCOUVER_CITYSAFARI_001"
+     locationCardSettings {
+       locationCard: LC_2025_VANCOUVER_CITYSAFARI_001
+-      imageUrl: "lc_CitySafari2025_vancouver"
++      imageUrl: "lc_citysafari2025_vancouver"
+     }
+   }
+ }
+@@ -384144,22 +384179,22 @@
+         headerMessage: "form_counterfeit"
+         evolutionInfos {
+           pokemon: POLTCHAGEIST
+-          form: 2871
++          form: POLTCHAGEIST_COUNTERFEIT
+         }
+         evolutionInfos {
+           pokemon: SINISTCHA
+-          form: 2873
++          form: SINISTCHA_UNREMARKABLE
+         }
+       }
+       evolutionChains {
+         headerMessage: "form_masterpiece"
+         evolutionInfos {
+           pokemon: POLTCHAGEIST
+-          form: 2872
++          form: POLTCHAGEIST_ARTISAN
+         }
+         evolutionInfos {
+           pokemon: SINISTCHA
+-          form: 2874
++          form: SINISTCHA_MASTERPIECE
+         }
+       }
+     }
+@@ -384175,22 +384210,22 @@
+         headerMessage: "form_artisan"
+         evolutionInfos {
+           pokemon: POLTCHAGEIST
+-          form: 2871
++          form: POLTCHAGEIST_COUNTERFEIT
+         }
+         evolutionInfos {
+           pokemon: SINISTCHA
+-          form: 2873
++          form: SINISTCHA_UNREMARKABLE
+         }
+       }
+       evolutionChains {
+         headerMessage: "form_masterpiece"
+         evolutionInfos {
+           pokemon: POLTCHAGEIST
+-          form: 2872
++          form: POLTCHAGEIST_ARTISAN
+         }
+         evolutionInfos {
+           pokemon: SINISTCHA
+-          form: 2874
++          form: SINISTCHA_MASTERPIECE
+         }
+       }
+     }
+@@ -384202,7 +384237,7 @@
+     template_id: "EXTENDED_V1012_POKEMON_POLTCHAGEIST_ARTISAN"
+     pokemonExtendedSettings {
+       uniqueId: POLTCHAGEIST
+-      form: 2872
++      form: POLTCHAGEIST_ARTISAN
+       sizeSettings {
+         xxsLowerBound: 0.049
+         xsLowerBound: 0.05
+@@ -384220,7 +384255,7 @@
+     template_id: "EXTENDED_V1012_POKEMON_POLTCHAGEIST_COUNTERFEIT"
+     pokemonExtendedSettings {
+       uniqueId: POLTCHAGEIST
+-      form: 2871
++      form: POLTCHAGEIST_COUNTERFEIT
+       sizeSettings {
+         xxsLowerBound: 0.049
+         xsLowerBound: 0.05
+@@ -384238,7 +384273,7 @@
+     template_id: "EXTENDED_V1013_POKEMON_SINISTCHA_MASTERPIECE"
+     pokemonExtendedSettings {
+       uniqueId: SINISTCHA
+-      form: 2874
++      form: SINISTCHA_MASTERPIECE
+       sizeSettings {
+         xxsLowerBound: 0.098
+         xsLowerBound: 0.1
+@@ -384256,7 +384291,7 @@
+     template_id: "EXTENDED_V1013_POKEMON_SINISTCHA_UNREMARKABLE"
+     pokemonExtendedSettings {
+       uniqueId: SINISTCHA
+-      form: 2873
++      form: SINISTCHA_UNREMARKABLE
+       sizeSettings {
+         xxsLowerBound: 0.098
+         xsLowerBound: 0.1
+@@ -384362,10 +384397,10 @@
+       evolutionBranch {
+         evolution: SINISTCHA
+         candyCost: 400
+-        form: 2874
++        form: SINISTCHA_MASTERPIECE
+       }
+       modelScaleV2: 2
+-      form: 2872
++      form: POLTCHAGEIST_ARTISAN
+       buddyScale: 19
+       third_move {
+         stardustToUnlock: 50000
+@@ -384427,10 +384462,10 @@
+       evolutionBranch {
+         evolution: SINISTCHA
+         candyCost: 50
+-        form: 2873
++        form: SINISTCHA_UNREMARKABLE
+       }
+       modelScaleV2: 2
+-      form: 2871
++      form: POLTCHAGEIST_COUNTERFEIT
+       buddyScale: 19
+       third_move {
+         stardustToUnlock: 50000
+@@ -384493,7 +384528,7 @@
+       kmBuddyDistance: 3
+       modelHeight: 0.32
+       modelScaleV2: 2.2
+-      form: 2874
++      form: SINISTCHA_MASTERPIECE
+       buddyScale: 19
+       third_move {
+         stardustToUnlock: 50000
+@@ -384556,7 +384591,7 @@
+       kmBuddyDistance: 3
+       modelHeight: 0.32
+       modelScaleV2: 2.2
+-      form: 2873
++      form: SINISTCHA_UNREMARKABLE
+       buddyScale: 19
+       third_move {
+         stardustToUnlock: 50000
+@@ -384628,13 +384663,1851 @@
+     }
+   }
+ }
+-batch_id: 1758561568664
+-experiment_id: 4
+-experiment_id: 11
+-experiment_id: 21
++template {
++  template_id: "EXTENDED_V0011_POKEMON_METAPOD_NORMAL"
++  data {
++    template_id: "EXTENDED_V0011_POKEMON_METAPOD_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: METAPOD
++      form: METAPOD_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.343
++        xsLowerBound: 0.35
++        mLowerBound: 0.525
++        mUpperBound: 0.875
++        xlUpperBound: 1.05
++        xxlUpperBound: 1.225
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 19.04
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 38.08
++        }
++        maxStationVisualSettings {
++          scale: 2.59
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0012_POKEMON_BUTTERFREE_NORMAL"
++  data {
++    template_id: "EXTENDED_V0012_POKEMON_BUTTERFREE_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: BUTTERFREE
++      form: BUTTERFREE_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.539
++        xsLowerBound: 0.55
++        mLowerBound: 0.825
++        mUpperBound: 1.375
++        xlUpperBound: 1.65
++        xxlUpperBound: 1.925
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 18.04
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 36.08
++        }
++        maxStationVisualSettings {
++          scale: 2.45
++        }
++      }
++      breadOverrides {
++        breadMode: BREAD_DOUGH_MODE
++        averageHeightM: 17
++        camera {
++          cylinderRadiusM: 1
++          cylinderHeightM: 1
++          cylinderGroundM: 0.7
++        }
++        modelScaleV2: 1
++        modelHeight: 1
++        maxEncounterVisualSettings {
++          scale: 14.31
++          cameraDistance: 40
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 28.62
++        }
++        maxStationVisualSettings {
++          scale: 1.95
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 0.9
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0092_POKEMON_GASTLY_NORMAL"
++  data {
++    template_id: "EXTENDED_V0092_POKEMON_GASTLY_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: GASTLY
++      form: GASTLY_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.637
++        xsLowerBound: 0.65
++        mLowerBound: 0.975
++        mUpperBound: 1.625
++        xlUpperBound: 1.95
++        xxlUpperBound: 2.6
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 14.69
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 29.38
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0093_POKEMON_HAUNTER_NORMAL"
++  data {
++    template_id: "EXTENDED_V0093_POKEMON_HAUNTER_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: HAUNTER
++      form: HAUNTER_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.784
++        xsLowerBound: 0.8
++        mLowerBound: 1.2
++        mUpperBound: 2
++        xlUpperBound: 2.4
++        xxlUpperBound: 3.2
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 9.76
++          cameraDistance: 38.74
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 19.51
++        }
++        maxStationVisualSettings {
++          scale: 1.33
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0113_POKEMON_CHANSEY_NORMAL"
++  data {
++    template_id: "EXTENDED_V0113_POKEMON_CHANSEY_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: CHANSEY
++      form: CHANSEY_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.539
++        xsLowerBound: 0.55
++        mLowerBound: 0.825
++        mUpperBound: 1.375
++        xlUpperBound: 1.65
++        xxlUpperBound: 1.925
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 15.58
++          cameraDistance: 32.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 31.15
++        }
++        maxStationVisualSettings {
++          scale: 2.12
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0242_POKEMON_BLISSEY_NORMAL"
++  data {
++    template_id: "EXTENDED_V0242_POKEMON_BLISSEY_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: BLISSEY
++      form: BLISSEY_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.735
++        xsLowerBound: 0.75
++        mLowerBound: 1.125
++        mUpperBound: 1.875
++        xlUpperBound: 2.25
++        xxlUpperBound: 2.625
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 12.06
++          cameraDistance: 32.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 24.12
++        }
++        maxStationVisualSettings {
++          scale: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0320_POKEMON_WAILMER_NORMAL"
++  data {
++    template_id: "EXTENDED_V0320_POKEMON_WAILMER_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: WAILMER
++      form: WAILMER_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.9849
++        xsLowerBound: 1.005
++        mLowerBound: 1.5075
++        mUpperBound: 2.5125
++        xlUpperBound: 3.015
++        xxlUpperBound: 4.02
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 2
++          cameraDistance: 12
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 9
++        }
++        maxStationVisualSettings {
++          scale: 1
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 0.68
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0321_POKEMON_WAILORD_NORMAL"
++  data {
++    template_id: "EXTENDED_V0321_POKEMON_WAILORD_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: WAILORD
++      form: WAILORD_NORMAL
++      sizeSettings {
++        xxsLowerBound: 7.105
++        xsLowerBound: 7.25
++        mLowerBound: 10.875
++        mUpperBound: 18.125
++        xlUpperBound: 21.75
++        xxlUpperBound: 29
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 2.1
++          cameraDistance: 29
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 5.8
++          yOffset: -15
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: 10
++          yOffset: 15
++        }
++        maxStationVisualSettings {
++          scale: 0.26
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0440_POKEMON_HAPPINY_NORMAL"
++  data {
++    template_id: "EXTENDED_V0440_POKEMON_HAPPINY_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: HAPPINY
++      form: HAPPINY_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.294
++        xsLowerBound: 0.3
++        mLowerBound: 0.45
++        mUpperBound: 0.75
++        xlUpperBound: 0.9
++        xxlUpperBound: 1.05
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0529_POKEMON_DRILBUR_NORMAL"
++  data {
++    template_id: "EXTENDED_V0529_POKEMON_DRILBUR_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: DRILBUR
++      form: DRILBUR_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.147
++        xsLowerBound: 0.15
++        mLowerBound: 0.225
++        mUpperBound: 0.375
++        xlUpperBound: 0.45
++        xxlUpperBound: 0.525
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 39.2
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 78.4
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 5.33
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0530_POKEMON_EXCADRILL_NORMAL"
++  data {
++    template_id: "EXTENDED_V0530_POKEMON_EXCADRILL_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: EXCADRILL
++      form: EXCADRILL_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.343
++        xsLowerBound: 0.35
++        mLowerBound: 0.525
++        mUpperBound: 0.875
++        xlUpperBound: 1.05
++        xxlUpperBound: 1.225
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 24.16
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 48.31
++        }
++        maxStationVisualSettings {
++          scale: 3.29
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0615_POKEMON_CRYOGONAL_NORMAL"
++  data {
++    template_id: "EXTENDED_V0615_POKEMON_CRYOGONAL_NORMAL"
++    pokemonExtendedSettings {
++      uniqueId: CRYOGONAL
++      form: CRYOGONAL_NORMAL
++      sizeSettings {
++        xxsLowerBound: 0.539
++        xsLowerBound: 0.55
++        mLowerBound: 0.825
++        mUpperBound: 1.375
++        xlUpperBound: 1.65
++        xxlUpperBound: 2.2
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 14.64
++          cameraDistance: 35
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 29.28
++        }
++        maxStationVisualSettings {
++          scale: 1.35
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_dudunsparceitem_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_dudunsparceitem_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_dudunsparceitem_0_icon"
++      displayStringId: "avatar_n_shirt_dudunsparce"
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0010_POKEMON_CATERPIE_NORMAL"
++  data {
++    template_id: "SPAWN_V0010_POKEMON_CATERPIE_NORMAL"
++    genderSettings {
++      pokemon: CATERPIE
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: CATERPIE_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0011_POKEMON_METAPOD_NORMAL"
++  data {
++    template_id: "SPAWN_V0011_POKEMON_METAPOD_NORMAL"
++    genderSettings {
++      pokemon: METAPOD
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: METAPOD_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0012_POKEMON_BUTTERFREE_NORMAL"
++  data {
++    template_id: "SPAWN_V0012_POKEMON_BUTTERFREE_NORMAL"
++    genderSettings {
++      pokemon: BUTTERFREE
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: BUTTERFREE_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0092_POKEMON_GASTLY_NORMAL"
++  data {
++    template_id: "SPAWN_V0092_POKEMON_GASTLY_NORMAL"
++    genderSettings {
++      pokemon: GASTLY
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: GASTLY_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0093_POKEMON_HAUNTER_NORMAL"
++  data {
++    template_id: "SPAWN_V0093_POKEMON_HAUNTER_NORMAL"
++    genderSettings {
++      pokemon: HAUNTER
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: HAUNTER_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0113_POKEMON_CHANSEY_NORMAL"
++  data {
++    template_id: "SPAWN_V0113_POKEMON_CHANSEY_NORMAL"
++    genderSettings {
++      pokemon: CHANSEY
++      gender {
++        femalePercent: 1
++      }
++      form: CHANSEY_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0242_POKEMON_BLISSEY_NORMAL"
++  data {
++    template_id: "SPAWN_V0242_POKEMON_BLISSEY_NORMAL"
++    genderSettings {
++      pokemon: BLISSEY
++      gender {
++        femalePercent: 1
++      }
++      form: BLISSEY_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0320_POKEMON_WAILMER_NORMAL"
++  data {
++    template_id: "SPAWN_V0320_POKEMON_WAILMER_NORMAL"
++    genderSettings {
++      pokemon: WAILMER
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: WAILMER_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0321_POKEMON_WAILORD_NORMAL"
++  data {
++    template_id: "SPAWN_V0321_POKEMON_WAILORD_NORMAL"
++    genderSettings {
++      pokemon: WAILORD
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: WAILORD_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0440_POKEMON_HAPPINY_NORMAL"
++  data {
++    template_id: "SPAWN_V0440_POKEMON_HAPPINY_NORMAL"
++    genderSettings {
++      pokemon: HAPPINY
++      gender {
++        femalePercent: 1
++      }
++      form: HAPPINY_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0529_POKEMON_DRILBUR_NORMAL"
++  data {
++    template_id: "SPAWN_V0529_POKEMON_DRILBUR_NORMAL"
++    genderSettings {
++      pokemon: DRILBUR
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: DRILBUR_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0530_POKEMON_EXCADRILL_NORMAL"
++  data {
++    template_id: "SPAWN_V0530_POKEMON_EXCADRILL_NORMAL"
++    genderSettings {
++      pokemon: EXCADRILL
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: EXCADRILL_NORMAL
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0615_POKEMON_CRYOGONAL_NORMAL"
++  data {
++    template_id: "SPAWN_V0615_POKEMON_CRYOGONAL_NORMAL"
++    genderSettings {
++      pokemon: CRYOGONAL
++      gender {
++        genderlessPercent: 1
++      }
++      form: CRYOGONAL_NORMAL
++    }
++  }
++}
++template {
++  template_id: "V0010_POKEMON_CATERPIE_NORMAL"
++  data {
++    template_id: "V0010_POKEMON_CATERPIE_NORMAL"
++    pokemonSettings {
++      pokemonId: CATERPIE
++      modelScale: 2.04
++      type: POKEMON_TYPE_BUG
++      camera {
++        diskRadiusM: 0.459
++        cylinderRadiusM: 0.5
++        cylinderHeightM: 0.2
++      }
++      encounter {
++        collisionRadiusM: 0.102
++        collisionHeightM: 0.306
++        collisionHeadRadiusM: 0.153
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.295
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
++      }
++      stats {
++        baseStamina: 128
++        baseAttack: 55
++        baseDefense: 55
++      }
++      quickMoves: BUG_BITE_FAST
++      quickMoves: TACKLE_FAST
++      cinematicMoves: STRUGGLE
++      animationTime: 0
++      animationTime: 0.6667
++      animationTime: 1.6667
++      animationTime: 1.6667
++      animationTime: 0
++      animationTime: 1.8333
++      animationTime: 1.6667
++      animationTime: 0
++      evolutionIds: METAPOD
++      evolutionPips: 1
++      pokedexHeightM: 0.3
++      pokedexWeightKg: 2.9
++      heightStdDev: 0.0375
++      weightStdDev: 0.3625
++      familyId: FAMILY_CATERPIE
++      candyToEvolve: 12
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.19
++      evolutionBranch {
++        evolution: METAPOD
++        candyCost: 12
++        form: METAPOD_NORMAL
++        candyCostPurified: 10
++      }
++      modelScaleV2: 1.63
++      form: CATERPIE_NORMAL
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
++      buddyGroupNumber: 1
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0011_POKEMON_METAPOD_NORMAL"
++  data {
++    template_id: "V0011_POKEMON_METAPOD_NORMAL"
++    pokemonSettings {
++      pokemonId: METAPOD
++      modelScale: 1.17
++      type: POKEMON_TYPE_BUG
++      camera {
++        diskRadiusM: 0.5265
++        cylinderRadiusM: 0.351
++        cylinderHeightM: 0.6435
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.117
++        collisionHeightM: 0.6435
++        collisionHeadRadiusM: 0.1755
++        movementTimerS: 3600
++        attackTimerS: 3600
++        bonusCandyCaptureReward: 2
++        bonusStardustCaptureReward: 200
++        attackProbability: 0.1
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.6325
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.25
++        shadowAttackProbability: 0.7
++      }
++      stats {
++        baseStamina: 137
++        baseAttack: 45
++        baseDefense: 80
++      }
++      quickMoves: BUG_BITE_FAST
++      quickMoves: TACKLE_FAST
++      cinematicMoves: STRUGGLE
++      animationTime: 1.3333
++      animationTime: 0.6667
++      animationTime: 1.8333
++      animationTime: 1.6667
++      animationTime: 0
++      animationTime: 1.5667
++      animationTime: 2
++      animationTime: 0
++      evolutionIds: BUTTERFREE
++      evolutionPips: 1
++      pokedexHeightM: 0.7
++      pokedexWeightKg: 9.9
++      parentPokemonId: CATERPIE
++      heightStdDev: 0.0875
++      weightStdDev: 1.2375
++      familyId: FAMILY_CATERPIE
++      candyToEvolve: 50
++      kmBuddyDistance: 1
++      modelHeight: 0.7
++      evolutionBranch {
++        evolution: BUTTERFREE
++        candyCost: 50
++        form: BUTTERFREE_NORMAL
++        candyCostPurified: 45
++      }
++      modelScaleV2: 1
++      form: METAPOD_NORMAL
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
++      buddyGroupNumber: 2
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0012_POKEMON_BUTTERFREE_NORMAL"
++  data {
++    template_id: "V0012_POKEMON_BUTTERFREE_NORMAL"
++    pokemonSettings {
++      pokemonId: BUTTERFREE
++      modelScale: 1.11
++      type: POKEMON_TYPE_BUG
++      type2: POKEMON_TYPE_FLYING
++      camera {
++        diskRadiusM: 0.999
++        cylinderRadiusM: 0.666
++        cylinderHeightM: 1.11
++        cylinderGroundM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.1665
++        collisionHeightM: 0.555
++        collisionHeadRadiusM: 0.1776
++        movementType: MOVEMENT_FLYING
++        movementTimerS: 6
++        jumpTimeS: 1
++        attackTimerS: 17
++        bonusCandyCaptureReward: 7
++        bonusStardustCaptureReward: 400
++        attackProbability: 0.1
++        dodgeProbability: 0.2
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 4.995
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        bonusXlCandyCaptureReward: 2
++        shadowBaseCaptureRate: 0.125
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
++      }
++      stats {
++        baseStamina: 155
++        baseAttack: 167
++        baseDefense: 137
++      }
++      quickMoves: STRUGGLE_BUG_FAST
++      quickMoves: CONFUSION_FAST
++      cinematicMoves: BUG_BUZZ
++      cinematicMoves: PSYCHIC
++      cinematicMoves: SIGNAL_BEAM
++      animationTime: 2
++      animationTime: 0.6667
++      animationTime: 1.7333
++      animationTime: 0.6667
++      animationTime: 0
++      animationTime: 2.4667
++      animationTime: 2.1333
++      animationTime: 0
++      evolutionPips: 1
++      pokedexHeightM: 1.1
++      pokedexWeightKg: 32
++      parentPokemonId: METAPOD
++      heightStdDev: 0.1375
++      weightStdDev: 4
++      familyId: FAMILY_CATERPIE
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_FLYING
++      modelHeight: 0.95
++      modelScaleV2: 1.14
++      form: BUTTERFREE_NORMAL
++      buddyOffsetMale: 4.4
++      buddyOffsetMale: 17.2
++      buddyOffsetMale: 39.1
++      buddyOffsetFemale: 4.4
++      buddyOffsetFemale: 17.2
++      buddyOffsetFemale: 39.1
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
++      buddyGroupNumber: 4
++      eliteQuickMove: BUG_BITE_FAST
++      useIrisFlyingPlacement: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0092_POKEMON_GASTLY_NORMAL"
++  data {
++    template_id: "V0092_POKEMON_GASTLY_NORMAL"
++    pokemonSettings {
++      pokemonId: GASTLY
++      modelScale: 1
++      type: POKEMON_TYPE_GHOST
++      type2: POKEMON_TYPE_POISON
++      camera {
++        diskRadiusM: 0.675
++        cylinderRadiusM: 0.8
++        cylinderHeightM: 0.8
++        cylinderGroundM: 0.6
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.4
++        collisionHeightM: 0.6
++        collisionHeadRadiusM: 0.3
++        movementType: MOVEMENT_PSYCHIC
++        movementTimerS: 29
++        jumpTimeS: 1
++        attackTimerS: 10
++        attackProbability: 0.1
++        dodgeProbability: 0.2
++        dodgeDurationS: 2
++        dodgeDistance: 1
++        cameraDistance: 4.5
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
++      }
++      stats {
++        baseStamina: 102
++        baseAttack: 186
++        baseDefense: 67
++      }
++      quickMoves: LICK_FAST
++      quickMoves: ASTONISH_FAST
++      cinematicMoves: NIGHT_SHADE
++      cinematicMoves: DARK_PULSE
++      cinematicMoves: SLUDGE_BOMB
++      animationTime: 0
++      animationTime: 0.6667
++      animationTime: 1.6667
++      animationTime: 1
++      animationTime: 0
++      animationTime: 2.1333
++      animationTime: 2.1333
++      animationTime: 0
++      evolutionIds: HAUNTER
++      evolutionPips: 1
++      pokedexHeightM: 1.3
++      pokedexWeightKg: 0.1
++      heightStdDev: 0.1625
++      weightStdDev: 0.0125
++      familyId: FAMILY_GASTLY
++      candyToEvolve: 25
++      kmBuddyDistance: 3
++      buddy_size: BUDDY_FLYING
++      modelHeight: 1
++      evolutionBranch {
++        evolution: HAUNTER
++        candyCost: 25
++        form: HAUNTER_NORMAL
++        candyCostPurified: 22
++      }
++      modelScaleV2: 1
++      form: GASTLY_NORMAL
++      buddyOffsetMale: 25
++      buddyOffsetMale: 3.31
++      buddyOffsetMale: 29.73
++      buddyOffsetFemale: 25
++      buddyOffsetFemale: 3.31
++      buddyOffsetFemale: 29.73
++      buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 100
++      buddyPortraitOffset: 0
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
++      buddyGroupNumber: 5
++      eliteQuickMove: SUCKER_PUNCH_FAST
++      eliteCinematicMove: OMINOUS_WIND
++      buddyWalkedMegaEnergyAward: 15
++      useIrisFlyingPlacement: true
++      irisFlyingHeightLimitMeters: 3
++      ibfc {
++      }
++      breadTierGroup: GROUP_2
++    }
++  }
++}
++template {
++  template_id: "V0093_POKEMON_HAUNTER_NORMAL"
++  data {
++    template_id: "V0093_POKEMON_HAUNTER_NORMAL"
++    pokemonSettings {
++      pokemonId: HAUNTER
++      modelScale: 0.68
++      type: POKEMON_TYPE_GHOST
++      type2: POKEMON_TYPE_POISON
++      camera {
++        diskRadiusM: 0.765
++        cylinderRadiusM: 1.5
++        cylinderHeightM: 2
++        cylinderGroundM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.5
++        collisionHeightM: 1.7
++        collisionHeadRadiusM: 0.442
++        movementType: MOVEMENT_PSYCHIC
++        movementTimerS: 23
++        jumpTimeS: 1
++        attackTimerS: 8
++        bonusCandyCaptureReward: 2
++        bonusStardustCaptureReward: 200
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 2
++        dodgeDistance: 0.8
++        cameraDistance: 5.625
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.15
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
++      }
++      stats {
++        baseStamina: 128
++        baseAttack: 223
++        baseDefense: 107
++      }
++      quickMoves: SHADOW_CLAW_FAST
++      quickMoves: ASTONISH_FAST
++      cinematicMoves: SHADOW_PUNCH
++      cinematicMoves: DARK_PULSE
++      cinematicMoves: SLUDGE_BOMB
++      cinematicMoves: SHADOW_BALL
++      cinematicMoves: ICE_PUNCH
++      animationTime: 2.1667
++      animationTime: 0.6667
++      animationTime: 1.6667
++      animationTime: 0.6667
++      animationTime: 0
++      animationTime: 2.3333
++      animationTime: 2
++      animationTime: 0
++      evolutionIds: GENGAR
++      evolutionPips: 1
++      pokedexHeightM: 1.6
++      pokedexWeightKg: 0.1
++      parentPokemonId: GASTLY
++      heightStdDev: 0.2
++      weightStdDev: 0.0125
++      familyId: FAMILY_GASTLY
++      candyToEvolve: 100
++      kmBuddyDistance: 3
++      buddy_size: BUDDY_FLYING
++      modelHeight: 1.87
++      evolutionBranch {
++        evolution: GENGAR
++        candyCost: 100
++        form: GENGAR_NORMAL
++        noCandyCostViaTrade: true
++        candyCostPurified: 90
++      }
++      modelScaleV2: 0.81
++      form: HAUNTER_NORMAL
++      buddyOffsetMale: 25
++      buddyOffsetMale: 0
++      buddyOffsetMale: -25
++      buddyOffsetFemale: 25
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: -25
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
++      buddyGroupNumber: 5
++      eliteQuickMove: LICK_FAST
++      buddyWalkedMegaEnergyAward: 15
++      useIrisFlyingPlacement: true
++      irisFlyingHeightLimitMeters: 2
++      ibfc {
++      }
++      breadTierGroup: GROUP_2
++    }
++  }
++}
++template {
++  template_id: "V0113_POKEMON_CHANSEY_NORMAL"
++  data {
++    template_id: "V0113_POKEMON_CHANSEY_NORMAL"
++    pokemonSettings {
++      pokemonId: CHANSEY
++      modelScale: 0.96
++      type: POKEMON_TYPE_NORMAL
++      camera {
++        diskRadiusM: 0.72
++        cylinderRadiusM: 0.7
++        cylinderHeightM: 1.15
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.48
++        collisionHeightM: 1.056
++        collisionHeadRadiusM: 0.24
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 3
++        jumpTimeS: 1
++        attackTimerS: 8
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 4.125
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 487
++        baseAttack: 60
++        baseDefense: 128
++      }
++      quickMoves: POUND_FAST
++      quickMoves: ZEN_HEADBUTT_FAST
++      cinematicMoves: PSYCHIC
++      cinematicMoves: HYPER_BEAM
++      cinematicMoves: DAZZLING_GLEAM
++      animationTime: 2.1667
++      animationTime: 0.6667
++      animationTime: 2
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 2.1667
++      animationTime: 1.7333
++      animationTime: 1.66666698
++      evolutionPips: 1
++      pokedexHeightM: 1.1
++      pokedexWeightKg: 34.6
++      parentPokemonId: HAPPINY
++      heightStdDev: 0.1375
++      weightStdDev: 4.325
++      familyId: FAMILY_CHANSEY
++      kmBuddyDistance: 5
++      buddy_size: BUDDY_BIG
++      modelHeight: 1.1
++      evolutionBranch {
++        evolution: BLISSEY
++        candyCost: 50
++        form: BLISSEY_NORMAL
++      }
++      modelScaleV2: 1
++      form: CHANSEY_NORMAL
++      buddyOffsetMale: 20
++      buddyOffsetMale: 0
++      buddyOffsetMale: 50.6
++      buddyOffsetFemale: 20
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 50.6
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 75000
++        candyToUnlock: 75
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 3
++      ibfc {
++      }
++      breadTierGroup: GROUP_3
++    }
++  }
++}
++template {
++  template_id: "V0242_POKEMON_BLISSEY_NORMAL"
++  data {
++    template_id: "V0242_POKEMON_BLISSEY_NORMAL"
++    pokemonSettings {
++      pokemonId: BLISSEY
++      modelScale: 0.84
++      type: POKEMON_TYPE_NORMAL
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 1
++        cylinderHeightM: 1.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.7
++        collisionHeightM: 0.91
++        collisionHeadRadiusM: 0.6
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 11
++        jumpTimeS: 1.2
++        attackTimerS: 20
++        bonusCandyCaptureReward: 2
++        bonusStardustCaptureReward: 200
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 5.25
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        bonusXlCandyCaptureReward: 1
++      }
++      stats {
++        baseStamina: 496
++        baseAttack: 129
++        baseDefense: 169
++      }
++      quickMoves: POUND_FAST
++      quickMoves: ZEN_HEADBUTT_FAST
++      cinematicMoves: PSYCHIC
++      cinematicMoves: HYPER_BEAM
++      cinematicMoves: DAZZLING_GLEAM
++      animationTime: 1.3333
++      animationTime: 0.6667
++      animationTime: 1.6667
++      animationTime: 2
++      animationTime: 0
++      animationTime: 2
++      animationTime: 3
++      animationTime: 3
++      evolutionPips: 1
++      pokedexHeightM: 1.5
++      pokedexWeightKg: 46.8
++      parentPokemonId: CHANSEY
++      heightStdDev: 0.1875
++      weightStdDev: 5.85
++      familyId: FAMILY_CHANSEY
++      kmBuddyDistance: 5
++      buddy_size: BUDDY_BIG
++      modelHeight: 1.5
++      modelScaleV2: 1
++      form: BLISSEY_NORMAL
++      buddyOffsetMale: 15
++      buddyOffsetMale: 0
++      buddyOffsetMale: 20.8
++      buddyOffsetFemale: 15
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 20.8
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 75000
++        candyToUnlock: 75
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 3
++      eliteCinematicMove: WILD_CHARGE
++      ibfc {
++      }
++      breadTierGroup: GROUP_3
++    }
++  }
++}
++template {
++  template_id: "V0320_POKEMON_WAILMER_NORMAL"
++  data {
++    template_id: "V0320_POKEMON_WAILMER_NORMAL"
++    pokemonSettings {
++      pokemonId: WAILMER
++      modelScale: 0.6
++      type: POKEMON_TYPE_WATER
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 2
++        cylinderHeightM: 2.4
++        cylinderGroundM: 0.4
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.4
++        collisionHeightM: 0.6
++        collisionHeadRadiusM: 0.25
++        movementType: MOVEMENT_HOVERING
++        movementTimerS: 11
++        jumpTimeS: 1.1
++        attackTimerS: 20
++        attackProbability: 0.05
++        dodgeProbability: 0.05
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 4.5
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
++      }
++      stats {
++        baseStamina: 277
++        baseAttack: 136
++        baseDefense: 68
++      }
++      quickMoves: SPLASH_FAST
++      quickMoves: WATER_GUN_FAST
++      quickMoves: ROLLOUT_FAST
++      cinematicMoves: HEAVY_SLAM
++      cinematicMoves: WATER_PULSE
++      cinematicMoves: BODY_SLAM
++      cinematicMoves: SCALD
++      animationTime: 1.3333
++      animationTime: 0.6667
++      animationTime: 1.6667
++      animationTime: 2
++      animationTime: 0
++      animationTime: 2
++      animationTime: 3
++      animationTime: 3
++      evolutionPips: 1
++      pokedexHeightM: 2.01
++      pokedexWeightKg: 130
++      heightStdDev: 0.25125
++      weightStdDev: 16.25
++      familyId: FAMILY_WAILMER
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_BIG
++      modelHeight: 1.65405405
++      evolutionBranch {
++        evolution: WAILORD
++        candyCost: 400
++        form: WAILORD_NORMAL
++        candyCostPurified: 360
++      }
++      modelScaleV2: 0.74
++      form: WAILMER_NORMAL
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
++      buddyGroupNumber: 3
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0321_POKEMON_WAILORD_NORMAL"
++  data {
++    template_id: "V0321_POKEMON_WAILORD_NORMAL"
++    pokemonSettings {
++      pokemonId: WAILORD
++      modelScale: 0.18
++      type: POKEMON_TYPE_WATER
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 8
++        cylinderHeightM: 6
++        cylinderGroundM: 0.2
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 3
++        collisionHeightM: 0.6
++        collisionHeadRadiusM: 5
++        movementTimerS: 11
++        jumpTimeS: 1.1
++        attackTimerS: 20
++        bonusCandyCaptureReward: 2
++        bonusStardustCaptureReward: 200
++        attackProbability: 0.05
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 6
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
++      }
++      stats {
++        baseStamina: 347
++        baseAttack: 175
++        baseDefense: 87
++      }
++      quickMoves: ZEN_HEADBUTT_FAST
++      quickMoves: WATER_GUN_FAST
++      quickMoves: ROLLOUT_FAST
++      cinematicMoves: SURF
++      cinematicMoves: BLIZZARD
++      cinematicMoves: HYPER_BEAM
++      cinematicMoves: SCALD
++      animationTime: 1.3333
++      animationTime: 0.6667
++      animationTime: 1.6667
++      animationTime: 2
++      animationTime: 0
++      animationTime: 2
++      animationTime: 3
++      animationTime: 3
++      evolutionPips: 1
++      pokedexHeightM: 14.5
++      pokedexWeightKg: 398
++      parentPokemonId: WAILMER
++      heightStdDev: 1.8125
++      weightStdDev: 49.75
++      familyId: FAMILY_WAILMER
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_BIG
++      modelHeight: 7
++      modelScaleV2: 0.33
++      form: WAILORD_NORMAL
++      buddyOffsetMale: 70
++      buddyOffsetMale: 0
++      buddyOffsetMale: 30
++      buddyOffsetFemale: 70
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 30
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      combatShoulderCameraAngle: -0.5
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0.7
++      isTradable: true
++      combatDefaultCameraAngle: 2
++      combatDefaultCameraAngle: 1.5
++      combatDefaultCameraAngle: 2
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: -3
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
++      buddyGroupNumber: 3
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0440_POKEMON_HAPPINY_NORMAL"
++  data {
++    template_id: "V0440_POKEMON_HAPPINY_NORMAL"
++    pokemonSettings {
++      pokemonId: HAPPINY
++      modelScale: 1.26
++      type: POKEMON_TYPE_NORMAL
++      camera {
++        diskRadiusM: 0.378
++        cylinderRadiusM: 0.252
++        cylinderHeightM: 0.6
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.23
++        collisionHeightM: 0.252
++        collisionHeadRadiusM: 0.23
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 0.9
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.25
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 225
++        baseAttack: 25
++        baseDefense: 77
++      }
++      quickMoves: POUND_FAST
++      quickMoves: ZEN_HEADBUTT_FAST
++      cinematicMoves: PSYCHIC
++      animationTime: 1.9
++      animationTime: 0.6667
++      animationTime: 1.8
++      animationTime: 1.7667
++      animationTime: 0
++      animationTime: 2.4
++      animationTime: 0.8667
++      animationTime: 0
++      evolutionPips: 1
++      pokedexHeightM: 0.6
++      pokedexWeightKg: 24.4
++      heightStdDev: 0.075
++      weightStdDev: 3.05
++      familyId: FAMILY_CHANSEY
++      candyToEvolve: 25
++      kmBuddyDistance: 5
++      modelHeight: 0.6
++      evolutionBranch {
++        evolution: CHANSEY
++        candyCost: 25
++        kmBuddyDistanceRequirement: 15
++        form: CHANSEY_NORMAL
++        questDisplay {
++          questRequirementTemplateId: "CHANSEY_EVOLUTION_QUEST"
++        }
++      }
++      modelScaleV2: 1
++      form: HAPPINY_NORMAL
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 2
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0529_POKEMON_DRILBUR_NORMAL"
++  data {
++    template_id: "V0529_POKEMON_DRILBUR_NORMAL"
++    pokemonSettings {
++      pokemonId: DRILBUR
++      modelScale: 1.26
++      type: POKEMON_TYPE_GROUND
++      camera {
++        diskRadiusM: 0.378
++        cylinderRadiusM: 0.31
++        cylinderHeightM: 0.32
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.09
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.05
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 0.8
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 4
++        dodgeDistance: 1
++        cameraDistance: 3
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
++      }
++      stats {
++        baseStamina: 155
++        baseAttack: 154
++        baseDefense: 85
++      }
++      quickMoves: SCRATCH_FAST
++      quickMoves: MUD_SLAP_FAST
++      cinematicMoves: ROCK_TOMB
++      cinematicMoves: DIG
++      cinematicMoves: DRILL_RUN
++      animationTime: 1.9
++      animationTime: 0.6667
++      animationTime: 1.8
++      animationTime: 1.7667
++      animationTime: 0
++      animationTime: 2.4
++      animationTime: 0.8667
++      animationTime: 0
++      evolutionPips: 1
++      pokedexHeightM: 0.3
++      pokedexWeightKg: 8.5
++      heightStdDev: 0.0375
++      weightStdDev: 1.0625
++      familyId: FAMILY_DRILBUR
++      candyToEvolve: 25
++      kmBuddyDistance: 3
++      modelHeight: 0.3
++      evolutionBranch {
++        evolution: EXCADRILL
++        candyCost: 50
++        form: EXCADRILL_NORMAL
++        candyCostPurified: 45
++      }
++      modelScaleV2: 1.27
++      form: DRILBUR_NORMAL
++      buddyOffsetMale: 6.7
++      buddyOffsetMale: 0
++      buddyOffsetMale: -34.5
++      buddyOffsetFemale: 6.7
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: -34.5
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
++      buddyGroupNumber: 2
++      ibfc {
++      }
++      breadTierGroup: GROUP_2
++    }
++  }
++}
++template {
++  template_id: "V0530_POKEMON_EXCADRILL_NORMAL"
++  data {
++    template_id: "V0530_POKEMON_EXCADRILL_NORMAL"
++    pokemonSettings {
++      pokemonId: EXCADRILL
++      modelScale: 1.26
++      type: POKEMON_TYPE_GROUND
++      type2: POKEMON_TYPE_STEEL
++      camera {
++        diskRadiusM: 0.378
++        cylinderRadiusM: 0.46
++        cylinderHeightM: 0.68
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.17
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.12
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 0.85
++        attackTimerS: 29
++        bonusCandyCaptureReward: 2
++        bonusStardustCaptureReward: 200
++        attackProbability: 0.3
++        dodgeProbability: 0.45
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 3.5
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++        bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.1
++        shadowDodgeProbability: 0.15
++      }
++      stats {
++        baseStamina: 242
++        baseAttack: 255
++        baseDefense: 129
++      }
++      quickMoves: METAL_CLAW_FAST
++      quickMoves: MUD_SLAP_FAST
++      quickMoves: MUD_SHOT_FAST
++      cinematicMoves: ROCK_SLIDE
++      cinematicMoves: EARTHQUAKE
++      cinematicMoves: DRILL_RUN
++      cinematicMoves: IRON_HEAD
++      cinematicMoves: SCORCHING_SANDS
++      animationTime: 1.9
++      animationTime: 0.6667
++      animationTime: 1.8
++      animationTime: 1.7667
++      animationTime: 0
++      animationTime: 2.4
++      animationTime: 0.8667
++      animationTime: 0
++      evolutionPips: 1
++      pokedexHeightM: 0.7
++      pokedexWeightKg: 40.4
++      parentPokemonId: DRILBUR
++      heightStdDev: 0.0875
++      weightStdDev: 5.05
++      familyId: FAMILY_DRILBUR
++      candyToEvolve: 25
++      kmBuddyDistance: 3
++      modelHeight: 0.67
++      modelScaleV2: 1.12
++      form: EXCADRILL_NORMAL
++      buddyOffsetMale: 7.3
++      buddyOffsetMale: 0
++      buddyOffsetMale: -43.1
++      buddyOffsetFemale: 7.3
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: -43.1
++      buddyScale: 19
++      third_move {
++        stardustToUnlock: 50000
++        candyToUnlock: 50
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
++      buddyGroupNumber: 2
++      ibfc {
++      }
++      breadTierGroup: GROUP_2
++    }
++  }
++}
++template {
++  template_id: "V0615_POKEMON_CRYOGONAL_NORMAL"
++  data {
++    template_id: "V0615_POKEMON_CRYOGONAL_NORMAL"
++    pokemonSettings {
++      pokemonId: CRYOGONAL
++      modelScale: 1.26
++      type: POKEMON_TYPE_ICE
++      camera {
++        diskRadiusM: 0.378
++        cylinderRadiusM: 0.59
++        cylinderHeightM: 1.31
++        cylinderGroundM: 0.24
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.5
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.5
++        movementType: MOVEMENT_HOVERING
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 0.75
++        cameraDistance: 5
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 190
++        baseAttack: 190
++        baseDefense: 218
++      }
++      quickMoves: ICE_SHARD_FAST
++      quickMoves: FROST_BREATH_FAST
++      cinematicMoves: AURORA_BEAM
++      cinematicMoves: NIGHT_SLASH
++      cinematicMoves: SOLAR_BEAM
++      cinematicMoves: WATER_PULSE
++      cinematicMoves: TRIPLE_AXEL
++      animationTime: 1.9
++      animationTime: 0.6667
++      animationTime: 1.8
++      animationTime: 1.7667
++      animationTime: 0
++      animationTime: 2.4
++      animationTime: 0.8667
++      animationTime: 0
++      evolutionPips: 1
++      pokedexHeightM: 1.1
++      pokedexWeightKg: 148
++      heightStdDev: 0.1375
++      weightStdDev: 18.5
++      familyId: FAMILY_CRYOGONAL
++      candyToEvolve: 25
++      kmBuddyDistance: 5
++      modelHeight: 1.56
++      modelScaleV2: 1
++      form: CRYOGONAL_NORMAL
++      buddyOffsetMale: 8.7
++      buddyOffsetMale: 0
++      buddyOffsetMale: -34
++      buddyOffsetFemale: 8.7
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: -34
++      buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 830
++      third_move {
++        stardustToUnlock: 75000
++        candyToUnlock: 75
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 2
++      useIrisFlyingPlacement: true
++      irisFlyingHeightLimitMeters: 3
++      ibfc {
++      }
++      breadTierGroup: GROUP_3
++    }
++  }
++}
++batch_id: 1758668656998
+ experiment_id: 101
+ experiment_id: 170
+-experiment_id: 174
++experiment_id: 175
+ experiment_id: 300
+ experiment_id: 308
+ experiment_id: 320
+@@ -384654,15 +386527,16 @@
  experiment_id: 2600
  experiment_id: 2650
  experiment_id: 3032
-@@ -384660,28 +384660,21 @@
+-experiment_id: 3033
+ experiment_id: 3063
+ experiment_id: 3400
  experiment_id: 3500
- experiment_id: 3506
+-experiment_id: 3506
++experiment_id: 3507
  experiment_id: 3518
--experiment_id: 3522
-+experiment_id: 3523
+ experiment_id: 3523
  experiment_id: 3534
--experiment_id: 3537
  experiment_id: 3538
--experiment_id: 3564
--experiment_id: 3565
++experiment_id: 3550
++experiment_id: 3552
  experiment_id: 3566
--experiment_id: 3568
--experiment_id: 4949
--experiment_id: 4952
  experiment_id: 4998
  experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
--experiment_id: 5204
-+experiment_id: 5205
- experiment_id: 5506
- experiment_id: 5508
- experiment_id: 5510
- experiment_id: 6075
- experiment_id: 7067
- experiment_id: 7070
--experiment_id: 8782
- experiment_id: 8908
- experiment_id: 8910
- experiment_id: 8911
-@@ -384708,4 +384701,3 @@
+@@ -384696,7 +386570,6 @@
+ experiment_id: 3500041
+ experiment_id: 4610000
+ experiment_id: 4700000
+-experiment_id: 5000301
+ experiment_id: 6600417
  experiment_id: 6600418
  experiment_id: 6600421
- experiment_id: 6600423
--experiment_id: 6600433
