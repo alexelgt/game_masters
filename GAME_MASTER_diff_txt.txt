@@ -1,632 +1,356 @@
---- GAME_MASTER_old.txt	2025-09-24 09:07:01.174935625 +0200
-+++ GAME_MASTER.txt	2025-09-25 19:20:34.734709719 +0200
-@@ -129435,7 +129435,7 @@
-       ignoreInventorySpace: true
-       itemCap: 999999
-       eventPassPoint {
--        eventPassId: "EVENT_PASS_JULY2025_SEASON"
-+        eventPassId: "EVENT_PASS_OCTOBER2025_SEASON"
-       }
-       timePeriodCounters {
-         playerActivity {
-@@ -129538,29 +129538,26 @@
+--- GAME_MASTER_old.txt	2025-09-25 19:20:34.734709719 +0200
++++ GAME_MASTER.txt	2025-09-26 19:35:31.080768342 +0200
+@@ -72201,13 +72201,13 @@
+       sku: "pgorelease.month2_deluxe_event_pass_track_redirect"
+       sortOrder: 1
+       hidden: true
+-      title: "season_pass_premium_track_title_july"
++      title: "season_pass_premium_track_title_oct"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2024-07-01T10:00:00"
+-      skuDisableTime: "2024-08-07T10:00:00"
+-      skuEnableTimeUtcMs: 1719828000000
+-      skuDisableTimeUtcMs: 1723024800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-go-pass-june-2025.jpg"
++      skuEnableTime: "2024-10-07T10:00:00"
++      skuDisableTime: "2024-11-06T10:00:00"
++      skuEnableTimeUtcMs: 1728295200000
++      skuDisableTimeUtcMs: 1730887200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_OCT_v2-1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -129817,45 +129817,39 @@
        itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
        category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
        globalEventTicket {
--        eventStartTime: "2025-09-14T14:00:00"
--        eventEndTime: "2025-09-14T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Flabebe25"
-+        eventStartTime: "2025-10-12T14:00:00"
-+        eventEndTime: "2025-10-12T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Solosis25"
+-        eventStartTime: "2025-09-09T10:00:00"
+-        eventEndTime: "2025-09-14T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_ConciergeCB0925"
++        eventStartTime: "2025-10-18T14:00:00"
++        eventEndTime: "2025-10-18T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaRayquazaRaidDay"
          giftable: true
-         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_CD_Flabebe_KeyArt_v2-1024x576_nologo.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
+         giftItem: ITEM_EVENT_TICKET_07_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250901_pgo_s20_megarayquaza_1024x576_nologo.jpg"
          displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_CD_Flabebe_KeyArt_v2-1024x576_nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CD_Flabebe25"
--        textRewardsKey: "text_rewards_key_CD_Flabebe25"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CD_Solosis25"
-+        textRewardsKey: "text_rewards_key_CD_Solosis25"
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_ConciergeCB0925"
+-        textRewardsKey: "text_rewards_key_ConciergeCB0925"
+-        iconRewards {
+-          type: AVATAR_CLOTHING
+-          neutralAvatarItemTemplate {
+-            itemTemplateId: "N_AVATAR_n_pose_concierge"
+-            displayTemplateId: "N_DISPLAY_n_pose_concierge"
+-          }
+-        }
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250901_pgo_s20_megarayquaza_1024x576_nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_MegaRayquazaRaidDay"
++        textRewardsKey: "text_rewards_key_MegaRayquazaRaidDay"
          iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemonId: FLORGES
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemonId: PSYDUCK
 -            pokemonDisplay {
--              form: FLORGES_ORANGE
+-              form: PSYDUCK_SWIM_2025
 -            }
-+            pokemonId: REUNICLUS
-           }
-         }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_INCUBATOR_BASIC
-+            item: ITEM_STAR_PIECE
-             amount: 1
-           }
-         }
-@@ -129572,11 +129569,11 @@
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1757858400000
--        clientEventEndTimeUtcMs: 1757869200000
-+        clientEventStartTimeUtcMs: 1760277600000
-+        clientEventEndTimeUtcMs: 1760288400000
-       }
--      nameOverride: "general1.ticket_CD_Flabebe25_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Flabebe25"
-+      nameOverride: "general1.ticket_CD_Solosis25_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Solosis25"
-     }
-   }
- }
-@@ -129589,17 +129586,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-09-14T14:00:00"
--        eventEndTime: "2025-09-14T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Flabebe25"
-+        eventStartTime: "2025-10-12T14:00:00"
-+        eventEndTime: "2025-10-12T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Solosis25"
-         ticketItem: ITEM_EVENT_TICKET_03
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_CD_Flabebe_KeyArt_v2-1024x576_nologo.jpg"
--        clientEventStartTimeUtcMs: 1757858400000
--        clientEventEndTimeUtcMs: 1757869200000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1760277600000
-+        clientEventEndTimeUtcMs: 1760288400000
-       }
-       ignoreInventorySpace: true
--      nameOverride: "general1.ticket_CD_Flabebe25_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Flabebe25"
-+      nameOverride: "general1.ticket_CD_Solosis25_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Solosis25"
-     }
-   }
- }
-@@ -129955,33 +129952,42 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-09-20T06:00:00"
--        eventEndTime: "2025-09-21T21:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_ShadowGroudonRaidWeekend"
-+        eventStartTime: "2025-10-10T10:00:00"
-+        eventEndTime: "2025-10-16T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_HarvestFestival_OCT25"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_09_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20280822_pgo_tgr_shadowgroudon_1024x576_nologo.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Harvest_Festival_Ticket_v1_1024x576-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20280822_pgo_tgr_shadowgroudon_1024x576_nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_ShadowGroudonRaidWeekend"
--        textRewardsKey: "text_rewards_key_ShadowGroudonRaidWeekend"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Harvest_Festival_Ticket_v1_1024x576-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_HarvestFestival_OCT25"
-+        textRewardsKey: "text_rewards_key_HarvestFestival_OCT25"
-+        iconRewards {
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemonId: APPLIN
-+          }
-+        }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_FREE_RAID_TICKET
--            amount: 7
-+            item: ITEM_TROY_DISK_MOSSY
-+            amount: 3
-           }
-         }
-         iconRewards {
--          type: STARDUST
--          stardust: 2
 +          type: ITEM
 +          item {
-+            item: ITEM_GOLDEN_PINAP_BERRY
-+            amount: 30
-+          }
++            item: ITEM_FREE_RAID_TICKET
++            amount: 8
+           }
          }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_GOLDEN_RAZZ_BERRY
+-            amount: 5
++            item: ITEM_XL_RARE_CANDY
+           }
+         }
++        iconRewards {
++          type: STARDUST
++          stardust: 2
++        }
          detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1758348000000
--        clientEventEndTimeUtcMs: 1758488400000
-+        clientEventStartTimeUtcMs: 1760090400000
-+        clientEventEndTimeUtcMs: 1760644800000
+-        clientEventStartTimeUtcMs: 1757412000000
+-        clientEventEndTimeUtcMs: 1757880000000
++        clientEventStartTimeUtcMs: 1760796000000
++        clientEventEndTimeUtcMs: 1760806800000
        }
--      nameOverride: "general1.ticket._ShadowGroudonRaidWeekend_title"
--      descriptionOverride: "item_event_ticket_gray_desc_ShadowGroudonRaidWeekend"
-+      nameOverride: "general1.ticket._HarvestFestival_OCT25_title"
-+      descriptionOverride: "item_event_ticket_evergreen_desc_HarvestFestival_OCT25"
+-      nameOverride: "general2.ticket.6_ConciergeCB0925_title"
+-      descriptionOverride: "item_event_ticket_evergreen_desc_ConciergeCB0925"
++      nameOverride: "general2.ticket.6_MegaRayquazaRaidDay_title"
++      descriptionOverride: "item_event_ticket_gray_desc_MegaRayquazaRaidDay"
      }
    }
  }
-@@ -129994,16 +130000,17 @@
+@@ -129868,16 +129862,16 @@
        itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
        category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
        globalEventTicket {
--        eventStartTime: "2025-09-20T06:00:00"
--        eventEndTime: "2025-09-21T21:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_ShadowGroudonRaidWeekend"
-+        eventStartTime: "2025-10-10T10:00:00"
-+        eventEndTime: "2025-10-16T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_details_HarvestFestival_OCT25"
-         ticketItem: ITEM_EVENT_TICKET_09
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20280822_pgo_tgr_shadowgroudon_1024x576_nologo.jpg"
--        clientEventStartTimeUtcMs: 1758348000000
--        clientEventEndTimeUtcMs: 1758488400000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Harvest_Festival_Ticket_v1_1024x576-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1760090400000
-+        clientEventEndTimeUtcMs: 1760644800000
+-        eventStartTime: "2025-09-09T10:00:00"
+-        eventEndTime: "2025-09-14T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_details_ConciergeCB0925"
++        eventStartTime: "2025-10-18T14:00:00"
++        eventEndTime: "2025-10-18T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_details_MegaRayquazaRaidDay"
+         ticketItem: ITEM_EVENT_TICKET_07
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
+-        clientEventStartTimeUtcMs: 1757412000000
+-        clientEventEndTimeUtcMs: 1757880000000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250901_pgo_s20_megarayquaza_1024x576_nologo.jpg"
++        clientEventStartTimeUtcMs: 1760796000000
++        clientEventEndTimeUtcMs: 1760806800000
        }
        ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_ShadowGroudonRaidWeekend"
-+      nameOverride: "general1.ticket._HarvestFestival_OCT25_title"
-+      descriptionOverride: "item_event_ticket_evergreen_details_HarvestFestival_OCT25"
+-      descriptionOverride: "item_event_ticket_evergreen_details_ConciergeCB0925"
++      descriptionOverride: "item_event_ticket_gray_details_MegaRayquazaRaidDay"
      }
    }
  }
-@@ -130348,8 +130355,8 @@
-     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_02"
-     itemExpirationSettings {
-       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_02
--      expirationTime: "2025-08-07T10:00:00"
--      emergencyExpirationTime: "2025-08-09T10:00:00"
-+      expirationTime: "2025-11-06T10:00:00"
-+      emergencyExpirationTime: "2025-11-08T10:00:00"
+@@ -138120,13 +138114,13 @@
+       sku: "pgorelease.month2_deluxe_event_pass_track_unlock"
+       sortOrder: 1
+       hidden: true
+-      title: "season_pass_premium_track_title_july"
++      title: "season_pass_premium_track_title_oct"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2024-07-01T10:00:00"
+-      skuDisableTime: "2024-08-07T10:00:00"
+-      skuEnableTimeUtcMs: 1719828000000
+-      skuDisableTimeUtcMs: 1723024800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-go-pass-june-2025.jpg"
++      skuEnableTime: "2024-10-07T10:00:00"
++      skuDisableTime: "2024-11-06T10:00:00"
++      skuEnableTimeUtcMs: 1728295200000
++      skuDisableTimeUtcMs: 1730887200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_OCT_v2-1024x576-nologo.jpg"
      }
    }
  }
-@@ -332045,7 +332052,9 @@
-       isTransferable: true
-       isDeployable: true
-       isTradable: true
-+      raidBossDistanceOffset: 3
-       formChange {
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -332053,7 +332062,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
+@@ -138138,13 +138132,13 @@
+       sku: "pgorelease.month2_deluxe_event_pass_track_unlock_plus_points"
+       sortOrder: 1
+       hidden: true
+-      title: "season_pass_premium_track_plus_ten_ranks_title_july"
++      title: "season_pass_premium_track_plus_ten_ranks_title_oct"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
+-      skuEnableTime: "2024-07-01T10:00:00"
+-      skuDisableTime: "2024-08-07T10:00:00"
+-      skuEnableTimeUtcMs: 1719828000000
+-      skuDisableTimeUtcMs: 1723024800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-go-pass-june-2025.jpg"
++      skuEnableTime: "2024-10-07T10:00:00"
++      skuDisableTime: "2024-11-06T10:00:00"
++      skuEnableTimeUtcMs: 1728295200000
++      skuDisableTimeUtcMs: 1730887200000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_OCT_v2-1024x576-nologo.jpg"
      }
    }
  }
-@@ -332121,13 +332129,13 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         candyCost: 25
-         stardustCost: 10000
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -332195,6 +332203,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -332202,7 +332211,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -332277,7 +332285,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -332345,6 +332352,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -332352,7 +332360,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -332420,6 +332427,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -332427,7 +332435,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -332495,6 +332502,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -332502,7 +332510,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -332570,13 +332577,13 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-         stardustCost: 10000
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -332643,6 +332650,7 @@
-       isTradable: true
-       raidBossDistanceOffset: 3
-       formChange {
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -332650,7 +332658,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -332718,6 +332725,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -332725,7 +332733,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -332793,6 +332800,7 @@
-       raidBossDistanceOffset: 3
-       formChange {
-         availableForm: FURFROU_NATURAL
-+        availableForm: FURFROU_DIAMOND
-         availableForm: FURFROU_MATRON
-         availableForm: FURFROU_DANDY
-         candyCost: 25
-@@ -332800,7 +332808,6 @@
-       }
-       ibfc {
-       }
--      breadTierGroup: GROUP_3
-     }
-   }
- }
-@@ -374712,13 +374719,13 @@
+@@ -374875,14 +374869,14 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
        hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Flabebe25_title"
-+      title: "general1.ticket_CD_Solosis25_title"
+-      spriteId: "general1.ticket.4"
+-      title: "general2.ticket.6_ConciergeCB0925_title"
++      spriteId: "general2.ticket.7"
++      title: "general2.ticket.6_MegaRayquazaRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-14T17:00:00"
-+      skuDisableTime: "2025-10-12T17:00:00"
+-      skuDisableTime: "2025-09-14T20:00:00"
++      skuDisableTime: "2025-10-18T17:00:00"
        skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1757869200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_CD_Flabebe_KeyArt_v2-1024x576_nologo.jpg"
--      webstoreSkuId: "web-september-2025-cd-ticket-box"
-+      skuDisableTimeUtcMs: 1760288400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
-+      webstoreSkuId: "web-october-2025-cd-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -374733,11 +374740,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Flabebe25_title"
-+      title: "general1.ticket_CD_Solosis25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-14T17:00:00"
-+      skuDisableTime: "2025-10-12T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1757869200000
-+      skuDisableTimeUtcMs: 1760288400000
-     }
-   }
- }
-@@ -374789,7 +374796,6 @@
-       sku: "general2.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general2.ticket.5_MegaCameruptRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374810,7 +374816,6 @@
-       sku: "general2.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general2.ticket.5_MegaCameruptRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -374946,16 +374951,16 @@
-     iapItemDisplay {
-       sku: "general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
-+      sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.9"
--      title: "general1.ticket._ShadowGroudonRaidWeekend_title"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-21T22:00:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1758492000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20280822_pgo_tgr_shadowgroudon_1024x576_nologo.jpg"
--      webstoreSkuId: "web-shadow-raidday-sep-2025-ticket-box"
-+      title: "general1.ticket._HarvestFestival_OCT25_title"
-+      skuEnableTime: "2023-04-06T10:00:00"
-+      skuDisableTime: "2025-10-16T20:00:00"
-+      skuEnableTimeUtcMs: 1680775200000
-+      skuDisableTimeUtcMs: 1760644800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Harvest_Festival_Ticket_v1_1024x576-nologo.jpg"
-+      webstoreSkuId: "web-applin-ticket-box"
+-      skuDisableTimeUtcMs: 1757880000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
+-      webstoreSkuId: "web-avatar-ticket-2025-box"
++      skuDisableTimeUtcMs: 1760806800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250901_pgo_s20_megarayquaza_1024x576_nologo.jpg"
++      webstoreSkuId: "web-mega-rayquaza-raid-ticket-box"
        webstoreSkuPriceE6: 4990000
      }
    }
-@@ -374967,15 +374972,15 @@
-     iapItemDisplay {
-       sku: "general2.ticket.9.giftable"
+@@ -374896,13 +374890,13 @@
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
-+      sortOrder: 1
+       sortOrder: 2
        hidden: true
-       spriteId: "general2.ticket.9"
--      title: "general1.ticket._ShadowGroudonRaidWeekend_title"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-21T22:00:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1758492000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20280822_pgo_tgr_shadowgroudon_1024x576_nologo.jpg"
-+      title: "general1.ticket._HarvestFestival_OCT25_title"
-+      skuEnableTime: "2023-04-06T10:00:00"
-+      skuDisableTime: "2025-10-16T20:00:00"
-+      skuEnableTimeUtcMs: 1680775200000
-+      skuDisableTimeUtcMs: 1760644800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Harvest_Festival_Ticket_v1_1024x576-nologo.jpg"
+-      spriteId: "general1.ticket.4"
+-      title: "general2.ticket.6_ConciergeCB0925_title"
++      spriteId: "general2.ticket.7"
++      title: "general2.ticket.6_MegaRayquazaRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-09-14T20:00:00"
++      skuDisableTime: "2025-10-18T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1757880000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
++      skuDisableTimeUtcMs: 1760806800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250901_pgo_s20_megarayquaza_1024x576_nologo.jpg"
      }
    }
  }
-@@ -376461,13 +376466,13 @@
+@@ -376622,14 +376616,14 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
        hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Flabebe25_title"
-+      title: "general1.ticket_CD_Solosis25_title"
+-      spriteId: "general1.ticket.4"
+-      title: "general2.ticket.6_ConciergeCB0925_title"
++      spriteId: "general2.ticket.7"
++      title: "general2.ticket.6_MegaRayquazaRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-14T17:00:00"
-+      skuDisableTime: "2025-10-12T17:00:00"
+-      skuDisableTime: "2025-09-14T20:00:00"
++      skuDisableTime: "2025-10-18T17:00:00"
        skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1757869200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_CD_Flabebe_KeyArt_v2-1024x576_nologo.jpg"
--      webstoreSkuId: "web-september-2025-cd-ticket-box"
-+      skuDisableTimeUtcMs: 1760288400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
-+      webstoreSkuId: "web-october-2025-cd-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -376482,11 +376487,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Flabebe25_title"
-+      title: "general1.ticket_CD_Solosis25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-14T17:00:00"
-+      skuDisableTime: "2025-10-12T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1757869200000
-+      skuDisableTimeUtcMs: 1760288400000
-     }
-   }
- }
-@@ -376538,7 +376543,6 @@
-       sku: "pgorelease.general2.ticket.5"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general2.ticket.5_MegaCameruptRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376559,7 +376563,6 @@
-       sku: "pgorelease.general2.ticket.5.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.5"
-       title: "general2.ticket.5_MegaCameruptRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -376695,16 +376698,16 @@
-     iapItemDisplay {
-       sku: "pgorelease.general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
-+      sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.9"
--      title: "general1.ticket._ShadowGroudonRaidWeekend_title"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-21T22:00:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1758492000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20280822_pgo_tgr_shadowgroudon_1024x576_nologo.jpg"
--      webstoreSkuId: "web-shadow-raidday-sep-2025-ticket-box"
-+      title: "general1.ticket._HarvestFestival_OCT25_title"
-+      skuEnableTime: "2023-04-06T10:00:00"
-+      skuDisableTime: "2025-10-16T20:00:00"
-+      skuEnableTimeUtcMs: 1680775200000
-+      skuDisableTimeUtcMs: 1760644800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Harvest_Festival_Ticket_v1_1024x576-nologo.jpg"
-+      webstoreSkuId: "web-applin-ticket-box"
+-      skuDisableTimeUtcMs: 1757880000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
+-      webstoreSkuId: "web-avatar-ticket-2025-box"
++      skuDisableTimeUtcMs: 1760806800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250901_pgo_s20_megarayquaza_1024x576_nologo.jpg"
++      webstoreSkuId: "web-mega-rayquaza-raid-ticket-box"
        webstoreSkuPriceE6: 4990000
      }
    }
-@@ -376716,15 +376719,15 @@
-     iapItemDisplay {
-       sku: "pgorelease.general2.ticket.9.giftable"
+@@ -376643,13 +376637,13 @@
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
-+      sortOrder: 1
+       sortOrder: 2
        hidden: true
-       spriteId: "general2.ticket.9"
--      title: "general1.ticket._ShadowGroudonRaidWeekend_title"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-21T22:00:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1758492000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20280822_pgo_tgr_shadowgroudon_1024x576_nologo.jpg"
-+      title: "general1.ticket._HarvestFestival_OCT25_title"
-+      skuEnableTime: "2023-04-06T10:00:00"
-+      skuDisableTime: "2025-10-16T20:00:00"
-+      skuEnableTimeUtcMs: 1680775200000
-+      skuDisableTimeUtcMs: 1760644800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Harvest_Festival_Ticket_v1_1024x576-nologo.jpg"
+-      spriteId: "general1.ticket.4"
+-      title: "general2.ticket.6_ConciergeCB0925_title"
++      spriteId: "general2.ticket.7"
++      title: "general2.ticket.6_MegaRayquazaRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-09-14T20:00:00"
++      skuDisableTime: "2025-10-18T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1757880000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FStretch%20Avatar%201024x576%20NOlogo.jpg"
++      skuDisableTimeUtcMs: 1760806800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20250901_pgo_s20_megarayquaza_1024x576_nologo.jpg"
      }
    }
  }
-@@ -386504,7 +386507,51 @@
+@@ -386548,7 +386542,122 @@
      }
    }
  }
--batch_id: 1758668656998
+-batch_id: 1758800324886
 +template {
-+  template_id: "BADGE_EVENT_0141"
++  template_id: "EVENT_PASS_HALLOWEEN2025_SEASON_STORE_REDIRECT"
 +  data {
-+    template_id: "BADGE_EVENT_0141"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0141
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "PTC_OAUTH_SETTINGS"
-+  data {
-+    template_id: "PTC_OAUTH_SETTINGS"
-+    ptcOauthSettings {
-+      ptcAccountLinkingEnabled: true
-+      endTimeMs: 2022190740000
-+      linkingRewardItem: ITEM_INCUBATOR_BASIC
-+    }
-+  }
-+}
-+template {
-+  template_id: "bundle.harvestfestival.2025"
-+  data {
-+    template_id: "bundle.harvestfestival.2025"
++    template_id: "EVENT_PASS_HALLOWEEN2025_SEASON_STORE_REDIRECT"
 +    iapItemDisplay {
-+      sku: "bundle.harvestfestival.2025"
-+      category: IAP_CATEGORY_BUNDLE
-+      sortOrder: 4
++      sku: "pgorelease.halloween2025_deluxe_event_pass_track_redirect"
++      sortOrder: 1
 +      hidden: true
-+      sale: true
-+      spriteId: "bundle.general2.free.1"
-+      title: "bundle.general5.small.1_title"
++      title: "season_pass_premium_track_title_halloween_2025"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2024-10-21T10:00:00"
++      skuDisableTime: "2024-11-04T10:00:00"
++      skuEnableTimeUtcMs: 1729504800000
++      skuDisableTimeUtcMs: 1730714400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_SEP_v4_1024x576-nologo.jpg"
 +    }
 +  }
 +}
-+batch_id: 1758800324886
-+experiment_id: 4
-+experiment_id: 11
-+experiment_id: 21
- experiment_id: 101
- experiment_id: 170
- experiment_id: 175
-@@ -386527,6 +386574,7 @@
- experiment_id: 2600
- experiment_id: 2650
- experiment_id: 3032
-+experiment_id: 3033
- experiment_id: 3063
- experiment_id: 3400
- experiment_id: 3500
-@@ -386538,11 +386586,11 @@
- experiment_id: 3550
- experiment_id: 3552
- experiment_id: 3566
-+experiment_id: 4945
- experiment_id: 4998
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
--experiment_id: 5205
- experiment_id: 5506
- experiment_id: 5508
- experiment_id: 5510
-@@ -386570,6 +386618,7 @@
- experiment_id: 3500041
- experiment_id: 4610000
- experiment_id: 4700000
-+experiment_id: 5000301
- experiment_id: 6600417
- experiment_id: 6600418
- experiment_id: 6600421
++template {
++  template_id: "HALLOWEEN2025_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++  data {
++    template_id: "HALLOWEEN2025_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++    iapItemDisplay {
++      sku: "pgorelease.halloween2025_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_halloween_2025"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2024-10-21T10:00:00"
++      skuDisableTime: "2024-11-04T10:00:00"
++      skuEnableTimeUtcMs: 1729504800000
++      skuDisableTimeUtcMs: 1730714400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_SEP_v4_1024x576-nologo.jpg"
++    }
++  }
++}
++template {
++  template_id: "HALLOWEEN2025_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++  data {
++    template_id: "HALLOWEEN2025_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++    iapItemDisplay {
++      sku: "pgorelease.halloween2025_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_plus_ten_ranks_title_halloween_2025"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
++      skuEnableTime: "2024-10-21T10:00:00"
++      skuDisableTime: "2024-11-04T10:00:00"
++      skuEnableTimeUtcMs: 1729504800000
++      skuDisableTimeUtcMs: 1730714400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_SEP_v4_1024x576-nologo.jpg"
++    }
++  }
++}
++template {
++  template_id: "bundle.halloween2025.1"
++  data {
++    template_id: "bundle.halloween2025.1"
++    iapItemDisplay {
++      sku: "bundle.halloween2025.1"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 1
++      hidden: true
++      spriteId: "bundle.halloween.small.1"
++      title: "bundle.halloween.small.1_title"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 1235
++    }
++  }
++}
++template {
++  template_id: "bundle.halloween2025.2"
++  data {
++    template_id: "bundle.halloween2025.2"
++    iapItemDisplay {
++      sku: "bundle.halloween2025.2"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 2
++      hidden: true
++      spriteId: "bundle.halloween.adventure.1"
++      title: "bundle.halloween.adventure.1_title"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 3500
++    }
++  }
++}
++template {
++  template_id: "bundle.halloween2025.3"
++  data {
++    template_id: "bundle.halloween2025.3"
++    iapItemDisplay {
++      sku: "bundle.halloween2025.3"
++      category: IAP_CATEGORY_BUNDLE
++      sortOrder: 3
++      hidden: true
++      spriteId: "bundle.halloween.large.1"
++      title: "bundle.halloween.large.1_title"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 4735
++    }
++  }
++}
++template {
++  template_id: "LC_JEJU_STAMP_RALLY"
++  data {
++    template_id: "LC_JEJU_STAMP_RALLY"
++    locationCardSettings {
++      locationCard: 158
++      imageUrl: "lc_stampRally2025_Jeju"
++    }
++  }
++}
++batch_id: 1758902964830
+ experiment_id: 4
+ experiment_id: 11
+ experiment_id: 21
