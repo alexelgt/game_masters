@@ -1,60 +1,586 @@
---- GAME_MASTER_old.txt	2025-10-09 19:52:51.454888321 +0200
-+++ GAME_MASTER.txt	2025-10-09 20:30:42.039185522 +0200
-@@ -72,8 +72,8 @@
-   template_id: "ANDROID_SENSORS_ROLL_BACK"
-   data {
-     template_id: "ANDROID_SENSORS_ROLL_BACK"
--    265 {
--      1: 100
-+    rollBack {
-+      rollbackPercentage: 100
+--- GAME_MASTER_old.txt	2025-10-09 20:30:42.039185522 +0200
++++ GAME_MASTER.txt	2025-10-10 08:08:53.359041322 +0200
+@@ -159874,11 +159874,40 @@
+       cpMultiplier: 0.8553
+       cpMultiplier: 0.8603
+       cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
++      cpMultiplier: 0.8653
+       maxEggPlayerLevel: 20
+       maxEncounterPlayerLevel: 30
+       maxQuestEncounterPlayerLevel: 15
+       extendedPlayerLevelThreshold: 40
+       21: "profile_banner_level_updates"
++      22 {
++        1: 6
++        2: 50000
++      }
      }
    }
  }
-@@ -154,8 +154,8 @@
-   template_id: "AVATAR_FEATURE_FLAGS"
-   data {
-     template_id: "AVATAR_FEATURE_FLAGS"
--    273 {
--      1: 1
-+    avatarFeatureFlags {
-+      corndogEnabled: true
+@@ -161112,6 +161141,7 @@
+         pokemon: LUNALA
+         battleMusicKey: "GoFest2024Music_Battle"
+       }
++      32: 1
      }
    }
  }
-@@ -79581,7 +79581,7 @@
-   data {
-     template_id: "V0489_MOVE_SECRET_SWORD"
-     moveSettings {
--      movementId: 489
-+      movementId: SECRET_SWORD
-       animationId: 5
-       pokemonType: POKEMON_TYPE_FIGHTING
-       power: 120
-@@ -136103,7 +136103,7 @@
-   data {
-     template_id: "LC_JEJU_STAMP_RALLY"
-     locationCardSettings {
--      locationCard: 158
-+      locationCard: LC_JEJU_STAMP_RALLY
-       imageUrl: "lc_stampRally2025_Jeju"
+@@ -388100,7 +388130,525 @@
      }
    }
-@@ -136351,7 +136351,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2025_GOWA_GLOBAL"
-     locationCardSettings {
--      locationCard: 156
-+      locationCard: LC_SPECIALBACKGROUND_2025_GOWA_GLOBAL
-       imageUrl: "sb_gowa2025_global"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_gowa"
-@@ -382864,7 +382864,7 @@
-   data {
-     template_id: "COMBAT_V0489_MOVE_SECRET_SWORD"
-     combat_move {
--      uniqueId: 489
-+      uniqueId: SECRET_SWORD
-       type: POKEMON_TYPE_FIGHTING
-       power: 70
-       vfxName: "secret_sword"
+ }
+-batch_id: 1760027498754
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_10"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_10"
++    level_up_reward_settings {
++      level: 10
++      items: 2202
++      itemsCount: 25
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_20"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_20"
++    level_up_reward_settings {
++      level: 20
++      items: 2201
++      itemsCount: 25
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_25"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_25"
++    level_up_reward_settings {
++      level: 25
++      7 {
++        1: "N_AVATAR_n_hat_pokeballitems-basic_0"
++        2: "N_DISPLAY_n_hat_pokeballitems-basic_0"
++      }
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_30"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_30"
++    level_up_reward_settings {
++      level: 30
++      items: 2202
++      itemsCount: 50
++      7 {
++        1: "N_AVATAR_n_shoes_pokeballitems-basic_0"
++        2: "N_DISPLAY_n_shoes_pokeballitems-basic_0"
++      }
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_35"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_35"
++    level_up_reward_settings {
++      level: 35
++      7 {
++        1: "N_AVATAR_n_shirt_pokeballitems-basic_0"
++        2: "N_DISPLAY_n_shirt_pokeballitems-basic_0"
++      }
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_40"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_40"
++    level_up_reward_settings {
++      level: 40
++      items: 2201
++      itemsCount: 50
++      7 {
++        1: "N_AVATAR_n_hat_pokeballitems-great_0"
++        2: "N_DISPLAY_n_hat_pokeballitems-great_0"
++      }
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_43"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_43"
++    level_up_reward_settings {
++      level: 43
++      items: 2204
++      itemsCount: 5
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_45"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_45"
++    level_up_reward_settings {
++      level: 45
++      items: 2202
++      itemsCount: 25
++      7 {
++        1: "N_AVATAR_n_shoes_pokeballitems-great_0"
++        2: "N_DISPLAY_n_shoes_pokeballitems-great_0"
++      }
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_47"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_47"
++    level_up_reward_settings {
++      level: 47
++      items: 2203
++      itemsCount: 50
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_50"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_50"
++    level_up_reward_settings {
++      level: 50
++      items: 2202
++      itemsCount: 50
++      7 {
++        1: "N_AVATAR_n_shirt_pokeballitems-great_0"
++        2: "N_DISPLAY_n_shirt_pokeballitems-great_0"
++      }
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_53"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_53"
++    level_up_reward_settings {
++      level: 53
++      items: 2204
++      itemsCount: 5
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_55"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_55"
++    level_up_reward_settings {
++      level: 55
++      items: 2201
++      itemsCount: 25
++      7 {
++        1: "N_AVATAR_n_hat_pokeballitems-ultra_0"
++        2: "N_DISPLAY_n_hat_pokeballitems-ultra_0"
++      }
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_57"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_57"
++    level_up_reward_settings {
++      level: 57
++      items: 2203
++      itemsCount: 50
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_60"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_60"
++    level_up_reward_settings {
++      level: 60
++      items: 2201
++      itemsCount: 50
++      7 {
++        1: "N_AVATAR_n_shoes_pokeballitems-ultra_0"
++        2: "N_DISPLAY_n_shoes_pokeballitems-ultra_0"
++      }
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_63"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_63"
++    level_up_reward_settings {
++      level: 63
++      items: 2204
++      itemsCount: 5
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_65"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_65"
++    level_up_reward_settings {
++      level: 65
++      items: 2202
++      itemsCount: 25
++      7 {
++        1: "N_AVATAR_n_shirt_pokeballitems-ultra_0"
++        2: "N_DISPLAY_n_shirt_pokeballitems-ultra_0"
++      }
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_67"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_67"
++    level_up_reward_settings {
++      level: 67
++      items: 2203
++      itemsCount: 50
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BACKFILL_AWARDS_LEVEL_70"
++  data {
++    template_id: "BACKFILL_AWARDS_LEVEL_70"
++    level_up_reward_settings {
++      level: 70
++      items: 2202
++      itemsCount: 75
++      9: 0x3c23d70a
++      11: 1
++    }
++  }
++}
++template {
++  template_id: "BADGE_SMORES_00"
++  data {
++    template_id: "BADGE_SMORES_00"
++    badgeSettings {
++      badgeType: 1006
++      badgeRank: 2
++      targets: 100
++    }
++  }
++}
++template {
++  template_id: "BADGE_SMORES_01"
++  data {
++    template_id: "BADGE_SMORES_01"
++    badgeSettings {
++      badgeType: 1007
++      badgeRank: 2
++      targets: 100
++      targets: 100
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_glasses_lvl73-visorspecs_0"
++  data {
++    template_id: "N_DISPLAY_n_glasses_lvl73-visorspecs_0"
++    avatarItemDisplay {
++      iconAddress: "n_glasses_lvl73-visorspecs_0_icon"
++      displayStringId: "avatar_n_glasses_lvl73-visorspecs_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_lvl79-synthfade_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_lvl79-synthfade_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_lvl79-synthfade_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hair_lvl79-urbanphantom_0"
++  data {
++    template_id: "N_DISPLAY_n_hair_lvl79-urbanphantom_0"
++    avatarItemDisplay {
++      iconAddress: "n_hair_lvl79-urbanphantom_0_icon"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hat_pokeballitems-basic_0"
++  data {
++    template_id: "N_DISPLAY_n_hat_pokeballitems-basic_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_pokeballitems-basic_0_icon"
++      displayStringId: "avatar_n_hat_pokeballitems-basic_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hat_pokeballitems-great_0"
++  data {
++    template_id: "N_DISPLAY_n_hat_pokeballitems-great_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_pokeballitems-great_0_icon"
++      displayStringId: "avatar_n_hat_pokeballitems-great_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hat_pokeballitems-ultra_0"
++  data {
++    template_id: "N_DISPLAY_n_hat_pokeballitems-ultra_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_pokeballitems-ultra_0_icon"
++      displayStringId: "avatar_n_hat_pokeballitems-ultra_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hat_zacostume_a_0"
++  data {
++    template_id: "N_DISPLAY_n_hat_zacostume_a_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_zacostume_a_0_icon"
++      displayStringId: "avatar_n_hat_zacostume_a"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_hat_zacostume_b_0"
++  data {
++    template_id: "N_DISPLAY_n_hat_zacostume_b_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_zacostume_b_0_icon"
++      displayStringId: "avatar_n_hat_zacostume_b"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_pants_lvl75-techtrousers_0"
++  data {
++    template_id: "N_DISPLAY_n_pants_lvl75-techtrousers_0"
++    avatarItemDisplay {
++      iconAddress: "n_pants_lvl75-techtrousers_0_icon"
++      displayStringId: "avatar_n_pants_lvl75-techtrousers_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_pose_legacy50"
++  data {
++    template_id: "N_DISPLAY_n_pose_legacy50"
++    avatarItemDisplay {
++      iconAddress: "n_pose_legacy50_icon"
++      displayStringId: "avatar_pose_legacy50"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_pose_lvl77"
++  data {
++    template_id: "N_DISPLAY_n_pose_lvl77"
++    avatarItemDisplay {
++      iconAddress: "n_pose_lvl77_icon"
++      displayStringId: "avatar_pose_exploration"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_lvl80-circuitjacket_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_lvl80-circuitjacket_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_lvl80-circuitjacket_0_icon"
++      displayStringId: "avatar_n_shirt_lvl80-circuitjacket_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_pokeballitems-basic_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_pokeballitems-basic_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_pokeballitems-basic_0_icon"
++      displayStringId: "avatar_n_shirt_pokeballitems-basic_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_pokeballitems-great_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_pokeballitems-great_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_pokeballitems-great_0_icon"
++      displayStringId: "avatar_n_shirt_pokeballitems-great_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_pokeballitems-ultra_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_pokeballitems-ultra_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_pokeballitems-ultra_0_icon"
++      displayStringId: "avatar_n_shirt_pokeballitems-ultra_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_zacostume_a_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_zacostume_a_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_zacostume_a_0_icon"
++      displayStringId: "avatar_n_shirt_zacostume_a"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_zacostume_b_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_zacostume_b_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_zacostume_b_0_icon"
++      displayStringId: "avatar_n_shirt_zacostume_b"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shoes_lvl71-cyberkicks_0"
++  data {
++    template_id: "N_DISPLAY_n_shoes_lvl71-cyberkicks_0"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_lvl71-cyberkicks_0_icon"
++      displayStringId: "avatar_n_shoes_lvl71-cyberkicks_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shoes_pokeballitems-basic_0"
++  data {
++    template_id: "N_DISPLAY_n_shoes_pokeballitems-basic_0"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_pokeballitems-basic_0_icon"
++      displayStringId: "avatar_n_shoes_pokeballitems-basic_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shoes_pokeballitems-great_0"
++  data {
++    template_id: "N_DISPLAY_n_shoes_pokeballitems-great_0"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_pokeballitems-great_0_icon"
++      displayStringId: "avatar_n_shoes_pokeballitems-great_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shoes_pokeballitems-ultra_0"
++  data {
++    template_id: "N_DISPLAY_n_shoes_pokeballitems-ultra_0"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_pokeballitems-ultra_0_icon"
++      displayStringId: "avatar_n_shoes_pokeballitems-ultra_0"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shoes_zacostume_a_0"
++  data {
++    template_id: "N_DISPLAY_n_shoes_zacostume_a_0"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_zacostume_a_0_icon"
++      displayStringId: "avatar_n_shoes_zacostume_a"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shoes_zacostume_b_0"
++  data {
++    template_id: "N_DISPLAY_n_shoes_zacostume_b_0"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_zacostume_b_0_icon"
++      displayStringId: "avatar_n_shoes_zacostume_b"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_set_zacostume_a"
++  data {
++    template_id: "N_DISPLAY_set_zacostume_a"
++    avatarItemDisplay {
++      iconAddress: "set_zacostume_a"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_set_zacostume_b"
++  data {
++    template_id: "N_DISPLAY_set_zacostume_b"
++    avatarItemDisplay {
++      iconAddress: "set_zacostume_b"
++    }
++  }
++}
++batch_id: 1760054240608
+ experiment_id: 4
+ experiment_id: 11
+ experiment_id: 21
+@@ -388153,6 +388701,7 @@
+ experiment_id: 9552
+ experiment_id: 9553
+ experiment_id: 9554
++experiment_id: 12345
+ experiment_id: 20947
+ experiment_id: 55571
+ experiment_id: 55751
