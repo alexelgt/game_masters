@@ -1,407 +1,974 @@
---- GAME_MASTER_old.txt	2025-10-15 23:05:18.339544918 +0200
-+++ GAME_MASTER.txt	2025-10-15 23:48:01.067282089 +0200
-@@ -31571,7 +31571,7 @@
-       items: ITEM_REVIVE
-       items: ITEM_LUCKY_EGG
-       items: ITEM_INCUBATOR_BASIC
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
-       itemsCount: 20
-       itemsCount: 10
-       itemsCount: 10
-@@ -31778,7 +31778,7 @@
-       items: ITEM_LUCKY_EGG
-       items: ITEM_INCUBATOR_BASIC
-       items: ITEM_INCENSE_ORDINARY
--      items: 2201
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
-       itemsCount: 20
-       itemsCount: 10
-       itemsCount: 20
-@@ -31981,7 +31981,7 @@
-       items: ITEM_LUCKY_EGG
-       items: ITEM_INCUBATOR_BASIC
-       items: ITEM_INCENSE_ORDINARY
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
-       itemsCount: 30
-       itemsCount: 20
-       itemsCount: 30
-@@ -32187,7 +32187,7 @@
-       items: ITEM_INCUBATOR_BASIC
-       items: ITEM_INCENSE_ORDINARY
-       items: ITEM_MOVE_REROLL_ELITE_FAST_ATTACK
--      items: 2201
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
-       itemsCount: 40
-       itemsCount: 30
-       itemsCount: 40
-@@ -32250,7 +32250,7 @@
-       items: ITEM_ULTRA_BALL
-       items: ITEM_PINAP_BERRY
-       items: ITEM_MAX_POTION
--      items: 2204
-+      items: ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED
-       itemsCount: 15
-       itemsCount: 10
-       itemsCount: 20
-@@ -32290,7 +32290,7 @@
-       items: ITEM_STAR_PIECE
-       items: ITEM_INCUBATOR_BASIC
-       items: ITEM_TROY_DISK
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
+--- GAME_MASTER_old.txt	2025-10-15 23:48:01.067282089 +0200
++++ GAME_MASTER.txt	2025-10-16 11:42:26.731795233 +0200
+@@ -31579,8 +31579,9 @@
+       itemsCount: 1
+       itemsCount: 1
        itemsCount: 25
-       itemsCount: 15
-       itemsCount: 30
-@@ -32334,7 +32334,7 @@
-       items: ITEM_ULTRA_BALL
+-      8: "\004\t"
+-      10: 1
++      featuresUnlocked: FEATURE_COMBAT_LEAGUE
++      featuresUnlocked: FEATURE_TRADE
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31596,7 +31597,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31612,7 +31613,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31631,8 +31632,8 @@
+       itemsCount: 5
+       itemsCount: 1
+       itemsUnlocked: ITEM_GOLDEN_RAZZ_BERRY
+-      8: "\013"
+-      10: 1
++      featuresUnlocked: FEATURE_WEEKLY_CHALLENGES
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31649,8 +31650,8 @@
+       itemsCount: 5
+       itemsCount: 5
+       itemsUnlocked: ITEM_GREAT_BALL
+-      8: "\010"
+-      10: 1
++      featuresUnlocked: FEATURE_TAG
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31674,8 +31675,8 @@
+       itemsCount: 1
+       itemsCount: 1
+       itemsCount: 1
+-      8: "\021"
+-      10: 1
++      featuresUnlocked: FEATURE_EGG_SPECIAL
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31692,7 +31693,7 @@
+       itemsCount: 5
+       itemsCount: 10
+       itemsUnlocked: ITEM_SUPER_POTION
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31709,7 +31710,7 @@
+       itemsCount: 5
+       itemsCount: 5
+       itemsUnlocked: ITEM_PINAP_BERRY
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31725,8 +31726,8 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 10
+-      8: "\007"
+-      10: 1
++      featuresUnlocked: FEATURE_MEGA
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31745,7 +31746,7 @@
+       itemsCount: 5
+       itemsCount: 1
+       itemsUnlocked: ITEM_MOVE_REROLL_FAST_ATTACK
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31760,8 +31761,8 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsUnlocked: ITEM_NANAB_BERRY
+-      8: "\006"
+-      10: 1
++      featuresUnlocked: FEATURE_EGG_HATCHING
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31788,8 +31789,8 @@
+       itemsCount: 1
+       itemsCount: 25
+       itemsUnlocked: ITEM_ULTRA_BALL
+-      8: "\005"
+-      10: 1
++      featuresUnlocked: FEATURE_MAX_BATTLE
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31805,8 +31806,8 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 5
+-      8: "\n"
+-      10: 1
++      featuresUnlocked: FEATURE_PARTY_PLAY
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31823,7 +31824,7 @@
+       itemsCount: 5
+       itemsCount: 10
+       itemsUnlocked: ITEM_HYPER_POTION
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31840,7 +31841,7 @@
+       itemsCount: 5
+       itemsCount: 5
+       itemsUnlocked: ITEM_MOVE_REROLL_SPECIAL_ATTACK
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31857,7 +31858,7 @@
+       itemsCount: 5
+       itemsCount: 10
+       itemsUnlocked: ITEM_GOLDEN_PINAP_BERRY
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31886,7 +31887,7 @@
+         itemTemplateId: "N_AVATAR_n_hat_pokeballitems-basic_0"
+         displayTemplateId: "N_DISPLAY_n_hat_pokeballitems-basic_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31902,7 +31903,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 10
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31918,7 +31919,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31934,7 +31935,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 10
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31950,7 +31951,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -31964,7 +31965,7 @@
        items: ITEM_NANAB_BERRY
-       items: ITEM_MAX_REVIVE
--      items: 2203
-+      items: ITEM_POSTCARD_STORAGE_UPGRADE_EARNED
-       itemsCount: 15
        itemsCount: 10
-       itemsCount: 10
-@@ -32414,7 +32414,7 @@
-       items: ITEM_INCUBATOR_BASIC
-       items: ITEM_INCENSE_ORDINARY
-       items: ITEM_MOVE_REROLL_ELITE_SPECIAL_ATTACK
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
-       itemsCount: 50
-       itemsCount: 40
-       itemsCount: 50
-@@ -32500,7 +32500,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_10"
-     levelUpRewards {
-       level: 10
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
-       itemsCount: 25
-       isBackfill: true
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
-@@ -32512,7 +32512,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_20"
-     levelUpRewards {
-       level: 20
--      items: 2201
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
-       itemsCount: 25
-       isBackfill: true
-     }
-@@ -32538,7 +32538,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_30"
-     levelUpRewards {
-       level: 30
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
-       itemsCount: 50
-       neutralAvatarItemTemplates {
+   }
+ }
+@@ -31995,8 +31996,8 @@
          itemTemplateId: "N_AVATAR_n_shoes_pokeballitems-basic_0"
-@@ -32568,7 +32568,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_40"
-     levelUpRewards {
-       level: 40
--      items: 2201
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
-       itemsCount: 50
-       neutralAvatarItemTemplates {
+         displayTemplateId: "N_DISPLAY_n_shoes_pokeballitems-basic_0"
+       }
+-      8: "\016"
+-      10: 1
++      featuresUnlocked: FEATURE_ROUTES_CREATION
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32012,8 +32013,8 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 10
+-      8: "\020"
+-      10: 1
++      featuresUnlocked: FEATURE_CANDY_XL
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32029,7 +32030,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32045,7 +32046,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 10
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32061,7 +32062,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32089,8 +32090,8 @@
+         itemTemplateId: "N_AVATAR_n_shirt_pokeballitems-basic_0"
+         displayTemplateId: "N_DISPLAY_n_shirt_pokeballitems-basic_0"
+       }
+-      8: "\017"
+-      10: 1
++      featuresUnlocked: FEATURE_POKESTOP_NOMINATION
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32106,7 +32107,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 10
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32122,7 +32123,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32138,7 +32139,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 10
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32154,7 +32155,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32169,7 +32170,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsUnlocked: ITEM_INCENSE_DAILY_ADVENTURE
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32201,7 +32202,7 @@
          itemTemplateId: "N_AVATAR_n_hat_pokeballitems-great_0"
-@@ -32584,7 +32584,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_43"
-     levelUpRewards {
-       level: 43
--      items: 2204
-+      items: ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED
-       itemsCount: 5
-       isBackfill: true
+         displayTemplateId: "N_DISPLAY_n_hat_pokeballitems-great_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
-@@ -32596,7 +32596,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_45"
-     levelUpRewards {
-       level: 45
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
-       itemsCount: 25
-       neutralAvatarItemTemplates {
+   }
+ }
+@@ -32219,7 +32220,7 @@
+       itemsCount: 10
+       itemsCount: 20
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32237,7 +32238,7 @@
+       itemsCount: 10
+       itemsCount: 10
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32255,7 +32256,7 @@
+       itemsCount: 10
+       itemsCount: 20
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32273,7 +32274,7 @@
+       itemsCount: 10
+       itemsCount: 10
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32303,7 +32304,7 @@
          itemTemplateId: "N_AVATAR_n_shoes_pokeballitems-great_0"
-@@ -32612,7 +32612,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_47"
-     levelUpRewards {
-       level: 47
--      items: 2203
-+      items: ITEM_POSTCARD_STORAGE_UPGRADE_EARNED
-       itemsCount: 50
-       isBackfill: true
+         displayTemplateId: "N_DISPLAY_n_shoes_pokeballitems-great_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
-@@ -32624,7 +32624,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_50"
-     levelUpRewards {
-       level: 50
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
+   }
+ }
+@@ -32321,7 +32322,7 @@
+       itemsCount: 10
+       itemsCount: 20
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32339,7 +32340,7 @@
+       itemsCount: 10
+       itemsCount: 10
        itemsCount: 50
-       neutralAvatarItemTemplates {
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32357,7 +32358,7 @@
+       itemsCount: 10
+       itemsCount: 20
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32375,7 +32376,7 @@
+       itemsCount: 10
+       itemsCount: 10
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32395,8 +32396,9 @@
+       itemsCount: 1
+       itemsUnlocked: ITEM_POTION
+       itemsUnlocked: ITEM_REVIVE
+-      8: "\001\002"
+-      10: 1
++      featuresUnlocked: FEATURE_GYM
++      featuresUnlocked: FEATURE_RAID
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32428,7 +32430,7 @@
          itemTemplateId: "N_AVATAR_n_shirt_pokeballitems-great_0"
-@@ -32640,7 +32640,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_53"
-     levelUpRewards {
-       level: 53
--      items: 2204
-+      items: ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED
-       itemsCount: 5
-       isBackfill: true
+         displayTemplateId: "N_DISPLAY_n_shirt_pokeballitems-great_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
-@@ -32652,7 +32652,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_55"
-     levelUpRewards {
-       level: 55
--      items: 2201
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
-       itemsCount: 25
-       neutralAvatarItemTemplates {
+   }
+ }
+@@ -32445,7 +32447,7 @@
+       itemsCount: 5
+       itemsCount: 1
+       itemsUnlocked: ITEM_TROY_DISK
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32459,8 +32461,8 @@
+       items: ITEM_NANAB_BERRY
+       itemsCount: 10
+       itemsCount: 5
+-      8: "\r"
+-      10: 1
++      featuresUnlocked: FEATURE_ROUTES
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32474,8 +32476,8 @@
+       items: ITEM_REVIVE
+       itemsCount: 10
+       itemsCount: 5
+-      8: "\003"
+-      10: 1
++      featuresUnlocked: FEATURE_ROCKET
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -32490,7 +32492,7 @@
+       itemsCount: 10
+       itemsCount: 5
+       itemsUnlocked: ITEM_RAZZ_BERRY
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -149131,7 +149133,7 @@
+       bagUpgradeBannerContexts: QUICK_SHOP_INVENTORY_FULL
+       easyIncubatorBuyEnabled: true
+       luckyFriendApplicatorSettingsToggleEnabled: true
+-      25: 1
++      baseDailyAdventureEggs: 1
+     }
+   }
+ }
+@@ -176881,9 +176883,9 @@
+       partyCatchTagsEnabled: true
+       partyQuestEncounterRewardEnabled: true
+       maxStackedEncounterReward: 1
+-      minNumPlayersToStartParty: 1
+-      23: 2
+-      24: 4
++      fallbackPartyQuestEnabled: true
++      minNumPlayersToStartParty: 2
++      maxPartySize: 4
+     }
+   }
+ }
+@@ -179504,59 +179506,26 @@
+       maxEncounterPlayerLevel: 30
+       maxQuestEncounterPlayerLevel: 15
+       extendedPlayerLevelThreshold: 70
++      levelUpScreenV3Enabled: true
++      milestoneLevels: 10
++      milestoneLevels: 20
++      milestoneLevels: 30
++      milestoneLevels: 40
++      milestoneLevels: 50
++      milestoneLevels: 60
++      milestoneLevels: 70
++      milestoneLevels: 80
++      levelRequirementsV2Enabled: true
++      xpRewardV2Enabled: true
++      xpRewardV2Thresholds {
++        source: EVENT_PASS
++        threshold: 10000
++      }
++      smoreFtueImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Smores_Launch_KeyArt_v8_1024x512_ingame.jpg"
+       11: 1
+       12: 70
+-      14: 1
+-      16: "\n\024\036(2<FP"
+-      18: 1
+-      19: 1
+-      22 {
+-        1: 1
+-        2: 10000
+-      }
+-      22 {
+-        1: 2
+-        2: 15000
+-      }
+-      22 {
+-        1: 3
+-        2: 8000
+-      }
+-      22 {
+-        1: 4
+-        2: 6000
+-      }
+-      22 {
+-        1: 5
+-        2: 10000
+-      }
+-      22 {
+-        1: 6
+-        2: 50000
+-      }
+-      22 {
+-        1: 7
+-        2: 5000
+-      }
+-      22 {
+-        1: 8
+-        2: 3000
+-      }
+-      22 {
+-        1: 9
+-        2: 8000
+-      }
+-      22 {
+-        1: 10
+-        2: 6000
+-      }
+-      22 {
+-        1: 11
+-        2: 10000
+-      }
+       23: 2592000
+       24: "2025-10-15T00:00:00"
+-      25: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Smores_Launch_KeyArt_v8_1024x512_ingame.jpg"
+     }
+   }
+ }
+@@ -445386,17 +445355,17 @@
+   template_id: "VNEXT_ANIMATION_CONFIGURATION"
+   data {
+     template_id: "VNEXT_ANIMATION_CONFIGURATION"
+-    276 {
+-      1 {
+-        1 {
+-          1: 0x3e4ccccd
+-          2: 0x3dcccccd
++    battleAnimationSettings {
++      raidsAnimationConfiguration {
++        fastAttackSettings {
++          normalizedStartOffset: 0.2
++          crossFadeDurationSeconds: 0.1
+         }
+       }
+-      2 {
+-        1 {
+-          1: 0x3e4ccccd
+-          2: 0x3dcccccd
++      maxBattleAnimationConfiguration {
++        fastAttackSettings {
++          normalizedStartOffset: 0.2
++          crossFadeDurationSeconds: 0.1
+         }
+       }
+       3 {
+@@ -449970,45 +449939,48 @@
+     partyPlayGeneralSettings {
+       minPlayerLevel: 13
+       friendRequestsEnabled: true
+-      minNumPlayersToStartParty: 2
+-      24: 4
+-      26 {
+-        1 {
+-          1: "America/Los_Angeles"
+-          2 {
+-            1: 7
+-            2: 17
+-          }
+-          4 {
+-            1: 7
+-            2: 17
+-          }
+-          6 {
+-            1: 1
+-            2: 1
+-            3 {
+-              1: 1
+-              2: 10
+-            }
+-            4: 4
+-          }
+-          7 {
+-            1: 1
+-            2: 1
+-            3 {
+-              1: 7
+-              2: 9
+-            }
+-            4: 4
+-          }
+-          8: 1
+-        }
+-      }
+-      28: 1
+-      29: 86400000
+-      30: "\000\000\000\000\000\000\320?\000\000\000\000\000\000\340?\000\000\000\000\000\000\350?\000\000\000\000\000\000\360?"
+-      33: 1
+-      34: 3
++      fallbackPartyQuestEnabled: true
++      maxPartySize: 4
++      partySchedulingSettings {
++        recurringChallengeSchedule {
++          timezoneId: "America/Los_Angeles"
++          dayAndTimeStartTime {
++            dayOfWeek: 7
++            hourOfDay: 17
++          }
++          dayAndTimeEndTime {
++            dayOfWeek: 7
++            hourOfDay: 17
++          }
++          startNotification {
++            enabled: true
++            isLocal: true
++            time {
++              dayOfWeek: 1
++              hourOfDay: 10
++            }
++            avalibleWindowHours: 4
++          }
++          nearEndNotification {
++            enabled: true
++            isLocal: true
++            time {
++              dayOfWeek: 7
++              hourOfDay: 9
++            }
++            avalibleWindowHours: 4
++          }
++          maxNumChallengePerCycle: 1
++        }
++      }
++      sendInviteEnabled: true
++      inviteExpirationMs: 86400000
++      notificationMilestones: 0.25
++      notificationMilestones: 0.5
++      notificationMilestones: 0.75
++      notificationMilestones: 1
++      partyRewardGracePeriodMs: 1
++      maxInvitesPerPlayer: 3
+     }
+   }
+ }
+@@ -461299,7 +461271,7 @@
+       itemsCount: 15
+       itemsCount: 20
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461317,7 +461289,7 @@
+       itemsCount: 15
+       itemsCount: 10
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461335,7 +461307,7 @@
+       itemsCount: 15
+       itemsCount: 20
+       itemsCount: 5
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461353,7 +461325,7 @@
+       itemsCount: 15
+       itemsCount: 10
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461383,7 +461355,7 @@
          itemTemplateId: "N_AVATAR_n_hat_pokeballitems-ultra_0"
-@@ -32668,7 +32668,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_57"
-     levelUpRewards {
-       level: 57
--      items: 2203
-+      items: ITEM_POSTCARD_STORAGE_UPGRADE_EARNED
-       itemsCount: 50
-       isBackfill: true
+         displayTemplateId: "N_DISPLAY_n_hat_pokeballitems-ultra_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
-@@ -32680,7 +32680,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_60"
-     levelUpRewards {
-       level: 60
--      items: 2201
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
+   }
+ }
+@@ -461401,7 +461373,7 @@
+       itemsCount: 15
+       itemsCount: 20
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461419,7 +461391,7 @@
+       itemsCount: 15
+       itemsCount: 10
        itemsCount: 50
-       neutralAvatarItemTemplates {
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461437,7 +461409,7 @@
+       itemsCount: 15
+       itemsCount: 20
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461455,7 +461427,7 @@
+       itemsCount: 15
+       itemsCount: 10
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461485,7 +461457,7 @@
          itemTemplateId: "N_AVATAR_n_shoes_pokeballitems-ultra_0"
-@@ -32696,7 +32696,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_63"
-     levelUpRewards {
-       level: 63
--      items: 2204
-+      items: ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED
+         displayTemplateId: "N_DISPLAY_n_shoes_pokeballitems-ultra_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461503,7 +461475,7 @@
+       itemsCount: 15
+       itemsCount: 20
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461521,7 +461493,7 @@
+       itemsCount: 15
+       itemsCount: 10
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461539,7 +461511,7 @@
+       itemsCount: 15
+       itemsCount: 20
        itemsCount: 5
-       isBackfill: true
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
-@@ -32708,7 +32708,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_65"
-     levelUpRewards {
-       level: 65
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
-       itemsCount: 25
-       neutralAvatarItemTemplates {
+   }
+ }
+@@ -461557,7 +461529,7 @@
+       itemsCount: 15
+       itemsCount: 10
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461587,7 +461559,7 @@
          itemTemplateId: "N_AVATAR_n_shirt_pokeballitems-ultra_0"
-@@ -32724,7 +32724,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_67"
-     levelUpRewards {
-       level: 67
--      items: 2203
-+      items: ITEM_POSTCARD_STORAGE_UPGRADE_EARNED
-       itemsCount: 50
-       isBackfill: true
+         displayTemplateId: "N_DISPLAY_n_shirt_pokeballitems-ultra_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
-@@ -32736,7 +32736,7 @@
-     template_id: "BACKFILL_AWARDS_LEVEL_70"
-     levelUpRewards {
-       level: 70
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
+   }
+ }
+@@ -461605,7 +461577,7 @@
+       itemsCount: 15
+       itemsCount: 20
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461623,7 +461595,7 @@
+       itemsCount: 15
+       itemsCount: 10
+       itemsCount: 50
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461641,7 +461613,7 @@
+       itemsCount: 15
+       itemsCount: 20
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461659,7 +461631,7 @@
+       itemsCount: 15
+       itemsCount: 10
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461687,9 +461659,9 @@
+       itemsCount: 6
+       itemsCount: 1
        itemsCount: 75
++      featuresUnlocked: FEATURE_LUCKY_CHANCE_INCREASE
        obLevelUpRewardsNumber9: 0.01
-       isBackfill: true
-@@ -461280,7 +461280,7 @@
-   data {
-     template_id: "LC_2025_TAIPEICITY_AMUSEMENT_PARK"
-     locationCardSettings {
--      locationCard: 153
-+      locationCard: LC_2025_TAIPEICITY_AMUSEMENT_PARK
-       imageUrl: "lc_taipeiAmusementPark_2025"
+-      8: "\022"
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
    }
-@@ -461330,7 +461330,7 @@
-       items: ITEM_ULTRA_BALL
-       items: ITEM_PINAP_BERRY
-       items: ITEM_MAX_POTION
--      items: 2204
-+      items: ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED
-       itemsCount: 20
-       itemsCount: 15
-       itemsCount: 20
-@@ -461370,7 +461370,7 @@
-       items: ITEM_STAR_PIECE
-       items: ITEM_INCUBATOR_BASIC
-       items: ITEM_TROY_DISK
--      items: 2201
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
-       itemsCount: 30
-       itemsCount: 20
-       itemsCount: 30
-@@ -461414,7 +461414,7 @@
-       items: ITEM_ULTRA_BALL
-       items: ITEM_NANAB_BERRY
-       items: ITEM_MAX_REVIVE
--      items: 2203
-+      items: ITEM_POSTCARD_STORAGE_UPGRADE_EARNED
-       itemsCount: 20
-       itemsCount: 15
-       itemsCount: 10
-@@ -461472,7 +461472,7 @@
-       items: ITEM_LUCKY_EGG
-       items: ITEM_INCUBATOR_BASIC
-       items: ITEM_INCENSE_ORDINARY
--      items: 2201
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
-       itemsCount: 60
+ }
+@@ -461713,7 +461685,7 @@
+         itemTemplateId: "N_AVATAR_n_shoes_lvl71-cyberkicks_0"
+         displayTemplateId: "N_DISPLAY_n_shoes_lvl71-cyberkicks_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461735,7 +461707,7 @@
+       itemsCount: 1
+       itemsCount: 1
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461761,7 +461733,7 @@
+         itemTemplateId: "N_AVATAR_n_glasses_lvl73-visorspecs_0"
+         displayTemplateId: "N_DISPLAY_n_glasses_lvl73-visorspecs_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -461785,7 +461757,7 @@
+       itemsCount: 1
+       itemsCount: 1
        itemsCount: 50
-       itemsCount: 50
-@@ -461534,7 +461534,7 @@
-       items: ITEM_ULTRA_BALL
-       items: ITEM_PINAP_BERRY
-       items: ITEM_MAX_POTION
--      items: 2204
-+      items: ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED
-       itemsCount: 20
-       itemsCount: 15
-       itemsCount: 20
-@@ -461574,7 +461574,7 @@
-       items: ITEM_STAR_PIECE
-       items: ITEM_INCUBATOR_BASIC
-       items: ITEM_TROY_DISK
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
-       itemsCount: 30
-       itemsCount: 15
-       itemsCount: 30
-@@ -461618,7 +461618,7 @@
-       items: ITEM_ULTRA_BALL
-       items: ITEM_NANAB_BERRY
-       items: ITEM_MAX_REVIVE
--      items: 2203
-+      items: ITEM_POSTCARD_STORAGE_UPGRADE_EARNED
-       itemsCount: 20
-       itemsCount: 15
-       itemsCount: 10
-@@ -461677,7 +461677,7 @@
-       items: ITEM_INCUBATOR_SUPER
-       items: ITEM_INCENSE_ORDINARY
-       items: ITEM_MASTER_BALL
--      items: 2202
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
-       itemsCount: 70
-       itemsCount: 60
-       itemsCount: 50
-@@ -461750,7 +461750,7 @@
-       items: ITEM_MAX_POTION
-       items: ITEM_PAID_RAID_TICKET
-       items: ITEM_XL_RARE_CANDY
--      items: 2204
-+      items: ITEM_GIFTBOX_STORAGE_UPGRADE_EARNED
-       itemsCount: 30
-       itemsCount: 25
-       itemsCount: 20
-@@ -461777,7 +461777,7 @@
-       items: ITEM_PAID_RAID_TICKET
-       items: ITEM_XL_RARE_CANDY
-       items: ITEM_INCUBATOR_BASIC
--      items: 2203
-+      items: ITEM_POSTCARD_STORAGE_UPGRADE_EARNED
-       itemsCount: 30
-       itemsCount: 25
-       itemsCount: 10
-@@ -461803,7 +461803,7 @@
-       items: ITEM_INCUBATOR_SUPER
-       items: ITEM_TROY_DISK
-       items: ITEM_MP_REPLENISH
--      items: 2201
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
-       itemsCount: 50
-       itemsCount: 35
-       itemsCount: 30
-@@ -461855,7 +461855,7 @@
-       items: ITEM_PAID_RAID_TICKET
-       items: ITEM_XL_RARE_CANDY
-       items: ITEM_INCUBATOR_BASIC
--      items: 2203
-+      items: ITEM_POSTCARD_STORAGE_UPGRADE_EARNED
-       itemsCount: 30
-       itemsCount: 25
-       itemsCount: 10
-@@ -461882,7 +461882,7 @@
-       items: ITEM_MAX_POTION
-       items: ITEM_PAID_RAID_TICKET
-       items: ITEM_XL_RARE_CANDY
--      items: 2201
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
-       itemsCount: 30
-       itemsCount: 25
-       itemsCount: 20
-@@ -461956,7 +461956,7 @@
-   data {
-     template_id: "ITEM_INCUBATOR_SPECIAL"
-     itemSettings {
--      itemId: 905
-+      itemId: ITEM_INCUBATOR_SPECIAL
-       itemType: ITEM_TYPE_INCUBATOR
-       category: ITEM_CATEGORY_INCUBATOR
-       dropTrainerLevel: 15
-@@ -461974,7 +461974,7 @@
-   data {
-     template_id: "LC_POKELID_FUKUOKA"
-     locationCardSettings {
--      locationCard: 198
-+      locationCard: LC_POKELID_FUKUOKA
-       imageUrl: "lc_pokelid_fukuoka"
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
    }
-@@ -461984,7 +461984,7 @@
-   data {
-     template_id: "LC_POKELID_KAGOSHIMA"
-     locationCardSettings {
--      locationCard: 202
-+      locationCard: LC_POKELID_KAGOSHIMA
-       imageUrl: "lc_pokelid_kagoshima"
+ }
+@@ -461817,7 +461789,7 @@
+         itemTemplateId: "N_AVATAR_n_pants_lvl75-techtrousers_0"
+         displayTemplateId: "N_DISPLAY_n_pants_lvl75-techtrousers_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
    }
-@@ -461994,7 +461994,7 @@
-   data {
-     template_id: "LC_POKELID_MIYAZAKI"
-     locationCardSettings {
--      locationCard: 201
-+      locationCard: LC_POKELID_MIYAZAKI
-       imageUrl: "lc_pokelid_miyazaki"
+ }
+@@ -461839,7 +461811,7 @@
+       itemsCount: 1
+       itemsCount: 1
+       itemsCount: 1
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
    }
-@@ -462004,7 +462004,7 @@
-   data {
-     template_id: "LC_POKELID_NAGASAKI"
-     locationCardSettings {
--      locationCard: 200
-+      locationCard: LC_POKELID_NAGASAKI
-       imageUrl: "lc_pokelid_nagasaki"
+ }
+@@ -461867,7 +461839,7 @@
+         itemTemplateId: "N_AVATAR_n_pose_lvl77"
+         displayTemplateId: "N_DISPLAY_n_pose_lvl77"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
    }
-@@ -462014,7 +462014,7 @@
-   data {
-     template_id: "LC_POKELID_OKINAWA"
-     locationCardSettings {
--      locationCard: 203
-+      locationCard: LC_POKELID_OKINAWA
-       imageUrl: "lc_pokelid_okinawa"
+ }
+@@ -461889,7 +461861,7 @@
+       itemsCount: 1
+       itemsCount: 1
+       itemsCount: 75
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
    }
-@@ -462024,7 +462024,7 @@
-   data {
-     template_id: "LC_POKELID_SAGA"
-     locationCardSettings {
--      locationCard: 199
-+      locationCard: LC_POKELID_SAGA
-       imageUrl: "lc_pokelid_saga"
+ }
+@@ -461913,7 +461885,7 @@
+         itemTemplateId: "N_AVATAR_n_hair_lvl79-urbanphantom_0"
+         displayTemplateId: "N_DISPLAY_n_hair_lvl79-urbanphantom_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
      }
    }
+ }
+@@ -461947,7 +461919,7 @@
+         itemTemplateId: "N_AVATAR_n_shirt_lvl80-circuitjacket_0"
+         displayTemplateId: "N_DISPLAY_n_shirt_lvl80-circuitjacket_0"
+       }
+-      10: 1
++      clientOverrideDisplayOrder: true
+     }
+   }
+ }
+@@ -462033,10 +462005,10 @@
+   template_id: "SPECIAL_EGG_SETTINGS"
+   data {
+     template_id: "SPECIAL_EGG_SETTINGS"
+-    280 {
+-      1: 1
+-      2: 15
+-      4: 1
++    specialEggSettings {
++      enabled: true
++      minLevel: 15
++      xpReward: 1
+       5: 10000
+       7: 1
+     }
