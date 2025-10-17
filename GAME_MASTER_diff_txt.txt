@@ -1,1965 +1,257 @@
---- GAME_MASTER_old.txt	2025-10-16 11:42:26.731795233 +0200
-+++ GAME_MASTER.txt	2025-10-16 19:41:33.341217117 +0200
-@@ -41632,6 +41632,56 @@
-       badgeType: BADGE_SMORES_00
-       badgeRank: 2
-       targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-     }
-   }
- }
-@@ -41644,6 +41694,55 @@
-       badgeRank: 2
-       targets: 100
-       targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-+      targets: 100
-     }
-   }
- }
-@@ -150988,7 +151087,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 6
-       incense {
--        incenseLifetimeSeconds: 900
-+        incenseLifetimeSeconds: 1800
-         spawnTableProbability: 0.25
-       }
-       ignoreInventorySpace: true
-@@ -154124,1704 +154223,6 @@
+--- GAME_MASTER_old.txt	2025-10-16 19:41:33.341217117 +0200
++++ GAME_MASTER.txt	2025-10-17 19:10:23.704229843 +0200
+@@ -87444,42 +87444,6 @@
    }
  }
  template {
--  template_id: "LEVEL_41_CAP"
+-  template_id: "EVOLUTION_V0840_POKEMON_APPLIN"
 -  data {
--    template_id: "LEVEL_41_CAP"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_MULTI_PART
--        multiPart {
--          subQuests {
--            questId: "LEVEL_41_CAP_SUB_0"
--          }
--          subQuests {
--            questId: "LEVEL_41_CAP_SUB_1"
--          }
--          subQuests {
--            questId: "LEVEL_41_CAP_SUB_2"
--          }
--          subQuests {
--            questId: "LEVEL_41_CAP_SUB_3"
--          }
+-    template_id: "EVOLUTION_V0840_POKEMON_APPLIN"
+-    evolution_chain_display_settings {
+-      pokemon: APPLIN
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: APPLIN
 -        }
--        questId: "LEVEL_41_CAP"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_41_CAP"
--        questRewards {
--          type: LEVEL_CAP
--          levelCap: 41
+-        evolutionInfos {
+-          pokemon: FLAPPLE
 -        }
 -      }
--      questDisplay {
--        title: "title_level_41_cap"
--        subquestDisplays {
--          questId: "LEVEL_41_CAP_SUB_0"
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: APPLIN
 -        }
--        subquestDisplays {
--          questId: "LEVEL_41_CAP_SUB_1"
+-        evolutionInfos {
+-          pokemon: APPLETUN
 -        }
--        subquestDisplays {
--          questId: "LEVEL_41_CAP_SUB_2"
+-      }
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: APPLIN
 -        }
--        subquestDisplays {
--          questId: "LEVEL_41_CAP_SUB_3"
+-        evolutionInfos {
+-          pokemon: DIPPLIN
+-        }
+-        evolutionInfos {
+-          pokemon: HYDRAPPLE
 -        }
 -      }
 -    }
 -  }
 -}
 -template {
--  template_id: "LEVEL_41_CAP_SUB_0"
--  data {
--    template_id: "LEVEL_41_CAP_SUB_0"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_UPGRADE_POKEMON
--        questId: "LEVEL_41_CAP_SUB_0"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_41_CAP_SUB_0"
--        goal {
--          condition {
--            type: WITH_LEGENDARY_POKEMON
--          }
--          target: 20
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_power_up_legendary_plural"
--        title: "quest_power_up_legendary_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_41_CAP_SUB_1"
--  data {
--    template_id: "LEVEL_41_CAP_SUB_1"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_COMPLETE_RAID_BATTLE
--        questId: "LEVEL_41_CAP_SUB_1"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_41_CAP_SUB_1"
--        goal {
--          condition {
--            type: WITH_WIN_RAID_STATUS
--          }
--          target: 30
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_win_raid_plural"
--        title: "quest_win_raid_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_41_CAP_SUB_2"
--  data {
--    template_id: "LEVEL_41_CAP_SUB_2"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_CATCH_POKEMON
--        questId: "LEVEL_41_CAP_SUB_2"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_41_CAP_SUB_2"
--        goal {
--          condition {
--            type: WITH_SINGLE_DAY
--          }
--          target: 200
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_catch_in_day_plural"
--        title: "quest_catch_in_day_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_41_CAP_SUB_3"
--  data {
--    template_id: "LEVEL_41_CAP_SUB_3"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_BADGE_RANK
--        questId: "LEVEL_41_CAP_SUB_3"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_41_CAP_SUB_3"
--        goal {
--          condition {
--            type: WITH_BADGE_TYPE
--            withBadgeType {
--              badgeRank: 3
--              badgeTypesToExclude: BADGE_MINI_COLLECTION
--            }
--          }
--          target: 5
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_gold_medal_plural"
--        title: "quest_gold_medal_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_42_CAP"
--  data {
--    template_id: "LEVEL_42_CAP"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_MULTI_PART
--        multiPart {
--          subQuests {
--            questId: "LEVEL_42_CAP_SUB_0"
--          }
--          subQuests {
--            questId: "LEVEL_42_CAP_SUB_1"
--          }
--          subQuests {
--            questId: "LEVEL_42_CAP_SUB_2"
--          }
--          subQuests {
--            questId: "LEVEL_42_CAP_SUB_3"
--          }
--        }
--        questId: "LEVEL_42_CAP"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_42_CAP"
--        questRewards {
--          type: LEVEL_CAP
--          levelCap: 42
--        }
--      }
--      questDisplay {
--        title: "title_level_42_cap"
--        subquestDisplays {
--          questId: "LEVEL_42_CAP_SUB_0"
--        }
--        subquestDisplays {
--          questId: "LEVEL_42_CAP_SUB_1"
--        }
--        subquestDisplays {
--          questId: "LEVEL_42_CAP_SUB_2"
--        }
--        subquestDisplays {
--          questId: "LEVEL_42_CAP_SUB_3"
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_42_CAP_SUB_0"
--  data {
--    template_id: "LEVEL_42_CAP_SUB_0"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_EVOLVE_INTO_POKEMON
--        questId: "LEVEL_42_CAP_SUB_0"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_42_CAP_SUB_0"
--        goal {
--          condition {
--            type: WITH_POKEMON_CATEGORY
--            withPokemonCategory {
--              categoryName: "all_eeveelutions"
--              pokemonIds: VAPOREON
--              pokemonIds: JOLTEON
--              pokemonIds: FLAREON
--              pokemonIds: UMBREON
--              pokemonIds: ESPEON
--              pokemonIds: GLACEON
--              pokemonIds: LEAFEON
--              pokemonIds: SYLVEON
--            }
--          }
--          condition {
--            type: WITH_UNIQUE_POKEMON
--          }
--          target: 8
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_eevee_evolve_plural"
--        title: "quest_eevee_evolve_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_42_CAP_SUB_1"
--  data {
--    template_id: "LEVEL_42_CAP_SUB_1"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_EVOLVE_POKEMON
--        questId: "LEVEL_42_CAP_SUB_1"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_42_CAP_SUB_1"
--        goal {
--          condition {
--            type: WITH_ITEM
--          }
--          target: 15
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_evolve_items_plural"
--        title: "quest_evolve_items_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_42_CAP_SUB_2"
--  data {
--    template_id: "LEVEL_42_CAP_SUB_2"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_LAND_THROW
--        questId: "LEVEL_42_CAP_SUB_2"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_42_CAP_SUB_2"
--        goal {
--          condition {
--            type: WITH_THROW_TYPE
--            withThrowType {
--              throwType: ACTIVITY_CATCH_EXCELLENT_THROW
--            }
--          }
--          target: 3
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_land_excellent_plural"
--        title: "quest_land_excellent_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_42_CAP_SUB_3"
--  data {
--    template_id: "LEVEL_42_CAP_SUB_3"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_USE_BERRY_IN_ENCOUNTER
--        questId: "LEVEL_42_CAP_SUB_3"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_42_CAP_SUB_3"
--        goal {
--          target: 200
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_catch_feed_plural"
--        title: "quest_catch_feed_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_43_CAP"
--  data {
--    template_id: "LEVEL_43_CAP"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_MULTI_PART
--        multiPart {
--          subQuests {
--            questId: "LEVEL_43_CAP_SUB_0"
--          }
--          subQuests {
--            questId: "LEVEL_43_CAP_SUB_1"
--          }
--          subQuests {
--            questId: "LEVEL_43_CAP_SUB_2"
--          }
--          subQuests {
--            questId: "LEVEL_43_CAP_SUB_3"
--          }
--        }
--        questId: "LEVEL_43_CAP"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_43_CAP"
--        questRewards {
--          type: LEVEL_CAP
--          levelCap: 43
--        }
--      }
--      questDisplay {
--        title: "title_level_43_cap"
--        subquestDisplays {
--          questId: "LEVEL_43_CAP_SUB_0"
--        }
--        subquestDisplays {
--          questId: "LEVEL_43_CAP_SUB_1"
--        }
--        subquestDisplays {
--          questId: "LEVEL_43_CAP_SUB_2"
--        }
--        subquestDisplays {
--          questId: "LEVEL_43_CAP_SUB_3"
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_43_CAP_SUB_0"
--  data {
--    template_id: "LEVEL_43_CAP_SUB_0"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_GET_STARDUST
--        questId: "LEVEL_43_CAP_SUB_0"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_43_CAP_SUB_0"
--        goal {
--          target: 100000
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_stardust_plural"
--        title: "quest_stardust_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_43_CAP_SUB_1"
--  data {
--    template_id: "LEVEL_43_CAP_SUB_1"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_CHARGE_ATTACK
--        questId: "LEVEL_43_CAP_SUB_1"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_43_CAP_SUB_1"
--        goal {
--          condition {
--            type: WITH_SUPER_EFFECTIVE_CHARGE
--          }
--          target: 200
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_supereffective_charge_plural"
--        title: "quest_supereffective_charge_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_43_CAP_SUB_2"
--  data {
--    template_id: "LEVEL_43_CAP_SUB_2"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_CATCH_POKEMON
--        questId: "LEVEL_43_CAP_SUB_2"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_43_CAP_SUB_2"
--        goal {
--          condition {
--            type: WITH_LEGENDARY_POKEMON
--          }
--          target: 5
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_catch_legendary_plural"
--        title: "quest_catch_legendary_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_43_CAP_SUB_3"
--  data {
--    template_id: "LEVEL_43_CAP_SUB_3"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_BADGE_RANK
--        questId: "LEVEL_43_CAP_SUB_3"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_43_CAP_SUB_3"
--        goal {
--          condition {
--            type: WITH_BADGE_TYPE
--            withBadgeType {
--              badgeRank: 4
--              badgeTypesToExclude: BADGE_MINI_COLLECTION
--            }
--          }
--          target: 5
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_platinum_medal_plural"
--        title: "quest_platinum_medal_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_44_CAP"
--  data {
--    template_id: "LEVEL_44_CAP"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_MULTI_PART
--        multiPart {
--          subQuests {
--            questId: "LEVEL_44_CAP_SUB_0"
--          }
--          subQuests {
--            questId: "LEVEL_44_CAP_SUB_1"
--          }
--          subQuests {
--            questId: "LEVEL_44_CAP_SUB_2"
--          }
--          subQuests {
--            questId: "LEVEL_44_CAP_SUB_3"
--          }
--        }
--        questId: "LEVEL_44_CAP"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_44_CAP"
--        questRewards {
--          type: LEVEL_CAP
--          levelCap: 44
--        }
--      }
--      questDisplay {
--        title: "title_level_44_cap"
--        subquestDisplays {
--          questId: "LEVEL_44_CAP_SUB_0"
--        }
--        subquestDisplays {
--          questId: "LEVEL_44_CAP_SUB_1"
--        }
--        subquestDisplays {
--          questId: "LEVEL_44_CAP_SUB_2"
--        }
--        subquestDisplays {
--          questId: "LEVEL_44_CAP_SUB_3"
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_44_CAP_SUB_0"
--  data {
--    template_id: "LEVEL_44_CAP_SUB_0"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_COMPLETE_COMBAT
--        questId: "LEVEL_44_CAP_SUB_0"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_44_CAP_SUB_0"
--        goal {
--          condition {
--            type: WITH_PVP_COMBAT
--            withPvpCombat {
--              requiresWin: true
--              combatLeagueBadge: BADGE_GREAT_LEAGUE
--            }
--          }
--          condition {
--            type: WITH_WIN_BATTLE_STATUS
--          }
--          target: 30
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_battle_great_win_plural"
--        title: "quest_battle_great_win_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_44_CAP_SUB_1"
--  data {
--    template_id: "LEVEL_44_CAP_SUB_1"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_COMPLETE_COMBAT
--        questId: "LEVEL_44_CAP_SUB_1"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_44_CAP_SUB_1"
--        goal {
--          condition {
--            type: WITH_PVP_COMBAT
--            withPvpCombat {
--              requiresWin: true
--              combatLeagueBadge: BADGE_ULTRA_LEAGUE
--            }
--          }
--          condition {
--            type: WITH_WIN_BATTLE_STATUS
--          }
--          target: 30
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_battle_ultra_win_plural"
--        title: "quest_battle_ultra_win_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_44_CAP_SUB_2"
--  data {
--    template_id: "LEVEL_44_CAP_SUB_2"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_COMPLETE_COMBAT
--        questId: "LEVEL_44_CAP_SUB_2"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_44_CAP_SUB_2"
--        goal {
--          condition {
--            type: WITH_PVP_COMBAT
--            withPvpCombat {
--              requiresWin: true
--              combatLeagueBadge: BADGE_MASTER_LEAGUE
--            }
--          }
--          condition {
--            type: WITH_WIN_BATTLE_STATUS
--          }
--          target: 30
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_battle_master_win_plural"
--        title: "quest_battle_master_win_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_44_CAP_SUB_3"
--  data {
--    template_id: "LEVEL_44_CAP_SUB_3"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_COMPLETE_COMBAT
--        questId: "LEVEL_44_CAP_SUB_3"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_44_CAP_SUB_3"
--        goal {
--          condition {
--            type: WITH_COMBAT_TYPE
--            with_combat_type {
--              combat_type: VS_SEEKER
--            }
--          }
--          target: 20
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_battle_gbl_plural"
--        title: "quest_battle_gbl_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_45_CAP"
--  data {
--    template_id: "LEVEL_45_CAP"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_MULTI_PART
--        multiPart {
--          subQuests {
--            questId: "LEVEL_45_CAP_SUB_0"
--          }
--          subQuests {
--            questId: "LEVEL_45_CAP_SUB_1"
--          }
--          subQuests {
--            questId: "LEVEL_45_CAP_SUB_2"
--          }
--          subQuests {
--            questId: "LEVEL_45_CAP_SUB_3"
--          }
--        }
--        questId: "LEVEL_45_CAP"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_45_CAP"
--        questRewards {
--          type: LEVEL_CAP
--          levelCap: 45
--        }
--      }
--      questDisplay {
--        title: "title_level_45_cap"
--        subquestDisplays {
--          questId: "LEVEL_45_CAP_SUB_0"
--        }
--        subquestDisplays {
--          questId: "LEVEL_45_CAP_SUB_1"
--        }
--        subquestDisplays {
--          questId: "LEVEL_45_CAP_SUB_2"
--        }
--        subquestDisplays {
--          questId: "LEVEL_45_CAP_SUB_3"
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_45_CAP_SUB_0"
--  data {
--    template_id: "LEVEL_45_CAP_SUB_0"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_BATTLE_TEAM_ROCKET
--        questId: "LEVEL_45_CAP_SUB_0"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_45_CAP_SUB_0"
--        goal {
--          condition {
--            type: WITH_INVASION_CHARACTER
--            withInvasionCharacter {
--              category: GRUNT
--            }
--          }
--          condition {
--            type: WITH_WIN_BATTLE_STATUS
--          }
--          target: 100
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_rocket_battle_win_plural"
--        title: "quest_rocket_battle_win_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_45_CAP_SUB_1"
--  data {
--    template_id: "LEVEL_45_CAP_SUB_1"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_PURIFY_POKEMON
--        questId: "LEVEL_45_CAP_SUB_1"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_45_CAP_SUB_1"
--        goal {
--          target: 100
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_rocket_purify_plural"
--        title: "quest_rocket_purify_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_45_CAP_SUB_2"
--  data {
--    template_id: "LEVEL_45_CAP_SUB_2"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_BATTLE_TEAM_ROCKET
--        questId: "LEVEL_45_CAP_SUB_2"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_45_CAP_SUB_2"
--        goal {
--          condition {
--            type: WITH_INVASION_CHARACTER
--            withInvasionCharacter {
--              category: ARLO
--              category: CLIFF
--              category: SIERRA
--            }
--          }
--          condition {
--            type: WITH_WIN_BATTLE_STATUS
--          }
--          target: 50
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_ROCKETHQ1_leaders_win_plural"
--        title: "quest_ROCKETHQ1_leaders_win_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_45_CAP_SUB_3"
--  data {
--    template_id: "LEVEL_45_CAP_SUB_3"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_BADGE_RANK
--        questId: "LEVEL_45_CAP_SUB_3"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_45_CAP_SUB_3"
--        goal {
--          condition {
--            type: WITH_BADGE_TYPE
--            withBadgeType {
--              badgeRank: 4
--              badgeTypesToExclude: BADGE_MINI_COLLECTION
--            }
--          }
--          target: 10
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_platinum_medal_plural"
--        title: "quest_platinum_medal_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_46_CAP"
--  data {
--    template_id: "LEVEL_46_CAP"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_MULTI_PART
--        multiPart {
--          subQuests {
--            questId: "LEVEL_46_CAP_SUB_0"
--          }
--          subQuests {
--            questId: "LEVEL_46_CAP_SUB_1"
--          }
--          subQuests {
--            questId: "LEVEL_46_CAP_SUB_2"
--          }
--          subQuests {
--            questId: "LEVEL_46_CAP_SUB_3"
--          }
--        }
--        questId: "LEVEL_46_CAP"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_46_CAP"
--        questRewards {
--          type: LEVEL_CAP
--          levelCap: 46
--        }
--      }
--      questDisplay {
--        title: "title_level_46_cap"
--        subquestDisplays {
--          questId: "LEVEL_46_CAP_SUB_0"
--        }
--        subquestDisplays {
--          questId: "LEVEL_46_CAP_SUB_1"
--        }
--        subquestDisplays {
--          questId: "LEVEL_46_CAP_SUB_2"
--        }
--        subquestDisplays {
--          questId: "LEVEL_46_CAP_SUB_3"
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_46_CAP_SUB_0"
--  data {
--    template_id: "LEVEL_46_CAP_SUB_0"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_COMPLETE_QUEST
--        questId: "LEVEL_46_CAP_SUB_0"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_46_CAP_SUB_0"
--        goal {
--          condition {
--            type: WITH_QUEST_CONTEXT
--            with_quest_context {
--              context: CHALLENGE_QUEST
--            }
--          }
--          target: 100
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_field_research_plural"
--        title: "quest_field_research_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_46_CAP_SUB_1"
--  data {
--    template_id: "LEVEL_46_CAP_SUB_1"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_TAKE_SNAPSHOT
--        questId: "LEVEL_46_CAP_SUB_1"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_46_CAP_SUB_1"
--        goal {
--          condition {
--            type: WITH_DAYS_IN_A_ROW
--          }
--          target: 7
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_snapshots_inarow_plural"
--        title: "quest_snapshots_inarow_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_46_CAP_SUB_2"
--  data {
--    template_id: "LEVEL_46_CAP_SUB_2"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_LAND_THROW
--        questId: "LEVEL_46_CAP_SUB_2"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_46_CAP_SUB_2"
--        goal {
--          condition {
--            type: WITH_THROW_TYPE
--            withThrowType {
--              throwType: ACTIVITY_CATCH_EXCELLENT_THROW
--            }
--          }
--          target: 50
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_land_excellent_plural"
--        title: "quest_land_excellent_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_46_CAP_SUB_3"
--  data {
--    template_id: "LEVEL_46_CAP_SUB_3"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_HATCH_EGG
--        questId: "LEVEL_46_CAP_SUB_3"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_46_CAP_SUB_3"
--        goal {
--          target: 30
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_hatch_egg_plural"
--        title: "quest_hatch_egg_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_47_CAP"
--  data {
--    template_id: "LEVEL_47_CAP"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_MULTI_PART
--        multiPart {
--          subQuests {
--            questId: "LEVEL_47_CAP_SUB_0"
--          }
--          subQuests {
--            questId: "LEVEL_47_CAP_SUB_1"
--          }
--          subQuests {
--            questId: "LEVEL_47_CAP_SUB_2"
--          }
--          subQuests {
--            questId: "LEVEL_47_CAP_SUB_3"
--          }
--        }
--        questId: "LEVEL_47_CAP"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_47_CAP"
--        questRewards {
--          type: LEVEL_CAP
--          levelCap: 47
--        }
--      }
--      questDisplay {
--        title: "title_level_47_cap"
--        subquestDisplays {
--          questId: "LEVEL_47_CAP_SUB_0"
--        }
--        subquestDisplays {
--          questId: "LEVEL_47_CAP_SUB_1"
--        }
--        subquestDisplays {
--          questId: "LEVEL_47_CAP_SUB_2"
--        }
--        subquestDisplays {
--          questId: "LEVEL_47_CAP_SUB_3"
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_47_CAP_SUB_0"
--  data {
--    template_id: "LEVEL_47_CAP_SUB_0"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_COMPLETE_RAID_BATTLE
--        questId: "LEVEL_47_CAP_SUB_0"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_47_CAP_SUB_0"
--        goal {
--          condition {
--            type: WITH_WIN_RAID_STATUS
--          }
--          condition {
--            type: WITH_UNIQUE_POKEMON_TEAM
--          }
--          target: 30
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_win_raid_unique_plural"
--        title: "quest_win_raid_unique_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_47_CAP_SUB_1"
--  data {
--    template_id: "LEVEL_47_CAP_SUB_1"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_COMPLETE_RAID_BATTLE
--        questId: "LEVEL_47_CAP_SUB_1"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_47_CAP_SUB_1"
--        goal {
--          condition {
--            type: WITH_WIN_RAID_STATUS
--          }
--          condition {
--            type: WITH_RAID_LEVEL
--            withRaidLevel {
--              raidLevel: RAID_LEVEL_3
--              raidLevel: RAID_LEVEL_4
--              raidLevel: RAID_LEVEL_5
--              raidLevel: RAID_LEVEL_MEGA
--              raidLevel: RAID_LEVEL_MEGA_5
--            }
--          }
--          condition {
--            type: WITH_MAX_CP
--            withMaxCp {
--              maxCp: 1500
--            }
--          }
--          target: 1
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_win_raid_lvl3plus_less1500cp_singular"
--        title: "quest_win_raid_lvl3plus_less1500cp_singular"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_47_CAP_SUB_2"
--  data {
--    template_id: "LEVEL_47_CAP_SUB_2"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_UPGRADE_POKEMON
--        questId: "LEVEL_47_CAP_SUB_2"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_47_CAP_SUB_2"
--        goal {
--          condition {
--            type: WITH_POKEMON_LEVEL
--            withPokemonLevel {
--              maxLevel: true
--            }
--          }
--          target: 3
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_power_up_max_plural"
--        title: "quest_power_up_max_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_47_CAP_SUB_3"
--  data {
--    template_id: "LEVEL_47_CAP_SUB_3"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_BADGE_RANK
--        questId: "LEVEL_47_CAP_SUB_3"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_47_CAP_SUB_3"
--        goal {
--          condition {
--            type: WITH_BADGE_TYPE
--            withBadgeType {
--              badgeRank: 4
--              badgeTypesToExclude: BADGE_MINI_COLLECTION
--            }
--          }
--          target: 20
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_platinum_medal_plural"
--        title: "quest_platinum_medal_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_48_CAP"
--  data {
--    template_id: "LEVEL_48_CAP"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_MULTI_PART
--        multiPart {
--          subQuests {
--            questId: "LEVEL_48_CAP_SUB_0"
--          }
--          subQuests {
--            questId: "LEVEL_48_CAP_SUB_1"
--          }
--          subQuests {
--            questId: "LEVEL_48_CAP_SUB_2"
--          }
--          subQuests {
--            questId: "LEVEL_48_CAP_SUB_3"
--          }
--        }
--        questId: "LEVEL_48_CAP"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_48_CAP"
--        questRewards {
--          type: LEVEL_CAP
--          levelCap: 48
--        }
--      }
--      questDisplay {
--        title: "title_level_48_cap"
--        subquestDisplays {
--          questId: "LEVEL_48_CAP_SUB_0"
--        }
--        subquestDisplays {
--          questId: "LEVEL_48_CAP_SUB_1"
--        }
--        subquestDisplays {
--          questId: "LEVEL_48_CAP_SUB_2"
--        }
--        subquestDisplays {
--          questId: "LEVEL_48_CAP_SUB_3"
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_48_CAP_SUB_0"
--  data {
--    template_id: "LEVEL_48_CAP_SUB_0"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_BUDDY_FIND_SOUVENIR
--        questId: "LEVEL_48_CAP_SUB_0"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_48_CAP_SUB_0"
--        goal {
--          target: 10
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_buddy_souvenir_plural"
--        title: "quest_buddy_souvenir_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_48_CAP_SUB_1"
--  data {
--    template_id: "LEVEL_48_CAP_SUB_1"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_BUDDY_EARN_AFFECTION_POINTS
--        questId: "LEVEL_48_CAP_SUB_1"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_48_CAP_SUB_1"
--        goal {
--          target: 300
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
--        title: "CHALLENGE_BUDDY_AFFECTION_PLURAL"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_48_CAP_SUB_2"
--  data {
--    template_id: "LEVEL_48_CAP_SUB_2"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_WALK
--        questId: "LEVEL_48_CAP_SUB_2"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_48_CAP_SUB_2"
--        goal {
--          target: 200
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_buddy_walk_km_plural"
--        title: "quest_buddy_walk_km_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_48_CAP_SUB_3"
--  data {
--    template_id: "LEVEL_48_CAP_SUB_3"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_COLLECT_AS_REWARDS
--        questId: "LEVEL_48_CAP_SUB_3"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_48_CAP_SUB_3"
--        goal {
--          condition {
--            type: WITH_DISTANCE
--            withDistance {
--              distanceKm: 25
--            }
--          }
--          target: 8
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_walk_25km_inaweek_plural"
--        title: "quest_walk_25km_inaweek_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_49_CAP"
--  data {
--    template_id: "LEVEL_49_CAP"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_MULTI_PART
--        multiPart {
--          subQuests {
--            questId: "LEVEL_49_CAP_SUB_0"
--          }
--          subQuests {
--            questId: "LEVEL_49_CAP_SUB_1"
--          }
--          subQuests {
--            questId: "LEVEL_49_CAP_SUB_2"
--          }
--          subQuests {
--            questId: "LEVEL_49_CAP_SUB_3"
--          }
--        }
--        questId: "LEVEL_49_CAP"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_49_CAP"
--        questRewards {
--          type: LEVEL_CAP
--          levelCap: 49
--        }
--      }
--      questDisplay {
--        title: "title_level_49_cap"
--        subquestDisplays {
--          questId: "LEVEL_49_CAP_SUB_0"
--        }
--        subquestDisplays {
--          questId: "LEVEL_49_CAP_SUB_1"
--        }
--        subquestDisplays {
--          questId: "LEVEL_49_CAP_SUB_2"
--        }
--        subquestDisplays {
--          questId: "LEVEL_49_CAP_SUB_3"
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_49_CAP_SUB_0"
--  data {
--    template_id: "LEVEL_49_CAP_SUB_0"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_TRADE_POKEMON
--        questId: "LEVEL_49_CAP_SUB_0"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_49_CAP_SUB_0"
--        goal {
--          condition {
--            type: WITH_DISTANCE
--            withDistance {
--              distanceKm: 300
--            }
--          }
--          target: 10
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_trade_300km_plural"
--        title: "quest_trade_300km_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_49_CAP_SUB_1"
--  data {
--    template_id: "LEVEL_49_CAP_SUB_1"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_TRADE_POKEMON
--        questId: "LEVEL_49_CAP_SUB_1"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_49_CAP_SUB_1"
--        goal {
--          condition {
--            type: WITH_LUCKY_POKEMON
--          }
--          target: 50
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_lucky_plural"
--        title: "quest_lucky_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_49_CAP_SUB_2"
--  data {
--    template_id: "LEVEL_49_CAP_SUB_2"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_SEND_GIFT
--        questId: "LEVEL_49_CAP_SUB_2"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_49_CAP_SUB_2"
--        goal {
--          target: 500
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_send_gifts_plural"
--        title: "quest_send_gifts_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_49_CAP_SUB_3"
--  data {
--    template_id: "LEVEL_49_CAP_SUB_3"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_BADGE_RANK
--        questId: "LEVEL_49_CAP_SUB_3"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_49_CAP_SUB_3"
--        goal {
--          condition {
--            type: WITH_BADGE_TYPE
--            withBadgeType {
--              badgeRank: 4
--              badgeTypesToExclude: BADGE_MINI_COLLECTION
--            }
--          }
--          target: 35
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_platinum_medal_plural"
--        title: "quest_platinum_medal_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_50_CAP"
--  data {
--    template_id: "LEVEL_50_CAP"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_MULTI_PART
--        multiPart {
--          subQuests {
--            questId: "LEVEL_50_CAP_SUB_0"
--          }
--          subQuests {
--            questId: "LEVEL_50_CAP_SUB_1"
--          }
--          subQuests {
--            questId: "LEVEL_50_CAP_SUB_2"
--          }
--          subQuests {
--            questId: "LEVEL_50_CAP_SUB_3"
--          }
--        }
--        questId: "LEVEL_50_CAP"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_50_CAP"
--        questRewards {
--          type: LEVEL_CAP
--          levelCap: 50
--        }
--      }
--      questDisplay {
--        title: "title_level_50_cap"
--        subquestDisplays {
--          questId: "LEVEL_50_CAP_SUB_0"
--        }
--        subquestDisplays {
--          questId: "LEVEL_50_CAP_SUB_1"
--        }
--        subquestDisplays {
--          questId: "LEVEL_50_CAP_SUB_2"
--        }
--        subquestDisplays {
--          questId: "LEVEL_50_CAP_SUB_3"
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_50_CAP_SUB_0"
--  data {
--    template_id: "LEVEL_50_CAP_SUB_0"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_LAND_THROW
--        questId: "LEVEL_50_CAP_SUB_0"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_50_CAP_SUB_0"
--        goal {
--          condition {
--            type: WITH_THROW_TYPE
--            withThrowType {
--              throwType: ACTIVITY_CATCH_EXCELLENT_THROW
--            }
--          }
--          target: 999
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_land_excellent_plural"
--        title: "quest_land_excellent_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_50_CAP_SUB_1"
--  data {
--    template_id: "LEVEL_50_CAP_SUB_1"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_CATCH_POKEMON
--        questId: "LEVEL_50_CAP_SUB_1"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_50_CAP_SUB_1"
--        goal {
--          condition {
--            type: WITH_LEGENDARY_POKEMON
--          }
--          condition {
--            type: WITH_CATCHES_IN_A_ROW
--          }
--          target: 5
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_catch_legendary_inarow_plural"
--        title: "quest_catch_legendary_inarow_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_50_CAP_SUB_2"
--  data {
--    template_id: "LEVEL_50_CAP_SUB_2"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_BATTLE_TEAM_ROCKET
--        questId: "LEVEL_50_CAP_SUB_2"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_50_CAP_SUB_2"
--        goal {
--          condition {
--            type: WITH_INVASION_CHARACTER
--            withInvasionCharacter {
--              category: ARLO
--              category: CLIFF
--              category: SIERRA
--            }
--          }
--          condition {
--            type: WITH_WIN_BATTLE_STATUS
--          }
--          condition {
--            type: WITH_MAX_CP
--            withMaxCp {
--              maxCp: 2500
--            }
--          }
--          target: 3
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_win_rocket_leader_less2500cp_plural"
--        title: "quest_win_rocket_leader_less2500cp_plural"
--      }
--    }
--  }
--}
--template {
--  template_id: "LEVEL_50_CAP_SUB_3"
--  data {
--    template_id: "LEVEL_50_CAP_SUB_3"
--    clientQuestTemplate {
--      quest {
--        questType: QUEST_GBL_RANK
--        questId: "LEVEL_50_CAP_SUB_3"
--        questContext: LEVEL_UP_QUEST
--        templateId: "LEVEL_50_CAP_SUB_3"
--        goal {
--          condition {
--            type: WITH_GBL_RANK
--            withGblRank {
--              rank: 10
--            }
--          }
--          target: 1
--        }
--        questRewards {
--          type: EXPERIENCE
--          exp: 500
--        }
--      }
--      questDisplay {
--        description: "quest_gbl_rank_ten"
--        title: "quest_gbl_rank_ten"
--      }
--    }
--  }
--}
--template {
-   template_id: "LEVEL_71_CAP"
+   template_id: "EVOLUTION_V0848_POKEMON_TOXEL"
    data {
-     template_id: "LEVEL_71_CAP"
-@@ -273864,6 +272265,7 @@
-       cinematicMoves: PETAL_BLIZZARD
-       cinematicMoves: SOLAR_BEAM
-       cinematicMoves: EARTHQUAKE
-+      cinematicMoves: FRENZY_PLANT
-       animationTime: 1.3333
-       animationTime: 0.6667
-       animationTime: 1.6667
-@@ -273958,6 +272360,7 @@
-       cinematicMoves: PETAL_BLIZZARD
-       cinematicMoves: SOLAR_BEAM
-       cinematicMoves: EARTHQUAKE
-+      cinematicMoves: FRENZY_PLANT
-       animationTime: 1.3333
-       animationTime: 0.6667
-       animationTime: 1.6667
-@@ -275138,6 +273541,7 @@
-       cinematicMoves: CRUNCH
-       cinematicMoves: HYDRO_PUMP
-       cinematicMoves: ICE_BEAM
-+      cinematicMoves: HYDRO_CANNON
-       animationTime: 1.3333
-       animationTime: 0.6667
-       animationTime: 1.6667
-@@ -275234,6 +273638,7 @@
-       cinematicMoves: CRUNCH
-       cinematicMoves: HYDRO_PUMP
-       cinematicMoves: ICE_BEAM
-+      cinematicMoves: HYDRO_CANNON
-       animationTime: 1.3333
-       animationTime: 0.6667
-       animationTime: 1.6667
-@@ -354719,6 +353124,7 @@
-       cinematicMoves: ROCK_SLIDE
-       cinematicMoves: FOCUS_BLAST
-       cinematicMoves: FLAME_CHARGE
-+      cinematicMoves: BLAST_BURN
-       animationTime: 1.9
-       animationTime: 0.6667
-       animationTime: 1.8
-@@ -354815,6 +353221,7 @@
-       cinematicMoves: ROCK_SLIDE
-       cinematicMoves: FOCUS_BLAST
-       cinematicMoves: FLAME_CHARGE
-+      cinematicMoves: BLAST_BURN
-       animationTime: 1.9
-       animationTime: 0.6667
-       animationTime: 1.8
-@@ -453609,7 +452016,6 @@
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-       hidden: true
--      spriteId: "bundle.latam.large.1"
-       title: "bundle.diademuertos.box.1_title"
-     }
+     template_id: "EVOLUTION_V0848_POKEMON_TOXEL"
+@@ -87852,42 +87816,6 @@
    }
-@@ -454136,7 +452542,6 @@
-       sku: "general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.7"
-       title: "general2.ticket.6_MegaRayquazaRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -454157,7 +452562,6 @@
-       sku: "general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.7"
-       title: "general2.ticket.6_MegaRayquazaRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -455885,7 +454289,6 @@
-       sku: "pgorelease.general2.ticket.7"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.7"
-       title: "general2.ticket.6_MegaRayquazaRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -455906,7 +454309,6 @@
-       sku: "pgorelease.general2.ticket.7.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general2.ticket.7"
-       title: "general2.ticket.6_MegaRayquazaRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -462023,12 +460425,12 @@
+ }
+ template {
+-  template_id: "EVOLUTION_V1011_POKEMON_DIPPLIN"
+-  data {
+-    template_id: "EVOLUTION_V1011_POKEMON_DIPPLIN"
+-    evolution_chain_display_settings {
+-      pokemon: DIPPLIN
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: APPLIN
+-        }
+-        evolutionInfos {
+-          pokemon: FLAPPLE
+-        }
+-      }
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: APPLIN
+-        }
+-        evolutionInfos {
+-          pokemon: APPLETUN
+-        }
+-      }
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: APPLIN
+-        }
+-        evolutionInfos {
+-          pokemon: DIPPLIN
+-        }
+-        evolutionInfos {
+-          pokemon: HYDRAPPLE
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+   template_id: "EVOLUTION_V1012_POKEMON_POLTCHAGEIST"
+   data {
+     template_id: "EVOLUTION_V1012_POKEMON_POLTCHAGEIST"
+@@ -87950,42 +87878,6 @@
+   }
+ }
+ template {
+-  template_id: "EVOLUTION_V1019_POKEMON_HYDRAPPLE"
+-  data {
+-    template_id: "EVOLUTION_V1019_POKEMON_HYDRAPPLE"
+-    evolution_chain_display_settings {
+-      pokemon: HYDRAPPLE
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: APPLIN
+-        }
+-        evolutionInfos {
+-          pokemon: FLAPPLE
+-        }
+-      }
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: APPLIN
+-        }
+-        evolutionInfos {
+-          pokemon: APPLETUN
+-        }
+-      }
+-      evolutionChains {
+-        evolutionInfos {
+-          pokemon: APPLIN
+-        }
+-        evolutionInfos {
+-          pokemon: DIPPLIN
+-        }
+-        evolutionInfos {
+-          pokemon: HYDRAPPLE
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+   template_id: "EXTENDED_V0001_POKEMON_BULBASAUR"
+   data {
+     template_id: "EXTENDED_V0001_POKEMON_BULBASAUR"
+@@ -150997,7 +150889,9 @@
+       dropTrainerLevel: 20
+       food {
+         itemEffect: ITEM_EFFECT_CANDY_AWARD
+-        itemEffectPercent: 4.6668
++        itemEffect: ITEM_EFFECT_CAP_CHANCE_SINGLE_THROW
++        itemEffectPercent: 2.3334
++        itemEffectPercent: 1.8
+         growthPercent: 0.1
+         berryMultiplier: 2
+         remoteBerryMultiplier: 0.5
+@@ -151656,7 +151550,7 @@
+       dropTrainerLevel: 18
+       food {
+         itemEffect: ITEM_EFFECT_CANDY_AWARD
+-        itemEffectPercent: 4
++        itemEffectPercent: 2
+         growthPercent: 0.1
+         berryMultiplier: 1
+         remoteBerryMultiplier: 0.25
+@@ -418000,12 +417894,14 @@
+         evolution: APPLETUN
+         evolutionItemRequirement: ITEM_OTHER_EVOLUTION_STONE_MAPLE_A
+         candyCost: 200
++        form: APPLETUN_NORMAL
+         evolutionItemRequirementCost: 20
+       }
+       evolutionBranch {
+         evolution: FLAPPLE
+         evolutionItemRequirement: ITEM_OTHER_EVOLUTION_STONE_MAPLE_B
+         candyCost: 200
++        form: FLAPPLE_NORMAL
+         evolutionItemRequirementCost: 20
+       }
+       evolutionBranch {
+@@ -450320,13 +450216,10 @@
+       sku: "bundle.harvestfestival.2025"
        category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-       hidden: true
--      spriteId: "diademuertosbox"
--      title: "bundle.diademuertos.box.1_title"
-+      spriteId: "bundle.latam.small.1"
-+      title: "bundle.wicker.box.1_title"
+       sortOrder: 4
++      hidden: true
+       sale: true
+       spriteId: "bundle.general2.free.1"
+       title: "bundle.general5.small.1_title"
+-      skuEnableTime: "2023-10-10T11:00:00"
+-      skuDisableTime: "2025-10-16T20:00:00"
+-      skuEnableTimeUtcMs: 1696935600000
+-      skuDisableTimeUtcMs: 1760644800000
      }
    }
  }
--batch_id: 1760561614741
-+batch_id: 1760630928099
+@@ -452001,9 +451894,15 @@
+       sku: "bundle.zzraid.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general.premiumbox.medium.1"
+       title: "standard_raid_box_title"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2025-10-18T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1760817600000
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 590
+     }
+   }
+ }
+@@ -452618,6 +452517,7 @@
+       sku: "general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general1.ticket._HarvestFestival_OCT25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -452638,6 +452538,7 @@
+       sku: "general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general1.ticket._HarvestFestival_OCT25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -454365,6 +454266,7 @@
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general1.ticket._HarvestFestival_OCT25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -454385,6 +454287,7 @@
+       sku: "pgorelease.general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general1.ticket._HarvestFestival_OCT25_title"
+       skuEnableTime: "2023-04-06T10:00:00"
+@@ -460430,7 +460333,7 @@
+     }
+   }
+ }
+-batch_id: 1760630928099
++batch_id: 1760692704010
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -462066,7 +460468,9 @@
+@@ -460451,7 +460354,7 @@
+ experiment_id: 807
+ experiment_id: 1115
+ experiment_id: 1699
+-experiment_id: 2223
++experiment_id: 2231
+ experiment_id: 2248
+ experiment_id: 2297
+ experiment_id: 2600
+@@ -460466,8 +460369,6 @@
+ experiment_id: 3535
+ experiment_id: 3538
  experiment_id: 3566
- experiment_id: 3581
- experiment_id: 3583
-+experiment_id: 4000
+-experiment_id: 3581
+-experiment_id: 3583
+ experiment_id: 4000
  experiment_id: 4693
-+experiment_id: 4960
- experiment_id: 4998
- experiment_id: 5160
- experiment_id: 5162
-@@ -462078,6 +460482,7 @@
- experiment_id: 7072
- experiment_id: 8788
- experiment_id: 8913
-+experiment_id: 8915
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
-@@ -462087,6 +460492,8 @@
- experiment_id: 55571
- experiment_id: 55751
- experiment_id: 60095
-+experiment_id: 70500
-+experiment_id: 70502
- experiment_id: 90000
- experiment_id: 99998
- experiment_id: 173173
-@@ -462103,3 +460510,4 @@
- experiment_id: 6600427
- experiment_id: 6600429
- experiment_id: 6600431
-+experiment_id: 6600436
+ experiment_id: 4960
