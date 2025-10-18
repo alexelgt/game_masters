@@ -1,257 +1,267 @@
---- GAME_MASTER_old.txt	2025-10-16 19:41:33.341217117 +0200
-+++ GAME_MASTER.txt	2025-10-17 19:10:23.704229843 +0200
-@@ -87444,42 +87444,6 @@
-   }
- }
- template {
--  template_id: "EVOLUTION_V0840_POKEMON_APPLIN"
--  data {
--    template_id: "EVOLUTION_V0840_POKEMON_APPLIN"
--    evolution_chain_display_settings {
--      pokemon: APPLIN
--      evolutionChains {
--        evolutionInfos {
--          pokemon: APPLIN
--        }
--        evolutionInfos {
--          pokemon: FLAPPLE
--        }
--      }
--      evolutionChains {
--        evolutionInfos {
--          pokemon: APPLIN
--        }
--        evolutionInfos {
--          pokemon: APPLETUN
--        }
--      }
--      evolutionChains {
--        evolutionInfos {
--          pokemon: APPLIN
--        }
--        evolutionInfos {
--          pokemon: DIPPLIN
--        }
--        evolutionInfos {
--          pokemon: HYDRAPPLE
--        }
--      }
--    }
--  }
--}
--template {
-   template_id: "EVOLUTION_V0848_POKEMON_TOXEL"
-   data {
-     template_id: "EVOLUTION_V0848_POKEMON_TOXEL"
-@@ -87852,42 +87816,6 @@
-   }
- }
- template {
--  template_id: "EVOLUTION_V1011_POKEMON_DIPPLIN"
--  data {
--    template_id: "EVOLUTION_V1011_POKEMON_DIPPLIN"
--    evolution_chain_display_settings {
--      pokemon: DIPPLIN
--      evolutionChains {
--        evolutionInfos {
--          pokemon: APPLIN
--        }
--        evolutionInfos {
--          pokemon: FLAPPLE
--        }
--      }
--      evolutionChains {
--        evolutionInfos {
--          pokemon: APPLIN
--        }
--        evolutionInfos {
--          pokemon: APPLETUN
--        }
--      }
--      evolutionChains {
--        evolutionInfos {
--          pokemon: APPLIN
--        }
--        evolutionInfos {
--          pokemon: DIPPLIN
--        }
--        evolutionInfos {
--          pokemon: HYDRAPPLE
--        }
--      }
--    }
--  }
--}
--template {
-   template_id: "EVOLUTION_V1012_POKEMON_POLTCHAGEIST"
-   data {
-     template_id: "EVOLUTION_V1012_POKEMON_POLTCHAGEIST"
-@@ -87950,42 +87878,6 @@
-   }
- }
- template {
--  template_id: "EVOLUTION_V1019_POKEMON_HYDRAPPLE"
--  data {
--    template_id: "EVOLUTION_V1019_POKEMON_HYDRAPPLE"
--    evolution_chain_display_settings {
--      pokemon: HYDRAPPLE
--      evolutionChains {
--        evolutionInfos {
--          pokemon: APPLIN
--        }
--        evolutionInfos {
--          pokemon: FLAPPLE
--        }
--      }
--      evolutionChains {
--        evolutionInfos {
--          pokemon: APPLIN
--        }
--        evolutionInfos {
--          pokemon: APPLETUN
--        }
--      }
--      evolutionChains {
--        evolutionInfos {
--          pokemon: APPLIN
--        }
--        evolutionInfos {
--          pokemon: DIPPLIN
--        }
--        evolutionInfos {
--          pokemon: HYDRAPPLE
--        }
--      }
--    }
--  }
--}
--template {
-   template_id: "EXTENDED_V0001_POKEMON_BULBASAUR"
-   data {
-     template_id: "EXTENDED_V0001_POKEMON_BULBASAUR"
-@@ -150997,7 +150889,9 @@
-       dropTrainerLevel: 20
-       food {
-         itemEffect: ITEM_EFFECT_CANDY_AWARD
--        itemEffectPercent: 4.6668
-+        itemEffect: ITEM_EFFECT_CAP_CHANCE_SINGLE_THROW
-+        itemEffectPercent: 2.3334
-+        itemEffectPercent: 1.8
-         growthPercent: 0.1
-         berryMultiplier: 2
-         remoteBerryMultiplier: 0.5
-@@ -151656,7 +151550,7 @@
-       dropTrainerLevel: 18
-       food {
-         itemEffect: ITEM_EFFECT_CANDY_AWARD
--        itemEffectPercent: 4
-+        itemEffectPercent: 2
-         growthPercent: 0.1
-         berryMultiplier: 1
-         remoteBerryMultiplier: 0.25
-@@ -418000,12 +417894,14 @@
-         evolution: APPLETUN
-         evolutionItemRequirement: ITEM_OTHER_EVOLUTION_STONE_MAPLE_A
-         candyCost: 200
-+        form: APPLETUN_NORMAL
-         evolutionItemRequirementCost: 20
+--- GAME_MASTER_old.txt	2025-10-17 19:10:23.704229843 +0200
++++ GAME_MASTER.txt	2025-10-18 09:58:41.202596593 +0200
+@@ -42634,7 +42634,7 @@
+       rvnVersion: 1
+       maxPlayersPerBreadDoughLobby: 100
+       maxRemotePlayersPerBreadDoughLobby: 100
+-      maxRemoteBreadBattlePassesAllowed: 10
++      maxRemoteBreadBattlePassesAllowed: 20
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 98
+@@ -65585,8 +65585,6 @@
+           pokemon {
+             id: GASTRODON
+             forms: GASTRODON_WEST_SEA
+-            forms: GASTRODON_EAST_SEA
+-            forms: FORM_UNSET
+           }
+           pokemon {
+             id: EMPOLEON
+@@ -65607,9 +65605,8 @@
+             forms: DEDENNE_NORMAL
+           }
+           pokemon {
+-            id: TOGEKISS
+-            forms: FORM_UNSET
+-            forms: TOGEKISS_NORMAL
++            id: GASTRODON
++            forms: GASTRODON_EAST_SEA
+           }
+         }
        }
-       evolutionBranch {
-         evolution: FLAPPLE
-         evolutionItemRequirement: ITEM_OTHER_EVOLUTION_STONE_MAPLE_B
-         candyCost: 200
-+        form: FLAPPLE_NORMAL
-         evolutionItemRequirementCost: 20
-       }
-       evolutionBranch {
-@@ -450320,13 +450216,10 @@
-       sku: "bundle.harvestfestival.2025"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 4
-+      hidden: true
-       sale: true
-       spriteId: "bundle.general2.free.1"
-       title: "bundle.general5.small.1_title"
--      skuEnableTime: "2023-10-10T11:00:00"
--      skuDisableTime: "2025-10-16T20:00:00"
--      skuEnableTimeUtcMs: 1696935600000
--      skuDisableTimeUtcMs: 1760644800000
+@@ -77812,7 +77809,7 @@
+       skuDisableTime: "2024-11-04T10:00:00"
+       skuEnableTimeUtcMs: 1729504800000
+       skuDisableTimeUtcMs: 1730714400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_Halloween_v5-1024x576-nologo.jpg"
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_Halloween_v5_pose_1024x576.jpg"
      }
    }
  }
-@@ -452001,9 +451894,15 @@
-       sku: "bundle.zzraid.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle.general.premiumbox.medium.1"
-       title: "standard_raid_box_title"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2025-10-18T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1760817600000
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 590
+@@ -77922,7 +77919,7 @@
+         eventPassTitleKey: "season_pass_base_track_title_oct"
+         headerIconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fs20_talesoftransformation_logo_square.png"
+         premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
+-        premiumRewardBannerMiddle: "event_pass_premium_reward_banner_middle_text"
++        premiumRewardBannerMiddle: "today_view_pokecoins_section_title"
+         premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text"
+         premiumRewardBannerImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F0_poke%CC%81coin.png"
+         premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
+@@ -148720,7 +148717,7 @@
+       skuDisableTime: "2024-11-04T10:00:00"
+       skuEnableTimeUtcMs: 1729504800000
+       skuDisableTimeUtcMs: 1730714400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_Halloween_v5-1024x576-nologo.jpg"
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_Halloween_v5_pose_1024x576.jpg"
      }
    }
  }
-@@ -452618,6 +452517,7 @@
-       sku: "general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._HarvestFestival_OCT25_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -452638,6 +452538,7 @@
-       sku: "general2.ticket.9.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._HarvestFestival_OCT25_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -454365,6 +454266,7 @@
-       sku: "pgorelease.general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._HarvestFestival_OCT25_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -454385,6 +454287,7 @@
-       sku: "pgorelease.general2.ticket.9.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general1.ticket._HarvestFestival_OCT25_title"
-       skuEnableTime: "2023-04-06T10:00:00"
-@@ -460430,7 +460333,7 @@
+@@ -148738,7 +148735,7 @@
+       skuDisableTime: "2024-11-04T10:00:00"
+       skuEnableTimeUtcMs: 1729504800000
+       skuDisableTimeUtcMs: 1730714400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_Halloween_v5-1024x576-nologo.jpg"
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_Halloween_v5_pose_1024x576.jpg"
      }
    }
  }
--batch_id: 1760630928099
-+batch_id: 1760692704010
+@@ -150706,8 +150703,8 @@
+     template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
+     itemExpirationSettings {
+       item: ITEM_LUCKY_FRIEND_APPLICATOR
+-      expirationTime: "2025-06-08T23:59:00"
+-      emergencyExpirationTime: "2025-06-09T10:00:00"
++      expirationTime: "2025-11-09T23:59:00"
++      emergencyExpirationTime: "2025-11-10T10:00:00"
+     }
+   }
+ }
+@@ -179212,7 +179209,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 20
+     }
+   }
+ }
+@@ -218838,7 +218835,7 @@
+     iapItemDisplay {
+       sku: "STICKER_HALLOWEEN21_GHOSTPIKA.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 10
++      sortOrder: 9
+     }
+   }
+ }
+@@ -223471,7 +223468,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PIKACHU_JOL.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 9
++      sortOrder: 7
+     }
+   }
+ }
+@@ -223482,7 +223479,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PIKACHU_JOL.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 9
++      sortOrder: 6
+     }
+   }
+ }
+@@ -459529,15 +459526,12 @@
+   }
+ }
+ template {
+-  template_id: "COMBAT_VNEXT_CODE_GATE"
++  template_id: "N_DISPLAY_n_hat_polteageisthat_0"
+   data {
+-    template_id: "COMBAT_VNEXT_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-      subCodeGateList {
+-        name: "LEADER_VNEXT_CODE_GATE"
+-        isEnabled: true
+-      }
++    template_id: "N_DISPLAY_n_hat_polteageisthat_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_polteageisthat_0_icon"
++      displayStringId: "avatar_n_hat_polteageist"
+     }
+   }
+ }
+@@ -460333,7 +460327,105 @@
+     }
+   }
+ }
+-batch_id: 1760692704010
++template {
++  template_id: "STICKER_HALLOWEEN2025_NOIBAT"
++  data {
++    template_id: "STICKER_HALLOWEEN2025_NOIBAT"
++    stickerMetadata {
++      stickerId: "STICKER_HALLOWEEN2025_NOIBAT"
++      maxCount: 25
++      pokemonId: NOIBAT
++      category: "Pokemon"
++      releaseDate: 20251021
++      regionId: 5
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN2025_NOIBAT.3"
++  data {
++    template_id: "STICKER_HALLOWEEN2025_NOIBAT.3"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN2025_NOIBAT.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 5
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN2025_NOIBAT.5"
++  data {
++    template_id: "STICKER_HALLOWEEN2025_NOIBAT.5"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN2025_NOIBAT.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 4
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN2025_TEDDIURSA"
++  data {
++    template_id: "STICKER_HALLOWEEN2025_TEDDIURSA"
++    stickerMetadata {
++      stickerId: "STICKER_HALLOWEEN2025_TEDDIURSA"
++      maxCount: 25
++      pokemonId: TEDDIURSA
++      category: "Pokemon"
++      releaseDate: 20251021
++      regionId: 1
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN2025_TEDDIURSA.3"
++  data {
++    template_id: "STICKER_HALLOWEEN2025_TEDDIURSA.3"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN2025_TEDDIURSA.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 3
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN2025_TEDDIURSA.5"
++  data {
++    template_id: "STICKER_HALLOWEEN2025_TEDDIURSA.5"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN2025_TEDDIURSA.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 2
++    }
++  }
++}
++template {
++  template_id: "STICKER_OBSERVATORY_01"
++  data {
++    template_id: "STICKER_OBSERVATORY_01"
++    stickerMetadata {
++      stickerId: "STICKER_OBSERVATORY_01"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20251101
++    }
++  }
++}
++template {
++  template_id: "STICKER_OBSERVATORY_02"
++  data {
++    template_id: "STICKER_OBSERVATORY_02"
++    stickerMetadata {
++      stickerId: "STICKER_OBSERVATORY_02"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20251101
++    }
++  }
++}
++batch_id: 1760767062794
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -460451,7 +460354,7 @@
- experiment_id: 807
- experiment_id: 1115
- experiment_id: 1699
--experiment_id: 2223
-+experiment_id: 2231
- experiment_id: 2248
- experiment_id: 2297
- experiment_id: 2600
-@@ -460466,8 +460369,6 @@
- experiment_id: 3535
- experiment_id: 3538
- experiment_id: 3566
--experiment_id: 3581
--experiment_id: 3583
+@@ -460372,6 +460464,7 @@
  experiment_id: 4000
  experiment_id: 4693
  experiment_id: 4960
++experiment_id: 4961
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+@@ -460381,6 +460474,7 @@
+ experiment_id: 5510
+ experiment_id: 6075
+ experiment_id: 7072
++experiment_id: 7082
+ experiment_id: 8788
+ experiment_id: 8913
+ experiment_id: 8915
+@@ -460397,7 +460491,6 @@
+ experiment_id: 70502
+ experiment_id: 90000
+ experiment_id: 99998
+-experiment_id: 173173
+ experiment_id: 1000890
+ experiment_id: 3000000
+ experiment_id: 3500035
