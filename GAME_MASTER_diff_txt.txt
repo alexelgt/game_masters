@@ -1,371 +1,1741 @@
---- GAME_MASTER_old.txt	2025-10-22 19:14:20.249732862 +0200
-+++ GAME_MASTER.txt	2025-10-23 08:38:44.098499910 +0200
-@@ -140089,7 +140089,7 @@
-     template_id: "EXTENDED_V1009_POKEMON_WALKINGWAKE_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: WALKINGWAKE
--      form: 3324
-+      form: WALKINGWAKE_NORMAL
-       sizeSettings {
-         xxsLowerBound: 1.715
-         xsLowerBound: 1.75
-@@ -140124,7 +140124,7 @@
-     template_id: "EXTENDED_V1010_POKEMON_IRONLEAVES_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: IRONLEAVES
--      form: 3325
-+      form: IRONLEAVES_NORMAL
-       sizeSettings {
-         xxsLowerBound: 0.735
-         xsLowerBound: 0.75
-@@ -140159,7 +140159,7 @@
-     template_id: "EXTENDED_V1011_POKEMON_DIPPLIN_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: DIPPLIN
--      form: 3326
-+      form: DIPPLIN_NORMAL
-       sizeSettings {
-         xxsLowerBound: 0.196
-         xsLowerBound: 0.2
-@@ -140300,7 +140300,7 @@
-     template_id: "EXTENDED_V1014_POKEMON_OKIDOGI_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: OKIDOGI
--      form: 3327
-+      form: OKIDOGI_NORMAL
-       sizeSettings {
-         xxsLowerBound: 0.882
-         xsLowerBound: 0.9
-@@ -140335,7 +140335,7 @@
-     template_id: "EXTENDED_V1015_POKEMON_MUNKIDORI_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: MUNKIDORI
--      form: 3328
-+      form: MUNKIDORI_NORMAL
-       sizeSettings {
-         xxsLowerBound: 0.49
-         xsLowerBound: 0.5
-@@ -140370,7 +140370,7 @@
-     template_id: "EXTENDED_V1016_POKEMON_FEZANDIPITI_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: FEZANDIPITI
--      form: 3329
-+      form: FEZANDIPITI_NORMAL
-       sizeSettings {
-         xxsLowerBound: 0.686
-         xsLowerBound: 0.7
-@@ -140422,7 +140422,7 @@
-     template_id: "EXTENDED_V1018_POKEMON_ARCHALUDON_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: ARCHALUDON
--      form: 3330
-+      form: ARCHALUDON_NORMAL
-       sizeSettings {
-         xxsLowerBound: 0.98
-         xsLowerBound: 1
-@@ -140457,7 +140457,7 @@
-     template_id: "EXTENDED_V1019_POKEMON_HYDRAPPLE_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: HYDRAPPLE
--      form: 3331
-+      form: HYDRAPPLE_NORMAL
-       sizeSettings {
-         xxsLowerBound: 0.882
-         xsLowerBound: 0.9
-@@ -140492,7 +140492,7 @@
-     template_id: "EXTENDED_V1020_POKEMON_GOUGINGFIRE_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: GOUGINGFIRE
--      form: 3332
-+      form: GOUGINGFIRE_NORMAL
-       sizeSettings {
-         xxsLowerBound: 1.715
-         xsLowerBound: 1.75
-@@ -140527,7 +140527,7 @@
-     template_id: "EXTENDED_V1021_POKEMON_RAGINGBOLT_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: RAGINGBOLT
--      form: 3333
-+      form: RAGINGBOLT_NORMAL
-       sizeSettings {
-         xxsLowerBound: 2.548
-         xsLowerBound: 2.6
-@@ -140562,7 +140562,7 @@
-     template_id: "EXTENDED_V1022_POKEMON_IRONBOULDER_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: IRONBOULDER
--      form: 3334
-+      form: IRONBOULDER_NORMAL
-       sizeSettings {
-         xxsLowerBound: 0.735
-         xsLowerBound: 0.75
-@@ -140597,7 +140597,7 @@
-     template_id: "EXTENDED_V1023_POKEMON_IRONCROWN_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: IRONCROWN
--      form: 3335
-+      form: IRONCROWN_NORMAL
-       sizeSettings {
-         xxsLowerBound: 0.784
-         xsLowerBound: 0.8
-@@ -140667,7 +140667,7 @@
-     template_id: "EXTENDED_V1025_POKEMON_PECHARUNT_NORMAL"
-     pokemonExtendedSettings {
-       uniqueId: PECHARUNT
--      form: 3336
-+      form: PECHARUNT_NORMAL
-       sizeSettings {
-         xxsLowerBound: 0.147
-         xsLowerBound: 0.15
-@@ -154380,7 +154380,7 @@
-     formSettings {
-       pokemon: WALKINGWAKE
-       forms {
--        form: 3324
-+        form: WALKINGWAKE_NORMAL
-       }
+--- GAME_MASTER_old.txt	2025-10-23 08:38:44.098499910 +0200
++++ GAME_MASTER.txt	2025-10-25 13:49:09.682116721 +0200
+@@ -73536,6 +73536,7 @@
+       combatExperiment: 18
+       combatExperiment: 19
+       combatExperiment: 20
++      combatExperiment: 22
+       showQuickSwapButtonsDuringCountdown: true
+       obCombatSettingsNotPushedBool2: true
+       clockSyncSettings {
+@@ -82242,13 +82243,13 @@
+       sku: "pgorelease.month3_deluxe_event_pass_track_redirect"
+       sortOrder: 1
+       hidden: true
+-      title: "season_pass_premium_track_title_aug"
++      title: "season_pass_premium_track_title_nov"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2024-08-05T10:00:00"
+-      skuDisableTime: "2024-09-04T10:00:00"
+-      skuEnableTimeUtcMs: 1722852000000
+-      skuDisableTimeUtcMs: 1725444000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-go-pass-june-2025.jpg"
++      skuEnableTime: "2024-11-04T10:00:00"
++      skuDisableTime: "2024-12-04T10:00:00"
++      skuEnableTimeUtcMs: 1730714400000
++      skuDisableTimeUtcMs: 1733306400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_NOV_v1-1024x576-nologo.jpg"
      }
    }
-@@ -154392,7 +154392,7 @@
-     formSettings {
-       pokemon: IRONLEAVES
-       forms {
--        form: 3325
-+        form: IRONLEAVES_NORMAL
-       }
+ }
+@@ -134269,7 +134270,7 @@
+         modelHeight: 0.6
+         maxEncounterVisualSettings {
+           scale: 13
+-          cameraDistance: 35
++          cameraDistance: 45
+           maxReticleSize: 14
+           yOffset: -15
+           cameraFov: 40
+@@ -134314,7 +134315,7 @@
+         modelHeight: 0.6
+         maxEncounterVisualSettings {
+           scale: 13
+-          cameraDistance: 35
++          cameraDistance: 45
+           maxReticleSize: 14
+           yOffset: -15
+           cameraFov: 40
+@@ -140154,20 +140155,16 @@
+   }
+ }
+ template {
+-  template_id: "EXTENDED_V1011_POKEMON_DIPPLIN_NORMAL"
++  template_id: "STICKER_GOWA2025_05"
+   data {
+-    template_id: "EXTENDED_V1011_POKEMON_DIPPLIN_NORMAL"
+-    pokemonExtendedSettings {
+-      uniqueId: DIPPLIN
+-      form: DIPPLIN_NORMAL
+-      sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.62
+-      }
++    template_id: "STICKER_GOWA2025_05"
++    stickerMetadata {
++      stickerId: "STICKER_GOWA2025_05"
++      maxCount: 25
++      pokemonId: IMPIDIMP
++      category: "Pokemon"
++      releaseDate: 20251027
++      regionId: 7
      }
    }
-@@ -154404,7 +154404,7 @@
+ }
+@@ -140452,20 +140449,16 @@
+   }
+ }
+ template {
+-  template_id: "EXTENDED_V1019_POKEMON_HYDRAPPLE_NORMAL"
++  template_id: "STICKER_GOWA2025_04"
+   data {
+-    template_id: "EXTENDED_V1019_POKEMON_HYDRAPPLE_NORMAL"
+-    pokemonExtendedSettings {
+-      uniqueId: HYDRAPPLE
+-      form: HYDRAPPLE_NORMAL
+-      sizeSettings {
+-        xxsLowerBound: 0.882
+-        xsLowerBound: 0.9
+-        mLowerBound: 1.35
+-        mUpperBound: 2.25
+-        xlUpperBound: 2.7
+-        xxlUpperBound: 2.79
+-      }
++    template_id: "STICKER_GOWA2025_04"
++    stickerMetadata {
++      stickerId: "STICKER_GOWA2025_04"
++      maxCount: 25
++      pokemonId: MORGREM
++      category: "Pokemon"
++      releaseDate: 20251027
++      regionId: 7
+     }
+   }
+ }
+@@ -154403,9 +154396,6 @@
+     template_id: "FORMS_V1011_POKEMON_DIPPLIN"
      formSettings {
        pokemon: DIPPLIN
-       forms {
--        form: 3326
-+        form: DIPPLIN_NORMAL
-       }
+-      forms {
+-        form: DIPPLIN_NORMAL
+-      }
      }
    }
-@@ -154454,7 +154454,7 @@
-     formSettings {
-       pokemon: OKIDOGI
-       forms {
--        form: 3327
-+        form: OKIDOGI_NORMAL
-       }
-     }
-   }
-@@ -154466,7 +154466,7 @@
-     formSettings {
-       pokemon: MUNKIDORI
-       forms {
--        form: 3328
-+        form: MUNKIDORI_NORMAL
-       }
-     }
-   }
-@@ -154478,7 +154478,7 @@
-     formSettings {
-       pokemon: FEZANDIPITI
-       forms {
--        form: 3329
-+        form: FEZANDIPITI_NORMAL
-       }
-     }
-   }
-@@ -154499,7 +154499,7 @@
-     formSettings {
-       pokemon: ARCHALUDON
-       forms {
--        form: 3330
-+        form: ARCHALUDON_NORMAL
-       }
-     }
-   }
-@@ -154511,7 +154511,7 @@
+ }
+@@ -154510,9 +154500,6 @@
+     template_id: "FORMS_V1019_POKEMON_HYDRAPPLE"
      formSettings {
        pokemon: HYDRAPPLE
-       forms {
--        form: 3331
-+        form: HYDRAPPLE_NORMAL
+-      forms {
+-        form: HYDRAPPLE_NORMAL
+-      }
+     }
+   }
+ }
+@@ -156049,7 +156036,7 @@
+       ignoreInventorySpace: true
+       itemCap: 999999
+       eventPassPoint {
+-        eventPassId: "EVENT_PASS_AUGUST2025_SEASON"
++        eventPassId: "EVENT_PASS_NOVEMBER2025_SEASON"
        }
+       timePeriodCounters {
+         playerActivity {
+@@ -156976,8 +156963,8 @@
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_03"
+     itemExpirationSettings {
+       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_03
+-      expirationTime: "2025-09-04T10:00:00"
+-      emergencyExpirationTime: "2025-09-06T10:00:00"
++      expirationTime: "2025-12-04T10:00:00"
++      emergencyExpirationTime: "2025-12-06T10:00:00"
      }
    }
-@@ -154523,7 +154523,7 @@
-     formSettings {
-       pokemon: GOUGINGFIRE
-       forms {
--        form: 3332
-+        form: GOUGINGFIRE_NORMAL
-       }
+ }
+@@ -164906,13 +164893,13 @@
+       sku: "pgorelease.month3_deluxe_event_pass_track_unlock"
+       sortOrder: 1
+       hidden: true
+-      title: "season_pass_premium_track_title_aug"
++      title: "season_pass_premium_track_title_nov"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2024-08-05T10:00:00"
+-      skuDisableTime: "2024-09-04T10:00:00"
+-      skuEnableTimeUtcMs: 1722852000000
+-      skuDisableTimeUtcMs: 1725444000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-go-pass-june-2025.jpg"
++      skuEnableTime: "2024-11-04T10:00:00"
++      skuDisableTime: "2024-12-04T10:00:00"
++      skuEnableTimeUtcMs: 1730714400000
++      skuDisableTimeUtcMs: 1733306400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_NOV_v1-1024x576-nologo.jpg"
      }
    }
-@@ -154535,7 +154535,7 @@
-     formSettings {
-       pokemon: RAGINGBOLT
-       forms {
--        form: 3333
-+        form: RAGINGBOLT_NORMAL
-       }
+ }
+@@ -164924,13 +164911,13 @@
+       sku: "pgorelease.month3_deluxe_event_pass_track_unlock_plus_points"
+       sortOrder: 1
+       hidden: true
+-      title: "season_pass_premium_track_plus_ten_ranks_title_aug"
++      title: "season_pass_premium_track_plus_ten_ranks_title_nov"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
+-      skuEnableTime: "2024-08-05T10:00:00"
+-      skuDisableTime: "2024-09-04T10:00:00"
+-      skuEnableTimeUtcMs: 1722852000000
+-      skuDisableTimeUtcMs: 1725444000000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-go-pass-june-2025.jpg"
++      skuEnableTime: "2024-11-04T10:00:00"
++      skuDisableTime: "2024-12-04T10:00:00"
++      skuEnableTimeUtcMs: 1730714400000
++      skuDisableTimeUtcMs: 1733306400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_NOV_v1-1024x576-nologo.jpg"
      }
    }
-@@ -154547,7 +154547,7 @@
-     formSettings {
-       pokemon: IRONBOULDER
-       forms {
--        form: 3334
-+        form: IRONBOULDER_NORMAL
-       }
+ }
+@@ -172985,7 +172972,7 @@
+     template_id: "N_DISPLAY_n_pose_buddypokeball"
+     avatarItemDisplay {
+       iconAddress: "n_pose_buddypokeball_icon"
+-      displayStringId: "avatar_pose_buddypokeball"
++      displayStringId: "avatar_pose_pokeballbuddy"
      }
    }
-@@ -154559,7 +154559,7 @@
-     formSettings {
-       pokemon: IRONCROWN
-       forms {
--        form: 3335
-+        form: IRONCROWN_NORMAL
-       }
-     }
-   }
-@@ -154583,7 +154583,7 @@
-     formSettings {
-       pokemon: PECHARUNT
-       forms {
--        form: 3336
-+        form: PECHARUNT_NORMAL
-       }
-     }
-   }
-@@ -221239,8 +221239,8 @@
-     specialEggSettings {
-       enabled: true
-       minLevel: 15
--      xpReward: 1
--      5: 10000
-+      mapIconEnabled: true
-+      xpReward: 10000
-       7: 1
-     }
-   }
-@@ -456150,7 +456150,7 @@
-       weightStdDev: 35
-       familyId: FAMILY_WALKINGWAKE
-       kmBuddyDistance: 20
--      form: 3324
-+      form: WALKINGWAKE_NORMAL
-       third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -456239,7 +456239,7 @@
-       weightStdDev: 15.625
-       familyId: FAMILY_IRONLEAVES
-       kmBuddyDistance: 20
--      form: 3325
-+      form: IRONLEAVES_NORMAL
-       third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -456378,13 +456378,13 @@
-       evolutionBranch {
-         evolution: HYDRAPPLE
-         candyCost: 400
--        form: 3331
-+        form: HYDRAPPLE_NORMAL
-         questDisplay {
-           questRequirementTemplateId: "DIPPLIN_EVOLUTION_QUEST"
+ }
+@@ -189956,6 +189943,91 @@
+           move: VN_BM_059
          }
        }
-       modelScaleV2: 1
--      form: 3326
-+      form: DIPPLIN_NORMAL
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -456883,7 +456883,7 @@
-       weightStdDev: 11.525
-       familyId: FAMILY_OKIDOGI
-       kmBuddyDistance: 20
--      form: 3327
-+      form: OKIDOGI_NORMAL
++      mappings {
++        pokemonId: BUTTERFREE
++        form: BUTTERFREE_NORMAL
++        move: VN_BM_020
++      }
++      mappings {
++        pokemonId: CORVIKNIGHT
++        form: CORVIKNIGHT_NORMAL
++        move: VN_BM_031
++      }
++      mappings {
++        pokemonId: ORBEETLE
++        form: ORBEETLE_NORMAL
++        move: VN_BM_032
++      }
++      mappings {
++        pokemonId: DREDNAW
++        form: DREDNAW_NORMAL
++        move: VN_BM_033
++      }
++      mappings {
++        pokemonId: COALOSSAL
++        form: COALOSSAL_NORMAL
++        move: VN_BM_034
++      }
++      mappings {
++        pokemonId: FLAPPLE
++        form: FLAPPLE_NORMAL
++        move: VN_BM_035
++      }
++      mappings {
++        pokemonId: APPLETUN
++        form: APPLETUN_NORMAL
++        move: VN_BM_036
++      }
++      mappings {
++        pokemonId: SANDACONDA
++        form: SANDACONDA_NORMAL
++        move: VN_BM_037
++      }
++      mappings {
++        pokemonId: CENTISKORCH
++        form: CENTISKORCH_NORMAL
++        move: VN_BM_039
++      }
++      mappings {
++        pokemonId: HATTERENE
++        form: HATTERENE_NORMAL
++        move: VN_BM_040
++      }
++      mappings {
++        pokemonId: GRIMMSNARL
++        form: GRIMMSNARL_NORMAL
++        move: VN_BM_041
++      }
++      mappings {
++        pokemonId: ALCREMIE
++        form: ALCREMIE_NORMAL
++        move: VN_BM_042
++      }
++      mappings {
++        pokemonId: COPPERAJAH
++        form: COPPERAJAH_NORMAL
++        move: VN_BM_043
++      }
++      mappings {
++        pokemonId: DURALUDON
++        form: DURALUDON_NORMAL
++        move: VN_BM_044
++      }
++      mappings {
++        pokemonId: RILLABOOM
++        form: RILLABOOM_NORMAL
++        move: VN_BM_047
++      }
++      mappings {
++        pokemonId: CINDERACE
++        form: CINDERACE_NORMAL
++        move: VN_BM_048
++      }
++      mappings {
++        pokemonId: INTELEON
++        form: INTELEON_NORMAL
++        move: VN_BM_049
++      }
+     }
+   }
+ }
+@@ -220868,15 +220940,16 @@
+   }
+ }
+ template {
+-  template_id: "SPAWN_V1011_POKEMON_DIPPLIN_NORMAL"
++  template_id: "STICKER_GOWA2025_03"
+   data {
+-    template_id: "SPAWN_V1011_POKEMON_DIPPLIN_NORMAL"
+-    genderSettings {
+-      pokemon: DIPPLIN
+-      gender {
+-        malePercent: 0.5
+-        femalePercent: 0.5
+-      }
++    template_id: "STICKER_GOWA2025_03"
++    stickerMetadata {
++      stickerId: "STICKER_GOWA2025_03"
++      maxCount: 25
++      pokemonId: GRIMMSNARL
++      category: "Pokemon"
++      releaseDate: 20251027
++      regionId: 7
+     }
+   }
+ }
+@@ -221076,15 +221149,16 @@
+   }
+ }
+ template {
+-  template_id: "SPAWN_V1019_POKEMON_HYDRAPPLE_NORMAL"
++  template_id: "STICKER_GOWA2025_02"
+   data {
+-    template_id: "SPAWN_V1019_POKEMON_HYDRAPPLE_NORMAL"
+-    genderSettings {
+-      pokemon: HYDRAPPLE
+-      gender {
+-        malePercent: 0.5
+-        femalePercent: 0.5
+-      }
++    template_id: "STICKER_GOWA2025_02"
++    stickerMetadata {
++      stickerId: "STICKER_GOWA2025_02"
++      maxCount: 25
++      pokemonId: GRIMMSNARL
++      category: "Pokemon"
++      releaseDate: 20251027
++      regionId: 7
+     }
+   }
+ }
+@@ -274754,19 +274828,23 @@
+       evolutionBranch {
+         evolution: VAPOREON
+         candyCost: 25
++        form: VAPOREON_NORMAL
+       }
+       evolutionBranch {
+         evolution: JOLTEON
+         candyCost: 25
++        form: JOLTEON_NORMAL
+       }
+       evolutionBranch {
+         evolution: FLAREON
+         candyCost: 25
++        form: FLAREON_NORMAL
+       }
+       evolutionBranch {
+         evolution: ESPEON
+         candyCost: 25
+         kmBuddyDistanceRequirement: 10
++        form: ESPEON_NORMAL
+         mustBeBuddy: true
+         onlyDaytime: true
+         priority: 100
+@@ -274778,6 +274856,7 @@
+         evolution: UMBREON
+         candyCost: 25
+         kmBuddyDistanceRequirement: 10
++        form: UMBREON_NORMAL
+         mustBeBuddy: true
+         onlyNighttime: true
+         priority: 100
+@@ -274788,18 +274867,21 @@
+       evolutionBranch {
+         evolution: LEAFEON
+         candyCost: 25
++        form: LEAFEON_NORMAL
+         lureItemRequirement: ITEM_TROY_DISK_MOSSY
+         priority: 200
+       }
+       evolutionBranch {
+         evolution: GLACEON
+         candyCost: 25
++        form: GLACEON_NORMAL
+         lureItemRequirement: ITEM_TROY_DISK_GLACIAL
+         priority: 200
+       }
+       evolutionBranch {
+         evolution: SYLVEON
+         candyCost: 25
++        form: SYLVEON_NORMAL
+         priority: 100
+         questDisplay {
+           questRequirementTemplateId: "SYLVEON_EVOLUTION_QUEST"
+@@ -275056,19 +275138,23 @@
+       evolutionBranch {
+         evolution: VAPOREON
+         candyCost: 25
++        form: VAPOREON_NORMAL
+       }
+       evolutionBranch {
+         evolution: JOLTEON
+         candyCost: 25
++        form: JOLTEON_NORMAL
+       }
+       evolutionBranch {
+         evolution: FLAREON
+         candyCost: 25
++        form: FLAREON_NORMAL
+       }
+       evolutionBranch {
+         evolution: ESPEON
+         candyCost: 25
+         kmBuddyDistanceRequirement: 10
++        form: ESPEON_NORMAL
+         mustBeBuddy: true
+         onlyDaytime: true
+         priority: 100
+@@ -275080,6 +275166,7 @@
+         evolution: UMBREON
+         candyCost: 25
+         kmBuddyDistanceRequirement: 10
++        form: UMBREON_NORMAL
+         mustBeBuddy: true
+         onlyNighttime: true
+         priority: 100
+@@ -275090,18 +275177,21 @@
+       evolutionBranch {
+         evolution: LEAFEON
+         candyCost: 25
++        form: LEAFEON_NORMAL
+         lureItemRequirement: ITEM_TROY_DISK_MOSSY
+         priority: 200
+       }
+       evolutionBranch {
+         evolution: GLACEON
+         candyCost: 25
++        form: GLACEON_NORMAL
+         lureItemRequirement: ITEM_TROY_DISK_GLACIAL
+         priority: 200
+       }
+       evolutionBranch {
+         evolution: SYLVEON
+         candyCost: 25
++        form: SYLVEON_NORMAL
+         priority: 100
+         questDisplay {
+           questRequirementTemplateId: "SYLVEON_EVOLUTION_QUEST"
+@@ -444155,13 +444245,20 @@
+       pokemonId: TAROUNTULA
+       type: POKEMON_TYPE_BUG
+       camera {
++        cylinderRadiusM: 0.25
++        cylinderHeightM: 0.6
+       }
+       encounter {
++        collisionRadiusM: 0.4
++        collisionHeightM: 0.32
++        collisionHeadRadiusM: 0.1
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+@@ -444181,10 +444278,17 @@
+       weightStdDev: 0.5
+       familyId: FAMILY_TAROUNTULA
+       kmBuddyDistance: 1
++      buddy_size: BUDDY_BABY
++      modelHeight: 0.5
+       evolutionBranch {
+         evolution: SPIDOPS
+         candyCost: 25
+       }
++      modelScaleV2: 0.9
++      buddyScale: 13
++      buddyPortraitOffset: -40
++      buddyPortraitOffset: 25
++      buddyPortraitOffset: -400
        third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -456978,7 +456978,7 @@
-       weightStdDev: 1.525
-       familyId: FAMILY_MUNKIDORI
-       kmBuddyDistance: 20
--      form: 3328
-+      form: MUNKIDORI_NORMAL
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -444192,6 +444296,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 1
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -444206,13 +444311,20 @@
+       pokemonId: TAROUNTULA
+       type: POKEMON_TYPE_BUG
+       camera {
++        cylinderRadiusM: 0.25
++        cylinderHeightM: 0.6
+       }
+       encounter {
++        collisionRadiusM: 0.4
++        collisionHeightM: 0.32
++        collisionHeadRadiusM: 0.1
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 3
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+@@ -444232,12 +444344,19 @@
+       weightStdDev: 0.5
+       familyId: FAMILY_TAROUNTULA
+       kmBuddyDistance: 1
++      buddy_size: BUDDY_BABY
++      modelHeight: 0.5
+       evolutionBranch {
+         evolution: SPIDOPS
+         candyCost: 25
+         form: SPIDOPS_NORMAL
+       }
++      modelScaleV2: 0.9
+       form: TAROUNTULA_NORMAL
++      buddyScale: 13
++      buddyPortraitOffset: -40
++      buddyPortraitOffset: 25
++      buddyPortraitOffset: -400
        third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -457073,7 +457073,7 @@
-       weightStdDev: 3.7625
-       familyId: FAMILY_FEZANDIPITI
-       kmBuddyDistance: 20
--      form: 3329
-+      form: FEZANDIPITI_NORMAL
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -444245,6 +444364,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyGroupNumber: 1
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -444259,8 +444379,13 @@
+       pokemonId: SPIDOPS
+       type: POKEMON_TYPE_BUG
+       camera {
++        cylinderRadiusM: 0.8
++        cylinderHeightM: 1.2
+       }
+       encounter {
++        collisionRadiusM: 0.4
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.15
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         bonusCandyCaptureReward: 2
+@@ -444268,6 +444393,7 @@
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 4
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
+@@ -444290,6 +444416,11 @@
+       weightStdDev: 2.0625
+       familyId: FAMILY_TAROUNTULA
+       kmBuddyDistance: 1
++      modelHeight: 1
++      modelScaleV2: 1
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 150
++      buddyPortraitOffset: -750
        third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -457213,7 +457213,7 @@
-       weightStdDev: 7.5
-       familyId: FAMILY_DURALUDON
-       kmBuddyDistance: 5
--      form: 3330
-+      form: ARCHALUDON_NORMAL
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -444311,8 +444442,13 @@
+       pokemonId: SPIDOPS
+       type: POKEMON_TYPE_BUG
+       camera {
++        cylinderRadiusM: 0.8
++        cylinderHeightM: 1.2
+       }
+       encounter {
++        collisionRadiusM: 0.4
++        collisionHeightM: 0.1
++        collisionHeadRadiusM: 0.15
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         bonusCandyCaptureReward: 2
+@@ -444320,6 +444456,7 @@
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 4
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
+@@ -444342,7 +444479,12 @@
+       weightStdDev: 2.0625
+       familyId: FAMILY_TAROUNTULA
+       kmBuddyDistance: 1
++      modelHeight: 1
++      modelScaleV2: 1
+       form: SPIDOPS_NORMAL
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 150
++      buddyPortraitOffset: -750
        third_move {
-         stardustToUnlock: 75000
-         candyToUnlock: 75
-@@ -457347,7 +457347,7 @@
-       kmBuddyDistance: 5
-       modelHeight: 1.8
-       modelScaleV2: 1
--      form: 3331
-+      form: HYDRAPPLE_NORMAL
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -457448,7 +457448,7 @@
-       weightStdDev: 73.75
-       familyId: FAMILY_GOUGINGFIRE
-       kmBuddyDistance: 20
--      form: 3332
-+      form: GOUGINGFIRE_NORMAL
-       third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -457537,7 +457537,7 @@
-       weightStdDev: 60
-       familyId: FAMILY_RAGINGBOLT
-       kmBuddyDistance: 20
--      form: 3333
-+      form: RAGINGBOLT_NORMAL
-       third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -457626,7 +457626,7 @@
-       weightStdDev: 20.3125
-       familyId: FAMILY_IRONBOULDER
-       kmBuddyDistance: 20
--      form: 3334
-+      form: IRONBOULDER_NORMAL
-       third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -457715,7 +457715,7 @@
-       weightStdDev: 19.5
-       familyId: FAMILY_IRONCROWN
-       kmBuddyDistance: 20
--      form: 3335
-+      form: IRONCROWN_NORMAL
-       third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -457896,7 +457896,7 @@
-       weightStdDev: 0.0375
-       familyId: FAMILY_PECHARUNT
-       kmBuddyDistance: 20
--      form: 3336
-+      form: PECHARUNT_NORMAL
-       third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+@@ -456329,80 +456471,14 @@
+   }
+ }
+ template {
+-  template_id: "V1011_POKEMON_DIPPLIN_NORMAL"
++  template_id: "STICKER_GOWA2025_01"
+   data {
+-    template_id: "V1011_POKEMON_DIPPLIN_NORMAL"
+-    pokemonSettings {
+-      pokemonId: DIPPLIN
+-      type: POKEMON_TYPE_GRASS
+-      type2: POKEMON_TYPE_DRAGON
+-      camera {
+-        cylinderRadiusM: 0.2
+-        cylinderHeightM: 0.3
+-      }
+-      encounter {
+-        collisionRadiusM: 0.18
+-        collisionHeightM: 0.3
+-        collisionHeadRadiusM: 0.3
+-        jumpTimeS: 0.85
+-        bonusCandyCaptureReward: 2
+-        bonusStardustCaptureReward: 200
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 0.5
+-        cameraDistance: 3
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-        bonusXlCandyCaptureReward: 1
+-      }
+-      stats {
+-        baseStamina: 190
+-        baseAttack: 173
+-        baseDefense: 184
+-      }
+-      quickMoves: BULLET_SEED_FAST
+-      quickMoves: DRAGON_TAIL_FAST
+-      quickMoves: ROLLOUT_FAST
+-      cinematicMoves: DRAGON_PULSE
+-      cinematicMoves: OUTRAGE
+-      cinematicMoves: SEED_BOMB
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 4.4
+-      parentPokemonId: APPLIN
+-      heightStdDev: 0.05
+-      weightStdDev: 0.55
+-      familyId: FAMILY_APPLIN
+-      kmBuddyDistance: 5
+-      modelHeight: 0.4
+-      evolutionBranch {
+-        evolution: HYDRAPPLE
+-        candyCost: 400
+-        form: HYDRAPPLE_NORMAL
+-        questDisplay {
+-          questRequirementTemplateId: "DIPPLIN_EVOLUTION_QUEST"
+-        }
+-      }
+-      modelScaleV2: 1
+-      form: DIPPLIN_NORMAL
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 19
+-      third_move {
+-        stardustToUnlock: 75000
+-        candyToUnlock: 75
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 2
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
++    template_id: "STICKER_GOWA2025_01"
++    stickerMetadata {
++      stickerId: "STICKER_GOWA2025_01"
++      maxCount: 25
++      category: "Misc"
++      releaseDate: 20251027
+     }
+   }
+ }
+@@ -457300,75 +457376,17 @@
+   }
+ }
+ template {
+-  template_id: "V1019_POKEMON_HYDRAPPLE_NORMAL"
++  template_id: "BADGE_EVENT_0142"
+   data {
+-    template_id: "V1019_POKEMON_HYDRAPPLE_NORMAL"
+-    pokemonSettings {
+-      pokemonId: HYDRAPPLE
+-      type: POKEMON_TYPE_GRASS
+-      type2: POKEMON_TYPE_DRAGON
+-      camera {
+-        cylinderRadiusM: 0.75
+-        cylinderHeightM: 1.8
++    template_id: "BADGE_EVENT_0142"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0142
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
+       }
+-      encounter {
+-        collisionRadiusM: 0.18
+-        collisionHeightM: 0.3
+-        collisionHeadRadiusM: 0.3
+-        jumpTimeS: 0.85
+-        bonusCandyCaptureReward: 7
+-        bonusStardustCaptureReward: 700
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 0.5
+-        cameraDistance: 3.5
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-        bonusXlCandyCaptureReward: 2
+-      }
+-      stats {
+-        baseStamina: 235
+-        baseAttack: 216
+-        baseDefense: 186
+-      }
+-      quickMoves: BULLET_SEED_FAST
+-      quickMoves: DRAGON_TAIL_FAST
+-      quickMoves: ROLLOUT_FAST
+-      cinematicMoves: DRAGON_PULSE
+-      cinematicMoves: OUTRAGE
+-      cinematicMoves: SEED_BOMB
+-      pokedexHeightM: 1.8
+-      pokedexWeightKg: 93
+-      parentPokemonId: DIPPLIN
+-      heightStdDev: 0.225
+-      weightStdDev: 11.625
+-      familyId: FAMILY_APPLIN
+-      kmBuddyDistance: 5
+-      modelHeight: 1.8
+-      modelScaleV2: 1
+-      form: HYDRAPPLE_NORMAL
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 19
+-      buddyPortraitOffset: 0
+-      buddyPortraitOffset: 50
+-      buddyPortraitOffset: -700
+-      third_move {
+-        stardustToUnlock: 75000
+-        candyToUnlock: 75
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 2
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
+     }
+   }
+ }
+@@ -461056,19 +461074,16 @@
+         unlockedAtRank: 24
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461084,19 +461099,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461112,19 +461124,16 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461140,19 +461149,16 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461168,19 +461174,16 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461196,19 +461199,16 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461220,19 +461220,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461244,19 +461241,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461271,19 +461265,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461295,19 +461286,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461319,19 +461307,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461343,19 +461328,16 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461370,19 +461352,16 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461397,19 +461376,16 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461421,19 +461397,16 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461445,19 +461418,16 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461472,19 +461442,16 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461499,19 +461466,16 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461523,19 +461487,16 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461550,19 +461511,16 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461574,19 +461532,16 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461598,19 +461553,16 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461622,19 +461574,16 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461742,19 +461691,16 @@
+         unlockedAtRank: 24
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461770,19 +461716,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461798,19 +461741,16 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461826,19 +461766,16 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461854,19 +461791,16 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461882,19 +461816,16 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461906,19 +461837,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461930,19 +461858,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461957,19 +461882,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -461981,19 +461903,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462005,19 +461924,16 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462029,19 +461945,16 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462056,19 +461969,16 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462083,19 +461993,16 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462107,19 +462014,16 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462131,19 +462035,16 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462158,19 +462059,16 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462185,19 +462083,16 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462209,19 +462104,16 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462236,19 +462128,16 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462260,19 +462149,16 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462284,19 +462170,16 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -462308,19 +462191,16 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
+-            min: 10
+             max: 15
+           }
+         }
+@@ -473945,7 +473825,7 @@
+     }
+   }
+ }
+-batch_id: 1761150686226
++batch_id: 1761353661743
+ experiment_id: 4
+ experiment_id: 11
+ experiment_id: 21
+@@ -473982,14 +473862,14 @@
+ experiment_id: 3538
+ experiment_id: 3566
+ experiment_id: 3586
++experiment_id: 3588
+ experiment_id: 3594
+ experiment_id: 4693
+ experiment_id: 4998
+-experiment_id: 5015
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5213
++experiment_id: 5214
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
+@@ -473999,6 +473879,9 @@
+ experiment_id: 8913
+ experiment_id: 8915
+ experiment_id: 8916
++experiment_id: 8947
++experiment_id: 8948
++experiment_id: 8949
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
