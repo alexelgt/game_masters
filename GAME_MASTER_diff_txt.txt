@@ -1,464 +1,125 @@
---- GAME_MASTER_old.txt	2025-10-30 19:02:26.624703622 +0100
-+++ GAME_MASTER.txt	2025-10-31 18:45:33.189070903 +0100
-@@ -154428,6 +154428,9 @@
-     template_id: "FORMS_V1011_POKEMON_DIPPLIN"
-     formSettings {
-       pokemon: DIPPLIN
-+      forms {
-+        form: DIPPLIN_NORMAL
-+      }
+--- GAME_MASTER_old.txt	2025-10-31 18:45:33.189070903 +0100
++++ GAME_MASTER.txt	2025-11-01 15:31:21.518373784 +0100
+@@ -33127,8 +33127,8 @@
+       items: ITEM_INCUBATOR_SUPER
+       items: ITEM_INCENSE_ORDINARY
+       items: ITEM_MAX_BOOST
+-      items: ITEM_ITEM_STORAGE_UPGRADE
+-      items: ITEM_POKEMON_STORAGE_UPGRADE
++      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
++      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
+       itemsCount: 80
+       itemsCount: 70
+       itemsCount: 50
+@@ -43342,7 +43342,7 @@
+       rvnVersion: 1
+       maxPlayersPerBreadDoughLobby: 100
+       maxRemotePlayersPerBreadDoughLobby: 100
+-      maxRemoteBreadBattlePassesAllowed: 10
++      maxRemoteBreadBattlePassesAllowed: 20
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 98
+@@ -156114,7 +156114,6 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 250
+         }
+       }
+     }
+@@ -156156,7 +156155,6 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 500
+         }
+       }
+     }
+@@ -165058,8 +165056,8 @@
+   data {
+     template_id: "MP_SHARED_SETTINGS"
+     mpSettings {
+-      numMpFromWalkQuest: 300
+-      numMetersGoal: 2000
++      numMpFromWalkQuest: 600
++      numMetersGoal: 500
+       debugAllowRemoveWalkQuest: true
+       numMpFromLootStation: 100
+       numExtraMpFromFirstLootStation: 20
+@@ -185811,7 +185809,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 20
      }
    }
  }
-@@ -154532,6 +154535,9 @@
-     template_id: "FORMS_V1019_POKEMON_HYDRAPPLE"
-     formSettings {
-       pokemon: HYDRAPPLE
-+      forms {
-+        form: HYDRAPPLE_NORMAL
-+      }
-     }
-   }
- }
-@@ -464117,9 +464123,12 @@
-       sku: "bundle.gmaxday.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
+@@ -466882,7 +466880,6 @@
+       sku: "general2.ticket.7"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
 -      hidden: true
-       spriteId: "bundle3.sprite.d"
-       title: "ace_box_title"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2025-11-02T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1762113600000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 1000
-@@ -473995,7 +474004,410 @@
+       spriteId: "general1.ticket.4"
+       title: "general2.ticket.8_gmaxGarbodor25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -466903,7 +466900,6 @@
+       sku: "general2.ticket.7.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general2.ticket.8_gmaxGarbodor25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -468630,7 +468626,6 @@
+       sku: "pgorelease.general2.ticket.7"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general2.ticket.8_gmaxGarbodor25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -468651,7 +468646,6 @@
+       sku: "pgorelease.general2.ticket.7.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general2.ticket.8_gmaxGarbodor25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -474407,7 +474401,7 @@
      }
    }
  }
--batch_id: 1761815888510
-+template {
-+  template_id: "BADGE_GOWA_2025_GLOBAL"
-+  data {
-+    template_id: "BADGE_GOWA_2025_GLOBAL"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_GLOBAL
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_ADDON_BATTLE"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_ADDON_BATTLE"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_ADDON_BATTLE
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_ADDON_BATTLE_TEST"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_ADDON_BATTLE_TEST"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_ADDON_BATTLE_TEST
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_ADDON_EXTRA_DAY_TEST"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_ADDON_EXTRA_DAY_TEST"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_ADDON_EXTRA_DAY_TEST
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_ADDON_HATCH"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_ADDON_HATCH"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_ADDON_HATCH
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_ADDON_HATCH_TEST"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_ADDON_HATCH_TEST"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_ADDON_HATCH_TEST
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_FRIDAY_CITY_ADDON"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_FRIDAY_CITY_ADDON"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_FRIDAY_CITY_ADDON
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_FRIDAY_TICKETED_CITY"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_FRIDAY_TICKETED_CITY"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_FRIDAY_TICKETED_CITY
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_FULLTEST"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_FULLTEST"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_FULLTEST
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_SATURDAY_CITY_ADDON"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_SATURDAY_CITY_ADDON"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_SATURDAY_CITY_ADDON
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_SATURDAY_TICKETED_CITY"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_SATURDAY_TICKETED_CITY"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_SATURDAY_TICKETED_CITY
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_SUNDAY_CITY_ADDON"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_SUNDAY_CITY_ADDON"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_SUNDAY_CITY_ADDON
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOWA_2025_IRL_SUNDAY_TICKETED_CITY"
-+  data {
-+    template_id: "BADGE_GOWA_2025_IRL_SUNDAY_TICKETED_CITY"
-+    badgeSettings {
-+      badgeType: BADGE_GOWA_2025_IRL_SUNDAY_TICKETED_CITY
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_WEEKLY_CHALLENGE_ELIGIBLE"
-+  data {
-+    template_id: "BADGE_WEEKLY_CHALLENGE_ELIGIBLE"
-+    badgeSettings {
-+      badgeType: 6066
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EXTENDED_V1011_POKEMON_DIPPLIN_NORMAL"
-+  data {
-+    template_id: "EXTENDED_V1011_POKEMON_DIPPLIN_NORMAL"
-+    pokemonExtendedSettings {
-+      uniqueId: DIPPLIN
-+      form: DIPPLIN_NORMAL
-+      sizeSettings {
-+        xxsLowerBound: 0.196
-+        xsLowerBound: 0.2
-+        mLowerBound: 0.3
-+        mUpperBound: 0.5
-+        xlUpperBound: 0.6
-+        xxlUpperBound: 0.62
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EXTENDED_V1019_POKEMON_HYDRAPPLE_NORMAL"
-+  data {
-+    template_id: "EXTENDED_V1019_POKEMON_HYDRAPPLE_NORMAL"
-+    pokemonExtendedSettings {
-+      uniqueId: HYDRAPPLE
-+      form: HYDRAPPLE_NORMAL
-+      sizeSettings {
-+        xxsLowerBound: 0.882
-+        xsLowerBound: 0.9
-+        mLowerBound: 1.35
-+        mUpperBound: 2.25
-+        xlUpperBound: 2.7
-+        xxlUpperBound: 2.79
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_2025_GOWA_NAGASAKI"
-+  data {
-+    template_id: "LC_2025_GOWA_NAGASAKI"
-+    locationCardSettings {
-+      locationCard: LC_2025_GOWA_NAGASAKI
-+      imageUrl: "lc_nagasaki2025"
-+    }
-+  }
-+}
-+template {
-+  template_id: "SPAWN_V1011_POKEMON_DIPPLIN_NORMAL"
-+  data {
-+    template_id: "SPAWN_V1011_POKEMON_DIPPLIN_NORMAL"
-+    genderSettings {
-+      pokemon: DIPPLIN
-+      gender {
-+        malePercent: 0.5
-+        femalePercent: 0.5
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "SPAWN_V1019_POKEMON_HYDRAPPLE_NORMAL"
-+  data {
-+    template_id: "SPAWN_V1019_POKEMON_HYDRAPPLE_NORMAL"
-+    genderSettings {
-+      pokemon: HYDRAPPLE
-+      gender {
-+        malePercent: 0.5
-+        femalePercent: 0.5
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "V1011_POKEMON_DIPPLIN_NORMAL"
-+  data {
-+    template_id: "V1011_POKEMON_DIPPLIN_NORMAL"
-+    pokemonSettings {
-+      pokemonId: DIPPLIN
-+      type: POKEMON_TYPE_GRASS
-+      type2: POKEMON_TYPE_DRAGON
-+      camera {
-+        cylinderRadiusM: 0.2
-+        cylinderHeightM: 0.3
-+      }
-+      encounter {
-+        collisionRadiusM: 0.18
-+        collisionHeightM: 0.3
-+        collisionHeadRadiusM: 0.3
-+        jumpTimeS: 0.85
-+        bonusCandyCaptureReward: 2
-+        bonusStardustCaptureReward: 200
-+        attackProbability: 0.1
-+        dodgeProbability: 0.15
-+        dodgeDurationS: 1
-+        dodgeDistance: 0.5
-+        cameraDistance: 3
-+        minPokemonActionFrequencyS: 0.2
-+        maxPokemonActionFrequencyS: 1.6
-+        bonusXlCandyCaptureReward: 1
-+      }
-+      stats {
-+        baseStamina: 190
-+        baseAttack: 173
-+        baseDefense: 184
-+      }
-+      quickMoves: BULLET_SEED_FAST
-+      quickMoves: DRAGON_TAIL_FAST
-+      quickMoves: ROLLOUT_FAST
-+      cinematicMoves: DRAGON_PULSE
-+      cinematicMoves: OUTRAGE
-+      cinematicMoves: SEED_BOMB
-+      pokedexHeightM: 0.4
-+      pokedexWeightKg: 4.4
-+      parentPokemonId: APPLIN
-+      heightStdDev: 0.05
-+      weightStdDev: 0.55
-+      familyId: FAMILY_APPLIN
-+      kmBuddyDistance: 5
-+      modelHeight: 0.4
-+      evolutionBranch {
-+        evolution: HYDRAPPLE
-+        candyCost: 400
-+        form: HYDRAPPLE_NORMAL
-+        questDisplay {
-+          questRequirementTemplateId: "DIPPLIN_EVOLUTION_QUEST"
-+        }
-+      }
-+      modelScaleV2: 1
-+      form: DIPPLIN_NORMAL
-+      buddyOffsetMale: 0
-+      buddyOffsetMale: 0
-+      buddyOffsetMale: 0
-+      buddyOffsetFemale: 0
-+      buddyOffsetFemale: 0
-+      buddyOffsetFemale: 0
-+      buddyScale: 19
-+      third_move {
-+        stardustToUnlock: 75000
-+        candyToUnlock: 75
-+      }
-+      isTransferable: true
-+      isDeployable: true
-+      isTradable: true
-+      buddyGroupNumber: 2
-+      ibfc {
-+      }
-+      breadTierGroup: GROUP_1
-+    }
-+  }
-+}
-+template {
-+  template_id: "V1019_POKEMON_HYDRAPPLE_NORMAL"
-+  data {
-+    template_id: "V1019_POKEMON_HYDRAPPLE_NORMAL"
-+    pokemonSettings {
-+      pokemonId: HYDRAPPLE
-+      type: POKEMON_TYPE_GRASS
-+      type2: POKEMON_TYPE_DRAGON
-+      camera {
-+        cylinderRadiusM: 0.75
-+        cylinderHeightM: 1.8
-+      }
-+      encounter {
-+        collisionRadiusM: 0.18
-+        collisionHeightM: 0.3
-+        collisionHeadRadiusM: 0.3
-+        jumpTimeS: 0.85
-+        bonusCandyCaptureReward: 7
-+        bonusStardustCaptureReward: 700
-+        attackProbability: 0.1
-+        dodgeProbability: 0.15
-+        dodgeDurationS: 1
-+        dodgeDistance: 0.5
-+        cameraDistance: 3.5
-+        minPokemonActionFrequencyS: 0.2
-+        maxPokemonActionFrequencyS: 1.6
-+        bonusXlCandyCaptureReward: 2
-+      }
-+      stats {
-+        baseStamina: 235
-+        baseAttack: 216
-+        baseDefense: 186
-+      }
-+      quickMoves: BULLET_SEED_FAST
-+      quickMoves: DRAGON_TAIL_FAST
-+      quickMoves: ROLLOUT_FAST
-+      cinematicMoves: DRAGON_PULSE
-+      cinematicMoves: OUTRAGE
-+      cinematicMoves: SEED_BOMB
-+      pokedexHeightM: 1.8
-+      pokedexWeightKg: 93
-+      parentPokemonId: DIPPLIN
-+      heightStdDev: 0.225
-+      weightStdDev: 11.625
-+      familyId: FAMILY_APPLIN
-+      kmBuddyDistance: 5
-+      modelHeight: 1.8
-+      modelScaleV2: 1
-+      form: HYDRAPPLE_NORMAL
-+      buddyOffsetMale: 0
-+      buddyOffsetMale: 0
-+      buddyOffsetMale: 0
-+      buddyOffsetFemale: 0
-+      buddyOffsetFemale: 0
-+      buddyOffsetFemale: 0
-+      buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: 50
-+      buddyPortraitOffset: -700
-+      third_move {
-+        stardustToUnlock: 75000
-+        candyToUnlock: 75
-+      }
-+      isTransferable: true
-+      isDeployable: true
-+      isTradable: true
-+      buddyGroupNumber: 2
-+      ibfc {
-+      }
-+      breadTierGroup: GROUP_1
-+    }
-+  }
-+}
-+template {
-+  template_id: "WEEKLY_CHALLENGES_ROLLOUT_CODE_GATE"
-+  data {
-+    template_id: "WEEKLY_CHALLENGES_ROLLOUT_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+batch_id: 1761903023563
+-batch_id: 1761903023563
++batch_id: 1761973967166
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -474017,6 +474429,7 @@
- experiment_id: 1115
- experiment_id: 1699
- experiment_id: 2248
-+experiment_id: 2256
- experiment_id: 2282
- experiment_id: 2297
- experiment_id: 2600
-@@ -474035,6 +474448,7 @@
+@@ -474447,18 +474441,24 @@
+ experiment_id: 3586
  experiment_id: 3588
  experiment_id: 3590
++experiment_id: 3591
++experiment_id: 3593
  experiment_id: 3595
-+experiment_id: 3596
+-experiment_id: 3596
  experiment_id: 3952
++experiment_id: 3953
++experiment_id: 3956
++experiment_id: 3957
  experiment_id: 4998
  experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5216
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
+ experiment_id: 6075
+ experiment_id: 7072
++experiment_id: 7074
+ experiment_id: 7082
+ experiment_id: 8913
+ experiment_id: 8915
