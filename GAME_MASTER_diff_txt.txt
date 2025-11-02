@@ -1,125 +1,95 @@
---- GAME_MASTER_old.txt	2025-10-31 18:45:33.189070903 +0100
-+++ GAME_MASTER.txt	2025-11-01 15:31:21.518373784 +0100
-@@ -33127,8 +33127,8 @@
-       items: ITEM_INCUBATOR_SUPER
-       items: ITEM_INCENSE_ORDINARY
-       items: ITEM_MAX_BOOST
--      items: ITEM_ITEM_STORAGE_UPGRADE
--      items: ITEM_POKEMON_STORAGE_UPGRADE
-+      items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
-+      items: ITEM_POKEMON_STORAGE_UPGRADE_EARNED
-       itemsCount: 80
-       itemsCount: 70
-       itemsCount: 50
+--- GAME_MASTER_old.txt	2025-11-01 15:31:21.518373784 +0100
++++ GAME_MASTER.txt	2025-11-02 11:11:21.339499496 +0100
 @@ -43342,7 +43342,7 @@
        rvnVersion: 1
        maxPlayersPerBreadDoughLobby: 100
        maxRemotePlayersPerBreadDoughLobby: 100
--      maxRemoteBreadBattlePassesAllowed: 10
-+      maxRemoteBreadBattlePassesAllowed: 20
+-      maxRemoteBreadBattlePassesAllowed: 20
++      maxRemoteBreadBattlePassesAllowed: 10
        maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
        fetchProfileFromSocialEnabled: true
        maxPlayersToPrepareBreadDoughLobby: 98
-@@ -156114,7 +156114,6 @@
-       }
-       timePeriodCounters {
-         playerActivity {
--          limit: 250
-         }
-       }
-     }
-@@ -156156,7 +156155,6 @@
-       }
-       timePeriodCounters {
-         playerActivity {
--          limit: 500
-         }
-       }
-     }
-@@ -165058,8 +165056,8 @@
+@@ -165056,8 +165056,8 @@
    data {
      template_id: "MP_SHARED_SETTINGS"
      mpSettings {
--      numMpFromWalkQuest: 300
--      numMetersGoal: 2000
-+      numMpFromWalkQuest: 600
-+      numMetersGoal: 500
+-      numMpFromWalkQuest: 600
+-      numMetersGoal: 500
++      numMpFromWalkQuest: 300
++      numMetersGoal: 2000
        debugAllowRemoveWalkQuest: true
        numMpFromLootStation: 100
        numExtraMpFromFirstLootStation: 20
-@@ -185811,7 +185809,7 @@
+@@ -185809,7 +185809,7 @@
      template_id: "REMOTE_RAID_LIMIT_SETTINGS"
      squashSettings {
        enabled: true
--      dailySquashLimit: 10
-+      dailySquashLimit: 20
+-      dailySquashLimit: 20
++      dailySquashLimit: 10
      }
    }
  }
-@@ -466882,7 +466880,6 @@
+@@ -203826,7 +203826,6 @@
+       gender {
+         femalePercent: 1
+       }
+-      form: HAPPINY_NORMAL
+     }
+   }
+ }
+@@ -466880,6 +466879,7 @@
        sku: "general2.ticket.7"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.4"
        title: "general2.ticket.8_gmaxGarbodor25_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -466903,7 +466900,6 @@
+@@ -466900,6 +466900,7 @@
        sku: "general2.ticket.7.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.4"
        title: "general2.ticket.8_gmaxGarbodor25_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -468630,7 +468626,6 @@
+@@ -468626,6 +468627,7 @@
        sku: "pgorelease.general2.ticket.7"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.4"
        title: "general2.ticket.8_gmaxGarbodor25_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -468651,7 +468646,6 @@
+@@ -468646,6 +468648,7 @@
        sku: "pgorelease.general2.ticket.7.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.4"
        title: "general2.ticket.8_gmaxGarbodor25_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -474407,7 +474401,7 @@
-     }
-   }
- }
--batch_id: 1761903023563
-+batch_id: 1761973967166
- experiment_id: 4
- experiment_id: 11
- experiment_id: 21
-@@ -474447,18 +474441,24 @@
+@@ -474433,9 +474436,10 @@
+ experiment_id: 3063
+ experiment_id: 3500
+ experiment_id: 3512
+-experiment_id: 3519
++experiment_id: 3520
+ experiment_id: 3528
+-experiment_id: 3535
++experiment_id: 3536
++experiment_id: 3537
+ experiment_id: 3538
+ experiment_id: 3566
  experiment_id: 3586
- experiment_id: 3588
- experiment_id: 3590
-+experiment_id: 3591
-+experiment_id: 3593
+@@ -474444,10 +474448,6 @@
+ experiment_id: 3591
+ experiment_id: 3593
  experiment_id: 3595
--experiment_id: 3596
- experiment_id: 3952
-+experiment_id: 3953
-+experiment_id: 3956
-+experiment_id: 3957
+-experiment_id: 3952
+-experiment_id: 3953
+-experiment_id: 3956
+-experiment_id: 3957
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
- experiment_id: 5163
-+experiment_id: 5216
- experiment_id: 5506
- experiment_id: 5508
- experiment_id: 5510
- experiment_id: 6075
- experiment_id: 7072
-+experiment_id: 7074
- experiment_id: 7082
- experiment_id: 8913
- experiment_id: 8915
