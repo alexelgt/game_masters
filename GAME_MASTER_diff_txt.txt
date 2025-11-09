@@ -1,305 +1,36 @@
---- GAME_MASTER_old.txt	2025-11-06 18:37:11.150414702 +0100
-+++ GAME_MASTER.txt	2025-11-08 11:34:08.506125914 +0100
-@@ -144913,7 +144913,7 @@
-     iapCategoryDisplay {
-       category: IAP_CATEGORY_AVATAR
-       sortOrder: 5
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_Polteageist_Headwear_Avatar.jpg"
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_GOWA_2025_AvatarItems.jpg"
-       description: "avatar_shop_description_new"
-     }
-   }
-@@ -146211,39 +146211,43 @@
+--- GAME_MASTER_old.txt	2025-11-08 11:34:08.506125914 +0100
++++ GAME_MASTER.txt	2025-11-09 10:37:38.772659025 +0100
+@@ -146480,6 +146480,8 @@
        itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
        category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
        globalEventTicket {
--        eventStartTime: "2025-10-04T14:00:00"
--        eventEndTime: "2025-10-04T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaMetagrossRaidDay"
-+        eventStartTime: "2025-11-10T10:00:00"
-+        eventEndTime: "2025-11-14T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_6_desc_GOWA25_leadup"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_06_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOWA_IntoTheWild_KeyArt_v5_1024x512-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_MegaMetagrossRaidDay"
--        textRewardsKey: "text_rewards_key_MegaMetagrossRaidDay"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOWA_IntoTheWild_KeyArt_v5_1024x512-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_GOWA25_leadup"
-+        textRewardsKey: "text_rewards_key_GOWA25_leadup"
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_FREE_RAID_TICKET
--            amount: 8
-+            item: ITEM_MAX_BOOST
-+            amount: 1
-           }
-         }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_XL_RARE_CANDY
-+            item: ITEM_PAID_RAID_TICKET
-+            amount: 5
-           }
-         }
-         iconRewards {
--          type: STARDUST
--          stardust: 2
-+          type: ITEM
-+          item {
-+            item: ITEM_INCUBATOR_BASIC
-+            amount: 2
-+          }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1759586400000
--        clientEventEndTimeUtcMs: 1759597200000
-+        clientEventStartTimeUtcMs: 1762768800000
-+        clientEventEndTimeUtcMs: 1763150400000
-       }
--      nameOverride: "general2.ticket.6_MegaMetagrossRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_desc_MegaMetagrossRaidDay"
-+      nameOverride: "general2.ticket._GOWA25_Leadup_title"
-+      descriptionOverride: "item_event_ticket_6_desc_GOWA25_leadup"
++        eventBadge: BADGE_GOWA_2025_GLOBAL
++        grantBadgeBeforeEventStartMs: 1762473600000
+         eventStartTime: "2025-11-15T10:00:00"
+         eventEndTime: "2025-11-16T18:00:00"
+         itemBagDescriptionKey: "item_global_event_ticket_desc_GOWA25"
+@@ -470910,7 +470912,7 @@
      }
    }
  }
-@@ -146256,17 +146260,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-10-04T14:00:00"
--        eventEndTime: "2025-10-04T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_MegaMetagrossRaidDay"
-+        eventStartTime: "2025-11-10T10:00:00"
-+        eventEndTime: "2025-11-14T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_6_details_GOWA25_leadup"
-         ticketItem: ITEM_EVENT_TICKET_06
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
--        clientEventStartTimeUtcMs: 1759586400000
--        clientEventEndTimeUtcMs: 1759597200000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOWA_IntoTheWild_KeyArt_v5_1024x512-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1762768800000
-+        clientEventEndTimeUtcMs: 1763150400000
-       }
-       ignoreInventorySpace: true
--      nameOverride: "general2.ticket.6_MegaMetagrossRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_details_MegaMetagrossRaidDay"
-+      nameOverride: "general2.ticket._GOWA25_Leadup_title"
-+      descriptionOverride: "item_event_ticket_6_details_GOWA25_leadup"
-     }
-   }
- }
-@@ -456819,13 +456823,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_MegaMetagrossRaidDay_title"
-+      title: "general2.ticket._GOWA25_Leadup_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-10-04T17:00:00"
-+      skuDisableTime: "2025-11-14T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1759597200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
--      webstoreSkuId: "web-mega-Metagross-ticket-box"
-+      skuDisableTimeUtcMs: 1763150400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOWA_IntoTheWild_KeyArt_v5_1024x512-nologo.jpg"
-+      webstoreSkuId: "web-gowa-lead-up-25-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -456840,12 +456844,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_MegaMetagrossRaidDay_title"
-+      title: "general2.ticket._GOWA25_Leadup_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-10-04T17:00:00"
-+      skuDisableTime: "2025-11-14T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1759597200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
-+      skuDisableTimeUtcMs: 1763150400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOWA_IntoTheWild_KeyArt_v5_1024x512-nologo.jpg"
-     }
-   }
- }
-@@ -458565,13 +458569,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_MegaMetagrossRaidDay_title"
-+      title: "general2.ticket._GOWA25_Leadup_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-10-04T17:00:00"
-+      skuDisableTime: "2025-11-14T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1759597200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
--      webstoreSkuId: "web-mega-Metagross-ticket-box"
-+      skuDisableTimeUtcMs: 1763150400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOWA_IntoTheWild_KeyArt_v5_1024x512-nologo.jpg"
-+      webstoreSkuId: "web-gowa-lead-up-25-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -458586,12 +458590,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_MegaMetagrossRaidDay_title"
-+      title: "general2.ticket._GOWA25_Leadup_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-10-04T17:00:00"
-+      skuDisableTime: "2025-11-14T20:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1759597200000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Mega_Metagross_RaidDay_v2_1024x576-nologo.jpg"
-+      skuDisableTimeUtcMs: 1763150400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOWA_IntoTheWild_KeyArt_v5_1024x512-nologo.jpg"
-     }
-   }
- }
-@@ -470796,7 +470800,117 @@
-     }
-   }
- }
--batch_id: 1762441193374
-+template {
-+  template_id: "STICKER_GOWA2025_01.3"
-+  data {
-+    template_id: "STICKER_GOWA2025_01.3"
-+    iapItemDisplay {
-+      sku: "STICKER_GOWA2025_01.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 10
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOWA2025_01.5"
-+  data {
-+    template_id: "STICKER_GOWA2025_01.5"
-+    iapItemDisplay {
-+      sku: "STICKER_GOWA2025_01.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 9
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOWA2025_02.3"
-+  data {
-+    template_id: "STICKER_GOWA2025_02.3"
-+    iapItemDisplay {
-+      sku: "STICKER_GOWA2025_02.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 8
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOWA2025_02.5"
-+  data {
-+    template_id: "STICKER_GOWA2025_02.5"
-+    iapItemDisplay {
-+      sku: "STICKER_GOWA2025_02.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 7
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOWA2025_03.3"
-+  data {
-+    template_id: "STICKER_GOWA2025_03.3"
-+    iapItemDisplay {
-+      sku: "STICKER_GOWA2025_03.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 6
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOWA2025_03.5"
-+  data {
-+    template_id: "STICKER_GOWA2025_03.5"
-+    iapItemDisplay {
-+      sku: "STICKER_GOWA2025_03.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 5
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOWA2025_04.3"
-+  data {
-+    template_id: "STICKER_GOWA2025_04.3"
-+    iapItemDisplay {
-+      sku: "STICKER_GOWA2025_04.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 4
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOWA2025_04.5"
-+  data {
-+    template_id: "STICKER_GOWA2025_04.5"
-+    iapItemDisplay {
-+      sku: "STICKER_GOWA2025_04.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 3
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOWA2025_05.3"
-+  data {
-+    template_id: "STICKER_GOWA2025_05.3"
-+    iapItemDisplay {
-+      sku: "STICKER_GOWA2025_05.3"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 2
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_GOWA2025_05.5"
-+  data {
-+    template_id: "STICKER_GOWA2025_05.5"
-+    iapItemDisplay {
-+      sku: "STICKER_GOWA2025_05.5"
-+      category: IAP_CATEGORY_STICKER
-+      sortOrder: 1
-+    }
-+  }
-+}
-+batch_id: 1762592123190
+-batch_id: 1762592123190
++batch_id: 1762679971551
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -470838,6 +470952,7 @@
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-+experiment_id: 5218
- experiment_id: 5506
- experiment_id: 5508
- experiment_id: 5510
-@@ -470856,8 +470971,6 @@
- experiment_id: 99998
- experiment_id: 250415
- experiment_id: 1000890
--experiment_id: 3000000
--experiment_id: 3000121
- experiment_id: 3500035
- experiment_id: 3500037
- experiment_id: 4610000
+@@ -470942,6 +470944,7 @@
+ experiment_id: 3520
+ experiment_id: 3529
+ experiment_id: 3536
++experiment_id: 3537
+ experiment_id: 3538
+ experiment_id: 3566
+ experiment_id: 3597
+@@ -470959,6 +470962,7 @@
+ experiment_id: 6075
+ experiment_id: 7077
+ experiment_id: 7082
++experiment_id: 8918
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
