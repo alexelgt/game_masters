@@ -1,45 +1,817 @@
---- GAME_MASTER_old.txt	2025-11-10 11:53:36.819582802 +0100
-+++ GAME_MASTER.txt	2025-11-11 10:51:32.580566218 +0100
-@@ -146873,8 +146873,8 @@
-     template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
-     itemExpirationSettings {
-       item: ITEM_LUCKY_FRIEND_APPLICATOR
--      expirationTime: "2025-06-08T23:59:00"
--      emergencyExpirationTime: "2025-06-09T10:00:00"
-+      expirationTime: "2025-12-07T23:59:00"
-+      emergencyExpirationTime: "2025-12-08T10:00:00"
+--- GAME_MASTER_old.txt	2025-11-11 10:51:32.580566218 +0100
++++ GAME_MASTER.txt	2025-11-12 10:58:08.830300913 +0100
+@@ -449547,8 +449547,9 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_JUNGLE"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
      }
    }
  }
-@@ -292749,7 +292749,7 @@
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-         shadowBaseCaptureRate: 0.02
--        shadowAttackProbability: 0.35
-+        shadowAttackProbability: 0.7
-         shadowDodgeProbability: 0.2
-       }
-       stats {
-@@ -451752,9 +451752,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: RAIKOU
-+          pokemonId: TAPU_KOKO
-           pokemonDisplay {
--            form: RAIKOU_NORMAL
-+            form: TAPU_KOKO_NORMAL
-           }
+@@ -449561,31 +449562,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
          }
-         unlockedAtRank: 20
-@@ -451779,36 +451779,9 @@
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+     }
+@@ -449600,31 +449601,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -449640,7 +449641,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -449658,7 +449659,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -449673,7 +449674,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -449691,7 +449692,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -449707,7 +449708,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -449725,7 +449726,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -449740,7 +449741,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -449758,7 +449759,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -449774,7 +449775,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 570
++          count: 2280
+         }
+       }
+       reward {
+@@ -449792,7 +449793,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+     }
+@@ -449807,7 +449808,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+       reward {
+@@ -449825,7 +449826,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 9120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -449841,7 +449842,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -449859,7 +449860,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+     }
+@@ -449874,7 +449875,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       reward {
+@@ -449892,7 +449893,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 9600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -449987,7 +449988,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 700
++          count: 2800
+         }
+       }
+       reward {
+@@ -450005,7 +450006,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+     }
+@@ -450020,7 +450021,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+       reward {
+@@ -450038,7 +450039,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 11200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450054,7 +450055,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 730
++          count: 2920
+         }
+       }
+       reward {
+@@ -450072,7 +450073,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+     }
+@@ -450087,7 +450088,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+       reward {
+@@ -450105,7 +450106,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 11680
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450121,7 +450122,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 770
++          count: 3080
+         }
+       }
+       reward {
+@@ -450139,7 +450140,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+     }
+@@ -450154,7 +450155,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+       reward {
+@@ -450172,7 +450173,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 12320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450237,7 +450238,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 300
++          count: 1200
+         }
+       }
+       reward {
+@@ -450255,7 +450256,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+     }
+@@ -450270,7 +450271,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -450288,7 +450289,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450304,7 +450305,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 870
++          count: 3480
+         }
+       }
+       reward {
+@@ -450322,7 +450323,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+     }
+@@ -450337,7 +450338,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+       reward {
+@@ -450355,7 +450356,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 13920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450371,7 +450372,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -450389,7 +450390,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -450404,7 +450405,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -450422,7 +450423,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450438,7 +450439,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -450456,7 +450457,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -450471,7 +450472,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -450489,7 +450490,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450505,7 +450506,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -450523,7 +450524,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -450538,7 +450539,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -450556,7 +450557,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450572,7 +450573,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -450590,7 +450591,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -450605,7 +450606,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -450623,7 +450624,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450639,7 +450640,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -450657,7 +450658,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -450672,7 +450673,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -450690,7 +450691,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450706,7 +450707,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -450724,7 +450725,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -450739,7 +450740,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -450757,7 +450758,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450773,7 +450774,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 370
++          count: 1480
+         }
+       }
+       reward {
+@@ -450791,7 +450792,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+     }
+@@ -450806,7 +450807,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+       reward {
+@@ -450824,7 +450825,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 5920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450889,7 +450890,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 400
++          count: 1600
+         }
+       }
+       reward {
+@@ -450907,7 +450908,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+     }
+@@ -450922,7 +450923,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+       reward {
+@@ -450940,7 +450941,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 6400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -450956,7 +450957,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -450974,7 +450975,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -450989,7 +450990,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -451007,7 +451008,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -451023,7 +451024,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -451041,7 +451042,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -451056,7 +451057,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -451074,7 +451075,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -451090,7 +451091,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 470
++          count: 1880
+         }
+       }
+       reward {
+@@ -451108,7 +451109,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+     }
+@@ -451123,7 +451124,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+       reward {
+@@ -451141,7 +451142,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 7520
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -451752,36 +451753,9 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: ENTEI
-+          pokemonId: TAPU_LELE
-           pokemonDisplay {
--            form: ENTEI_NORMAL
+-          pokemonId: TAPU_KOKO
+-          pokemonDisplay {
+-            form: TAPU_KOKO_NORMAL
 -          }
 -        }
 -        unlockedAtRank: 20
@@ -64,33 +836,21 @@
 -      }
 -      availablePokemon {
 -        pokemon {
--          pokemonId: SUICUNE
+-          pokemonId: TAPU_LELE
++          pokemonId: NECROZMA
+           pokemonDisplay {
+-            form: TAPU_LELE_NORMAL
++            form: NECROZMA_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -452411,36 +452385,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: TAPU_KOKO
 -          pokemonDisplay {
--            form: SUICUNE_NORMAL
-+            form: TAPU_LELE_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -452438,9 +452411,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: RAIKOU
-+          pokemonId: TAPU_KOKO
-           pokemonDisplay {
--            form: RAIKOU_NORMAL
-+            form: TAPU_KOKO_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -452465,36 +452438,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: ENTEI
-+          pokemonId: TAPU_LELE
-           pokemonDisplay {
--            form: ENTEI_NORMAL
+-            form: TAPU_KOKO_NORMAL
 -          }
 -        }
 -        unlockedAtRank: 20
@@ -115,98 +875,61 @@
 -      }
 -      availablePokemon {
 -        pokemon {
--          pokemonId: SUICUNE
--          pokemonDisplay {
--            form: SUICUNE_NORMAL
-+            form: TAPU_LELE_NORMAL
+-          pokemonId: TAPU_LELE
++          pokemonId: NECROZMA
+           pokemonDisplay {
+-            form: TAPU_LELE_NORMAL
++            form: NECROZMA_NORMAL
            }
          }
          unlockedAtRank: 20
-@@ -489029,7 +488975,54 @@
+@@ -459148,7 +459095,7 @@
+       sequence: "anim attacker atk-move"
+       sequence: "sfx attacker 034-0_body_slam"
+       sequence: "wait 0.5"
+-      sequence: "vfx defender body_slam_hit"
++      sequence: "vfx defender body_slam"
+       sequence: "wait 1.0"
+       sequence: "sys ui-sync"
+       sequence: "sys complete"
+@@ -489022,13 +488969,13 @@
      }
    }
  }
--batch_id: 1762751683042
-+template {
-+  template_id: "BADGE_BEST_FRIENDS_PLUS_ELIGIBLE"
-+  data {
-+    template_id: "BADGE_BEST_FRIENDS_PLUS_ELIGIBLE"
-+    badgeSettings {
-+      badgeType: 6067
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BF_PLUS_ROLLOUT_CODE_GATE"
-+  data {
-+    template_id: "BF_PLUS_ROLLOUT_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "FRIENDSHIP_LEVEL_5"
-+  data {
-+    template_id: "FRIENDSHIP_LEVEL_5"
-+    friendshipMilestoneSettings {
-+      milestoneXpReward: 150000
-+      attackBonusPercentage: 1.12
-+      raidBallBonus: 4
-+      unlockedTrading: REGULAR_IN_POKEDEX
-+      unlockedTrading: SPECIAL_IN_POKEDEX
-+      unlockedTrading: REGULAR_NON_POKEDEX
-+      unlockedTrading: REGIONAL_NON_POKEDEX
-+      unlockedTrading: FORM_NON_POKEDEX
-+      unlockedTrading: LEGENDARY_NON_POKEDEX
-+      unlockedTrading: SHINY_NON_POKEDEX
-+      unlockedTrading: GMAX_NON_POKEDEX
-+      unlockedTrading: GMAX_IN_POKEDEX
-+      tradingDiscount: 0.96
-+      obFriendshipLevelMilestoneSettingsNumber7: 1
-+      8: 90
-+    }
-+  }
-+}
-+batch_id: 1762824756685
+-batch_id: 1762824756685
++batch_id: 1762936463668
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -489060,7 +489053,7 @@
- experiment_id: 3033
- experiment_id: 3063
- experiment_id: 3500
--experiment_id: 3513
-+experiment_id: 3514
- experiment_id: 3520
- experiment_id: 3530
- experiment_id: 3536
-@@ -489077,7 +489070,9 @@
- experiment_id: 5510
- experiment_id: 6075
+ experiment_id: 101
+ experiment_id: 170
+-experiment_id: 181
++experiment_id: 182
+ experiment_id: 300
+ experiment_id: 308
+ experiment_id: 320
+@@ -489072,7 +489019,7 @@
  experiment_id: 7077
-+experiment_id: 7080
+ experiment_id: 7080
  experiment_id: 8918
-+experiment_id: 8990
+-experiment_id: 8990
++experiment_id: 8991
  experiment_id: 9521
  experiment_id: 9552
  experiment_id: 9553
-@@ -489089,9 +489084,10 @@
+@@ -489084,7 +489031,7 @@
  experiment_id: 90000
  experiment_id: 90002
  experiment_id: 90010
--experiment_id: 90011
-+experiment_id: 90012
-+experiment_id: 90017
+-experiment_id: 90012
++experiment_id: 90013
+ experiment_id: 90017
  experiment_id: 90023
--experiment_id: 90024
-+experiment_id: 90025
- experiment_id: 90026
- experiment_id: 90027
- experiment_id: 90100
+ experiment_id: 90025
+@@ -489105,4 +489052,6 @@
+ experiment_id: 6600427
+ experiment_id: 6600429
+ experiment_id: 6600431
++experiment_id: 6600434
++experiment_id: 6600435
+ experiment_id: 6600436
