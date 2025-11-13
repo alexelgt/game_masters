@@ -1,935 +1,584 @@
---- GAME_MASTER_old.txt	2025-11-11 10:51:32.580566218 +0100
-+++ GAME_MASTER.txt	2025-11-12 10:58:08.830300913 +0100
-@@ -449547,8 +449547,9 @@
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
-       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_JUNGLE"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+--- GAME_MASTER_old.txt	2025-11-12 10:58:08.830300913 +0100
++++ GAME_MASTER.txt	2025-11-13 10:24:24.093727159 +0100
+@@ -145998,26 +145998,29 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-10-12T14:00:00"
+-        eventEndTime: "2025-10-12T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Solosis25"
++        eventStartTime: "2025-11-30T14:00:00"
++        eventEndTime: "2025-11-30T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Pikipek25"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Pikipek_v3-1024x576-nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_CD_Solosis25"
+-        textRewardsKey: "text_rewards_key_CD_Solosis25"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Pikipek_v3-1024x576-nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CD_Pikipek25"
++        textRewardsKey: "text_rewards_key_CD_Pikipek25"
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemonEncounter {
+-            pokemonId: REUNICLUS
++            pokemonId: TOUCANNON
++            pokemonDisplay {
++              form: TOUCANNON_NORMAL
++            }
+           }
+         }
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_STAR_PIECE
++            item: ITEM_LUCKY_EGG
+             amount: 1
+           }
+         }
+@@ -146029,11 +146032,11 @@
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1760277600000
+-        clientEventEndTimeUtcMs: 1760288400000
++        clientEventStartTimeUtcMs: 1764511200000
++        clientEventEndTimeUtcMs: 1764522000000
+       }
+-      nameOverride: "general1.ticket_CD_Solosis25_title"
+-      descriptionOverride: "item_event_ticket_pink_details_CD_Solosis25"
++      nameOverride: "general1.ticket_CD_Pikipek25_title"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Pikipek25"
      }
    }
  }
-@@ -449561,31 +449562,31 @@
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-     }
-@@ -449600,31 +449601,31 @@
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -449640,7 +449641,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 530
-+          count: 2120
-         }
-       }
-       reward {
-@@ -449658,7 +449659,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-     }
-@@ -449673,7 +449674,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-       reward {
-@@ -449691,7 +449692,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2120
-+          count: 8480
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -449707,7 +449708,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 530
-+          count: 2120
-         }
-       }
-       reward {
-@@ -449725,7 +449726,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-     }
-@@ -449740,7 +449741,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-       reward {
-@@ -449758,7 +449759,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2120
-+          count: 8480
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -449774,7 +449775,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 570
-+          count: 2280
-         }
-       }
-       reward {
-@@ -449792,7 +449793,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1140
-+          count: 4560
-         }
-       }
-     }
-@@ -449807,7 +449808,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1140
-+          count: 4560
-         }
-       }
-       reward {
-@@ -449825,7 +449826,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2280
-+          count: 9120
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -449841,7 +449842,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 600
-+          count: 2400
-         }
-       }
-       reward {
-@@ -449859,7 +449860,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 4800
-         }
-       }
-     }
-@@ -449874,7 +449875,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 4800
-         }
-       }
-       reward {
-@@ -449892,7 +449893,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2400
-+          count: 9600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -449987,7 +449988,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 700
-+          count: 2800
-         }
-       }
-       reward {
-@@ -450005,7 +450006,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1400
-+          count: 5600
-         }
-       }
-     }
-@@ -450020,7 +450021,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1400
-+          count: 5600
-         }
-       }
-       reward {
-@@ -450038,7 +450039,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2800
-+          count: 11200
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450054,7 +450055,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 730
-+          count: 2920
-         }
-       }
-       reward {
-@@ -450072,7 +450073,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1460
-+          count: 5840
-         }
-       }
-     }
-@@ -450087,7 +450088,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1460
-+          count: 5840
-         }
-       }
-       reward {
-@@ -450105,7 +450106,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2920
-+          count: 11680
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450121,7 +450122,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 770
-+          count: 3080
-         }
-       }
-       reward {
-@@ -450139,7 +450140,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1540
-+          count: 6160
-         }
-       }
-     }
-@@ -450154,7 +450155,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1540
-+          count: 6160
-         }
-       }
-       reward {
-@@ -450172,7 +450173,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3080
-+          count: 12320
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450237,7 +450238,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 300
-+          count: 1200
-         }
-       }
-       reward {
-@@ -450255,7 +450256,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 600
-+          count: 2400
-         }
-       }
-     }
-@@ -450270,7 +450271,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 600
-+          count: 2400
-         }
-       }
-       reward {
-@@ -450288,7 +450289,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 4800
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450304,7 +450305,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 870
-+          count: 3480
-         }
-       }
-       reward {
-@@ -450322,7 +450323,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1740
-+          count: 6960
-         }
-       }
-     }
-@@ -450337,7 +450338,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1740
-+          count: 6960
-         }
-       }
-       reward {
-@@ -450355,7 +450356,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3480
-+          count: 13920
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450371,7 +450372,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -450389,7 +450390,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -450404,7 +450405,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -450422,7 +450423,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450438,7 +450439,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -450456,7 +450457,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -450471,7 +450472,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -450489,7 +450490,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450505,7 +450506,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -450523,7 +450524,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -450538,7 +450539,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -450556,7 +450557,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450572,7 +450573,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -450590,7 +450591,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -450605,7 +450606,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -450623,7 +450624,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450639,7 +450640,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 330
-+          count: 1320
-         }
-       }
-       reward {
-@@ -450657,7 +450658,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-     }
-@@ -450672,7 +450673,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-       reward {
-@@ -450690,7 +450691,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1320
-+          count: 5280
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450706,7 +450707,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 330
-+          count: 1320
-         }
-       }
-       reward {
-@@ -450724,7 +450725,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-     }
-@@ -450739,7 +450740,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-       reward {
-@@ -450757,7 +450758,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1320
-+          count: 5280
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450773,7 +450774,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 370
-+          count: 1480
-         }
-       }
-       reward {
-@@ -450791,7 +450792,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 740
-+          count: 2960
-         }
-       }
-     }
-@@ -450806,7 +450807,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 740
-+          count: 2960
-         }
-       }
-       reward {
-@@ -450824,7 +450825,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1480
-+          count: 5920
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450889,7 +450890,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 400
-+          count: 1600
-         }
-       }
-       reward {
-@@ -450907,7 +450908,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 800
-+          count: 3200
-         }
-       }
-     }
-@@ -450922,7 +450923,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 800
-+          count: 3200
-         }
-       }
-       reward {
-@@ -450940,7 +450941,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1600
-+          count: 6400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -450956,7 +450957,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 430
-+          count: 1720
-         }
-       }
-       reward {
-@@ -450974,7 +450975,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-     }
-@@ -450989,7 +450990,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-       reward {
-@@ -451007,7 +451008,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1720
-+          count: 6880
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -451023,7 +451024,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 430
-+          count: 1720
-         }
-       }
-       reward {
-@@ -451041,7 +451042,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-     }
-@@ -451056,7 +451057,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-       reward {
-@@ -451074,7 +451075,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1720
-+          count: 6880
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -451090,7 +451091,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 470
-+          count: 1880
-         }
-       }
-       reward {
-@@ -451108,7 +451109,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 940
-+          count: 3760
-         }
-       }
-     }
-@@ -451123,7 +451124,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 940
-+          count: 3760
-         }
-       }
-       reward {
-@@ -451141,7 +451142,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1880
-+          count: 7520
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -451752,36 +451753,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: TAPU_KOKO
--          pokemonDisplay {
--            form: TAPU_KOKO_NORMAL
--          }
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemonId: TAPU_LELE
-+          pokemonId: NECROZMA
-           pokemonDisplay {
--            form: TAPU_LELE_NORMAL
-+            form: NECROZMA_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -452411,36 +452385,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: TAPU_KOKO
--          pokemonDisplay {
--            form: TAPU_KOKO_NORMAL
--          }
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemonId: TAPU_LELE
-+          pokemonId: NECROZMA
-           pokemonDisplay {
--            form: TAPU_LELE_NORMAL
-+            form: NECROZMA_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -459148,7 +459095,7 @@
-       sequence: "anim attacker atk-move"
-       sequence: "sfx attacker 034-0_body_slam"
-       sequence: "wait 0.5"
--      sequence: "vfx defender body_slam_hit"
-+      sequence: "vfx defender body_slam"
-       sequence: "wait 1.0"
-       sequence: "sys ui-sync"
-       sequence: "sys complete"
-@@ -489022,13 +488969,13 @@
+@@ -146046,17 +146049,17 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-10-12T14:00:00"
+-        eventEndTime: "2025-10-12T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Solosis25"
++        eventStartTime: "2025-11-30T14:00:00"
++        eventEndTime: "2025-11-30T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Pikipek25"
+         ticketItem: ITEM_EVENT_TICKET_03
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
+-        clientEventStartTimeUtcMs: 1760277600000
+-        clientEventEndTimeUtcMs: 1760288400000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Pikipek_v3-1024x576-nologo.jpg"
++        clientEventStartTimeUtcMs: 1764511200000
++        clientEventEndTimeUtcMs: 1764522000000
+       }
+       ignoreInventorySpace: true
+-      nameOverride: "general1.ticket_CD_Solosis25_title"
+-      descriptionOverride: "item_event_ticket_pink_details_CD_Solosis25"
++      nameOverride: "general1.ticket_CD_Pikipek25_title"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Pikipek25"
      }
    }
  }
--batch_id: 1762824756685
-+batch_id: 1762936463668
+@@ -146342,33 +146345,44 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-08-03T14:00:00"
+-        eventEndTime: "2025-08-03T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_08_desc_gmaxButterfree25"
++        eventStartTime: "2025-11-25T10:00:00"
++        eventEndTime: "2025-11-30T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_FinalJustice2025"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_08_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_gmaxButterfree25"
+-        textRewardsKey: "text_rewards_key_gmaxButterfree25"
++        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_FinalJustice2025"
++        textRewardsKey: "text_rewards_key_FinalJustice2025"
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_MAX_BOOST
+-            amount: 1
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemonId: KELDEO
++            pokemonDisplay {
++              kglealcogbg: true
++              form: KELDEO_ORDINARY
++            }
+           }
+         }
+         iconRewards {
+-          type: EXPERIENCE
+-          exp: 25000
++          type: CANDY
++          candy {
++            pokemonId: KELDEO
++            amount: 30
++          }
++        }
++        iconRewards {
++          type: AVATAR_CLOTHING
++          neutralAvatarItemTemplate {
++            displayTemplateId: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
++          }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1754229600000
+-        clientEventEndTimeUtcMs: 1754240400000
++        clientEventStartTimeUtcMs: 1764064800000
++        clientEventEndTimeUtcMs: 1764532800000
+       }
+-      nameOverride: "general2.ticket.8_gmaxButterfree25_title"
+-      descriptionOverride: "item_event_ticket_08_details_gmaxButterfree25"
++      descriptionOverride: "item_event_ticket_gray_desc_FinalJustice2025"
+     }
+   }
+ }
+@@ -146381,17 +146395,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-08-03T14:00:00"
+-        eventEndTime: "2025-08-03T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_08_desc_gmaxButterfree25"
++        eventStartTime: "2025-11-25T10:00:00"
++        eventEndTime: "2025-11-30T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_FinalJustice2025"
+         ticketItem: ITEM_EVENT_TICKET_08
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
+-        clientEventStartTimeUtcMs: 1754229600000
+-        clientEventEndTimeUtcMs: 1754240400000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
++        clientEventStartTimeUtcMs: 1764064800000
++        clientEventEndTimeUtcMs: 1764532800000
+       }
+       ignoreInventorySpace: true
+-      nameOverride: "general2.ticket.8_gmaxButterfree25_title"
+-      descriptionOverride: "item_event_ticket_08_details_gmaxButterfree25"
++      descriptionOverride: "item_event_ticket_gray_desc_FinalJustice2025"
+     }
+   }
+ }
+@@ -146916,9 +146929,18 @@
+     template_id: "ITEM_EXPIRATION_ITEM_WILD_BALL"
+     itemExpirationSettings {
+       item: ITEM_WILD_BALL
+-      expirationTime: "2016-01-01T00:00:00"
+-      emergencyExpirationEnabled: true
+-      emergencyExpirationTime: "2016-01-01T00:00:00"
++      expirationTime: "2025-11-16T18:00:00"
++      emergencyExpirationTime: "2025-11-16T18:00:00"
++      6 {
++        1 {
++          1: "2025-11-15T10:00:00"
++          2: "2025-11-15T18:00:00"
++        }
++        1 {
++          1: "2025-11-16T10:00:00"
++          2: "2025-11-16T18:00:00"
++        }
++      }
+     }
+   }
+ }
+@@ -146928,9 +146950,18 @@
+     template_id: "ITEM_EXPIRATION_ITEM_WILD_BALL_PREMIER"
+     itemExpirationSettings {
+       item: ITEM_WILD_BALL_PREMIER
+-      expirationTime: "2016-01-01T00:00:00"
+-      emergencyExpirationEnabled: true
+-      emergencyExpirationTime: "2016-01-01T00:00:00"
++      expirationTime: "2025-11-16T18:00:00"
++      emergencyExpirationTime: "2025-11-16T18:00:00"
++      6 {
++        1 {
++          1: "2025-11-15T10:00:00"
++          2: "2025-11-15T18:00:00"
++        }
++        1 {
++          1: "2025-11-16T10:00:00"
++          2: "2025-11-16T18:00:00"
++        }
++      }
+     }
+   }
+ }
+@@ -147164,7 +147195,7 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 6
+       incense {
+-        incenseLifetimeSeconds: 900
++        incenseLifetimeSeconds: 1800
+         spawnTableProbability: 0.25
+       }
+       ignoreInventorySpace: true
+@@ -451753,9 +451784,36 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: NECROZMA
++          pokemonId: TAPU_BULU
+           pokemonDisplay {
+-            form: NECROZMA_NORMAL
++            form: TAPU_BULU_NORMAL
++          }
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
++          pokemonId: TAPU_FINI
++          pokemonDisplay {
++            form: TAPU_FINI_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -452385,9 +452443,36 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: NECROZMA
++          pokemonId: TAPU_BULU
++          pokemonDisplay {
++            form: TAPU_BULU_NORMAL
++          }
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
++          pokemonId: TAPU_FINI
+           pokemonDisplay {
+-            form: NECROZMA_NORMAL
++            form: TAPU_FINI_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -456610,13 +456695,13 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Solosis25_title"
++      title: "general1.ticket_CD_Pikipek25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-10-12T17:00:00"
++      skuDisableTime: "2025-11-30T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1760288400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
+-      webstoreSkuId: "web-october-2025-cd-ticket-box"
++      skuDisableTimeUtcMs: 1764522000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Pikipek_v3-1024x576-nologo.jpg"
++      webstoreSkuId: "web-november-2025-cd-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -456631,11 +456716,11 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Solosis25_title"
++      title: "general1.ticket_CD_Pikipek25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-10-12T17:00:00"
++      skuDisableTime: "2025-11-30T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1760288400000
++      skuDisableTimeUtcMs: 1764522000000
+     }
+   }
+ }
+@@ -456804,15 +456889,16 @@
+     iapItemDisplay {
+       sku: "general2.ticket.8"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.8"
+-      title: "general2.ticket.8_gmaxButterfree25_title"
++      title: "general2.ticket.8_FinalJustice2025_title"
++      description: "item_event_ticket_gray_details_FinalJustice2025"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-08-03T17:00:00"
++      skuDisableTime: "2025-11-30T20:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1754240400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1764532800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -456823,15 +456909,16 @@
+     iapItemDisplay {
+       sku: "general2.ticket.8.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.8"
+-      title: "general2.ticket.8_gmaxButterfree25_title"
++      title: "general2.ticket.8_FinalJustice2025_title"
++      description: "item_event_ticket_gray_details_FinalJustice2025"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-08-03T17:00:00"
++      skuDisableTime: "2025-11-30T20:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1754240400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1764532800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -458356,13 +458443,13 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Solosis25_title"
++      title: "general1.ticket_CD_Pikipek25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-10-12T17:00:00"
++      skuDisableTime: "2025-11-30T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1760288400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
+-      webstoreSkuId: "web-october-2025-cd-ticket-box"
++      skuDisableTimeUtcMs: 1764522000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Pikipek_v3-1024x576-nologo.jpg"
++      webstoreSkuId: "web-november-2025-cd-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -458377,11 +458464,11 @@
+       sortOrder: 2
+       hidden: true
+       spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Solosis25_title"
++      title: "general1.ticket_CD_Pikipek25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-10-12T17:00:00"
++      skuDisableTime: "2025-11-30T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1760288400000
++      skuDisableTimeUtcMs: 1764522000000
+     }
+   }
+ }
+@@ -458550,15 +458637,16 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.8"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.8"
+-      title: "general2.ticket.8_gmaxButterfree25_title"
++      title: "general2.ticket.8_FinalJustice2025_title"
++      description: "item_event_ticket_gray_details_FinalJustice2025"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-08-03T17:00:00"
++      skuDisableTime: "2025-11-30T20:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1754240400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1764532800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -458569,15 +458657,16 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.8.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
++      sortOrder: 2
+       hidden: true
+       spriteId: "general2.ticket.8"
+-      title: "general2.ticket.8_gmaxButterfree25_title"
++      title: "general2.ticket.8_FinalJustice2025_title"
++      description: "item_event_ticket_gray_details_FinalJustice2025"
+       skuEnableTime: "2023-04-06T10:00:00"
+-      skuDisableTime: "2025-08-03T17:00:00"
++      skuDisableTime: "2025-11-30T20:00:00"
+       skuEnableTimeUtcMs: 1680775200000
+-      skuDisableTimeUtcMs: 1754240400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
++      skuDisableTimeUtcMs: 1764532800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -488969,7 +489058,98 @@
+     }
+   }
+ }
+-batch_id: 1762936463668
++template {
++  template_id: "BADGE_EVENT_0173"
++  data {
++    template_id: "BADGE_EVENT_0173"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0173
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "COMBAT_V0490_MOVE_BEAK_BLAST"
++  data {
++    template_id: "COMBAT_V0490_MOVE_BEAK_BLAST"
++    combat_move {
++      uniqueId: 490
++      type: POKEMON_TYPE_FLYING
++      power: 110
++      vfxName: "beak_blast"
++      energyDelta: -55
++      buffs {
++        targetAttackStatStageChange: -1
++        buffActivationChance: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "COMBAT_VNEXT_CODE_GATE"
++  data {
++    template_id: "COMBAT_VNEXT_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++      subCodeGateList {
++        name: "LEADER_VNEXT_CODE_GATE"
++        isEnabled: true
++      }
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
++  data {
++    template_id: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_shinykeldeoshirt_0_icon"
++      displayStringId: "avatar_n_shirt_shinykeldeoshirt"
++    }
++  }
++}
++template {
++  template_id: "V0490_MOVE_BEAK_BLAST"
++  data {
++    template_id: "V0490_MOVE_BEAK_BLAST"
++    moveSettings {
++      movementId: 490
++      animationId: 5
++      pokemonType: POKEMON_TYPE_FLYING
++      power: 125
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "beak_blast"
++      durationMs: 2500
++      damageWindowStartMs: 1500
++      damageWindowEndMs: 2500
++      energyDelta: -50
++    }
++  }
++}
++template {
++  template_id: "sequence_beak_blast"
++  data {
++    template_id: "sequence_beak_blast"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx beak_blast"
++      sequence: "sfx oblivion_wing"
++      sequence: "wait 1.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++batch_id: 1763022616116
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
- experiment_id: 101
- experiment_id: 170
--experiment_id: 181
-+experiment_id: 182
- experiment_id: 300
- experiment_id: 308
- experiment_id: 320
-@@ -489072,7 +489019,7 @@
+@@ -489019,7 +489199,8 @@
  experiment_id: 7077
  experiment_id: 7080
  experiment_id: 8918
--experiment_id: 8990
-+experiment_id: 8991
+-experiment_id: 8991
++experiment_id: 8920
++experiment_id: 8992
  experiment_id: 9521
  experiment_id: 9552
  experiment_id: 9553
-@@ -489084,7 +489031,7 @@
+@@ -489031,7 +489212,7 @@
  experiment_id: 90000
  experiment_id: 90002
  experiment_id: 90010
--experiment_id: 90012
-+experiment_id: 90013
+-experiment_id: 90013
++experiment_id: 90014
  experiment_id: 90017
  experiment_id: 90023
  experiment_id: 90025
-@@ -489105,4 +489052,6 @@
- experiment_id: 6600427
- experiment_id: 6600429
- experiment_id: 6600431
-+experiment_id: 6600434
-+experiment_id: 6600435
- experiment_id: 6600436
+@@ -489039,6 +489220,7 @@
+ experiment_id: 90027
+ experiment_id: 90100
+ experiment_id: 99998
++experiment_id: 173173
+ experiment_id: 250415
+ experiment_id: 1000890
+ experiment_id: 3500035
