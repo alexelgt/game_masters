@@ -1,584 +1,195 @@
---- GAME_MASTER_old.txt	2025-11-12 10:58:08.830300913 +0100
-+++ GAME_MASTER.txt	2025-11-13 10:24:24.093727159 +0100
-@@ -145998,26 +145998,29 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-10-12T14:00:00"
--        eventEndTime: "2025-10-12T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Solosis25"
-+        eventStartTime: "2025-11-30T14:00:00"
-+        eventEndTime: "2025-11-30T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Pikipek25"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Pikipek_v3-1024x576-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CD_Solosis25"
--        textRewardsKey: "text_rewards_key_CD_Solosis25"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Pikipek_v3-1024x576-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CD_Pikipek25"
-+        textRewardsKey: "text_rewards_key_CD_Pikipek25"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemonId: REUNICLUS
-+            pokemonId: TOUCANNON
-+            pokemonDisplay {
-+              form: TOUCANNON_NORMAL
-+            }
-           }
-         }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_STAR_PIECE
-+            item: ITEM_LUCKY_EGG
-             amount: 1
-           }
-         }
-@@ -146029,11 +146032,11 @@
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1760277600000
--        clientEventEndTimeUtcMs: 1760288400000
-+        clientEventStartTimeUtcMs: 1764511200000
-+        clientEventEndTimeUtcMs: 1764522000000
-       }
--      nameOverride: "general1.ticket_CD_Solosis25_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Solosis25"
-+      nameOverride: "general1.ticket_CD_Pikipek25_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Pikipek25"
+--- GAME_MASTER_old.txt	2025-11-13 10:24:24.093727159 +0100
++++ GAME_MASTER.txt	2025-11-14 19:10:36.271844148 +0100
+@@ -43533,7 +43533,7 @@
+       rvnVersion: 1
+       maxPlayersPerBreadDoughLobby: 100
+       maxRemotePlayersPerBreadDoughLobby: 100
+-      maxRemoteBreadBattlePassesAllowed: 30
++      maxRemoteBreadBattlePassesAllowed: 999999
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 98
+@@ -175406,7 +175406,6 @@
+       friendRequestsEnabled: true
+       remoteRaidDistanceValidation: true
+       popupTimeMs: 30000
+-      failedFriendInviteInfoEnabled: true
+       minPlayersToBoot: 2
+       bootCutoffMs: 15000
+       bootSoloMs: 30000
+@@ -175612,8 +175611,7 @@
+   data {
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+-      enabled: true
+-      dailySquashLimit: 30
++      dailySquashLimit: 999999
      }
    }
  }
-@@ -146046,17 +146049,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-10-12T14:00:00"
--        eventEndTime: "2025-10-12T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Solosis25"
-+        eventStartTime: "2025-11-30T14:00:00"
-+        eventEndTime: "2025-11-30T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Pikipek25"
-         ticketItem: ITEM_EVENT_TICKET_03
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
--        clientEventStartTimeUtcMs: 1760277600000
--        clientEventEndTimeUtcMs: 1760288400000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Pikipek_v3-1024x576-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1764511200000
-+        clientEventEndTimeUtcMs: 1764522000000
-       }
-       ignoreInventorySpace: true
--      nameOverride: "general1.ticket_CD_Solosis25_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Solosis25"
-+      nameOverride: "general1.ticket_CD_Pikipek25_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Pikipek25"
-     }
-   }
- }
-@@ -146342,33 +146345,44 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-08-03T14:00:00"
--        eventEndTime: "2025-08-03T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_08_desc_gmaxButterfree25"
-+        eventStartTime: "2025-11-25T10:00:00"
-+        eventEndTime: "2025-11-30T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_FinalJustice2025"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_08_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_gmaxButterfree25"
--        textRewardsKey: "text_rewards_key_gmaxButterfree25"
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_FinalJustice2025"
-+        textRewardsKey: "text_rewards_key_FinalJustice2025"
-         iconRewards {
--          type: ITEM
--          item {
--            item: ITEM_MAX_BOOST
--            amount: 1
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemonId: KELDEO
-+            pokemonDisplay {
-+              kglealcogbg: true
-+              form: KELDEO_ORDINARY
-+            }
-           }
-         }
-         iconRewards {
--          type: EXPERIENCE
--          exp: 25000
-+          type: CANDY
-+          candy {
-+            pokemonId: KELDEO
-+            amount: 30
-+          }
-+        }
-+        iconRewards {
-+          type: AVATAR_CLOTHING
-+          neutralAvatarItemTemplate {
-+            displayTemplateId: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
-+          }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1754229600000
--        clientEventEndTimeUtcMs: 1754240400000
-+        clientEventStartTimeUtcMs: 1764064800000
-+        clientEventEndTimeUtcMs: 1764532800000
-       }
--      nameOverride: "general2.ticket.8_gmaxButterfree25_title"
--      descriptionOverride: "item_event_ticket_08_details_gmaxButterfree25"
-+      descriptionOverride: "item_event_ticket_gray_desc_FinalJustice2025"
-     }
-   }
- }
-@@ -146381,17 +146395,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-08-03T14:00:00"
--        eventEndTime: "2025-08-03T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_08_desc_gmaxButterfree25"
-+        eventStartTime: "2025-11-25T10:00:00"
-+        eventEndTime: "2025-11-30T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_FinalJustice2025"
-         ticketItem: ITEM_EVENT_TICKET_08
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1754229600000
--        clientEventEndTimeUtcMs: 1754240400000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1764064800000
-+        clientEventEndTimeUtcMs: 1764532800000
-       }
-       ignoreInventorySpace: true
--      nameOverride: "general2.ticket.8_gmaxButterfree25_title"
--      descriptionOverride: "item_event_ticket_08_details_gmaxButterfree25"
-+      descriptionOverride: "item_event_ticket_gray_desc_FinalJustice2025"
-     }
-   }
- }
-@@ -146916,9 +146929,18 @@
-     template_id: "ITEM_EXPIRATION_ITEM_WILD_BALL"
-     itemExpirationSettings {
-       item: ITEM_WILD_BALL
--      expirationTime: "2016-01-01T00:00:00"
--      emergencyExpirationEnabled: true
--      emergencyExpirationTime: "2016-01-01T00:00:00"
-+      expirationTime: "2025-11-16T18:00:00"
-+      emergencyExpirationTime: "2025-11-16T18:00:00"
-+      6 {
-+        1 {
-+          1: "2025-11-15T10:00:00"
-+          2: "2025-11-15T18:00:00"
-+        }
-+        1 {
-+          1: "2025-11-16T10:00:00"
-+          2: "2025-11-16T18:00:00"
-+        }
-+      }
-     }
-   }
- }
-@@ -146928,9 +146950,18 @@
-     template_id: "ITEM_EXPIRATION_ITEM_WILD_BALL_PREMIER"
-     itemExpirationSettings {
-       item: ITEM_WILD_BALL_PREMIER
--      expirationTime: "2016-01-01T00:00:00"
--      emergencyExpirationEnabled: true
--      emergencyExpirationTime: "2016-01-01T00:00:00"
-+      expirationTime: "2025-11-16T18:00:00"
-+      emergencyExpirationTime: "2025-11-16T18:00:00"
-+      6 {
-+        1 {
-+          1: "2025-11-15T10:00:00"
-+          2: "2025-11-15T18:00:00"
-+        }
-+        1 {
-+          1: "2025-11-16T10:00:00"
-+          2: "2025-11-16T18:00:00"
-+        }
-+      }
-     }
-   }
- }
-@@ -147164,7 +147195,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 6
-       incense {
--        incenseLifetimeSeconds: 900
-+        incenseLifetimeSeconds: 1800
-         spawnTableProbability: 0.25
-       }
-       ignoreInventorySpace: true
-@@ -451753,9 +451784,36 @@
+@@ -451784,36 +451782,9 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: NECROZMA
-+          pokemonId: TAPU_BULU
+-          pokemonId: TAPU_BULU
++          pokemonId: NECROZMA
            pokemonDisplay {
--            form: NECROZMA_NORMAL
-+            form: TAPU_BULU_NORMAL
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-+      availablePokemon {
-+        pokemon {
-+          pokemonId: TAPU_FINI
-+          pokemonDisplay {
-+            form: TAPU_FINI_NORMAL
+-            form: TAPU_BULU_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: TAPU_FINI
+-          pokemonDisplay {
+-            form: TAPU_FINI_NORMAL
++            form: NECROZMA_NORMAL
            }
          }
          unlockedAtRank: 20
-@@ -452385,9 +452443,36 @@
+@@ -452443,36 +452414,9 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: NECROZMA
-+          pokemonId: TAPU_BULU
-+          pokemonDisplay {
-+            form: TAPU_BULU_NORMAL
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-+      availablePokemon {
-+        pokemon {
-+          pokemonId: TAPU_FINI
+-          pokemonId: TAPU_BULU
++          pokemonId: NECROZMA
            pokemonDisplay {
--            form: NECROZMA_NORMAL
-+            form: TAPU_FINI_NORMAL
+-            form: TAPU_BULU_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: TAPU_FINI
+-          pokemonDisplay {
+-            form: TAPU_FINI_NORMAL
++            form: NECROZMA_NORMAL
            }
          }
          unlockedAtRank: 20
-@@ -456610,13 +456695,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Solosis25_title"
-+      title: "general1.ticket_CD_Pikipek25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-10-12T17:00:00"
-+      skuDisableTime: "2025-11-30T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1760288400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
--      webstoreSkuId: "web-october-2025-cd-ticket-box"
-+      skuDisableTimeUtcMs: 1764522000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Pikipek_v3-1024x576-nologo.jpg"
-+      webstoreSkuId: "web-november-2025-cd-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -456631,11 +456716,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Solosis25_title"
-+      title: "general1.ticket_CD_Pikipek25_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-10-12T17:00:00"
-+      skuDisableTime: "2025-11-30T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1760288400000
-+      skuDisableTimeUtcMs: 1764522000000
-     }
-   }
- }
-@@ -456804,15 +456889,16 @@
-     iapItemDisplay {
-       sku: "general2.ticket.8"
+@@ -456812,6 +456756,7 @@
+       sku: "general2.ticket.6"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.8"
--      title: "general2.ticket.8_gmaxButterfree25_title"
-+      title: "general2.ticket.8_FinalJustice2025_title"
-+      description: "item_event_ticket_gray_details_FinalJustice2025"
-       skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-08-03T17:00:00"
-+      skuDisableTime: "2025-11-30T20:00:00"
-       skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1754240400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1764532800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
-     }
-   }
- }
-@@ -456823,15 +456909,16 @@
-     iapItemDisplay {
-       sku: "general2.ticket.8.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.8"
--      title: "general2.ticket.8_gmaxButterfree25_title"
-+      title: "general2.ticket.8_FinalJustice2025_title"
-+      description: "item_event_ticket_gray_details_FinalJustice2025"
-       skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-08-03T17:00:00"
-+      skuDisableTime: "2025-11-30T20:00:00"
-       skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1754240400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1764532800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
-     }
-   }
- }
-@@ -458356,13 +458443,13 @@
        sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Solosis25_title"
-+      title: "general1.ticket_CD_Pikipek25_title"
++      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._GOWA25_Leadup_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-10-12T17:00:00"
-+      skuDisableTime: "2025-11-30T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1760288400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Solosis_v2-1024x576-nologo.jpg"
--      webstoreSkuId: "web-october-2025-cd-ticket-box"
-+      skuDisableTimeUtcMs: 1764522000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Pikipek_v3-1024x576-nologo.jpg"
-+      webstoreSkuId: "web-november-2025-cd-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -458377,11 +458464,11 @@
+@@ -456832,6 +456777,7 @@
+       sku: "general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Solosis25_title"
-+      title: "general1.ticket_CD_Pikipek25_title"
++      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._GOWA25_Leadup_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-10-12T17:00:00"
-+      skuDisableTime: "2025-11-30T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1760288400000
-+      skuDisableTimeUtcMs: 1764522000000
-     }
-   }
- }
-@@ -458550,15 +458637,16 @@
-     iapItemDisplay {
-       sku: "pgorelease.general2.ticket.8"
+@@ -458560,6 +458506,7 @@
+       sku: "pgorelease.general2.ticket.6"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.8"
--      title: "general2.ticket.8_gmaxButterfree25_title"
-+      title: "general2.ticket.8_FinalJustice2025_title"
-+      description: "item_event_ticket_gray_details_FinalJustice2025"
-       skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-08-03T17:00:00"
-+      skuDisableTime: "2025-11-30T20:00:00"
-       skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1754240400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1764532800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
-     }
-   }
- }
-@@ -458569,15 +458657,16 @@
-     iapItemDisplay {
-       sku: "pgorelease.general2.ticket.8.giftable"
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._GOWA25_Leadup_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -458580,6 +458527,7 @@
+       sku: "pgorelease.general2.ticket.6.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.8"
--      title: "general2.ticket.8_gmaxButterfree25_title"
-+      title: "general2.ticket.8_FinalJustice2025_title"
-+      description: "item_event_ticket_gray_details_FinalJustice2025"
-       skuEnableTime: "2023-04-06T10:00:00"
--      skuDisableTime: "2025-08-03T17:00:00"
-+      skuDisableTime: "2025-11-30T20:00:00"
-       skuEnableTimeUtcMs: 1680775200000
--      skuDisableTimeUtcMs: 1754240400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-butterfree-nologo-2025.jpg"
-+      skuDisableTimeUtcMs: 1764532800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket._GOWA25_Leadup_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -489091,19 +489039,6 @@
+   }
+ }
+ template {
+-  template_id: "COMBAT_VNEXT_CODE_GATE"
+-  data {
+-    template_id: "COMBAT_VNEXT_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-      subCodeGateList {
+-        name: "LEADER_VNEXT_CODE_GATE"
+-        isEnabled: true
+-      }
+-    }
+-  }
+-}
+-template {
+   template_id: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
+   data {
+     template_id: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
+@@ -489149,7 +489084,7 @@
      }
    }
  }
-@@ -488969,7 +489058,98 @@
-     }
-   }
- }
--batch_id: 1762936463668
-+template {
-+  template_id: "BADGE_EVENT_0173"
-+  data {
-+    template_id: "BADGE_EVENT_0173"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0173
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "COMBAT_V0490_MOVE_BEAK_BLAST"
-+  data {
-+    template_id: "COMBAT_V0490_MOVE_BEAK_BLAST"
-+    combat_move {
-+      uniqueId: 490
-+      type: POKEMON_TYPE_FLYING
-+      power: 110
-+      vfxName: "beak_blast"
-+      energyDelta: -55
-+      buffs {
-+        targetAttackStatStageChange: -1
-+        buffActivationChance: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "COMBAT_VNEXT_CODE_GATE"
-+  data {
-+    template_id: "COMBAT_VNEXT_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+      subCodeGateList {
-+        name: "LEADER_VNEXT_CODE_GATE"
-+        isEnabled: true
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_shinykeldeoshirt_0_icon"
-+      displayStringId: "avatar_n_shirt_shinykeldeoshirt"
-+    }
-+  }
-+}
-+template {
-+  template_id: "V0490_MOVE_BEAK_BLAST"
-+  data {
-+    template_id: "V0490_MOVE_BEAK_BLAST"
-+    moveSettings {
-+      movementId: 490
-+      animationId: 5
-+      pokemonType: POKEMON_TYPE_FLYING
-+      power: 125
-+      accuracyChance: 1
-+      staminaLossScalar: 0.01
-+      trainerLevelMin: 1
-+      trainerLevelMax: 100
-+      vfxName: "beak_blast"
-+      durationMs: 2500
-+      damageWindowStartMs: 1500
-+      damageWindowEndMs: 2500
-+      energyDelta: -50
-+    }
-+  }
-+}
-+template {
-+  template_id: "sequence_beak_blast"
-+  data {
-+    template_id: "sequence_beak_blast"
-+    move_sequence_settings {
-+      sequence: "anim attacker atk-move"
-+      sequence: "wait 0.5"
-+      sequence: "vfx beak_blast"
-+      sequence: "sfx oblivion_wing"
-+      sequence: "wait 1.0"
-+      sequence: "sys ui-sync"
-+      sequence: "sys complete"
-+    }
-+  }
-+}
-+batch_id: 1763022616116
+-batch_id: 1763022616116
++batch_id: 1763135540771
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -489019,7 +489199,8 @@
- experiment_id: 7077
+@@ -489200,7 +489135,7 @@
  experiment_id: 7080
  experiment_id: 8918
--experiment_id: 8991
-+experiment_id: 8920
-+experiment_id: 8992
+ experiment_id: 8920
+-experiment_id: 8992
++experiment_id: 8993
  experiment_id: 9521
  experiment_id: 9552
  experiment_id: 9553
-@@ -489031,7 +489212,7 @@
+@@ -489212,15 +489147,14 @@
  experiment_id: 90000
  experiment_id: 90002
  experiment_id: 90010
--experiment_id: 90013
-+experiment_id: 90014
+-experiment_id: 90014
++experiment_id: 90015
  experiment_id: 90017
- experiment_id: 90023
+-experiment_id: 90023
  experiment_id: 90025
-@@ -489039,6 +489220,7 @@
+ experiment_id: 90026
  experiment_id: 90027
++experiment_id: 90043
  experiment_id: 90100
  experiment_id: 99998
-+experiment_id: 173173
+-experiment_id: 173173
  experiment_id: 250415
  experiment_id: 1000890
  experiment_id: 3500035
