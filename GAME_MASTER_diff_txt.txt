@@ -1,40 +1,236 @@
---- GAME_MASTER_old.txt	2025-11-13 10:24:24.093727159 +0100
-+++ GAME_MASTER.txt	2025-11-14 19:10:36.271844148 +0100
-@@ -43533,7 +43533,7 @@
-       rvnVersion: 1
-       maxPlayersPerBreadDoughLobby: 100
-       maxRemotePlayersPerBreadDoughLobby: 100
--      maxRemoteBreadBattlePassesAllowed: 30
-+      maxRemoteBreadBattlePassesAllowed: 999999
-       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
-       fetchProfileFromSocialEnabled: true
-       maxPlayersToPrepareBreadDoughLobby: 98
-@@ -175406,7 +175406,6 @@
+--- GAME_MASTER_old.txt	2025-11-14 19:10:36.271844148 +0100
++++ GAME_MASTER.txt	2025-11-15 12:22:13.923554684 +0100
+@@ -144762,14 +144762,13 @@
+       sku: "pgorelease.safariball.10"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: -99999
+-      hidden: true
+       spriteId: "wildball.5"
+       title: "gosafariball.10_title"
+       description: "gosafariball.10_description"
+       skuEnableTime: "2023-10-10T11:00:00"
+-      skuDisableTime: "2024-11-30T20:00:00"
++      skuDisableTime: "2025-11-16T18:00:00"
+       skuEnableTimeUtcMs: 1696935600000
+-      skuDisableTimeUtcMs: 1732996800000
++      skuDisableTimeUtcMs: 1763316000000
+     }
+   }
+ }
+@@ -144781,14 +144780,13 @@
+       sku: "pgorelease.safariball.25"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: -99998
+-      hidden: true
+       spriteId: "wildball.20"
+       title: "gosafariball.25_title"
+       description: "gosafariball.25_description"
+       skuEnableTime: "2023-10-10T11:00:00"
+-      skuDisableTime: "2024-11-30T20:00:00"
++      skuDisableTime: "2025-11-16T18:00:00"
+       skuEnableTimeUtcMs: 1696935600000
+-      skuDisableTimeUtcMs: 1732996800000
++      skuDisableTimeUtcMs: 1763316000000
+     }
+   }
+ }
+@@ -144800,14 +144798,13 @@
+       sku: "pgorelease.safariball.50"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: -99997
+-      hidden: true
+       spriteId: "wildball.50"
+       title: "gosafariball.50_title"
+       description: "gosafariball.50_description"
+       skuEnableTime: "2023-10-10T11:00:00"
+-      skuDisableTime: "2024-11-30T20:00:00"
++      skuDisableTime: "2025-11-16T18:00:00"
+       skuEnableTimeUtcMs: 1696935600000
+-      skuDisableTimeUtcMs: 1732996800000
++      skuDisableTimeUtcMs: 1763316000000
+     }
+   }
+ }
+@@ -145836,7 +145833,6 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 100
+         }
+       }
+     }
+@@ -146352,7 +146348,7 @@
+         giftItem: ITEM_EVENT_TICKET_08_TO_GIFT
+         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pgo-power-up-monthly-ticket-2025.jpg"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shiny_Keldeo_KeyArt_v1-1024x576-nologo.jpg"
+         eventDatetimeRangeKey: "event_datetime_range_key_FinalJustice2025"
+         textRewardsKey: "text_rewards_key_FinalJustice2025"
+         iconRewards {
+@@ -146708,45 +146704,49 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-11-04T10:00:00"
+-        eventEndTime: "2025-11-09T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_Enchanted_Hollow_NOV25"
++        eventStartTime: "2025-12-02T10:00:00"
++        eventEndTime: "2025-12-09T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_JourneyTPaldea25"
+         giftable: true
+         giftItem: ITEM_EVERGREEN_TICKET_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20251026_ticket_enchanted_hollow_1024x576_nologo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Journey_To_Paldea_TICKET_v1_1024x576-nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20251026_ticket_enchanted_hollow_1024x576_nologo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_Enchanted_Hollow_NOV25"
+-        textRewardsKey: "text_rewards_key_Enchanted_Hollow_NOV25"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Journey_To_Paldea_TICKET_v1_1024x576-nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_JourneyTPaldea25"
++        textRewardsKey: "text_rewards_key_JourneyTPaldea25"
+         iconRewards {
+           type: POKEMON_ENCOUNTER
+           pokemonEncounter {
+-            pokemonId: TAROUNTULA
++            pokemonId: NACLI
+             pokemonDisplay {
+-              form: TAROUNTULA_NORMAL
++              form: NACLI_NORMAL
+             }
+           }
+         }
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_TROY_DISK_MOSSY
+-            amount: 1
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemonId: LARVITAR
++            pokemonDisplay {
++              form: LARVITAR_NORMAL
++            }
+           }
+         }
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_LUCKY_EGG
+-            amount: 3
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemonId: BAGON
++            pokemonDisplay {
++              form: BAGON_NORMAL
++            }
+           }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1762250400000
+-        clientEventEndTimeUtcMs: 1762718400000
++        clientEventStartTimeUtcMs: 1764669600000
++        clientEventEndTimeUtcMs: 1765310400000
+       }
+-      nameOverride: "general1.ticket._Enchanted_Hollow_NOV25_title"
+-      descriptionOverride: "item_event_ticket_evergreen_desc_Enchanted_Hollow_NOV25"
++      nameOverride: "general1.ticket.5_JourneyTPaldea25_title"
++      descriptionOverride: "item_event_ticket_evergreen_desc_JourneyTPaldea25"
+     }
+   }
+ }
+@@ -146759,17 +146759,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-11-04T10:00:00"
+-        eventEndTime: "2025-11-09T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_evergreen_details_Enchanted_Hollow_NOV25"
++        eventStartTime: "2025-12-02T10:00:00"
++        eventEndTime: "2025-12-09T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_JourneyTPaldea25"
+         ticketItem: ITEM_EVERGREEN_TICKET
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20251026_ticket_enchanted_hollow_1024x576_nologo.jpg"
+-        clientEventStartTimeUtcMs: 1762250400000
+-        clientEventEndTimeUtcMs: 1762718400000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Journey_To_Paldea_TICKET_v1_1024x576-nologo.jpg"
++        clientEventStartTimeUtcMs: 1764669600000
++        clientEventEndTimeUtcMs: 1765310400000
+       }
+       ignoreInventorySpace: true
+-      nameOverride: "general1.ticket._Enchanted_Hollow_NOV25_title"
+-      descriptionOverride: "item_event_ticket_evergreen_details_Enchanted_Hollow_NOV25"
++      descriptionOverride: "item_event_ticket_evergreen_details_JourneyTPaldea25"
+     }
+   }
+ }
+@@ -147247,6 +147246,7 @@
+       dropTrainerLevel: 1
+       incense {
+         incenseLifetimeSeconds: 3600
++        spawnTableProbability: 0.75
+       }
+     }
+   }
+@@ -152453,7 +152453,9 @@
+   data {
+     template_id: "MAP_DISPLAY_SETTINGS"
+     mapDisplaySettings {
++      mbmchdofgdg: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGO_Wild_Area_2025_Global_logo_250x250.png"
+       showEnhancedSky: true
++      mapEffectName: "fx_confetti_dark"
+       eventThemeName: "s20_enchantedhollow"
+     }
+   }
+@@ -154877,7 +154879,7 @@
+       numMpFromLootStation: 100
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1500
+-      mpBaseDailyLimit: 800
++      mpBaseDailyLimit: 1600
+       mpClaimParticleSpeedMultiplier: 1
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 250
+@@ -171560,8 +171562,8 @@
+       complianceZonesEnabled: true
+       enablePartyRaidInformation: true
        friendRequestsEnabled: true
-       remoteRaidDistanceValidation: true
-       popupTimeMs: 30000
--      failedFriendInviteInfoEnabled: true
-       minPlayersToBoot: 2
-       bootCutoffMs: 15000
-       bootSoloMs: 30000
-@@ -175612,8 +175611,7 @@
-   data {
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
--      enabled: true
--      dailySquashLimit: 30
-+      dailySquashLimit: 999999
+-      partyExpiryDurationMs: 10800000
+-      partyExpiryWarningMinutes: 10
++      partyExpiryDurationMs: 28800000
++      partyExpiryWarningMinutes: 30
+       enabledFriendStatusIncrease: true
+       restartPartyRejoinPromptEnabled: true
+       partyIapBoostsEnabled: true
+@@ -227500,7 +227502,19 @@
+           count: 3
+         }
+       }
++      tutorialItemRewards {
++        tutorial: 164
++        item {
++          itemId: ITEM_WILD_BALL
++          count: 3
++        }
++      }
+       typeEffectivenessTipsEnabled: true
++      14: 1
++      15 {
++        1: 166
++        2: "pgorelease.general2.ticket.1"
++      }
      }
    }
  }
-@@ -451784,36 +451782,9 @@
+@@ -451780,33 +451794,6 @@
+           }
+         }
        }
-       availablePokemon {
-         pokemon {
--          pokemonId: TAPU_BULU
-+          pokemonId: NECROZMA
-           pokemonDisplay {
--            form: TAPU_BULU_NORMAL
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: NECROZMA
+-          pokemonDisplay {
+-            form: NECROZMA_NORMAL
 -          }
 -        }
 -        unlockedAtRank: 20
@@ -57,23 +253,18 @@
 -          }
 -        }
 -      }
--      availablePokemon {
--        pokemon {
--          pokemonId: TAPU_FINI
--          pokemonDisplay {
--            form: TAPU_FINI_NORMAL
-+            form: NECROZMA_NORMAL
+     }
+   }
+ }
+@@ -452412,33 +452399,6 @@
            }
          }
-         unlockedAtRank: 20
-@@ -452443,36 +452414,9 @@
        }
-       availablePokemon {
-         pokemon {
--          pokemonId: TAPU_BULU
-+          pokemonId: NECROZMA
-           pokemonDisplay {
--            form: TAPU_BULU_NORMAL
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: NECROZMA
+-          pokemonDisplay {
+-            form: NECROZMA_NORMAL
 -          }
 -        }
 -        unlockedAtRank: 20
@@ -96,100 +287,148 @@
 -          }
 -        }
 -      }
--      availablePokemon {
--        pokemon {
--          pokemonId: TAPU_FINI
--          pokemonDisplay {
--            form: TAPU_FINI_NORMAL
-+            form: NECROZMA_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -456812,6 +456756,7 @@
-       sku: "general2.ticket.6"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.6"
-       title: "general2.ticket._GOWA25_Leadup_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -456832,6 +456777,7 @@
-       sku: "general2.ticket.6.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.6"
-       title: "general2.ticket._GOWA25_Leadup_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -458560,6 +458506,7 @@
-       sku: "pgorelease.general2.ticket.6"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.6"
-       title: "general2.ticket._GOWA25_Leadup_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -458580,6 +458527,7 @@
-       sku: "pgorelease.general2.ticket.6.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-+      hidden: true
-       spriteId: "general2.ticket.6"
-       title: "general2.ticket._GOWA25_Leadup_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -489091,19 +489039,6 @@
+       rewardTrack: PREMIUM
+     }
    }
- }
- template {
--  template_id: "COMBAT_VNEXT_CODE_GATE"
--  data {
--    template_id: "COMBAT_VNEXT_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--      subCodeGateList {
--        name: "LEADER_VNEXT_CODE_GATE"
--        isEnabled: true
--      }
--    }
--  }
--}
--template {
-   template_id: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
-   data {
-     template_id: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
-@@ -489149,7 +489084,7 @@
+@@ -456287,13 +456247,13 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "evergreenticket.1"
+-      title: "general1.ticket._Enchanted_Hollow_NOV25_title"
++      title: "general1.ticket.5_JourneyTPaldea25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-11-09T20:00:00"
++      skuDisableTime: "2025-12-09T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1762718400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20251026_ticket_enchanted_hollow_1024x576_nologo.jpg"
+-      webstoreSkuId: "web-enchanted-ticket-box"
++      skuDisableTimeUtcMs: 1765310400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Journey_To_Paldea_TICKET_v1_1024x576-nologo.jpg"
++      webstoreSkuId: "web-paldea-journey-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -456309,10 +456269,10 @@
+       hidden: true
+       spriteId: "evergreenticket.1"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-11-09T20:00:00"
++      skuDisableTime: "2025-12-09T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1762718400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20251026_ticket_enchanted_hollow_1024x576_nologo.jpg"
++      skuDisableTimeUtcMs: 1765310400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Journey_To_Paldea_TICKET_v1_1024x576-nologo.jpg"
      }
    }
  }
--batch_id: 1763022616116
-+batch_id: 1763135540771
+@@ -458073,13 +458033,13 @@
+       sortOrder: 4
+       hidden: true
+       spriteId: "evergreenticket.1"
+-      title: "general1.ticket._Enchanted_Hollow_NOV25_title"
++      title: "general1.ticket.5_JourneyTPaldea25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-11-09T20:00:00"
++      skuDisableTime: "2025-12-09T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1762718400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20251026_ticket_enchanted_hollow_1024x576_nologo.jpg"
+-      webstoreSkuId: "web-enchanted-ticket-box"
++      skuDisableTimeUtcMs: 1765310400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Journey_To_Paldea_TICKET_v1_1024x576-nologo.jpg"
++      webstoreSkuId: "web-paldea-journey-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -458095,10 +458055,10 @@
+       hidden: true
+       spriteId: "evergreenticket.1"
+       skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2025-11-09T20:00:00"
++      skuDisableTime: "2025-12-09T20:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1762718400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20251026_ticket_enchanted_hollow_1024x576_nologo.jpg"
++      skuDisableTimeUtcMs: 1765310400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Journey_To_Paldea_TICKET_v1_1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -470877,22 +470837,22 @@
+         bonusBoxes {
+           text: "quest_catch_pokemon_singular"
+           iconType: SPAWN_UNKNOWN
+-          quantity: 1
++          quantity: 3
+         }
+         bonusBoxes {
+           text: "quest_hatch_egg_singular"
+           iconType: EGG
+-          quantity: 5
++          quantity: 10
+         }
+         bonusBoxes {
+           text: "quest_win_raid_singular"
+           iconType: RAID
+-          quantity: 15
++          quantity: 30
+         }
+         bonusBoxes {
+           text: "win_max_battle_singular"
+           iconType: BREAD
+-          quantity: 15
++          quantity: 30
+         }
+         eventPassTrackUpgradeDescriptions {
+           passTrackUpgradeHeaderDescription: "event_pass_gowa_2025_upgrade_description"
+@@ -489084,7 +489044,7 @@
+     }
+   }
+ }
+-batch_id: 1763135540771
++batch_id: 1763187686016
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -489200,7 +489135,7 @@
+@@ -489126,7 +489086,7 @@
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5219
++experiment_id: 5220
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
+@@ -489135,7 +489095,6 @@
  experiment_id: 7080
  experiment_id: 8918
  experiment_id: 8920
--experiment_id: 8992
-+experiment_id: 8993
+-experiment_id: 8993
  experiment_id: 9521
  experiment_id: 9552
  experiment_id: 9553
-@@ -489212,15 +489147,14 @@
+@@ -489146,14 +489105,17 @@
+ experiment_id: 60095
  experiment_id: 90000
  experiment_id: 90002
- experiment_id: 90010
--experiment_id: 90014
-+experiment_id: 90015
- experiment_id: 90017
--experiment_id: 90023
- experiment_id: 90025
+-experiment_id: 90010
+-experiment_id: 90015
+-experiment_id: 90017
+-experiment_id: 90025
  experiment_id: 90026
- experiment_id: 90027
-+experiment_id: 90043
+-experiment_id: 90027
++experiment_id: 90029
++experiment_id: 90030
++experiment_id: 90031
++experiment_id: 90033
++experiment_id: 90034
+ experiment_id: 90043
++experiment_id: 90044
++experiment_id: 90052
  experiment_id: 90100
++experiment_id: 90106
  experiment_id: 99998
--experiment_id: 173173
  experiment_id: 250415
  experiment_id: 1000890
- experiment_id: 3500035
