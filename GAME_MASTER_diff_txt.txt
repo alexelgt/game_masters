@@ -1,479 +1,76 @@
---- GAME_MASTER_old.txt	2025-11-19 18:47:11.098677017 +0100
-+++ GAME_MASTER.txt	2025-11-20 18:38:47.476331713 +0100
-@@ -78806,7 +78806,7 @@
-       skuDisableTime: "2025-01-08T10:00:00"
-       skuEnableTimeUtcMs: 1733133600000
-       skuDisableTimeUtcMs: 1736330400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_SEP_v4_1024x576-nologo.jpg"
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_DEC_v1-1024x576-noPalkia.jpg"
-     }
-   }
- }
-@@ -152776,7 +152776,7 @@
-       ignoreInventorySpace: true
-       itemCap: 999999
-       eventPassPoint {
--        eventPassId: "EVENT_PASS_SEPTEMBER2025_SEASON"
-+        eventPassId: "EVENT_PASS_DECEMBER2025_SEASON"
-       }
-       timePeriodCounters {
-         playerActivity {
-@@ -153067,39 +153067,43 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-09-28T14:00:00"
--        eventEndTime: "2025-09-28T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaCameruptRaidDay"
-+        eventStartTime: "2025-12-06T09:00:00"
-+        eventEndTime: "2025-12-07T21:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_RECAP2025"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_05_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_CD_December_Recap_2025_v4-1024x576.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_MegaCameruptRaidDay"
--        textRewardsKey: "text_rewards_key_MegaCameruptRaidDay"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_CD_December_Recap_2025_v4-1024x576.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CD_RECAP2025"
-+        textRewardsKey: "text_rewards_key_CD_RECAP2025"
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_FREE_RAID_TICKET
--            amount: 8
-+            item: ITEM_POFFIN
-+            amount: 1
+--- GAME_MASTER_old.txt	2025-11-20 18:38:47.476331713 +0100
++++ GAME_MASTER.txt	2025-11-21 18:26:55.421166705 +0100
+@@ -59886,9 +59886,13 @@
            }
-         }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_XL_RARE_CANDY
-+            item: ITEM_MOVE_REROLL_ELITE_SPECIAL_ATTACK
-+            amount: 1
+           pokemon {
+             id: ZORUA
++            forms: ZORUA_NORMAL
++            forms: FORM_UNSET
            }
-         }
-         iconRewards {
--          type: STARDUST
--          stardust: 2
-+          type: ITEM
-+          item {
-+            item: ITEM_RARE_CANDY
-+            amount: 3
-+          }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1759068000000
--        clientEventEndTimeUtcMs: 1759078800000
-+        clientEventStartTimeUtcMs: 1765011600000
-+        clientEventEndTimeUtcMs: 1765141200000
-       }
--      nameOverride: "general2.ticket.5_MegaCameruptRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_details_MegaCameruptRaidDay"
-+      nameOverride: "general1.ticket_CD_RECAP2025_title"
-+      descriptionOverride: "item_event_ticket_pink_desc_CD_RECAP2025"
+           pokemon {
+             id: ZOROARK
++            forms: ZOROARK_NORMAL
++            forms: FORM_UNSET
+           }
+           pokemon {
+             id: JELLICENT
+@@ -161797,9 +161801,9 @@
+     template_id: "MP_SHARED_SETTINGS"
+     mpSettings {
+       numMpFromWalkQuest: 300
+-      numMetersGoal: 2000
++      numMetersGoal: 1000
+       debugAllowRemoveWalkQuest: true
+-      numMpFromLootStation: 100
++      numMpFromLootStation: 200
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1500
+       mpBaseDailyLimit: 800
+@@ -172833,7 +172837,7 @@
+     template_id: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
+     avatarItemDisplay {
+       iconAddress: "n_shirt_shinykeldeoshirt_0_icon"
+-      displayStringId: "avatar_n_shirt_shinykeldeoshirt"
++      displayStringId: "avatar_n_shirt_shinykeldeotshirt"
      }
    }
  }
-@@ -153112,17 +153116,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-09-28T14:00:00"
--        eventEndTime: "2025-09-28T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_MegaCameruptRaidDay"
-+        eventStartTime: "2025-12-06T09:00:00"
-+        eventEndTime: "2025-12-07T21:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_details_CD_RECAP2025"
-         ticketItem: ITEM_EVENT_TICKET_05
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
--        clientEventStartTimeUtcMs: 1759068000000
--        clientEventEndTimeUtcMs: 1759078800000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_CD_December_Recap_2025_v4-1024x576.jpg"
-+        clientEventStartTimeUtcMs: 1765011600000
-+        clientEventEndTimeUtcMs: 1765141200000
-       }
-       ignoreInventorySpace: true
--      nameOverride: "general2.ticket.5_MegaCameruptRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_details_MegaCameruptRaidDay"
-+      nameOverride: "general1.ticket_CD_RECAP2025_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_RECAP2025"
+@@ -461279,9 +461283,12 @@
+       sku: "bundle.gmaxday.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle3.sprite.d"
+       title: "ace_box_title"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2025-11-30T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1764532800000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 1000
+@@ -471161,7 +471168,7 @@
      }
    }
  }
-@@ -153754,8 +153758,8 @@
-     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_01"
-     itemExpirationSettings {
-       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_01
--      expirationTime: "2025-10-09T10:00:00"
--      emergencyExpirationTime: "2025-10-11T10:00:00"
-+      expirationTime: "2026-01-08T10:00:00"
-+      emergencyExpirationTime: "2026-01-10T10:00:00"
-     }
-   }
- }
-@@ -153798,7 +153802,7 @@
-     template_id: "ITEM_EXPIRATION_ITEM_INCUBATOR_TIMED"
-     itemExpirationSettings {
-       item: ITEM_INCUBATOR_TIMED
--      expirationTime: "2025-10-14T10:00:00"
-+      expirationTime: "2026-01-13T10:00:00"
-     }
-   }
- }
-@@ -161695,7 +161699,7 @@
-       skuDisableTime: "2025-01-08T10:00:00"
-       skuEnableTimeUtcMs: 1733133600000
-       skuDisableTimeUtcMs: 1736330400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_SEP_v4_1024x576-nologo.jpg"
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_DEC_v1-1024x576-noPalkia.jpg"
-     }
-   }
- }
-@@ -161713,7 +161717,7 @@
-       skuDisableTime: "2025-01-08T10:00:00"
-       skuEnableTimeUtcMs: 1733133600000
-       skuDisableTimeUtcMs: 1736330400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_SEP_v4_1024x576-nologo.jpg"
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_DEC_v1-1024x576-noPalkia.jpg"
-     }
-   }
- }
-@@ -271822,7 +271826,7 @@
-       encounter {
-         collisionRadiusM: 0.252
-         collisionHeightM: 0.336
--        collisionHeadRadiusM: 0.252
-+        collisionHeadRadiusM: 0.15
-         movementType: MOVEMENT_JUMP
-         movementTimerS: 10
-         jumpTimeS: 1.35
-@@ -271968,7 +271972,7 @@
-       encounter {
-         collisionRadiusM: 0.252
-         collisionHeightM: 0.336
--        collisionHeadRadiusM: 0.252
-+        collisionHeadRadiusM: 0.15
-         movementType: MOVEMENT_JUMP
-         movementTimerS: 10
-         jumpTimeS: 1.35
-@@ -272050,7 +272054,7 @@
-       encounter {
-         collisionRadiusM: 0.252
-         collisionHeightM: 0.336
--        collisionHeadRadiusM: 0.252
-+        collisionHeadRadiusM: 0.15
-         movementType: MOVEMENT_JUMP
-         movementTimerS: 10
-         jumpTimeS: 1.35
-@@ -405025,6 +405029,7 @@
-         xsScaleMultiplier: 0.8
-         xlScaleMultiplier: 1.2
-         xxlScaleMultiplier: 1.5
-+        disablePokedexRecordDisplayForForms: true
-       }
-       ibfc {
-       }
-@@ -405118,6 +405123,7 @@
-         xsScaleMultiplier: 0.8
-         xlScaleMultiplier: 1.2
-         xxlScaleMultiplier: 1.5
-+        disablePokedexRecordDisplayForForms: true
-       }
-       ibfc {
-       }
-@@ -405211,6 +405217,7 @@
-         xsScaleMultiplier: 0.8
-         xlScaleMultiplier: 1.2
-         xxlScaleMultiplier: 1.5
-+        disablePokedexRecordDisplayForForms: true
-       }
-       ibfc {
-       }
-@@ -405304,6 +405311,7 @@
-         xsScaleMultiplier: 0.8
-         xlScaleMultiplier: 1.2
-         xxlScaleMultiplier: 1.5
-+        disablePokedexRecordDisplayForForms: true
-       }
-       ibfc {
-       }
-@@ -405400,6 +405408,7 @@
-         xsScaleMultiplier: 0.8
-         xlScaleMultiplier: 1.2
-         xxlScaleMultiplier: 1
-+        disablePokedexRecordDisplayForForms: true
-       }
-       ibfc {
-       }
-@@ -405493,6 +405502,7 @@
-         xsScaleMultiplier: 0.8
-         xlScaleMultiplier: 1.2
-         xxlScaleMultiplier: 1.5
-+        disablePokedexRecordDisplayForForms: true
-       }
-       ibfc {
-       }
-@@ -405587,6 +405597,7 @@
-         xsScaleMultiplier: 0.8
-         xlScaleMultiplier: 1.2
-         xxlScaleMultiplier: 1.5
-+        disablePokedexRecordDisplayForForms: true
-       }
-       ibfc {
-       }
-@@ -405681,6 +405692,7 @@
-         xsScaleMultiplier: 0.8
-         xlScaleMultiplier: 1.2
-         xxlScaleMultiplier: 1.5
-+        disablePokedexRecordDisplayForForms: true
-       }
-       ibfc {
-       }
-@@ -405775,6 +405787,7 @@
-         xsScaleMultiplier: 0.8
-         xlScaleMultiplier: 1.2
-         xxlScaleMultiplier: 1.5
-+        disablePokedexRecordDisplayForForms: true
-       }
-       ibfc {
-       }
-@@ -405871,6 +405884,7 @@
-         xsScaleMultiplier: 0.8
-         xlScaleMultiplier: 1.2
-         xxlScaleMultiplier: 1
-+        disablePokedexRecordDisplayForForms: true
-       }
-       ibfc {
-       }
-@@ -430486,6 +430500,8 @@
-       pokemonId: CLOBBOPUS
-       type: POKEMON_TYPE_FIGHTING
-       camera {
-+        cylinderRadiusM: 0.5
-+        cylinderHeightM: 0.4
-       }
-       encounter {
-         attackProbability: 0.1
-@@ -430524,6 +430540,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -120
-+      buddyPortraitOffset: 250
-       third_move {
-         stardustToUnlock: 50000
-         candyToUnlock: 50
-@@ -430546,6 +430565,8 @@
-       pokemonId: CLOBBOPUS
-       type: POKEMON_TYPE_FIGHTING
-       camera {
-+        cylinderRadiusM: 0.5
-+        cylinderHeightM: 0.4
-       }
-       encounter {
-         attackProbability: 0.1
-@@ -430586,6 +430607,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -120
-+      buddyPortraitOffset: 250
-       third_move {
-         stardustToUnlock: 50000
-         candyToUnlock: 50
-@@ -430608,6 +430632,8 @@
-       pokemonId: GRAPPLOCT
-       type: POKEMON_TYPE_FIGHTING
-       camera {
-+        cylinderRadiusM: 0.8
-+        cylinderHeightM: 0.7
-       }
-       encounter {
-         bonusCandyCaptureReward: 2
-@@ -430648,6 +430674,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -100
-+      buddyPortraitOffset: 0
-       third_move {
-         stardustToUnlock: 50000
-         candyToUnlock: 50
-@@ -430670,6 +430699,8 @@
-       pokemonId: GRAPPLOCT
-       type: POKEMON_TYPE_FIGHTING
-       camera {
-+        cylinderRadiusM: 0.8
-+        cylinderHeightM: 0.7
-       }
-       encounter {
-         bonusCandyCaptureReward: 2
-@@ -430711,6 +430742,9 @@
-       buddyOffsetFemale: 0
-       buddyOffsetFemale: 0
-       buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -100
-+      buddyPortraitOffset: 0
-       third_move {
-         stardustToUnlock: 50000
-         candyToUnlock: 50
-@@ -450437,6 +450471,8 @@
-       type: POKEMON_TYPE_FAIRY
-       type2: POKEMON_TYPE_PSYCHIC
-       camera {
-+        cylinderRadiusM: 0.6
-+        cylinderHeightM: 0.4
-       }
-       encounter {
-         movementType: MOVEMENT_JUMP
-@@ -450461,6 +450497,10 @@
-       weightStdDev: 1
-       familyId: FAMILY_SCREAMTAIL
-       kmBuddyDistance: 20
-+      buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -200
-+      buddyPortraitOffset: -2500
-       third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -450483,6 +450523,8 @@
-       type: POKEMON_TYPE_FAIRY
-       type2: POKEMON_TYPE_PSYCHIC
-       camera {
-+        cylinderRadiusM: 0.6
-+        cylinderHeightM: 0.4
-       }
-       encounter {
-         movementType: MOVEMENT_JUMP
-@@ -450508,6 +450550,10 @@
-       familyId: FAMILY_SCREAMTAIL
-       kmBuddyDistance: 20
-       form: SCREAMTAIL_NORMAL
-+      buddyScale: 19
-+      buddyPortraitOffset: 0
-+      buddyPortraitOffset: -200
-+      buddyPortraitOffset: -2500
-       third_move {
-         stardustToUnlock: 100000
-         candyToUnlock: 100
-@@ -463920,14 +463966,14 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general2.ticket.5"
--      title: "general2.ticket.5_MegaCameruptRaidDay_title"
-+      spriteId: "general1.ticket.2"
-+      title: "general1.ticket_CD_RECAP2025_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-28T17:00:00"
-+      skuDisableTime: "2025-12-07T21:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1759078800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
--      webstoreSkuId: "web-mega-camerup-ticket-box"
-+      skuDisableTimeUtcMs: 1765141200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_CD_December_Recap_2025_v4-1024x576.jpg"
-+      webstoreSkuId: "web-cd-recap-dec-25-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -463941,13 +463987,11 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general2.ticket.5"
--      title: "general2.ticket.5_MegaCameruptRaidDay_title"
-+      spriteId: "general1.ticket.2"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-28T17:00:00"
-+      skuDisableTime: "2025-12-07T21:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1759078800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
-+      skuDisableTimeUtcMs: 1765141200000
-     }
-   }
- }
-@@ -465670,14 +465714,14 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general2.ticket.5"
--      title: "general2.ticket.5_MegaCameruptRaidDay_title"
-+      spriteId: "general1.ticket.2"
-+      title: "general1.ticket_CD_RECAP2025_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-28T17:00:00"
-+      skuDisableTime: "2025-12-07T21:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1759078800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
--      webstoreSkuId: "web-mega-camerup-ticket-box"
-+      skuDisableTimeUtcMs: 1765141200000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_CD_December_Recap_2025_v4-1024x576.jpg"
-+      webstoreSkuId: "web-cd-recap-dec-25-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -465691,13 +465735,11 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general2.ticket.5"
--      title: "general2.ticket.5_MegaCameruptRaidDay_title"
-+      spriteId: "general1.ticket.2"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-28T17:00:00"
-+      skuDisableTime: "2025-12-07T21:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1759078800000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_MCS_MegaCamerupt_RaidDay_v2_1024x576-nologo.jpg"
-+      skuDisableTimeUtcMs: 1765141200000
-     }
-   }
- }
-@@ -471104,7 +471146,22 @@
-     }
-   }
- }
--batch_id: 1763567249412
-+template {
-+  template_id: "BADGE_EVENT_0151"
-+  data {
-+    template_id: "BADGE_EVENT_0151"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0151
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+batch_id: 1763610848381
+-batch_id: 1763610848381
++batch_id: 1763678759054
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -471143,11 +471200,9 @@
+@@ -471183,6 +471190,7 @@
+ experiment_id: 1699
+ experiment_id: 2222
+ experiment_id: 2248
++experiment_id: 2256
+ experiment_id: 2297
+ experiment_id: 2600
+ experiment_id: 2650
+@@ -471199,6 +471207,7 @@
+ experiment_id: 3566
  experiment_id: 3603
  experiment_id: 3605
++experiment_id: 3610
  experiment_id: 4998
--experiment_id: 5023
  experiment_id: 5160
  experiment_id: 5162
- experiment_id: 5163
--experiment_id: 5221
- experiment_id: 5506
- experiment_id: 5508
- experiment_id: 5510
