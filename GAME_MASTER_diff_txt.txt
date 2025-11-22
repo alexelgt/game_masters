@@ -1,76 +1,205 @@
---- GAME_MASTER_old.txt	2025-11-20 18:38:47.476331713 +0100
-+++ GAME_MASTER.txt	2025-11-21 18:26:55.421166705 +0100
-@@ -59886,9 +59886,13 @@
-           }
-           pokemon {
-             id: ZORUA
-+            forms: ZORUA_NORMAL
-+            forms: FORM_UNSET
-           }
-           pokemon {
-             id: ZOROARK
-+            forms: ZOROARK_NORMAL
-+            forms: FORM_UNSET
-           }
-           pokemon {
-             id: JELLICENT
-@@ -161797,9 +161801,9 @@
-     template_id: "MP_SHARED_SETTINGS"
-     mpSettings {
-       numMpFromWalkQuest: 300
--      numMetersGoal: 2000
-+      numMetersGoal: 1000
-       debugAllowRemoveWalkQuest: true
--      numMpFromLootStation: 100
-+      numMpFromLootStation: 200
-       numExtraMpFromFirstLootStation: 20
-       mpCapacity: 1500
-       mpBaseDailyLimit: 800
-@@ -172833,7 +172837,7 @@
-     template_id: "N_DISPLAY_n_shirt_shinykeldeoshirt_0"
-     avatarItemDisplay {
-       iconAddress: "n_shirt_shinykeldeoshirt_0_icon"
--      displayStringId: "avatar_n_shirt_shinykeldeoshirt"
-+      displayStringId: "avatar_n_shirt_shinykeldeotshirt"
+--- GAME_MASTER_old.txt	2025-11-21 18:26:55.421166705 +0100
++++ GAME_MASTER.txt	2025-11-22 11:02:34.116930175 +0100
+@@ -35053,6 +35053,21 @@
+   }
+ }
+ template {
++  template_id: "BADGE_EVENT_0151"
++  data {
++    template_id: "BADGE_EVENT_0151"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0151
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0154"
+   data {
+     template_id: "BADGE_EVENT_0154"
+@@ -47642,6 +47657,7 @@
+       seasonEndTimeTimestamp: 1748980800000
+       seasonEndTimeTimestamp: 1756843200000
+       seasonEndTimeTimestamp: 1764709200000
++      seasonEndTimeTimestamp: 1772568000000
+       seasonEndTimeTimestamp: 4070980800000
+       ratingAdjustmentPercentage: 0.9
+       rankingAdjustmentPercentage: 0.01
+@@ -73548,6 +73564,99 @@
+   }
+ }
+ template {
++  template_id: "COMBAT_RANKING_SETTINGS_S28"
++  data {
++    template_id: "COMBAT_RANKING_SETTINGS_S28"
++    combat_ranking_proto_settings {
++      rankLevel {
++        rankLevel: 1
++      }
++      rankLevel {
++        rankLevel: 2
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 3
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 4
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 5
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 6
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 7
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 8
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 9
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 10
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 11
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 12
++        additionalWinsRequired: 5
++      }
++      rankLevel {
++        rankLevel: 13
++        additionalWinsRequired: 6
++      }
++      rankLevel {
++        rankLevel: 14
++        additionalWinsRequired: 7
++      }
++      rankLevel {
++        rankLevel: 15
++        additionalWinsRequired: 8
++      }
++      rankLevel {
++        rankLevel: 16
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 17
++        additionalWinsRequired: 10
++      }
++      rankLevel {
++        rankLevel: 18
++        additionalWinsRequired: 15
++      }
++      rankLevel {
++        rankLevel: 19
++        additionalWinsRequired: 20
++      }
++      rankLevel {
++        rankLevel: 20
++        additionalWinsRequired: 25
++      }
++      required_for_rewards {
++        rankLevel: 1
++        additionalTotalBattlesRequired: 5
++      }
++      minRankToDisplayRating: 17
++      minRatingRequired: 28
++    }
++  }
++}
++template {
+   template_id: "COMBAT_RANKING_SETTINGS_S8"
+   data {
+     template_id: "COMBAT_RANKING_SETTINGS_S8"
+@@ -151747,6 +151856,22 @@
+       maxNumberRecentSearches: 4
+       maxNumberFavoriteSearches: 12
+       maxQueryLength: 1024
++      searchHelpUrl: "niantic.helpshift.com/hc/faq/1486-searching-filtering-your-pokemon-inventory/"
++      completeStartLetterCountPerLanguage: "en-US,2"
++      completeStartLetterCountPerLanguage: "pt-BR,2"
++      completeStartLetterCountPerLanguage: "zh-TW,2"
++      completeStartLetterCountPerLanguage: "fr-FR,2"
++      completeStartLetterCountPerLanguage: "de-DE,2"
++      completeStartLetterCountPerLanguage: "it-IT,2"
++      completeStartLetterCountPerLanguage: "ja-JP,2"
++      completeStartLetterCountPerLanguage: "ko-KR,2"
++      completeStartLetterCountPerLanguage: "es-ES,2"
++      completeStartLetterCountPerLanguage: "th-TH,2"
++      completeStartLetterCountPerLanguage: "ru-RU,2"
++      completeStartLetterCountPerLanguage: "tr-TR,2"
++      completeStartLetterCountPerLanguage: "hi-IN,2"
++      completeStartLetterCountPerLanguage: "id-ID,2"
++      completeStartLetterCountPerLanguage: "es-MX,2"
      }
    }
  }
-@@ -461279,9 +461283,12 @@
-       sku: "bundle.gmaxday.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle3.sprite.d"
-       title: "ace_box_title"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2025-11-30T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1764532800000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 1000
-@@ -471161,7 +471168,7 @@
+@@ -152596,12 +152721,12 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-09-02T13:00:00"
+-        eventEndTime: "2025-09-16T13:00:00"
++        eventStartTime: "2025-12-02T13:00:00"
++        eventEndTime: "2026-03-03T10:00:00"
+         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-s17gbl-nologo-2024.jpg"
+-        clientEventStartTimeUtcMs: 1756818000000
+-        clientEventEndTimeUtcMs: 1758027600000
++        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-s21gbl-nologo-2025.jpg"
++        clientEventStartTimeUtcMs: 1764680400000
++        clientEventEndTimeUtcMs: 1772532000000
+       }
+     }
+   }
+@@ -471153,22 +471278,7 @@
      }
    }
  }
--batch_id: 1763610848381
-+batch_id: 1763678759054
+-template {
+-  template_id: "BADGE_EVENT_0151"
+-  data {
+-    template_id: "BADGE_EVENT_0151"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0151
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-batch_id: 1763678759054
++batch_id: 1763769087134
  experiment_id: 4
  experiment_id: 11
  experiment_id: 21
-@@ -471183,6 +471190,7 @@
- experiment_id: 1699
- experiment_id: 2222
- experiment_id: 2248
-+experiment_id: 2256
- experiment_id: 2297
- experiment_id: 2600
- experiment_id: 2650
-@@ -471199,6 +471207,7 @@
- experiment_id: 3566
- experiment_id: 3603
- experiment_id: 3605
-+experiment_id: 3610
- experiment_id: 4998
+@@ -471212,6 +471322,7 @@
  experiment_id: 5160
  experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5222
+ experiment_id: 5506
+ experiment_id: 5508
+ experiment_id: 5510
