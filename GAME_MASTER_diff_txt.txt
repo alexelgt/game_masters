@@ -1,98 +1,131 @@
---- GAME_MASTER_old.txt	2025-12-11 18:29:35.486401957 +0100
-+++ GAME_MASTER.txt	2025-12-13 10:16:13.244461607 +0100
-@@ -43509,11 +43509,12 @@
-   }
- }
- template {
--  template_id: "BF_PLUS_ROLLOUT_CODE_GATE"
-+  template_id: "BEST_FRIENDS_PLUS_SETTINGS"
+--- GAME_MASTER_old.txt	2025-12-13 10:16:13.244461607 +0100
++++ GAME_MASTER.txt	2025-12-14 14:14:12.614874747 +0100
+@@ -43575,7 +43575,7 @@
+       rvnVersion: 1
+       maxPlayersPerBreadDoughLobby: 100
+       maxRemotePlayersPerBreadDoughLobby: 100
+-      maxRemoteBreadBattlePassesAllowed: 10
++      maxRemoteBreadBattlePassesAllowed: 20
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 98
+@@ -162282,8 +162282,8 @@
    data {
--    template_id: "BF_PLUS_ROLLOUT_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
-+    template_id: "BEST_FRIENDS_PLUS_SETTINGS"
-+    275 {
-+      1: 1
-+      2: 1769905534000
+     template_id: "MP_SHARED_SETTINGS"
+     mpSettings {
+-      numMpFromWalkQuest: 300
+-      numMetersGoal: 2000
++      numMpFromWalkQuest: 600
++      numMetersGoal: 500
+       debugAllowRemoveWalkQuest: true
+       numMpFromLootStation: 100
+       numExtraMpFromFirstLootStation: 20
+@@ -183084,7 +183084,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 20
      }
    }
  }
-@@ -153320,7 +153321,7 @@
-       ignoreInventorySpace: true
-       itemCap: 999999
-       eventPassPoint {
--        eventPassId: "EVENT_PASS_HALLOWEEN2025_EVENT"
-+        eventPassId: "EVENT_PASS_WINTERHOLIDAYS2025_EVENT"
+@@ -459817,9 +459817,9 @@
        }
-       timePeriodCounters {
-         playerActivity {
-@@ -154258,8 +154259,8 @@
-     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_04"
-     itemExpirationSettings {
-       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_04
--      expirationTime: "2025-11-04T10:00:00"
--      emergencyExpirationTime: "2025-11-06T10:00:00"
-+      expirationTime: "2025-12-31T10:00:00"
-+      emergencyExpirationTime: "2026-01-02T10:00:00"
-     }
-   }
- }
-@@ -472688,7 +472689,32 @@
-     }
-   }
- }
--batch_id: 1765465557268
-+template {
-+  template_id: "N_DISPLAY_n_hat_snombeanie_0"
-+  data {
-+    template_id: "N_DISPLAY_n_hat_snombeanie_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_hat_snombeanie_0_icon"
-+      displayStringId: "avatar_hat_snom"
-+    }
-+  }
-+}
-+template {
-+  template_id: "REMOTE_TRADE_SETTINGS"
-+  data {
-+    template_id: "REMOTE_TRADE_SETTINGS"
-+    274 {
-+      1: 1
-+      3: 3
-+      4: 30
-+      7: 1
-+      8: 85
-+      9: 1440
-+      10: 2880
-+    }
-+  }
-+}
-+batch_id: 1765585777944
- experiment_id: 11
- experiment_id: 21
- experiment_id: 101
-@@ -472712,6 +472738,7 @@
+       availablePokemon {
+         pokemon {
+-          pokemonId: KYUREM
++          pokemonId: RESHIRAM
+           pokemonDisplay {
+-            form: KYUREM_NORMAL
++            form: RESHIRAM_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -460416,9 +460416,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: KYUREM
++          pokemonId: RESHIRAM
+           pokemonDisplay {
+-            form: KYUREM_NORMAL
++            form: RESHIRAM_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -462102,9 +462102,12 @@
+       sku: "bundle.gmaxday.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle3.sprite.d"
+       title: "ace_box_title"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2025-12-14T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1765742400000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 1000
+@@ -464820,7 +464823,6 @@
+       sku: "general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general2.ticket.6_gmaxSnorlax25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -464841,7 +464843,6 @@
+       sku: "general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general2.ticket.6_gmaxSnorlax25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -466583,7 +466584,6 @@
+       sku: "pgorelease.general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general2.ticket.6_gmaxSnorlax25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -466604,7 +466604,6 @@
+       sku: "pgorelease.general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general2.ticket.6_gmaxSnorlax25_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -472735,6 +472734,7 @@
+ experiment_id: 1118
+ experiment_id: 1699
+ experiment_id: 2248
++experiment_id: 2256
  experiment_id: 2297
  experiment_id: 2600
  experiment_id: 2650
-+experiment_id: 2881
- experiment_id: 2901
- experiment_id: 3032
- experiment_id: 3033
-@@ -472730,6 +472757,7 @@
+@@ -472745,15 +472745,20 @@
+ experiment_id: 3063
+ experiment_id: 3710
+ experiment_id: 3712
+-experiment_id: 3714
++experiment_id: 3715
+ experiment_id: 3727
+ experiment_id: 3731
+ experiment_id: 3748
++experiment_id: 3749
++experiment_id: 3752
++experiment_id: 3753
+ experiment_id: 3798
+ experiment_id: 3799
++experiment_id: 3800
+ experiment_id: 3802
+ experiment_id: 3803
+ experiment_id: 4998
++experiment_id: 5107
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-+experiment_id: 5501
- experiment_id: 5506
- experiment_id: 5508
- experiment_id: 5510
-@@ -472738,7 +472766,7 @@
- experiment_id: 7003
- experiment_id: 8837
- experiment_id: 8840
--experiment_id: 8995
-+experiment_id: 8976
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
