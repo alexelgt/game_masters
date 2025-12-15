@@ -1,11 +1,11 @@
---- GAME_MASTER_old.txt	2025-12-13 10:16:13.244461607 +0100
-+++ GAME_MASTER.txt	2025-12-14 14:14:12.614874747 +0100
+--- GAME_MASTER_old.txt	2025-12-14 14:14:12.614874747 +0100
++++ GAME_MASTER.txt	2025-12-15 17:59:26.326764562 +0100
 @@ -43575,7 +43575,7 @@
        rvnVersion: 1
        maxPlayersPerBreadDoughLobby: 100
        maxRemotePlayersPerBreadDoughLobby: 100
--      maxRemoteBreadBattlePassesAllowed: 10
-+      maxRemoteBreadBattlePassesAllowed: 20
+-      maxRemoteBreadBattlePassesAllowed: 20
++      maxRemoteBreadBattlePassesAllowed: 10
        maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
        fetchProfileFromSocialEnabled: true
        maxPlayersToPrepareBreadDoughLobby: 98
@@ -13,10 +13,10 @@
    data {
      template_id: "MP_SHARED_SETTINGS"
      mpSettings {
--      numMpFromWalkQuest: 300
--      numMetersGoal: 2000
-+      numMpFromWalkQuest: 600
-+      numMetersGoal: 500
+-      numMpFromWalkQuest: 600
+-      numMetersGoal: 500
++      numMpFromWalkQuest: 300
++      numMetersGoal: 2000
        debugAllowRemoveWalkQuest: true
        numMpFromLootStation: 100
        numExtraMpFromFirstLootStation: 20
@@ -24,108 +24,91 @@
      template_id: "REMOTE_RAID_LIMIT_SETTINGS"
      squashSettings {
        enabled: true
--      dailySquashLimit: 10
-+      dailySquashLimit: 20
+-      dailySquashLimit: 20
++      dailySquashLimit: 10
      }
    }
  }
-@@ -459817,9 +459817,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: KYUREM
-+          pokemonId: RESHIRAM
-           pokemonDisplay {
--            form: KYUREM_NORMAL
-+            form: RESHIRAM_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -460416,9 +460416,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: KYUREM
-+          pokemonId: RESHIRAM
-           pokemonDisplay {
--            form: KYUREM_NORMAL
-+            form: RESHIRAM_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -462102,9 +462102,12 @@
+@@ -462102,12 +462102,9 @@
        sku: "bundle.gmaxday.1"
        category: IAP_CATEGORY_BUNDLE
        sortOrder: 1
--      hidden: true
++      hidden: true
        spriteId: "bundle3.sprite.d"
        title: "ace_box_title"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2025-12-14T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1765742400000
+-      skuEnableTime: "2019-10-31T21:00:00"
+-      skuDisableTime: "2025-12-14T20:00:00"
+-      skuEnableTimeUtcMs: 1572555600000
+-      skuDisableTimeUtcMs: 1765742400000
        showDiscountTag: true
        showStrikethroughPrice: true
        totalValue: 1000
-@@ -464820,7 +464823,6 @@
+@@ -464823,6 +464820,7 @@
        sku: "general2.ticket.6"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.4"
        title: "general2.ticket.6_gmaxSnorlax25_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -464841,7 +464843,6 @@
+@@ -464843,6 +464841,7 @@
        sku: "general2.ticket.6.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.4"
        title: "general2.ticket.6_gmaxSnorlax25_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -466583,7 +466584,6 @@
+@@ -466584,6 +466583,7 @@
        sku: "pgorelease.general2.ticket.6"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.4"
        title: "general2.ticket.6_gmaxSnorlax25_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -466604,7 +466604,6 @@
+@@ -466604,6 +466604,7 @@
        sku: "pgorelease.general2.ticket.6.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.4"
        title: "general2.ticket.6_gmaxSnorlax25_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -472735,6 +472734,7 @@
+@@ -472734,7 +472735,6 @@
  experiment_id: 1118
  experiment_id: 1699
  experiment_id: 2248
-+experiment_id: 2256
+-experiment_id: 2256
  experiment_id: 2297
  experiment_id: 2600
  experiment_id: 2650
-@@ -472745,15 +472745,20 @@
- experiment_id: 3063
- experiment_id: 3710
+@@ -472747,18 +472747,14 @@
  experiment_id: 3712
--experiment_id: 3714
-+experiment_id: 3715
+ experiment_id: 3715
  experiment_id: 3727
- experiment_id: 3731
- experiment_id: 3748
-+experiment_id: 3749
-+experiment_id: 3752
-+experiment_id: 3753
+-experiment_id: 3731
+-experiment_id: 3748
+-experiment_id: 3749
+-experiment_id: 3752
+-experiment_id: 3753
++experiment_id: 3732
  experiment_id: 3798
  experiment_id: 3799
-+experiment_id: 3800
+ experiment_id: 3800
  experiment_id: 3802
  experiment_id: 3803
  experiment_id: 4998
-+experiment_id: 5107
+-experiment_id: 5107
++experiment_id: 5108
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
+@@ -472776,6 +472772,7 @@
+ experiment_id: 9552
+ experiment_id: 9553
+ experiment_id: 9554
++experiment_id: 19000
+ experiment_id: 20947
+ experiment_id: 55571
+ experiment_id: 55751
