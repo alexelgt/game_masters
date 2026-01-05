@@ -1,130 +1,279 @@
---- GAME_MASTER_old.txt	2026-01-01 12:31:18.754325385 +0100
-+++ GAME_MASTER.txt	2026-01-04 11:04:40.050984531 +0100
-@@ -153893,7 +153893,6 @@
+--- GAME_MASTER_old.txt	2026-01-04 11:04:40.050984531 +0100
++++ GAME_MASTER.txt	2026-01-05 19:17:43.557613671 +0100
+@@ -153893,6 +153893,7 @@
        }
        timePeriodCounters {
          playerActivity {
--          limit: 250
++          limit: 250
          }
        }
      }
-@@ -158414,6 +158413,18 @@
+@@ -160543,7 +160544,6 @@
+     template_id: "MAP_DISPLAY_SETTINGS"
+     mapDisplaySettings {
+       showEnhancedSky: true
+-      mapEffectName: "fx_map_fireworks"
+     }
    }
  }
- template {
-+  template_id: "LC_SPECIALBACKGROUND_2026_COMMUNITYDAY"
-+  data {
-+    template_id: "LC_SPECIALBACKGROUND_2026_COMMUNITYDAY"
-+    locationCardSettings {
-+      locationCard: 213
-+      imageUrl: "sb_Community_2026"
-+      cardType: SPECIAL_BACKGROUND
-+      vfxAddress: "bgfx_CommunityDay_2026"
-+    }
-+  }
-+}
-+template {
-   template_id: "LC_SPECIALBACKGROUND_CON2025"
-   data {
-     template_id: "LC_SPECIALBACKGROUND_CON2025"
-@@ -462582,10 +462593,13 @@
+@@ -461048,9 +461048,36 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: BLACEPHALON
++          pokemonId: GENESECT
+           pokemonDisplay {
+-            form: BLACEPHALON_NORMAL
++            form: GENESECT_BURN
++          }
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
++          pokemonId: GENESECT
++          pokemonDisplay {
++            form: GENESECT_CHILL
+           }
+         }
+         unlockedAtRank: 20
+@@ -461647,9 +461674,36 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: BLACEPHALON
++          pokemonId: GENESECT
++          pokemonDisplay {
++            form: GENESECT_BURN
++          }
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++      }
++      availablePokemon {
++        pokemon {
++          pokemonId: GENESECT
+           pokemonDisplay {
+-            form: BLACEPHALON_NORMAL
++            form: GENESECT_CHILL
+           }
+         }
+         unlockedAtRank: 20
+@@ -462593,13 +462647,10 @@
        sku: "bundle.cd2022.1"
        category: IAP_CATEGORY_BUNDLE
        sortOrder: 1
--      hidden: true
++      hidden: true
        sale: true
--      spriteId: "bundle.halloween.small.1"
--      title: "bundle.halloween.small.1_title"
-+      spriteId: "bundle.general4.small.1"
-+      title: "bundle.general4.small.1_title"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2026-01-04T23:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1767571199000
+-      spriteId: "bundle.general4.small.1"
+-      title: "bundle.general4.small.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2026-01-04T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1767571199000
++      spriteId: "bundle.halloween.small.1"
++      title: "bundle.halloween.small.1_title"
      }
    }
  }
-@@ -462597,10 +462611,13 @@
+@@ -462611,13 +462662,10 @@
        sku: "bundle.cd2022.2"
        category: IAP_CATEGORY_BUNDLE
        sortOrder: 2
--      hidden: true
++      hidden: true
        sale: true
--      spriteId: "bundle.halloween.adventure.1"
--      title: "bundle.halloween.adventure.1_title"
-+      spriteId: "bundle.general1.medium.1"
-+      title: "bundle.general1.medium.1_title"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2026-01-04T23:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1767571199000
+-      spriteId: "bundle.general1.medium.1"
+-      title: "bundle.general1.medium.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2026-01-04T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1767571199000
++      spriteId: "bundle.halloween.adventure.1"
++      title: "bundle.halloween.adventure.1_title"
      }
    }
  }
-@@ -473249,18 +473266,6 @@
-   }
- }
- template {
--  template_id: "LC_SPECIALBACKGROUND_2026_COMMUNITYDAY"
--  data {
--    template_id: "LC_SPECIALBACKGROUND_2026_COMMUNITYDAY"
--    locationCardSettings {
--      locationCard: 213
--      imageUrl: "sb_Community_2026"
--      cardType: SPECIAL_BACKGROUND
--      vfxAddress: "bgfx_CommunityDay_2026"
--    }
--  }
--}
--template {
-   template_id: "PTC_OAUTH_SETTINGS"
-   data {
-     template_id: "PTC_OAUTH_SETTINGS"
-@@ -473271,7 +473276,7 @@
+@@ -465761,6 +465809,7 @@
+       sku: "general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "evergreenticket.1.NYE012026"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -465781,6 +465830,7 @@
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "evergreenticket.1.NYE012026"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -465937,7 +465987,6 @@
+       sku: "general2.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general2.ticket2.PINCH_PERFECT"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -465958,7 +466007,6 @@
+       sku: "general2.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general2.ticket2.PINCH_PERFECT"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -465977,6 +466025,7 @@
+       sku: "general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CDC_Piplup26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -465997,6 +466046,7 @@
+       sku: "general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CDC_Piplup26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -467542,6 +467592,7 @@
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "evergreenticket.1.NYE012026"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -467562,6 +467613,7 @@
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "evergreenticket.1.NYE012026"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -467699,7 +467751,6 @@
+       sku: "pgorelease.general2.ticket.2"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general2.ticket2.PINCH_PERFECT"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -467720,7 +467771,6 @@
+       sku: "pgorelease.general2.ticket.2.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general2.ticket2.PINCH_PERFECT"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -467739,6 +467789,7 @@
+       sku: "pgorelease.general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CDC_Piplup26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -467759,6 +467810,7 @@
+       sku: "pgorelease.general2.ticket.3.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CDC_Piplup26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -473276,7 +473328,7 @@
      }
    }
  }
--batch_id: 1767162470276
-+batch_id: 1767490623394
+-batch_id: 1767490623394
++batch_id: 1767630423334
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -473296,19 +473301,21 @@
+@@ -473301,21 +473353,18 @@
  experiment_id: 2650
  experiment_id: 2881
  experiment_id: 2901
-+experiment_id: 3025
+-experiment_id: 3025
  experiment_id: 3032
  experiment_id: 3033
  experiment_id: 3063
  experiment_id: 3710
  experiment_id: 3712
- experiment_id: 3717
--experiment_id: 3727
-+experiment_id: 3728
- experiment_id: 3734
- experiment_id: 3764
- experiment_id: 3766
- experiment_id: 3767
+-experiment_id: 3717
++experiment_id: 3718
+ experiment_id: 3728
+-experiment_id: 3734
+-experiment_id: 3764
+-experiment_id: 3766
+-experiment_id: 3767
++experiment_id: 3735
  experiment_id: 3768
++experiment_id: 3810
  experiment_id: 4998
-+experiment_id: 5113
+-experiment_id: 5113
++experiment_id: 5114
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -473319,6 +473326,7 @@
+@@ -473326,9 +473375,7 @@
  experiment_id: 5510
  experiment_id: 6075
  experiment_id: 7000
-+experiment_id: 7002
+-experiment_id: 7002
  experiment_id: 7003
- experiment_id: 8515
+-experiment_id: 8515
  experiment_id: 8976
-@@ -473336,7 +473344,6 @@
+ experiment_id: 8978
+ experiment_id: 8979
+@@ -473344,6 +473391,7 @@
  experiment_id: 173173
  experiment_id: 250415
  experiment_id: 1000890
--experiment_id: 3000121
++experiment_id: 1110021
  experiment_id: 3500035
  experiment_id: 3500037
  experiment_id: 4610000
