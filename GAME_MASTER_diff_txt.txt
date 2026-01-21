@@ -1,169 +1,4438 @@
---- GAME_MASTER_old.txt	2026-01-18 10:38:40.222760453 +0100
-+++ GAME_MASTER.txt	2026-01-19 18:23:25.938744494 +0100
-@@ -426676,6 +426676,7 @@
-       cinematicMoves: ENERGY_BALL
-       cinematicMoves: GRASS_KNOT
-       cinematicMoves: EARTH_POWER
-+      cinematicMoves: DRUM_BEATING
-       pokedexHeightM: 2.1
-       pokedexWeightKg: 90
-       parentPokemonId: THWACKEY
-@@ -426701,6 +426702,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      eliteCinematicMove: FRENZY_PLANT
-       ibfc {
-       }
-       breadTierGroup: GROUP_1
-@@ -426744,6 +426746,7 @@
-       cinematicMoves: ENERGY_BALL
-       cinematicMoves: GRASS_KNOT
-       cinematicMoves: EARTH_POWER
-+      cinematicMoves: DRUM_BEATING
-       pokedexHeightM: 2.1
-       pokedexWeightKg: 90
-       parentPokemonId: THWACKEY
-@@ -426770,6 +426773,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      eliteCinematicMove: FRENZY_PLANT
-       ibfc {
-       }
-       breadTierGroup: GROUP_1
-@@ -462813,13 +462817,10 @@
-       sku: "bundle.cd2022.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-+      hidden: true
-       sale: true
--      spriteId: "bundle.general4.small.1"
--      title: "bundle.general4.small.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2026-01-18T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1768780799000
-+      spriteId: "bundle.halloween.small.1"
-+      title: "bundle.halloween.small.1_title"
+--- GAME_MASTER_old.txt	2026-01-19 18:23:25.938744494 +0100
++++ GAME_MASTER.txt	2026-01-21 21:31:40.182719399 +0100
+@@ -47,6 +47,16 @@
+   }
+ }
+ template {
++  template_id: "ADMIN_GM_NIA_OPS_ONLY_FILTER_AMS_FEATURE_GATE"
++  data {
++    template_id: "ADMIN_GM_NIA_OPS_ONLY_FILTER_AMS_FEATURE_GATE"
++    featureGate {
++      status: 1
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
+   template_id: "ADVANCED_SETTINGS"
+   data {
+     template_id: "ADVANCED_SETTINGS"
+@@ -56,6 +66,26 @@
+   }
+ }
+ template {
++  template_id: "AMS_FEATURE_GATE"
++  data {
++    template_id: "AMS_FEATURE_GATE"
++    featureGate {
++      status: 24
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
++  template_id: "AMS_FRONTEND_FEATURE_GATE"
++  data {
++    template_id: "AMS_FRONTEND_FEATURE_GATE"
++    featureGate {
++      status: 1
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
+   template_id: "ANDROID_SENSORS_ROLL_BACK"
+   data {
+     template_id: "ANDROID_SENSORS_ROLL_BACK"
+@@ -35535,6 +35565,36 @@
+   }
+ }
+ template {
++  template_id: "BADGE_EVENT_0177"
++  data {
++    template_id: "BADGE_EVENT_0177"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0177
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_EVENT_0178"
++  data {
++    template_id: "BADGE_EVENT_0178"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0178
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0179"
+   data {
+     template_id: "BADGE_EVENT_0179"
+@@ -35550,6 +35610,51 @@
+   }
+ }
+ template {
++  template_id: "BADGE_EVENT_0183"
++  data {
++    template_id: "BADGE_EVENT_0183"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0183
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_EVENT_0184"
++  data {
++    template_id: "BADGE_EVENT_0184"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0184
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_EVENT_0185"
++  data {
++    template_id: "BADGE_EVENT_0185"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0185
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVOLVED_TOTAL"
+   data {
+     template_id: "BADGE_EVOLVED_TOTAL"
+@@ -40367,6 +40472,492 @@
+   }
+ }
+ template {
++  template_id: "BADGE_GO_TOUR_2026_DELUXE_PASS"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_DELUXE_PASS"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_DELUXE_PASS
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_GLOBAL"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_GLOBAL"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_GLOBAL
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_GLOBAL_SECRET_01"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_GLOBAL_SECRET_01"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_GLOBAL_SECRET_01
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_GLOBAL_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_GLOBAL_TEST"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_GLOBAL_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_GLOBAL_X_VERSION"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_GLOBAL_X_VERSION"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_GLOBAL_X_VERSION
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_GLOBAL_Y_VERSION"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_GLOBAL_Y_VERSION"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_GLOBAL_Y_VERSION
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_CITY"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_CITY
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_MEGA_NIGHT"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_MEGA_NIGHT"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_MEGA_NIGHT
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_PARK"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_PARK
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_MEGA_NIGHT_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_MEGA_NIGHT_TEST"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_MEGA_NIGHT_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_CITY"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_CITY
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_MEGA_NIGHT"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_MEGA_NIGHT"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_MEGA_NIGHT
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_PARK"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_PARK
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_CITY"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_CITY
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_MEGA_NIGHT"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_MEGA_NIGHT"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_MEGA_NIGHT
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_PARK"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_PARK
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_CITY"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_CITY
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_PARK"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_PARK
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_VIP"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_VIP"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_VIP
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH_TEST"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID_TEST"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_CITY"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_FRIDAY_CITY
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_MEGA_NIGHT"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_MEGA_NIGHT"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_FRIDAY_MEGA_NIGHT
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_PARK"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_FRIDAY_PARK
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_MEGA_NIGHT_TEST"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_MEGA_NIGHT_TEST"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_MEGA_NIGHT_TEST
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_CITY"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_SATURDAY_CITY
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_MEGA_NIGHT"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_MEGA_NIGHT"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_SATURDAY_MEGA_NIGHT
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_PARK"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_SATURDAY_PARK
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_CITY"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_SUNDAY_CITY
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_MEGA_NIGHT"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_MEGA_NIGHT"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_SUNDAY_MEGA_NIGHT
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_PARK"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_SUNDAY_PARK
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_TEST_CITY"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_TEST_CITY"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_TEST_CITY
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_TEST_PARK"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_TEST_PARK"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_TEST_PARK
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
++  template_id: "BADGE_GO_TOUR_2026_TAINAN_VIP"
++  data {
++    template_id: "BADGE_GO_TOUR_2026_TAINAN_VIP"
++    badgeSettings {
++      badgeType: BADGE_GO_TOUR_2026_TAINAN_VIP
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++    }
++  }
++}
++template {
+   template_id: "BADGE_GREAT_LEAGUE"
+   data {
+     template_id: "BADGE_GREAT_LEAGUE"
+@@ -46491,7 +47082,7 @@
+     template_id: "BUDDY_CATEGORY_CARE"
+     buddy_activity_category_settings {
+       activityCategory: BUDDY_CATEGORY_CARE
+-      maxPointsPerDay: 1
++      maxPointsPerDay: 3
      }
    }
  }
-@@ -462831,13 +462832,10 @@
-       sku: "bundle.cd2022.2"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 2
-+      hidden: true
-       sale: true
--      spriteId: "bundle.general1.medium.1"
--      title: "bundle.general1.medium.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2026-01-18T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1768780799000
-+      spriteId: "bundle.halloween.adventure.1"
-+      title: "bundle.halloween.adventure.1_title"
+@@ -46501,7 +47092,7 @@
+     template_id: "BUDDY_CATEGORY_EXPLORE"
+     buddy_activity_category_settings {
+       activityCategory: BUDDY_CATEGORY_EXPLORE
+-      maxPointsPerDay: 1
++      maxPointsPerDay: 3
      }
    }
  }
-@@ -465980,6 +465978,7 @@
-       sku: "general1.ticket.4"
+@@ -46521,7 +47112,7 @@
+     template_id: "BUDDY_CATEGORY_ROUTE"
+     buddy_activity_category_settings {
+       activityCategory: BUDDY_CATEGORY_ROUTE
+-      maxPointsPerDay: 1
++      maxPointsPerDay: 3
+     }
+   }
+ }
+@@ -46531,7 +47122,7 @@
+     template_id: "BUDDY_CATEGORY_SNAPSHOT"
+     buddy_activity_category_settings {
+       activityCategory: BUDDY_CATEGORY_SNAPSHOT
+-      maxPointsPerDay: 1
++      maxPointsPerDay: 3
+     }
+   }
+ }
+@@ -78924,6 +79515,23 @@
+   }
+ }
+ template {
++  template_id: "COMBAT_V0492_MOVE_DRUM_BEATING"
++  data {
++    template_id: "COMBAT_V0492_MOVE_DRUM_BEATING"
++    combat_move {
++      uniqueId: DRUM_BEATING
++      type: POKEMON_TYPE_GRASS
++      power: 60
++      vfxName: "drum_beating"
++      energyDelta: -35
++      buffs {
++        targetAttackStatStageChange: -1
++        buffActivationChance: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "COMBAT_VNEXT_CODE_GATE"
+   data {
+     template_id: "COMBAT_VNEXT_CODE_GATE"
+@@ -89712,10 +90320,10 @@
+         averageHeightM: 24
+         camera {
+           cylinderRadiusM: 1.25
+-          cylinderHeightM: 1.5
++          cylinderHeightM: 1.9
+         }
+-        modelScaleV2: 1.1
+-        modelHeight: 1.9
++        modelScaleV2: 1
++        modelHeight: 1.54
+         maxEncounterVisualSettings {
+           scale: 10.74
+           cameraDistance: 32.3
+@@ -89803,10 +90411,10 @@
+         averageHeightM: 24
+         camera {
+           cylinderRadiusM: 1.25
+-          cylinderHeightM: 1.5
++          cylinderHeightM: 1.9
+         }
+-        modelScaleV2: 1.1
+-        modelHeight: 1.9
++        modelScaleV2: 1
++        modelHeight: 1.54
+         maxEncounterVisualSettings {
+           scale: 10.74
+           cameraDistance: 32.3
+@@ -90037,11 +90645,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 28
+         camera {
+-          cylinderRadiusM: 1.25
+-          cylinderHeightM: 2
++          cylinderRadiusM: 1.5
++          cylinderHeightM: 2.2
+         }
+-        modelScaleV2: 1.2
+-        modelHeight: 2
++        modelScaleV2: 1.31
++        modelHeight: 2.2
+         maxEncounterVisualSettings {
+           scale: 12.53
+           cameraDistance: 29.9
+@@ -90133,11 +90741,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 28
+         camera {
+-          cylinderRadiusM: 1.25
+-          cylinderHeightM: 2
++          cylinderRadiusM: 1.5
++          cylinderHeightM: 2.2
+         }
+-        modelScaleV2: 1.2
+-        modelHeight: 2
++        modelScaleV2: 1.31
++        modelHeight: 2.2
+         maxEncounterVisualSettings {
+           scale: 12.53
+           cameraDistance: 29.9
+@@ -90355,11 +90963,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 25
+         camera {
+-          cylinderRadiusM: 1.4
+-          cylinderHeightM: 2.1
++          cylinderRadiusM: 1.5
++          cylinderHeightM: 2.5
+         }
+-        modelScaleV2: 0.8
+-        modelHeight: 1.2
++        modelScaleV2: 0.94
++        modelHeight: 2.23
+         maxEncounterVisualSettings {
+           scale: 10.16
+           cameraDistance: 39.2
+@@ -90442,11 +91050,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 25
+         camera {
+-          cylinderRadiusM: 1.4
+-          cylinderHeightM: 2.1
++          cylinderRadiusM: 1.5
++          cylinderHeightM: 2.5
+         }
+-        modelScaleV2: 0.8
+-        modelHeight: 1.2
++        modelScaleV2: 0.94
++        modelHeight: 2.23
+         maxEncounterVisualSettings {
+           scale: 10.16
+           cameraDistance: 39.2
+@@ -90625,12 +91233,12 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 17
+         camera {
+-          cylinderRadiusM: 1
+-          cylinderHeightM: 1
+-          cylinderGroundM: 0.7
++          cylinderRadiusM: 1.65
++          cylinderHeightM: 1.5
++          cylinderGroundM: 0.6
+         }
+         modelScaleV2: 1
+-        modelHeight: 1
++        modelHeight: 1.31
+         maxEncounterVisualSettings {
+           scale: 14.31
+           cameraDistance: 40
+@@ -90682,12 +91290,12 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 17
+         camera {
+-          cylinderRadiusM: 1
+-          cylinderHeightM: 1
+-          cylinderGroundM: 0.7
++          cylinderRadiusM: 1.65
++          cylinderHeightM: 1.5
++          cylinderGroundM: 0.6
+         }
+         modelScaleV2: 1
+-        modelHeight: 1
++        modelHeight: 1.31
+         maxEncounterVisualSettings {
+           scale: 14.31
+           cameraDistance: 40
+@@ -91746,6 +92354,114 @@
+   }
+ }
+ template {
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
++  data {
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_GOTOUR_2026_A
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
++  data {
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_GOTOUR_2026_A_02
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
++  data {
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_GOTOUR_2026_B
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
++  data {
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_GOTOUR_2026_B_02
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
++  data {
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_GOTOUR_2026_C
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++    }
++  }
++}
++template {
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
++  data {
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_GOTOUR_2026_C_02
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++    }
++  }
++}
++template {
+   template_id: "EXTENDED_V0025_POKEMON_PIKACHU_HORIZONS"
+   data {
+     template_id: "EXTENDED_V0025_POKEMON_PIKACHU_HORIZONS"
+@@ -94022,10 +94738,10 @@
+         averageHeightM: 25
+         camera {
+           cylinderRadiusM: 1.5
+-          cylinderHeightM: 3
++          cylinderHeightM: 2.55
+         }
+         modelScaleV2: 0.86
+-        modelHeight: 1.5
++        modelHeight: 2.57
+         catchOverrideSettings {
+           collisionRadiusM: 1
+           collisionHeightM: 1.246
+@@ -94084,10 +94800,10 @@
+         averageHeightM: 25
+         camera {
+           cylinderRadiusM: 1.5
+-          cylinderHeightM: 3
++          cylinderHeightM: 2.55
+         }
+         modelScaleV2: 0.86
+-        modelHeight: 1.5
++        modelHeight: 2.57
+         catchOverrideSettings {
+           collisionRadiusM: 1
+           collisionHeightM: 1.246
+@@ -95344,11 +96060,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 20
+         camera {
+-          cylinderRadiusM: 1.15
+-          cylinderHeightM: 1.45
++          cylinderRadiusM: 1.35
++          cylinderHeightM: 2.25
+         }
+-        modelScaleV2: 0.86
+-        modelHeight: 1.77
++        modelScaleV2: 0.97
++        modelHeight: 2.13
+         maxEncounterVisualSettings {
+           scale: 10.67
+           cameraDistance: 30
+@@ -95440,11 +96156,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 20
+         camera {
+-          cylinderRadiusM: 1.15
+-          cylinderHeightM: 1.45
++          cylinderRadiusM: 1.35
++          cylinderHeightM: 2.25
+         }
+-        modelScaleV2: 0.86
+-        modelHeight: 1.77
++        modelScaleV2: 0.97
++        modelHeight: 2.13
+         maxEncounterVisualSettings {
+           scale: 10.67
+           cameraDistance: 30
+@@ -95661,10 +96377,10 @@
+         averageHeightM: 19
+         camera {
+           cylinderRadiusM: 1.1
+-          cylinderHeightM: 1
++          cylinderHeightM: 1.7
+         }
+         modelScaleV2: 1
+-        modelHeight: 1
++        modelHeight: 1.7
+         maxEncounterVisualSettings {
+           scale: 11.1
+           cameraDistance: 35
+@@ -95714,10 +96430,10 @@
+         averageHeightM: 19
+         camera {
+           cylinderRadiusM: 1.1
+-          cylinderHeightM: 1
++          cylinderHeightM: 1.7
+         }
+         modelScaleV2: 1
+-        modelHeight: 1
++        modelHeight: 1.7
+         maxEncounterVisualSettings {
+           scale: 11.1
+           cameraDistance: 35
+@@ -97185,8 +97901,8 @@
+           cylinderRadiusM: 1.35
+           cylinderHeightM: 2.05
+         }
+-        modelScaleV2: 1
+-        modelHeight: 2.17
++        modelScaleV2: 0.86
++        modelHeight: 2.57
+         maxEncounterVisualSettings {
+           scale: 7.47
+           cameraDistance: 30
+@@ -97264,8 +97980,8 @@
+           cylinderRadiusM: 1.35
+           cylinderHeightM: 2.05
+         }
+-        modelScaleV2: 1
+-        modelHeight: 2.17
++        modelScaleV2: 0.86
++        modelHeight: 2.57
+         maxEncounterVisualSettings {
+           scale: 7.47
+           cameraDistance: 30
+@@ -98048,11 +98764,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 35
+         camera {
+-          cylinderRadiusM: 1.15
+-          cylinderHeightM: 2.15
++          cylinderRadiusM: 1.65
++          cylinderHeightM: 2.65
+         }
+-        modelScaleV2: 1
+-        modelHeight: 2
++        modelScaleV2: 0.86
++        modelHeight: 2.57
+         catchOverrideSettings {
+           collisionRadiusM: 1.4
+           collisionHeightM: 1.11
+@@ -98101,11 +98817,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 35
+         camera {
+-          cylinderRadiusM: 1.15
+-          cylinderHeightM: 2.15
++          cylinderRadiusM: 1.65
++          cylinderHeightM: 2.65
+         }
+-        modelScaleV2: 1
+-        modelHeight: 2
++        modelScaleV2: 0.86
++        modelHeight: 2.57
+         catchOverrideSettings {
+           collisionRadiusM: 1.4
+           collisionHeightM: 1.11
+@@ -117328,11 +118044,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 21
+         camera {
+-          cylinderRadiusM: 2
+-          cylinderHeightM: 2.5
++          cylinderRadiusM: 1.75
++          cylinderHeightM: 1.25
+         }
+-        modelScaleV2: 1.7
+-        modelHeight: 2.57
++        modelScaleV2: 1
++        modelHeight: 1.48
+         catchOverrideSettings {
+           collisionRadiusM: 0.75
+           collisionHeightM: 0.1
+@@ -117398,11 +118114,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 21
+         camera {
+-          cylinderRadiusM: 2
+-          cylinderHeightM: 2.5
++          cylinderRadiusM: 1.75
++          cylinderHeightM: 1.25
+         }
+-        modelScaleV2: 1.7
+-        modelHeight: 2.57
++        modelScaleV2: 1
++        modelHeight: 1.48
+         catchOverrideSettings {
+           collisionRadiusM: 0.75
+           collisionHeightM: 0.1
+@@ -129267,11 +129983,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 28
+         camera {
+-          cylinderRadiusM: 2.5
+-          cylinderHeightM: 1.8
++          cylinderRadiusM: 1.5
++          cylinderHeightM: 1.9
+         }
+-        modelScaleV2: 0.97
+-        modelHeight: 2.13
++        modelScaleV2: 1
++        modelHeight: 1.6
+         catchOverrideSettings {
+           collisionRadiusM: 0.3
+           collisionHeightM: 0.5
+@@ -129326,11 +130042,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 28
+         camera {
+-          cylinderRadiusM: 2.5
+-          cylinderHeightM: 1.8
++          cylinderRadiusM: 1.5
++          cylinderHeightM: 1.9
+         }
+-        modelScaleV2: 0.97
+-        modelHeight: 2.13
++        modelScaleV2: 1
++        modelHeight: 1.6
+         catchOverrideSettings {
+           collisionRadiusM: 0.3
+           collisionHeightM: 0.5
+@@ -129524,11 +130240,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 27
+         camera {
+-          cylinderRadiusM: 1.25
+-          cylinderHeightM: 2.5
++          cylinderRadiusM: 1.5
++          cylinderHeightM: 3.35
+         }
+-        modelScaleV2: 0.65
+-        modelHeight: 1.5
++        modelScaleV2: 0.88
++        modelHeight: 2.8
+         maxEncounterVisualSettings {
+           scale: 7
+           cameraDistance: 36
+@@ -129586,11 +130302,11 @@
+         breadMode: BREAD_DOUGH_MODE
+         averageHeightM: 27
+         camera {
+-          cylinderRadiusM: 1.25
+-          cylinderHeightM: 2.5
++          cylinderRadiusM: 1.5
++          cylinderHeightM: 3.35
+         }
+-        modelScaleV2: 0.65
+-        modelHeight: 1.5
++        modelScaleV2: 0.88
++        modelHeight: 2.8
+         maxEncounterVisualSettings {
+           scale: 7
+           cameraDistance: 36
+@@ -129788,8 +130504,8 @@
+           cylinderRadiusM: 1
+           cylinderHeightM: 3.3
+         }
+-        modelScaleV2: 0.8
+-        modelHeight: 2.14
++        modelScaleV2: 0.83
++        modelHeight: 3.19
+         catchOverrideSettings {
+           collisionRadiusM: 0.9
+           collisionHeightM: 0.9
+@@ -129856,8 +130572,8 @@
+           cylinderRadiusM: 1
+           cylinderHeightM: 3.3
+         }
+-        modelScaleV2: 0.8
+-        modelHeight: 2.14
++        modelScaleV2: 0.83
++        modelHeight: 3.19
+         catchOverrideSettings {
+           collisionRadiusM: 0.9
+           collisionHeightM: 0.9
+@@ -131227,7 +131943,7 @@
+         }
+         camera {
+           cylinderRadiusM: 1.5
+-          cylinderHeightM: 1.6
++          cylinderHeightM: 2.15
+         }
+         modelScaleV2: 0.86
+         modelHeight: 3
+@@ -131295,7 +132011,7 @@
+         }
+         camera {
+           cylinderRadiusM: 1.5
+-          cylinderHeightM: 1.6
++          cylinderHeightM: 2.15
+         }
+         modelScaleV2: 0.86
+         modelHeight: 3
+@@ -131363,7 +132079,7 @@
+         }
+         camera {
+           cylinderRadiusM: 1.5
+-          cylinderHeightM: 1.6
++          cylinderHeightM: 2.15
+         }
+         modelScaleV2: 0.86
+         modelHeight: 3
+@@ -131914,8 +132630,8 @@
+           cylinderRadiusM: 1
+           cylinderHeightM: 3
+         }
+-        modelScaleV2: 0.6
+-        modelHeight: 0.6
++        modelScaleV2: 0.86
++        modelHeight: 3
+         maxEncounterVisualSettings {
+           scale: 13
+           cameraDistance: 32
+@@ -131963,8 +132679,8 @@
+           cylinderRadiusM: 1
+           cylinderHeightM: 3
+         }
+-        modelScaleV2: 0.6
+-        modelHeight: 0.6
++        modelScaleV2: 0.86
++        modelHeight: 3
+         maxEncounterVisualSettings {
+           scale: 13
+           cameraDistance: 32
+@@ -152435,7 +153151,7 @@
+     friendshipMilestoneSettings {
+       minPointsToReach: 90
+       milestoneXpReward: 150000
+-      attackBonusPercentage: 1.12
++      attackBonusPercentage: 1.24
+       raidBallBonus: 4
+       unlockedTrading: REGULAR_IN_POKEDEX
+       unlockedTrading: SPECIAL_IN_POKEDEX
+@@ -154167,13 +154883,13 @@
+       globalEventTicket {
+         eventStartTime: "2026-01-24T14:00:00"
+         eventEndTime: "2026-01-24T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_ShadowRaikouRaidWeekend"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_RaikouShadowRaidDay"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_06_TO_GIFT
+         displayV2Enabled: true
+         backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shadow_Raikou_RaidDay_v2-1024x512-nologo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_ShadowRaikouRaidWeekend"
+-        textRewardsKey: "text_rewards_key_ShadowRaikouRaidWeekend"
++        eventDatetimeRangeKey: "event_datetime_range_key_RaikouShadowRaidDay"
++        textRewardsKey: "text_rewards_key_RaikouShadowRaidDay"
+         iconRewards {
+           type: ITEM
+           item {
+@@ -154189,8 +154905,8 @@
+         clientEventStartTimeUtcMs: 1769263200000
+         clientEventEndTimeUtcMs: 1769274000000
+       }
+-      nameOverride: "general2.ticket.6_ShadowRaikouRaidWeekend_title"
+-      descriptionOverride: "item_event_ticket_gray_desc_ShadowRaikouRaidWeekend"
++      nameOverride: "general2.ticket.6_ShadowRaikouRaidDay_title"
++      descriptionOverride: "item_event_ticket_gray_details_RaikouShadowRaidDay"
+     }
+   }
+ }
+@@ -154205,13 +154921,13 @@
+       globalEventTicket {
+         eventStartTime: "2026-01-24T14:00:00"
+         eventEndTime: "2026-01-24T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_ShadowRaikouRaidWeekend"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_RaikouShadowRaidDay"
+         ticketItem: ITEM_EVENT_TICKET_06
+         clientEventStartTimeUtcMs: 1769263200000
+         clientEventEndTimeUtcMs: 1769274000000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_ShadowRaikouRaidWeekend"
++      descriptionOverride: "item_event_ticket_gray_details_RaikouShadowRaidDay"
+     }
+   }
+ }
+@@ -157750,6 +158466,16 @@
+   }
+ }
+ template {
++  template_id: "LC_2025_KR_PYEONGCHANG_WINTER_FESTIVAL"
++  data {
++    template_id: "LC_2025_KR_PYEONGCHANG_WINTER_FESTIVAL"
++    locationCardSettings {
++      locationCard: LC_2025_KR_PYEONGCHANG_WINTER_FESTIVAL
++      imageUrl: "lc_2025_kr_pyeongchangWinterFestival"
++    }
++  }
++}
++template {
+   template_id: "LC_2025_LONDON_ROADTRIP_001"
+   data {
+     template_id: "LC_2025_LONDON_ROADTRIP_001"
+@@ -157924,6 +158650,16 @@
+   }
+ }
+ template {
++  template_id: "LC_2026_PPK_001"
++  data {
++    template_id: "LC_2026_PPK_001"
++    locationCardSettings {
++      locationCard: LC_2026_PPK_001
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
+   template_id: "LC_CITYSAFARI2025_BUENOSAIRES"
+   data {
+     template_id: "LC_CITYSAFARI2025_BUENOSAIRES"
+@@ -157954,6 +158690,16 @@
+   }
+ }
+ template {
++  template_id: "LC_ID_CAR_FREE_DAY"
++  data {
++    template_id: "LC_ID_CAR_FREE_DAY"
++    locationCardSettings {
++      locationCard: LC_ID_CAR_FREE_DAY
++      imageUrl: "lc_ID_CarFreeDay"
++    }
++  }
++}
++template {
+   template_id: "LC_JEJU_STAMP_RALLY"
+   data {
+     template_id: "LC_JEJU_STAMP_RALLY"
+@@ -166668,6 +167414,16 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_hat_communityambassador_0"
++  data {
++    template_id: "N_DISPLAY_n_hat_communityambassador_0"
++    avatarItemDisplay {
++      iconAddress: "n_hat_communityambassador_0_icon"
++      displayStringId: "avatar_n_hat_communityambassador"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_hat_cosmog_0"
+   data {
+     template_id: "N_DISPLAY_n_hat_cosmog_0"
+@@ -170948,6 +171704,16 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_pose_communityambassador"
++  data {
++    template_id: "N_DISPLAY_n_pose_communityambassador"
++    avatarItemDisplay {
++      iconAddress: "n_pose_communityambassador_icon"
++      displayStringId: "avatar_n_pose_communityambassador"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_pose_concierge"
+   data {
+     template_id: "N_DISPLAY_n_pose_concierge"
+@@ -171008,6 +171774,16 @@
+   }
+ }
+ template {
++  template_id: "N_DISPLAY_n_pose_heart"
++  data {
++    template_id: "N_DISPLAY_n_pose_heart"
++    avatarItemDisplay {
++      iconAddress: "n_pose_heart_icon"
++      displayStringId: "avatar_pose_heart"
++    }
++  }
++}
++template {
+   template_id: "N_DISPLAY_n_pose_idle"
+   data {
+     template_id: "N_DISPLAY_n_pose_idle"
+@@ -179586,6 +180362,30 @@
+   }
+ }
+ template {
++  template_id: "PANCHAM_BUDDY_EVENT_EVOLUTION_QUEST"
++  data {
++    template_id: "PANCHAM_BUDDY_EVENT_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "PANCHAM_BUDDY_EVENT_EVOLUTION_QUEST"
++      questType: QUEST_CATCH_POKEMON
++      goals {
++        condition {
++          type: WITH_POKEMON_TYPE
++          with_pokemon_type {
++            pokemonType: POKEMON_TYPE_DARK
++          }
++        }
++        target: 10
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "quest_catch_type_dark_plural"
++        title: "quest_catch_type_dark_plural"
++      }
++    }
++  }
++}
++template {
+   template_id: "PANCHAM_EVOLUTION_QUEST"
+   data {
+     template_id: "PANCHAM_EVOLUTION_QUEST"
+@@ -179679,16 +180479,6 @@
+   }
+ }
+ template {
+-  template_id: "ADMIN_GM_NIA_OPS_ONLY_FILTER_AMS_FEATURE_GATE"
+-  data {
+-    template_id: "ADMIN_GM_NIA_OPS_ONLY_FILTER_AMS_FEATURE_GATE"
+-    featureGate {
+-      status: 1
+-      rolloutPercentage: 100
+-    }
+-  }
+-}
+-template {
+   template_id: "PARTY_PLAY_IAP_BOOSTS_SETTINGS"
+   data {
+     template_id: "PARTY_PLAY_IAP_BOOSTS_SETTINGS"
+@@ -179733,6 +180523,24 @@
+   }
+ }
+ template {
++  template_id: "PAWMOT_BUDDY_EVENT_EVOLUTION_QUEST"
++  data {
++    template_id: "PAWMOT_BUDDY_EVENT_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "PAWMOT_BUDDY_EVENT_EVOLUTION_QUEST"
++      questType: QUEST_BUDDY_EVOLUTION_WALK
++      goals {
++        target: 5
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "quest_buddy_walk_km_plural"
++        title: "quest_buddy_walk_km_plural"
++      }
++    }
++  }
++}
++template {
+   template_id: "PAWMOT_CD_EVOLUTION_QUEST"
+   data {
+     template_id: "PAWMOT_CD_EVOLUTION_QUEST"
+@@ -183398,12 +184206,13 @@
+   }
+ }
+ template {
+-  template_id: "LC_2025_KR_PYEONGCHANG_WINTER_FESTIVAL"
++  template_id: "PTC_OAUTH_SETTINGS"
+   data {
+-    template_id: "LC_2025_KR_PYEONGCHANG_WINTER_FESTIVAL"
+-    locationCardSettings {
+-      locationCard: LC_2025_KR_PYEONGCHANG_WINTER_FESTIVAL
+-      imageUrl: "lc_2025_kr_pyeongchangWinterFestival"
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
+     }
+   }
+ }
+@@ -183910,21 +184719,6 @@
+   }
+ }
+ template {
+-  template_id: "BADGE_EVENT_0177"
+-  data {
+-    template_id: "BADGE_EVENT_0177"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0177
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+   template_id: "RUNERIGUS_EVOLUTION_QUEST"
+   data {
+     template_id: "RUNERIGUS_EVOLUTION_QUEST"
+@@ -183961,66 +184755,6 @@
+   }
+ }
+ template {
+-  template_id: "SYLVEON_BUDDY_EVENT_EVOLUTION_QUEST"
+-  data {
+-    template_id: "SYLVEON_BUDDY_EVENT_EVOLUTION_QUEST"
+-    evolution_quest_template {
+-      questTemplateId: "SYLVEON_BUDDY_EVENT_EVOLUTION_QUEST"
+-      questType: QUEST_BUDDY_EARN_AFFECTION_POINTS
+-      goals {
+-        target: 20
+-      }
+-      context: EVOLUTION_QUEST
+-      display {
+-        description: "CHALLENGE_BUDDY_AFFECTION_SINGLE"
+-        title: "CHALLENGE_BUDDY_AFFECTION_SINGLE"
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "PAWMOT_BUDDY_EVENT_EVOLUTION_QUEST"
+-  data {
+-    template_id: "PAWMOT_BUDDY_EVENT_EVOLUTION_QUEST"
+-    evolution_quest_template {
+-      questTemplateId: "PAWMOT_BUDDY_EVENT_EVOLUTION_QUEST"
+-      questType: QUEST_BUDDY_EVOLUTION_WALK
+-      goals {
+-        target: 5
+-      }
+-      context: EVOLUTION_QUEST
+-      display {
+-        description: "quest_buddy_walk_km_plural"
+-        title: "quest_buddy_walk_km_plural"
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "PANCHAM_BUDDY_EVENT_EVOLUTION_QUEST"
+-  data {
+-    template_id: "PANCHAM_BUDDY_EVENT_EVOLUTION_QUEST"
+-    evolution_quest_template {
+-      questTemplateId: "PANCHAM_BUDDY_EVENT_EVOLUTION_QUEST"
+-      questType: QUEST_CATCH_POKEMON
+-      goals {
+-        condition {
+-          type: WITH_POKEMON_TYPE
+-          with_pokemon_type {
+-            pokemonType: POKEMON_TYPE_DARK
+-          }
+-        }
+-        target: 10
+-      }
+-      context: EVOLUTION_QUEST
+-      display {
+-        description: "quest_catch_type_dark_plural"
+-        title: "quest_catch_type_dark_plural"
+-      }
+-    }
+-  }
+-}
+-template {
+   template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL6"
+   data {
+     template_id: "SETTINGS_RULES_ALLOW_GOOGLEPIXEL6"
+@@ -189235,6 +189969,90 @@
+   }
+ }
+ template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: PIKACHU_GOTOUR_2026_A
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: PIKACHU_GOTOUR_2026_A_02
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: PIKACHU_GOTOUR_2026_B
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: PIKACHU_GOTOUR_2026_B_02
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: PIKACHU_GOTOUR_2026_C
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: PIKACHU_GOTOUR_2026_C_02
++    }
++  }
++}
++template {
+   template_id: "SPAWN_V0025_POKEMON_PIKACHU_HORIZONS"
+   data {
+     template_id: "SPAWN_V0025_POKEMON_PIKACHU_HORIZONS"
+@@ -234859,6 +235677,24 @@
+   }
+ }
+ template {
++  template_id: "SYLVEON_BUDDY_EVENT_EVOLUTION_QUEST"
++  data {
++    template_id: "SYLVEON_BUDDY_EVENT_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "SYLVEON_BUDDY_EVENT_EVOLUTION_QUEST"
++      questType: QUEST_BUDDY_EARN_AFFECTION_POINTS
++      goals {
++        target: 20
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "CHALLENGE_BUDDY_AFFECTION_SINGLE"
++        title: "CHALLENGE_BUDDY_AFFECTION_SINGLE"
++      }
++    }
++  }
++}
++template {
+   template_id: "SYLVEON_CD_EVOLUTION_QUEST"
+   data {
+     template_id: "SYLVEON_CD_EVOLUTION_QUEST"
+@@ -244570,6 +245406,498 @@
+   }
+ }
+ template {
++  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_GOTOUR_2026_A
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_GOTOUR_2026_A_02
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_GOTOUR_2026_B
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_GOTOUR_2026_B_02
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_GOTOUR_2026_C
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
++  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_GOTOUR_2026_C_02
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
+   template_id: "V0025_POKEMON_PIKACHU_HORIZONS"
+   data {
+     template_id: "V0025_POKEMON_PIKACHU_HORIZONS"
+@@ -273291,7 +274619,7 @@
+         form: SYLVEON_NORMAL
+         priority: 100
+         questDisplay {
+-          questRequirementTemplateId: "SYLVEON_EVOLUTION_QUEST"
++          questRequirementTemplateId: "SYLVEON_BUDDY_EVENT_EVOLUTION_QUEST"
+         }
+       }
+       modelScaleV2: 1.27
+@@ -273601,7 +274929,7 @@
+         form: SYLVEON_NORMAL
+         priority: 100
+         questDisplay {
+-          questRequirementTemplateId: "SYLVEON_EVOLUTION_QUEST"
++          questRequirementTemplateId: "SYLVEON_BUDDY_EVENT_EVOLUTION_QUEST"
+         }
+       }
+       modelScaleV2: 1.27
+@@ -356456,6 +357784,27 @@
+   }
+ }
+ template {
++  template_id: "V0492_MOVE_DRUM_BEATING"
++  data {
++    template_id: "V0492_MOVE_DRUM_BEATING"
++    moveSettings {
++      movementId: DRUM_BEATING
++      animationId: 5
++      pokemonType: POKEMON_TYPE_GRASS
++      power: 115
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "drum_beating"
++      durationMs: 4500
++      damageWindowStartMs: 3000
++      damageWindowEndMs: 4000
++      energyDelta: -33
++    }
++  }
++}
++template {
+   template_id: "V0492_POKEMON_SHAYMIN"
+   data {
+     template_id: "V0492_POKEMON_SHAYMIN"
+@@ -400052,7 +401401,7 @@
+         evolution: PANGORO
+         candyCost: 50
+         questDisplay {
+-          questRequirementTemplateId: "PANCHAM_EVOLUTION_QUEST"
++          questRequirementTemplateId: "PANCHAM_BUDDY_EVENT_EVOLUTION_QUEST"
+         }
+       }
+       modelScaleV2: 1
+@@ -400124,7 +401473,7 @@
+         candyCost: 50
+         form: PANGORO_NORMAL
+         questDisplay {
+-          questRequirementTemplateId: "PANCHAM_EVOLUTION_QUEST"
++          questRequirementTemplateId: "PANCHAM_BUDDY_EVENT_EVOLUTION_QUEST"
+         }
+       }
+       modelScaleV2: 1
+@@ -444112,7 +445461,7 @@
+         candyCost: 100
+         kmBuddyDistanceRequirement: 25
+         questDisplay {
+-          questRequirementTemplateId: "PAWMOT_EVOLUTION_QUEST"
++          questRequirementTemplateId: "PAWMOT_BUDDY_EVENT_EVOLUTION_QUEST"
+         }
+       }
+       modelScaleV2: 1.1
+@@ -444186,7 +445535,7 @@
+         kmBuddyDistanceRequirement: 25
+         form: PAWMOT_NORMAL
+         questDisplay {
+-          questRequirementTemplateId: "PAWMOT_EVOLUTION_QUEST"
++          questRequirementTemplateId: "PAWMOT_BUDDY_EVENT_EVOLUTION_QUEST"
+         }
+       }
+       modelScaleV2: 1.1
+@@ -459075,8 +460424,8 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_PREMIER"
+     }
+   }
+ }
+@@ -459089,31 +460438,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+     }
+@@ -459128,31 +460477,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -459168,7 +460517,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 530
+         }
+       }
+       reward {
+@@ -459186,7 +460535,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+     }
+@@ -459201,7 +460550,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+       reward {
+@@ -459219,7 +460568,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 8480
++          count: 2120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -459235,7 +460584,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 530
+         }
+       }
+       reward {
+@@ -459253,7 +460602,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+     }
+@@ -459268,7 +460617,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+       reward {
+@@ -459286,7 +460635,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 8480
++          count: 2120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -459302,7 +460651,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 570
+         }
+       }
+       reward {
+@@ -459320,7 +460669,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4560
++          count: 1140
+         }
+       }
+     }
+@@ -459335,7 +460684,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4560
++          count: 1140
+         }
+       }
+       reward {
+@@ -459353,7 +460702,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 9120
++          count: 2280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -459369,7 +460718,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+       reward {
+@@ -459387,7 +460736,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+     }
+@@ -459402,7 +460751,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+       reward {
+@@ -459420,7 +460769,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 9600
++          count: 2400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -459515,7 +460864,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 700
+         }
+       }
+       reward {
+@@ -459533,7 +460882,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5600
++          count: 1400
+         }
+       }
+     }
+@@ -459548,7 +460897,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5600
++          count: 1400
+         }
+       }
+       reward {
+@@ -459566,7 +460915,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 11200
++          count: 2800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -459582,7 +460931,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 730
+         }
+       }
+       reward {
+@@ -459600,7 +460949,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5840
++          count: 1460
+         }
+       }
+     }
+@@ -459615,7 +460964,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5840
++          count: 1460
+         }
+       }
+       reward {
+@@ -459633,7 +460982,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 11680
++          count: 2920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -459649,7 +460998,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 770
+         }
+       }
+       reward {
+@@ -459667,7 +461016,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6160
++          count: 1540
+         }
+       }
+     }
+@@ -459682,7 +461031,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6160
++          count: 1540
+         }
+       }
+       reward {
+@@ -459700,7 +461049,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 12320
++          count: 3080
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -459765,7 +461114,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 300
+         }
+       }
+       reward {
+@@ -459783,7 +461132,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+     }
+@@ -459798,7 +461147,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+       reward {
+@@ -459816,7 +461165,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -459832,7 +461181,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 870
+         }
+       }
+       reward {
+@@ -459850,7 +461199,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6960
++          count: 1740
+         }
+       }
+     }
+@@ -459865,7 +461214,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6960
++          count: 1740
+         }
+       }
+       reward {
+@@ -459883,7 +461232,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 13920
++          count: 3480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -460167,7 +461516,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 330
+         }
+       }
+       reward {
+@@ -460185,7 +461534,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+     }
+@@ -460200,7 +461549,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+       reward {
+@@ -460218,7 +461567,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5280
++          count: 1320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -460234,7 +461583,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 330
+         }
+       }
+       reward {
+@@ -460252,7 +461601,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+     }
+@@ -460267,7 +461616,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+       reward {
+@@ -460285,7 +461634,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5280
++          count: 1320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -460301,7 +461650,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 370
+         }
+       }
+       reward {
+@@ -460319,7 +461668,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2960
++          count: 740
+         }
+       }
+     }
+@@ -460334,7 +461683,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2960
++          count: 740
+         }
+       }
+       reward {
+@@ -460352,7 +461701,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5920
++          count: 1480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -460417,7 +461766,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 400
+         }
+       }
+       reward {
+@@ -460435,7 +461784,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3200
++          count: 800
+         }
+       }
+     }
+@@ -460450,7 +461799,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3200
++          count: 800
+         }
+       }
+       reward {
+@@ -460468,7 +461817,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6400
++          count: 1600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -460484,7 +461833,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 430
+         }
+       }
+       reward {
+@@ -460502,7 +461851,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+     }
+@@ -460517,7 +461866,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+       reward {
+@@ -460535,7 +461884,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6880
++          count: 1720
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -460551,7 +461900,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 430
+         }
+       }
+       reward {
+@@ -460569,7 +461918,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+     }
+@@ -460584,7 +461933,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+       reward {
+@@ -460602,7 +461951,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6880
++          count: 1720
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -460618,7 +461967,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 470
+         }
+       }
+       reward {
+@@ -460636,7 +461985,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3760
++          count: 940
+         }
+       }
+     }
+@@ -460651,7 +462000,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3760
++          count: 940
+         }
+       }
+       reward {
+@@ -460669,7 +462018,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7520
++          count: 1880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -462267,6 +463616,15 @@
+           type: EXPERIENCE
+           exp: 20000
+         }
++        questRewards {
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemonId: TANDEMAUS
++            pokemonDisplay {
++              form: TANDEMAUS_NORMAL
++            }
++          }
++        }
+         difficulty: EASY
+       }
+       questDisplay {
+@@ -466275,7 +467633,6 @@
+       sku: "general2.ticket.5"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "evergreenticket.1.WATTSUP_JAN2026"
-       skuEnableTime: "2023-01-01T11:00:01"
-@@ -466000,6 +465999,7 @@
-       sku: "general1.ticket.4.giftable"
+       sortOrder: 46324
+-      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket.5_buddy_event_title"
+       description: "item_event_ticket_gray_desc_buddy_event"
+@@ -466297,7 +467654,6 @@
+       sku: "general2.ticket.5.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "evergreenticket.1.WATTSUP_JAN2026"
-       skuEnableTime: "2023-01-01T11:00:01"
-@@ -466196,6 +466196,7 @@
-       sku: "general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 46324
+-      hidden: true
+       spriteId: "general2.ticket.5"
+       title: "general1.ticket.5_buddy_event_title"
+       description: "item_event_ticket_gray_desc_buddy_event"
+@@ -466319,7 +467675,7 @@
        sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Grookey25_title"
+       hidden: true
+       spriteId: "general2.ticket.6"
+-      title: "general2.ticket.6_ShadowRaikouRaidWeekend_title"
++      title: "general2.ticket.6_ShadowRaikouRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -466216,6 +466217,7 @@
-       sku: "general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       skuDisableTime: "2026-01-24T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+@@ -466340,7 +467696,7 @@
        sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Grookey25_title"
+       hidden: true
+       spriteId: "general2.ticket.6"
+-      title: "general2.ticket.6_ShadowRaikouRaidWeekend_title"
++      title: "general2.ticket.6_ShadowRaikouRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -467763,6 +467765,7 @@
-       sku: "pgorelease.general1.ticket.4"
+       skuDisableTime: "2026-01-24T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+@@ -468043,7 +469399,6 @@
+       sku: "pgorelease.general2.ticket.5"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "evergreenticket.1.WATTSUP_JAN2026"
-       skuEnableTime: "2023-01-01T11:00:03"
-@@ -467783,6 +467786,7 @@
-       sku: "pgorelease.general1.ticket.4.giftable"
+       sortOrder: 46324
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket.5_buddy_event_title"
+       description: "item_event_ticket_gray_desc_buddy_event"
+@@ -468065,7 +469420,6 @@
+       sku: "pgorelease.general2.ticket.5.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "evergreenticket.1.WATTSUP_JAN2026"
-       skuEnableTime: "2023-01-01T11:00:03"
-@@ -467960,6 +467964,7 @@
-       sku: "pgorelease.general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 46324
+-      hidden: true
+       spriteId: "general2.ticket.2"
+       title: "general1.ticket.5_buddy_event_title"
+       description: "item_event_ticket_gray_desc_buddy_event"
+@@ -468087,7 +469441,7 @@
        sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Grookey25_title"
+       hidden: true
+       spriteId: "general2.ticket.6"
+-      title: "general2.ticket.6_ShadowRaikouRaidWeekend_title"
++      title: "general2.ticket.6_ShadowRaikouRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -467980,6 +467985,7 @@
-       sku: "pgorelease.general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       skuDisableTime: "2026-01-24T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+@@ -468108,7 +469462,7 @@
        sortOrder: 2
-+      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Grookey25_title"
+       hidden: true
+       spriteId: "general2.ticket.6"
+-      title: "general2.ticket.6_ShadowRaikouRaidWeekend_title"
++      title: "general2.ticket.6_ShadowRaikouRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -474877,7 +474883,6 @@
- experiment_id: 2600
- experiment_id: 2650
- experiment_id: 2901
--experiment_id: 3025
- experiment_id: 3032
- experiment_id: 3033
- experiment_id: 3063
-@@ -474885,17 +474890,9 @@
- experiment_id: 3712
+       skuDisableTime: "2026-01-24T17:00:00"
+       skuEnableTimeUtcMs: 1552550400000
+@@ -469487,6 +470841,21 @@
+   }
+ }
+ template {
++  template_id: "sequence_drum_beating"
++  data {
++    template_id: "sequence_drum_beating"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx drum_beating"
++      sequence: "sfx attacker 536-0_leaf_tornado"
++      sequence: "wait 1.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++template {
+   template_id: "sequence_dynamax_cannon"
+   data {
+     template_id: "sequence_dynamax_cannon"
+@@ -473495,1376 +474864,12 @@
+     }
+   }
+ }
+-template {
+-  template_id: "BADGE_EVENT_0178"
+-  data {
+-    template_id: "BADGE_EVENT_0178"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0178
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_EVENT_0183"
+-  data {
+-    template_id: "BADGE_EVENT_0183"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0183
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_EVENT_0184"
+-  data {
+-    template_id: "BADGE_EVENT_0184"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0184
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_EVENT_0185"
+-  data {
+-    template_id: "BADGE_EVENT_0185"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0185
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_DELUXE_PASS"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_DELUXE_PASS"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_DELUXE_PASS
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_GLOBAL"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_GLOBAL"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_GLOBAL
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_GLOBAL_SECRET_01"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_GLOBAL_SECRET_01"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_GLOBAL_SECRET_01
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_GLOBAL_TEST"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_GLOBAL_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_GLOBAL_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_GLOBAL_X_VERSION"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_GLOBAL_X_VERSION"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_GLOBAL_X_VERSION
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_GLOBAL_Y_VERSION"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_GLOBAL_Y_VERSION"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_GLOBAL_Y_VERSION
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH_TEST"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_HATCH_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID_TEST"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_ADD_ON_RAID_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_CITY"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_CITY"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_CITY
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_MEGA_NIGHT"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_MEGA_NIGHT"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_MEGA_NIGHT
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_PARK"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_PARK"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_FRIDAY_PARK
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_MEGA_NIGHT_TEST"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_MEGA_NIGHT_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_MEGA_NIGHT_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_CITY"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_CITY"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_CITY
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_MEGA_NIGHT"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_MEGA_NIGHT"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_MEGA_NIGHT
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_PARK"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_PARK"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SATURDAY_PARK
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_CITY"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_CITY"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_CITY
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_MEGA_NIGHT"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_MEGA_NIGHT"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_MEGA_NIGHT
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_PARK"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_PARK"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_SUNDAY_PARK
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_CITY"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_CITY"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_CITY
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_PARK"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_PARK"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_TEST_PARK
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_VIP"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_LOS_ANGELES_VIP"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_LOS_ANGELES_VIP
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH_TEST"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_ADD_ON_HATCH_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID_TEST"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_ADD_ON_RAID_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_CITY"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_CITY"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_FRIDAY_CITY
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_MEGA_NIGHT"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_MEGA_NIGHT"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_FRIDAY_MEGA_NIGHT
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_PARK"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_FRIDAY_PARK"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_FRIDAY_PARK
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_MEGA_NIGHT_TEST"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_MEGA_NIGHT_TEST"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_MEGA_NIGHT_TEST
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_CITY"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_CITY"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_SATURDAY_CITY
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_MEGA_NIGHT"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_MEGA_NIGHT"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_SATURDAY_MEGA_NIGHT
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_PARK"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_SATURDAY_PARK"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_SATURDAY_PARK
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_CITY"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_CITY"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_SUNDAY_CITY
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_MEGA_NIGHT"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_MEGA_NIGHT"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_SUNDAY_MEGA_NIGHT
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_PARK"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_SUNDAY_PARK"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_SUNDAY_PARK
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_TEST_CITY"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_TEST_CITY"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_TEST_CITY
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_TEST_PARK"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_TEST_PARK"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_TEST_PARK
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_GO_TOUR_2026_TAINAN_VIP"
+-  data {
+-    template_id: "BADGE_GO_TOUR_2026_TAINAN_VIP"
+-    badgeSettings {
+-      badgeType: BADGE_GO_TOUR_2026_TAINAN_VIP
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
+-  data {
+-    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
+-    pokemonExtendedSettings {
+-      uniqueId: PIKACHU
+-      form: PIKACHU_GOTOUR_2026_A
+-      sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.7
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
+-  data {
+-    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
+-    pokemonExtendedSettings {
+-      uniqueId: PIKACHU
+-      form: PIKACHU_GOTOUR_2026_A_02
+-      sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.7
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
+-  data {
+-    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
+-    pokemonExtendedSettings {
+-      uniqueId: PIKACHU
+-      form: PIKACHU_GOTOUR_2026_B
+-      sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.7
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
+-  data {
+-    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
+-    pokemonExtendedSettings {
+-      uniqueId: PIKACHU
+-      form: PIKACHU_GOTOUR_2026_B_02
+-      sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.7
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
+-  data {
+-    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
+-    pokemonExtendedSettings {
+-      uniqueId: PIKACHU
+-      form: PIKACHU_GOTOUR_2026_C
+-      sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.7
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
+-  data {
+-    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
+-    pokemonExtendedSettings {
+-      uniqueId: PIKACHU
+-      form: PIKACHU_GOTOUR_2026_C_02
+-      sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.7
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_PPK_001"
+-  data {
+-    template_id: "LC_2026_PPK_001"
+-    locationCardSettings {
+-      locationCard: LC_2026_PPK_001
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_ID_CAR_FREE_DAY"
+-  data {
+-    template_id: "LC_ID_CAR_FREE_DAY"
+-    locationCardSettings {
+-      locationCard: LC_ID_CAR_FREE_DAY
+-      imageUrl: "lc_ID_CarFreeDay"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_pose_heart"
+-  data {
+-    template_id: "N_DISPLAY_n_pose_heart"
+-    avatarItemDisplay {
+-      iconAddress: "n_pose_heart_icon"
+-      displayStringId: "avatar_pose_heart"
+-    }
+-  }
+-}
+-template {
+-  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
+-  data {
+-    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
+-    genderSettings {
+-      pokemon: PIKACHU
+-      gender {
+-        malePercent: 0.5
+-        femalePercent: 0.5
+-      }
+-      form: PIKACHU_GOTOUR_2026_A
+-    }
+-  }
+-}
+-template {
+-  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
+-  data {
+-    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
+-    genderSettings {
+-      pokemon: PIKACHU
+-      gender {
+-        malePercent: 0.5
+-        femalePercent: 0.5
+-      }
+-      form: PIKACHU_GOTOUR_2026_A_02
+-    }
+-  }
+-}
+-template {
+-  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
+-  data {
+-    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
+-    genderSettings {
+-      pokemon: PIKACHU
+-      gender {
+-        malePercent: 0.5
+-        femalePercent: 0.5
+-      }
+-      form: PIKACHU_GOTOUR_2026_B
+-    }
+-  }
+-}
+-template {
+-  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
+-  data {
+-    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
+-    genderSettings {
+-      pokemon: PIKACHU
+-      gender {
+-        malePercent: 0.5
+-        femalePercent: 0.5
+-      }
+-      form: PIKACHU_GOTOUR_2026_B_02
+-    }
+-  }
+-}
+-template {
+-  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
+-  data {
+-    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
+-    genderSettings {
+-      pokemon: PIKACHU
+-      gender {
+-        malePercent: 0.5
+-        femalePercent: 0.5
+-      }
+-      form: PIKACHU_GOTOUR_2026_C
+-    }
+-  }
+-}
+-template {
+-  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
+-  data {
+-    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
+-    genderSettings {
+-      pokemon: PIKACHU
+-      gender {
+-        malePercent: 0.5
+-        femalePercent: 0.5
+-      }
+-      form: PIKACHU_GOTOUR_2026_C_02
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
+-  data {
+-    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_A"
+-    pokemonSettings {
+-      pokemonId: PIKACHU
+-      modelScale: 1.48
+-      type: POKEMON_TYPE_ELECTRIC
+-      camera {
+-        diskRadiusM: 0.555
+-        cylinderRadiusM: 0.37
+-        cylinderHeightM: 0.5
+-        shoulderModeScale: 0.5
+-      }
+-      encounter {
+-        collisionRadiusM: 0.16
+-        collisionHeightM: 0.16
+-        collisionHeadRadiusM: 0.13
+-        movementType: MOVEMENT_JUMP
+-        movementTimerS: 10
+-        jumpTimeS: 1
+-        attackTimerS: 29
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 1
+-        cameraDistance: 2.775
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-      }
+-      stats {
+-        baseStamina: 111
+-        baseAttack: 112
+-        baseDefense: 96
+-      }
+-      quickMoves: THUNDER_SHOCK_FAST
+-      quickMoves: QUICK_ATTACK_FAST
+-      cinematicMoves: DISCHARGE
+-      cinematicMoves: THUNDERBOLT
+-      cinematicMoves: WILD_CHARGE
+-      animationTime: 1.8333
+-      animationTime: 0.6667
+-      animationTime: 1.6
+-      animationTime: 1.5667
+-      animationTime: 0
+-      animationTime: 1.8
+-      animationTime: 1.1333
+-      animationTime: 1.06666696
+-      evolutionPips: 1
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 6
+-      parentPokemonId: PICHU
+-      heightStdDev: 0.05
+-      weightStdDev: 0.75
+-      familyId: FAMILY_PIKACHU
+-      kmBuddyDistance: 1
+-      buddy_size: BUDDY_SHOULDER
+-      modelHeight: 0.4
+-      modelScaleV2: 1.1
+-      form: PIKACHU_GOTOUR_2026_A
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 11
+-      third_move {
+-        stardustToUnlock: 10000
+-        candyToUnlock: 25
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 1
+-      disableTransferToPokemonHome: true
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
+-  data {
+-    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_A_02"
+-    pokemonSettings {
+-      pokemonId: PIKACHU
+-      modelScale: 1.48
+-      type: POKEMON_TYPE_ELECTRIC
+-      camera {
+-        diskRadiusM: 0.555
+-        cylinderRadiusM: 0.37
+-        cylinderHeightM: 0.5
+-        shoulderModeScale: 0.5
+-      }
+-      encounter {
+-        collisionRadiusM: 0.16
+-        collisionHeightM: 0.16
+-        collisionHeadRadiusM: 0.13
+-        movementType: MOVEMENT_JUMP
+-        movementTimerS: 10
+-        jumpTimeS: 1
+-        attackTimerS: 29
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 1
+-        cameraDistance: 2.775
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-      }
+-      stats {
+-        baseStamina: 111
+-        baseAttack: 112
+-        baseDefense: 96
+-      }
+-      quickMoves: THUNDER_SHOCK_FAST
+-      quickMoves: QUICK_ATTACK_FAST
+-      cinematicMoves: DISCHARGE
+-      cinematicMoves: THUNDERBOLT
+-      cinematicMoves: WILD_CHARGE
+-      animationTime: 1.8333
+-      animationTime: 0.6667
+-      animationTime: 1.6
+-      animationTime: 1.5667
+-      animationTime: 0
+-      animationTime: 1.8
+-      animationTime: 1.1333
+-      animationTime: 1.06666696
+-      evolutionPips: 1
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 6
+-      parentPokemonId: PICHU
+-      heightStdDev: 0.05
+-      weightStdDev: 0.75
+-      familyId: FAMILY_PIKACHU
+-      kmBuddyDistance: 1
+-      buddy_size: BUDDY_SHOULDER
+-      modelHeight: 0.4
+-      modelScaleV2: 1.1
+-      form: PIKACHU_GOTOUR_2026_A_02
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 11
+-      third_move {
+-        stardustToUnlock: 10000
+-        candyToUnlock: 25
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 1
+-      disableTransferToPokemonHome: true
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
+-  data {
+-    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_B"
+-    pokemonSettings {
+-      pokemonId: PIKACHU
+-      modelScale: 1.48
+-      type: POKEMON_TYPE_ELECTRIC
+-      camera {
+-        diskRadiusM: 0.555
+-        cylinderRadiusM: 0.37
+-        cylinderHeightM: 0.5
+-        shoulderModeScale: 0.5
+-      }
+-      encounter {
+-        collisionRadiusM: 0.16
+-        collisionHeightM: 0.16
+-        collisionHeadRadiusM: 0.13
+-        movementType: MOVEMENT_JUMP
+-        movementTimerS: 10
+-        jumpTimeS: 1
+-        attackTimerS: 29
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 1
+-        cameraDistance: 2.775
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-      }
+-      stats {
+-        baseStamina: 111
+-        baseAttack: 112
+-        baseDefense: 96
+-      }
+-      quickMoves: THUNDER_SHOCK_FAST
+-      quickMoves: QUICK_ATTACK_FAST
+-      cinematicMoves: DISCHARGE
+-      cinematicMoves: THUNDERBOLT
+-      cinematicMoves: WILD_CHARGE
+-      animationTime: 1.8333
+-      animationTime: 0.6667
+-      animationTime: 1.6
+-      animationTime: 1.5667
+-      animationTime: 0
+-      animationTime: 1.8
+-      animationTime: 1.1333
+-      animationTime: 1.06666696
+-      evolutionPips: 1
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 6
+-      parentPokemonId: PICHU
+-      heightStdDev: 0.05
+-      weightStdDev: 0.75
+-      familyId: FAMILY_PIKACHU
+-      kmBuddyDistance: 1
+-      buddy_size: BUDDY_SHOULDER
+-      modelHeight: 0.4
+-      modelScaleV2: 1.1
+-      form: PIKACHU_GOTOUR_2026_B
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 11
+-      third_move {
+-        stardustToUnlock: 10000
+-        candyToUnlock: 25
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 1
+-      disableTransferToPokemonHome: true
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
+-  data {
+-    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_B_02"
+-    pokemonSettings {
+-      pokemonId: PIKACHU
+-      modelScale: 1.48
+-      type: POKEMON_TYPE_ELECTRIC
+-      camera {
+-        diskRadiusM: 0.555
+-        cylinderRadiusM: 0.37
+-        cylinderHeightM: 0.5
+-        shoulderModeScale: 0.5
+-      }
+-      encounter {
+-        collisionRadiusM: 0.16
+-        collisionHeightM: 0.16
+-        collisionHeadRadiusM: 0.13
+-        movementType: MOVEMENT_JUMP
+-        movementTimerS: 10
+-        jumpTimeS: 1
+-        attackTimerS: 29
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 1
+-        cameraDistance: 2.775
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-      }
+-      stats {
+-        baseStamina: 111
+-        baseAttack: 112
+-        baseDefense: 96
+-      }
+-      quickMoves: THUNDER_SHOCK_FAST
+-      quickMoves: QUICK_ATTACK_FAST
+-      cinematicMoves: DISCHARGE
+-      cinematicMoves: THUNDERBOLT
+-      cinematicMoves: WILD_CHARGE
+-      animationTime: 1.8333
+-      animationTime: 0.6667
+-      animationTime: 1.6
+-      animationTime: 1.5667
+-      animationTime: 0
+-      animationTime: 1.8
+-      animationTime: 1.1333
+-      animationTime: 1.06666696
+-      evolutionPips: 1
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 6
+-      parentPokemonId: PICHU
+-      heightStdDev: 0.05
+-      weightStdDev: 0.75
+-      familyId: FAMILY_PIKACHU
+-      kmBuddyDistance: 1
+-      buddy_size: BUDDY_SHOULDER
+-      modelHeight: 0.4
+-      modelScaleV2: 1.1
+-      form: PIKACHU_GOTOUR_2026_B_02
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 11
+-      third_move {
+-        stardustToUnlock: 10000
+-        candyToUnlock: 25
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 1
+-      disableTransferToPokemonHome: true
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
+-  data {
+-    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_C"
+-    pokemonSettings {
+-      pokemonId: PIKACHU
+-      modelScale: 1.48
+-      type: POKEMON_TYPE_ELECTRIC
+-      camera {
+-        diskRadiusM: 0.555
+-        cylinderRadiusM: 0.37
+-        cylinderHeightM: 0.5
+-        shoulderModeScale: 0.5
+-      }
+-      encounter {
+-        collisionRadiusM: 0.16
+-        collisionHeightM: 0.16
+-        collisionHeadRadiusM: 0.13
+-        movementType: MOVEMENT_JUMP
+-        movementTimerS: 10
+-        jumpTimeS: 1
+-        attackTimerS: 29
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 1
+-        cameraDistance: 2.775
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-      }
+-      stats {
+-        baseStamina: 111
+-        baseAttack: 112
+-        baseDefense: 96
+-      }
+-      quickMoves: THUNDER_SHOCK_FAST
+-      quickMoves: QUICK_ATTACK_FAST
+-      cinematicMoves: DISCHARGE
+-      cinematicMoves: THUNDERBOLT
+-      cinematicMoves: WILD_CHARGE
+-      animationTime: 1.8333
+-      animationTime: 0.6667
+-      animationTime: 1.6
+-      animationTime: 1.5667
+-      animationTime: 0
+-      animationTime: 1.8
+-      animationTime: 1.1333
+-      animationTime: 1.06666696
+-      evolutionPips: 1
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 6
+-      parentPokemonId: PICHU
+-      heightStdDev: 0.05
+-      weightStdDev: 0.75
+-      familyId: FAMILY_PIKACHU
+-      kmBuddyDistance: 1
+-      buddy_size: BUDDY_SHOULDER
+-      modelHeight: 0.4
+-      modelScaleV2: 1.1
+-      form: PIKACHU_GOTOUR_2026_C
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 11
+-      third_move {
+-        stardustToUnlock: 10000
+-        candyToUnlock: 25
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 1
+-      disableTransferToPokemonHome: true
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
+-  data {
+-    template_id: "V0025_POKEMON_PIKACHU_GOTOUR_2026_C_02"
+-    pokemonSettings {
+-      pokemonId: PIKACHU
+-      modelScale: 1.48
+-      type: POKEMON_TYPE_ELECTRIC
+-      camera {
+-        diskRadiusM: 0.555
+-        cylinderRadiusM: 0.37
+-        cylinderHeightM: 0.5
+-        shoulderModeScale: 0.5
+-      }
+-      encounter {
+-        collisionRadiusM: 0.16
+-        collisionHeightM: 0.16
+-        collisionHeadRadiusM: 0.13
+-        movementType: MOVEMENT_JUMP
+-        movementTimerS: 10
+-        jumpTimeS: 1
+-        attackTimerS: 29
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 1
+-        cameraDistance: 2.775
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-      }
+-      stats {
+-        baseStamina: 111
+-        baseAttack: 112
+-        baseDefense: 96
+-      }
+-      quickMoves: THUNDER_SHOCK_FAST
+-      quickMoves: QUICK_ATTACK_FAST
+-      cinematicMoves: DISCHARGE
+-      cinematicMoves: THUNDERBOLT
+-      cinematicMoves: WILD_CHARGE
+-      animationTime: 1.8333
+-      animationTime: 0.6667
+-      animationTime: 1.6
+-      animationTime: 1.5667
+-      animationTime: 0
+-      animationTime: 1.8
+-      animationTime: 1.1333
+-      animationTime: 1.06666696
+-      evolutionPips: 1
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 6
+-      parentPokemonId: PICHU
+-      heightStdDev: 0.05
+-      weightStdDev: 0.75
+-      familyId: FAMILY_PIKACHU
+-      kmBuddyDistance: 1
+-      buddy_size: BUDDY_SHOULDER
+-      modelHeight: 0.4
+-      modelScaleV2: 1.1
+-      form: PIKACHU_GOTOUR_2026_C_02
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 11
+-      third_move {
+-        stardustToUnlock: 10000
+-        candyToUnlock: 25
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 1
+-      disableTransferToPokemonHome: true
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
+-    }
+-  }
+-}
+-template {
+-  template_id: "AMS_FEATURE_GATE"
+-  data {
+-    template_id: "AMS_FEATURE_GATE"
+-    featureGate {
+-      status: 24
+-      rolloutPercentage: 100
+-    }
+-  }
+-}
+-template {
+-  template_id: "AMS_FRONTEND_FEATURE_GATE"
+-  data {
+-    template_id: "AMS_FRONTEND_FEATURE_GATE"
+-    featureGate {
+-      status: 1
+-      rolloutPercentage: 100
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hat_communityambassador_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hat_communityambassador_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hat_communityambassador_0_icon"
+-      displayStringId: "avatar_n_hat_communityambassador"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_pose_communityambassador"
+-  data {
+-    template_id: "N_DISPLAY_n_pose_communityambassador"
+-    avatarItemDisplay {
+-      iconAddress: "n_pose_communityambassador_icon"
+-      displayStringId: "avatar_n_pose_communityambassador"
+-    }
+-  }
+-}
+-template {
+-  template_id: "COMBAT_V0492_MOVE_DRUM_BEATING"
+-  data {
+-    template_id: "COMBAT_V0492_MOVE_DRUM_BEATING"
+-    combat_move {
+-      uniqueId: DRUM_BEATING
+-      type: POKEMON_TYPE_GRASS
+-      power: 60
+-      vfxName: "drum_beating"
+-      energyDelta: -35
+-      buffs {
+-        targetAttackStatStageChange: -1
+-        buffActivationChance: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0492_MOVE_DRUM_BEATING"
+-  data {
+-    template_id: "V0492_MOVE_DRUM_BEATING"
+-    moveSettings {
+-      movementId: DRUM_BEATING
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_GRASS
+-      power: 115
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "drum_beating"
+-      durationMs: 4500
+-      damageWindowStartMs: 3000
+-      damageWindowEndMs: 4000
+-      energyDelta: -33
+-    }
+-  }
+-}
+-template {
+-  template_id: "sequence_drum_beating"
+-  data {
+-    template_id: "sequence_drum_beating"
+-    move_sequence_settings {
+-      sequence: "anim attacker atk-move"
+-      sequence: "wait 0.5"
+-      sequence: "vfx drum_beating"
+-      sequence: "sfx attacker 536-0_leaf_tornado"
+-      sequence: "wait 1.0"
+-      sequence: "sys ui-sync"
+-      sequence: "sys complete"
+-    }
+-  }
+-}
+-batch_id: 1768613195318
++batch_id: 1768956869683
+ experiment_id: 11
+ experiment_id: 21
+ experiment_id: 101
+ experiment_id: 150
+-experiment_id: 158
++experiment_id: 159
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 408
+@@ -474891,6 +474896,8 @@
  experiment_id: 3719
  experiment_id: 3728
--experiment_id: 3736
--experiment_id: 3823
--experiment_id: 3824
--experiment_id: 3825
--experiment_id: 3826
--experiment_id: 3827
--experiment_id: 3828
--experiment_id: 3829
--experiment_id: 3848
-+experiment_id: 3737
+ experiment_id: 3737
++experiment_id: 3831
++experiment_id: 3833
  experiment_id: 4998
--experiment_id: 5117
-+experiment_id: 5118
+ experiment_id: 5118
  experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-@@ -474907,7 +474904,7 @@
- experiment_id: 6075
- experiment_id: 7004
- experiment_id: 7007
--experiment_id: 8542
-+experiment_id: 8543
+@@ -474907,6 +474914,7 @@
+ experiment_id: 8543
  experiment_id: 8980
  experiment_id: 8982
++experiment_id: 8983
  experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
+@@ -474918,6 +474926,7 @@
+ experiment_id: 99998
+ experiment_id: 173173
+ experiment_id: 250415
++experiment_id: 1000002
+ experiment_id: 1000890
+ experiment_id: 3500035
+ experiment_id: 3500037
