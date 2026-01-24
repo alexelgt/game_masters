@@ -1,211 +1,479 @@
---- GAME_MASTER_old.txt	2026-01-22 11:59:37.821340922 +0100
-+++ GAME_MASTER.txt	2026-01-22 23:28:29.182192636 +0100
-@@ -339690,10 +339690,10 @@
-       trainerLevelMin: 1
-       trainerLevelMax: 100
-       vfxName: "aura_wheel_electric"
--      durationMs: 2700
-+      durationMs: 2500
-       damageWindowStartMs: 2100
-       damageWindowEndMs: 2500
--      energyDelta: -45
-+      energyDelta: -50
+--- GAME_MASTER_old.txt	2026-01-22 23:28:29.182192636 +0100
++++ GAME_MASTER.txt	2026-01-24 13:23:01.575138389 +0100
+@@ -44866,7 +44866,7 @@
+       rvnVersion: 1
+       maxPlayersPerBreadDoughLobby: 100
+       maxRemotePlayersPerBreadDoughLobby: 100
+-      maxRemoteBreadBattlePassesAllowed: 10
++      maxRemoteBreadBattlePassesAllowed: 20
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 98
+@@ -155153,39 +155153,47 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2026-01-10T14:00:00"
+-        eventEndTime: "2026-01-10T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_KyuremFusionRaidDay"
++        eventStartTime: "2026-02-03T10:00:00"
++        eventEndTime: "2026-02-08T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_CarnivalOFlamigo26"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_09_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Kyurem_FusionDay_v1-1024x576-nologo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Carnival_of_Flamigo_v2-1024x576-nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Kyurem_FusionDay_v1-1024x576-nologo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_KyuremFusionRaidDay"
+-        textRewardsKey: "text_rewards_key_KyuremFusionRaidDay"
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Carnival_of_Flamigo_v2-1024x576-nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CarnivalOFlamigo26"
++        textRewardsKey: "text_rewards_key_CarnivalOFlamigo26"
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_FREE_RAID_TICKET
+-            amount: 8
++          type: AVATAR_CLOTHING
++          neutralAvatarItemTemplate {
++            itemTemplateId: "N_AVATAR_n_pose_tinkatonhammer"
++            displayTemplateId: "N_DISPLAY_n_pose_tinkatonhammer"
+           }
+         }
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_XL_RARE_CANDY
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemonId: FLAMIGO
++            pokemonDisplay {
++              form: FLAMIGO_NORMAL
++            }
+           }
+         }
+         iconRewards {
+-          type: STARDUST
+-          stardust: 2
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemonId: SPRITZEE
++            pokemonDisplay {
++              form: SPRITZEE_NORMAL
++            }
++          }
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1768053600000
+-        clientEventEndTimeUtcMs: 1768064400000
++        clientEventStartTimeUtcMs: 1770112800000
++        clientEventEndTimeUtcMs: 1770580800000
+       }
+-      nameOverride: "general1.ticket._KyuremFusionRaidDay_title"
+-      descriptionOverride: "item_event_ticket_gray_desc_KyuremFusionRaidDay"
++      nameOverride: "general1.ticket.5_CarnivalOFlamigo26_title"
++      descriptionOverride: "item_event_ticket_evergreen_desc_CarnivalOFlamigo26"
      }
    }
  }
-@@ -339879,10 +339879,10 @@
-       trainerLevelMin: 1
-       trainerLevelMax: 100
-       vfxName: "aura_wheel_electric"
--      durationMs: 2700
-+      durationMs: 2500
-       damageWindowStartMs: 2100
-       damageWindowEndMs: 2500
--      energyDelta: -45
-+      energyDelta: -50
+@@ -155198,17 +155206,17 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2026-01-10T14:00:00"
+-        eventEndTime: "2026-01-10T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_KyuremFusionRaidDay"
++        eventStartTime: "2026-02-03T10:00:00"
++        eventEndTime: "2026-02-08T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_evergreen_details_CarnivalOFlamigo26"
+         ticketItem: ITEM_EVENT_TICKET_09
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Kyurem_FusionDay_v1-1024x576-nologo.jpg"
+-        clientEventStartTimeUtcMs: 1768053600000
+-        clientEventEndTimeUtcMs: 1768064400000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Carnival_of_Flamigo_v2-1024x576-nologo.jpg"
++        clientEventStartTimeUtcMs: 1770112800000
++        clientEventEndTimeUtcMs: 1770580800000
+       }
+       ignoreInventorySpace: true
+-      nameOverride: "general1.ticket._KyuremFusionRaidDay_title"
+-      descriptionOverride: "item_event_ticket_gray_details_KyuremFusionRaidDay"
++      nameOverride: "general1.ticket.5_CarnivalOFlamigo26_title"
++      descriptionOverride: "item_event_ticket_evergreen_details_CarnivalOFlamigo26"
      }
    }
  }
-@@ -351645,13 +351645,13 @@
-       movementId: FLOWER_TRICK
-       animationId: 5
-       pokemonType: POKEMON_TYPE_GRASS
--      power: 75
-+      power: 85
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-       trainerLevelMax: 100
-       vfxName: "flower_trick"
--      durationMs: 2700
-+      durationMs: 3000
-       damageWindowStartMs: 1800
-       damageWindowEndMs: 2700
+@@ -155301,42 +155309,33 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-09-16T00:00:00"
+-        eventEndTime: "2025-09-21T23:59:59"
+-        itemBagDescriptionKey: "item_event_ticket_gray_desc_PsychicSpecTGR"
++        eventStartTime: "2026-01-31T06:00:00"
++        eventEndTime: "2026-02-01T21:00:00"
++        itemBagDescriptionKey: "item_event_ticket_08_desc_gmaxHooh26"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_GRAY_TO_GIFT
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Psychic_Spectacular_2025_Ticket_v1-1024x576-nologo.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Psychic_Spectacular_2025_Ticket_v1-1024x576-nologo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_PsychicSpecTGR"
+-        textRewardsKey: "text_rewards_key_PsychicSpecTGR"
+-        iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemonId: WYRDEER
+-          }
+-        }
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_dmaxHooh26"
++        textRewardsKey: "text_rewards_key_dmaxHooh26"
+         iconRewards {
+           type: ITEM
+           item {
+-            item: ITEM_GIOVANNI_MAP
+-            amount: 1
++            item: ITEM_MP
++            amount: 6400
+           }
+         }
+         iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_PAID_RAID_TICKET
+-            amount: 2
+-          }
++          type: EXPERIENCE
++          exp: 2
+         }
+         detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1757980800000
+-        clientEventEndTimeUtcMs: 1758499199000
++        clientEventStartTimeUtcMs: 1769839200000
++        clientEventEndTimeUtcMs: 1769979600000
+       }
+-      nameOverride: "general1.ticket.5_PsychicSpecTGR_title"
+-      descriptionOverride: "item_event_ticket_gray_desc_PsychicSpecTGR"
++      nameOverride: "general1.ticket.6_dmaxHooh26_title"
++      descriptionOverride: "item_event_ticket_08_desc_gmaxHooh26"
+     }
+   }
+ }
+@@ -155349,16 +155348,16 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2025-09-16T00:00:00"
+-        eventEndTime: "2025-09-21T23:59:59"
+-        itemBagDescriptionKey: "item_event_ticket_gray_details_PsychicSpecTGR"
++        eventStartTime: "2026-01-31T06:00:00"
++        eventEndTime: "2026-02-01T21:00:00"
++        itemBagDescriptionKey: "item_event_ticket_08_details_gmaxHooh26"
+         ticketItem: ITEM_EVENT_TICKET_GRAY
+-        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Psychic_Spectacular_2025_Ticket_v1-1024x576-nologo.jpg"
+-        clientEventStartTimeUtcMs: 1757980800000
+-        clientEventEndTimeUtcMs: 1758499199000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
++        clientEventStartTimeUtcMs: 1769839200000
++        clientEventEndTimeUtcMs: 1769979600000
+       }
+       ignoreInventorySpace: true
+-      descriptionOverride: "item_event_ticket_gray_details_PsychicSpecTGR"
++      descriptionOverride: "item_event_ticket_08_details_gmaxHooh26"
+     }
+   }
+ }
+@@ -158735,6 +158734,17 @@
+   }
+ }
+ template {
++  template_id: "LC_2026_LOSANGELES_GOTOUR_001"
++  data {
++    template_id: "LC_2026_LOSANGELES_GOTOUR_001"
++    locationCardSettings {
++      locationCard: 214
++      imageUrl: "lc_GoTour2026_losAngeles"
++      cardType: LOCATION_CARD
++    }
++  }
++}
++template {
+   template_id: "LC_2026_PPK_001"
+   data {
+     template_id: "LC_2026_PPK_001"
+@@ -158745,6 +158755,17 @@
+   }
+ }
+ template {
++  template_id: "LC_2026_TAINAN_GOTOUR_001"
++  data {
++    template_id: "LC_2026_TAINAN_GOTOUR_001"
++    locationCardSettings {
++      locationCard: 215
++      imageUrl: "lc_GoTour2026_tainan"
++      cardType: LOCATION_CARD
++    }
++  }
++}
++template {
+   template_id: "LC_CITYSAFARI2025_BUENOSAIRES"
+   data {
+     template_id: "LC_CITYSAFARI2025_BUENOSAIRES"
+@@ -159164,6 +159185,39 @@
+   }
+ }
+ template {
++  template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_MEGA_001"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_MEGA_001"
++    locationCardSettings {
++      locationCard: 224
++      imageUrl: "sb_GoTour2026_mega"
++      cardType: SPECIAL_BACKGROUND
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_X_001"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_X_001"
++    locationCardSettings {
++      locationCard: 222
++      imageUrl: "sb_GoTour2026_x"
++      cardType: SPECIAL_BACKGROUND
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_Y_001"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_Y_001"
++    locationCardSettings {
++      locationCard: 223
++      imageUrl: "sb_GoTour2026_y"
++      cardType: SPECIAL_BACKGROUND
++    }
++  }
++}
++template {
+   template_id: "LC_SPECIALBACKGROUND_CON2025"
+   data {
+     template_id: "LC_SPECIALBACKGROUND_CON2025"
+@@ -184621,7 +184675,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 20
+     }
+   }
+ }
+@@ -318939,7 +318993,6 @@
+       damageWindowStartMs: 1000
+       damageWindowEndMs: 1800
        energyDelta: -33
-@@ -353083,13 +353083,13 @@
-       movementId: THUNDER_CAGE
-       animationId: 5
-       pokemonType: POKEMON_TYPE_ELECTRIC
--      power: 220
-+      power: 230
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-       trainerLevelMax: 100
-       vfxName: "thunder_cage"
--      durationMs: 3300
-+      durationMs: 3500
-       damageWindowStartMs: 1880
-       damageWindowEndMs: 3200
-       energyDelta: -100
-@@ -355976,13 +355976,13 @@
-       movementId: CLANGING_SCALES
-       animationId: 5
-       pokemonType: POKEMON_TYPE_DRAGON
--      power: 120
-+      power: 130
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-       trainerLevelMax: 100
-       vfxName: "clanging_scales"
--      durationMs: 3300
-+      durationMs: 3500
-       damageWindowStartMs: 1880
-       damageWindowEndMs: 3200
-       energyDelta: -100
-@@ -356290,13 +356290,13 @@
-       movementId: CRUSH_GRIP
-       animationId: 5
-       pokemonType: POKEMON_TYPE_NORMAL
--      power: 210
-+      power: 230
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-       trainerLevelMax: 100
-       vfxName: "crush_grip"
--      durationMs: 1800
-+      durationMs: 2000
-       damageWindowStartMs: 700
-       damageWindowEndMs: 1700
-       energyDelta: -100
-@@ -356512,13 +356512,13 @@
-       movementId: DRAGON_ENERGY
-       animationId: 5
-       pokemonType: POKEMON_TYPE_DRAGON
--      power: 155
-+      power: 165
-       accuracyChance: 1
-       staminaLossScalar: 0.01
-       trainerLevelMin: 1
-       trainerLevelMax: 100
-       vfxName: "dragon_energy"
--      durationMs: 3300
-+      durationMs: 3500
-       damageWindowStartMs: 1880
-       damageWindowEndMs: 3200
-       energyDelta: -50
-@@ -467464,14 +467464,14 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.5"
--      title: "general1.ticket.5_PsychicSpecTGR_title"
-+      spriteId: "general1.ticket.4"
-+      title: "general1.ticket.6_dmaxHooh26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-21T23:59:59"
-+      skuDisableTime: "2026-02-01T21:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1758499199000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Psychic_Spectacular_2025_Ticket_v1-1024x576-nologo.jpg"
--      webstoreSkuId: "web-super-rocket-radar-ticket-box"
-+      skuDisableTimeUtcMs: 1769979600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
-+      webstoreSkuId: "web-dmax-ho-oh-26-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -467485,13 +467485,13 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.5"
--      title: "general1.ticket.5_PsychicSpecTGR_title"
-+      spriteId: "general1.ticket.4"
-+      title: "general1.ticket.6_dmaxHooh26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-21T23:59:59"
-+      skuDisableTime: "2026-02-01T21:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1758499199000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Psychic_Spectacular_2025_Ticket_v1-1024x576-nologo.jpg"
-+      skuDisableTimeUtcMs: 1769979600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
+-      isLocked: true
      }
    }
  }
-@@ -468481,8 +468481,12 @@
-       category: IAP_CATEGORY_BUNDLE
+@@ -465587,7 +465640,7 @@
        sortOrder: 1
        hidden: true
--      spriteId: "bundle.general2.large.1"
-+      spriteId: "bundle1.sprite.a"
-       title: "battle_box"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2026-01-25T23:59:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1769385540000
+       spriteId: "bundle.general.adventure.1"
+-      title: "hatch_box"
++      title: "bundle.xmas.large.1_title"
      }
    }
  }
-@@ -469249,14 +469253,14 @@
+@@ -467262,9 +467315,15 @@
+       sku: "bundle.zzraid.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general.premiumbox.medium.1"
+       title: "standard_raid_box_title"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2026-01-24T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1769284800000
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 590
+     }
+   }
+ }
+@@ -467760,7 +467819,6 @@
+       sku: "general2.ticket.6"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.5"
--      title: "general1.ticket.5_PsychicSpecTGR_title"
-+      spriteId: "general1.ticket.4"
-+      title: "general1.ticket.6_dmaxHooh26_title"
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket.6_ShadowRaikouRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-21T23:59:59"
-+      skuDisableTime: "2026-02-01T21:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1758499199000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Psychic_Spectacular_2025_Ticket_v1-1024x576-nologo.jpg"
--      webstoreSkuId: "web-super-rocket-radar-ticket-box"
-+      skuDisableTimeUtcMs: 1769979600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
-+      webstoreSkuId: "web-dmax-ho-oh-26-ticket-box"
+@@ -467781,7 +467839,6 @@
+       sku: "general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket.6_ShadowRaikouRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -467879,15 +467936,16 @@
+     iapItemDisplay {
+       sku: "general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general1.ticket._KyuremFusionRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2026-01-10T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1768064400000
+-      webstoreSkuId: "web-kyurem-raid-day-ticket-box"
++      title: "general1.ticket.5_CarnivalOFlamigo26_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2026-02-08T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1770580800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Carnival_of_Flamigo_v2-1024x576-nologo.jpg"
++      webstoreSkuId: "web-carnival-flamigo-ticket-box"
        webstoreSkuPriceE6: 4990000
      }
    }
-@@ -469270,13 +469274,13 @@
+@@ -467899,14 +467957,15 @@
+     iapItemDisplay {
+       sku: "general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general1.ticket._KyuremFusionRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2026-01-10T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1768064400000
++      title: "general1.ticket.5_CarnivalOFlamigo26_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2026-02-08T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1770580800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Carnival_of_Flamigo_v2-1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -468480,7 +468539,7 @@
+       sku: "pgorelease.bundle.general.thirdparty.medium.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
++      sale: true
+       spriteId: "bundle1.sprite.a"
+       title: "battle_box"
+       skuEnableTime: "2019-10-31T21:00:00"
+@@ -469530,7 +469589,6 @@
+       sku: "pgorelease.general2.ticket.6"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.5"
--      title: "general1.ticket.5_PsychicSpecTGR_title"
-+      spriteId: "general1.ticket.4"
-+      title: "general1.ticket.6_dmaxHooh26_title"
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket.6_ShadowRaikouRaidDay_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2025-09-21T23:59:59"
-+      skuDisableTime: "2026-02-01T21:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1758499199000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Psychic_Spectacular_2025_Ticket_v1-1024x576-nologo.jpg"
-+      skuDisableTimeUtcMs: 1769979600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
+@@ -469551,7 +469609,6 @@
+       sku: "pgorelease.general2.ticket.6.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket.6_ShadowRaikouRaidDay_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -469649,15 +469706,16 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general1.ticket._KyuremFusionRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2026-01-10T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1768064400000
+-      webstoreSkuId: "web-kyurem-raid-day-ticket-box"
++      title: "general1.ticket.5_CarnivalOFlamigo26_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2026-02-08T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1770580800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Carnival_of_Flamigo_v2-1024x576-nologo.jpg"
++      webstoreSkuId: "web-carnival-flamigo-ticket-box"
+       webstoreSkuPriceE6: 4990000
+     }
+   }
+@@ -469669,14 +469727,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
++      sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.9"
+-      title: "general1.ticket._KyuremFusionRaidDay_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2026-01-10T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1768064400000
++      title: "general1.ticket.5_CarnivalOFlamigo26_title"
++      skuEnableTime: "2023-04-06T10:00:00"
++      skuDisableTime: "2026-02-08T20:00:00"
++      skuEnableTimeUtcMs: 1680775200000
++      skuDisableTimeUtcMs: 1770580800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Carnival_of_Flamigo_v2-1024x576-nologo.jpg"
      }
    }
  }
-@@ -474951,7 +474955,7 @@
+@@ -474955,7 +475014,7 @@
      }
    }
  }
--batch_id: 1769034298140
-+batch_id: 1769119793424
+-batch_id: 1769119793424
++batch_id: 1769216751680
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
+@@ -474975,9 +475034,11 @@
+ experiment_id: 1118
+ experiment_id: 1119
+ experiment_id: 1699
++experiment_id: 2231
+ experiment_id: 2297
+ experiment_id: 2600
+ experiment_id: 2650
++experiment_id: 2700
+ experiment_id: 2901
+ experiment_id: 3032
+ experiment_id: 3033
+@@ -474985,11 +475046,17 @@
+ experiment_id: 3710
+ experiment_id: 3712
+ experiment_id: 3719
+-experiment_id: 3728
++experiment_id: 3729
+ experiment_id: 3737
+ experiment_id: 3831
+ experiment_id: 3833
++experiment_id: 3834
++experiment_id: 3835
++experiment_id: 4975
++experiment_id: 4979
++experiment_id: 4980
+ experiment_id: 4998
++experiment_id: 5119
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
