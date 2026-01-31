@@ -1,255 +1,565 @@
---- GAME_MASTER_old.txt	2026-01-28 18:21:31.829674960 +0100
-+++ GAME_MASTER.txt	2026-01-29 18:24:43.691111012 +0100
-@@ -155162,8 +155162,8 @@
-         iconRewards {
-           type: AVATAR_CLOTHING
-           neutralAvatarItemTemplate {
--            itemTemplateId: "N_AVATAR_n_pose_tinkatonhammer"
--            displayTemplateId: "N_DISPLAY_n_pose_tinkatonhammer"
-+            itemTemplateId: "N_AVATAR_n_pose_carnival"
-+            displayTemplateId: "N_DISPLAY_n_pose_carnival"
-           }
-         }
-         iconRewards {
-@@ -462729,6 +462729,33 @@
-           }
-         }
+--- GAME_MASTER_old.txt	2026-01-29 18:24:43.691111012 +0100
++++ GAME_MASTER.txt	2026-01-31 12:40:18.980059251 +0100
+@@ -158,7 +158,6 @@
+       excludedPokemonIds: SILVALLY
+       excludedPokemonIds: MINIOR
+       excludedPokemonIds: MAGEARNA
+-      excludedPokemonIds: ZERAORA
+       excludedPokemonIds: BLIPBUG
+       excludedPokemonIds: DOTTLER
+       excludedPokemonIds: ORBEETLE
+@@ -199,7 +198,6 @@
+       excludedPokemonIds: PALAFIN
+       excludedPokemonIds: CYCLIZAR
+       excludedPokemonIds: ORTHWORM
+-      excludedPokemonIds: FLAMIGO
+       excludedPokemonIds: VELUZA
+       excludedPokemonIds: FARIGIRAF
+       excludedPokemonIds: GREATTUSK
+@@ -466,6 +464,10 @@
+         excludedForms: WISHIWASHI_SCHOOL
        }
-+      availablePokemon {
-+        pokemon {
-+          pokemonId: TORNADUS
-+          pokemonDisplay {
-+            form: TORNADUS_INCARNATE
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
+       pokemonWithExcludedForms {
++        pokemonId: MIMIKYU
++        excludedForms: MIMIKYU_BUSTED
 +      }
++      pokemonWithExcludedForms {
+         pokemonId: NECROZMA
+         excludedForms: NECROZMA_ULTRA
+       }
+@@ -86846,13 +86848,13 @@
+       sku: "pgorelease.month3_deluxe_event_pass_track_redirect"
+       sortOrder: 1
+       hidden: true
+-      title: "season_pass_premium_track_title_nov"
++      title: "season_pass_premium_track_title_feb"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2024-11-04T10:00:00"
+-      skuDisableTime: "2024-12-04T10:00:00"
+-      skuEnableTimeUtcMs: 1730714400000
+-      skuDisableTimeUtcMs: 1733306400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_NOV_v1-1024x576-nologo.jpg"
++      skuEnableTime: "2025-02-03T10:00:00"
++      skuDisableTime: "2026-03-05T10:00:00"
++      skuEnableTimeUtcMs: 1738576800000
++      skuDisableTimeUtcMs: 1772704800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GO_Pass_February_TICKET_v1-1024x576-nologo.jpg"
      }
    }
  }
-@@ -463301,6 +463328,33 @@
-           }
-         }
+@@ -153335,6 +153337,8 @@
+         multiplier: 4
+         randomWeight: 0.1
        }
-+      availablePokemon {
-+        pokemon {
-+          pokemonId: TORNADUS
-+          pokemonDisplay {
-+            form: TORNADUS_INCARNATE
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-       rewardTrack: PREMIUM
-     }
-   }
-@@ -467644,7 +467698,6 @@
-       sku: "general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vulpix26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -467665,7 +467718,6 @@
-       sku: "general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vulpix26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -469417,7 +469469,6 @@
-       sku: "pgorelease.general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vulpix26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -469438,7 +469489,6 @@
-       sku: "pgorelease.general2.ticket.3.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
--      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Vulpix26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -475389,7 +475439,115 @@
++      4: 1
++      5: 1
      }
    }
  }
--batch_id: 1769559307987
+@@ -154611,7 +154615,6 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 250
+         }
+       }
+     }
+@@ -154628,7 +154631,7 @@
+       ignoreInventorySpace: true
+       itemCap: 999999
+       eventPassPoint {
+-        eventPassId: "EVENT_PASS_NOVEMBER2025_SEASON"
++        eventPassId: "EVENT_PASS_FEBRUARY2026_SEASON"
+       }
+       timePeriodCounters {
+         playerActivity {
+@@ -154668,46 +154671,30 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2026-01-06T10:00:00"
+-        eventEndTime: "2026-01-11T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_02_desc_PINCH_PERFECT"
++        eventStartTime: "2026-02-07T10:00:00"
++        eventEndTime: "2026-02-07T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_02_desc_CATCH_MASTERY_ORICORIO"
+         giftable: true
+         giftItem: ITEM_EVENT_TICKET_02_TO_GIFT
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_archen_catch_mastery_2025.jpg"
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20260113_pgo_s22_oricorio_1024x576_nologo.jpg"
+         displayV2Enabled: true
+-        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Surf_Turf_LiveOp_v3_1024x576-nologo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_PINCH_PERFECT"
+-        textRewardsKey: "text_rewards_key_PINCH_PERFECT"
+-        iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemonId: KLAWF
+-            pokemonDisplay {
+-              form: KLAWF_NORMAL
+-            }
+-          }
+-        }
++        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20260113_pgo_s22_oricorio_1024x576_nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CATCH_MASTERY_ORICORIO"
++        textRewardsKey: "text_rewards_key_CATCH_MASTERY_ORICORIO"
+         iconRewards {
+           type: EXPERIENCE
+-          exp: 19000
+-        }
+-        iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_PAID_RAID_TICKET
+-          }
++          exp: 12000
+         }
+         iconRewards {
+-          item {
+-            amount: 2
+-          }
++          type: STARDUST
++          stardust: 3000
+         }
+-        detailsLinkKey: "details_link_key_PINCH_PERFECT_EVENT_NAME_JAN2026"
+-        clientEventStartTimeUtcMs: 1767693600000
+-        clientEventEndTimeUtcMs: 1768161600000
++        detailsLinkKey: "details_link_key_ORICORIO_MASTERY_FEB2026"
++        clientEventStartTimeUtcMs: 1770458400000
++        clientEventEndTimeUtcMs: 1770494400000
+       }
+-      nameOverride: "general2.ticket2.PINCH_PERFECT"
+-      descriptionOverride: "item_event_ticket_02_details_PINCH_PERFECT"
++      nameOverride: "general2.ticket2.CATCH_MASTERY_ORICORIO"
++      descriptionOverride: "item_event_ticket_02_details_CATCH_MASTERY_ORICORIO"
+     }
+   }
+ }
+@@ -154720,17 +154707,17 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2026-01-06T10:00:00"
+-        eventEndTime: "2026-01-11T20:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_02_desc_PINCH_PERFECT"
++        eventStartTime: "2026-02-07T10:00:00"
++        eventEndTime: "2026-02-07T20:00:00"
++        itemBagDescriptionKey: "item_event_ticket_02_desc_CATCH_MASTERY_ORICORIO"
+         ticketItem: ITEM_EVENT_TICKET_02
+-        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo_archen_catch_mastery_2025.jpg"
+-        clientEventStartTimeUtcMs: 1767693600000
+-        clientEventEndTimeUtcMs: 1768161600000
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20260113_pgo_s22_oricorio_1024x576_nologo.jpg"
++        clientEventStartTimeUtcMs: 1770458400000
++        clientEventEndTimeUtcMs: 1770494400000
+       }
+       ignoreInventorySpace: true
+-      nameOverride: "general2.ticket2.PINCH_PERFECT"
+-      descriptionOverride: "item_event_ticket_02_details_PINCH_PERFECT"
++      nameOverride: "general2.ticket2.CATCH_MASTERY_ORICORIO"
++      descriptionOverride: "item_event_ticket_02_details_CATCH_MASTERY_ORICORIO"
+     }
+   }
+ }
+@@ -155581,8 +155568,8 @@
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_03"
+     itemExpirationSettings {
+       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_03
+-      expirationTime: "2025-12-04T10:00:00"
+-      emergencyExpirationTime: "2025-12-06T10:00:00"
++      expirationTime: "2026-03-05T10:00:00"
++      emergencyExpirationTime: "2026-03-07T10:00:00"
+     }
+   }
+ }
+@@ -163723,13 +163710,13 @@
+       sku: "pgorelease.month3_deluxe_event_pass_track_unlock"
+       sortOrder: 1
+       hidden: true
+-      title: "season_pass_premium_track_title_nov"
++      title: "season_pass_premium_track_title_feb"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2024-11-04T10:00:00"
+-      skuDisableTime: "2024-12-04T10:00:00"
+-      skuEnableTimeUtcMs: 1730714400000
+-      skuDisableTimeUtcMs: 1733306400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_NOV_v1-1024x576-nologo.jpg"
++      skuEnableTime: "2025-02-03T10:00:00"
++      skuDisableTime: "2026-03-05T10:00:00"
++      skuEnableTimeUtcMs: 1738576800000
++      skuDisableTimeUtcMs: 1772704800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GO_Pass_February_TICKET_v1-1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -163741,13 +163728,13 @@
+       sku: "pgorelease.month3_deluxe_event_pass_track_unlock_plus_points"
+       sortOrder: 1
+       hidden: true
+-      title: "season_pass_premium_track_plus_ten_ranks_title_nov"
++      title: "season_pass_premium_track_plus_ten_ranks_title_feb"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
+-      skuEnableTime: "2024-11-04T10:00:00"
+-      skuDisableTime: "2024-12-04T10:00:00"
+-      skuEnableTimeUtcMs: 1730714400000
+-      skuDisableTimeUtcMs: 1733306400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_NOV_v1-1024x576-nologo.jpg"
++      skuEnableTime: "2025-02-03T10:00:00"
++      skuDisableTime: "2026-03-05T10:00:00"
++      skuEnableTimeUtcMs: 1738576800000
++      skuDisableTimeUtcMs: 1772704800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GO_Pass_February_TICKET_v1-1024x576-nologo.jpg"
+     }
+   }
+ }
+@@ -163757,12 +163744,12 @@
+     template_id: "MP_SHARED_SETTINGS"
+     mpSettings {
+       numMpFromWalkQuest: 300
+-      numMetersGoal: 2000
++      numMetersGoal: 500
+       debugAllowRemoveWalkQuest: true
+-      numMpFromLootStation: 100
++      numMpFromLootStation: 800
+       numExtraMpFromFirstLootStation: 20
+       mpCapacity: 1500
+-      mpBaseDailyLimit: 800
++      mpBaseDailyLimit: 1600
+       mpClaimParticleSpeedMultiplier: 1
+       battleMpCostPerTier {
+         breadBattleCatchMpCost: 250
+@@ -452550,13 +452537,18 @@
+       type: POKEMON_TYPE_FLYING
+       type2: POKEMON_TYPE_FIGHTING
+       camera {
++        cylinderRadiusM: 0.4
++        cylinderHeightM: 1.6
+       }
+       encounter {
++        collisionRadiusM: 0.4
++        collisionHeightM: 1.6
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 4.8
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+@@ -452569,13 +452561,18 @@
+       quickMoves: DOUBLE_KICK_FAST
+       cinematicMoves: AERIAL_ACE
+       cinematicMoves: BRAVE_BIRD
+-      cinematicMoves: CLOSE_COMBAT
++      cinematicMoves: UPPER_HAND
+       pokedexHeightM: 1.6
+       pokedexWeightKg: 37
+       heightStdDev: 0.2
+       weightStdDev: 4.625
+       familyId: FAMILY_FLAMIGO
+       kmBuddyDistance: 3
++      modelHeight: 1.6
++      modelScaleV2: 1
++      buddyPortraitOffset: -20
++      buddyPortraitOffset: 30
++      buddyPortraitOffset: 200
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+@@ -452583,6 +452580,9 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: -10
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -452598,13 +452598,18 @@
+       type: POKEMON_TYPE_FLYING
+       type2: POKEMON_TYPE_FIGHTING
+       camera {
++        cylinderRadiusM: 0.4
++        cylinderHeightM: 1.6
+       }
+       encounter {
++        collisionRadiusM: 0.4
++        collisionHeightM: 1.6
+         movementType: MOVEMENT_JUMP
+         jumpTimeS: 1
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 4.8
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+@@ -452617,14 +452622,19 @@
+       quickMoves: DOUBLE_KICK_FAST
+       cinematicMoves: AERIAL_ACE
+       cinematicMoves: BRAVE_BIRD
+-      cinematicMoves: CLOSE_COMBAT
++      cinematicMoves: UPPER_HAND
+       pokedexHeightM: 1.6
+       pokedexWeightKg: 37
+       heightStdDev: 0.2
+       weightStdDev: 4.625
+       familyId: FAMILY_FLAMIGO
+       kmBuddyDistance: 3
++      modelHeight: 1.6
++      modelScaleV2: 1
+       form: FLAMIGO_NORMAL
++      buddyPortraitOffset: -20
++      buddyPortraitOffset: 30
++      buddyPortraitOffset: 200
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+@@ -452632,6 +452642,9 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: -10
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -464315,10 +464328,13 @@
+       sku: "bundle.cd2022.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       sale: true
+-      spriteId: "bundle.halloween.small.1"
+-      title: "bundle.halloween.small.1_title"
++      spriteId: "bundle.general4.small.1"
++      title: "bundle.general4.small.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2026-02-01T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1769990399000
+     }
+   }
+ }
+@@ -464330,10 +464346,13 @@
+       sku: "bundle.cd2022.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 2
+-      hidden: true
+       sale: true
+-      spriteId: "bundle.halloween.adventure.1"
+-      title: "bundle.halloween.adventure.1_title"
++      spriteId: "bundle.general1.medium.1"
++      title: "bundle.general1.medium.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2026-02-01T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1769990399000
+     }
+   }
+ }
+@@ -465092,9 +465111,12 @@
+       sku: "bundle.gmaxday.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle3.sprite.d"
+       title: "ace_box_title"
++      skuEnableTime: "2019-10-31T21:00:00"
++      skuDisableTime: "2026-02-01T20:00:00"
++      skuEnableTimeUtcMs: 1572555600000
++      skuDisableTimeUtcMs: 1769976000000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+       totalValue: 1000
+@@ -467520,7 +467542,6 @@
+       sku: "general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.6_dmaxHooh26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -467541,7 +467562,6 @@
+       sku: "general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.6_dmaxHooh26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -467660,13 +467680,13 @@
+       sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.2"
+-      title: "general2.ticket2.PINCH_PERFECT"
++      title: "general2.ticket2.CATCH_MASTERY_ORICORIO"
+       skuEnableTime: "2023-01-01T11:00:03"
+-      skuDisableTime: "2026-01-11T20:00:00"
++      skuDisableTime: "2026-02-07T20:00:00"
+       skuEnableTimeUtcMs: 1672570803000
+-      skuDisableTimeUtcMs: 1768161600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Surf_Turf_LiveOp_v3_1024x576-nologo.jpg"
+-      webstoreSkuId: "web-surf-and-turf-ticket-box"
++      skuDisableTimeUtcMs: 1770494400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20260113_pgo_s22_oricorio_1024x576_nologo.jpg"
++      webstoreSkuId: "web-catch-mastery-feb-26-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -467681,12 +467701,12 @@
+       sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.2"
+-      title: "general2.ticket2.PINCH_PERFECT"
++      title: "general2.ticket2.CATCH_MASTERY_ORICORIO"
+       skuEnableTime: "2023-01-01T11:00:03"
+-      skuDisableTime: "2026-01-11T20:00:00"
++      skuDisableTime: "2026-02-07T20:00:00"
+       skuEnableTimeUtcMs: 1672570803000
+-      skuDisableTimeUtcMs: 1768161600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Surf_Turf_LiveOp_v3_1024x576-nologo.jpg"
++      skuDisableTimeUtcMs: 1770494400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20260113_pgo_s22_oricorio_1024x576_nologo.jpg"
+     }
+   }
+ }
+@@ -469310,7 +469330,6 @@
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.6_dmaxHooh26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -469331,7 +469350,6 @@
+       sku: "pgorelease.general1.ticket.5.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.6_dmaxHooh26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -469431,13 +469449,13 @@
+       sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.2"
+-      title: "general2.ticket2.PINCH_PERFECT"
++      title: "general2.ticket2.CATCH_MASTERY_ORICORIO"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2026-01-11T20:00:00"
++      skuDisableTime: "2026-02-07T20:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1768161600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Surf_Turf_LiveOp_v3_1024x576-nologo.jpg"
+-      webstoreSkuId: "web-surf-and-turf-ticket-box"
++      skuDisableTimeUtcMs: 1770494400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20260113_pgo_s22_oricorio_1024x576_nologo.jpg"
++      webstoreSkuId: "web-catch-mastery-feb-26-ticket-box"
+       webstoreSkuPriceE6: 1990000
+     }
+   }
+@@ -469452,12 +469470,12 @@
+       sortOrder: 1
+       hidden: true
+       spriteId: "general2.ticket.2"
+-      title: "general2.ticket2.PINCH_PERFECT"
++      title: "general2.ticket2.CATCH_MASTERY_ORICORIO"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2026-01-11T20:00:00"
++      skuDisableTime: "2026-02-07T20:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1768161600000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Surf_Turf_LiveOp_v3_1024x576-nologo.jpg"
++      skuDisableTimeUtcMs: 1770494400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F20260113_pgo_s22_oricorio_1024x576_nologo.jpg"
+     }
+   }
+ }
+@@ -475547,7 +475565,47 @@
+     }
+   }
+ }
+-batch_id: 1769702396742
 +template {
-+  template_id: "BADGE_EVENT_0153"
++  template_id: "N_DISPLAY_n_shirt_gotour2026-black_0"
 +  data {
-+    template_id: "BADGE_EVENT_0153"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0153
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_2026_COLOGNE_CARNIVAL_001"
-+  data {
-+    template_id: "LC_2026_COLOGNE_CARNIVAL_001"
-+    locationCardSettings {
-+      locationCard: 244
-+      imageUrl: "lc_carnivalFlamigo_cologne_2026"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_2026_RIODEJANEIRO_CARNIVAL_001"
-+  data {
-+    template_id: "LC_2026_RIODEJANEIRO_CARNIVAL_001"
-+    locationCardSettings {
-+      locationCard: 243
-+      imageUrl: "lc_carnivalFlamigo_rio_2026"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_pose_carnival"
-+  data {
-+    template_id: "N_DISPLAY_n_pose_carnival"
++    template_id: "N_DISPLAY_n_shirt_gotour2026-black_0"
 +    avatarItemDisplay {
-+      iconAddress: "n_pose_carnival_icon"
-+      displayStringId: "avatar_pose_carnival"
++      iconAddress: "n_shirt_gotour2026-black_0_icon"
++      displayStringId: "avatar_shirt_gotour_black"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_PGO_TOUR_2026"
++  template_id: "N_DISPLAY_n_shirt_gotour2026-gray_0"
 +  data {
-+    template_id: "STICKER_PGO_TOUR_2026"
-+    stickerMetadata {
-+      stickerId: "STICKER_PGO_TOUR_2026"
-+      maxCount: 25
-+      category: "Misc"
-+      releaseDate: 20250212
++    template_id: "N_DISPLAY_n_shirt_gotour2026-gray_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_gotour2026-gray_0_icon"
++      displayStringId: "avatar_shirt_gotour_grey"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_PGO_TOUR_2026_1"
++  template_id: "N_DISPLAY_n_shirt_shinydiancie"
 +  data {
-+    template_id: "STICKER_PGO_TOUR_2026_1"
-+    stickerMetadata {
-+      stickerId: "STICKER_PGO_TOUR_2026_1"
-+      maxCount: 25
-+      category: "Pokemon"
-+      releaseDate: 20250212
-+      regionId: 2000
++    template_id: "N_DISPLAY_n_shirt_shinydiancie"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_shinydiancie_icon"
++      displayStringId: "avatar_shirt_shinydiancie"
 +    }
 +  }
 +}
 +template {
-+  template_id: "STICKER_PGO_TOUR_2026_2"
++  template_id: "N_DISPLAY_n_shirt_zygarde100items_0"
 +  data {
-+    template_id: "STICKER_PGO_TOUR_2026_2"
-+    stickerMetadata {
-+      stickerId: "STICKER_PGO_TOUR_2026_2"
-+      maxCount: 25
-+      category: "Pokemon"
-+      releaseDate: 20250212
-+      regionId: 5
++    template_id: "N_DISPLAY_n_shirt_zygarde100items_0"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_zygarde100items_0_icon"
++      displayStringId: "avatar_shirt_zygarde"
 +    }
 +  }
 +}
-+template {
-+  template_id: "STICKER_PGO_TOUR_2026_3"
-+  data {
-+    template_id: "STICKER_PGO_TOUR_2026_3"
-+    stickerMetadata {
-+      stickerId: "STICKER_PGO_TOUR_2026_3"
-+      maxCount: 25
-+      category: "Pokemon"
-+      releaseDate: 20250212
-+      regionId: 5
-+    }
-+  }
-+}
-+template {
-+  template_id: "STICKER_PGO_TOUR_2026_LOGO"
-+  data {
-+    template_id: "STICKER_PGO_TOUR_2026_LOGO"
-+    stickerMetadata {
-+      stickerId: "STICKER_PGO_TOUR_LOGO"
-+      maxCount: 25
-+      category: "Misc"
-+      releaseDate: 20250212
-+    }
-+  }
-+}
-+batch_id: 1769702396742
++batch_id: 1769834425084
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -475411,7 +475569,6 @@
+@@ -475566,13 +475624,18 @@
+ experiment_id: 807
+ experiment_id: 1699
+ experiment_id: 2254
++experiment_id: 2256
  experiment_id: 2297
  experiment_id: 2600
  experiment_id: 2650
--experiment_id: 2901
++experiment_id: 2890
++experiment_id: 3025
  experiment_id: 3032
  experiment_id: 3033
  experiment_id: 3063
-@@ -475425,8 +475582,6 @@
+ experiment_id: 3632
++experiment_id: 3633
++experiment_id: 3635
+ experiment_id: 3710
+ experiment_id: 3712
+ experiment_id: 3724
+@@ -475582,6 +475645,7 @@
  experiment_id: 3843
  experiment_id: 3845
  experiment_id: 4998
--experiment_id: 5067
--experiment_id: 5120
++experiment_id: 5121
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -475438,6 +475593,7 @@
+@@ -475592,6 +475656,7 @@
+ experiment_id: 5510
  experiment_id: 6075
  experiment_id: 7004
++experiment_id: 7006
  experiment_id: 7007
-+experiment_id: 8659
+ experiment_id: 8659
  experiment_id: 8980
- experiment_id: 8982
- experiment_id: 8983
