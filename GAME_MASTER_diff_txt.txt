@@ -1,710 +1,598 @@
---- GAME_MASTER_old.txt	2026-02-05 12:50:20.007400059 +0100
-+++ GAME_MASTER.txt	2026-02-06 11:19:25.010172252 +0100
-@@ -60675,7 +60675,7 @@
+--- GAME_MASTER_old.txt	2026-02-06 11:19:25.010172252 +0100
++++ GAME_MASTER.txt	2026-02-08 17:45:12.117525056 +0100
+@@ -149,9 +149,6 @@
    data {
-     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_SERIES"
-     combat_league {
--      title: "great_league_championship_series"
-+      title: "great_league_championship_series_2026"
-       enabled: true
-       unlockCondition {
-         type: WITH_UNIQUE_POKEMON
-@@ -88153,6 +88153,17 @@
-     template_id: "EXTENDED_V0071_POKEMON_VICTREEBEL"
+     template_id: "AR_PHOTO_FEATURE_FLAGS"
+     arPhotoFeatureFlags {
+-      excludedPokemonIds: PHIONE
+-      excludedPokemonIds: MANAPHY
+-      excludedPokemonIds: ARCEUS
+       excludedPokemonIds: WISHIWASHI
+       excludedPokemonIds: PYUKUMUKU
+       excludedPokemonIds: TYPE_NULL
+@@ -187,7 +184,6 @@
+       excludedPokemonIds: MABOSSTIFF
+       excludedPokemonIds: BRAMBLIN
+       excludedPokemonIds: BRAMBLEGHAST
+-      excludedPokemonIds: KLAWF
+       excludedPokemonIds: CAPSAKID
+       excludedPokemonIds: SCOVILLAIN
+       excludedPokemonIds: RELLOR
+@@ -212,6 +208,7 @@
+       excludedPokemonIds: IRONJUGULIS
+       excludedPokemonIds: IRONMOTH
+       excludedPokemonIds: IRONTHORNS
++      excludedPokemonIds: GHOLDENGO
+       excludedPokemonIds: WOCHIEN
+       excludedPokemonIds: CHIENPAO
+       excludedPokemonIds: TINGLU
+@@ -523,9 +520,9 @@
+       lapsedDaysCutoff: 29
+       newDaysCutoff: 3
+       rollOutCountryCodes: "PE"
+-      rollOutCountryCodes: "IN"
+       rollOutCountryCodes: "CL"
+       rollOutCountryCodes: "PL"
++      rollOutCountryCodes: "IN"
+       rollOutCountryCodes: "KR"
+       rollOutCountryCodes: "IT"
+       rollOutCountryCodes: "TH"
+@@ -117637,6 +117634,17 @@
+     template_id: "EXTENDED_V0687_POKEMON_MALAMAR"
      pokemonExtendedSettings {
-       uniqueId: VICTREEBEL
+       uniqueId: MALAMAR
 +      temp_evo_overrides {
 +        tempEvoId: TEMP_EVOLUTION_MEGA
 +        sizeSettings {
-+          xxsLowerBound: 2.205
-+          xsLowerBound: 2.25
-+          mLowerBound: 3.375
-+          mUpperBound: 5.625
-+          xlUpperBound: 6.75
-+          xxlUpperBound: 9
++          xxsLowerBound: 1.421
++          xsLowerBound: 1.45
++          mLowerBound: 2.175
++          mUpperBound: 3.625
++          xlUpperBound: 4.35
++          xxlUpperBound: 5.8
 +        }
 +      }
        sizeSettings {
-         xxsLowerBound: 0.833
-         xsLowerBound: 0.85
-@@ -88171,6 +88182,17 @@
+         xxsLowerBound: 0.735
+         xsLowerBound: 0.75
+@@ -117675,6 +117683,17 @@
      pokemonExtendedSettings {
-       uniqueId: VICTREEBEL
-       form: VICTREEBEL_NORMAL
+       uniqueId: MALAMAR
+       form: MALAMAR_NORMAL
 +      temp_evo_overrides {
 +        tempEvoId: TEMP_EVOLUTION_MEGA
 +        sizeSettings {
-+          xxsLowerBound: 2.205
-+          xsLowerBound: 2.25
-+          mLowerBound: 3.375
-+          mUpperBound: 5.625
-+          xlUpperBound: 6.75
-+          xxlUpperBound: 9
++          xxsLowerBound: 1.421
++          xsLowerBound: 1.45
++          mLowerBound: 2.175
++          mUpperBound: 3.625
++          xlUpperBound: 4.35
++          xxlUpperBound: 5.8
 +        }
 +      }
        sizeSettings {
-         xxsLowerBound: 0.833
-         xsLowerBound: 0.85
-@@ -147793,8 +147815,9 @@
-       itemType: ITEM_TYPE_EVENT_PASS_POINT
-       category: ITEM_CATEGORY_EVENT_PASS_POINT
-       ignoreInventorySpace: true
-+      itemCap: 999999
-       eventPassPoint {
--        eventPassId: "EVENT_PASS_GOTOUR2025_IRL"
-+        eventPassId: "EVENT_PASS_GOTOUR2026_IRL"
-       }
+         xxsLowerBound: 0.735
+         xsLowerBound: 0.75
+@@ -146814,21 +146833,6 @@
+       maxNumberFavoriteSearches: 12
+       maxQueryLength: 1024
+       searchHelpUrl: "niantic.helpshift.com/hc/faq/1486-searching-filtering-your-pokemon-inventory/"
+-      completeStartLetterCountPerLanguage: "en-US,2"
+-      completeStartLetterCountPerLanguage: "pt-BR,2"
+-      completeStartLetterCountPerLanguage: "zh-TW,2"
+-      completeStartLetterCountPerLanguage: "fr-FR,2"
+-      completeStartLetterCountPerLanguage: "de-DE,2"
+-      completeStartLetterCountPerLanguage: "it-IT,2"
+-      completeStartLetterCountPerLanguage: "ja-JP,2"
+-      completeStartLetterCountPerLanguage: "ko-KR,2"
+-      completeStartLetterCountPerLanguage: "es-ES,2"
+-      completeStartLetterCountPerLanguage: "th-TH,2"
+-      completeStartLetterCountPerLanguage: "ru-RU,2"
+-      completeStartLetterCountPerLanguage: "tr-TR,2"
+-      completeStartLetterCountPerLanguage: "hi-IN,2"
+-      completeStartLetterCountPerLanguage: "id-ID,2"
+-      completeStartLetterCountPerLanguage: "es-MX,2"
      }
    }
-@@ -148191,15 +148214,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-01-24T14:00:00"
--        eventEndTime: "2026-01-24T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_RaikouShadowRaidDay"
-+        eventStartTime: "2026-02-14T14:00:00"
-+        eventEndTime: "2026-02-14T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_EnamorusTherianRaidDay"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_06_TO_GIFT
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
+ }
+@@ -148223,7 +148227,7 @@
          displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shadow_Raikou_RaidDay_v2-1024x512-nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_RaikouShadowRaidDay"
--        textRewardsKey: "text_rewards_key_RaikouShadowRaidDay"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_EnamorusTherianRaidDay"
-+        textRewardsKey: "text_rewards_key_EnamorusTherianRaidDay"
+         backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
+         eventDatetimeRangeKey: "event_datetime_range_key_EnamorusTherianRaidDay"
+-        textRewardsKey: "text_rewards_key_EnamorusTherianRaidDay"
++        textRewardsKey: "text_rewards_key_FalinksRaidDay"
          iconRewards {
            type: ITEM
            item {
-@@ -148208,15 +148232,17 @@
-           }
-         }
+@@ -149042,7 +149046,7 @@
+         textRewardsKey: "text_rewards_key_LunarNY0226"
          iconRewards {
--          type: STARDUST
--          stardust: 2
-+          type: ITEM
-+          item {
-+            item: ITEM_XL_RARE_CANDY
-+          }
+           type: POKECOIN
+-          pokecoin: 20
++          pokecoin: 200
          }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1769263200000
--        clientEventEndTimeUtcMs: 1769274000000
-+        clientEventStartTimeUtcMs: 1771077600000
-+        clientEventEndTimeUtcMs: 1771088400000
-       }
--      nameOverride: "general2.ticket.6_ShadowRaikouRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_details_RaikouShadowRaidDay"
-+      nameOverride: "general2.ticket.6_EnamorusTherianRaidDay_title"
-+      descriptionOverride: "item_event_ticket_gray_desc_EnamorusTherianRaidDay"
-     }
-   }
- }
-@@ -148229,15 +148255,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-01-24T14:00:00"
--        eventEndTime: "2026-01-24T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_RaikouShadowRaidDay"
-+        eventStartTime: "2026-02-14T14:00:00"
-+        eventEndTime: "2026-02-14T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_details_EnamorusTherianRaidDay"
-         ticketItem: ITEM_EVENT_TICKET_06
--        clientEventStartTimeUtcMs: 1769263200000
--        clientEventEndTimeUtcMs: 1769274000000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
-+        clientEventStartTimeUtcMs: 1771077600000
-+        clientEventEndTimeUtcMs: 1771088400000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_RaikouShadowRaidDay"
-+      descriptionOverride: "item_event_ticket_gray_details_EnamorusTherianRaidDay"
-     }
-   }
- }
-@@ -148534,16 +148561,27 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-01-31T06:00:00"
--        eventEndTime: "2026-02-01T21:00:00"
--        itemBagDescriptionKey: "item_event_ticket_08_desc_gmaxHooh26"
-+        eventStartTime: "2026-02-15T14:00:00"
-+        eventEndTime: "2026-02-15T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_desc_gmaxMeowth26"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_GRAY_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GMAX_Meowth_MaxBattle_v1_1024x576-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_dmaxHooh26"
--        textRewardsKey: "text_rewards_key_dmaxHooh26"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GMAX_Meowth_MaxBattle_v1_1024x576-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_gmaxMeowth26"
-+        textRewardsKey: "text_rewards_key_gmaxMeowth26"
-+        iconRewards {
-+          type: ITEM
-+          item {
-+            item: ITEM_MAX_BOOST
-+            amount: 1
-+          }
-+        }
-+        iconRewards {
-+          type: EXPERIENCE
-+          exp: 25000
-+        }
-         iconRewards {
-           type: ITEM
-           item {
-@@ -148552,11 +148590,11 @@
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1769839200000
--        clientEventEndTimeUtcMs: 1769979600000
-+        clientEventStartTimeUtcMs: 1771164000000
-+        clientEventEndTimeUtcMs: 1771174800000
-       }
--      nameOverride: "general1.ticket.6_dmaxHooh26_title"
--      descriptionOverride: "item_event_ticket_08_desc_gmaxHooh26"
-+      nameOverride: "general1.ticket.4_gmaxMeowth26_title"
-+      descriptionOverride: "item_event_ticket_gray_desc_gmaxMeowth26"
-     }
-   }
- }
-@@ -148569,16 +148607,16 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-01-31T06:00:00"
--        eventEndTime: "2026-02-01T21:00:00"
--        itemBagDescriptionKey: "item_event_ticket_08_details_gmaxHooh26"
-+        eventStartTime: "2026-02-15T14:00:00"
-+        eventEndTime: "2026-02-15T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_gray_details_gmaxMeowth26"
-         ticketItem: ITEM_EVENT_TICKET_GRAY
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
--        clientEventStartTimeUtcMs: 1769839200000
--        clientEventEndTimeUtcMs: 1769979600000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GMAX_Meowth_MaxBattle_v1_1024x576-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1771164000000
-+        clientEventEndTimeUtcMs: 1771174800000
-       }
-       ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_08_details_gmaxHooh26"
-+      descriptionOverride: "item_event_ticket_gray_details_gmaxMeowth26"
-     }
-   }
- }
-@@ -148767,8 +148805,7 @@
-     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_TOUR_02"
-     itemExpirationSettings {
-       item: ITEM_EVENT_PASS_POINT_GO_TOUR_02
--      expirationTime: "2025-02-24T09:59:59"
--      emergencyExpirationTime: "2025-03-26T09:59:59"
-+      expirationTime: "2026-02-22T17:00:00"
-     }
-   }
- }
-@@ -148993,45 +149030,58 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-01-13T10:00:00"
--        eventEndTime: "2026-01-18T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_WATTSUP_JAN2026"
-+        eventStartTime: "2026-02-17T00:00:00"
-+        eventEndTime: "2026-02-21T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_LunarNY0226"
-         giftable: true
-         giftItem: ITEM_GLOBAL_EVENT_TICKET_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Watts_Up_2025_TICKET_v1-1024x576.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Lunar_New_Year_2026_TICKET_v1-1025x576-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Watts_Up_2025_TICKET_v1-1024x576.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_WATTSUP_JAN2026"
--        textRewardsKey: "text_rewards_key_WATTSUP_JAN2026"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Lunar_New_Year_2026_TICKET_v1-1025x576-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_LunarNY0226"
-+        textRewardsKey: "text_rewards_key_LunarNY0226"
-+        iconRewards {
-+          type: POKECOIN
-+          pokecoin: 20
-+        }
-+        iconRewards {
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemonId: BLITZLE
-+            pokemonDisplay {
-+              form: BLITZLE_NORMAL
-+            }
-+          }
-+        }
          iconRewards {
            type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemonId: TADBULB
-+            pokemonId: DARUMAKA
-             pokemonDisplay {
--              form: TADBULB_NORMAL
-+              form: DARUMAKA_NORMAL
+@@ -149062,20 +149066,6 @@
              }
            }
          }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_INCUBATOR_BASIC
+-        iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_LUCKY_EGG
+-            amount: 2
+-          }
+-        }
+-        iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_INCENSE_ORDINARY
 -            amount: 1
-+            item: ITEM_LUCKY_EGG
-+            amount: 2
-           }
-         }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_INCUBATOR_SUPER
-+            item: ITEM_INCENSE_ORDINARY
-             amount: 1
-           }
-         }
--        detailsLinkKey: "blog_link_WATTSUP_JAN2026"
--        clientEventStartTimeUtcMs: 1768298400000
--        clientEventEndTimeUtcMs: 1768766400000
-+        detailsLinkKey: "details_link_key_LUNAR_NEW_YEAR_FEB2026"
-+        clientEventStartTimeUtcMs: 1771286400000
-+        clientEventEndTimeUtcMs: 1771704000000
-       }
--      nameOverride: "evergreenticket.1.WATTSUP_JAN2026"
--      descriptionOverride: "item_event_ticket_evergreen_details_WATTSUP_JAN2026"
-+      nameOverride: "general1.ticket._LunarNY0226_title"
-+      descriptionOverride: "item_event_ticket_evergreen_desc_LunarNY0226"
-     }
-   }
- }
-@@ -149044,17 +149094,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-01-13T10:00:00"
--        eventEndTime: "2026-01-18T20:00:00"
--        itemBagDescriptionKey: "item_event_ticket_evergreen_desc_WATTSUP_JAN2026"
-+        eventStartTime: "2026-02-17T00:00:00"
-+        eventEndTime: "2026-02-21T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_evergreen_details_LunarNY0226"
-         ticketItem: ITEM_GLOBAL_EVENT_TICKET
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Watts_Up_2025_TICKET_v1-1024x576.jpg"
--        clientEventStartTimeUtcMs: 1768298400000
--        clientEventEndTimeUtcMs: 1768766400000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Lunar_New_Year_2026_TICKET_v1-1025x576-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1771286400000
-+        clientEventEndTimeUtcMs: 1771704000000
-       }
-       ignoreInventorySpace: true
--      nameOverride: "evergreenticket.1.WATTSUP_JAN2026"
--      descriptionOverride: "item_event_ticket_evergreen_details_WATTSUP_JAN2026"
-+      nameOverride: "general1.ticket._LunarNY0226_title"
-+      descriptionOverride: "item_event_ticket_evergreen_details_LunarNY0226"
-     }
-   }
- }
-@@ -177743,6 +177793,16 @@
+-          }
+-        }
+         detailsLinkKey: "details_link_key_LUNAR_NEW_YEAR_FEB2026"
+         clientEventStartTimeUtcMs: 1771286400000
+         clientEventEndTimeUtcMs: 1771704000000
+@@ -177792,6 +177782,14 @@
+         pokemon: LUNALA
          battleMusicKey: "GoFest2024Music_Battle"
        }
++      pokemonMusicOverrides {
++        pokemon: XERNEAS
++        battleMusicKey: "RaidXerneasYveltalBattleMusic"
++      }
++      pokemonMusicOverrides {
++        pokemon: YVELTAL
++        battleMusicKey: "RaidXerneasYveltalBattleMusic"
++      }
        fetchProfileFromSocialEnabled: true
-+      35 {
-+        1: 16
-+        2: 5
-+        3: 20
-+      }
-+      35 {
-+        1: 17
-+        2: 20
-+        3: 20
-+      }
+       35 {
+         1: 16
+@@ -395186,9 +395184,7 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
+-      raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -395196,6 +395192,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -251561,6 +251621,7 @@
+@@ -395263,13 +395260,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -395337,7 +395334,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -395345,6 +395341,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -395419,6 +395416,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -395486,7 +395484,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -395494,6 +395491,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -395561,7 +395559,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -395569,6 +395566,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -395636,7 +395634,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -395644,6 +395641,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -395711,13 +395709,13 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+         stardustCost: 10000
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -395784,7 +395782,6 @@
+       isTradable: true
+       raidBossDistanceOffset: 3
+       formChange {
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -395792,6 +395789,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -395859,7 +395857,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -395867,6 +395864,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -395934,7 +395932,6 @@
+       raidBossDistanceOffset: 3
+       formChange {
+         availableForm: FURFROU_NATURAL
+-        availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+         candyCost: 25
+@@ -395942,6 +395939,7 @@
+       }
+       ibfc {
+       }
++      breadTierGroup: GROUP_3
+     }
+   }
+ }
+@@ -397537,6 +397535,7 @@
      pokemonFamily {
-       familyId: FAMILY_BELLSPROUT
+       familyId: FAMILY_INKAY
        candyPerXlCandy: 100
-+      megaEvolvablePokemonId: VICTREEBEL
++      megaEvolvablePokemonId: MALAMAR
      }
    }
  }
-@@ -252082,6 +252143,11 @@
+@@ -397761,7 +397760,13 @@
+       weightStdDev: 5.875
+       familyId: FAMILY_INKAY
        kmBuddyDistance: 3
-       buddy_size: BUDDY_BIG
-       modelHeight: 1.48
++      buddy_size: BUDDY_BIG
+       modelHeight: 1.8
 +      evolutionBranch {
 +        temporaryEvolution: TEMP_EVOLUTION_MEGA
 +        temporaryEvolutionEnergyCost: 300
 +        temporaryEvolutionEnergyCostSubsequent: 60
 +      }
        modelScaleV2: 1
-       buddyOffsetMale: 5.1
-       buddyOffsetMale: -8.01
-@@ -252105,6 +252171,25 @@
+       buddyOffsetMale: -0.5
+       buddyOffsetMale: 0
+@@ -397782,6 +397787,27 @@
+         purifiedChargeMove: RETURN
+         shadowChargeMove: FRUSTRATION
        }
-       buddyGroupNumber: 3
-       eliteQuickMove: MAGICAL_LEAF_FAST
++      buddyGroupNumber: 3
 +      temp_evo_overrides {
 +        tempEvoId: TEMP_EVOLUTION_MEGA
 +        stats {
-+          baseStamina: 190
-+          baseAttack: 265
-+          baseDefense: 181
++          baseStamina: 200
++          baseAttack: 208
++          baseDefense: 222
 +        }
-+        averageHeightM: 4.5
-+        averageWeightKg: 125.5
-+        typeOverride1: POKEMON_TYPE_GRASS
-+        typeOverride2: POKEMON_TYPE_POISON
++        averageHeightM: 2.9
++        averageWeightKg: 69.8
++        typeOverride1: POKEMON_TYPE_DARK
++        typeOverride2: POKEMON_TYPE_PSYCHIC
 +        camera {
-+          cylinderRadiusM: 1.8
-+          cylinderHeightM: 4.8
++          cylinderRadiusM: 2
++          cylinderHeightM: 3.1
++          cylinderGroundM: 1.55
 +        }
-+        modelScaleV2: 0.7
-+        modelHeight: 4.5
++        modelScaleV2: 0.8
++        modelHeight: 2.9
 +      }
 +      buddyWalkedMegaEnergyAward: 15
        ibfc {
        }
        breadTierGroup: GROUP_2
-@@ -252179,6 +252264,11 @@
+@@ -397847,7 +397873,13 @@
+       weightStdDev: 5.875
+       familyId: FAMILY_INKAY
        kmBuddyDistance: 3
-       buddy_size: BUDDY_BIG
-       modelHeight: 1.48
++      buddy_size: BUDDY_BIG
+       modelHeight: 1.8
 +      evolutionBranch {
 +        temporaryEvolution: TEMP_EVOLUTION_MEGA
 +        temporaryEvolutionEnergyCost: 300
 +        temporaryEvolutionEnergyCostSubsequent: 60
 +      }
        modelScaleV2: 1
-       form: VICTREEBEL_NORMAL
-       buddyOffsetMale: 5.1
-@@ -252203,6 +252293,25 @@
+       form: MALAMAR_NORMAL
+       buddyOffsetMale: -0.5
+@@ -397869,6 +397901,27 @@
+         purifiedChargeMove: RETURN
+         shadowChargeMove: FRUSTRATION
        }
-       buddyGroupNumber: 3
-       eliteQuickMove: MAGICAL_LEAF_FAST
++      buddyGroupNumber: 3
 +      temp_evo_overrides {
 +        tempEvoId: TEMP_EVOLUTION_MEGA
 +        stats {
-+          baseStamina: 190
-+          baseAttack: 265
-+          baseDefense: 181
++          baseStamina: 200
++          baseAttack: 208
++          baseDefense: 222
 +        }
-+        averageHeightM: 4.5
-+        averageWeightKg: 125.5
-+        typeOverride1: POKEMON_TYPE_GRASS
-+        typeOverride2: POKEMON_TYPE_POISON
++        averageHeightM: 2.9
++        averageWeightKg: 69.8
++        typeOverride1: POKEMON_TYPE_DARK
++        typeOverride2: POKEMON_TYPE_PSYCHIC
 +        camera {
-+          cylinderRadiusM: 1.8
-+          cylinderHeightM: 4.8
++          cylinderRadiusM: 2
++          cylinderHeightM: 3.1
++          cylinderGroundM: 1.55
 +        }
-+        modelScaleV2: 0.7
-+        modelHeight: 4.5
++        modelScaleV2: 0.8
++        modelHeight: 2.9
 +      }
 +      buddyWalkedMegaEnergyAward: 15
        ibfc {
        }
        breadTierGroup: GROUP_2
-@@ -460795,16 +460904,16 @@
-     iapItemDisplay {
-       sku: "general1.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "evergreenticket.1.WATTSUP_JAN2026"
--      skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2026-01-18T20:00:00"
--      skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1768766400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Watts_Up_2025_TICKET_v1-1024x576.jpg"
--      webstoreSkuId: "web-watts-up-ticket-box"
-+      title: "general1.ticket._LunarNY0226_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2026-02-21T20:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1771704000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Lunar_New_Year_2026_TICKET_v1-1025x576-nologo.jpg"
-+      webstoreSkuId: "web-lunar-new-year-26-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -460816,15 +460925,15 @@
-     iapItemDisplay {
-       sku: "general1.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "evergreenticket.1.WATTSUP_JAN2026"
--      skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2026-01-18T20:00:00"
--      skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1768766400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Watts_Up_2025_TICKET_v1-1024x576.jpg"
-+      title: "general1.ticket._LunarNY0226_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2026-02-21T20:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1771704000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Lunar_New_Year_2026_TICKET_v1-1025x576-nologo.jpg"
-     }
-   }
- }
-@@ -460837,14 +460946,14 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.4"
--      title: "general1.ticket.6_dmaxHooh26_title"
-+      spriteId: "general1.ticket.5"
-+      title: "general1.ticket.4_gmaxMeowth26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-02-01T21:00:00"
-+      skuDisableTime: "2026-02-15T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1769979600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
--      webstoreSkuId: "web-dmax-ho-oh-26-ticket-box"
-+      skuDisableTimeUtcMs: 1771174800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GMAX_Meowth_MaxBattle_v1_1024x576-nologo.jpg"
-+      webstoreSkuId: "web-gmax-meowth-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -460858,13 +460967,13 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.4"
--      title: "general1.ticket.6_dmaxHooh26_title"
-+      spriteId: "general1.ticket.5"
-+      title: "general1.ticket.4_gmaxMeowth26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-02-01T21:00:00"
-+      skuDisableTime: "2026-02-15T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1769979600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
-+      skuDisableTimeUtcMs: 1771174800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GMAX_Meowth_MaxBattle_v1_1024x576-nologo.jpg"
-     }
-   }
- }
-@@ -460974,7 +461083,6 @@
+@@ -461083,6 +461136,7 @@
        sku: "general2.ticket.2"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 1
--      hidden: true
++      hidden: true
        spriteId: "general2.ticket.2"
        title: "general2.ticket2.CATCH_MASTERY_ORICORIO"
        skuEnableTime: "2023-01-01T11:00:03"
-@@ -460995,7 +461103,6 @@
+@@ -461103,6 +461157,7 @@
        sku: "general2.ticket.2.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 1
--      hidden: true
++      hidden: true
        spriteId: "general2.ticket.2"
        title: "general2.ticket2.CATCH_MASTERY_ORICORIO"
        skuEnableTime: "2023-01-01T11:00:03"
-@@ -461138,13 +461245,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_ShadowRaikouRaidDay_title"
-+      title: "general2.ticket.6_EnamorusTherianRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-01-24T17:00:00"
-+      skuDisableTime: "2026-02-14T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1769274000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shadow_Raikou_RaidDay_v2-1024x512-nologo.jpg"
--      webstoreSkuId: "web-shadow-raid-raikou-26-ticket-box"
-+      skuDisableTimeUtcMs: 1771088400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
-+      webstoreSkuId: "web-enamorus-raid-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -461159,12 +461266,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_ShadowRaikouRaidDay_title"
-+      title: "general2.ticket.6_EnamorusTherianRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-01-24T17:00:00"
-+      skuDisableTime: "2026-02-14T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1769274000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shadow_Raikou_RaidDay_v2-1024x512-nologo.jpg"
-+      skuDisableTimeUtcMs: 1771088400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
-     }
-   }
- }
-@@ -462587,16 +462694,16 @@
-     iapItemDisplay {
-       sku: "pgorelease.general1.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "evergreenticket.1.WATTSUP_JAN2026"
--      skuEnableTime: "2023-01-01T11:00:03"
--      skuDisableTime: "2026-01-18T20:00:00"
--      skuEnableTimeUtcMs: 1672570803000
--      skuDisableTimeUtcMs: 1768766400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Watts_Up_2025_TICKET_v1-1024x576.jpg"
--      webstoreSkuId: "web-watts-up-ticket-box"
-+      title: "general1.ticket._LunarNY0226_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2026-02-21T20:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1771704000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Lunar_New_Year_2026_TICKET_v1-1025x576-nologo.jpg"
-+      webstoreSkuId: "web-lunar-new-year-26-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -462608,15 +462715,15 @@
-     iapItemDisplay {
-       sku: "pgorelease.general1.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 1
-+      sortOrder: 4
-       hidden: true
-       spriteId: "general1.ticket.4"
--      title: "evergreenticket.1.WATTSUP_JAN2026"
--      skuEnableTime: "2023-01-01T11:00:03"
--      skuDisableTime: "2026-01-18T20:00:00"
--      skuEnableTimeUtcMs: 1672570803000
--      skuDisableTimeUtcMs: 1768766400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Watts_Up_2025_TICKET_v1-1024x576.jpg"
-+      title: "general1.ticket._LunarNY0226_title"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2026-02-21T20:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1771704000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Lunar_New_Year_2026_TICKET_v1-1025x576-nologo.jpg"
-     }
-   }
- }
-@@ -462629,14 +462736,14 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.4"
--      title: "general1.ticket.6_dmaxHooh26_title"
-+      spriteId: "general1.ticket.5"
-+      title: "general1.ticket.4_gmaxMeowth26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-02-01T21:00:00"
-+      skuDisableTime: "2026-02-15T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1769979600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
--      webstoreSkuId: "web-dmax-ho-oh-26-ticket-box"
-+      skuDisableTimeUtcMs: 1771174800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GMAX_Meowth_MaxBattle_v1_1024x576-nologo.jpg"
-+      webstoreSkuId: "web-gmax-meowth-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
-   }
-@@ -462650,13 +462757,13 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
-       hidden: true
--      spriteId: "general1.ticket.4"
--      title: "general1.ticket.6_dmaxHooh26_title"
-+      spriteId: "general1.ticket.5"
-+      title: "general1.ticket.4_gmaxMeowth26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-02-01T21:00:00"
-+      skuDisableTime: "2026-02-15T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1769979600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_DMAX_Ho-oh_Max_Battle_v2_1024x576-nologo.jpg"
-+      skuDisableTimeUtcMs: 1771174800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GMAX_Meowth_MaxBattle_v1_1024x576-nologo.jpg"
-     }
-   }
- }
-@@ -462747,7 +462854,6 @@
+@@ -462854,6 +462909,7 @@
        sku: "pgorelease.general2.ticket.2"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 1
--      hidden: true
++      hidden: true
        spriteId: "general2.ticket.2"
        title: "general2.ticket2.CATCH_MASTERY_ORICORIO"
        skuEnableTime: "2023-01-01T11:00:01"
-@@ -462768,7 +462874,6 @@
+@@ -462874,6 +462930,7 @@
        sku: "pgorelease.general2.ticket.2.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 1
--      hidden: true
++      hidden: true
        spriteId: "general2.ticket.2"
        title: "general2.ticket2.CATCH_MASTERY_ORICORIO"
        skuEnableTime: "2023-01-01T11:00:01"
-@@ -462911,13 +463016,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_ShadowRaikouRaidDay_title"
-+      title: "general2.ticket.6_EnamorusTherianRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-01-24T17:00:00"
-+      skuDisableTime: "2026-02-14T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1769274000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shadow_Raikou_RaidDay_v2-1024x512-nologo.jpg"
--      webstoreSkuId: "web-shadow-raid-raikou-26-ticket-box"
-+      skuDisableTimeUtcMs: 1771088400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
-+      webstoreSkuId: "web-enamorus-raid-ticket-box"
-       webstoreSkuPriceE6: 4990000
-     }
+@@ -468847,17 +468904,6 @@
    }
-@@ -462932,12 +463037,12 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_ShadowRaikouRaidDay_title"
-+      title: "general2.ticket.6_EnamorusTherianRaidDay_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-01-24T17:00:00"
-+      skuDisableTime: "2026-02-14T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1769274000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Shadow_Raikou_RaidDay_v2-1024x512-nologo.jpg"
-+      skuDisableTimeUtcMs: 1771088400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
+ }
+ template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+   template_id: "BADGE_EVENT_0153"
+   data {
+     template_id: "BADGE_EVENT_0153"
+@@ -475860,9 +475906,141 @@
      }
    }
  }
-@@ -475742,7 +475847,20 @@
-     }
-   }
- }
--batch_id: 1770271584613
+-batch_id: 1770343524106
+-experiment_id: 11
+-experiment_id: 21
 +template {
-+  template_id: "TEMPORARY_EVOLUTION_V0071_POKEMON_VICTREEBEL"
++  template_id: "BUNDLE_EC_200_RPP_1"
 +  data {
-+    template_id: "TEMPORARY_EVOLUTION_V0071_POKEMON_VICTREEBEL"
++    template_id: "BUNDLE_EC_200_RPP_1"
++    iapItemDisplay {
++      sku: "BUNDLE_EC_200_RPP_1"
++      category: IAP_CATEGORY_ITEMS
++      hidden: true
++      spriteId: "enhanced_currency_medium_rrp"
++    }
++  }
++}
++template {
++  template_id: "BUNDLE_EC_600_RPP_3"
++  data {
++    template_id: "BUNDLE_EC_600_RPP_3"
++    iapItemDisplay {
++      sku: "BUNDLE_EC_600_RPP_3"
++      category: IAP_CATEGORY_ITEMS
++      hidden: true
++      spriteId: "enhanced_currency_large_3rrp"
++    }
++  }
++}
++template {
++  template_id: "ITEM_ENHANCED_CURRENCY_200"
++  data {
++    template_id: "ITEM_ENHANCED_CURRENCY_200"
++    iapItemDisplay {
++      sku: "ITEM_ENHANCED_CURRENCY_200"
++      category: IAP_CATEGORY_ITEMS
++      hidden: true
++      spriteId: "enhanced_currency_medium"
++    }
++  }
++}
++template {
++  template_id: "ITEM_ENHANCED_CURRENCY_600"
++  data {
++    template_id: "ITEM_ENHANCED_CURRENCY_600"
++    iapItemDisplay {
++      sku: "ITEM_ENHANCED_CURRENCY_600"
++      category: IAP_CATEGORY_ITEMS
++      hidden: true
++      spriteId: "enhanced_currency_large"
++    }
++  }
++}
++template {
++  template_id: "SETTINGS_RULES_ANDROID_14_ONWARD"
++  data {
++    template_id: "SETTINGS_RULES_ANDROID_14_ONWARD"
++    settingsOverrideRule {
++      ruleType: 10
++      sortOrder: 5
++      ruleValue: "33"
++      occlusionEnabled: TRUE
++      semanticsEnabled: TRUE
++    }
++  }
++}
++template {
++  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10"
++  data {
++    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10"
++    settingsOverrideRule {
++      ruleType: DEVICE_MODEL
++      sortOrder: 50
++      ruleValue: "Google Pixel 10"
++      meshingEnabled: FALSE
++      occlusionEnabled: FALSE
++      semanticsEnabled: FALSE
++      vpsEnabled: FALSE
++    }
++  }
++}
++template {
++  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PRO"
++  data {
++    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PRO"
++    settingsOverrideRule {
++      ruleType: DEVICE_MODEL
++      sortOrder: 50
++      ruleValue: "Google Pixel 10 Pro"
++      meshingEnabled: FALSE
++      occlusionEnabled: FALSE
++      semanticsEnabled: FALSE
++      vpsEnabled: FALSE
++    }
++  }
++}
++template {
++  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROFOLD"
++  data {
++    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROFOLD"
++    settingsOverrideRule {
++      ruleType: DEVICE_MODEL
++      sortOrder: 50
++      ruleValue: "Google Pixel 10 Pro Fold"
++      meshingEnabled: FALSE
++      occlusionEnabled: FALSE
++      semanticsEnabled: FALSE
++      vpsEnabled: FALSE
++    }
++  }
++}
++template {
++  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROXL"
++  data {
++    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROXL"
++    settingsOverrideRule {
++      ruleType: DEVICE_MODEL
++      sortOrder: 50
++      ruleValue: "Google Pixel 10 Pro XL"
++      meshingEnabled: FALSE
++      occlusionEnabled: FALSE
++      semanticsEnabled: FALSE
++      vpsEnabled: FALSE
++    }
++  }
++}
++template {
++  template_id: "TEMPORARY_EVOLUTION_V0687_POKEMON_MALAMAR"
++  data {
++    template_id: "TEMPORARY_EVOLUTION_V0687_POKEMON_MALAMAR"
 +    temporaryEvolutionSettings {
-+      pokemonId: VICTREEBEL
++      pokemonId: MALAMAR
 +      temporary_evolutions {
 +        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
 +        assetBundleValue: 51
@@ -712,15 +600,43 @@
 +    }
 +  }
 +}
-+batch_id: 1770343524106
- experiment_id: 11
- experiment_id: 21
++batch_id: 1770496026279
  experiment_id: 101
-@@ -475773,6 +475891,7 @@
+ experiment_id: 150
+ experiment_id: 161
+@@ -475884,18 +476062,16 @@
+ experiment_id: 2650
+ experiment_id: 2890
+ experiment_id: 3032
+-experiment_id: 3033
+ experiment_id: 3063
+ experiment_id: 3710
+-experiment_id: 3712
  experiment_id: 3721
  experiment_id: 3730
  experiment_id: 3739
-+experiment_id: 3776
+-experiment_id: 3776
  experiment_id: 3835
  experiment_id: 3851
  experiment_id: 3853
+ experiment_id: 4998
++experiment_id: 5123
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+@@ -475907,6 +476083,7 @@
+ experiment_id: 6075
+ experiment_id: 7007
+ experiment_id: 7008
++experiment_id: 8984
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
+@@ -475923,7 +476100,6 @@
+ experiment_id: 3500035
+ experiment_id: 3500037
+ experiment_id: 4610000
+-experiment_id: 5000301
+ experiment_id: 6600417
+ experiment_id: 6600418
+ experiment_id: 6600421
