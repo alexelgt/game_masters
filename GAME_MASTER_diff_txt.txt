@@ -1,325 +1,55 @@
---- GAME_MASTER_old.txt	2026-02-17 13:23:01.859619246 +0100
-+++ GAME_MASTER.txt	2026-02-17 14:08:23.688828237 +0100
-@@ -149,6 +149,7 @@
+--- GAME_MASTER_old.txt	2026-02-17 14:12:10.598560897 +0100
++++ GAME_MASTER.txt	2026-02-17 14:13:05.082014770 +0100
+@@ -154708,9 +154708,9 @@
    data {
-     template_id: "AR_PHOTO_FEATURE_FLAGS"
-     arPhotoFeatureFlags {
-+      isFeatureEnabled: true
-       excludedPokemonIds: WISHIWASHI
-       excludedPokemonIds: PYUKUMUKU
-       excludedPokemonIds: TYPE_NULL
-@@ -507,7 +508,9 @@
-         pokemonId: GIMMIGHOUL
-         excludedForms: GIMMIGHOUL_NORMAL
+     template_id: "ITEM_ENHANCED_CURRENCY"
+     itemSettings {
+-      itemId: 1410
+-      itemType: 33
+-      category: 32
++      itemId: ITEM_ENHANCED_CURRENCY
++      itemType: ITEM_TYPE_ENHANCED_CURRENCY
++      category: ITEM_CATEGORY_ENHANCED_CURRENCY
+       dropTrainerLevel: 1
+       ignoreInventorySpace: true
+       itemCap: 600
+@@ -154746,9 +154746,9 @@
+   data {
+     template_id: "ITEM_ENHANCED_CURRENCY_HOLDER"
+     itemSettings {
+-      itemId: 1411
+-      itemType: 35
+-      category: 33
++      itemId: ITEM_ENHANCED_CURRENCY_HOLDER
++      itemType: ITEM_TYPE_ENHANCED_CURRENCY_HOLDER
++      category: ITEM_CATEGORY_ENHANCED_CURRENCY_HOLDER
+       ignoreInventorySpace: true
+       itemCap: 1
+     }
+@@ -156430,7 +156430,7 @@
+         category: ITEM_CATEGORY_CAMERA
+         category: ITEM_CATEGORY_ROUTE_MAKER
+         category: ITEM_CATEGORY_UTILITES
+-        category: 33
++        category: ITEM_CATEGORY_ENHANCED_CURRENCY_HOLDER
+         categoryName: "item_bag_category_key_items"
+         sortOrder: 9
        }
-+      showSticker: ALWAYS_SHOW
-       mainMenuEntryEnabled: -1412802175
-+      arMenuEntryEnabled: -716916653
-       shareFunctionalityEnabled: 295065062
-       preLoginRollOutRatio: 1
-       preLoginDeviceAllowList: "eeef41808b1ea6b81ba2816ae45813b87fa00ec62581f43fe382880fe0afdca0"
-@@ -518,6 +521,19 @@
-       preLoginDeviceAllowList: "bc440d794a6463a6e83b88ee3832ae8ae58d543177198b8940ba354856cb1429"
-       lapsedDaysCutoff: 29
-       newDaysCutoff: 3
-+      captureSettings {
-+        countdownSeconds: 5
-+        contextualCheckIntervalSeconds: 0.5
-+      }
-+      incentives {
-+        incentiveStringKey: "incentive_gengar_encounter_key"
-+        incentiveIconName: "pm94.icon"
-+      }
-+      incentives {
-+        incentiveStringKey: "incentive_pokeball_30_and_pokecoin_100_key"
-+        incentiveIconName: "tx_coin_pouch_pokeball"
-+      }
-+      incentivesEnabled: true
-       errorReportingSettings {
-         isEnabled: true
-         percentChancePlayerSends: 1
-@@ -525,23 +541,7 @@
-         slidingWindowLengthS: 10
-         maxTotalEventsBeforeShutdown: 1000
-       }
--      1: 1
--      4: 1
--      6: 18446744072992634963
--      13 {
--        1: 5
--        2: 0x3f000000
--      }
--      15 {
--        1: "incentive_gengar_encounter_key"
--        2: "pm94.icon"
--      }
--      15 {
--        1: "incentive_pokeball_30_and_pokecoin_100_key"
--        2: "tx_coin_pouch_pokeball"
--      }
--      17: 1
--      19: 18446744072334623560
-+      preLoginMetricsEnabled: -1374928056
+@@ -476296,7 +476296,7 @@
+   data {
+     template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_01"
+     itemSettings {
+-      itemId: 2151
++      itemId: ITEM_EVENT_PASS_POINT_MONTHLY_01
+       itemType: ITEM_TYPE_EVENT_PASS_POINT
+       category: ITEM_CATEGORY_EVENT_PASS_POINT
+       ignoreInventorySpace: true
+@@ -476317,7 +476317,7 @@
+   data {
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_01"
+     itemExpirationSettings {
+-      item: 2151
++      item: ITEM_EVENT_PASS_POINT_MONTHLY_01
+       expirationTime: "2026-04-09T10:00:00"
+       emergencyExpirationTime: "2026-04-11T10:00:00"
      }
-   }
- }
-@@ -153553,8 +153553,8 @@
-         multiplier: 4
-         randomWeight: 0.1
-       }
--      4: 1
--      5: 1
-+      flowPolishEnabled: true
-+      multiMajorRewardUiEnabled: true
-     }
-   }
- }
-@@ -159001,7 +159001,7 @@
-   data {
-     template_id: "LC_2026_COLOGNE_CARNIVAL_001"
-     locationCardSettings {
--      locationCard: 244
-+      locationCard: LC_2026_COLOGNE_CARNIVAL_001
-       imageUrl: "lc_carnivalFlamigo_cologne_2026"
-     }
-   }
-@@ -159011,7 +159011,7 @@
-   data {
-     template_id: "LC_2026_LOSANGELES_GOTOUR_001"
-     locationCardSettings {
--      locationCard: 214
-+      locationCard: LC_2026_LOSANGELES_GOTOUR_001
-       imageUrl: "lc_GoTour2026_losAngeles"
-       cardType: LOCATION_CARD
-     }
-@@ -159032,7 +159032,7 @@
-   data {
-     template_id: "LC_2026_RIODEJANEIRO_CARNIVAL_001"
-     locationCardSettings {
--      locationCard: 243
-+      locationCard: LC_2026_RIODEJANEIRO_CARNIVAL_001
-       imageUrl: "lc_carnivalFlamigo_rio_2026"
-     }
-   }
-@@ -159042,7 +159042,7 @@
-   data {
-     template_id: "LC_2026_TAINAN_GOTOUR_001"
-     locationCardSettings {
--      locationCard: 215
-+      locationCard: LC_2026_TAINAN_GOTOUR_001
-       imageUrl: "lc_GoTour2026_tainan"
-       cardType: LOCATION_CARD
-     }
-@@ -159822,7 +159822,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_DIAMOND_001"
-     locationCardSettings {
--      locationCard: 220
-+      locationCard: LC_SPECIALBACKGROUND_2026_GLOBAL_DIAMOND_001
-       imageUrl: "sb_GoTour2026_diamond"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_Diamond"
-@@ -159834,7 +159834,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_GOLD_001"
-     locationCardSettings {
--      locationCard: 216
-+      locationCard: LC_SPECIALBACKGROUND_2026_GLOBAL_GOLD_001
-       imageUrl: "sb_GoTour2026_gold"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_Gold"
-@@ -159846,7 +159846,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_MEGA_001"
-     locationCardSettings {
--      locationCard: 224
-+      locationCard: LC_SPECIALBACKGROUND_2026_GLOBAL_MEGA_001
-       imageUrl: "sb_GoTour2026_mega"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_Mega"
-@@ -159858,7 +159858,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_PEARL_001"
-     locationCardSettings {
--      locationCard: 221
-+      locationCard: LC_SPECIALBACKGROUND_2026_GLOBAL_PEARL_001
-       imageUrl: "sb_GoTour2026_pearl"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_Pearl"
-@@ -159870,7 +159870,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_RUBY_001"
-     locationCardSettings {
--      locationCard: 218
-+      locationCard: LC_SPECIALBACKGROUND_2026_GLOBAL_RUBY_001
-       imageUrl: "sb_GoTour2026_ruby"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_Ruby"
-@@ -159882,7 +159882,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_SAPPHIRE_001"
-     locationCardSettings {
--      locationCard: 219
-+      locationCard: LC_SPECIALBACKGROUND_2026_GLOBAL_SAPPHIRE_001
-       imageUrl: "sb_GoTour2026_sapphire"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_Sapphire"
-@@ -159894,7 +159894,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_SILVER_001"
-     locationCardSettings {
--      locationCard: 217
-+      locationCard: LC_SPECIALBACKGROUND_2026_GLOBAL_SILVER_001
-       imageUrl: "sb_GoTour2026_silver"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_Silver"
-@@ -159906,7 +159906,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_X_001"
-     locationCardSettings {
--      locationCard: 222
-+      locationCard: LC_SPECIALBACKGROUND_2026_GLOBAL_X_001
-       imageUrl: "sb_GoTour2026_x"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_X"
-@@ -159918,7 +159918,7 @@
-   data {
-     template_id: "LC_SPECIALBACKGROUND_2026_GLOBAL_Y_001"
-     locationCardSettings {
--      locationCard: 223
-+      locationCard: LC_SPECIALBACKGROUND_2026_GLOBAL_Y_001
-       imageUrl: "sb_GoTour2026_y"
-       cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_Y"
-@@ -164562,11 +164562,11 @@
-   template_id: "NATURAL_ART_DAY_NIGHT_FEATURE_SETTINGS"
-   data {
-     template_id: "NATURAL_ART_DAY_NIGHT_FEATURE_SETTINGS"
--    283 {
--      1: "06:00:00"
--      2: "18:00:00"
--      3: "05:59:00"
--      4: 0x42700000
-+    naturalArtDayNightFeatureSettings {
-+      dayStartTime: "06:00:00"
-+      dayEndTime: "18:00:00"
-+      nightEndTime: "05:59:00"
-+      dbsSpawnRadiusMeters: 60
-     }
-   }
- }
-@@ -464798,7 +464798,7 @@
-           }
-         }
-         difficulty: EASY
--        131: 0x3f947ae147ae147b
-+        questUpdateToastProgressPercentageThreshold: 0.02
-       }
-       questDisplay {
-         description: "quest_catch_pokemon_plural"
-@@ -464842,7 +464842,7 @@
-           }
-         }
-         difficulty: EASY
--        131: 0x3fb999999999999a
-+        questUpdateToastProgressPercentageThreshold: 0.1
-       }
-       questDisplay {
-         description: "quest_visit_pokestops_plural"
-@@ -476330,37 +476330,37 @@
-     featureGate {
-       status: 216426293
-       rolloutPercentage: 100
--      3 {
--        1: "MEGA_LEVELS_TUTORIAL_SUB_FEATURE_GATE"
--        2: 817843414
--      }
--      3 {
--        1: "MEGA_EVOLVE_BUTTON_SUB_FEATURE_GATE"
--        2: 466713653
--      }
--      3 {
--        1: "MEGA_HUD_SUB_FEATURE_GATE"
--        2: 292744512
--      }
--      3 {
--        1: "MEGA_HUD_TIMER_SUB_FEATURE_GATE"
--        2: 991283745
--      }
--      3 {
--        1: "MEGA_2026_FTUE_SUB_FEATURE_GATE"
--        2: 382901475
--      }
--      3 {
--        1: "MEGA_LEVEL_4_ENABLED_SUB_FEATURE_GATE"
--        2: 311989544
--      }
--      3 {
--        1: "REMOTE_NC_HELP_TEXT_SUB_FEATURE_GATE"
--        2: 222
--      }
--      3 {
--        1: "MEGA_CP_BOOST_ENABLED_SUB_FEATURE_GATE"
--        2: 368387608
-+      subFeatureGateList {
-+        name: "MEGA_LEVELS_TUTORIAL_SUB_FEATURE_GATE"
-+        status: 817843414
-+      }
-+      subFeatureGateList {
-+        name: "MEGA_EVOLVE_BUTTON_SUB_FEATURE_GATE"
-+        status: 466713653
-+      }
-+      subFeatureGateList {
-+        name: "MEGA_HUD_SUB_FEATURE_GATE"
-+        status: 292744512
-+      }
-+      subFeatureGateList {
-+        name: "MEGA_HUD_TIMER_SUB_FEATURE_GATE"
-+        status: 991283745
-+      }
-+      subFeatureGateList {
-+        name: "MEGA_2026_FTUE_SUB_FEATURE_GATE"
-+        status: 382901475
-+      }
-+      subFeatureGateList {
-+        name: "MEGA_LEVEL_4_ENABLED_SUB_FEATURE_GATE"
-+        status: 311989544
-+      }
-+      subFeatureGateList {
-+        name: "REMOTE_NC_HELP_TEXT_SUB_FEATURE_GATE"
-+        status: 222
-+      }
-+      subFeatureGateList {
-+        name: "MEGA_CP_BOOST_ENABLED_SUB_FEATURE_GATE"
-+        status: 368387608
-       }
-     }
-   }
-@@ -476592,10 +476592,10 @@
-         sameTypeExtraCatchCandy: 3
-         sameTypeExtraCatchXp: 200
-         sameTypeExtraCatchCandyXlChance: 0.3
--        6: 2
-+        selfCpBoostAdditionalLevel: 2
-       }
--      7: 5000
--      8: 1775001600000
-+      megaEnergyCostToUnlock: 5000
-+      FtueExpirationTimestamp: 1775001600000
-     }
-   }
- }
-@@ -476622,10 +476622,10 @@
-         sameTypeExtraCatchCandy: 3
-         sameTypeExtraCatchXp: 200
-         sameTypeExtraCatchCandyXlChance: 0.3
--        6: 2
-+        selfCpBoostAdditionalLevel: 2
-       }
--      7: 5000
--      8: 1775001600000
-+      megaEnergyCostToUnlock: 5000
-+      FtueExpirationTimestamp: 1775001600000
-     }
-   }
- }
