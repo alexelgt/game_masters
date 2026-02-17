@@ -1,967 +1,426 @@
---- GAME_MASTER_old.txt	2026-02-11 15:27:25.029152324 +0100
-+++ GAME_MASTER.txt	2026-02-15 10:57:54.046526934 +0100
+--- GAME_MASTER_old.txt	2026-02-15 10:57:54.046526934 +0100
++++ GAME_MASTER.txt	2026-02-17 13:23:01.859619246 +0100
 @@ -44879,7 +44879,7 @@
        rvnVersion: 1
        maxPlayersPerBreadDoughLobby: 100
        maxRemotePlayersPerBreadDoughLobby: 100
--      maxRemoteBreadBattlePassesAllowed: 10
-+      maxRemoteBreadBattlePassesAllowed: 20
+-      maxRemoteBreadBattlePassesAllowed: 20
++      maxRemoteBreadBattlePassesAllowed: 10
        maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
        fetchProfileFromSocialEnabled: true
        maxPlayersToPrepareBreadDoughLobby: 98
-@@ -48974,6 +48974,7 @@
-       seasonEndTimeTimestamp: 1756843200000
-       seasonEndTimeTimestamp: 1764709200000
-       seasonEndTimeTimestamp: 1772568000000
-+      seasonEndTimeTimestamp: 1780430400000
-       seasonEndTimeTimestamp: 4070980800000
-       ratingAdjustmentPercentage: 0.9
-       rankingAdjustmentPercentage: 0.01
-@@ -63982,18 +63983,6 @@
-         type: WITH_UNIQUE_POKEMON
+@@ -154043,11 +154043,11 @@
+     incident_priority_settings {
+       incidentPriority {
+         priority: 1
+-        displayType: INCIDENT_POKESTOP_ENCOUNTER
++        displayType: INVASION_GENERIC
        }
-       pokemonCondition {
--        type: POKEMON_BANLIST
--        pokemonBanList {
--          pokemon {
--            id: GLIGAR
--          }
--          pokemon {
--            id: STUNFISK
--            forms: STUNFISK_GALARIAN
--          }
--        }
--      }
--      pokemonCondition {
-         type: WITH_POKEMON_TYPE
-         withPokemonType {
-           pokemonType: POKEMON_TYPE_NORMAL
-@@ -93898,6 +93887,54 @@
-         xlUpperBound: 0.6
-         xxlUpperBound: 0.7
+       incidentPriority {
+         priority: 2
+-        displayType: INVASION_EVENT_NPC
++        displayType: INCIDENT_POKESTOP_ENCOUNTER
        }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 31
-+          cameraDistance: 27.5
-+          maxReticleSize: 14
-+        }
-+        maxBattleVisualSettings {
-+          scale: 62
-+        }
-+        maxBattleTrainerVisualSettings {
-+        }
-+        maxStationVisualSettings {
-+          scale: 4.25
-+        }
-+      }
-+      breadOverrides {
-+        breadMode: BREAD_DOUGH_MODE
-+        averageHeightM: 33
-+        camera {
-+          cylinderRadiusM: 1.5
-+          cylinderHeightM: 3.25
-+        }
-+        modelScaleV2: 1.1
-+        modelHeight: 3.9
-+        catchOverrideSettings {
-+          collisionRadiusM: 0.25
-+          collisionHeadRadiusM: 0.25
-+        }
-+        maxEncounterVisualSettings {
-+          scale: 6.5
-+          cameraDistance: 40
-+          maxReticleSize: 14
-+        }
-+        maxBattleVisualSettings {
-+          scale: 13
-+        }
-+        maxBattleTrainerVisualSettings {
-+          xOffset: -5
-+          yOffset: -5
-+        }
-+        maxStationVisualSettings {
-+          scale: 1
-+        }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 0.8
-+        }
-+      }
-     }
-   }
- }
-@@ -93916,6 +93953,22 @@
-         xlUpperBound: 0.6
-         xxlUpperBound: 0.7
+       incidentPriority {
+         priority: 3
+@@ -154063,7 +154063,7 @@
        }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 31
-+          cameraDistance: 27.5
-+          maxReticleSize: 14
-+        }
-+        maxBattleVisualSettings {
-+          scale: 62
-+        }
-+        maxBattleTrainerVisualSettings {
-+        }
-+        maxStationVisualSettings {
-+          scale: 4.25
-+        }
-+      }
-     }
-   }
- }
-@@ -93934,6 +93987,22 @@
-         xlUpperBound: 0.6
-         xxlUpperBound: 0.7
+       incidentPriority {
+         priority: 6
+-        displayType: INVASION_GENERIC
++        displayType: INVASION_EVENT_NPC
        }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 31
-+          cameraDistance: 27.5
-+          maxReticleSize: 14
-+        }
-+        maxBattleVisualSettings {
-+          scale: 62
-+        }
-+        maxBattleTrainerVisualSettings {
-+        }
-+        maxStationVisualSettings {
-+          scale: 4.25
-+        }
-+      }
-     }
-   }
- }
-@@ -93952,6 +94021,54 @@
-         xlUpperBound: 0.6
-         xxlUpperBound: 0.7
-       }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 31
-+          cameraDistance: 27.5
-+          maxReticleSize: 14
-+        }
-+        maxBattleVisualSettings {
-+          scale: 62
-+        }
-+        maxBattleTrainerVisualSettings {
-+        }
-+        maxStationVisualSettings {
-+          scale: 4.25
-+        }
-+      }
-+      breadOverrides {
-+        breadMode: BREAD_DOUGH_MODE
-+        averageHeightM: 33
-+        camera {
-+          cylinderRadiusM: 1.5
-+          cylinderHeightM: 3.25
-+        }
-+        modelScaleV2: 1.1
-+        modelHeight: 3.9
-+        catchOverrideSettings {
-+          collisionRadiusM: 0.25
-+          collisionHeadRadiusM: 0.25
-+        }
-+        maxEncounterVisualSettings {
-+          scale: 6.5
-+          cameraDistance: 40
-+          maxReticleSize: 14
-+        }
-+        maxBattleVisualSettings {
-+          scale: 13
-+        }
-+        maxBattleTrainerVisualSettings {
-+          xOffset: -5
-+          yOffset: -5
-+        }
-+        maxStationVisualSettings {
-+          scale: 1
-+        }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 0.8
-+        }
-+      }
-     }
-   }
- }
-@@ -153652,6 +153769,21 @@
-       maxNumberFavoriteSearches: 12
-       maxQueryLength: 1024
-       searchHelpUrl: "niantic.helpshift.com/hc/faq/1486-searching-filtering-your-pokemon-inventory/"
-+      completeStartLetterCountPerLanguage: "en-US,2"
-+      completeStartLetterCountPerLanguage: "pt-BR,2"
-+      completeStartLetterCountPerLanguage: "zh-TW,2"
-+      completeStartLetterCountPerLanguage: "fr-FR,2"
-+      completeStartLetterCountPerLanguage: "de-DE,2"
-+      completeStartLetterCountPerLanguage: "it-IT,2"
-+      completeStartLetterCountPerLanguage: "ja-JP,2"
-+      completeStartLetterCountPerLanguage: "ko-KR,2"
-+      completeStartLetterCountPerLanguage: "es-ES,2"
-+      completeStartLetterCountPerLanguage: "th-TH,2"
-+      completeStartLetterCountPerLanguage: "ru-RU,2"
-+      completeStartLetterCountPerLanguage: "tr-TR,2"
-+      completeStartLetterCountPerLanguage: "hi-IN,2"
-+      completeStartLetterCountPerLanguage: "id-ID,2"
-+      completeStartLetterCountPerLanguage: "es-MX,2"
-     }
-   }
- }
-@@ -154492,12 +154624,12 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2025-12-02T13:00:00"
--        eventEndTime: "2026-03-03T10:00:00"
-+        eventStartTime: "2026-03-03T13:00:00"
-+        eventEndTime: "2026-06-02T10:00:00"
-         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/pgo-s21gbl-nologo-2025.jpg"
--        clientEventStartTimeUtcMs: 1764680400000
--        clientEventEndTimeUtcMs: 1772532000000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s22-gbl-nologo-2026.jpg"
-+        clientEventStartTimeUtcMs: 1772542800000
-+        clientEventEndTimeUtcMs: 1780394400000
-       }
-     }
-   }
-@@ -154581,7 +154713,7 @@
-       category: 32
-       dropTrainerLevel: 1
-       ignoreInventorySpace: true
--      itemCap: 2000
-+      itemCap: 600
-     }
-   }
- }
-@@ -155753,8 +155885,7 @@
+       incidentPriority {
+         priority: 7
+@@ -155885,7 +155885,7 @@
      template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
      itemExpirationSettings {
        item: ITEM_LUCKY_FRIEND_APPLICATOR
--      expirationTime: "2025-06-08T23:59:00"
--      emergencyExpirationTime: "2025-06-09T10:00:00"
-+      expirationTime: "2026-03-02T23:59:59"
+-      expirationTime: "2026-03-02T23:59:59"
++      expirationTime: "2026-03-08T23:59:59"
      }
    }
  }
-@@ -156071,7 +156202,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 6
-       incense {
--        incenseLifetimeSeconds: 900
-+        incenseLifetimeSeconds: 1800
-         spawnTableProbability: 0.25
-       }
-       ignoreInventorySpace: true
-@@ -156155,7 +156286,7 @@
+@@ -156286,7 +156286,7 @@
        egg_incubator {
          incubatorType: INCUBATOR_DISTANCE
          uses: 3
--        distanceMultiplier: 1
-+        distanceMultiplier: 0.5
+-        distanceMultiplier: 0.5
++        distanceMultiplier: 1
        }
      }
    }
-@@ -156171,7 +156302,7 @@
+@@ -156302,7 +156302,7 @@
        dropTrainerLevel: 100
        egg_incubator {
          incubatorType: INCUBATOR_DISTANCE
--        distanceMultiplier: 1
-+        distanceMultiplier: 0.5
+-        distanceMultiplier: 0.5
++        distanceMultiplier: 1
        }
      }
    }
-@@ -156206,7 +156337,7 @@
+@@ -156337,7 +156337,7 @@
        egg_incubator {
          incubatorType: INCUBATOR_DISTANCE
          uses: 3
--        distanceMultiplier: 0.666666687
-+        distanceMultiplier: 0.333333343
+-        distanceMultiplier: 0.333333343
++        distanceMultiplier: 0.666666687
        }
      }
    }
-@@ -156222,7 +156353,7 @@
+@@ -156353,7 +156353,7 @@
        dropTrainerLevel: 100
        egg_incubator {
          incubatorType: INCUBATOR_DISTANCE
--        distanceMultiplier: 1
-+        distanceMultiplier: 0.5
+-        distanceMultiplier: 0.5
++        distanceMultiplier: 1
          expiredIncubatorReplacement {
            incubatorReplacement: ITEM_INCUBATOR_BASIC
            usesCountOverride: 1
-@@ -164338,8 +164469,8 @@
+@@ -164469,8 +164469,8 @@
    data {
      template_id: "MP_SHARED_SETTINGS"
      mpSettings {
--      numMpFromWalkQuest: 300
--      numMetersGoal: 2000
-+      numMpFromWalkQuest: 600
-+      numMetersGoal: 500
+-      numMpFromWalkQuest: 600
+-      numMetersGoal: 500
++      numMpFromWalkQuest: 300
++      numMetersGoal: 2000
        debugAllowRemoveWalkQuest: true
        numMpFromLootStation: 100
        numExtraMpFromFirstLootStation: 20
-@@ -185323,7 +185454,7 @@
+@@ -185454,7 +185454,7 @@
      template_id: "REMOTE_RAID_LIMIT_SETTINGS"
      squashSettings {
        enabled: true
--      dailySquashLimit: 10
-+      dailySquashLimit: 20
+-      dailySquashLimit: 20
++      dailySquashLimit: 10
      }
    }
  }
-@@ -240418,8 +240549,8 @@
-       type: POKEMON_TYPE_BUG
-       camera {
-         diskRadiusM: 0.459
--        cylinderRadiusM: 0.5
--        cylinderHeightM: 0.2
-+        cylinderRadiusM: 0.14
-+        cylinderHeightM: 0.4
+@@ -402849,7 +402849,6 @@
+         availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+-        availableForm: FURFROU_HEART
+         candyCost: 25
+         stardustCost: 10000
        }
-       encounter {
-         collisionRadiusM: 0.102
-@@ -240511,8 +240642,8 @@
-       type: POKEMON_TYPE_BUG
-       camera {
-         diskRadiusM: 0.459
--        cylinderRadiusM: 0.5
--        cylinderHeightM: 0.2
-+        cylinderRadiusM: 0.14
-+        cylinderHeightM: 0.4
+@@ -402924,7 +402923,6 @@
+         availableForm: FURFROU_NATURAL
+         availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+-        availableForm: FURFROU_HEART
+         candyCost: 25
+         stardustCost: 10000
        }
-       encounter {
-         collisionRadiusM: 0.102
-@@ -259713,6 +259844,7 @@
+@@ -403000,7 +402998,6 @@
+         availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+-        availableForm: FURFROU_HEART
+         candyCost: 25
+         stardustCost: 10000
+       }
+@@ -403075,7 +403072,6 @@
+         availableForm: FURFROU_NATURAL
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+-        availableForm: FURFROU_HEART
+         candyCost: 25
+         stardustCost: 10000
+       }
+@@ -403226,7 +403222,6 @@
+         availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+-        availableForm: FURFROU_HEART
+         candyCost: 25
+         stardustCost: 10000
+       }
+@@ -403302,7 +403297,6 @@
+         availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+-        availableForm: FURFROU_HEART
+         candyCost: 25
+         stardustCost: 10000
+       }
+@@ -403377,7 +403371,6 @@
+         availableForm: FURFROU_NATURAL
+         availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_DANDY
+-        availableForm: FURFROU_HEART
+         candyCost: 25
+         stardustCost: 10000
+       }
+@@ -403452,7 +403445,6 @@
+         availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+-        availableForm: FURFROU_HEART
+         candyCost: 25
+         stardustCost: 10000
+       }
+@@ -403528,7 +403520,6 @@
+         availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+-        availableForm: FURFROU_HEART
+         candyCost: 25
+         stardustCost: 10000
+       }
+@@ -403604,7 +403595,6 @@
+         availableForm: FURFROU_DIAMOND
+         availableForm: FURFROU_MATRON
+         availableForm: FURFROU_DANDY
+-        availableForm: FURFROU_HEART
+         candyCost: 25
+         stardustCost: 10000
+       }
+@@ -463824,36 +463814,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: DIALGA
++          pokemonId: SOLGALEO
+           pokemonDisplay {
+-            form: DIALGA_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: PALKIA
+-          pokemonDisplay {
+-            form: PALKIA_NORMAL
++            form: SOLGALEO_NORMAL
+           }
          }
-         modelScaleV2: 0.7
-         modelHeight: 4.5
-+        raidBossDistanceOffset: 4.5
+         unlockedAtRank: 20
+@@ -464450,36 +464413,9 @@
        }
-       buddyWalkedMegaEnergyAward: 15
-       ibfc {
-@@ -259835,6 +259967,7 @@
+       availablePokemon {
+         pokemon {
+-          pokemonId: DIALGA
+-          pokemonDisplay {
+-            form: DIALGA_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: PALKIA
++          pokemonId: SOLGALEO
+           pokemonDisplay {
+-            form: PALKIA_NORMAL
++            form: SOLGALEO_NORMAL
+           }
          }
-         modelScaleV2: 0.7
-         modelHeight: 4.5
-+        raidBossDistanceOffset: 4.5
-       }
-       buddyWalkedMegaEnergyAward: 15
-       ibfc {
-@@ -303514,7 +303647,7 @@
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 1
--        cameraDistance: 5
-+        cameraDistance: 9
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-@@ -303609,7 +303742,7 @@
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 1
--        cameraDistance: 5
-+        cameraDistance: 9
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-@@ -303705,7 +303838,7 @@
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 1
--        cameraDistance: 5
-+        cameraDistance: 9
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-@@ -466137,9 +466270,12 @@
+         unlockedAtRank: 20
+@@ -466270,12 +466206,9 @@
        sku: "bundle.gmaxday.1"
        category: IAP_CATEGORY_BUNDLE
        sortOrder: 1
--      hidden: true
++      hidden: true
        spriteId: "bundle3.sprite.d"
        title: "ace_box_title"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2026-02-01T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1769976000000
+-      skuEnableTime: "2019-10-31T21:00:00"
+-      skuDisableTime: "2026-02-01T20:00:00"
+-      skuEnableTimeUtcMs: 1572555600000
+-      skuDisableTimeUtcMs: 1769976000000
        showDiscountTag: true
        showStrikethroughPrice: true
        totalValue: 1000
-@@ -468561,7 +468697,6 @@
+@@ -468657,7 +468590,6 @@
+       sku: "general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._LunarNY0226_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -468678,7 +468610,6 @@
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._LunarNY0226_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -468697,6 +468628,7 @@
        sku: "general1.ticket.5"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.5"
        title: "general1.ticket.4_gmaxMeowth26_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -468582,7 +468717,6 @@
+@@ -468717,6 +468649,7 @@
        sku: "general1.ticket.5.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.5"
        title: "general1.ticket.4_gmaxMeowth26_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -470355,7 +470489,6 @@
+@@ -470449,7 +470382,6 @@
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._LunarNY0226_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -470470,7 +470402,6 @@
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._LunarNY0226_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -470489,6 +470420,7 @@
        sku: "pgorelease.general1.ticket.5"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.5"
        title: "general1.ticket.4_gmaxMeowth26_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -470376,7 +470509,6 @@
+@@ -470509,6 +470441,7 @@
        sku: "pgorelease.general1.ticket.5.giftable"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
--      hidden: true
++      hidden: true
        spriteId: "general1.ticket.5"
        title: "general1.ticket.4_gmaxMeowth26_title"
        skuEnableTime: "2019-03-14T08:00:00"
-@@ -476063,7 +476195,502 @@
+@@ -476425,6 +476358,10 @@
+         1: "REMOTE_NC_HELP_TEXT_SUB_FEATURE_GATE"
+         2: 222
+       }
++      3 {
++        1: "MEGA_CP_BOOST_ENABLED_SUB_FEATURE_GATE"
++        2: 368387608
++      }
      }
    }
  }
--batch_id: 1770774126620
+@@ -476654,7 +476591,8 @@
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 3
+         sameTypeExtraCatchXp: 200
+-        sameTypeExtraCatchCandyXlChance: 0.25
++        sameTypeExtraCatchCandyXlChance: 0.3
++        6: 2
+       }
+       7: 5000
+       8: 1775001600000
+@@ -476683,14 +476621,30 @@
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 3
+         sameTypeExtraCatchXp: 200
+-        sameTypeExtraCatchCandyXlChance: 0.25
++        sameTypeExtraCatchCandyXlChance: 0.3
++        6: 2
+       }
+       7: 5000
+       8: 1775001600000
+     }
+   }
+ }
+-batch_id: 1771143091103
 +template {
-+  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S22"
++  template_id: "BADGE_EVENT_0200"
 +  data {
-+    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S22"
-+    combat_league {
-+      title: "catch_cup_s13_title"
-+      enabled: true
-+      unlockCondition {
-+        type: WITH_UNIQUE_POKEMON
-+        minPokemonCount: 3
-+      }
-+      pokemonCondition {
-+        type: WITH_POKEMON_CP_LIMIT
-+        withPokemonCpLimit {
-+          maxCp: 1500
-+        }
-+      }
-+      pokemonCondition {
-+        type: WITH_UNIQUE_POKEMON
-+      }
-+      pokemonCondition {
-+        type: POKEMON_CAUGHT_TIMESTAMP
-+        pokemonCaughtTimestamp {
-+          afterTimestamp: 1772571600000
-+          beforeTimestamp: 1780430400000
-+        }
-+      }
-+      iconUrl: "https://storage.googleapis.com/prod-public-images/premierball_sprite.png"
-+      pokemonCount: 3
-+      bannedPokemon: DITTO
-+      bannedPokemon: SHEDINJA
-+      bannedPokemon: MEW
-+      bannedPokemon: CELEBI
-+      bannedPokemon: JIRACHI
-+      bannedPokemon: DEOXYS
-+      bannedPokemon: DARKRAI
-+      bannedPokemon: VICTINI
-+      bannedPokemon: MELOETTA
-+      bannedPokemon: GENESECT
-+      bannedPokemon: HOOPA
-+      bannedPokemon: MELTAN
-+      bannedPokemon: MELMETAL
-+      bannedPokemon: ZARUDE
-+      bannedPokemon: DIANCIE
-+      bannedPokemon: SHAYMIN
-+      bannedPokemon: KELDEO
-+      bannedPokemon: VOLCANION
-+      bannedPokemon: MARSHADOW
-+      badgeType: BADGE_GREAT_LEAGUE
-+      battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
-+      leagueType: PREMIER
-+    }
-+  }
-+}
-+template {
-+  template_id: "COMBAT_RANKING_SETTINGS_S29"
-+  data {
-+    template_id: "COMBAT_RANKING_SETTINGS_S29"
-+    combat_ranking_proto_settings {
-+      rankLevel {
-+        rankLevel: 1
-+      }
-+      rankLevel {
-+        rankLevel: 2
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 3
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 4
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 5
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 6
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 7
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 8
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 9
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 10
-+        additionalWinsRequired: 1
-+      }
-+      rankLevel {
-+        rankLevel: 11
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 12
-+        additionalWinsRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 13
-+        additionalWinsRequired: 6
-+      }
-+      rankLevel {
-+        rankLevel: 14
-+        additionalWinsRequired: 7
-+      }
-+      rankLevel {
-+        rankLevel: 15
-+        additionalWinsRequired: 8
-+      }
-+      rankLevel {
-+        rankLevel: 16
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 17
-+        additionalWinsRequired: 10
-+      }
-+      rankLevel {
-+        rankLevel: 18
-+        additionalWinsRequired: 15
-+      }
-+      rankLevel {
-+        rankLevel: 19
-+        additionalWinsRequired: 20
-+      }
-+      rankLevel {
-+        rankLevel: 20
-+        additionalTotalBattlesRequired: 5
-+      }
-+      rankLevel {
-+        rankLevel: 21
-+        minRatingRequired: 2000
-+      }
-+      rankLevel {
-+        rankLevel: 22
-+        minRatingRequired: 2500
-+      }
-+      rankLevel {
-+        rankLevel: 23
-+        minRatingRequired: 2750
-+      }
-+      rankLevel {
-+        rankLevel: 24
-+        minRatingRequired: 3000
-+      }
-+      required_for_rewards {
-+        rankLevel: 1
-+        additionalTotalBattlesRequired: 5
-+      }
-+      minRankToDisplayRating: 20
-+      minRatingRequired: 29
-+    }
-+  }
-+}
-+template {
-+  template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_01"
-+  data {
-+    template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_01"
-+    itemSettings {
-+      itemId: 2151
-+      itemType: ITEM_TYPE_EVENT_PASS_POINT
-+      category: ITEM_CATEGORY_EVENT_PASS_POINT
-+      ignoreInventorySpace: true
-+      itemCap: 999999
-+      eventPassPoint {
-+        eventPassId: "EVENT_PASS_MARCH2026_SEASON"
-+      }
-+      timePeriodCounters {
-+        playerActivity {
-+          limit: 300
-+        }
++    template_id: "BADGE_EVENT_0200"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0200
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
 +      }
 +    }
 +  }
 +}
-+template {
-+  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_01"
-+  data {
-+    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_01"
-+    itemExpirationSettings {
-+      item: 2151
-+      expirationTime: "2026-04-09T10:00:00"
-+      emergencyExpirationTime: "2026-04-11T10:00:00"
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_2026_FEATURE_GATE"
-+  data {
-+    template_id: "MEGA_2026_FEATURE_GATE"
-+    featureGate {
-+      status: 216426293
-+      rolloutPercentage: 100
-+      3 {
-+        1: "MEGA_LEVELS_TUTORIAL_SUB_FEATURE_GATE"
-+        2: 817843414
-+      }
-+      3 {
-+        1: "MEGA_EVOLVE_BUTTON_SUB_FEATURE_GATE"
-+        2: 466713653
-+      }
-+      3 {
-+        1: "MEGA_HUD_SUB_FEATURE_GATE"
-+        2: 292744512
-+      }
-+      3 {
-+        1: "MEGA_HUD_TIMER_SUB_FEATURE_GATE"
-+        2: 991283745
-+      }
-+      3 {
-+        1: "MEGA_2026_FTUE_SUB_FEATURE_GATE"
-+        2: 382901475
-+      }
-+      3 {
-+        1: "MEGA_LEVEL_4_ENABLED_SUB_FEATURE_GATE"
-+        2: 311989544
-+      }
-+      3 {
-+        1: "REMOTE_NC_HELP_TEXT_SUB_FEATURE_GATE"
-+        2: 222
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_0_V0071_POKEMON_VICTREEBEL"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_0_V0071_POKEMON_VICTREEBEL"
-+    megaEvoLevelSettings {
-+      pokemonId: VICTREEBEL
-+      progression {
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 1209600000
-+        bypassCostInitial: 300
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_0_V0687_POKEMON_MALAMAR"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_0_V0687_POKEMON_MALAMAR"
-+    megaEvoLevelSettings {
-+      pokemonId: MALAMAR
-+      progression {
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 1209600000
-+        bypassCostInitial: 300
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_1_V0071_POKEMON_VICTREEBEL"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_1_V0071_POKEMON_VICTREEBEL"
-+    megaEvoLevelSettings {
-+      level: 1
-+      pokemonId: VICTREEBEL
-+      progression {
-+        pointsRequired: 1
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 604800000
-+        bypassCostInitial: 40
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_1_V0687_POKEMON_MALAMAR"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_1_V0687_POKEMON_MALAMAR"
-+    megaEvoLevelSettings {
-+      level: 1
-+      pokemonId: MALAMAR
-+      progression {
-+        pointsRequired: 1
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 604800000
-+        bypassCostInitial: 40
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_2_V0071_POKEMON_VICTREEBEL"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_2_V0071_POKEMON_VICTREEBEL"
-+    megaEvoLevelSettings {
-+      level: 2
-+      pokemonId: VICTREEBEL
-+      progression {
-+        pointsRequired: 7
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 432000000
-+        bypassCostInitial: 20
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 1
-+        sameTypeExtraCatchXp: 50
-+        sameTypeExtraCatchCandyXlChance: 0.1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_2_V0687_POKEMON_MALAMAR"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_2_V0687_POKEMON_MALAMAR"
-+    megaEvoLevelSettings {
-+      level: 2
-+      pokemonId: MALAMAR
-+      progression {
-+        pointsRequired: 7
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 432000000
-+        bypassCostInitial: 20
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 1
-+        sameTypeExtraCatchXp: 50
-+        sameTypeExtraCatchCandyXlChance: 0.1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_3_V0071_POKEMON_VICTREEBEL"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_3_V0071_POKEMON_VICTREEBEL"
-+    megaEvoLevelSettings {
-+      level: 3
-+      pokemonId: VICTREEBEL
-+      progression {
-+        pointsRequired: 30
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 259200000
-+        bypassCostInitial: 10
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 2
-+        sameTypeExtraCatchXp: 100
-+        sameTypeExtraCatchCandyXlChance: 0.25
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_3_V0687_POKEMON_MALAMAR"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_3_V0687_POKEMON_MALAMAR"
-+    megaEvoLevelSettings {
-+      level: 3
-+      pokemonId: MALAMAR
-+      progression {
-+        pointsRequired: 30
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 259200000
-+        bypassCostInitial: 10
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 2
-+        sameTypeExtraCatchXp: 100
-+        sameTypeExtraCatchCandyXlChance: 0.25
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_4_V0071_POKEMON_VICTREEBEL"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_4_V0071_POKEMON_VICTREEBEL"
-+    megaEvoLevelSettings {
-+      level: 4
-+      pokemonId: VICTREEBEL
-+      progression {
-+        pointsRequired: 30
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 86400000
-+        bypassCostInitial: 5
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 3
-+        sameTypeExtraCatchXp: 200
-+        sameTypeExtraCatchCandyXlChance: 0.25
-+      }
-+      7: 5000
-+      8: 1775001600000
-+    }
-+  }
-+}
-+template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_4_V0687_POKEMON_MALAMAR"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_4_V0687_POKEMON_MALAMAR"
-+    megaEvoLevelSettings {
-+      level: 4
-+      pokemonId: MALAMAR
-+      progression {
-+        pointsRequired: 30
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 86400000
-+        bypassCostInitial: 5
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 3
-+        sameTypeExtraCatchXp: 200
-+        sameTypeExtraCatchCandyXlChance: 0.25
-+      }
-+      7: 5000
-+      8: 1775001600000
-+    }
-+  }
-+}
-+batch_id: 1771143091103
++batch_id: 1771324878231
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -476083,6 +476710,7 @@
+@@ -476710,7 +476664,6 @@
  experiment_id: 1120
  experiment_id: 1699
  experiment_id: 1816
-+experiment_id: 2256
+-experiment_id: 2256
  experiment_id: 2297
  experiment_id: 2600
  experiment_id: 2650
-@@ -476097,11 +476725,16 @@
+@@ -476719,22 +476672,15 @@
+ experiment_id: 3063
+ experiment_id: 3710
+ experiment_id: 3712
+-experiment_id: 3721
++experiment_id: 3722
+ experiment_id: 3730
+-experiment_id: 3740
++experiment_id: 3741
  experiment_id: 3835
- experiment_id: 3855
- experiment_id: 3856
-+experiment_id: 3857
- experiment_id: 3859
- experiment_id: 3864
-+experiment_id: 3865
- experiment_id: 4989
-+experiment_id: 4990
-+experiment_id: 4993
-+experiment_id: 4994
+-experiment_id: 3855
+-experiment_id: 3856
+-experiment_id: 3857
+-experiment_id: 3859
+-experiment_id: 3864
+-experiment_id: 3865
+-experiment_id: 4989
+-experiment_id: 4990
+-experiment_id: 4993
+-experiment_id: 4994
++experiment_id: 3837
++experiment_id: 3839
++experiment_id: 3840
  experiment_id: 4998
--experiment_id: 5124
-+experiment_id: 5125
+-experiment_id: 5125
++experiment_id: 5126
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -476113,6 +476746,7 @@
- experiment_id: 6075
- experiment_id: 7008
- experiment_id: 8984
-+experiment_id: 8986
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
