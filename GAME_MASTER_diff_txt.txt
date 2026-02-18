@@ -1,55 +1,20 @@
---- GAME_MASTER_old.txt	2026-02-17 14:12:10.598560897 +0100
-+++ GAME_MASTER.txt	2026-02-17 14:13:05.082014770 +0100
-@@ -154708,9 +154708,9 @@
-   data {
-     template_id: "ITEM_ENHANCED_CURRENCY"
-     itemSettings {
--      itemId: 1410
--      itemType: 33
--      category: 32
-+      itemId: ITEM_ENHANCED_CURRENCY
-+      itemType: ITEM_TYPE_ENHANCED_CURRENCY
-+      category: ITEM_CATEGORY_ENHANCED_CURRENCY
-       dropTrainerLevel: 1
-       ignoreInventorySpace: true
-       itemCap: 600
-@@ -154746,9 +154746,9 @@
-   data {
-     template_id: "ITEM_ENHANCED_CURRENCY_HOLDER"
-     itemSettings {
--      itemId: 1411
--      itemType: 35
--      category: 33
-+      itemId: ITEM_ENHANCED_CURRENCY_HOLDER
-+      itemType: ITEM_TYPE_ENHANCED_CURRENCY_HOLDER
-+      category: ITEM_CATEGORY_ENHANCED_CURRENCY_HOLDER
-       ignoreInventorySpace: true
-       itemCap: 1
-     }
-@@ -156430,7 +156430,7 @@
-         category: ITEM_CATEGORY_CAMERA
-         category: ITEM_CATEGORY_ROUTE_MAKER
-         category: ITEM_CATEGORY_UTILITES
--        category: 33
-+        category: ITEM_CATEGORY_ENHANCED_CURRENCY_HOLDER
-         categoryName: "item_bag_category_key_items"
-         sortOrder: 9
+--- GAME_MASTER_old.txt	2026-02-17 14:13:05.082014770 +0100
++++ GAME_MASTER.txt	2026-02-18 13:11:52.061248867 +0100
+@@ -476595,7 +476595,7 @@
+         selfCpBoostAdditionalLevel: 2
        }
-@@ -476296,7 +476296,7 @@
-   data {
-     template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_01"
-     itemSettings {
--      itemId: 2151
-+      itemId: ITEM_EVENT_PASS_POINT_MONTHLY_01
-       itemType: ITEM_TYPE_EVENT_PASS_POINT
-       category: ITEM_CATEGORY_EVENT_PASS_POINT
-       ignoreInventorySpace: true
-@@ -476317,7 +476317,7 @@
-   data {
-     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_01"
-     itemExpirationSettings {
--      item: 2151
-+      item: ITEM_EVENT_PASS_POINT_MONTHLY_01
-       expirationTime: "2026-04-09T10:00:00"
-       emergencyExpirationTime: "2026-04-11T10:00:00"
+       megaEnergyCostToUnlock: 5000
+-      FtueExpirationTimestamp: 1775001600000
++      ftueExpirationTimestamp: 1775001600000
      }
+   }
+ }
+@@ -476625,7 +476625,7 @@
+         selfCpBoostAdditionalLevel: 2
+       }
+       megaEnergyCostToUnlock: 5000
+-      FtueExpirationTimestamp: 1775001600000
++      ftueExpirationTimestamp: 1775001600000
+     }
+   }
+ }
