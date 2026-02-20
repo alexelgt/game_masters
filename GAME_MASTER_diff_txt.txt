@@ -1,222 +1,338 @@
---- GAME_MASTER_old.txt	2026-02-18 18:28:10.495247312 +0100
-+++ GAME_MASTER.txt	2026-02-19 18:43:16.772832650 +0100
-@@ -67564,24 +67564,72 @@
-             id: TAPU_LELE
-           }
-           pokemon {
-+            id: SIZZLIPEDE
-+          }
-+          pokemon {
-+            id: CENTISKORCH
-+          }
-+          pokemon {
-             id: TINKATINK
--            forms: FORM_UNSET
--            forms: TINKATINK_NORMAL
-           }
-           pokemon {
-             id: TINKATUFF
--            forms: FORM_UNSET
--            forms: TINKATUFF_NORMAL
-           }
-           pokemon {
-             id: TINKATON
--            forms: FORM_UNSET
--            forms: TINKATON_NORMAL
-+          }
-+          pokemon {
-+            id: TATSUGIRI
-+            forms: TATSUGIRI_CURLY
-+            forms: TATSUGIRI_DROOPY
-+          }
-+          pokemon {
-+            id: IMPIDIMP
-+          }
-+          pokemon {
-+            id: MORGREM
-+          }
-+          pokemon {
-+            id: KLAWF
-           }
-           pokemon {
-             id: FLAMIGO
--            forms: FORM_UNSET
--            forms: FLAMIGO_NORMAL
-+          }
-+          pokemon {
-+            id: GROUDON
-+          }
-+          pokemon {
-+            id: DEOXYS
-+          }
-+          pokemon {
-+            id: MESPRIT
-+          }
-+          pokemon {
-+            id: ZAMAZENTA
-+          }
-+          pokemon {
-+            id: LATIAS
-+          }
-+          pokemon {
-+            id: MOLTRES
-+            forms: MOLTRES_GALARIAN
-+          }
-+          pokemon {
-+            id: HO_OH
-+          }
-+          pokemon {
-+            id: MEW
-+          }
-+          pokemon {
-+            id: DIANCIE
-+          }
-+          pokemon {
-+            id: VIVILLON
-+            forms: VIVILLON_MODERN
-+            forms: VIVILLON_SUN
-+            forms: VIVILLON_OCEAN
-+            forms: VIVILLON_MEADOW
-+            forms: VIVILLON_FANCY
-           }
-         }
-       }
-@@ -229656,7 +229704,7 @@
+--- GAME_MASTER_old.txt	2026-02-19 18:43:16.772832650 +0100
++++ GAME_MASTER.txt	2026-02-20 19:07:19.087776531 +0100
+@@ -47398,8 +47398,6 @@
+     template_id: "BUNDLE_EC_200_RPP_1"
      iapItemDisplay {
-       sku: "STICKER_NAGANO_MARILL.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 1000
-+      sortOrder: 999
+       sku: "BUNDLE_EC_200_RPP_1"
+-      category: IAP_CATEGORY_ITEMS
+-      hidden: true
+       spriteId: "enhanced_currency_medium_rrp"
      }
    }
- }
-@@ -231576,7 +231624,7 @@
-       stickerId: "STICKER_PGO_TOUR_2026"
-       maxCount: 25
-       category: "Misc"
--      releaseDate: 20250212
-+      releaseDate: 20260220
-     }
-   }
- }
-@@ -231588,7 +231636,7 @@
-       stickerId: "STICKER_PGO_TOUR_2026_1"
-       maxCount: 25
-       category: "Pokemon"
--      releaseDate: 20250212
-+      releaseDate: 20260220
-       regionId: 2000
-     }
-   }
-@@ -231600,8 +231648,9 @@
-     stickerMetadata {
-       stickerId: "STICKER_PGO_TOUR_2026_2"
-       maxCount: 25
-+      pokemonId: XERNEAS
-       category: "Pokemon"
--      releaseDate: 20250212
-+      releaseDate: 20260220
-       regionId: 5
-     }
-   }
-@@ -231613,8 +231662,9 @@
-     stickerMetadata {
-       stickerId: "STICKER_PGO_TOUR_2026_3"
-       maxCount: 25
-+      pokemonId: YVELTAL
-       category: "Pokemon"
--      releaseDate: 20250212
-+      releaseDate: 20260220
-       regionId: 5
-     }
-   }
-@@ -231627,7 +231677,7 @@
-       stickerId: "STICKER_PGO_TOUR_LOGO"
-       maxCount: 25
-       category: "Misc"
--      releaseDate: 20250212
-+      releaseDate: 20260220
-     }
-   }
- }
-@@ -236424,7 +236474,7 @@
+@@ -47410,9 +47408,10 @@
+     template_id: "BUNDLE_EC_600_RPP_3"
      iapItemDisplay {
-       sku: "STICKER_WINTER2025_1.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 190
-+      sortOrder: 500
+       sku: "BUNDLE_EC_600_RPP_3"
+-      category: IAP_CATEGORY_ITEMS
+-      hidden: true
+       spriteId: "enhanced_currency_large_3rrp"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 885
      }
    }
  }
-@@ -236435,7 +236485,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER2025_1.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 189
-+      sortOrder: 499
-     }
+@@ -99629,6 +99628,17 @@
+     template_id: "EXTENDED_V0149_POKEMON_DRAGONITE"
+     pokemonExtendedSettings {
+       uniqueId: DRAGONITE
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 1.8865
++          xsLowerBound: 1.925
++          mLowerBound: 2.8875
++          mUpperBound: 4.8125
++          xlUpperBound: 5.775
++          xxlUpperBound: 3.85
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 1.078
+         xsLowerBound: 1.1
+@@ -99647,6 +99657,17 @@
+     pokemonExtendedSettings {
+       uniqueId: DRAGONITE
+       form: DRAGONITE_NORMAL
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 1.8865
++          xsLowerBound: 1.925
++          mLowerBound: 2.8875
++          mUpperBound: 4.8125
++          xlUpperBound: 5.775
++          xxlUpperBound: 3.85
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 1.078
+         xsLowerBound: 1.1
+@@ -154096,6 +154117,16 @@
    }
  }
-@@ -236460,7 +236510,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER2025_2.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 188
-+      sortOrder: 498
-     }
-   }
- }
-@@ -236471,7 +236521,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER2025_2.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 187
-+      sortOrder: 497
-     }
-   }
- }
-@@ -236496,7 +236546,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER2025_3.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 186
-+      sortOrder: 496
-     }
-   }
- }
-@@ -236507,7 +236557,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER2025_3.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 185
-+      sortOrder: 495
-     }
-   }
- }
-@@ -236531,7 +236581,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER2025_4.3"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 184
-+      sortOrder: 494
-     }
-   }
- }
-@@ -236542,7 +236592,7 @@
-     iapItemDisplay {
-       sku: "STICKER_WINTER2025_4.5"
-       category: IAP_CATEGORY_STICKER
--      sortOrder: 183
-+      sortOrder: 493
-     }
-   }
- }
-@@ -476765,7 +476815,280 @@
-     }
-   }
- }
--batch_id: 1771430196769
+ template {
++  template_id: "HEAL_TOAST_FEATURE_GATE"
++  data {
++    template_id: "HEAL_TOAST_FEATURE_GATE"
++    featureGate {
++      status: 41414141
++      rolloutPercentage: 100
++    }
++  }
++}
 +template {
+   template_id: "Hindi"
+   data {
+     template_id: "Hindi"
+@@ -154112,7 +154143,7 @@
+     iapCategoryDisplay {
+       category: IAP_CATEGORY_AVATAR
+       sortOrder: 5
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_Avatar_Blacephalon_Shoes.jpg"
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_GOTour2026_XY_Items.jpg"
+       description: "avatar_shop_description_new"
+     }
+   }
+@@ -154970,7 +155001,7 @@
+     iapItemDisplay {
+       sku: "ITEM_ENHANCED_CURRENCY_200"
+       category: IAP_CATEGORY_ITEMS
+-      hidden: true
++      sortOrder: 1
+       spriteId: "enhanced_currency_medium"
+     }
+   }
+@@ -154982,8 +155013,11 @@
+     iapItemDisplay {
+       sku: "ITEM_ENHANCED_CURRENCY_600"
+       category: IAP_CATEGORY_ITEMS
+-      hidden: true
++      sortOrder: 2
+       spriteId: "enhanced_currency_large"
++      showDiscountTag: true
++      showStrikethroughPrice: true
++      totalValue: 300
+     }
+   }
+ }
+@@ -162357,18 +162391,22 @@
+       subFeatureGateList {
+         name: "MEGA_LEVELS_TUTORIAL_SUB_FEATURE_GATE"
+         status: 817843414
++        rolloutPercentage: 100
+       }
+       subFeatureGateList {
+         name: "MEGA_EVOLVE_BUTTON_SUB_FEATURE_GATE"
+         status: 466713653
++        rolloutPercentage: 100
+       }
+       subFeatureGateList {
+         name: "MEGA_HUD_SUB_FEATURE_GATE"
+         status: 292744512
++        rolloutPercentage: 100
+       }
+       subFeatureGateList {
+         name: "MEGA_HUD_TIMER_SUB_FEATURE_GATE"
+         status: 991283745
++        rolloutPercentage: 100
+       }
+       subFeatureGateList {
+         name: "MEGA_2026_FTUE_SUB_FEATURE_GATE"
+@@ -162377,14 +162415,17 @@
+       subFeatureGateList {
+         name: "MEGA_LEVEL_4_ENABLED_SUB_FEATURE_GATE"
+         status: 311989544
++        rolloutPercentage: 100
+       }
+       subFeatureGateList {
+         name: "REMOTE_NC_HELP_TEXT_SUB_FEATURE_GATE"
+         status: 222
++        rolloutPercentage: 100
+       }
+       subFeatureGateList {
+         name: "MEGA_CP_BOOST_ENABLED_SUB_FEATURE_GATE"
+         status: 368387608
++        rolloutPercentage: 100
+       }
+     }
+   }
+@@ -162527,6 +162568,29 @@
+   }
+ }
+ template {
++  template_id: "MEGA_EVOLUTION_LEVEL_0_V0149_POKEMON_DRAGONITE"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_0_V0149_POKEMON_DRAGONITE"
++    megaEvoLevelSettings {
++      pokemonId: DRAGONITE
++      progression {
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 1209600000
++        bypassCostInitial: 500
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "MEGA_EVOLUTION_LEVEL_0_V0150_POKEMON_MEWTWO"
+   data {
+     template_id: "MEGA_EVOLUTION_LEVEL_0_V0150_POKEMON_MEWTWO"
+@@ -163090,6 +163154,31 @@
+   }
+ }
+ template {
++  template_id: "MEGA_EVOLUTION_LEVEL_1_V0149_POKEMON_DRAGONITE"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_1_V0149_POKEMON_DRAGONITE"
++    megaEvoLevelSettings {
++      level: 1
++      pokemonId: DRAGONITE
++      progression {
++        pointsRequired: 1
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 604800000
++        bypassCostInitial: 40
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "MEGA_EVOLUTION_LEVEL_1_V0150_POKEMON_MEWTWO"
+   data {
+     template_id: "MEGA_EVOLUTION_LEVEL_1_V0150_POKEMON_MEWTWO"
+@@ -163701,6 +163790,33 @@
+   }
+ }
+ template {
++  template_id: "MEGA_EVOLUTION_LEVEL_2_V0149_POKEMON_DRAGONITE"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_2_V0149_POKEMON_DRAGONITE"
++    megaEvoLevelSettings {
++      level: 2
++      pokemonId: DRAGONITE
++      progression {
++        pointsRequired: 7
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 432000000
++        bypassCostInitial: 20
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++        sameTypeExtraCatchXp: 50
++        sameTypeExtraCatchCandyXlChance: 0.1
++      }
++    }
++  }
++}
++template {
+   template_id: "MEGA_EVOLUTION_LEVEL_2_V0150_POKEMON_MEWTWO"
+   data {
+     template_id: "MEGA_EVOLUTION_LEVEL_2_V0150_POKEMON_MEWTWO"
+@@ -164348,6 +164464,33 @@
+   }
+ }
+ template {
++  template_id: "MEGA_EVOLUTION_LEVEL_3_V0149_POKEMON_DRAGONITE"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_3_V0149_POKEMON_DRAGONITE"
++    megaEvoLevelSettings {
++      level: 3
++      pokemonId: DRAGONITE
++      progression {
++        pointsRequired: 30
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 259200000
++        bypassCostInitial: 10
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 2
++        sameTypeExtraCatchXp: 100
++        sameTypeExtraCatchCandyXlChance: 0.25
++      }
++    }
++  }
++}
++template {
+   template_id: "MEGA_EVOLUTION_LEVEL_3_V0150_POKEMON_MEWTWO"
+   data {
+     template_id: "MEGA_EVOLUTION_LEVEL_3_V0150_POKEMON_MEWTWO"
+@@ -164864,6 +165007,36 @@
+   }
+ }
+ template {
++  template_id: "MEGA_EVOLUTION_LEVEL_4_V0149_POKEMON_DRAGONITE"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_4_V0149_POKEMON_DRAGONITE"
++    megaEvoLevelSettings {
++      level: 4
++      pokemonId: DRAGONITE
++      progression {
++        pointsRequired: 30
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 86400000
++        bypassCostInitial: 5
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 3
++        sameTypeExtraCatchXp: 200
++        sameTypeExtraCatchCandyXlChance: 0.3
++        selfCpBoostAdditionalLevel: 2
++      }
++      megaEnergyCostToUnlock: 5000
++      ftueExpirationTimestamp: 1775001600000
++    }
++  }
++}
++template {
+   template_id: "MEGA_EVOLUTION_LEVEL_4_V0687_POKEMON_MALAMAR"
+   data {
+     template_id: "MEGA_EVOLUTION_LEVEL_4_V0687_POKEMON_MALAMAR"
+@@ -164901,12 +165074,12 @@
+       evolutionLengthMs: 28800000
+       attackBoostFromMegaDifferentType: 1.1
+       attackBoostFromMegaSameType: 1.3
+-      maxCandyHoardSize: 9999
++      maxCandyHoardSize: 10000
+       enableBuddyWalkingMegaEnergyAward: true
+       activeMegaBonusCatchCandy: 1
+       enableMegaLevel: true
+       enableMegaEvolveInLobby: true
+-      numMegaLevels: 3
++      numMegaLevels: 4
+       clientMegaCooldownBufferMs: 2000
+       enableMegaLevelLegacyAward: true
+     }
+@@ -170778,6 +170951,16 @@
+   }
+ }
+ template {
 +  template_id: "N_DISPLAY_n_hat_xerneasitems_0"
 +  data {
 +    template_id: "N_DISPLAY_n_hat_xerneasitems_0"
@@ -227,6 +343,13 @@
 +  }
 +}
 +template {
+   template_id: "N_DISPLAY_n_hat_yamaskhat_0"
+   data {
+     template_id: "N_DISPLAY_n_hat_yamaskhat_0"
+@@ -177658,6 +177841,16 @@
+   }
+ }
+ template {
 +  template_id: "N_DISPLAY_n_shirt_yveltaljacket"
 +  data {
 +    template_id: "N_DISPLAY_n_shirt_yveltaljacket"
@@ -237,6 +360,178 @@
 +  }
 +}
 +template {
+   template_id: "N_DISPLAY_n_shirt_zacostume_a_0"
+   data {
+     template_id: "N_DISPLAY_n_shirt_zacostume_a_0"
+@@ -185691,6 +185884,17 @@
+   }
+ }
+ template {
++  template_id: "PTC_OAUTH_SETTINGS"
++  data {
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
++    }
++  }
++}
++template {
+   template_id: "PUSH_GATEWAY_MULTI_ACTION_CODE_GATE"
+   data {
+     template_id: "PUSH_GATEWAY_MULTI_ACTION_CODE_GATE"
+@@ -185875,6 +186079,146 @@
+   }
+ }
+ template {
++  template_id: "RAID_ENTRY_COST_SETTINGS"
++  data {
++    template_id: "RAID_ENTRY_COST_SETTINGS"
++    285 {
++      1 {
++        1: 16
++        2 {
++          1: 1
++          2 {
++            1: 1402
++            2: 1
++          }
++        }
++        2 {
++          1: 2
++          2 {
++            1: 1408
++            2: 1
++          }
++          2 {
++            1: 1410
++            2: 200
++          }
++        }
++        2 {
++          1: 1
++          2 {
++            1: 1401
++            2: 1
++          }
++        }
++        2 {
++          1: 1
++          2 {
++            1: 1410
++            2: 200
++          }
++        }
++      }
++      1 {
++        1: 17
++        2 {
++          1: 1
++          2 {
++            1: 1402
++            2: 1
++          }
++        }
++        2 {
++          1: 2
++          2 {
++            1: 1408
++            2: 1
++          }
++          2 {
++            1: 1410
++            2: 200
++          }
++        }
++        2 {
++          1: 1
++          2 {
++            1: 1401
++            2: 1
++          }
++        }
++        2 {
++          1: 1
++          2 {
++            1: 1410
++            2: 200
++          }
++        }
++      }
++      1 {
++        1: 6
++        2 {
++          1: 1
++          2 {
++            1: 1402
++            2: 1
++          }
++        }
++        2 {
++          1: 2
++          2 {
++            1: 1408
++            2: 1
++          }
++        }
++        2 {
++          1: 1
++          2 {
++            1: 1401
++            2: 1
++          }
++        }
++        2 {
++          1: 1
++          2 {
++            1: 1410
++            2: 150
++          }
++        }
++      }
++      1 {
++        1: 7
++        2 {
++          1: 1
++          2 {
++            1: 1402
++            2: 1
++          }
++        }
++        2 {
++          1: 2
++          2 {
++            1: 1408
++            2: 1
++          }
++        }
++        2 {
++          1: 1
++          2 {
++            1: 1401
++            2: 1
++          }
++        }
++        2 {
++          1: 1
++          2 {
++            1: 1410
++            2: 150
++          }
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "RAID_LOBBY_COUNTER_SETTINGS"
+   data {
+     template_id: "RAID_LOBBY_COUNTER_SETTINGS"
+@@ -231629,6 +231973,28 @@
+   }
+ }
+ template {
 +  template_id: "STICKER_PGO_TOUR_2026.3"
 +  data {
 +    template_id: "STICKER_PGO_TOUR_2026.3"
@@ -259,6 +554,13 @@
 +  }
 +}
 +template {
+   template_id: "STICKER_PGO_TOUR_2026_1"
+   data {
+     template_id: "STICKER_PGO_TOUR_2026_1"
+@@ -231642,6 +232008,28 @@
+   }
+ }
+ template {
 +  template_id: "STICKER_PGO_TOUR_2026_1.3"
 +  data {
 +    template_id: "STICKER_PGO_TOUR_2026_1.3"
@@ -281,6 +583,13 @@
 +  }
 +}
 +template {
+   template_id: "STICKER_PGO_TOUR_2026_2"
+   data {
+     template_id: "STICKER_PGO_TOUR_2026_2"
+@@ -231656,6 +232044,28 @@
+   }
+ }
+ template {
 +  template_id: "STICKER_PGO_TOUR_2026_2.3"
 +  data {
 +    template_id: "STICKER_PGO_TOUR_2026_2.3"
@@ -303,6 +612,13 @@
 +  }
 +}
 +template {
+   template_id: "STICKER_PGO_TOUR_2026_3"
+   data {
+     template_id: "STICKER_PGO_TOUR_2026_3"
+@@ -231670,6 +232080,28 @@
+   }
+ }
+ template {
 +  template_id: "STICKER_PGO_TOUR_2026_3.3"
 +  data {
 +    template_id: "STICKER_PGO_TOUR_2026_3.3"
@@ -325,6 +641,13 @@
 +  }
 +}
 +template {
+   template_id: "STICKER_PGO_TOUR_2026_LOGO"
+   data {
+     template_id: "STICKER_PGO_TOUR_2026_LOGO"
+@@ -231682,6 +232114,28 @@
+   }
+ }
+ template {
 +  template_id: "STICKER_PGO_TOUR_2026_LOGO.3"
 +  data {
 +    template_id: "STICKER_PGO_TOUR_2026_LOGO.3"
@@ -347,6 +670,13 @@
 +  }
 +}
 +template {
+   template_id: "STICKER_PGO_WILDAREA_2024"
+   data {
+     template_id: "STICKER_PGO_WILDAREA_2024"
+@@ -234083,6 +234537,149 @@
+   }
+ }
+ template {
 +  template_id: "STICKER_SPRING_2026_1"
 +  data {
 +    template_id: "STICKER_SPRING_2026_1"
@@ -489,24 +819,956 @@
 +    }
 +  }
 +}
-+batch_id: 1771517323248
++template {
+   template_id: "STICKER_SPRING_EIEVUI"
+   data {
+     template_id: "STICKER_SPRING_EIEVUI"
+@@ -237595,6 +238192,19 @@
+   }
+ }
+ template {
++  template_id: "TEMPORARY_EVOLUTION_V0149_POKEMON_DRAGONITE"
++  data {
++    template_id: "TEMPORARY_EVOLUTION_V0149_POKEMON_DRAGONITE"
++    temporaryEvolutionSettings {
++      pokemonId: DRAGONITE
++      temporary_evolutions {
++        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
++        assetBundleValue: 51
++      }
++    }
++  }
++}
++template {
+   template_id: "TEMPORARY_EVOLUTION_V0181_POKEMON_AMPHAROS"
+   data {
+     template_id: "TEMPORARY_EVOLUTION_V0181_POKEMON_AMPHAROS"
+@@ -259969,6 +260579,7 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 2
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -260066,6 +260677,7 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 2
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -260194,6 +260806,7 @@
+       }
+       buddyGroupNumber: 3
+       eliteQuickMove: RAZOR_LEAF_FAST
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -260301,6 +260914,7 @@
+       }
+       buddyGroupNumber: 3
+       eliteQuickMove: RAZOR_LEAF_FAST
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -279869,6 +280483,7 @@
+     pokemonFamily {
+       familyId: FAMILY_DRATINI
+       candyPerXlCandy: 100
++      megaEvolvablePokemonId: DRAGONITE
+     }
+   }
+ }
+@@ -279961,6 +280576,7 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 2
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -280057,6 +280673,7 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 2
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -280158,6 +280775,7 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 3
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -280260,6 +280878,7 @@
+         shadowChargeMove: FRUSTRATION
+       }
+       buddyGroupNumber: 3
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -280336,6 +280955,11 @@
+       kmBuddyDistance: 5
+       buddy_size: BUDDY_BIG
+       modelHeight: 2.28
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 300
++        temporaryEvolutionEnergyCostSubsequent: 60
++      }
+       modelScaleV2: 0.96
+       buddyOffsetMale: 20
+       buddyOffsetMale: -26.3
+@@ -280363,6 +280987,26 @@
+       buddyGroupNumber: 3
+       eliteCinematicMove: DRACO_METEOR
+       eliteCinematicMove: DRAGON_PULSE
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 209
++          baseAttack: 299
++          baseDefense: 255
++        }
++        averageHeightM: 2.2
++        averageWeightKg: 290
++        typeOverride1: POKEMON_TYPE_DRAGON
++        typeOverride2: POKEMON_TYPE_FLYING
++        camera {
++          cylinderRadiusM: 3
++          cylinderHeightM: 3.2
++          cylinderGroundM: 1.25
++        }
++        modelScaleV2: 0.9
++        modelHeight: 2.2
++      }
++      buddyWalkedMegaEnergyAward: 15
+       useIrisFlyingPlacement: true
+       irisPhotoEmote1: "PhysicalAttack"
+       irisPhotoEmote2: "SpecialAttack"
+@@ -280442,6 +281086,11 @@
+       kmBuddyDistance: 5
+       buddy_size: BUDDY_BIG
+       modelHeight: 2.28
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 300
++        temporaryEvolutionEnergyCostSubsequent: 60
++      }
+       modelScaleV2: 0.96
+       form: DRAGONITE_NORMAL
+       buddyOffsetMale: 20
+@@ -280470,6 +281119,26 @@
+       buddyGroupNumber: 6
+       eliteCinematicMove: DRACO_METEOR
+       eliteCinematicMove: DRAGON_PULSE
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 209
++          baseAttack: 299
++          baseDefense: 255
++        }
++        averageHeightM: 2.2
++        averageWeightKg: 290
++        typeOverride1: POKEMON_TYPE_DRAGON
++        typeOverride2: POKEMON_TYPE_FLYING
++        camera {
++          cylinderRadiusM: 3
++          cylinderHeightM: 3.2
++          cylinderGroundM: 1.25
++        }
++        modelScaleV2: 0.9
++        modelHeight: 2.2
++      }
++      buddyWalkedMegaEnergyAward: 15
+       useIrisFlyingPlacement: true
+       irisPhotoEmote1: "PhysicalAttack"
+       irisPhotoEmote2: "SpecialAttack"
+@@ -405849,6 +406518,7 @@
+         purifiedChargeMove: RETURN
+         shadowChargeMove: FRUSTRATION
+       }
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -405931,6 +406601,7 @@
+         purifiedChargeMove: RETURN
+         shadowChargeMove: FRUSTRATION
+       }
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -469722,13 +470393,25 @@
+   }
+ }
+ template {
++  template_id: "incenseordinary.1"
++  data {
++    template_id: "incenseordinary.1"
++    iapItemDisplay {
++      sku: "incenseordinary.1"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 18
++      spriteId: "incenseordinary.1"
++    }
++  }
++}
++template {
+   template_id: "incenseordinary.8"
+   data {
+     template_id: "incenseordinary.8"
+     iapItemDisplay {
+       sku: "incenseordinary.8"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 55
++      sortOrder: 19
+       spriteId: "incenseordinary.8"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+@@ -469737,26 +470420,62 @@
+   }
+ }
+ template {
++  template_id: "incubatorbasic.1"
++  data {
++    template_id: "incubatorbasic.1"
++    iapItemDisplay {
++      sku: "incubatorbasic.1"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 15
++      spriteId: "incubatorbasic.1"
++    }
++  }
++}
++template {
++  template_id: "incubatorsuper.1"
++  data {
++    template_id: "incubatorsuper.1"
++    iapItemDisplay {
++      sku: "incubatorsuper.1"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 10
++      spriteId: "incubatorsuper.1"
++    }
++  }
++}
++template {
+   template_id: "itemleadermap"
+   data {
+     template_id: "itemleadermap"
+     iapItemDisplay {
+       sku: "itemleadermap"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 60
+-      spriteId: "leadermap.1"
++      sortOrder: 22
++      spriteId: "itemleadermap"
+       title: "itemleadermap_title"
+     }
+   }
+ }
+ template {
++  template_id: "luckyegg.1"
++  data {
++    template_id: "luckyegg.1"
++    iapItemDisplay {
++      sku: "luckyegg.1"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 11
++      spriteId: "luckyegg.1"
++    }
++  }
++}
++template {
+   template_id: "luckyegg.8"
+   data {
+     template_id: "luckyegg.8"
+     iapItemDisplay {
+       sku: "luckyegg.8"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 85
++      sortOrder: 12
+       spriteId: "luckyegg.8"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+@@ -469771,7 +470490,7 @@
+     iapItemDisplay {
+       sku: "max_boost.1"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 3
++      sortOrder: 26
+       spriteId: "max_boost.1"
+     }
+   }
+@@ -469783,7 +470502,7 @@
+     iapItemDisplay {
+       sku: "max_boost.3"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 4
++      sortOrder: 27
+       spriteId: "max_boost.3"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+@@ -469798,7 +470517,7 @@
+     iapItemDisplay {
+       sku: "maxpotion.10"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 86
++      sortOrder: 23
+       spriteId: "maxpotion.10"
+       title: "maxpotion.10_title"
+     }
+@@ -469841,7 +470560,7 @@
+     iapItemDisplay {
+       sku: "maxrevive.6"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 87
++      sortOrder: 17
+       spriteId: "maxrevive.6"
+       title: "maxrevive.6_title"
+     }
+@@ -469854,7 +470573,7 @@
+     iapItemDisplay {
+       sku: "mp_replenish.1"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 1
++      sortOrder: 13
+       spriteId: "mp_replenish.1"
+     }
+   }
+@@ -469866,7 +470585,7 @@
+     iapItemDisplay {
+       sku: "mp_replenish.3"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 2
++      sortOrder: 14
+       spriteId: "mp_replenish.3"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+@@ -469897,13 +470616,25 @@
+   }
+ }
+ template {
++  template_id: "paidraidticket.1"
++  data {
++    template_id: "paidraidticket.1"
++    iapItemDisplay {
++      sku: "paidraidticket.1"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 8
++      spriteId: "paidraidticket.1"
++    }
++  }
++}
++template {
+   template_id: "paidraidticket.3"
+   data {
+     template_id: "paidraidticket.3"
+     iapItemDisplay {
+       sku: "paidraidticket.3"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 16
++      sortOrder: 9
+       spriteId: "paidraidticket.3"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+@@ -471508,13 +472239,25 @@
+   }
+ }
+ template {
++  template_id: "poffin"
++  data {
++    template_id: "poffin"
++    iapItemDisplay {
++      sku: "poffin"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 16
++      spriteId: "poffin"
++    }
++  }
++}
++template {
+   template_id: "pokeball.100"
+   data {
+     template_id: "pokeball.100"
+     iapItemDisplay {
+       sku: "pokeball.100"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 40
++      sortOrder: 6
+       spriteId: "pokeball.100"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+@@ -471523,13 +472266,25 @@
+   }
+ }
+ template {
++  template_id: "pokeball.20"
++  data {
++    template_id: "pokeball.20"
++    iapItemDisplay {
++      sku: "pokeball.20"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 5
++      spriteId: "pokeball.20"
++    }
++  }
++}
++template {
+   template_id: "pokeball.200"
+   data {
+     template_id: "pokeball.200"
+     iapItemDisplay {
+       sku: "pokeball.200"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 45
++      sortOrder: 7
+       spriteId: "pokeball.200"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+@@ -471552,13 +472307,25 @@
+   }
+ }
+ template {
++  template_id: "remoteraidticket.1"
++  data {
++    template_id: "remoteraidticket.1"
++    iapItemDisplay {
++      sku: "remoteraidticket.1"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 3
++      spriteId: "remoteraidticket.1"
++    }
++  }
++}
++template {
+   template_id: "remoteraidticket.3"
+   data {
+     template_id: "remoteraidticket.3"
+     iapItemDisplay {
+       sku: "remoteraidticket.3"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 10
++      sortOrder: 4
+       spriteId: "remoteraidticket.3"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+@@ -475180,6 +475947,35 @@
+   }
+ }
+ template {
++  template_id: "sequence_seq_combat_faint_ending"
++  data {
++    template_id: "sequence_seq_combat_faint_ending"
++    move_sequence_settings {
++      sequence: "sys faintbegin"
++      sequence: "anim attacker down01"
++      sequence: "wait 0.9"
++      sequence: "vfx attacker combat_pokeball_enter"
++      sequence: "wait 0.05"
++      sequence: "silhouette attacker 3.0/3.0/3.0/0.0"
++      sequence: "wait 0.01"
++      sequence: "scale attacker 0.0/3"
++      sequence: "wait 0.66"
++      sequence: "sys complete"
++    }
++  }
++}
++template {
++  template_id: "sequence_seq_combat_return"
++  data {
++    template_id: "sequence_seq_combat_return"
++    move_sequence_settings {
++      sequence: "scale attacker 0.0/50"
++      sequence: "wait 0.05"
++      sequence: "sys complete"
++    }
++  }
++}
++template {
+   template_id: "sequence_seq_ding"
+   data {
+     template_id: "sequence_seq_ding"
+@@ -476519,13 +477315,25 @@
+   }
+ }
+ template {
++  template_id: "starpiece.1"
++  data {
++    template_id: "starpiece.1"
++    iapItemDisplay {
++      sku: "starpiece.1"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 24
++      spriteId: "starpiece.1"
++    }
++  }
++}
++template {
+   template_id: "starpiece.8"
+   data {
+     template_id: "starpiece.8"
+     iapItemDisplay {
+       sku: "starpiece.8"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 70
++      sortOrder: 25
+       spriteId: "starpiece.8"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+@@ -476584,13 +477392,25 @@
+   }
+ }
+ template {
++  template_id: "troydisk.1"
++  data {
++    template_id: "troydisk.1"
++    iapItemDisplay {
++      sku: "troydisk.1"
++      category: IAP_CATEGORY_ITEMS
++      sortOrder: 20
++      spriteId: "troydisk.1"
++    }
++  }
++}
++template {
+   template_id: "troydisk.8"
+   data {
+     template_id: "troydisk.8"
+     iapItemDisplay {
+       sku: "troydisk.8"
+       category: IAP_CATEGORY_ITEMS
+-      sortOrder: 115
++      sortOrder: 21
+       spriteId: "troydisk.8"
+       showDiscountTag: true
+       showStrikethroughPrice: true
+@@ -476697,398 +477517,7 @@
+     }
+   }
+ }
+-template {
+-  template_id: "PTC_OAUTH_SETTINGS"
+-  data {
+-    template_id: "PTC_OAUTH_SETTINGS"
+-    ptcOauthSettings {
+-      ptcAccountLinkingEnabled: true
+-      endTimeMs: 2022190740000
+-      linkingRewardItem: ITEM_INCUBATOR_BASIC
+-    }
+-  }
+-}
+-template {
+-  template_id: "RAID_ENTRY_COST_SETTINGS"
+-  data {
+-    template_id: "RAID_ENTRY_COST_SETTINGS"
+-    285 {
+-      1 {
+-        1: 16
+-        2 {
+-          1: 1
+-          2 {
+-            1: 1402
+-            2: 1
+-          }
+-        }
+-        2 {
+-          1: 2
+-          2 {
+-            1: 1408
+-            2: 1
+-          }
+-          2 {
+-            1: 1410
+-            2: 200
+-          }
+-        }
+-        2 {
+-          1: 1
+-          2 {
+-            1: 1401
+-            2: 1
+-          }
+-        }
+-        2 {
+-          1: 1
+-          2 {
+-            1: 1410
+-            2: 200
+-          }
+-        }
+-      }
+-      1 {
+-        1: 17
+-        2 {
+-          1: 1
+-          2 {
+-            1: 1402
+-            2: 1
+-          }
+-        }
+-        2 {
+-          1: 2
+-          2 {
+-            1: 1408
+-            2: 1
+-          }
+-          2 {
+-            1: 1410
+-            2: 200
+-          }
+-        }
+-        2 {
+-          1: 1
+-          2 {
+-            1: 1401
+-            2: 1
+-          }
+-        }
+-        2 {
+-          1: 1
+-          2 {
+-            1: 1410
+-            2: 200
+-          }
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "sequence_seq_combat_faint_ending"
+-  data {
+-    template_id: "sequence_seq_combat_faint_ending"
+-    move_sequence_settings {
+-      sequence: "sys faintbegin"
+-      sequence: "anim attacker down01"
+-      sequence: "wait 0.9"
+-      sequence: "vfx attacker combat_pokeball_enter"
+-      sequence: "wait 0.05"
+-      sequence: "silhouette attacker 3.0/3.0/3.0/0.0"
+-      sequence: "wait 0.01"
+-      sequence: "scale attacker 0.0/3"
+-      sequence: "wait 0.66"
+-      sequence: "sys complete"
+-    }
+-  }
+-}
+-template {
+-  template_id: "sequence_seq_combat_return"
+-  data {
+-    template_id: "sequence_seq_combat_return"
+-    move_sequence_settings {
+-      sequence: "scale attacker 0.0/50"
+-      sequence: "wait 0.05"
+-      sequence: "sys complete"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_hat_xerneasitems_0"
+-  data {
+-    template_id: "N_DISPLAY_n_hat_xerneasitems_0"
+-    avatarItemDisplay {
+-      iconAddress: "n_hat_xerneasitems_0_icon"
+-      displayStringId: "avatar_hat_xerneas"
+-    }
+-  }
+-}
+-template {
+-  template_id: "N_DISPLAY_n_shirt_yveltaljacket"
+-  data {
+-    template_id: "N_DISPLAY_n_shirt_yveltaljacket"
+-    avatarItemDisplay {
+-      iconAddress: "n_shirt_yveltaljacket_icon"
+-      displayStringId: "avatar_shirt_yveltal"
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_TOUR_2026.3"
+-  data {
+-    template_id: "STICKER_PGO_TOUR_2026.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_TOUR_2026.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 8
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_TOUR_2026.5"
+-  data {
+-    template_id: "STICKER_PGO_TOUR_2026.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_TOUR_2026.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 7
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_TOUR_2026_1.3"
+-  data {
+-    template_id: "STICKER_PGO_TOUR_2026_1.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_TOUR_2026_1.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 2
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_TOUR_2026_1.5"
+-  data {
+-    template_id: "STICKER_PGO_TOUR_2026_1.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_TOUR_2026_1.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 1
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_TOUR_2026_2.3"
+-  data {
+-    template_id: "STICKER_PGO_TOUR_2026_2.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_TOUR_2026_2.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 4
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_TOUR_2026_2.5"
+-  data {
+-    template_id: "STICKER_PGO_TOUR_2026_2.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_TOUR_2026_2.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 3
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_TOUR_2026_3.3"
+-  data {
+-    template_id: "STICKER_PGO_TOUR_2026_3.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_TOUR_2026_3.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 6
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_TOUR_2026_3.5"
+-  data {
+-    template_id: "STICKER_PGO_TOUR_2026_3.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_TOUR_2026_3.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 5
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_TOUR_2026_LOGO.3"
+-  data {
+-    template_id: "STICKER_PGO_TOUR_2026_LOGO.3"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_TOUR_2026_LOGO.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 10
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_PGO_TOUR_2026_LOGO.5"
+-  data {
+-    template_id: "STICKER_PGO_TOUR_2026_LOGO.5"
+-    iapItemDisplay {
+-      sku: "STICKER_PGO_TOUR_2026_LOGO.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 9
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_1"
+-  data {
+-    template_id: "STICKER_SPRING_2026_1"
+-    stickerMetadata {
+-      stickerId: "STICKER_SPRING_2026_1"
+-      maxCount: 25
+-      pokemonId: KAKUNA
+-      category: "Pokemon"
+-      releaseDate: 20260303
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_1.3"
+-  data {
+-    template_id: "STICKER_SPRING_2026_1.3"
+-    iapItemDisplay {
+-      sku: "STICKER_SPRING_2026_1.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 492
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_1.5"
+-  data {
+-    template_id: "STICKER_SPRING_2026_1.5"
+-    iapItemDisplay {
+-      sku: "STICKER_SPRING_2026_1.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 491
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_2"
+-  data {
+-    template_id: "STICKER_SPRING_2026_2"
+-    stickerMetadata {
+-      stickerId: "STICKER_SPRING_2026_2"
+-      maxCount: 25
+-      pokemonId: LEAFEON
+-      category: "Pokemon"
+-      releaseDate: 20260303
+-      regionId: 3
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_2.3"
+-  data {
+-    template_id: "STICKER_SPRING_2026_2.3"
+-    iapItemDisplay {
+-      sku: "STICKER_SPRING_2026_2.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 490
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_2.5"
+-  data {
+-    template_id: "STICKER_SPRING_2026_2.5"
+-    iapItemDisplay {
+-      sku: "STICKER_SPRING_2026_2.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 489
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_3"
+-  data {
+-    template_id: "STICKER_SPRING_2026_3"
+-    stickerMetadata {
+-      stickerId: "STICKER_SPRING_2026_3"
+-      maxCount: 25
+-      pokemonId: ESPURR
+-      category: "Pokemon"
+-      releaseDate: 20260303
+-      regionId: 5
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_3.3"
+-  data {
+-    template_id: "STICKER_SPRING_2026_3.3"
+-    iapItemDisplay {
+-      sku: "STICKER_SPRING_2026_3.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 488
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_3.5"
+-  data {
+-    template_id: "STICKER_SPRING_2026_3.5"
+-    iapItemDisplay {
+-      sku: "STICKER_SPRING_2026_3.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 487
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_4"
+-  data {
+-    template_id: "STICKER_SPRING_2026_4"
+-    stickerMetadata {
+-      stickerId: "STICKER_SPRING_2026_4"
+-      maxCount: 25
+-      pokemonId: FEEBAS
+-      category: "Pokemon"
+-      releaseDate: 20260303
+-      regionId: 2
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_4.3"
+-  data {
+-    template_id: "STICKER_SPRING_2026_4.3"
+-    iapItemDisplay {
+-      sku: "STICKER_SPRING_2026_4.3"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 486
+-    }
+-  }
+-}
+-template {
+-  template_id: "STICKER_SPRING_2026_4.5"
+-  data {
+-    template_id: "STICKER_SPRING_2026_4.5"
+-    iapItemDisplay {
+-      sku: "STICKER_SPRING_2026_4.5"
+-      category: IAP_CATEGORY_STICKER
+-      sortOrder: 485
+-    }
+-  }
+-}
+-batch_id: 1771517323248
++batch_id: 1771602829986
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -476800,8 +477123,6 @@
- experiment_id: 3839
- experiment_id: 3840
- experiment_id: 4998
--experiment_id: 5073
--experiment_id: 5126
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
-@@ -476822,6 +477143,7 @@
+@@ -477096,6 +477525,7 @@
+ experiment_id: 163
+ experiment_id: 300
+ experiment_id: 320
++experiment_id: 351
+ experiment_id: 408
+ experiment_id: 409
+ experiment_id: 427
+@@ -477143,7 +477573,9 @@
  experiment_id: 20947
  experiment_id: 55571
  experiment_id: 60095
-+experiment_id: 66379
++experiment_id: 66099
+ experiment_id: 66379
++experiment_id: 66380
  experiment_id: 66601
  experiment_id: 99998
  experiment_id: 173173
