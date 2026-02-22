@@ -1,190 +1,97 @@
---- GAME_MASTER_old.txt	2026-02-20 19:07:19.087776531 +0100
-+++ GAME_MASTER.txt	2026-02-21 12:40:39.111130954 +0100
-@@ -186058,10 +186058,12 @@
+--- GAME_MASTER_old.txt	2026-02-21 12:40:39.111130954 +0100
++++ GAME_MASTER.txt	2026-02-22 11:08:25.973967267 +0100
+@@ -154320,11 +154320,11 @@
+     incident_priority_settings {
+       incidentPriority {
+         priority: 1
+-        displayType: INVASION_GENERIC
++        displayType: INCIDENT_POKESTOP_ENCOUNTER
+       }
+       incidentPriority {
+         priority: 2
+-        displayType: INCIDENT_POKESTOP_ENCOUNTER
++        displayType: INVASION_EVENT_NPC
+       }
+       incidentPriority {
+         priority: 3
+@@ -154340,7 +154340,7 @@
+       }
+       incidentPriority {
+         priority: 6
+-        displayType: INVASION_EVENT_NPC
++        displayType: INVASION_GENERIC
+       }
+       incidentPriority {
+         priority: 7
+@@ -155789,6 +155789,7 @@
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+         eventBadge: BADGE_GO_TOUR_2026_GLOBAL
++        grantBadgeBeforeEventStartMs: 1769904000000
+         eventStartTime: "2026-02-28T00:00:00"
+         eventEndTime: "2026-03-01T23:59:59"
+         itemBagDescriptionKey: "item_global_event_ticket_details_GOTour2026"
+@@ -186058,12 +186059,10 @@
        }
        pokemonMusicOverrides {
          pokemon: XERNEAS
-+        forms: XERNEAS_NORMAL
+-        forms: XERNEAS_NORMAL
          battleMusicKey: "RaidXerneasYveltalBattleMusic"
        }
        pokemonMusicOverrides {
          pokemon: YVELTAL
-+        forms: YVELTAL_NORMAL
+-        forms: YVELTAL_NORMAL
          battleMusicKey: "RaidXerneasYveltalBattleMusic"
        }
        fetchProfileFromSocialEnabled: true
-@@ -232106,7 +232108,7 @@
-   data {
-     template_id: "STICKER_PGO_TOUR_2026_LOGO"
-     stickerMetadata {
--      stickerId: "STICKER_PGO_TOUR_LOGO"
-+      stickerId: "STICKER_PGO_TOUR_2026_LOGO"
-       maxCount: 25
-       category: "Misc"
-       releaseDate: 20260220
-@@ -280576,7 +280578,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      buddyWalkedMegaEnergyAward: 15
-+      buddyWalkedMegaEnergyAward: 25
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -280673,7 +280675,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      buddyWalkedMegaEnergyAward: 15
-+      buddyWalkedMegaEnergyAward: 25
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -280775,7 +280777,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      buddyWalkedMegaEnergyAward: 15
-+      buddyWalkedMegaEnergyAward: 25
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -280878,7 +280880,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      buddyWalkedMegaEnergyAward: 15
-+      buddyWalkedMegaEnergyAward: 25
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -281006,7 +281008,7 @@
-         modelScaleV2: 0.9
-         modelHeight: 2.2
-       }
--      buddyWalkedMegaEnergyAward: 15
-+      buddyWalkedMegaEnergyAward: 25
-       useIrisFlyingPlacement: true
-       irisPhotoEmote1: "PhysicalAttack"
-       irisPhotoEmote2: "SpecialAttack"
-@@ -281138,7 +281140,7 @@
-         modelScaleV2: 0.9
-         modelHeight: 2.2
-       }
--      buddyWalkedMegaEnergyAward: 15
-+      buddyWalkedMegaEnergyAward: 25
-       useIrisFlyingPlacement: true
-       irisPhotoEmote1: "PhysicalAttack"
-       irisPhotoEmote2: "SpecialAttack"
-@@ -465060,9 +465062,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: SOLGALEO
-+          pokemonId: LUNALA
-           pokemonDisplay {
--            form: SOLGALEO_NORMAL
-+            form: LUNALA_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -465659,9 +465661,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: SOLGALEO
-+          pokemonId: LUNALA
-           pokemonDisplay {
--            form: SOLGALEO_NORMAL
-+            form: LUNALA_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -466014,12 +466016,15 @@
-     template_id: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK2"
-     clientQuestTemplate {
-       quest {
--        questType: QUEST_CATCH_POKEMON
-+        questType: QUEST_COMPLETE_RAID_BATTLE
-         questId: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK2"
-         questContext: WEEKLY_CHALLENGE_QUEST
-         templateId: "WEEKLY_CHALLENGE_PARTY_QUEST_WEEK2"
-         goal {
--          target: 500
-+          condition {
-+            type: WITH_WIN_RAID_STATUS
-+          }
-+          target: 12
-         }
-         questRewards {
-           type: STARDUST
-@@ -466042,11 +466047,18 @@
-             }
-           }
-         }
-+        questRewards {
-+          type: ITEM
-+          item {
-+            item: ITEM_ENHANCED_CURRENCY
-+            amount: 600
-+          }
-+        }
-         difficulty: EASY
-       }
-       questDisplay {
--        description: "quest_catch_pokemon_plural"
--        title: "quest_catch_pokemon_plural"
-+        description: "quest_win_raid_plural"
-+        title: "quest_win_raid_plural"
-       }
-     }
-   }
-@@ -466085,6 +466097,13 @@
-             }
-           }
-         }
-+        questRewards {
-+          type: ITEM
-+          item {
-+            item: ITEM_ENHANCED_CURRENCY
-+            amount: 250
-+          }
-+        }
-         difficulty: EASY
-       }
-       questDisplay {
-@@ -470451,7 +470470,7 @@
-       sku: "itemleadermap"
-       category: IAP_CATEGORY_ITEMS
-       sortOrder: 22
--      spriteId: "itemleadermap"
-+      spriteId: "leadermap.1"
-       title: "itemleadermap_title"
-     }
-   }
-@@ -477517,7 +477536,7 @@
+@@ -469851,6 +469850,7 @@
+       sku: "general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._LunarNY0226_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -469871,6 +469871,7 @@
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._LunarNY0226_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -471703,6 +471704,7 @@
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._LunarNY0226_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -471723,6 +471725,7 @@
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 4
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket._LunarNY0226_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -477536,7 +477539,7 @@
      }
    }
  }
--batch_id: 1771602829986
-+batch_id: 1771666527830
+-batch_id: 1771666527830
++batch_id: 1771750391355
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -477545,7 +477564,7 @@
- experiment_id: 3063
- experiment_id: 3710
- experiment_id: 3712
--experiment_id: 3722
-+experiment_id: 3723
+@@ -477568,9 +477571,6 @@
  experiment_id: 3730
  experiment_id: 3741
  experiment_id: 3835
-@@ -477553,6 +477572,7 @@
- experiment_id: 3839
- experiment_id: 3840
+-experiment_id: 3837
+-experiment_id: 3839
+-experiment_id: 3840
  experiment_id: 4998
-+experiment_id: 5127
+ experiment_id: 5127
  experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
