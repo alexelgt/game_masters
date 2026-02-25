@@ -1,181 +1,787 @@
---- GAME_MASTER_old.txt	2026-02-23 18:45:43.942888540 +0100
-+++ GAME_MASTER.txt	2026-02-24 18:19:25.769106132 +0100
-@@ -47440,7 +47440,7 @@
-       region: VIVILLON_REGION_SAVANNA
-       region: VIVILLON_REGION_SUN
-       region: VIVILLON_REGION_TUNDRA
--      dailyProgressFromInventory: 3
-+      dailyProgressFromInventory: 9
+--- GAME_MASTER_old.txt	2026-02-24 18:19:25.769106132 +0100
++++ GAME_MASTER.txt	2026-02-25 20:00:03.821297143 +0100
+@@ -461450,6 +461450,11 @@
+         fastAttackSettings {
+         }
+         projectedHealthAnimationDurationSeconds: 0.25
++        3 {
++          1: 0x3d75c28f
++          2: 0x3c449ba6
++          3: 0x3d75c28f
++        }
+       }
+     }
+   }
+@@ -462900,7 +462905,8 @@
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LOVE"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
      }
    }
  }
-@@ -304904,7 +304904,7 @@
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 1
--        cameraDistance: 9
-+        cameraDistance: 5
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-@@ -304999,7 +304999,7 @@
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 1
--        cameraDistance: 9
-+        cameraDistance: 5
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-@@ -305095,7 +305095,7 @@
-         dodgeProbability: 0.15
-         dodgeDurationS: 1
-         dodgeDistance: 1
--        cameraDistance: 9
-+        cameraDistance: 5
-         minPokemonActionFrequencyS: 0.2
-         maxPokemonActionFrequencyS: 1.6
-         bonusXlCandyCaptureReward: 3
-@@ -465071,36 +465071,9 @@
+@@ -462913,31 +462919,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+     }
+@@ -462952,31 +462958,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -462992,7 +462998,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -463010,7 +463016,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -463025,7 +463031,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -463043,7 +463049,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -463059,7 +463065,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -463077,7 +463083,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -463092,7 +463098,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -463110,7 +463116,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -463126,7 +463132,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 570
++          count: 2280
+         }
+       }
+       reward {
+@@ -463144,7 +463150,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+     }
+@@ -463159,7 +463165,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+       reward {
+@@ -463177,7 +463183,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 9120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -463193,7 +463199,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -463211,7 +463217,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+     }
+@@ -463226,7 +463232,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       reward {
+@@ -463244,7 +463250,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 9600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -463339,7 +463345,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 700
++          count: 2800
+         }
+       }
+       reward {
+@@ -463357,7 +463363,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+     }
+@@ -463372,7 +463378,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+       reward {
+@@ -463390,7 +463396,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 11200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -463406,7 +463412,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 730
++          count: 2920
+         }
+       }
+       reward {
+@@ -463424,7 +463430,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+     }
+@@ -463439,7 +463445,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+       reward {
+@@ -463457,7 +463463,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 11680
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -463473,7 +463479,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 770
++          count: 3080
+         }
+       }
+       reward {
+@@ -463491,7 +463497,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+     }
+@@ -463506,7 +463512,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+       reward {
+@@ -463524,7 +463530,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 12320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -463589,7 +463595,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 300
++          count: 1200
+         }
+       }
+       reward {
+@@ -463607,7 +463613,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+     }
+@@ -463622,7 +463628,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -463640,7 +463646,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -463656,7 +463662,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 870
++          count: 3480
+         }
+       }
+       reward {
+@@ -463674,7 +463680,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+     }
+@@ -463689,7 +463695,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+       reward {
+@@ -463707,7 +463713,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 13920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -463991,7 +463997,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -464009,7 +464015,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -464024,7 +464030,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -464042,7 +464048,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -464058,7 +464064,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -464076,7 +464082,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -464091,7 +464097,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -464109,7 +464115,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -464125,7 +464131,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 370
++          count: 1480
+         }
+       }
+       reward {
+@@ -464143,7 +464149,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+     }
+@@ -464158,7 +464164,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+       reward {
+@@ -464176,7 +464182,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 5920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -464241,7 +464247,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 400
++          count: 1600
+         }
+       }
+       reward {
+@@ -464259,7 +464265,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+     }
+@@ -464274,7 +464280,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+       reward {
+@@ -464292,7 +464298,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 6400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -464308,7 +464314,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -464326,7 +464332,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -464341,7 +464347,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -464359,7 +464365,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -464375,7 +464381,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -464393,7 +464399,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -464408,7 +464414,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -464426,7 +464432,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -464442,7 +464448,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 470
++          count: 1880
+         }
+       }
+       reward {
+@@ -464460,7 +464466,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+     }
+@@ -464475,7 +464481,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+       reward {
+@@ -464493,7 +464499,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 7520
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -465071,9 +465077,9 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: ARTICUNO
--          pokemonDisplay {
--            form: ARTICUNO_NORMAL
--          }
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemonId: ZAPDOS
-+          pokemonId: HO_OH
+-          pokemonId: HO_OH
++          pokemonId: GROUDON
            pokemonDisplay {
--            form: ZAPDOS_NORMAL
-+            form: HO_OH_NORMAL
+-            form: HO_OH_NORMAL
++            form: GROUDON_NORMAL
            }
          }
          unlockedAtRank: 20
-@@ -465125,9 +465098,9 @@
+@@ -465098,9 +465104,9 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: MOLTRES
-+          pokemonId: LUGIA
+-          pokemonId: LUGIA
++          pokemonId: KYOGRE
            pokemonDisplay {
--            form: MOLTRES_NORMAL
-+            form: LUGIA_NORMAL
+-            form: LUGIA_NORMAL
++            form: KYOGRE_NORMAL
            }
          }
          unlockedAtRank: 20
-@@ -465724,36 +465697,9 @@
+@@ -465697,9 +465703,9 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: ARTICUNO
--          pokemonDisplay {
--            form: ARTICUNO_NORMAL
--          }
--        }
--        unlockedAtRank: 20
--        attackIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        defenseIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--        staminaIvOverride {
--          range {
--            min: 10
--            max: 15
--          }
--        }
--      }
--      availablePokemon {
--        pokemon {
--          pokemonId: ZAPDOS
-+          pokemonId: HO_OH
+-          pokemonId: HO_OH
++          pokemonId: GROUDON
            pokemonDisplay {
--            form: ZAPDOS_NORMAL
-+            form: HO_OH_NORMAL
+-            form: HO_OH_NORMAL
++            form: GROUDON_NORMAL
            }
          }
          unlockedAtRank: 20
-@@ -465778,9 +465724,9 @@
+@@ -465724,9 +465730,9 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: MOLTRES
-+          pokemonId: LUGIA
+-          pokemonId: LUGIA
++          pokemonId: KYOGRE
            pokemonDisplay {
--            form: MOLTRES_NORMAL
-+            form: LUGIA_NORMAL
+-            form: LUGIA_NORMAL
++            form: KYOGRE_NORMAL
            }
          }
          unlockedAtRank: 20
-@@ -496011,7 +495957,7 @@
+@@ -466216,6 +466222,13 @@
+             }
+           }
+         }
++        questRewards {
++          type: ITEM
++          item {
++            item: ITEM_ENHANCED_CURRENCY
++            amount: 250
++          }
++        }
+         difficulty: EASY
+       }
+       questDisplay {
+@@ -495957,12 +495970,12 @@
      }
    }
  }
--batch_id: 1771819235572
-+batch_id: 1771950549143
+-batch_id: 1771950549143
++batch_id: 1771992262745
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -496046,7 +495992,7 @@
+ experiment_id: 150
+-experiment_id: 163
++experiment_id: 164
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 351
+@@ -495992,7 +496005,8 @@
  experiment_id: 3742
  experiment_id: 3835
  experiment_id: 4998
--experiment_id: 5128
-+experiment_id: 5129
+-experiment_id: 5129
++experiment_id: 5075
++experiment_id: 5130
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -496065,7 +496011,6 @@
- experiment_id: 9553
- experiment_id: 9554
- experiment_id: 20947
--experiment_id: 55571
- experiment_id: 60095
- experiment_id: 66099
- experiment_id: 66379
-@@ -496073,10 +496018,11 @@
- experiment_id: 66500
+@@ -496019,11 +496033,14 @@
  experiment_id: 66501
  experiment_id: 66502
--experiment_id: 66510
--experiment_id: 66517
-+experiment_id: 66503
-+experiment_id: 66511
-+experiment_id: 66518
+ experiment_id: 66503
+-experiment_id: 66511
+-experiment_id: 66518
++experiment_id: 66512
++experiment_id: 66519
  experiment_id: 66531
--experiment_id: 66532
-+experiment_id: 66533
+-experiment_id: 66533
++experiment_id: 66534
  experiment_id: 66537
++experiment_id: 66564
++experiment_id: 66565
++experiment_id: 66566
  experiment_id: 66601
  experiment_id: 99998
+ experiment_id: 173173
+@@ -496039,7 +496056,6 @@
+ experiment_id: 6600421
+ experiment_id: 6600427
+ experiment_id: 6600429
+-experiment_id: 6600431
+ experiment_id: 6600434
+ experiment_id: 6600435
+ experiment_id: 6600436
