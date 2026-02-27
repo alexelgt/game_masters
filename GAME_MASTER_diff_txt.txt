@@ -1,352 +1,217 @@
---- GAME_MASTER_old.txt	2026-02-25 20:00:03.821297143 +0100
-+++ GAME_MASTER.txt	2026-02-26 18:35:06.109412036 +0100
-@@ -87045,13 +87045,13 @@
-       sku: "pgorelease.month1_deluxe_event_pass_track_redirect"
-       sortOrder: 1
-       hidden: true
--      title: "season_pass_premium_track_title_dec"
-+      title: "season_pass_premium_track_title_mar"
-       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
--      skuEnableTime: "2024-12-02T10:00:00"
--      skuDisableTime: "2025-01-08T10:00:00"
--      skuEnableTimeUtcMs: 1733133600000
--      skuDisableTimeUtcMs: 1736330400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_DEC_v1-1024x576-noPalkia.jpg"
-+      skuEnableTime: "2025-03-03T10:00:00"
-+      skuDisableTime: "2025-04-09T10:00:00"
-+      skuEnableTimeUtcMs: 1740996000000
-+      skuDisableTimeUtcMs: 1744192800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-deluxe-gopass-march-2026-nologo.jpg"
-     }
-   }
- }
-@@ -155045,6 +155045,7 @@
-       eventPassPoint {
-         eventPassId: "EVENT_PASS_GOFEST2025_GLOBAL"
-       }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -155066,6 +155067,7 @@
-           limit: 50
+--- GAME_MASTER_old.txt	2026-02-26 18:35:06.109412036 +0100
++++ GAME_MASTER.txt	2026-02-27 19:08:33.423305272 +0100
+@@ -44894,7 +44894,7 @@
+       rvnVersion: 1
+       maxPlayersPerBreadDoughLobby: 100
+       maxRemotePlayersPerBreadDoughLobby: 100
+-      maxRemoteBreadBattlePassesAllowed: 30
++      maxRemoteBreadBattlePassesAllowed: 999999
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 98
+@@ -99634,9 +99634,9 @@
+           xxsLowerBound: 1.8865
+           xsLowerBound: 1.925
+           mLowerBound: 2.8875
+-          mUpperBound: 4.8125
+-          xlUpperBound: 5.775
+-          xxlUpperBound: 3.85
++          mUpperBound: 3.85
++          xlUpperBound: 4.8125
++          xxlUpperBound: 5.775
          }
        }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -155087,6 +155089,7 @@
-           limit: 150
+       sizeSettings {
+@@ -99663,9 +99663,9 @@
+           xxsLowerBound: 1.8865
+           xsLowerBound: 1.925
+           mLowerBound: 2.8875
+-          mUpperBound: 4.8125
+-          xlUpperBound: 5.775
+-          xxlUpperBound: 3.85
++          mUpperBound: 3.85
++          xlUpperBound: 4.8125
++          xxlUpperBound: 5.775
          }
        }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -155103,6 +155106,7 @@
-       eventPassPoint {
-         eventPassId: "EVENT_PASS_GOTOUR2026_IRL"
-       }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -155124,6 +155128,7 @@
-           limit: 100
-         }
-       }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -155145,6 +155150,7 @@
-           limit: 300
-         }
-       }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -155166,6 +155172,7 @@
-           limit: 300
-         }
-       }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -155187,6 +155194,7 @@
-           limit: 250
-         }
-       }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -155201,13 +155209,14 @@
-       ignoreInventorySpace: true
-       itemCap: 999999
-       eventPassPoint {
--        eventPassId: "EVENT_PASS_WINTERHOLIDAYS2025_EVENT"
-+        eventPassId: "EVENT_PASS_30ANNIV2026_EVENT"
-       }
-       timePeriodCounters {
-         playerActivity {
-           limit: 300
-         }
-       }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -155221,6 +155230,7 @@
-       category: ITEM_CATEGORY_EVENT_PASS_POINT
-       ignoreInventorySpace: true
-       itemCap: 999999
-+      nameOverride: "ITEM_EVENT_PASS_POINT_LIVE_OPS_01_name"
-       eventPassPoint {
-         eventPassId: "EVENT_PASS_MARCH2026_SEASON"
-       }
-@@ -155229,6 +155239,7 @@
-           limit: 300
-         }
-       }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -156165,8 +156176,8 @@
-     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_04"
-     itemExpirationSettings {
-       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_04
--      expirationTime: "2025-12-31T10:00:00"
--      emergencyExpirationTime: "2026-01-02T10:00:00"
-+      expirationTime: "2026-03-17T10:00:00"
-+      emergencyExpirationTime: "2026-03-17T20:00:00"
-     }
-   }
- }
-@@ -162358,6 +162369,7 @@
+       sizeSettings {
+@@ -162369,7 +162369,6 @@
      mapDisplaySettings {
        showEnhancedSky: true
        skyOverride: "EventSkydome_GoFest2021"
-+      skyEffectName: "EventSkyFX_GoTour2024"
+-      skyEffectName: "EventSkyFX_GoTour2024"
      }
    }
  }
-@@ -165126,13 +165138,13 @@
-       sku: "pgorelease.month1_deluxe_event_pass_track_unlock"
-       sortOrder: 1
-       hidden: true
--      title: "season_pass_premium_track_title_dec"
-+      title: "season_pass_premium_track_title_mar"
-       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
--      skuEnableTime: "2024-12-02T10:00:00"
--      skuDisableTime: "2025-01-08T10:00:00"
--      skuEnableTimeUtcMs: 1733133600000
--      skuDisableTimeUtcMs: 1736330400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_DEC_v1-1024x576-noPalkia.jpg"
-+      skuEnableTime: "2025-03-03T10:00:00"
-+      skuDisableTime: "2025-04-09T10:00:00"
-+      skuEnableTimeUtcMs: 1740996000000
-+      skuDisableTimeUtcMs: 1744192800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-deluxe-gopass-march-2026-nologo.jpg"
+@@ -186021,7 +186020,6 @@
+       friendRequestsEnabled: true
+       remoteRaidDistanceValidation: true
+       popupTimeMs: 30000
+-      failedFriendInviteInfoEnabled: true
+       minPlayersToBoot: 2
+       bootCutoffMs: 15000
+       bootSoloMs: 30000
+@@ -186385,8 +186383,7 @@
+   data {
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+-      enabled: true
+-      dailySquashLimit: 30
++      dailySquashLimit: 999999
      }
    }
  }
-@@ -165144,13 +165156,13 @@
-       sku: "pgorelease.month1_deluxe_event_pass_track_unlock_plus_points"
-       sortOrder: 1
-       hidden: true
--      title: "season_pass_premium_track_plus_ten_ranks_title_dec"
-+      title: "season_pass_premium_track_plus_ten_ranks_title_mar"
-       description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
--      skuEnableTime: "2024-12-02T10:00:00"
--      skuDisableTime: "2025-01-08T10:00:00"
--      skuEnableTimeUtcMs: 1733133600000
--      skuDisableTimeUtcMs: 1736330400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_GOPass_DEC_v1-1024x576-noPalkia.jpg"
-+      skuEnableTime: "2025-03-03T10:00:00"
-+      skuDisableTime: "2025-04-09T10:00:00"
-+      skuEnableTimeUtcMs: 1740996000000
-+      skuDisableTimeUtcMs: 1744192800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-deluxe-gopass-march-2026-nologo.jpg"
-     }
-   }
- }
-@@ -465077,9 +465089,9 @@
+@@ -465089,9 +465086,9 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: GROUDON
-+          pokemonId: DIALGA
+-          pokemonId: DIALGA
++          pokemonId: RESHIRAM
            pokemonDisplay {
--            form: GROUDON_NORMAL
-+            form: DIALGA_NORMAL
+-            form: DIALGA_NORMAL
++            form: RESHIRAM_NORMAL
            }
          }
          unlockedAtRank: 20
-@@ -465104,9 +465116,9 @@
+@@ -465116,9 +465113,36 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: KYOGRE
-+          pokemonId: PALKIA
+-          pokemonId: PALKIA
++          pokemonId: ZEKROM
            pokemonDisplay {
--            form: KYOGRE_NORMAL
-+            form: PALKIA_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -465703,9 +465715,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: GROUDON
-+          pokemonId: DIALGA
-           pokemonDisplay {
--            form: GROUDON_NORMAL
-+            form: DIALGA_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -465730,9 +465742,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: KYOGRE
-+          pokemonId: PALKIA
-           pokemonDisplay {
--            form: KYOGRE_NORMAL
-+            form: PALKIA_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -495970,7 +495982,96 @@
-     }
-   }
- }
--batch_id: 1771992262745
-+template {
-+  template_id: "BADGE_EVENT_0174"
-+  data {
-+    template_id: "BADGE_EVENT_0174"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0174
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
+-            form: PALKIA_NORMAL
++            form: ZEKROM_NORMAL
++          }
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
 +      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0186"
-+  data {
-+    template_id: "BADGE_EVENT_0186"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0186
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
++      availablePokemon {
++        pokemon {
++          pokemonId: KYUREM
++          pokemonDisplay {
++            form: KYUREM_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -465715,9 +465739,36 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: DIALGA
++          pokemonId: RESHIRAM
++          pokemonDisplay {
++            form: RESHIRAM_NORMAL
++          }
++        }
++        unlockedAtRank: 20
++        attackIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        defenseIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
++        staminaIvOverride {
++          range {
++            min: 10
++            max: 15
++          }
++        }
 +      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_backpack_greenpikavee_0"
-+  data {
-+    template_id: "N_DISPLAY_n_backpack_greenpikavee_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_greenpikavee_0_icon"
-+      displayStringId: "avatar_backpack_s22blue"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_pants_greenpikavee_0"
-+  data {
-+    template_id: "N_DISPLAY_n_pants_greenpikavee_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_pants_greenpikavee_0_icon"
-+      displayStringId: "avatar_pants_s22blue"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_pose_s22gbl"
-+  data {
-+    template_id: "N_DISPLAY_n_pose_s22gbl"
-+    avatarItemDisplay {
-+      iconAddress: "n_pose_s22gbl_icon"
-+      displayStringId: "avatar_pose_s22blue"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shirt_greenpikavee_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_greenpikavee_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_greenpikavee_0_icon"
-+      displayStringId: "avatar_shirt_s22blue"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shoes_greenpikavee_0"
-+  data {
-+    template_id: "N_DISPLAY_n_shoes_greenpikavee_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_shoes_greenpikavee_0_icon"
-+      displayStringId: "avatar_shoes_s22blue"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_set_s22gbl_0"
-+  data {
-+    template_id: "N_DISPLAY_set_s22gbl_0"
-+    avatarItemDisplay {
-+      iconAddress: "set_s22gbl_0"
-+    }
-+  }
-+}
-+batch_id: 1772099638157
++      availablePokemon {
++        pokemon {
++          pokemonId: ZEKROM
+           pokemonDisplay {
+-            form: DIALGA_NORMAL
++            form: ZEKROM_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -465742,9 +465793,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: PALKIA
++          pokemonId: KYUREM
+           pokemonDisplay {
+-            form: PALKIA_NORMAL
++            form: KYUREM_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -496071,7 +496122,7 @@
+     }
+   }
+ }
+-batch_id: 1772099638157
++batch_id: 1772208364114
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -496005,8 +496106,7 @@
+@@ -496106,7 +496157,7 @@
  experiment_id: 3742
  experiment_id: 3835
  experiment_id: 4998
--experiment_id: 5075
--experiment_id: 5130
-+experiment_id: 5131
+-experiment_id: 5131
++experiment_id: 5132
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -496033,10 +496133,10 @@
+@@ -496126,21 +496177,22 @@
+ experiment_id: 9554
+ experiment_id: 20947
+ experiment_id: 60095
+-experiment_id: 66099
+ experiment_id: 66379
+-experiment_id: 66380
+ experiment_id: 66500
  experiment_id: 66501
  experiment_id: 66502
  experiment_id: 66503
--experiment_id: 66512
--experiment_id: 66519
-+experiment_id: 66514
-+experiment_id: 66521
+-experiment_id: 66514
+-experiment_id: 66521
++experiment_id: 66504
++experiment_id: 66505
++experiment_id: 66515
++experiment_id: 66522
++experiment_id: 66529
  experiment_id: 66531
--experiment_id: 66534
-+experiment_id: 66535
- experiment_id: 66537
+-experiment_id: 66535
+-experiment_id: 66537
++experiment_id: 66536
  experiment_id: 66564
  experiment_id: 66565
-@@ -496059,3 +496159,4 @@
+ experiment_id: 66566
++experiment_id: 66600
+ experiment_id: 66601
+ experiment_id: 99998
+ experiment_id: 173173
+@@ -496159,4 +496211,3 @@
  experiment_id: 6600434
  experiment_id: 6600435
  experiment_id: 6600436
-+experiment_id: 173173173
+-experiment_id: 173173173
