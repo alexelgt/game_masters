@@ -1,217 +1,1179 @@
---- GAME_MASTER_old.txt	2026-02-26 18:35:06.109412036 +0100
-+++ GAME_MASTER.txt	2026-02-27 19:08:33.423305272 +0100
-@@ -44894,7 +44894,7 @@
-       rvnVersion: 1
-       maxPlayersPerBreadDoughLobby: 100
-       maxRemotePlayersPerBreadDoughLobby: 100
--      maxRemoteBreadBattlePassesAllowed: 30
-+      maxRemoteBreadBattlePassesAllowed: 999999
-       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
-       fetchProfileFromSocialEnabled: true
-       maxPlayersToPrepareBreadDoughLobby: 98
-@@ -99634,9 +99634,9 @@
-           xxsLowerBound: 1.8865
-           xsLowerBound: 1.925
-           mLowerBound: 2.8875
--          mUpperBound: 4.8125
--          xlUpperBound: 5.775
--          xxlUpperBound: 3.85
-+          mUpperBound: 3.85
-+          xlUpperBound: 4.8125
-+          xxlUpperBound: 5.775
+--- GAME_MASTER_old.txt	2026-02-27 19:08:33.423305272 +0100
++++ GAME_MASTER.txt	2026-03-01 18:54:49.228091532 +0100
+@@ -92071,6 +92071,20 @@
+         xlUpperBound: 0.6
+         xxlUpperBound: 0.7
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 31
++          cameraDistance: 27.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 62
++        }
++        maxStationVisualSettings {
++          scale: 4.22
++        }
++      }
+     }
+   }
+ }
+@@ -92791,6 +92805,20 @@
+         xlUpperBound: 0.6
+         xxlUpperBound: 0.7
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 31
++          cameraDistance: 27.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 62
++        }
++        maxStationVisualSettings {
++          scale: 4.22
++        }
++      }
+     }
+   }
+ }
+@@ -93096,6 +93124,23 @@
+         xlUpperBound: 1.2
+         xxlUpperBound: 1.4
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 15
++          cameraDistance: 24
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 39
++        }
++        maxStationVisualSettings {
++          scale: 2.9
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 1
++        }
++      }
+     }
+   }
+ }
+@@ -93132,6 +93177,23 @@
+         xlUpperBound: 1.2
+         xxlUpperBound: 1.4
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 15
++          cameraDistance: 24
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 39
++        }
++        maxStationVisualSettings {
++          scale: 2.9
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 1
++        }
++      }
+     }
+   }
+ }
+@@ -154900,11 +154962,11 @@
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+         eventStartTime: "2026-03-03T13:00:00"
+-        eventEndTime: "2026-06-02T10:00:00"
++        eventEndTime: "2026-04-03T10:00:00"
+         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
+         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s22-gbl-nologo-2026.jpg"
+         clientEventStartTimeUtcMs: 1772542800000
+-        clientEventEndTimeUtcMs: 1780394400000
++        clientEventEndTimeUtcMs: 1775210400000
+       }
+     }
+   }
+@@ -155086,7 +155148,6 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 150
          }
        }
-       sizeSettings {
-@@ -99663,9 +99663,9 @@
-           xxsLowerBound: 1.8865
-           xsLowerBound: 1.925
-           mLowerBound: 2.8875
--          mUpperBound: 4.8125
--          xlUpperBound: 5.775
--          xxlUpperBound: 3.85
-+          mUpperBound: 3.85
-+          xlUpperBound: 4.8125
-+          xxlUpperBound: 5.775
+       hideItemInInventory: true
+@@ -155191,7 +155252,6 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 250
          }
        }
-       sizeSettings {
-@@ -162369,7 +162369,6 @@
+       hideItemInInventory: true
+@@ -156577,7 +156637,7 @@
+       dropTrainerLevel: 1
+       incense {
+         incenseLifetimeSeconds: 3600
+-        spawnTableProbability: 0.8
++        spawnTableProbability: 0.9
+       }
+     }
+   }
+@@ -162367,8 +162427,10 @@
+   data {
+     template_id: "MAP_DISPLAY_SETTINGS"
      mapDisplaySettings {
++      mbmchdofgdg: "https://prodholoholo-public-images.nianticlabs.com/gotourlogo_1914247967.png"
        showEnhancedSky: true
        skyOverride: "EventSkydome_GoFest2021"
--      skyEffectName: "EventSkyFX_GoTour2024"
++      mapEffectName: "fx_confetti_team"
      }
    }
  }
-@@ -186021,7 +186020,6 @@
+@@ -162518,8 +162580,8 @@
+     megaEvoLevelSettings {
+       pokemonId: VICTREEBEL
+       progression {
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 1209600000
+@@ -162587,8 +162649,8 @@
+     megaEvoLevelSettings {
+       pokemonId: DRAGONITE
+       progression {
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 1209600000
+@@ -162978,8 +163040,8 @@
+     megaEvoLevelSettings {
+       pokemonId: MALAMAR
+       progression {
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 1209600000
+@@ -163037,6 +163099,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163062,6 +163125,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163087,6 +163151,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163100,8 +163165,8 @@
+       pokemonId: VICTREEBEL
+       progression {
+         pointsRequired: 1
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 604800000
+@@ -163112,6 +163177,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 10
+       }
+     }
+   }
+@@ -163137,6 +163203,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163162,6 +163229,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163175,8 +163243,8 @@
+       pokemonId: DRAGONITE
+       progression {
+         pointsRequired: 1
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 604800000
+@@ -163187,6 +163255,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 10
+       }
+     }
+   }
+@@ -163237,6 +163306,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163262,6 +163332,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163287,6 +163358,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163312,6 +163384,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163337,6 +163410,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163362,6 +163436,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163387,6 +163462,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163412,6 +163488,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163437,6 +163514,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163462,6 +163540,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163487,6 +163566,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163562,6 +163642,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163587,6 +163668,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163600,8 +163682,8 @@
+       pokemonId: MALAMAR
+       progression {
+         pointsRequired: 1
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 604800000
+@@ -163612,6 +163694,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 10
+       }
+     }
+   }
+@@ -163637,6 +163720,7 @@
+         differentTypeAttackBoost: 1.1
+         sameTypeAttackBoost: 1.3
+         sameTypeExtraCatchCandy: 1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163663,6 +163747,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163690,6 +163775,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163717,6 +163803,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163730,8 +163817,8 @@
+       pokemonId: VICTREEBEL
+       progression {
+         pointsRequired: 7
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 432000000
+@@ -163744,6 +163831,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 10
+       }
+     }
+   }
+@@ -163771,6 +163859,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163798,6 +163887,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163811,8 +163901,8 @@
+       pokemonId: DRAGONITE
+       progression {
+         pointsRequired: 7
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 432000000
+@@ -163825,6 +163915,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 10
+       }
+     }
+   }
+@@ -163879,6 +163970,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163906,6 +163998,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163933,6 +164026,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163960,6 +164054,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -163987,6 +164082,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164014,6 +164110,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164041,6 +164138,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164068,6 +164166,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164095,6 +164194,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164122,6 +164222,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164149,6 +164250,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164230,6 +164332,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164257,6 +164360,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164270,8 +164374,8 @@
+       pokemonId: MALAMAR
+       progression {
+         pointsRequired: 7
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 432000000
+@@ -164284,6 +164388,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 10
+       }
+     }
+   }
+@@ -164311,6 +164416,7 @@
+         sameTypeExtraCatchCandy: 1
+         sameTypeExtraCatchXp: 50
+         sameTypeExtraCatchCandyXlChance: 0.1
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164337,6 +164443,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164364,6 +164471,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164391,6 +164499,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164404,8 +164513,8 @@
+       pokemonId: VICTREEBEL
+       progression {
+         pointsRequired: 30
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 259200000
+@@ -164418,6 +164527,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 10
+       }
+     }
+   }
+@@ -164445,6 +164555,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164472,6 +164583,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164485,8 +164597,8 @@
+       pokemonId: DRAGONITE
+       progression {
+         pointsRequired: 30
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 259200000
+@@ -164499,6 +164611,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 10
+       }
+     }
+   }
+@@ -164553,6 +164666,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164580,6 +164694,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164607,6 +164722,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164634,6 +164750,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164661,6 +164778,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164688,6 +164806,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164715,6 +164834,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164742,6 +164862,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164769,6 +164890,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164796,6 +164918,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164823,6 +164946,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164904,6 +165028,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164931,6 +165056,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164944,8 +165070,8 @@
+       pokemonId: MALAMAR
+       progression {
+         pointsRequired: 30
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 259200000
+@@ -164958,6 +165084,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 10
+       }
+     }
+   }
+@@ -164985,6 +165112,7 @@
+         sameTypeExtraCatchCandy: 2
+         sameTypeExtraCatchXp: 100
+         sameTypeExtraCatchCandyXlChance: 0.25
++        selfCpBoostAdditionalLevel: 5
+       }
+     }
+   }
+@@ -164998,8 +165126,8 @@
+       pokemonId: VICTREEBEL
+       progression {
+         pointsRequired: 30
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 86400000
+@@ -165012,7 +165140,7 @@
+         sameTypeExtraCatchCandy: 3
+         sameTypeExtraCatchXp: 200
+         sameTypeExtraCatchCandyXlChance: 0.3
+-        selfCpBoostAdditionalLevel: 2
++        selfCpBoostAdditionalLevel: 12
+       }
+       megaEnergyCostToUnlock: 5000
+       ftueExpirationTimestamp: 1775001600000
+@@ -165028,8 +165156,8 @@
+       pokemonId: DRAGONITE
+       progression {
+         pointsRequired: 30
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 86400000
+@@ -165042,7 +165170,7 @@
+         sameTypeExtraCatchCandy: 3
+         sameTypeExtraCatchXp: 200
+         sameTypeExtraCatchCandyXlChance: 0.3
+-        selfCpBoostAdditionalLevel: 2
++        selfCpBoostAdditionalLevel: 12
+       }
+       megaEnergyCostToUnlock: 5000
+       ftueExpirationTimestamp: 1775001600000
+@@ -165058,8 +165186,8 @@
+       pokemonId: MALAMAR
+       progression {
+         pointsRequired: 30
+-        pointsLimitPerPeriod: 1
+-        pointsPerMegaEvoAction: 1
++        pointsLimitPerPeriod: 3
++        pointsPerMegaEvoAction: 2
+       }
+       cooldown {
+         durationMs: 86400000
+@@ -165072,7 +165200,7 @@
+         sameTypeExtraCatchCandy: 3
+         sameTypeExtraCatchXp: 200
+         sameTypeExtraCatchCandyXlChance: 0.3
+-        selfCpBoostAdditionalLevel: 2
++        selfCpBoostAdditionalLevel: 12
+       }
+       megaEnergyCostToUnlock: 5000
+       ftueExpirationTimestamp: 1775001600000
+@@ -182164,8 +182292,8 @@
+       complianceZonesEnabled: true
+       enablePartyRaidInformation: true
        friendRequestsEnabled: true
-       remoteRaidDistanceValidation: true
-       popupTimeMs: 30000
--      failedFriendInviteInfoEnabled: true
-       minPlayersToBoot: 2
-       bootCutoffMs: 15000
-       bootSoloMs: 30000
-@@ -186385,8 +186383,7 @@
-   data {
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
--      enabled: true
--      dailySquashLimit: 30
-+      dailySquashLimit: 999999
+-      partyExpiryDurationMs: 10800000
+-      partyExpiryWarningMinutes: 10
++      partyExpiryDurationMs: 28800000
++      partyExpiryWarningMinutes: 30
+       enabledFriendStatusIncrease: true
+       restartPartyRejoinPromptEnabled: true
+       partyIapBoostsEnabled: true
+@@ -186549,7 +186677,7 @@
+       obRoutePlaySettingsNumber29: 1
+       obRoutePlaySettingsNumber30: 27
+       obRoutePlaySettingsNumber33: 7
+-      obRoutePlaySettingsNumber45: 1
++      obRoutePlaySettingsNumber45: 25
      }
    }
  }
-@@ -465089,9 +465086,9 @@
+@@ -239030,16 +239158,6 @@
+           count: 3
+         }
+       }
+-      tutorialItemRewards {
+-        tutorial: 183
+-        3 {
+-          1: 12
+-          13 {
+-            1: 15
+-            2: 100
+-          }
+-        }
+-      }
+       typeEffectivenessTipsEnabled: true
+     }
+   }
+@@ -465086,63 +465204,9 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: DIALGA
-+          pokemonId: RESHIRAM
+-          pokemonId: RESHIRAM
+-          pokemonDisplay {
+-            form: RESHIRAM_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: ZEKROM
+-          pokemonDisplay {
+-            form: ZEKROM_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: KYUREM
++          pokemonId: LUNALA
            pokemonDisplay {
--            form: DIALGA_NORMAL
-+            form: RESHIRAM_NORMAL
+-            form: KYUREM_NORMAL
++            form: LUNALA_NORMAL
            }
          }
          unlockedAtRank: 20
-@@ -465116,9 +465113,36 @@
+@@ -465739,63 +465803,9 @@
        }
        availablePokemon {
          pokemon {
--          pokemonId: PALKIA
-+          pokemonId: ZEKROM
+-          pokemonId: RESHIRAM
++          pokemonId: LUNALA
            pokemonDisplay {
--            form: PALKIA_NORMAL
-+            form: ZEKROM_NORMAL
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-+      availablePokemon {
-+        pokemon {
-+          pokemonId: KYUREM
-+          pokemonDisplay {
-+            form: KYUREM_NORMAL
+-            form: RESHIRAM_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: ZEKROM
+-          pokemonDisplay {
+-            form: ZEKROM_NORMAL
+-          }
+-        }
+-        unlockedAtRank: 20
+-        attackIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        defenseIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-        staminaIvOverride {
+-          range {
+-            min: 10
+-            max: 15
+-          }
+-        }
+-      }
+-      availablePokemon {
+-        pokemon {
+-          pokemonId: KYUREM
+-          pokemonDisplay {
+-            form: KYUREM_NORMAL
++            form: LUNALA_NORMAL
            }
          }
          unlockedAtRank: 20
-@@ -465715,9 +465739,36 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: DIALGA
-+          pokemonId: RESHIRAM
-+          pokemonDisplay {
-+            form: RESHIRAM_NORMAL
-+          }
-+        }
-+        unlockedAtRank: 20
-+        attackIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        defenseIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+        staminaIvOverride {
-+          range {
-+            min: 10
-+            max: 15
-+          }
-+        }
-+      }
-+      availablePokemon {
-+        pokemon {
-+          pokemonId: ZEKROM
-           pokemonDisplay {
--            form: DIALGA_NORMAL
-+            form: ZEKROM_NORMAL
-           }
+@@ -477738,17 +477748,17 @@
+         bonusBoxes {
+           text: "catch_a_pokemon_short_title"
+           iconType: SPAWN_UNKNOWN
+-          quantity: 1
++          quantity: 5
          }
-         unlockedAtRank: 20
-@@ -465742,9 +465793,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: PALKIA
-+          pokemonId: KYUREM
-           pokemonDisplay {
--            form: PALKIA_NORMAL
-+            form: KYUREM_NORMAL
-           }
+         bonusBoxes {
+           text: "quest_hatch_egg_singular"
+           iconType: EGG
+-          quantity: 10
++          quantity: 50
          }
-         unlockedAtRank: 20
-@@ -496071,7 +496122,7 @@
+         bonusBoxes {
+           text: "quest_win_raid_singular"
+           iconType: RAID
+-          quantity: 50
++          quantity: 100
+         }
+         eventPassTrackUpgradeDescriptions {
+           passTrackUpgradeHeaderDescription: "gotour_2026_pass_track_upgrade_header_description"
+@@ -496122,7 +496132,74 @@
      }
    }
  }
--batch_id: 1772099638157
-+batch_id: 1772208364114
+-batch_id: 1772208364114
++template {
++  template_id: "EVENT_PASS_MARCH1_SEASON_STORE_REDIRECT"
++  data {
++    template_id: "EVENT_PASS_MARCH1_SEASON_STORE_REDIRECT"
++    iapItemDisplay {
++      sku: "pgorelease.march1_2026_deluxe_event_pass_track_redirect"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_30anniv_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-03-03T10:00:00"
++      skuDisableTime: "2026-03-15T20:00:00"
++      skuEnableTimeUtcMs: 1740996000000
++      skuDisableTimeUtcMs: 1773604800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-legendary-birds-nologo-2026.jpg"
++    }
++  }
++}
++template {
++  template_id: "MARCH1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++  data {
++    template_id: "MARCH1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++    iapItemDisplay {
++      sku: "pgorelease.march1_2026_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_30anniv_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-03-03T10:00:00"
++      skuDisableTime: "2026-03-15T20:00:00"
++      skuEnableTimeUtcMs: 1740996000000
++      skuDisableTimeUtcMs: 1773604800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-legendary-birds-nologo-2026.jpg"
++    }
++  }
++}
++template {
++  template_id: "MARCH1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++  data {
++    template_id: "MARCH1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++    iapItemDisplay {
++      sku: "pgorelease.march1_2026_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_plus_ten_ranks_title_30anniv_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
++      skuEnableTime: "2025-03-03T10:00:00"
++      skuDisableTime: "2026-03-15T20:00:00"
++      skuEnableTimeUtcMs: 1740996000000
++      skuDisableTimeUtcMs: 1773604800000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-legendary-birds-nologo-2026.jpg"
++    }
++  }
++}
++template {
++  template_id: "MUSIC_SETTINGS"
++  data {
++    template_id: "MUSIC_SETTINGS"
++    musicSettings {
++      mapMusicDayOverride: "GoTour2026MusicMap"
++      mapMusicNightOverride: "GoTour2026MusicMap"
++      encounterMusicDayOverride: "GoTour2026MusicEncounter"
++      encounterMusicNightOverride: "GoTour2026MusicEncounter"
++      startTimesEnabled: true
++    }
++  }
++}
++batch_id: 1772318805528
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -496106,7 +496157,7 @@
+@@ -496157,7 +496234,7 @@
  experiment_id: 3742
  experiment_id: 3835
  experiment_id: 4998
--experiment_id: 5131
-+experiment_id: 5132
+-experiment_id: 5132
++experiment_id: 5133
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -496126,21 +496177,22 @@
- experiment_id: 9554
+@@ -496168,6 +496245,7 @@
+ experiment_id: 5510
+ experiment_id: 6075
+ experiment_id: 7008
++experiment_id: 7010
+ experiment_id: 8984
+ experiment_id: 8986
+ experiment_id: 8987
+@@ -496178,26 +496256,25 @@
  experiment_id: 20947
  experiment_id: 60095
--experiment_id: 66099
  experiment_id: 66379
--experiment_id: 66380
- experiment_id: 66500
- experiment_id: 66501
+-experiment_id: 66500
+-experiment_id: 66501
  experiment_id: 66502
  experiment_id: 66503
--experiment_id: 66514
--experiment_id: 66521
-+experiment_id: 66504
-+experiment_id: 66505
-+experiment_id: 66515
-+experiment_id: 66522
-+experiment_id: 66529
- experiment_id: 66531
--experiment_id: 66535
--experiment_id: 66537
-+experiment_id: 66536
+ experiment_id: 66504
+ experiment_id: 66505
+-experiment_id: 66515
+-experiment_id: 66522
+-experiment_id: 66529
+-experiment_id: 66531
+-experiment_id: 66536
++experiment_id: 66509
++experiment_id: 66560
  experiment_id: 66564
  experiment_id: 66565
  experiment_id: 66566
-+experiment_id: 66600
+ experiment_id: 66600
  experiment_id: 66601
++experiment_id: 66605
++experiment_id: 66606
++experiment_id: 66616
++experiment_id: 66660
++experiment_id: 66716
  experiment_id: 99998
  experiment_id: 173173
-@@ -496159,4 +496211,3 @@
- experiment_id: 6600434
- experiment_id: 6600435
- experiment_id: 6600436
--experiment_id: 173173173
+ experiment_id: 250415
+-experiment_id: 1000002
+ experiment_id: 1000890
+ experiment_id: 3500035
+ experiment_id: 3500037
