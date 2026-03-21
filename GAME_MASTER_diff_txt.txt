@@ -1,30 +1,318 @@
---- GAME_MASTER_old.txt	2026-03-18 18:10:46.991333060 +0100
-+++ GAME_MASTER.txt	2026-03-19 18:40:50.428937376 +0100
-@@ -482700,12 +482700,13 @@
+--- GAME_MASTER_old.txt	2026-03-19 18:40:50.428937376 +0100
++++ GAME_MASTER.txt	2026-03-21 19:33:57.127089034 +0100
+@@ -145,6 +145,42 @@
+   }
+ }
+ template {
++  template_id: "APRIL1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++  data {
++    template_id: "APRIL1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++    iapItemDisplay {
++      sku: "pgorelease.april1_2026_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_shockingly_good_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-03-31T10:00:00"
++      skuDisableTime: "2025-04-08T20:00:00"
++      skuEnableTimeUtcMs: 1743415200000
++      skuDisableTimeUtcMs: 1744142400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-shockingly-good-time-2026-nologo.jpg"
++    }
++  }
++}
++template {
++  template_id: "APRIL1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++  data {
++    template_id: "APRIL1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++    iapItemDisplay {
++      sku: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_plus_six_ranks_title_shockingly_good_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
++      skuEnableTime: "2025-03-31T10:00:00"
++      skuDisableTime: "2025-04-08T20:00:00"
++      skuEnableTimeUtcMs: 1743415200000
++      skuDisableTimeUtcMs: 1744142400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-shockingly-good-time-2026-nologo.jpg"
++    }
++  }
++}
++template {
+   template_id: "AR_PHOTO_FEATURE_FLAGS"
+   data {
+     template_id: "AR_PHOTO_FEATURE_FLAGS"
+@@ -35724,6 +35760,21 @@
+   }
+ }
+ template {
++  template_id: "BADGE_EVENT_0188"
++  data {
++    template_id: "BADGE_EVENT_0188"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0188
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0200"
+   data {
+     template_id: "BADGE_EVENT_0200"
+@@ -81803,6 +81854,24 @@
+   }
+ }
+ template {
++  template_id: "EVENT_PASS_APRIL1_SEASON_STORE_REDIRECT"
++  data {
++    template_id: "EVENT_PASS_APRIL1_SEASON_STORE_REDIRECT"
++    iapItemDisplay {
++      sku: "pgorelease.april1_2026_deluxe_event_pass_track_redirect"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_shockingly_good_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-03-31T10:00:00"
++      skuDisableTime: "2025-04-08T20:00:00"
++      skuEnableTimeUtcMs: 1743415200000
++      skuDisableTimeUtcMs: 1744142400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-shockingly-good-time-2026-nologo.jpg"
++    }
++  }
++}
++template {
+   template_id: "EVENT_PASS_BONUS_RANKS_FEATURE_GATE"
+   data {
+     template_id: "EVENT_PASS_BONUS_RANKS_FEATURE_GATE"
+@@ -90841,6 +90910,16 @@
+   }
+ }
+ template {
++  template_id: "EVENT_PASS_MILESTONE_REWARDS_FEATURE_GATE"
++  data {
++    template_id: "EVENT_PASS_MILESTONE_REWARDS_FEATURE_GATE"
++    featureGate {
++      status: 1
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
+   template_id: "EVENT_PASS_MONTH1_SEASON_STORE_REDIRECT"
+   data {
+     template_id: "EVENT_PASS_MONTH1_SEASON_STORE_REDIRECT"
+@@ -159248,7 +159327,6 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 500
+         }
+       }
+       hideItemInInventory: true
+@@ -159256,6 +159334,27 @@
+   }
+ }
+ template {
++  template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_06"
++  data {
++    template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_06"
++    itemSettings {
++      itemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_06
++      itemType: ITEM_TYPE_EVENT_PASS_POINT
++      category: ITEM_CATEGORY_EVENT_PASS_POINT
++      ignoreInventorySpace: true
++      itemCap: 999999
++      eventPassPoint {
++        eventPassId: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT"
++      }
++      timePeriodCounters {
++        playerActivity {
++          limit: 300
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_01"
+   data {
+     template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_01"
+@@ -159467,6 +159566,28 @@
+   }
+ }
+ template {
++  template_id: "ITEM_EVENT_TICKET_04_TO_GIFT"
++  data {
++    template_id: "ITEM_EVENT_TICKET_04_TO_GIFT"
++    itemSettings {
++      itemId: ITEM_EVENT_TICKET_04_TO_GIFT
++      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
++      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
++      globalEventTicket {
++        eventStartTime: "2026-03-21T14:00:00"
++        eventEndTime: "2026-03-21T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_WaterRRD26"
++        ticketItem: ITEM_EVENT_TICKET_04
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-replay-water-research-day-2026-nologo.jpg"
++        clientEventStartTimeUtcMs: 1774101600000
++        clientEventEndTimeUtcMs: 1774112400000
++      }
++      ignoreInventorySpace: true
++      descriptionOverride: "item_event_ticket_pink_details_WaterRRD26"
++    }
++  }
++}
++template {
+   template_id: "ITEM_EVENT_TICKET_05"
+   data {
+     template_id: "ITEM_EVENT_TICKET_05"
+@@ -160201,6 +160322,17 @@
+   }
+ }
+ template {
++  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_06"
++  data {
++    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_06"
++    itemExpirationSettings {
++      item: ITEM_EVENT_PASS_POINT_LIVE_OPS_06
++      expirationTime: "2026-04-08T10:00:00"
++      emergencyExpirationTime: "2026-04-10T10:00:00"
++    }
++  }
++}
++template {
+   template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_01"
+   data {
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_01"
+@@ -475282,19 +475414,38 @@
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+       hidden: true
+-      spriteId: "general2.ticket.4"
+-      title: "general1.ticket._SunkissedETR0825_title"
++      spriteId: "general2.ticket.2"
++      title: "general1.ticket.2_WaterRRD26_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2025-08-31T20:00:00"
++      skuDisableTime: "2026-03-21T17:00:00"
+       skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1756670400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-encounter-ticket-nologo-2025.jpg"
+-      webstoreSkuId: "web-encounter-2025-ticket-box"
++      skuDisableTimeUtcMs: 1774112400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-replay-water-research-day-2026-nologo.jpg"
++      webstoreSkuId: "web-water-research-day-ticket-box"
+       webstoreSkuPriceE6: 1990000
      }
    }
  }
--batch_id: 1773848292459
-+batch_id: 1773899546169
+ template {
++  template_id: "general2.ticket.4.giftable"
++  data {
++    template_id: "general2.ticket.4.giftable"
++    iapItemDisplay {
++      sku: "general2.ticket.4.giftable"
++      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
++      sortOrder: 1
++      hidden: true
++      spriteId: "general2.ticket.2"
++      title: "general1.ticket.2_WaterRRD26_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2026-03-21T17:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1774112400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-replay-water-research-day-2026-nologo.jpg"
++    }
++  }
++}
++template {
+   template_id: "general2.ticket.5"
+   data {
+     template_id: "general2.ticket.5"
+@@ -477090,6 +477241,46 @@
+   }
+ }
+ template {
++  template_id: "pgorelease.general2.ticket.4"
++  data {
++    template_id: "pgorelease.general2.ticket.4"
++    iapItemDisplay {
++      sku: "pgorelease.general2.ticket.4"
++      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
++      sortOrder: 1
++      hidden: true
++      spriteId: "general2.ticket.2"
++      title: "general1.ticket.2_WaterRRD26_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2026-03-21T17:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1774112400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-replay-water-research-day-2026-nologo.jpg"
++      webstoreSkuId: "web-water-research-day-ticket-box"
++      webstoreSkuPriceE6: 1990000
++    }
++  }
++}
++template {
++  template_id: "pgorelease.general2.ticket.4.giftable"
++  data {
++    template_id: "pgorelease.general2.ticket.4.giftable"
++    iapItemDisplay {
++      sku: "pgorelease.general2.ticket.4.giftable"
++      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
++      sortOrder: 1
++      hidden: true
++      spriteId: "general2.ticket.2"
++      title: "general1.ticket.2_WaterRRD26_title"
++      skuEnableTime: "2023-01-01T11:00:01"
++      skuDisableTime: "2026-03-21T17:00:00"
++      skuEnableTimeUtcMs: 1672570801000
++      skuDisableTimeUtcMs: 1774112400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-replay-water-research-day-2026-nologo.jpg"
++    }
++  }
++}
++template {
+   template_id: "pgorelease.general2.ticket.5"
+   data {
+     template_id: "pgorelease.general2.ticket.5"
+@@ -482700,13 +482891,12 @@
+     }
+   }
+ }
+-batch_id: 1773899546169
++batch_id: 1774047627117
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
  experiment_id: 170
  experiment_id: 174
-+experiment_id: 192
+-experiment_id: 192
  experiment_id: 300
  experiment_id: 320
  experiment_id: 351
-@@ -482737,10 +482738,10 @@
+@@ -482738,7 +482928,9 @@
  experiment_id: 3195
  experiment_id: 3871
  experiment_id: 3872
--experiment_id: 3875
-+experiment_id: 3876
-+experiment_id: 3881
+-experiment_id: 3876
++experiment_id: 3874
++experiment_id: 3877
++experiment_id: 3878
+ experiment_id: 3881
  experiment_id: 3883
  experiment_id: 4998
--experiment_id: 5005
- experiment_id: 5160
- experiment_id: 5162
- experiment_id: 5163
+@@ -482757,6 +482949,7 @@
+ experiment_id: 8654
+ experiment_id: 8912
+ experiment_id: 8914
++experiment_id: 8915
+ experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
