@@ -1,57 +1,78 @@
---- GAME_MASTER_old.txt	2026-03-19 18:40:50.428937376 +0100
-+++ GAME_MASTER.txt	2026-03-21 19:33:57.127089034 +0100
-@@ -145,6 +145,42 @@
+--- GAME_MASTER_old.txt	2026-03-21 19:33:57.127089034 +0100
++++ GAME_MASTER.txt	2026-03-24 18:22:22.780062920 +0100
+@@ -144348,6 +144348,10 @@
+         form: PIKACHU_GOTOUR_2026_C_02
+         isCostume: true
+       }
++      forms {
++        form: 3340
++        isCostume: true
++      }
+     }
    }
  }
- template {
-+  template_id: "APRIL1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
-+  data {
-+    template_id: "APRIL1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
-+    iapItemDisplay {
-+      sku: "pgorelease.april1_2026_deluxe_event_pass_track_unlock"
-+      sortOrder: 1
-+      hidden: true
-+      title: "season_pass_premium_track_title_shockingly_good_2026"
-+      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-+      skuEnableTime: "2025-03-31T10:00:00"
-+      skuDisableTime: "2025-04-08T20:00:00"
-+      skuEnableTimeUtcMs: 1743415200000
-+      skuDisableTimeUtcMs: 1744142400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-shockingly-good-time-2026-nologo.jpg"
-+    }
-+  }
-+}
-+template {
-+  template_id: "APRIL1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
-+  data {
-+    template_id: "APRIL1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
-+    iapItemDisplay {
-+      sku: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
-+      sortOrder: 1
-+      hidden: true
-+      title: "season_pass_premium_track_plus_six_ranks_title_shockingly_good_2026"
-+      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
-+      skuEnableTime: "2025-03-31T10:00:00"
-+      skuDisableTime: "2025-04-08T20:00:00"
-+      skuEnableTimeUtcMs: 1743415200000
-+      skuDisableTimeUtcMs: 1744142400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-shockingly-good-time-2026-nologo.jpg"
-+    }
-+  }
-+}
-+template {
-   template_id: "AR_PHOTO_FEATURE_FLAGS"
-   data {
-     template_id: "AR_PHOTO_FEATURE_FLAGS"
-@@ -35724,6 +35760,21 @@
+@@ -159327,6 +159331,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 500
+         }
+       }
+       hideItemInInventory: true
+@@ -159351,6 +159356,7 @@
+           limit: 300
+         }
+       }
++      hideItemInInventory: true
+     }
    }
  }
- template {
-+  template_id: "BADGE_EVENT_0188"
+@@ -160327,7 +160333,7 @@
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_06"
+     itemExpirationSettings {
+       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_06
+-      expirationTime: "2026-04-08T10:00:00"
++      expirationTime: "2026-04-08T20:00:00"
+       emergencyExpirationTime: "2026-04-10T10:00:00"
+     }
+   }
+@@ -178561,7 +178567,7 @@
+     template_id: "N_DISPLAY_n_shirt_disguise-hoodoff_0"
+     avatarItemDisplay {
+       iconAddress: "n_shirt_disguise-hoodoff_0_icon"
+-      displayStringId: "avatar_shirt_disguise-hoodoff"
++      displayStringId: "avatar_shirt_mimikyu_hoodoff"
+     }
+   }
+ }
+@@ -473345,15 +473351,9 @@
+       sku: "bundle.hisuiraidday2023.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
++      hidden: true
+       spriteId: "bundle.general.remotebox.medium.1"
+       title: "great_raid_box_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2026-03-23T17:00:00"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1774285200000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 1035
+     }
+   }
+ }
+@@ -482891,7 +482891,317 @@
+     }
+   }
+ }
+-batch_id: 1774047627117
++template {
++  template_id: "BADGE_EVENT_0189"
 +  data {
-+    template_id: "BADGE_EVENT_0188"
++    template_id: "BADGE_EVENT_0189"
 +    badgeSettings {
-+      badgeType: BADGE_EVENT_0188
++      badgeType: BADGE_EVENT_0189
 +      badgeRank: 2
 +      targets: 100
 +      eventBadge: true
@@ -62,257 +83,331 @@
 +  }
 +}
 +template {
-   template_id: "BADGE_EVENT_0200"
-   data {
-     template_id: "BADGE_EVENT_0200"
-@@ -81803,6 +81854,24 @@
-   }
- }
- template {
-+  template_id: "EVENT_PASS_APRIL1_SEASON_STORE_REDIRECT"
++  template_id: "BADGE_EVENT_0194"
 +  data {
-+    template_id: "EVENT_PASS_APRIL1_SEASON_STORE_REDIRECT"
-+    iapItemDisplay {
-+      sku: "pgorelease.april1_2026_deluxe_event_pass_track_redirect"
-+      sortOrder: 1
-+      hidden: true
-+      title: "season_pass_premium_track_title_shockingly_good_2026"
-+      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-+      skuEnableTime: "2025-03-31T10:00:00"
-+      skuDisableTime: "2025-04-08T20:00:00"
-+      skuEnableTimeUtcMs: 1743415200000
-+      skuDisableTimeUtcMs: 1744142400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-shockingly-good-time-2026-nologo.jpg"
++    template_id: "BADGE_EVENT_0194"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0194
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
 +    }
 +  }
 +}
 +template {
-   template_id: "EVENT_PASS_BONUS_RANKS_FEATURE_GATE"
-   data {
-     template_id: "EVENT_PASS_BONUS_RANKS_FEATURE_GATE"
-@@ -90841,6 +90910,16 @@
-   }
- }
- template {
-+  template_id: "EVENT_PASS_MILESTONE_REWARDS_FEATURE_GATE"
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_BB_2026"
 +  data {
-+    template_id: "EVENT_PASS_MILESTONE_REWARDS_FEATURE_GATE"
-+    featureGate {
-+      status: 1
-+      rolloutPercentage: 100
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_BB_2026"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: 3340
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
 +    }
 +  }
 +}
 +template {
-   template_id: "EVENT_PASS_MONTH1_SEASON_STORE_REDIRECT"
-   data {
-     template_id: "EVENT_PASS_MONTH1_SEASON_STORE_REDIRECT"
-@@ -159248,7 +159327,6 @@
-       }
-       timePeriodCounters {
-         playerActivity {
--          limit: 500
-         }
-       }
-       hideItemInInventory: true
-@@ -159256,6 +159334,27 @@
-   }
- }
- template {
-+  template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_06"
++  template_id: "ITEM_SOFT_SFIDA"
 +  data {
-+    template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_06"
++    template_id: "ITEM_SOFT_SFIDA"
 +    itemSettings {
-+      itemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_06
-+      itemType: ITEM_TYPE_EVENT_PASS_POINT
-+      category: ITEM_CATEGORY_EVENT_PASS_POINT
++      itemId: ITEM_SOFT_SFIDA
++      itemType: ITEM_TYPE_SOFT_SFIDA
++      category: ITEM_CATEGORY_UTILITES
++      dropTrainerLevel: 99
 +      ignoreInventorySpace: true
-+      itemCap: 999999
-+      eventPassPoint {
-+        eventPassId: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_001"
++  data {
++    template_id: "LC_2026_NPB_001"
++    locationCardSettings {
++      locationCard: 252
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_002"
++  data {
++    template_id: "LC_2026_NPB_002"
++    locationCardSettings {
++      locationCard: 253
++      imageUrl: "lc_2026_NPB_yomiuriGiants"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_003"
++  data {
++    template_id: "LC_2026_NPB_003"
++    locationCardSettings {
++      locationCard: 254
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_004"
++  data {
++    template_id: "LC_2026_NPB_004"
++    locationCardSettings {
++      locationCard: 255
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_005"
++  data {
++    template_id: "LC_2026_NPB_005"
++    locationCardSettings {
++      locationCard: 256
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_006"
++  data {
++    template_id: "LC_2026_NPB_006"
++    locationCardSettings {
++      locationCard: 257
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_007"
++  data {
++    template_id: "LC_2026_NPB_007"
++    locationCardSettings {
++      locationCard: 258
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_008"
++  data {
++    template_id: "LC_2026_NPB_008"
++    locationCardSettings {
++      locationCard: 259
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_009"
++  data {
++    template_id: "LC_2026_NPB_009"
++    locationCardSettings {
++      locationCard: 260
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_010"
++  data {
++    template_id: "LC_2026_NPB_010"
++    locationCardSettings {
++      locationCard: 261
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_011"
++  data {
++    template_id: "LC_2026_NPB_011"
++    locationCardSettings {
++      locationCard: 262
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_012"
++  data {
++    template_id: "LC_2026_NPB_012"
++    locationCardSettings {
++      locationCard: 263
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_013"
++  data {
++    template_id: "LC_2026_NPB_013"
++    locationCardSettings {
++      locationCard: 264
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_SPECIALBACKGROUND_EXTRA_2025_02"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_EXTRA_2025_02"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_EXTRA_2025_02
++      imageUrl: "lc_taipeiFlowerFestival_2026"
++    }
++  }
++}
++template {
++  template_id: "SOFT_SFIDA_SETTINGS"
++  data {
++    template_id: "SOFT_SFIDA_SETTINGS"
++    284 {
++      6: 20
++      7: 10000
++      8: 10000
++      9: 4
++      10: 0x42480000
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_BB_2026"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_BB_2026"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
 +      }
-+      timePeriodCounters {
-+        playerActivity {
-+          limit: 300
-+        }
++      form: 3340
++    }
++  }
++}
++template {
++  template_id: "V0025_POKEMON_PIKACHU_BB_2026"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_BB_2026"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
 +      }
-+    }
-+  }
-+}
-+template {
-   template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_01"
-   data {
-     template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_01"
-@@ -159467,6 +159566,28 @@
-   }
- }
- template {
-+  template_id: "ITEM_EVENT_TICKET_04_TO_GIFT"
-+  data {
-+    template_id: "ITEM_EVENT_TICKET_04_TO_GIFT"
-+    itemSettings {
-+      itemId: ITEM_EVENT_TICKET_04_TO_GIFT
-+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-+      globalEventTicket {
-+        eventStartTime: "2026-03-21T14:00:00"
-+        eventEndTime: "2026-03-21T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_WaterRRD26"
-+        ticketItem: ITEM_EVENT_TICKET_04
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-replay-water-research-day-2026-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1774101600000
-+        clientEventEndTimeUtcMs: 1774112400000
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
 +      }
-+      ignoreInventorySpace: true
-+      descriptionOverride: "item_event_ticket_pink_details_WaterRRD26"
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: 3340
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
 +    }
 +  }
 +}
-+template {
-   template_id: "ITEM_EVENT_TICKET_05"
-   data {
-     template_id: "ITEM_EVENT_TICKET_05"
-@@ -160201,6 +160322,17 @@
-   }
- }
- template {
-+  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_06"
-+  data {
-+    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_06"
-+    itemExpirationSettings {
-+      item: ITEM_EVENT_PASS_POINT_LIVE_OPS_06
-+      expirationTime: "2026-04-08T10:00:00"
-+      emergencyExpirationTime: "2026-04-10T10:00:00"
-+    }
-+  }
-+}
-+template {
-   template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_01"
-   data {
-     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_01"
-@@ -475282,19 +475414,38 @@
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-       hidden: true
--      spriteId: "general2.ticket.4"
--      title: "general1.ticket._SunkissedETR0825_title"
-+      spriteId: "general2.ticket.2"
-+      title: "general1.ticket.2_WaterRRD26_title"
-       skuEnableTime: "2023-01-01T11:00:01"
--      skuDisableTime: "2025-08-31T20:00:00"
-+      skuDisableTime: "2026-03-21T17:00:00"
-       skuEnableTimeUtcMs: 1672570801000
--      skuDisableTimeUtcMs: 1756670400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-sunkissed-shores-encounter-ticket-nologo-2025.jpg"
--      webstoreSkuId: "web-encounter-2025-ticket-box"
-+      skuDisableTimeUtcMs: 1774112400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-replay-water-research-day-2026-nologo.jpg"
-+      webstoreSkuId: "web-water-research-day-ticket-box"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
- }
- template {
-+  template_id: "general2.ticket.4.giftable"
-+  data {
-+    template_id: "general2.ticket.4.giftable"
-+    iapItemDisplay {
-+      sku: "general2.ticket.4.giftable"
-+      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "general2.ticket.2"
-+      title: "general1.ticket.2_WaterRRD26_title"
-+      skuEnableTime: "2023-01-01T11:00:01"
-+      skuDisableTime: "2026-03-21T17:00:00"
-+      skuEnableTimeUtcMs: 1672570801000
-+      skuDisableTimeUtcMs: 1774112400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-replay-water-research-day-2026-nologo.jpg"
-+    }
-+  }
-+}
-+template {
-   template_id: "general2.ticket.5"
-   data {
-     template_id: "general2.ticket.5"
-@@ -477090,6 +477241,46 @@
-   }
- }
- template {
-+  template_id: "pgorelease.general2.ticket.4"
-+  data {
-+    template_id: "pgorelease.general2.ticket.4"
-+    iapItemDisplay {
-+      sku: "pgorelease.general2.ticket.4"
-+      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "general2.ticket.2"
-+      title: "general1.ticket.2_WaterRRD26_title"
-+      skuEnableTime: "2023-01-01T11:00:01"
-+      skuDisableTime: "2026-03-21T17:00:00"
-+      skuEnableTimeUtcMs: 1672570801000
-+      skuDisableTimeUtcMs: 1774112400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-replay-water-research-day-2026-nologo.jpg"
-+      webstoreSkuId: "web-water-research-day-ticket-box"
-+      webstoreSkuPriceE6: 1990000
-+    }
-+  }
-+}
-+template {
-+  template_id: "pgorelease.general2.ticket.4.giftable"
-+  data {
-+    template_id: "pgorelease.general2.ticket.4.giftable"
-+    iapItemDisplay {
-+      sku: "pgorelease.general2.ticket.4.giftable"
-+      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-+      sortOrder: 1
-+      hidden: true
-+      spriteId: "general2.ticket.2"
-+      title: "general1.ticket.2_WaterRRD26_title"
-+      skuEnableTime: "2023-01-01T11:00:01"
-+      skuDisableTime: "2026-03-21T17:00:00"
-+      skuEnableTimeUtcMs: 1672570801000
-+      skuDisableTimeUtcMs: 1774112400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-replay-water-research-day-2026-nologo.jpg"
-+    }
-+  }
-+}
-+template {
-   template_id: "pgorelease.general2.ticket.5"
-   data {
-     template_id: "pgorelease.general2.ticket.5"
-@@ -482700,13 +482891,12 @@
-     }
-   }
- }
--batch_id: 1773899546169
-+batch_id: 1774047627117
++batch_id: 1774348001857
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
- experiment_id: 170
- experiment_id: 174
--experiment_id: 192
- experiment_id: 300
- experiment_id: 320
- experiment_id: 351
-@@ -482738,7 +482928,9 @@
+@@ -482912,7 +483222,6 @@
+ experiment_id: 807
+ experiment_id: 1699
+ experiment_id: 1816
+-experiment_id: 2252
+ experiment_id: 2297
+ experiment_id: 2600
+ experiment_id: 2650
+@@ -482924,19 +483233,14 @@
+ experiment_id: 3110
+ experiment_id: 3123
+ experiment_id: 3126
+-experiment_id: 3130
++experiment_id: 3131
  experiment_id: 3195
- experiment_id: 3871
+-experiment_id: 3871
  experiment_id: 3872
--experiment_id: 3876
-+experiment_id: 3874
-+experiment_id: 3877
-+experiment_id: 3878
- experiment_id: 3881
- experiment_id: 3883
+-experiment_id: 3874
+-experiment_id: 3877
+-experiment_id: 3878
+-experiment_id: 3881
+-experiment_id: 3883
  experiment_id: 4998
-@@ -482757,6 +482949,7 @@
- experiment_id: 8654
- experiment_id: 8912
- experiment_id: 8914
-+experiment_id: 8915
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5203
+ experiment_id: 5501
+ experiment_id: 5502
+ experiment_id: 5506
