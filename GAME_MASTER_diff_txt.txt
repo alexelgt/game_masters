@@ -1,107 +1,173 @@
---- GAME_MASTER_old.txt	2026-03-26 18:39:24.728178954 +0100
-+++ GAME_MASTER.txt	2026-03-27 19:02:07.590032487 +0100
-@@ -470659,9 +470659,12 @@
-       sku: "bundle.gmaxday.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle3.sprite.d"
-       title: "ace_box_title"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2026-03-28T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1774728000000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 1000
-@@ -481020,7 +481023,7 @@
-     template_id: "SOFT_SFIDA_SETTINGS"
-     284 {
-       6: 20
--      7: 10000
-+      7: 5000
-       8: 10000
-       9: 4
-       10: 0x42480000
-@@ -481132,13 +481135,61 @@
+--- GAME_MASTER_old.txt	2026-03-27 19:02:07.590032487 +0100
++++ GAME_MASTER.txt	2026-03-27 22:51:54.005879977 +0100
+@@ -142282,7 +142282,7 @@
+         isCostume: true
+       }
+       forms {
+-        form: 3340
++        form: PIKACHU_BB_2026
+         isCostume: true
+       }
+     }
+@@ -480852,7 +480852,7 @@
+     template_id: "EXTENDED_V0025_POKEMON_PIKACHU_BB_2026"
+     pokemonExtendedSettings {
+       uniqueId: PIKACHU
+-      form: 3340
++      form: PIKACHU_BB_2026
+       sizeSettings {
+         xxsLowerBound: 0.196
+         xsLowerBound: 0.2
+@@ -480882,7 +480882,7 @@
+   data {
+     template_id: "LC_2026_NPB_001"
+     locationCardSettings {
+-      locationCard: 252
++      locationCard: LC_2026_NPB_001
+       imageUrl: "lc_2026_ppk_001"
+     }
+   }
+@@ -480892,7 +480892,7 @@
+   data {
+     template_id: "LC_2026_NPB_002"
+     locationCardSettings {
+-      locationCard: 253
++      locationCard: LC_2026_NPB_002
+       imageUrl: "lc_2026_NPB_yomiuriGiants"
+     }
+   }
+@@ -480902,7 +480902,7 @@
+   data {
+     template_id: "LC_2026_NPB_003"
+     locationCardSettings {
+-      locationCard: 254
++      locationCard: LC_2026_NPB_003
+       imageUrl: "lc_2026_ppk_001"
+     }
+   }
+@@ -480912,7 +480912,7 @@
+   data {
+     template_id: "LC_2026_NPB_004"
+     locationCardSettings {
+-      locationCard: 255
++      locationCard: LC_2026_NPB_004
+       imageUrl: "lc_2026_NPB_koshienHanshinTigers"
+     }
+   }
+@@ -480922,7 +480922,7 @@
+   data {
+     template_id: "LC_2026_NPB_005"
+     locationCardSettings {
+-      locationCard: 256
++      locationCard: LC_2026_NPB_005
+       imageUrl: "lc_2026_NPB_rakutenEagles"
+     }
+   }
+@@ -480932,7 +480932,7 @@
+   data {
+     template_id: "LC_2026_NPB_006"
+     locationCardSettings {
+-      locationCard: 257
++      locationCard: LC_2026_NPB_006
+       imageUrl: "lc_2026_ppk_001"
+     }
+   }
+@@ -480942,7 +480942,7 @@
+   data {
+     template_id: "LC_2026_NPB_007"
+     locationCardSettings {
+-      locationCard: 258
++      locationCard: LC_2026_NPB_007
+       imageUrl: "lc_2026_ppk_001"
+     }
+   }
+@@ -480952,7 +480952,7 @@
+   data {
+     template_id: "LC_2026_NPB_008"
+     locationCardSettings {
+-      locationCard: 259
++      locationCard: LC_2026_NPB_008
+       imageUrl: "lc_2026_ppk_001"
+     }
+   }
+@@ -480962,7 +480962,7 @@
+   data {
+     template_id: "LC_2026_NPB_009"
+     locationCardSettings {
+-      locationCard: 260
++      locationCard: LC_2026_NPB_009
+       imageUrl: "lc_2026_ppk_001"
+     }
+   }
+@@ -480972,7 +480972,7 @@
+   data {
+     template_id: "LC_2026_NPB_010"
+     locationCardSettings {
+-      locationCard: 261
++      locationCard: LC_2026_NPB_010
+       imageUrl: "lc_2026_ppk_001"
+     }
+   }
+@@ -480982,7 +480982,7 @@
+   data {
+     template_id: "LC_2026_NPB_011"
+     locationCardSettings {
+-      locationCard: 262
++      locationCard: LC_2026_NPB_011
+       imageUrl: "lc_2026_ppk_001"
+     }
+   }
+@@ -480992,7 +480992,7 @@
+   data {
+     template_id: "LC_2026_NPB_012"
+     locationCardSettings {
+-      locationCard: 263
++      locationCard: LC_2026_NPB_012
+       imageUrl: "lc_2026_ppk_001"
+     }
+   }
+@@ -481002,7 +481002,7 @@
+   data {
+     template_id: "LC_2026_NPB_013"
+     locationCardSettings {
+-      locationCard: 264
++      locationCard: LC_2026_NPB_013
+       imageUrl: "lc_2026_ppk_001"
+     }
+   }
+@@ -481040,7 +481040,7 @@
+         malePercent: 0.5
+         femalePercent: 0.5
+       }
+-      form: 3340
++      form: PIKACHU_BB_2026
      }
    }
  }
--batch_id: 1774512567392
-+template {
-+  template_id: "COMBAT_V0494_MOVE_GIGATON_HAMMER"
-+  data {
-+    template_id: "COMBAT_V0494_MOVE_GIGATON_HAMMER"
-+    combat_move {
-+      uniqueId: 494
-+      type: POKEMON_TYPE_STEEL
-+      power: 130
-+      vfxName: "gigaton_hammer"
-+      energyDelta: -60
-+    }
-+  }
-+}
-+template {
-+  template_id: "V0494_MOVE_GIGATON_HAMMER"
-+  data {
-+    template_id: "V0494_MOVE_GIGATON_HAMMER"
-+    moveSettings {
-+      movementId: 494
-+      animationId: 5
-+      pokemonType: POKEMON_TYPE_STEEL
-+      power: 300
-+      accuracyChance: 1
-+      staminaLossScalar: 0.01
-+      trainerLevelMin: 1
-+      trainerLevelMax: 100
-+      vfxName: "gigaton_hammer"
-+      durationMs: 3000
-+      damageWindowStartMs: 2000
-+      damageWindowEndMs: 3100
-+      energyDelta: -100
-+    }
-+  }
-+}
-+template {
-+  template_id: "sequence_gigaton_hammer"
-+  data {
-+    template_id: "sequence_gigaton_hammer"
-+    move_sequence_settings {
-+      sequence: "anim attacker atk-move"
-+      sequence: "wait 0.5"
-+      sequence: "vfx gigaton_hammer"
-+      sequence: "sfx attacker 587-0_gigaton_hammer"
-+      sequence: "wait 1.0"
-+      sequence: "sys ui-sync"
-+      sequence: "sys complete"
-+    }
-+  }
-+}
-+batch_id: 1774570479575
- experiment_id: 11
- experiment_id: 21
- experiment_id: 101
- experiment_id: 170
- experiment_id: 175
--experiment_id: 193
- experiment_id: 300
- experiment_id: 320
- experiment_id: 351
-@@ -481154,6 +481205,7 @@
- experiment_id: 807
- experiment_id: 1699
- experiment_id: 1816
-+experiment_id: 2256
- experiment_id: 2297
- experiment_id: 2600
- experiment_id: 2650
-@@ -481166,7 +481218,9 @@
- experiment_id: 3123
- experiment_id: 3126
- experiment_id: 3131
-+experiment_id: 3158
- experiment_id: 3195
-+experiment_id: 4900
- experiment_id: 4904
- experiment_id: 4998
- experiment_id: 5160
+@@ -481103,7 +481103,7 @@
+       buddy_size: BUDDY_SHOULDER
+       modelHeight: 0.4
+       modelScaleV2: 1.1
+-      form: 3340
++      form: PIKACHU_BB_2026
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -481140,7 +481140,7 @@
+   data {
+     template_id: "COMBAT_V0494_MOVE_GIGATON_HAMMER"
+     combat_move {
+-      uniqueId: 494
++      uniqueId: GIGATON_HAMMER
+       type: POKEMON_TYPE_STEEL
+       power: 130
+       vfxName: "gigaton_hammer"
+@@ -481153,7 +481153,7 @@
+   data {
+     template_id: "V0494_MOVE_GIGATON_HAMMER"
+     moveSettings {
+-      movementId: 494
++      movementId: GIGATON_HAMMER
+       animationId: 5
+       pokemonType: POKEMON_TYPE_STEEL
+       power: 300
