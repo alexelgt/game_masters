@@ -1,1224 +1,6627 @@
---- GAME_MASTER_old.txt	2026-03-31 11:25:08.604835220 +0200
-+++ GAME_MASTER.txt	2026-04-01 11:32:14.475033242 +0200
-@@ -169,7 +169,7 @@
-       sku: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
-       sortOrder: 1
-       title: "season_pass_premium_track_plus_six_ranks_title_shockingly_good_2026"
--      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
-+      description: "event_pass_plus_points_6_ranks_description"
-       skuEnableTime: "2025-03-31T10:00:00"
-       skuDisableTime: "2026-04-08T20:00:00"
-       skuEnableTimeUtcMs: 1743415200000
-@@ -157382,29 +157382,29 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-03-14T14:00:00"
--        eventEndTime: "2026-03-14T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Scorbunny26"
-+        eventStartTime: "2026-04-11T14:00:00"
-+        eventEndTime: "2026-04-11T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Tinkatink26"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-scorbunny-community-day-2026-nologo.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-tinkatink-community-day-2026-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-scorbunny-community-day-2026-nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CD_Scorbunny26"
--        textRewardsKey: "text_rewards_key_CD_Scorbunny26"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-tinkatink-community-day-2026-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CD_Tinkatink26"
-+        textRewardsKey: "text_rewards_key_CD_Tinkatink26"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemonId: CINDERACE
-+            pokemonId: TINKATON
-             pokemonDisplay {
--              form: CINDERACE_NORMAL
-+              form: TINKATON_NORMAL
-             }
-           }
-         }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_INCUBATOR_BASIC
-+            item: ITEM_STAR_PIECE
-             amount: 1
-           }
-         }
-@@ -157416,11 +157416,11 @@
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1773496800000
--        clientEventEndTimeUtcMs: 1773507600000
-+        clientEventStartTimeUtcMs: 1775916000000
-+        clientEventEndTimeUtcMs: 1775926800000
-       }
--      nameOverride: "general1.ticket_CD_Scorbunny26_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Scorbunny26"
-+      nameOverride: "general1.ticket_CD_Tinkatink26_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Tinkatink26"
-     }
+--- GAME_MASTER_old.txt	2026-04-01 11:32:14.475033242 +0200
++++ GAME_MASTER.txt	2026-04-02 11:24:24.956671903 +0200
+@@ -35638,6 +35638,21 @@
    }
  }
-@@ -157433,17 +157433,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-03-14T14:00:00"
--        eventEndTime: "2026-03-14T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Scorbunny26"
-+        eventStartTime: "2026-04-11T14:00:00"
-+        eventEndTime: "2026-04-11T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Tinkatink26"
-         ticketItem: ITEM_EVENT_TICKET_03
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-scorbunny-community-day-2026-nologo.jpg"
--        clientEventStartTimeUtcMs: 1773496800000
--        clientEventEndTimeUtcMs: 1773507600000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-tinkatink-community-day-2026-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1775916000000
-+        clientEventEndTimeUtcMs: 1775926800000
-       }
-       ignoreInventorySpace: true
--      nameOverride: "general1.ticket_CD_Scorbunny26_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Scorbunny26"
-+      nameOverride: "general1.ticket_CD_Tinkatink26_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Tinkatink26"
-     }
+ template {
++  template_id: "BADGE_EVENT_0175"
++  data {
++    template_id: "BADGE_EVENT_0175"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0175
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0177"
+   data {
+     template_id: "BADGE_EVENT_0177"
+@@ -35773,6 +35788,36 @@
    }
  }
-@@ -157596,57 +157596,33 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-02-14T14:00:00"
--        eventEndTime: "2026-02-14T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_desc_EnamorusTherianRaidDay"
-+        eventStartTime: "2023-04-25T14:00:00"
-+        eventEndTime: "2026-04-25T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_06_details_REPLAY_GO_BIGGER"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_06_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-kanto-max-battle-day-2026-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_EnamorusTherianRaidDay"
--        textRewardsKey: "text_rewards_key_FalinksRaidDay"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-kanto-max-battle-day-2026-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_REPLAY_GO_BIGGER"
-+        textRewardsKey: "text_rewards_key_REPLAY_GO_BIGGER"
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_FREE_RAID_TICKET
--            amount: 8
-+            item: ITEM_MAX_BOOST
-+            amount: 1
-           }
-         }
-         iconRewards {
--          type: ITEM
--          item {
--            item: ITEM_XL_RARE_CANDY
--          }
-+          type: EXPERIENCE
-+          exp: 25000
-         }
--        detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1771077600000
--        clientEventEndTimeUtcMs: 1771088400000
-+        detailsLinkKey: "details_link_key_REPLAY_GO_BIGGER_MAX_BATTLE"
-+        clientEventStartTimeUtcMs: 1682431200000
-+        clientEventEndTimeUtcMs: 1777136400000
-       }
--      nameOverride: "general2.ticket.6_EnamorusTherianRaidDay_title"
--      descriptionOverride: "item_event_ticket_gray_desc_EnamorusTherianRaidDay"
+ template {
++  template_id: "BADGE_EVENT_0189"
++  data {
++    template_id: "BADGE_EVENT_0189"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0189
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_EVENT_0194"
++  data {
++    template_id: "BADGE_EVENT_0194"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0194
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0200"
+   data {
+     template_id: "BADGE_EVENT_0200"
+@@ -44933,6 +44978,15 @@
+   }
+ }
+ template {
++  template_id: "BIDIRECTIONAL_FP_WEEKLY_CHALLENGE_REWARD_ROLL_BACK"
++  data {
++    template_id: "BIDIRECTIONAL_FP_WEEKLY_CHALLENGE_REWARD_ROLL_BACK"
++    rollBack {
++      rollbackPercentage: 100
++    }
++  }
++}
++template {
+   template_id: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
+   data {
+     template_id: "BISHARP_KINGAMBIT_EVOLUTION_QUEST"
+@@ -81470,6 +81524,19 @@
+   }
+ }
+ template {
++  template_id: "COMBAT_V0494_MOVE_GIGATON_HAMMER"
++  data {
++    template_id: "COMBAT_V0494_MOVE_GIGATON_HAMMER"
++    combat_move {
++      uniqueId: GIGATON_HAMMER
++      type: POKEMON_TYPE_STEEL
++      power: 130
++      vfxName: "gigaton_hammer"
++      energyDelta: -60
++    }
++  }
++}
++template {
+   template_id: "COMBAT_VNEXT_CODE_GATE"
+   data {
+     template_id: "COMBAT_VNEXT_CODE_GATE"
+@@ -81880,17 +81947,6 @@
+   }
+ }
+ template {
+-  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_02"
+-  data {
+-    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_02"
+-    itemExpirationSettings {
+-      item: ITEM_EVENT_PASS_POINT_MONTHLY_02
+-      expirationTime: "2026-05-07T10:00:00"
+-      emergencyExpirationTime: "2026-05-09T10:00:00"
 -    }
 -  }
 -}
 -template {
--  template_id: "ITEM_EVENT_TICKET_06_TO_GIFT"
--  data {
--    template_id: "ITEM_EVENT_TICKET_06_TO_GIFT"
--    itemSettings {
--      itemId: ITEM_EVENT_TICKET_06_TO_GIFT
--      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
--      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
--      globalEventTicket {
--        eventStartTime: "2026-02-14T14:00:00"
--        eventEndTime: "2026-02-14T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_gray_details_EnamorusTherianRaidDay"
--        ticketItem: ITEM_EVENT_TICKET_06
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
--        clientEventStartTimeUtcMs: 1771077600000
--        clientEventEndTimeUtcMs: 1771088400000
--      }
--      ignoreInventorySpace: true
--      descriptionOverride: "item_event_ticket_gray_details_EnamorusTherianRaidDay"
-+      nameOverride: "general2.ticket.6.REPLAY_GO_BIGGER"
-+      descriptionOverride: "item_event_ticket_06_desc_REPLAY_GO_BIGGER"
+   template_id: "EVENT_PASS_GOFEST2025_FINALE_STORE_REDIRECT"
+   data {
+     template_id: "EVENT_PASS_GOFEST2025_FINALE_STORE_REDIRECT"
+@@ -88905,6 +88961,2095 @@
+   }
+ }
+ template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT"
++    eventPassSettings {
++      prefix: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT"
++      pointsItemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_06
++      trackConditions {
++        track: FREE
++        trackTitleKey: "season_pass_base_track_title_shockingly_good_2026"
++      }
++      trackConditions {
++        track: PREMIUM
++        badge: BADGE_EVENT_0188
++        trackTitleKey: "season_pass_premium_track_title_shockingly_good_2026"
++      }
++      expirationTime: "2026-04-06T20:00:00"
++      maxTierLevel: 60
++      additionalBonusTiersLevel: 31
++      eventPassDisplaySettings {
++        bonusBoxes {
++          text: "quest_catch_pokemon_singular"
++          iconType: SPAWN_UNKNOWN
++          quantity: 5
++        }
++        bonusBoxes {
++          text: "quest_hatch_egg_singular"
++          iconType: EGG
++          quantity: 40
++        }
++        bonusBoxes {
++          text: "quest_win_raid_singular"
++          iconType: RAID
++          quantity: 100
++        }
++        eventPassTrackUpgradeDescriptions {
++          passTrackUpgradeHeaderDescription: "season_pass_shockingly_good_2026_track_upgrade_header_description"
++          eventPassTrackToUpgradeTo: PREMIUM
++          trackUnlockSkuId: "pgorelease.april1_2026_deluxe_event_pass_track_unlock"
++          trackUnlockPlusPointsSkuId: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
++          eventDurationKey: "season_pass_shockingly_good_2026_event_duration"
++          upgradeDescriptionKey: "season_pass_shockingly_good_2026_upgrade_description"
++          ranksToHighlightRewards: 15
++          ranksToHighlightRewards: 19
++          ranksToHighlightRewards: 30
++          detailsLinkKey: "season_pass_details_link_shockingly_good_2026"
++          trackUnlockImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
++          trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
++        }
++        eventPassTitleKey: "season_pass_base_track_title_shockingly_good_2026"
++        headerIconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
++        premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
++        premiumRewardBannerMiddle: "item_shockingly_good_milestone_name"
++        premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text_shockingly_good_2026"
++        premiumRewardBannerImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
++        premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
++        todayViewSection: SEASONAL_EVENT_PASS_SECTION
++        sectionDisplayPriority: 12
++      }
++      gracePeriodEndTime: "2026-04-08T20:00:00"
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_10_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_10_FREE"
++    eventPassTierSettings {
++      rank: 10
++      track: FREE
++      minPointsRequired: 900
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "shockinglygood2026_season_pass_rank_01"
++          durationMins: 131487
++        }
++      }
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_01"
++        bonusBoxes {
++          text: "incense_duration_double"
++          iconType: INCENSE
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_10_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_10_PREMIUM"
++    eventPassTierSettings {
++      rank: 10
++      track: PREMIUM
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "shockinglygood2026_season_pass_rank_01_paid"
++          durationMins: 131487
++        }
++      }
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_01"
++        bonusBoxes {
++          text: "incense_duration_double"
++          iconType: INCENSE
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_11_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_11_FREE"
++    eventPassTierSettings {
++      rank: 11
++      track: FREE
++      minPointsRequired: 1000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_11_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_11_PREMIUM"
++    eventPassTierSettings {
++      rank: 11
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 20
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_12_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_12_FREE"
++    eventPassTierSettings {
++      rank: 12
++      track: FREE
++      minPointsRequired: 1100
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: CHINCHOU
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_12_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_12_PREMIUM"
++    eventPassTierSettings {
++      rank: 12
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: CHINCHOU
++          pokemonDisplay {
++            form: CHINCHOU_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_13_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_13_FREE"
++    eventPassTierSettings {
++      rank: 13
++      track: FREE
++      minPointsRequired: 1200
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: CHINCHOU
++          pokemonDisplay {
++            form: CHINCHOU_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_13_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_13_PREMIUM"
++    eventPassTierSettings {
++      rank: 13
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: CHINCHOU
++          pokemonDisplay {
++            form: CHINCHOU_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_14_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_14_FREE"
++    eventPassTierSettings {
++      rank: 14
++      track: FREE
++      minPointsRequired: 1300
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RAZZ_BERRY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_14_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_14_PREMIUM"
++    eventPassTierSettings {
++      rank: 14
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LUCKY_EGG
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_15_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_15_FREE"
++    eventPassTierSettings {
++      rank: 15
++      track: FREE
++      minPointsRequired: 1400
++      rewards {
++        type: STARDUST
++        stardust: 2500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_15_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_15_PREMIUM"
++    eventPassTierSettings {
++      rank: 15
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_PAID_RAID_TICKET
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_16_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_16_FREE"
++    eventPassTierSettings {
++      rank: 16
++      track: FREE
++      minPointsRequired: 1500
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: PAWMI
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_16_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_16_PREMIUM"
++    eventPassTierSettings {
++      rank: 16
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PAWMI
++          pokemonDisplay {
++            form: PAWMI_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_17_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_17_FREE"
++    eventPassTierSettings {
++      rank: 17
++      track: FREE
++      minPointsRequired: 1600
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PAWMI
++          pokemonDisplay {
++            form: PAWMI_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_17_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_17_PREMIUM"
++    eventPassTierSettings {
++      rank: 17
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PAWMI
++          pokemonDisplay {
++            form: PAWMI_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_18_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_18_FREE"
++    eventPassTierSettings {
++      rank: 18
++      track: FREE
++      minPointsRequired: 1700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: DEDENNE
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_18_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_18_PREMIUM"
++    eventPassTierSettings {
++      rank: 18
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: DEDENNE
++          pokemonDisplay {
++            form: DEDENNE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_19_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_19_FREE"
++    eventPassTierSettings {
++      rank: 19
++      track: FREE
++      minPointsRequired: 1800
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: DEDENNE
++          pokemonDisplay {
++            form: DEDENNE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_19_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_19_PREMIUM"
++    eventPassTierSettings {
++      rank: 19
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: DEDENNE
++          pokemonDisplay {
++            form: DEDENNE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_1_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_1_FREE"
++    eventPassTierSettings {
++      rank: 1
++      track: FREE
++      rewards {
++        type: EXPERIENCE
++        exp: 5000
++      }
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "shockinglygood2026_season_pass_entitlement"
++          durationMins: 131487
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_1_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_1_PREMIUM"
++    eventPassTierSettings {
++      rank: 1
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 5000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_20_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_20_FREE"
++    eventPassTierSettings {
++      rank: 20
++      track: FREE
++      minPointsRequired: 1900
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "shockinglygood2026_season_pass_rank_02"
++          durationMins: 131487
++        }
++      }
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_02"
++        bonusBoxes {
++          text: "catch_candy_double"
++          iconType: CANDY_GENERAL
++        }
++      }
++      activeBonusDisplaySettings {
++        bonusBoxes {
++          text: "incense_duration_double"
++          iconType: INCENSE
++        }
++        bonusBoxes {
++          text: "catch_candy_double"
++          iconType: CANDY_GENERAL
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_20_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_20_PREMIUM"
++    eventPassTierSettings {
++      rank: 20
++      track: PREMIUM
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "shockinglygood2026_season_pass_rank_02_paid"
++          durationMins: 131487
++        }
++      }
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_02"
++        bonusBoxes {
++          text: "catch_stardust_double"
++          iconType: STARDUST
++        }
++      }
++      activeBonusDisplaySettings {
++        bonusBoxes {
++          text: "incense_duration_double"
++          iconType: INCENSE
++        }
++        bonusBoxes {
++          text: "catch_stardust_double"
++          iconType: STARDUST
++        }
++        bonusBoxes {
++          text: "catch_candy_double"
++          iconType: CANDY_GENERAL
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_21_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_21_FREE"
++    eventPassTierSettings {
++      rank: 21
++      track: FREE
++      minPointsRequired: 2000
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: JOLTIK
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_21_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_21_PREMIUM"
++    eventPassTierSettings {
++      rank: 21
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: JOLTIK
++          pokemonDisplay {
++            form: JOLTIK_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_22_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_22_FREE"
++    eventPassTierSettings {
++      rank: 22
++      track: FREE
++      minPointsRequired: 2100
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: JOLTIK
++          pokemonDisplay {
++            form: JOLTIK_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_22_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_22_PREMIUM"
++    eventPassTierSettings {
++      rank: 22
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: JOLTIK
++          pokemonDisplay {
++            form: JOLTIK_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_23_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_23_FREE"
++    eventPassTierSettings {
++      rank: 23
++      track: FREE
++      minPointsRequired: 2200
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_PINAP_BERRY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_23_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_23_PREMIUM"
++    eventPassTierSettings {
++      rank: 23
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_STAR_PIECE
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_24_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_24_FREE"
++    eventPassTierSettings {
++      rank: 24
++      track: FREE
++      minPointsRequired: 2300
++      rewards {
++        type: STARDUST
++        stardust: 2500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_24_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_24_PREMIUM"
++    eventPassTierSettings {
++      rank: 24
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_PAID_RAID_TICKET
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_25_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_25_FREE"
++    eventPassTierSettings {
++      rank: 25
++      track: FREE
++      minPointsRequired: 2400
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_RAZZ_BERRY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_25_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_25_PREMIUM"
++    eventPassTierSettings {
++      rank: 25
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_PINAP_BERRY
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_26_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_26_FREE"
++    eventPassTierSettings {
++      rank: 26
++      track: FREE
++      minPointsRequired: 2500
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RARE_CANDY
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_26_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_26_PREMIUM"
++    eventPassTierSettings {
++      rank: 26
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_XL_RARE_CANDY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_27_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_27_FREE"
++    eventPassTierSettings {
++      rank: 27
++      track: FREE
++      minPointsRequired: 2600
++      rewards {
++        type: EXPERIENCE
++        exp: 5000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_27_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_27_PREMIUM"
++    eventPassTierSettings {
++      rank: 27
++      track: PREMIUM
++      rewards {
++        type: EXPERIENCE
++        exp: 7500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_28_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_28_FREE"
++    eventPassTierSettings {
++      rank: 28
++      track: FREE
++      minPointsRequired: 2700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: PIKACHU
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_28_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_28_PREMIUM"
++    eventPassTierSettings {
++      rank: 28
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_29_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_29_FREE"
++    eventPassTierSettings {
++      rank: 29
++      track: FREE
++      minPointsRequired: 2800
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: RAICHU
++          pokemonDisplay {
++            form: RAICHU_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_29_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_29_PREMIUM"
++    eventPassTierSettings {
++      rank: 29
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: RAICHU
++          pokemonDisplay {
++            form: RAICHU_ALOLA
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_2_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_2_FREE"
++    eventPassTierSettings {
++      rank: 2
++      track: FREE
++      minPointsRequired: 100
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_POKE_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_2_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_2_PREMIUM"
++    eventPassTierSettings {
++      rank: 2
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_POKE_BALL
++          amount: 30
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_30_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_30_FREE"
++    eventPassTierSettings {
++      rank: 30
++      track: FREE
++      minPointsRequired: 2900
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: MIMIKYU
++          pokemonDisplay {
++            form: MIMIKYU_DISGUISED
++          }
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_30_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_30_PREMIUM"
++    eventPassTierSettings {
++      rank: 30
++      track: PREMIUM
++      rewards {
++        type: AVATAR_CLOTHING
++        neutralAvatarItemTemplate {
++          itemTemplateId: "N_AVATAR_n_shirt_disguise-hoodon_0"
++          displayTemplateId: "N_DISPLAY_n_shirt_disguise-hoodon_0"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_31_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_31_FREE"
++    eventPassTierSettings {
++      rank: 31
++      track: FREE
++      minPointsRequired: 3000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_31_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_31_PREMIUM"
++    eventPassTierSettings {
++      rank: 31
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_32_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_32_FREE"
++    eventPassTierSettings {
++      rank: 32
++      track: FREE
++      minPointsRequired: 3100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_32_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_32_PREMIUM"
++    eventPassTierSettings {
++      rank: 32
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_33_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_33_FREE"
++    eventPassTierSettings {
++      rank: 33
++      track: FREE
++      minPointsRequired: 3200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_33_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_33_PREMIUM"
++    eventPassTierSettings {
++      rank: 33
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_34_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_34_FREE"
++    eventPassTierSettings {
++      rank: 34
++      track: FREE
++      minPointsRequired: 3300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_34_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_34_PREMIUM"
++    eventPassTierSettings {
++      rank: 34
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_35_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_35_FREE"
++    eventPassTierSettings {
++      rank: 35
++      track: FREE
++      minPointsRequired: 3400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_35_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_35_PREMIUM"
++    eventPassTierSettings {
++      rank: 35
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_36_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_36_FREE"
++    eventPassTierSettings {
++      rank: 36
++      track: FREE
++      minPointsRequired: 3500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_36_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_36_PREMIUM"
++    eventPassTierSettings {
++      rank: 36
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_37_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_37_FREE"
++    eventPassTierSettings {
++      rank: 37
++      track: FREE
++      minPointsRequired: 3600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_37_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_37_PREMIUM"
++    eventPassTierSettings {
++      rank: 37
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_38_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_38_FREE"
++    eventPassTierSettings {
++      rank: 38
++      track: FREE
++      minPointsRequired: 3700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_38_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_38_PREMIUM"
++    eventPassTierSettings {
++      rank: 38
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_39_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_39_FREE"
++    eventPassTierSettings {
++      rank: 39
++      track: FREE
++      minPointsRequired: 3800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_39_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_39_PREMIUM"
++    eventPassTierSettings {
++      rank: 39
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_3_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_3_FREE"
++    eventPassTierSettings {
++      rank: 3
++      track: FREE
++      minPointsRequired: 200
++      rewards {
++        type: STARDUST
++        stardust: 2500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_3_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_3_PREMIUM"
++    eventPassTierSettings {
++      rank: 3
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_INCENSE_ORDINARY
++          amount: 2
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_40_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_40_FREE"
++    eventPassTierSettings {
++      rank: 40
++      track: FREE
++      minPointsRequired: 3900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_40_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_40_PREMIUM"
++    eventPassTierSettings {
++      rank: 40
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_41_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_41_FREE"
++    eventPassTierSettings {
++      rank: 41
++      track: FREE
++      minPointsRequired: 4000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_41_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_41_PREMIUM"
++    eventPassTierSettings {
++      rank: 41
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_42_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_42_FREE"
++    eventPassTierSettings {
++      rank: 42
++      track: FREE
++      minPointsRequired: 4100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_42_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_42_PREMIUM"
++    eventPassTierSettings {
++      rank: 42
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_43_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_43_FREE"
++    eventPassTierSettings {
++      rank: 43
++      track: FREE
++      minPointsRequired: 4200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_43_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_43_PREMIUM"
++    eventPassTierSettings {
++      rank: 43
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_44_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_44_FREE"
++    eventPassTierSettings {
++      rank: 44
++      track: FREE
++      minPointsRequired: 4300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_44_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_44_PREMIUM"
++    eventPassTierSettings {
++      rank: 44
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_45_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_45_FREE"
++    eventPassTierSettings {
++      rank: 45
++      track: FREE
++      minPointsRequired: 4400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_45_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_45_PREMIUM"
++    eventPassTierSettings {
++      rank: 45
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_46_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_46_FREE"
++    eventPassTierSettings {
++      rank: 46
++      track: FREE
++      minPointsRequired: 4500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_46_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_46_PREMIUM"
++    eventPassTierSettings {
++      rank: 46
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_47_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_47_FREE"
++    eventPassTierSettings {
++      rank: 47
++      track: FREE
++      minPointsRequired: 4600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_47_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_47_PREMIUM"
++    eventPassTierSettings {
++      rank: 47
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_48_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_48_FREE"
++    eventPassTierSettings {
++      rank: 48
++      track: FREE
++      minPointsRequired: 4700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_48_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_48_PREMIUM"
++    eventPassTierSettings {
++      rank: 48
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_49_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_49_FREE"
++    eventPassTierSettings {
++      rank: 49
++      track: FREE
++      minPointsRequired: 4800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_49_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_49_PREMIUM"
++    eventPassTierSettings {
++      rank: 49
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_4_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_4_FREE"
++    eventPassTierSettings {
++      rank: 4
++      track: FREE
++      minPointsRequired: 300
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: MAREEP
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_4_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_4_PREMIUM"
++    eventPassTierSettings {
++      rank: 4
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: MAREEP
++          pokemonDisplay {
++            form: MAREEP_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_50_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_50_FREE"
++    eventPassTierSettings {
++      rank: 50
++      track: FREE
++      minPointsRequired: 4900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_50_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_50_PREMIUM"
++    eventPassTierSettings {
++      rank: 50
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_51_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_51_FREE"
++    eventPassTierSettings {
++      rank: 51
++      track: FREE
++      minPointsRequired: 5000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_51_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_51_PREMIUM"
++    eventPassTierSettings {
++      rank: 51
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_52_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_52_FREE"
++    eventPassTierSettings {
++      rank: 52
++      track: FREE
++      minPointsRequired: 5100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_52_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_52_PREMIUM"
++    eventPassTierSettings {
++      rank: 52
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_53_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_53_FREE"
++    eventPassTierSettings {
++      rank: 53
++      track: FREE
++      minPointsRequired: 5200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_53_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_53_PREMIUM"
++    eventPassTierSettings {
++      rank: 53
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_54_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_54_FREE"
++    eventPassTierSettings {
++      rank: 54
++      track: FREE
++      minPointsRequired: 5300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_54_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_54_PREMIUM"
++    eventPassTierSettings {
++      rank: 54
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_55_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_55_FREE"
++    eventPassTierSettings {
++      rank: 55
++      track: FREE
++      minPointsRequired: 5400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_55_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_55_PREMIUM"
++    eventPassTierSettings {
++      rank: 55
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_56_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_56_FREE"
++    eventPassTierSettings {
++      rank: 56
++      track: FREE
++      minPointsRequired: 5500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_56_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_56_PREMIUM"
++    eventPassTierSettings {
++      rank: 56
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_57_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_57_FREE"
++    eventPassTierSettings {
++      rank: 57
++      track: FREE
++      minPointsRequired: 5600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_57_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_57_PREMIUM"
++    eventPassTierSettings {
++      rank: 57
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_58_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_58_FREE"
++    eventPassTierSettings {
++      rank: 58
++      track: FREE
++      minPointsRequired: 5700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_58_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_58_PREMIUM"
++    eventPassTierSettings {
++      rank: 58
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_59_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_59_FREE"
++    eventPassTierSettings {
++      rank: 59
++      track: FREE
++      minPointsRequired: 5800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_59_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_59_PREMIUM"
++    eventPassTierSettings {
++      rank: 59
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_5_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_5_FREE"
++    eventPassTierSettings {
++      rank: 5
++      track: FREE
++      minPointsRequired: 400
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: MAREEP
++          pokemonDisplay {
++            form: MAREEP_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_5_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_5_PREMIUM"
++    eventPassTierSettings {
++      rank: 5
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: MAREEP
++          pokemonDisplay {
++            form: MAREEP_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_60_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_60_FREE"
++    eventPassTierSettings {
++      rank: 60
++      track: FREE
++      minPointsRequired: 5900
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: MIMIKYU
++          pokemonDisplay {
++            form: MIMIKYU_DISGUISED
++          }
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_60_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_60_PREMIUM"
++    eventPassTierSettings {
++      rank: 60
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: MIMIKYU
++          pokemonDisplay {
++            form: MIMIKYU_DISGUISED
++          }
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_6_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_6_FREE"
++    eventPassTierSettings {
++      rank: 6
++      track: FREE
++      minPointsRequired: 500
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_6_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_6_PREMIUM"
++    eventPassTierSettings {
++      rank: 6
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 20
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_7_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_7_FREE"
++    eventPassTierSettings {
++      rank: 7
++      track: FREE
++      minPointsRequired: 600
++      rewards {
++        type: EXPERIENCE
++        exp: 5000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_7_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_7_PREMIUM"
++    eventPassTierSettings {
++      rank: 7
++      track: PREMIUM
++      rewards {
++        type: EXPERIENCE
++        exp: 7500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_8_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_8_FREE"
++    eventPassTierSettings {
++      rank: 8
++      track: FREE
++      minPointsRequired: 700
++      rewards {
++        type: CANDY
++        candy {
++          pokemonId: MAGNEMITE
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_8_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_8_PREMIUM"
++    eventPassTierSettings {
++      rank: 8
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: MAGNEMITE
++          pokemonDisplay {
++            form: MAGNEMITE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_9_FREE"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_9_FREE"
++    eventPassTierSettings {
++      rank: 9
++      track: FREE
++      minPointsRequired: 800
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: MAGNEMITE
++          pokemonDisplay {
++            form: MAGNEMITE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_9_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_9_PREMIUM"
++    eventPassTierSettings {
++      rank: 9
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: MAGNEMITE
++          pokemonDisplay {
++            form: MAGNEMITE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "EVENT_PASS_WINTERHOLIDAYS2025_SEASON_STORE_REDIRECT"
+   data {
+     template_id: "EVENT_PASS_WINTERHOLIDAYS2025_SEASON_STORE_REDIRECT"
+@@ -93950,6 +96095,24 @@
+   }
+ }
+ template {
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_BB_2026"
++  data {
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_BB_2026"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_BB_2026
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++    }
++  }
++}
++template {
+   template_id: "EXTENDED_V0025_POKEMON_PIKACHU_COPY_2019"
+   data {
+     template_id: "EXTENDED_V0025_POKEMON_PIKACHU_COPY_2019"
+@@ -110048,6 +112211,20 @@
+         xlUpperBound: 1.065
+         xxlUpperBound: 1.2425
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 20.51
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 41.01
++        }
++        maxStationVisualSettings {
++          scale: 2.79
++        }
++      }
      }
    }
  }
-@@ -465903,8 +465879,7 @@
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
-       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_ELECTRIC"
+@@ -110066,6 +112243,20 @@
+         xlUpperBound: 1.065
+         xxlUpperBound: 1.2425
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 20.51
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 41.01
++        }
++        maxStationVisualSettings {
++          scale: 2.79
++        }
++      }
      }
    }
  }
-@@ -465917,31 +465892,31 @@
+@@ -110083,6 +112274,20 @@
+         xlUpperBound: 1.635
+         xxlUpperBound: 1.9075
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 15.58
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 31.15
++        }
++        maxStationVisualSettings {
++          scale: 2.12
++        }
++      }
+     }
+   }
+ }
+@@ -110101,6 +112306,20 @@
+         xlUpperBound: 1.635
+         xxlUpperBound: 1.9075
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 15.58
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 31.15
++        }
++        maxStationVisualSettings {
++          scale: 2.12
++        }
++      }
+     }
+   }
+ }
+@@ -110118,6 +112337,20 @@
+         xlUpperBound: 3.015
+         xxlUpperBound: 4.02
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 9.33
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 18.66
++        }
++        maxStationVisualSettings {
++          scale: 1.27
++        }
++      }
+     }
+   }
+ }
+@@ -110136,6 +112369,20 @@
+         xlUpperBound: 3.015
+         xxlUpperBound: 4.02
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 9.33
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 18.66
++        }
++        maxStationVisualSettings {
++          scale: 1.27
++        }
++      }
+     }
+   }
+ }
+@@ -144972,6 +147219,10 @@
+       forms {
+         form: CORSOLA_GALARIAN
+       }
++      forms {
++        form: 3339
++        isCostume: true
++      }
+     }
+   }
+ }
+@@ -156168,7 +158419,7 @@
+     iapCategoryDisplay {
+       category: IAP_CATEGORY_AVATAR
+       sortOrder: 5
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO_GOTour2026_XY_Items.jpg"
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo_avatar_mimikyu.jpg"
+       description: "avatar_shop_description_new"
+     }
+   }
+@@ -157315,6 +159566,27 @@
+   }
+ }
+ template {
++  template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_02"
++  data {
++    template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_02"
++    itemSettings {
++      itemId: ITEM_EVENT_PASS_POINT_MONTHLY_02
++      itemType: ITEM_TYPE_EVENT_PASS_POINT
++      category: ITEM_CATEGORY_EVENT_PASS_POINT
++      ignoreInventorySpace: true
++      itemCap: 999999
++      eventPassPoint {
++        eventPassId: "EVENT_PASS_APRIL2026_SEASON"
++      }
++      timePeriodCounters {
++        playerActivity {
++          limit: 300
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "ITEM_EVENT_TICKET_02"
+   data {
+     template_id: "ITEM_EVENT_TICKET_02"
+@@ -157786,7 +160058,7 @@
+             item: ITEM_XL_RARE_CANDY
+           }
+         }
+-        detailsLinkKey: "details_link_key"
++        detailsLinkKey: "details_link_key_fashion_raid_day"
+         clientEventStartTimeUtcMs: 1775311200000
+         clientEventEndTimeUtcMs: 1775322000000
+       }
+@@ -158245,6 +160517,17 @@
+   }
+ }
+ template {
++  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_02"
++  data {
++    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_02"
++    itemExpirationSettings {
++      item: ITEM_EVENT_PASS_POINT_MONTHLY_02
++      expirationTime: "2026-05-07T10:00:00"
++      emergencyExpirationTime: "2026-05-09T10:00:00"
++    }
++  }
++}
++template {
+   template_id: "ITEM_EXPIRATION_ITEM_INCUBATOR_TIMED"
+   data {
+     template_id: "ITEM_EXPIRATION_ITEM_INCUBATOR_TIMED"
+@@ -158628,7 +160911,7 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 1
+       incense {
+-        incenseLifetimeSeconds: 3600
++        incenseLifetimeSeconds: 7200
+       }
+     }
+   }
+@@ -159817,6 +162100,19 @@
+   }
+ }
+ template {
++  template_id: "ITEM_SOFT_SFIDA"
++  data {
++    template_id: "ITEM_SOFT_SFIDA"
++    itemSettings {
++      itemId: ITEM_SOFT_SFIDA
++      itemType: ITEM_TYPE_SOFT_SFIDA
++      category: ITEM_CATEGORY_UTILITES
++      dropTrainerLevel: 99
++      ignoreInventorySpace: true
++    }
++  }
++}
++template {
+   template_id: "ITEM_SPECIAL_CAMERA"
+   data {
+     template_id: "ITEM_SPECIAL_CAMERA"
+@@ -161393,6 +163689,136 @@
+   }
+ }
+ template {
++  template_id: "LC_2026_NPB_001"
++  data {
++    template_id: "LC_2026_NPB_001"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_001
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_002"
++  data {
++    template_id: "LC_2026_NPB_002"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_002
++      imageUrl: "lc_2026_NPB_yomiuriGiants"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_003"
++  data {
++    template_id: "LC_2026_NPB_003"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_003
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_004"
++  data {
++    template_id: "LC_2026_NPB_004"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_004
++      imageUrl: "lc_2026_NPB_koshienHanshinTigers"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_005"
++  data {
++    template_id: "LC_2026_NPB_005"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_005
++      imageUrl: "lc_2026_NPB_rakutenEagles"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_006"
++  data {
++    template_id: "LC_2026_NPB_006"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_006
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_007"
++  data {
++    template_id: "LC_2026_NPB_007"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_007
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_008"
++  data {
++    template_id: "LC_2026_NPB_008"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_008
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_009"
++  data {
++    template_id: "LC_2026_NPB_009"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_009
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_010"
++  data {
++    template_id: "LC_2026_NPB_010"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_010
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_011"
++  data {
++    template_id: "LC_2026_NPB_011"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_011
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_012"
++  data {
++    template_id: "LC_2026_NPB_012"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_012
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
++  template_id: "LC_2026_NPB_013"
++  data {
++    template_id: "LC_2026_NPB_013"
++    locationCardSettings {
++      locationCard: LC_2026_NPB_013
++      imageUrl: "lc_2026_ppk_001"
++    }
++  }
++}
++template {
+   template_id: "LC_2026_PPK_001"
+   data {
+     template_id: "LC_2026_PPK_001"
+@@ -162324,6 +164750,16 @@
+   }
+ }
+ template {
++  template_id: "LC_SPECIALBACKGROUND_EXTRA_2025_02"
++  data {
++    template_id: "LC_SPECIALBACKGROUND_EXTRA_2025_02"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_EXTRA_2025_02
++      imageUrl: "lc_taipeiFlowerFestival_2026"
++    }
++  }
++}
++template {
+   template_id: "LC_SPECIALBACKGROUND_KR2025_LOTTE_01"
+   data {
+     template_id: "LC_SPECIALBACKGROUND_KR2025_LOTTE_01"
+@@ -176473,8 +178909,8 @@
+   data {
+     template_id: "N_DISPLAY_n_shirt_disguise-hoodon_0"
+     avatarItemDisplay {
+-      iconAddress: "questionmark_icon"
+-      displayStringId: "avatar_generic_name"
++      iconAddress: "n_shirt_disguise-hoodon_0_icon"
++      displayStringId: "avatar_shirt_mimikyu_hoodon"
+     }
+   }
+ }
+@@ -188108,6 +190544,15 @@
+   }
+ }
+ template {
++  template_id: "PREDICT_CHARGE_MOVE_ON_SUBMIT_ROLL_BACK_CODE_GATE"
++  data {
++    template_id: "PREDICT_CHARGE_MOVE_ON_SUBMIT_ROLL_BACK_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++    }
++  }
++}
++template {
+   template_id: "PRIMAL_EVO_SETTINGS"
+   data {
+     template_id: "PRIMAL_EVO_SETTINGS"
+@@ -192723,6 +195168,19 @@
+   }
+ }
+ template {
++  template_id: "SOFT_SFIDA_SETTINGS"
++  data {
++    template_id: "SOFT_SFIDA_SETTINGS"
++    284 {
++      6: 20
++      7: 5000
++      8: 10000
++      9: 4
++      10: 0x42480000
++    }
++  }
++}
++template {
+   template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
+   data {
+     template_id: "SOURDOUGH_MOVE_MAPPING_SETTINGS"
+@@ -193778,6 +196236,19 @@
+   }
+ }
+ template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_BB_2026"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_BB_2026"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++    }
++  }
++}
++template {
+   template_id: "SPAWN_V0025_POKEMON_PIKACHU_COPY_2019"
+   data {
+     template_id: "SPAWN_V0025_POKEMON_PIKACHU_COPY_2019"
+@@ -240492,6 +242963,16 @@
+   }
+ }
+ template {
++  template_id: "STORE_REFRESH_FEATURE_GATE"
++  data {
++    template_id: "STORE_REFRESH_FEATURE_GATE"
++    featureGate {
++      status: 87970808
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
+   template_id: "STYLE_SHOP_SETTINGS"
+   data {
+     template_id: "STYLE_SHOP_SETTINGS"
+@@ -247992,6 +250473,88 @@
+   }
+ }
+ template {
++  template_id: "V0025_POKEMON_PIKACHU_BB_2026"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_BB_2026"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_BB_2026
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
+   template_id: "V0025_POKEMON_PIKACHU_COPY_2019"
+   data {
+     template_id: "V0025_POKEMON_PIKACHU_COPY_2019"
+@@ -364854,6 +367417,27 @@
+   }
+ }
+ template {
++  template_id: "V0494_MOVE_GIGATON_HAMMER"
++  data {
++    template_id: "V0494_MOVE_GIGATON_HAMMER"
++    moveSettings {
++      movementId: GIGATON_HAMMER
++      animationId: 5
++      pokemonType: POKEMON_TYPE_STEEL
++      power: 300
++      accuracyChance: 1
++      staminaLossScalar: 0.01
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "gigaton_hammer"
++      durationMs: 3000
++      damageWindowStartMs: 2000
++      damageWindowEndMs: 3100
++      energyDelta: -100
++    }
++  }
++}
++template {
+   template_id: "V0494_POKEMON_VICTINI"
+   data {
+     template_id: "V0494_POKEMON_VICTINI"
+@@ -437982,8 +440566,11 @@
+       pokemonId: SILICOBRA
+       type: POKEMON_TYPE_GROUND
+       camera {
++        cylinderRadiusM: 0.5
++        cylinderHeightM: 1.3
+       }
+       encounter {
++        collisionRadiusM: 0.3
+         attackProbability: 0.3
+         dodgeProbability: 0.2
+         dodgeDurationS: 1
+@@ -438009,7 +440596,7 @@
+       weightStdDev: 0.95
+       familyId: FAMILY_SILICOBRA
+       kmBuddyDistance: 3
+-      modelHeight: 1
++      modelHeight: 0.59
+       evolutionBranch {
+         evolution: SANDACONDA
+         candyCost: 50
+@@ -438022,14 +440609,36 @@
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+       buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+       }
+       isTransferable: true
+       isDeployable: true
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
+       isTradable: true
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
+       buddyGroupNumber: 2
++      raidBossDistanceOffset: 2
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -438044,8 +440653,11 @@
+       pokemonId: SILICOBRA
+       type: POKEMON_TYPE_GROUND
+       camera {
++        cylinderRadiusM: 0.5
++        cylinderHeightM: 1.3
+       }
+       encounter {
++        collisionRadiusM: 0.3
+         attackProbability: 0.3
+         dodgeProbability: 0.2
+         dodgeDurationS: 1
+@@ -438071,7 +440683,7 @@
+       weightStdDev: 0.95
+       familyId: FAMILY_SILICOBRA
+       kmBuddyDistance: 3
+-      modelHeight: 1
++      modelHeight: 0.59
+       evolutionBranch {
+         evolution: SANDACONDA
+         candyCost: 50
+@@ -438086,14 +440698,36 @@
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+       buddyScale: 19
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
++      buddyPortraitOffset: 0
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+       }
+       isTransferable: true
+       isDeployable: true
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
+       isTradable: true
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
+       buddyGroupNumber: 2
++      raidBossDistanceOffset: 2
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -438108,8 +440742,13 @@
+       pokemonId: SANDACONDA
+       type: POKEMON_TYPE_GROUND
+       camera {
++        cylinderRadiusM: 0.92
++        cylinderHeightM: 1.6
+       }
+       encounter {
++        collisionRadiusM: 1.3
++        collisionHeightM: 1
++        movementType: MOVEMENT_JUMP
+         bonusCandyCaptureReward: 2
+         bonusStardustCaptureReward: 200
+         attackProbability: 0.3
+@@ -438139,7 +440778,8 @@
+       weightStdDev: 8.1875
+       familyId: FAMILY_SILICOBRA
+       kmBuddyDistance: 3
+-      modelHeight: 1
++      buddy_size: BUDDY_BIG
++      modelHeight: 0.8
+       modelScaleV2: 1
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -438148,14 +440788,36 @@
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+       buddyScale: 19
++      buddyPortraitOffset: -300
++      buddyPortraitOffset: -300
++      buddyPortraitOffset: 300
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+       }
+       isTransferable: true
+       isDeployable: true
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
+       isTradable: true
+-      buddyGroupNumber: 2
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
++      buddyGroupNumber: 3
++      raidBossDistanceOffset: 3
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -438170,8 +440832,13 @@
+       pokemonId: SANDACONDA
+       type: POKEMON_TYPE_GROUND
+       camera {
++        cylinderRadiusM: 0.92
++        cylinderHeightM: 1.6
+       }
+       encounter {
++        collisionRadiusM: 1.3
++        collisionHeightM: 1
++        movementType: MOVEMENT_JUMP
+         bonusCandyCaptureReward: 2
+         bonusStardustCaptureReward: 200
+         attackProbability: 0.3
+@@ -438201,7 +440868,8 @@
+       weightStdDev: 8.1875
+       familyId: FAMILY_SILICOBRA
+       kmBuddyDistance: 3
+-      modelHeight: 1
++      buddy_size: BUDDY_BIG
++      modelHeight: 0.8
+       modelScaleV2: 1
+       form: SANDACONDA_NORMAL
+       buddyOffsetMale: 0
+@@ -438211,14 +440879,36 @@
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+       buddyScale: 19
++      buddyPortraitOffset: -300
++      buddyPortraitOffset: -300
++      buddyPortraitOffset: 300
+       third_move {
+         stardustToUnlock: 50000
+         candyToUnlock: 50
+       }
+       isTransferable: true
+       isDeployable: true
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
+       isTradable: true
+-      buddyGroupNumber: 2
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
++      buddyGroupNumber: 3
++      raidBossDistanceOffset: 3
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -465892,31 +468582,31 @@
        reward {
          item {
            stardust: true
--          count: 3000
-+          count: 750
+-          count: 750
++          count: 3000
          }
        }
        reward {
          item {
            stardust: true
--          count: 3000
-+          count: 750
+-          count: 750
++          count: 3000
          }
        }
        reward {
          item {
            stardust: true
--          count: 3000
-+          count: 750
+-          count: 750
++          count: 3000
          }
        }
        reward {
          item {
            stardust: true
--          count: 3000
-+          count: 750
+-          count: 750
++          count: 3000
          }
        }
        reward {
          item {
            stardust: true
--          count: 3000
-+          count: 750
+-          count: 750
++          count: 3000
          }
        }
      }
-@@ -465956,31 +465931,31 @@
+@@ -465931,31 +468621,31 @@
        reward {
          item {
            stardust: true
--          count: 6000
-+          count: 1500
+-          count: 1500
++          count: 6000
          }
        }
        reward {
          item {
            stardust: true
--          count: 6000
-+          count: 1500
+-          count: 1500
++          count: 6000
          }
        }
        reward {
          item {
            stardust: true
--          count: 6000
-+          count: 1500
+-          count: 1500
++          count: 6000
          }
        }
        reward {
          item {
            stardust: true
--          count: 6000
-+          count: 1500
+-          count: 1500
++          count: 6000
          }
        }
        reward {
          item {
            stardust: true
--          count: 6000
-+          count: 1500
+-          count: 1500
++          count: 6000
          }
        }
        rewardTrack: PREMIUM
-@@ -465996,7 +465971,7 @@
+@@ -465971,7 +468661,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -465989,7 +468679,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -466004,7 +468694,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -466022,7 +468712,7 @@
        reward {
          item {
            stardust: true
 -          count: 2120
-+          count: 530
-         }
-       }
-       reward {
-@@ -466014,7 +465989,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-     }
-@@ -466029,7 +466004,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-       reward {
-@@ -466047,7 +466022,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 8480
-+          count: 2120
++          count: 8480
          }
        }
        rewardTrack: PREMIUM
-@@ -466063,7 +466038,7 @@
+@@ -466038,7 +468728,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -466056,7 +468746,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -466071,7 +468761,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -466089,7 +468779,7 @@
        reward {
          item {
            stardust: true
 -          count: 2120
-+          count: 530
-         }
-       }
-       reward {
-@@ -466081,7 +466056,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-     }
-@@ -466096,7 +466071,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-       reward {
-@@ -466114,7 +466089,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 8480
-+          count: 2120
++          count: 8480
          }
        }
        rewardTrack: PREMIUM
-@@ -466130,7 +466105,7 @@
+@@ -466105,7 +468795,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 570
++          count: 2280
+         }
+       }
+       reward {
+@@ -466123,7 +468813,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+     }
+@@ -466138,7 +468828,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+       reward {
+@@ -466156,7 +468846,7 @@
        reward {
          item {
            stardust: true
 -          count: 2280
-+          count: 570
-         }
-       }
-       reward {
-@@ -466148,7 +466123,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4560
-+          count: 1140
-         }
-       }
-     }
-@@ -466163,7 +466138,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4560
-+          count: 1140
-         }
-       }
-       reward {
-@@ -466181,7 +466156,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 9120
-+          count: 2280
++          count: 9120
          }
        }
        rewardTrack: PREMIUM
-@@ -466197,7 +466172,7 @@
+@@ -466172,7 +468862,7 @@
        reward {
          item {
            stardust: true
--          count: 2400
-+          count: 600
-         }
-       }
-       reward {
-@@ -466215,7 +466190,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4800
-+          count: 1200
-         }
-       }
-     }
-@@ -466230,7 +466205,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4800
-+          count: 1200
-         }
-       }
-       reward {
-@@ -466248,7 +466223,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 9600
+-          count: 600
 +          count: 2400
          }
        }
-       rewardTrack: PREMIUM
-@@ -466343,7 +466318,7 @@
        reward {
-         item {
-           stardust: true
--          count: 2800
-+          count: 700
-         }
-       }
-       reward {
-@@ -466361,7 +466336,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5600
-+          count: 1400
-         }
-       }
-     }
-@@ -466376,7 +466351,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5600
-+          count: 1400
-         }
-       }
-       reward {
-@@ -466394,7 +466369,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 11200
-+          count: 2800
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -466410,7 +466385,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2920
-+          count: 730
-         }
-       }
-       reward {
-@@ -466428,7 +466403,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5840
-+          count: 1460
-         }
-       }
-     }
-@@ -466443,7 +466418,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5840
-+          count: 1460
-         }
-       }
-       reward {
-@@ -466461,7 +466436,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 11680
-+          count: 2920
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -466477,7 +466452,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3080
-+          count: 770
-         }
-       }
-       reward {
-@@ -466495,7 +466470,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6160
-+          count: 1540
-         }
-       }
-     }
-@@ -466510,7 +466485,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6160
-+          count: 1540
-         }
-       }
-       reward {
-@@ -466528,7 +466503,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 12320
-+          count: 3080
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -466593,7 +466568,7 @@
+@@ -466190,7 +468880,7 @@
        reward {
          item {
            stardust: true
 -          count: 1200
-+          count: 300
-         }
-       }
-       reward {
-@@ -466611,7 +466586,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2400
-+          count: 600
++          count: 4800
          }
        }
      }
-@@ -466626,7 +466601,7 @@
+@@ -466205,7 +468895,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       reward {
+@@ -466223,7 +468913,7 @@
        reward {
          item {
            stardust: true
 -          count: 2400
-+          count: 600
-         }
-       }
-       reward {
-@@ -466644,7 +466619,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4800
-+          count: 1200
++          count: 9600
          }
        }
        rewardTrack: PREMIUM
-@@ -466660,7 +466635,7 @@
+@@ -466318,7 +469008,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 700
++          count: 2800
+         }
+       }
+       reward {
+@@ -466336,7 +469026,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+     }
+@@ -466351,7 +469041,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+       reward {
+@@ -466369,7 +469059,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 11200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -466385,7 +469075,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 730
++          count: 2920
+         }
+       }
+       reward {
+@@ -466403,7 +469093,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+     }
+@@ -466418,7 +469108,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+       reward {
+@@ -466436,7 +469126,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 11680
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -466452,7 +469142,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 770
++          count: 3080
+         }
+       }
+       reward {
+@@ -466470,7 +469160,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+     }
+@@ -466485,7 +469175,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+       reward {
+@@ -466503,7 +469193,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 12320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -466568,7 +469258,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 300
++          count: 1200
+         }
+       }
+       reward {
+@@ -466586,7 +469276,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+     }
+@@ -466601,7 +469291,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -466619,7 +469309,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -466635,7 +469325,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 870
++          count: 3480
+         }
+       }
+       reward {
+@@ -466653,7 +469343,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+     }
+@@ -466668,7 +469358,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+       reward {
+@@ -466686,7 +469376,7 @@
        reward {
          item {
            stardust: true
 -          count: 3480
-+          count: 870
-         }
-       }
-       reward {
-@@ -466678,7 +466653,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6960
-+          count: 1740
-         }
-       }
-     }
-@@ -466693,7 +466668,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6960
-+          count: 1740
-         }
-       }
-       reward {
-@@ -466711,7 +466686,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 13920
-+          count: 3480
++          count: 13920
          }
        }
        rewardTrack: PREMIUM
-@@ -466727,7 +466702,7 @@
+@@ -466702,7 +469392,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -466720,7 +469410,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -466735,7 +469425,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -466753,7 +469443,7 @@
        reward {
          item {
            stardust: true
 -          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -466745,7 +466720,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -466760,7 +466735,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -466778,7 +466753,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
++          count: 14400
          }
        }
        rewardTrack: PREMIUM
-@@ -466794,7 +466769,7 @@
+@@ -466769,7 +469459,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -466787,7 +469477,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -466802,7 +469492,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -466820,7 +469510,7 @@
        reward {
          item {
            stardust: true
 -          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -466812,7 +466787,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -466827,7 +466802,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -466845,7 +466820,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
++          count: 14400
          }
        }
        rewardTrack: PREMIUM
-@@ -466861,7 +466836,7 @@
+@@ -466836,7 +469526,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -466854,7 +469544,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -466869,7 +469559,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -466887,7 +469577,7 @@
        reward {
          item {
            stardust: true
 -          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -466879,7 +466854,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -466894,7 +466869,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -466912,7 +466887,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
++          count: 14400
          }
        }
        rewardTrack: PREMIUM
-@@ -466928,7 +466903,7 @@
+@@ -466903,7 +469593,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -466921,7 +469611,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -466936,7 +469626,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -466954,7 +469644,7 @@
        reward {
          item {
            stardust: true
 -          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -466946,7 +466921,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -466961,7 +466936,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -466979,7 +466954,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
++          count: 14400
          }
        }
        rewardTrack: PREMIUM
-@@ -466995,7 +466970,7 @@
+@@ -466970,7 +469660,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -466988,7 +469678,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -467003,7 +469693,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -467021,7 +469711,7 @@
        reward {
          item {
            stardust: true
 -          count: 1320
-+          count: 330
-         }
-       }
-       reward {
-@@ -467013,7 +466988,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-     }
-@@ -467028,7 +467003,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-       reward {
-@@ -467046,7 +467021,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5280
-+          count: 1320
++          count: 5280
          }
        }
        rewardTrack: PREMIUM
-@@ -467062,7 +467037,7 @@
+@@ -467037,7 +469727,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -467055,7 +469745,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -467070,7 +469760,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -467088,7 +469778,7 @@
        reward {
          item {
            stardust: true
 -          count: 1320
-+          count: 330
-         }
-       }
-       reward {
-@@ -467080,7 +467055,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-     }
-@@ -467095,7 +467070,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-       reward {
-@@ -467113,7 +467088,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5280
-+          count: 1320
++          count: 5280
          }
        }
        rewardTrack: PREMIUM
-@@ -467129,7 +467104,7 @@
+@@ -467104,7 +469794,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 370
++          count: 1480
+         }
+       }
+       reward {
+@@ -467122,7 +469812,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+     }
+@@ -467137,7 +469827,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+       reward {
+@@ -467155,7 +469845,7 @@
        reward {
          item {
            stardust: true
 -          count: 1480
-+          count: 370
-         }
-       }
-       reward {
-@@ -467147,7 +467122,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2960
-+          count: 740
-         }
-       }
-     }
-@@ -467162,7 +467137,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2960
-+          count: 740
-         }
-       }
-       reward {
-@@ -467180,7 +467155,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5920
-+          count: 1480
++          count: 5920
          }
        }
        rewardTrack: PREMIUM
-@@ -467245,7 +467220,7 @@
+@@ -467220,7 +469910,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 400
++          count: 1600
+         }
+       }
+       reward {
+@@ -467238,7 +469928,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+     }
+@@ -467253,7 +469943,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+       reward {
+@@ -467271,7 +469961,7 @@
        reward {
          item {
            stardust: true
 -          count: 1600
-+          count: 400
-         }
-       }
-       reward {
-@@ -467263,7 +467238,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3200
-+          count: 800
-         }
-       }
-     }
-@@ -467278,7 +467253,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3200
-+          count: 800
-         }
-       }
-       reward {
-@@ -467296,7 +467271,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6400
-+          count: 1600
++          count: 6400
          }
        }
        rewardTrack: PREMIUM
-@@ -467312,7 +467287,7 @@
+@@ -467287,7 +469977,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -467305,7 +469995,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -467320,7 +470010,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -467338,7 +470028,7 @@
        reward {
          item {
            stardust: true
 -          count: 1720
-+          count: 430
-         }
-       }
-       reward {
-@@ -467330,7 +467305,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-     }
-@@ -467345,7 +467320,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-       reward {
-@@ -467363,7 +467338,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6880
-+          count: 1720
++          count: 6880
          }
        }
        rewardTrack: PREMIUM
-@@ -467379,7 +467354,7 @@
+@@ -467354,7 +470044,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -467372,7 +470062,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -467387,7 +470077,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -467405,7 +470095,7 @@
        reward {
          item {
            stardust: true
 -          count: 1720
-+          count: 430
-         }
-       }
-       reward {
-@@ -467397,7 +467372,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-     }
-@@ -467412,7 +467387,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-       reward {
-@@ -467430,7 +467405,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6880
-+          count: 1720
++          count: 6880
          }
        }
        rewardTrack: PREMIUM
-@@ -467446,7 +467421,7 @@
+@@ -467421,7 +470111,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 470
++          count: 1880
+         }
+       }
+       reward {
+@@ -467439,7 +470129,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+     }
+@@ -467454,7 +470144,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+       reward {
+@@ -467472,7 +470162,7 @@
        reward {
          item {
            stardust: true
 -          count: 1880
-+          count: 470
-         }
-       }
-       reward {
-@@ -467464,7 +467439,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3760
-+          count: 940
-         }
-       }
-     }
-@@ -467479,7 +467454,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3760
-+          count: 940
-         }
-       }
-       reward {
-@@ -467497,7 +467472,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7520
-+          count: 1880
++          count: 7520
          }
        }
        rewardTrack: PREMIUM
-@@ -468157,9 +468132,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: REGIELEKI
-+          pokemonId: REGIDRAGO
-           pokemonDisplay {
--            form: REGIELEKI_NORMAL
-+            form: REGIDRAGO_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -468838,9 +468813,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: REGIELEKI
-+          pokemonId: REGIDRAGO
-           pokemonDisplay {
--            form: REGIELEKI_NORMAL
-+            form: REGIDRAGO_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -473297,13 +473272,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Scorbunny26_title"
-+      title: "general1.ticket_CD_Tinkatink26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-03-14T17:00:00"
-+      skuDisableTime: "2026-04-11T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1773507600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-scorbunny-community-day-2026-nologo.jpg"
--      webstoreSkuId: "web-scorbunny-cd-26-ticket-box"
-+      skuDisableTimeUtcMs: 1775926800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-tinkatink-community-day-2026-nologo.jpg"
-+      webstoreSkuId: "web-tinkatink-cd-deluxe"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -473318,12 +473293,11 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Scorbunny26_title"
-+      title: "general1.ticket_CD_Tinkatink26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-03-14T17:00:00"
-+      skuDisableTime: "2026-04-11T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1773507600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-scorbunny-community-day-2026-nologo.jpg"
-+      skuDisableTimeUtcMs: 1775926800000
-     }
-   }
- }
-@@ -473412,38 +473386,20 @@
-   data {
-     template_id: "general2.ticket.6"
-     iapItemDisplay {
--      sku: "general2.ticket.6"
-+      sku: "pgorelease.general2.ticket.6"
+@@ -473491,7 +476181,6 @@
+       sku: "general2.ticket.9"
        category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
-+      sortOrder: 1
-       hidden: true
-       spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_EnamorusTherianRaidDay_title"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-02-14T17:00:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1771088400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
--      webstoreSkuId: "web-enamorus-raid-ticket-box"
-+      title: "general2.ticket.6.REPLAY_GO_BIGGER"
-+      skuEnableTime: "2023-01-01T11:00:04"
-+      skuDisableTime: "2026-04-25T17:00:00"
-+      skuEnableTimeUtcMs: 1672570804000
-+      skuDisableTimeUtcMs: 1777136400000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-kanto-max-battle-day-2026-nologo.jpg"
-+      webstoreSkuId: "web-gmax-kanto-box-ultra"
-       webstoreSkuPriceE6: 4990000
--    }
--  }
--}
--template {
--  template_id: "general2.ticket.6.giftable"
--  data {
--    template_id: "general2.ticket.6.giftable"
--    iapItemDisplay {
--      sku: "general2.ticket.6.giftable"
--      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
+       sortOrder: 2
 -      hidden: true
--      spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_EnamorusTherianRaidDay_title"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-02-14T17:00:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1771088400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
-+      24: 1
-     }
-   }
- }
-@@ -475132,13 +475088,13 @@
-       sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Scorbunny26_title"
-+      title: "general1.ticket_CD_Tinkatink26_title"
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_fashionRaidDay26_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-03-14T17:00:00"
-+      skuDisableTime: "2026-04-11T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1773507600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-scorbunny-community-day-2026-nologo.jpg"
--      webstoreSkuId: "web-scorbunny-cd-26-ticket-box"
-+      skuDisableTimeUtcMs: 1775926800000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-tinkatink-community-day-2026-nologo.jpg"
-+      webstoreSkuId: "web-tinkatink-cd-deluxe"
-       webstoreSkuPriceE6: 1990000
-     }
-   }
-@@ -475153,12 +475109,11 @@
+@@ -473512,7 +476201,6 @@
+       sku: "general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-       hidden: true
-       spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Scorbunny26_title"
-+      title: "general1.ticket_CD_Tinkatink26_title"
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_fashionRaidDay26_title"
        skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-03-14T17:00:00"
-+      skuDisableTime: "2026-04-11T17:00:00"
-       skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1773507600000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-scorbunny-community-day-2026-nologo.jpg"
-+      skuDisableTimeUtcMs: 1775926800000
-     }
-   }
- }
-@@ -475243,46 +475198,6 @@
+@@ -473844,6 +476532,40 @@
    }
  }
  template {
--  template_id: "pgorelease.general2.ticket.6"
--  data {
--    template_id: "pgorelease.general2.ticket.6"
--    iapItemDisplay {
--      sku: "pgorelease.general2.ticket.6"
--      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
--      hidden: true
--      spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_EnamorusTherianRaidDay_title"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-02-14T17:00:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1771088400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
--      webstoreSkuId: "web-enamorus-raid-ticket-box"
--      webstoreSkuPriceE6: 4990000
--    }
--  }
--}
--template {
--  template_id: "pgorelease.general2.ticket.6.giftable"
--  data {
--    template_id: "pgorelease.general2.ticket.6.giftable"
--    iapItemDisplay {
--      sku: "pgorelease.general2.ticket.6.giftable"
--      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
--      hidden: true
--      spriteId: "general2.ticket.6"
--      title: "general2.ticket.6_EnamorusTherianRaidDay_title"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-02-14T17:00:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1771088400000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Enamorus_Therian_Forme_RaidDay_v1-1024x576.jpg"
--    }
--  }
--}
--template {
-   template_id: "pgorelease.general2.ticket.7"
-   data {
-     template_id: "pgorelease.general2.ticket.7"
-@@ -481252,7 +481167,7 @@
-           trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
-         }
-         eventPassTitleKey: "season_pass_base_track_title_shockingly_good_2026"
--        headerIconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s22-memories-in-motion-logo-2026-square.png"
-+        headerIconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
-         premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
-         premiumRewardBannerMiddle: "item_shockingly_good_milestone_name"
-         premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text_shockingly_good_2026"
-@@ -483316,7 +483231,7 @@
-       sku: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
-       sortOrder: 1
-       title: "season_pass_premium_track_plus_six_ranks_title_shockingly_good_2026"
--      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
++  template_id: "pgorelease.april1_2026_deluxe_event_pass_track_unlock"
++  data {
++    template_id: "pgorelease.april1_2026_deluxe_event_pass_track_unlock"
++    iapItemDisplay {
++      sku: "pgorelease.april1_2026_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      title: "season_pass_premium_track_title_shockingly_good_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-03-31T10:00:00"
++      skuDisableTime: "2026-04-08T20:00:00"
++      skuEnableTimeUtcMs: 1743415200000
++      skuDisableTimeUtcMs: 1775678400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-shockingly-good-time-2026-nologo.jpg"
++    }
++  }
++}
++template {
++  template_id: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
++  data {
++    template_id: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
++    iapItemDisplay {
++      sku: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      title: "season_pass_premium_track_plus_six_ranks_title_shockingly_good_2026"
 +      description: "event_pass_plus_points_6_ranks_description"
-       skuEnableTime: "2025-03-31T10:00:00"
-       skuDisableTime: "2026-04-08T20:00:00"
-       skuEnableTimeUtcMs: 1743415200000
-@@ -483325,12 +483240,12 @@
++      skuEnableTime: "2025-03-31T10:00:00"
++      skuDisableTime: "2026-04-08T20:00:00"
++      skuEnableTimeUtcMs: 1743415200000
++      skuDisableTimeUtcMs: 1775678400000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-shockingly-good-time-2026-nologo.jpg"
++    }
++  }
++}
++template {
+   template_id: "pgorelease.bundle.1"
+   data {
+     template_id: "pgorelease.bundle.1"
+@@ -475285,7 +478007,6 @@
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_fashionRaidDay26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -475306,7 +478027,6 @@
+       sku: "pgorelease.general2.ticket.9.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.9_fashionRaidDay26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -475318,42 +478038,6 @@
+   }
+ }
+ template {
+-  template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_02"
+-  data {
+-    template_id: "ITEM_EVENT_PASS_POINT_MONTHLY_02"
+-    itemSettings {
+-      itemId: ITEM_EVENT_PASS_POINT_MONTHLY_02
+-      itemType: ITEM_TYPE_EVENT_PASS_POINT
+-      category: ITEM_CATEGORY_EVENT_PASS_POINT
+-      ignoreInventorySpace: true
+-      itemCap: 999999
+-      eventPassPoint {
+-        eventPassId: "EVENT_PASS_APRIL2026_SEASON"
+-      }
+-      timePeriodCounters {
+-        playerActivity {
+-          limit: 300
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_EVENT_0175"
+-  data {
+-    template_id: "BADGE_EVENT_0175"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0175
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+   template_id: "pgorelease.month1_deluxe_event_pass_track_unlock"
+   data {
+     template_id: "pgorelease.month1_deluxe_event_pass_track_unlock"
+@@ -477219,6 +479903,21 @@
+   }
+ }
+ template {
++  template_id: "sequence_gigaton_hammer"
++  data {
++    template_id: "sequence_gigaton_hammer"
++    move_sequence_settings {
++      sequence: "anim attacker atk-move"
++      sequence: "wait 0.5"
++      sequence: "vfx gigaton_hammer"
++      sequence: "sfx attacker 587-0_gigaton_hammer"
++      sequence: "wait 1.0"
++      sequence: "sys ui-sync"
++      sequence: "sys complete"
++    }
++  }
++}
++template {
+   template_id: "sequence_glaciate"
+   data {
+     template_id: "sequence_glaciate"
+@@ -480731,2521 +483430,175 @@
+   }
+ }
+ template {
+-  template_id: "BADGE_EVENT_0189"
++  template_id: "APRIL2_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
+   data {
+-    template_id: "BADGE_EVENT_0189"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0189
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
++    template_id: "APRIL2_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++    iapItemDisplay {
++      sku: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_sustainabilityweek2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-04-14T10:00:00"
++      skuDisableTime: "2025-04-22T20:00:00"
++      skuEnableTimeUtcMs: 1744624800000
++      skuDisableTimeUtcMs: 1745352000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
      }
    }
  }
--batch_id: 1774939010699
-+batch_id: 1775003427703
+ template {
+-  template_id: "BADGE_EVENT_0194"
++  template_id: "APRIL2_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
+   data {
+-    template_id: "BADGE_EVENT_0194"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0194
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
++    template_id: "APRIL2_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++    iapItemDisplay {
++      sku: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_plus_six_ranks_title_sustainabilityweek2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
++      skuEnableTime: "2025-04-14T10:00:00"
++      skuDisableTime: "2025-04-22T20:00:00"
++      skuEnableTimeUtcMs: 1744624800000
++      skuDisableTimeUtcMs: 1745352000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
+     }
+   }
+ }
+ template {
+-  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_BB_2026"
++  template_id: "EXTENDED_V0222_POKEMON_CORSOLA_SPRING_2026"
+   data {
+-    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_BB_2026"
++    template_id: "EXTENDED_V0222_POKEMON_CORSOLA_SPRING_2026"
+     pokemonExtendedSettings {
+-      uniqueId: PIKACHU
+-      form: PIKACHU_BB_2026
++      uniqueId: CORSOLA
++      form: 3339
+       sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.7
++        xxsLowerBound: 0.2989
++        xsLowerBound: 0.305
++        mLowerBound: 0.4575
++        mUpperBound: 0.7625
++        xlUpperBound: 0.915
++        xxlUpperBound: 1.22
+       }
+     }
+   }
+ }
+ template {
+-  template_id: "ITEM_SOFT_SFIDA"
+-  data {
+-    template_id: "ITEM_SOFT_SFIDA"
+-    itemSettings {
+-      itemId: ITEM_SOFT_SFIDA
+-      itemType: ITEM_TYPE_SOFT_SFIDA
+-      category: ITEM_CATEGORY_UTILITES
+-      dropTrainerLevel: 99
+-      ignoreInventorySpace: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_001"
+-  data {
+-    template_id: "LC_2026_NPB_001"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_001
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_002"
+-  data {
+-    template_id: "LC_2026_NPB_002"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_002
+-      imageUrl: "lc_2026_NPB_yomiuriGiants"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_003"
+-  data {
+-    template_id: "LC_2026_NPB_003"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_003
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_004"
+-  data {
+-    template_id: "LC_2026_NPB_004"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_004
+-      imageUrl: "lc_2026_NPB_koshienHanshinTigers"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_005"
+-  data {
+-    template_id: "LC_2026_NPB_005"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_005
+-      imageUrl: "lc_2026_NPB_rakutenEagles"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_006"
+-  data {
+-    template_id: "LC_2026_NPB_006"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_006
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_007"
+-  data {
+-    template_id: "LC_2026_NPB_007"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_007
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_008"
+-  data {
+-    template_id: "LC_2026_NPB_008"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_008
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_009"
+-  data {
+-    template_id: "LC_2026_NPB_009"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_009
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_010"
+-  data {
+-    template_id: "LC_2026_NPB_010"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_010
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_011"
+-  data {
+-    template_id: "LC_2026_NPB_011"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_011
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_012"
+-  data {
+-    template_id: "LC_2026_NPB_012"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_012
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_2026_NPB_013"
+-  data {
+-    template_id: "LC_2026_NPB_013"
+-    locationCardSettings {
+-      locationCard: LC_2026_NPB_013
+-      imageUrl: "lc_2026_ppk_001"
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_SPECIALBACKGROUND_EXTRA_2025_02"
+-  data {
+-    template_id: "LC_SPECIALBACKGROUND_EXTRA_2025_02"
+-    locationCardSettings {
+-      locationCard: LC_SPECIALBACKGROUND_EXTRA_2025_02
+-      imageUrl: "lc_taipeiFlowerFestival_2026"
+-    }
+-  }
+-}
+-template {
+-  template_id: "SOFT_SFIDA_SETTINGS"
+-  data {
+-    template_id: "SOFT_SFIDA_SETTINGS"
+-    284 {
+-      6: 20
+-      7: 5000
+-      8: 10000
+-      9: 4
+-      10: 0x42480000
+-    }
+-  }
+-}
+-template {
+-  template_id: "SPAWN_V0025_POKEMON_PIKACHU_BB_2026"
++  template_id: "SPAWN_V0222_POKEMON_CORSOLA_SPRING_2026"
+   data {
+-    template_id: "SPAWN_V0025_POKEMON_PIKACHU_BB_2026"
++    template_id: "SPAWN_V0222_POKEMON_CORSOLA_SPRING_2026"
+     genderSettings {
+-      pokemon: PIKACHU
++      pokemon: CORSOLA
+       gender {
+-        malePercent: 0.5
+-        femalePercent: 0.5
++        malePercent: 0.25
++        femalePercent: 0.75
+       }
+-      form: PIKACHU_BB_2026
+     }
+   }
+ }
+ template {
+-  template_id: "V0025_POKEMON_PIKACHU_BB_2026"
++  template_id: "V0222_POKEMON_CORSOLA_SPRING_2026"
+   data {
+-    template_id: "V0025_POKEMON_PIKACHU_BB_2026"
++    template_id: "V0222_POKEMON_CORSOLA_SPRING_2026"
+     pokemonSettings {
+-      pokemonId: PIKACHU
+-      modelScale: 1.48
+-      type: POKEMON_TYPE_ELECTRIC
++      pokemonId: CORSOLA
++      modelScale: 1.25
++      type: POKEMON_TYPE_GHOST
+       camera {
+         diskRadiusM: 0.555
+         cylinderRadiusM: 0.37
+-        cylinderHeightM: 0.5
++        cylinderHeightM: 0.65
+         shoulderModeScale: 0.5
+       }
+       encounter {
+-        collisionRadiusM: 0.16
+-        collisionHeightM: 0.16
+-        collisionHeadRadiusM: 0.13
+-        movementType: MOVEMENT_JUMP
+-        movementTimerS: 10
++        collisionRadiusM: 0.25
++        collisionHeightM: 0.65
++        collisionHeadRadiusM: 0.1
++        movementTimerS: 11
+         jumpTimeS: 1
+-        attackTimerS: 29
++        attackTimerS: 20
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
+         dodgeDistance: 1
+-        cameraDistance: 2.775
++        cameraDistance: 2.9925
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+       stats {
+-        baseStamina: 111
+-        baseAttack: 112
+-        baseDefense: 96
++        baseStamina: 155
++        baseAttack: 116
++        baseDefense: 182
+       }
+-      quickMoves: THUNDER_SHOCK_FAST
+-      quickMoves: QUICK_ATTACK_FAST
+-      cinematicMoves: DISCHARGE
+-      cinematicMoves: THUNDERBOLT
+-      cinematicMoves: WILD_CHARGE
+-      animationTime: 1.8333
++      quickMoves: TACKLE_FAST
++      quickMoves: ASTONISH_FAST
++      cinematicMoves: ROCK_BLAST
++      cinematicMoves: POWER_GEM
++      cinematicMoves: NIGHT_SHADE
++      animationTime: 1.3333
+       animationTime: 0.6667
+-      animationTime: 1.6
+-      animationTime: 1.5667
++      animationTime: 1.6667
++      animationTime: 2
+       animationTime: 0
+-      animationTime: 1.8
+-      animationTime: 1.1333
+-      animationTime: 1.06666696
++      animationTime: 2
++      animationTime: 3
++      animationTime: 3
+       evolutionPips: 1
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 6
+-      parentPokemonId: PICHU
+-      heightStdDev: 0.05
+-      weightStdDev: 0.75
+-      familyId: FAMILY_PIKACHU
+-      kmBuddyDistance: 1
+-      buddy_size: BUDDY_SHOULDER
+-      modelHeight: 0.4
+-      modelScaleV2: 1.1
+-      form: PIKACHU_BB_2026
++      pokedexHeightM: 0.61
++      pokedexWeightKg: 0.5
++      heightStdDev: 0.07625
++      weightStdDev: 0.0625
++      familyId: FAMILY_CORSOLA
++      kmBuddyDistance: 3
++      modelHeight: 1.25
++      modelScaleV2: 1
++      form: 3339
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+       buddyOffsetFemale: 0
+-      buddyScale: 11
++      buddyScale: 19
+       third_move {
+-        stardustToUnlock: 10000
+-        candyToUnlock: 25
++        stardustToUnlock: 50000
++        candyToUnlock: 50
+       }
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
+-      buddyGroupNumber: 1
+-      disableTransferToPokemonHome: true
++      buddyGroupNumber: 2
+       ibfc {
+       }
+-      breadTierGroup: GROUP_1
+-    }
+-  }
+-}
+-template {
+-  template_id: "PREDICT_CHARGE_MOVE_ON_SUBMIT_ROLL_BACK_CODE_GATE"
+-  data {
+-    template_id: "PREDICT_CHARGE_MOVE_ON_SUBMIT_ROLL_BACK_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "COMBAT_V0494_MOVE_GIGATON_HAMMER"
+-  data {
+-    template_id: "COMBAT_V0494_MOVE_GIGATON_HAMMER"
+-    combat_move {
+-      uniqueId: GIGATON_HAMMER
+-      type: POKEMON_TYPE_STEEL
+-      power: 130
+-      vfxName: "gigaton_hammer"
+-      energyDelta: -60
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0494_MOVE_GIGATON_HAMMER"
+-  data {
+-    template_id: "V0494_MOVE_GIGATON_HAMMER"
+-    moveSettings {
+-      movementId: GIGATON_HAMMER
+-      animationId: 5
+-      pokemonType: POKEMON_TYPE_STEEL
+-      power: 300
+-      accuracyChance: 1
+-      staminaLossScalar: 0.01
+-      trainerLevelMin: 1
+-      trainerLevelMax: 100
+-      vfxName: "gigaton_hammer"
+-      durationMs: 3000
+-      damageWindowStartMs: 2000
+-      damageWindowEndMs: 3100
+-      energyDelta: -100
+-    }
+-  }
+-}
+-template {
+-  template_id: "sequence_gigaton_hammer"
+-  data {
+-    template_id: "sequence_gigaton_hammer"
+-    move_sequence_settings {
+-      sequence: "anim attacker atk-move"
+-      sequence: "wait 0.5"
+-      sequence: "vfx gigaton_hammer"
+-      sequence: "sfx attacker 587-0_gigaton_hammer"
+-      sequence: "wait 1.0"
+-      sequence: "sys ui-sync"
+-      sequence: "sys complete"
+-    }
+-  }
+-}
+-template {
+-  template_id: "BIDIRECTIONAL_FP_WEEKLY_CHALLENGE_REWARD_ROLL_BACK"
+-  data {
+-    template_id: "BIDIRECTIONAL_FP_WEEKLY_CHALLENGE_REWARD_ROLL_BACK"
+-    rollBack {
+-      rollbackPercentage: 100
+-    }
+-  }
+-}
+-template {
+-  template_id: "STORE_REFRESH_FEATURE_GATE"
+-  data {
+-    template_id: "STORE_REFRESH_FEATURE_GATE"
+-    featureGate {
+-      status: 87970808
+-      rolloutPercentage: 100
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT"
+-    eventPassSettings {
+-      prefix: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT"
+-      pointsItemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_06
+-      trackConditions {
+-        track: FREE
+-        trackTitleKey: "season_pass_base_track_title_shockingly_good_2026"
+-      }
+-      trackConditions {
+-        track: PREMIUM
+-        badge: BADGE_EVENT_0188
+-        trackTitleKey: "season_pass_premium_track_title_shockingly_good_2026"
+-      }
+-      expirationTime: "2026-04-06T20:00:00"
+-      maxTierLevel: 60
+-      additionalBonusTiersLevel: 31
+-      eventPassDisplaySettings {
+-        bonusBoxes {
+-          text: "quest_catch_pokemon_singular"
+-          iconType: SPAWN_UNKNOWN
+-          quantity: 5
+-        }
+-        bonusBoxes {
+-          text: "quest_hatch_egg_singular"
+-          iconType: EGG
+-          quantity: 40
+-        }
+-        bonusBoxes {
+-          text: "quest_win_raid_singular"
+-          iconType: RAID
+-          quantity: 100
+-        }
+-        eventPassTrackUpgradeDescriptions {
+-          passTrackUpgradeHeaderDescription: "season_pass_shockingly_good_2026_track_upgrade_header_description"
+-          eventPassTrackToUpgradeTo: PREMIUM
+-          trackUnlockSkuId: "pgorelease.april1_2026_deluxe_event_pass_track_unlock"
+-          trackUnlockPlusPointsSkuId: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
+-          eventDurationKey: "season_pass_shockingly_good_2026_event_duration"
+-          upgradeDescriptionKey: "season_pass_shockingly_good_2026_upgrade_description"
+-          ranksToHighlightRewards: 15
+-          ranksToHighlightRewards: 19
+-          ranksToHighlightRewards: 30
+-          detailsLinkKey: "season_pass_details_link_shockingly_good_2026"
+-          trackUnlockImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
+-          trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
+-        }
+-        eventPassTitleKey: "season_pass_base_track_title_shockingly_good_2026"
+-        headerIconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
+-        premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
+-        premiumRewardBannerMiddle: "item_shockingly_good_milestone_name"
+-        premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text_shockingly_good_2026"
+-        premiumRewardBannerImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
+-        premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
+-        todayViewSection: SEASONAL_EVENT_PASS_SECTION
+-        sectionDisplayPriority: 12
+-      }
+-      gracePeriodEndTime: "2026-04-08T20:00:00"
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_10_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_10_FREE"
+-    eventPassTierSettings {
+-      rank: 10
+-      track: FREE
+-      minPointsRequired: 900
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "shockinglygood2026_season_pass_rank_01"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_01"
+-        bonusBoxes {
+-          text: "incense_duration_double"
+-          iconType: INCENSE
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_10_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_10_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 10
+-      track: PREMIUM
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "shockinglygood2026_season_pass_rank_01_paid"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_01"
+-        bonusBoxes {
+-          text: "incense_duration_double"
+-          iconType: INCENSE
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_11_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_11_FREE"
+-    eventPassTierSettings {
+-      rank: 11
+-      track: FREE
+-      minPointsRequired: 1000
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_11_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_11_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 11
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_12_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_12_FREE"
+-    eventPassTierSettings {
+-      rank: 12
+-      track: FREE
+-      minPointsRequired: 1100
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: CHINCHOU
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_12_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_12_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 12
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: CHINCHOU
+-          pokemonDisplay {
+-            form: CHINCHOU_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_13_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_13_FREE"
+-    eventPassTierSettings {
+-      rank: 13
+-      track: FREE
+-      minPointsRequired: 1200
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: CHINCHOU
+-          pokemonDisplay {
+-            form: CHINCHOU_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_13_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_13_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 13
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: CHINCHOU
+-          pokemonDisplay {
+-            form: CHINCHOU_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_14_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_14_FREE"
+-    eventPassTierSettings {
+-      rank: 14
+-      track: FREE
+-      minPointsRequired: 1300
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_RAZZ_BERRY
+-          amount: 5
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_14_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_14_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 14
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_LUCKY_EGG
+-          amount: 2
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_15_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_15_FREE"
+-    eventPassTierSettings {
+-      rank: 15
+-      track: FREE
+-      minPointsRequired: 1400
+-      rewards {
+-        type: STARDUST
+-        stardust: 2500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_15_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_15_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 15
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_PAID_RAID_TICKET
+-          amount: 2
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_16_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_16_FREE"
+-    eventPassTierSettings {
+-      rank: 16
+-      track: FREE
+-      minPointsRequired: 1500
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: PAWMI
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_16_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_16_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 16
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: PAWMI
+-          pokemonDisplay {
+-            form: PAWMI_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_17_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_17_FREE"
+-    eventPassTierSettings {
+-      rank: 17
+-      track: FREE
+-      minPointsRequired: 1600
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: PAWMI
+-          pokemonDisplay {
+-            form: PAWMI_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_17_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_17_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 17
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: PAWMI
+-          pokemonDisplay {
+-            form: PAWMI_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_18_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_18_FREE"
+-    eventPassTierSettings {
+-      rank: 18
+-      track: FREE
+-      minPointsRequired: 1700
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: DEDENNE
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_18_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_18_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 18
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: DEDENNE
+-          pokemonDisplay {
+-            form: DEDENNE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_19_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_19_FREE"
+-    eventPassTierSettings {
+-      rank: 19
+-      track: FREE
+-      minPointsRequired: 1800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: DEDENNE
+-          pokemonDisplay {
+-            form: DEDENNE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_19_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_19_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 19
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: DEDENNE
+-          pokemonDisplay {
+-            form: DEDENNE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_1_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_1_FREE"
+-    eventPassTierSettings {
+-      rank: 1
+-      track: FREE
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 5000
+-      }
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "shockinglygood2026_season_pass_entitlement"
+-          durationMins: 131487
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_1_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_1_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 1
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_20_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_20_FREE"
+-    eventPassTierSettings {
+-      rank: 20
+-      track: FREE
+-      minPointsRequired: 2400
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "shockinglygood2026_season_pass_rank_02"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_02"
+-        bonusBoxes {
+-          text: "catch_candy_double"
+-          iconType: CANDY_GENERAL
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        bonusBoxes {
+-          text: "incense_duration_double"
+-          iconType: INCENSE
+-        }
+-        bonusBoxes {
+-          text: "catch_candy_double"
+-          iconType: CANDY_GENERAL
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_20_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_20_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 20
+-      track: PREMIUM
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "shockinglygood2026_season_pass_rank_02_paid"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_02"
+-        bonusBoxes {
+-          text: "catch_stardust_double"
+-          iconType: STARDUST
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        bonusBoxes {
+-          text: "incense_duration_double"
+-          iconType: INCENSE
+-        }
+-        bonusBoxes {
+-          text: "catch_stardust_double"
+-          iconType: STARDUST
+-        }
+-        bonusBoxes {
+-          text: "catch_candy_double"
+-          iconType: CANDY_GENERAL
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_21_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_21_FREE"
+-    eventPassTierSettings {
+-      rank: 21
+-      track: FREE
+-      minPointsRequired: 2000
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: JOLTIK
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_21_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_21_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 21
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: JOLTIK
+-          pokemonDisplay {
+-            form: JOLTIK_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_22_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_22_FREE"
+-    eventPassTierSettings {
+-      rank: 22
+-      track: FREE
+-      minPointsRequired: 2100
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: JOLTIK
+-          pokemonDisplay {
+-            form: JOLTIK_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_22_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_22_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 22
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: JOLTIK
+-          pokemonDisplay {
+-            form: JOLTIK_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_23_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_23_FREE"
+-    eventPassTierSettings {
+-      rank: 23
+-      track: FREE
+-      minPointsRequired: 2200
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_PINAP_BERRY
+-          amount: 5
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_23_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_23_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 23
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_STAR_PIECE
+-          amount: 2
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_24_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_24_FREE"
+-    eventPassTierSettings {
+-      rank: 24
+-      track: FREE
+-      minPointsRequired: 2300
+-      rewards {
+-        type: STARDUST
+-        stardust: 2500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_24_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_24_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 24
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_PAID_RAID_TICKET
+-          amount: 2
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_25_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_25_FREE"
+-    eventPassTierSettings {
+-      rank: 25
+-      track: FREE
+-      minPointsRequired: 2200
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GOLDEN_RAZZ_BERRY
+-          amount: 5
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_25_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_25_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 25
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GOLDEN_PINAP_BERRY
+-          amount: 2
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_26_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_26_FREE"
+-    eventPassTierSettings {
+-      rank: 26
+-      track: FREE
+-      minPointsRequired: 2500
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_RARE_CANDY
+-          amount: 2
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_26_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_26_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 26
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_XL_RARE_CANDY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_27_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_27_FREE"
+-    eventPassTierSettings {
+-      rank: 27
+-      track: FREE
+-      minPointsRequired: 2600
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_27_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_27_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 27
+-      track: PREMIUM
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 7500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_28_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_28_FREE"
+-    eventPassTierSettings {
+-      rank: 28
+-      track: FREE
+-      minPointsRequired: 2700
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: PIKACHU
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_28_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_28_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 28
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: PIKACHU
+-          pokemonDisplay {
+-            form: PIKACHU_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_29_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_29_FREE"
+-    eventPassTierSettings {
+-      rank: 29
+-      track: FREE
+-      minPointsRequired: 2800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: RAICHU
+-          pokemonDisplay {
+-            form: RAICHU_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_29_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_29_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 29
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: RAICHU
+-          pokemonDisplay {
+-            form: RAICHU_ALOLA
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_2_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_2_FREE"
+-    eventPassTierSettings {
+-      rank: 2
+-      track: FREE
+-      minPointsRequired: 100
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_POKE_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_2_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_2_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 2
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_POKE_BALL
+-          amount: 30
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_30_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_30_FREE"
+-    eventPassTierSettings {
+-      rank: 30
+-      track: FREE
+-      minPointsRequired: 2900
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: MIMIKYU
+-          pokemonDisplay {
+-            form: MIMIKYU_DISGUISED
+-          }
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_30_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_30_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 30
+-      track: PREMIUM
+-      rewards {
+-        type: AVATAR_CLOTHING
+-        neutralAvatarItemTemplate {
+-          itemTemplateId: "N_AVATAR_n_shirt_disguise-hoodon_0"
+-          displayTemplateId: "N_DISPLAY_n_shirt_disguise-hoodon_0"
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_31_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_31_FREE"
+-    eventPassTierSettings {
+-      rank: 31
+-      track: FREE
+-      minPointsRequired: 3000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_31_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_31_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 31
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_32_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_32_FREE"
+-    eventPassTierSettings {
+-      rank: 32
+-      track: FREE
+-      minPointsRequired: 3100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_32_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_32_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 32
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_33_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_33_FREE"
+-    eventPassTierSettings {
+-      rank: 33
+-      track: FREE
+-      minPointsRequired: 3200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_33_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_33_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 33
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_34_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_34_FREE"
+-    eventPassTierSettings {
+-      rank: 34
+-      track: FREE
+-      minPointsRequired: 3300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_34_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_34_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 34
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_35_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_35_FREE"
+-    eventPassTierSettings {
+-      rank: 35
+-      track: FREE
+-      minPointsRequired: 3400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_35_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_35_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 35
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_36_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_36_FREE"
+-    eventPassTierSettings {
+-      rank: 36
+-      track: FREE
+-      minPointsRequired: 3500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_36_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_36_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 36
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_37_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_37_FREE"
+-    eventPassTierSettings {
+-      rank: 37
+-      track: FREE
+-      minPointsRequired: 3600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_37_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_37_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 37
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_38_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_38_FREE"
+-    eventPassTierSettings {
+-      rank: 38
+-      track: FREE
+-      minPointsRequired: 3700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_38_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_38_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 38
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_39_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_39_FREE"
+-    eventPassTierSettings {
+-      rank: 39
+-      track: FREE
+-      minPointsRequired: 3800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_39_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_39_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 39
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_3_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_3_FREE"
+-    eventPassTierSettings {
+-      rank: 3
+-      track: FREE
+-      minPointsRequired: 200
+-      rewards {
+-        type: STARDUST
+-        stardust: 2500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_3_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_3_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 3
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_INCENSE_ORDINARY
+-          amount: 2
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_40_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_40_FREE"
+-    eventPassTierSettings {
+-      rank: 40
+-      track: FREE
+-      minPointsRequired: 3900
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_40_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_40_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 40
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_41_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_41_FREE"
+-    eventPassTierSettings {
+-      rank: 41
+-      track: FREE
+-      minPointsRequired: 4000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_41_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_41_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 41
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_42_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_42_FREE"
+-    eventPassTierSettings {
+-      rank: 42
+-      track: FREE
+-      minPointsRequired: 4100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_42_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_42_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 42
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_43_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_43_FREE"
+-    eventPassTierSettings {
+-      rank: 43
+-      track: FREE
+-      minPointsRequired: 4200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_43_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_43_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 43
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_44_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_44_FREE"
+-    eventPassTierSettings {
+-      rank: 44
+-      track: FREE
+-      minPointsRequired: 4300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_44_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_44_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 44
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_45_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_45_FREE"
+-    eventPassTierSettings {
+-      rank: 45
+-      track: FREE
+-      minPointsRequired: 4400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_45_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_45_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 45
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_46_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_46_FREE"
+-    eventPassTierSettings {
+-      rank: 46
+-      track: FREE
+-      minPointsRequired: 4500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_46_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_46_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 46
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_47_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_47_FREE"
+-    eventPassTierSettings {
+-      rank: 47
+-      track: FREE
+-      minPointsRequired: 4600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_47_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_47_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 47
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_48_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_48_FREE"
+-    eventPassTierSettings {
+-      rank: 48
+-      track: FREE
+-      minPointsRequired: 4700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_48_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_48_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 48
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_49_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_49_FREE"
+-    eventPassTierSettings {
+-      rank: 49
+-      track: FREE
+-      minPointsRequired: 4800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_49_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_49_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 49
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_4_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_4_FREE"
+-    eventPassTierSettings {
+-      rank: 4
+-      track: FREE
+-      minPointsRequired: 300
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: MAREEP
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_4_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_4_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 4
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: MAREEP
+-          pokemonDisplay {
+-            form: MAREEP_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_50_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_50_FREE"
+-    eventPassTierSettings {
+-      rank: 50
+-      track: FREE
+-      minPointsRequired: 4900
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_50_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_50_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 50
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_51_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_51_FREE"
+-    eventPassTierSettings {
+-      rank: 51
+-      track: FREE
+-      minPointsRequired: 5000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_51_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_51_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 51
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_52_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_52_FREE"
+-    eventPassTierSettings {
+-      rank: 52
+-      track: FREE
+-      minPointsRequired: 5100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_52_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_52_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 52
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_53_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_53_FREE"
+-    eventPassTierSettings {
+-      rank: 53
+-      track: FREE
+-      minPointsRequired: 5200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_53_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_53_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 53
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_54_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_54_FREE"
+-    eventPassTierSettings {
+-      rank: 54
+-      track: FREE
+-      minPointsRequired: 5300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_54_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_54_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 54
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_55_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_55_FREE"
+-    eventPassTierSettings {
+-      rank: 55
+-      track: FREE
+-      minPointsRequired: 5400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_55_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_55_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 55
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_56_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_56_FREE"
+-    eventPassTierSettings {
+-      rank: 56
+-      track: FREE
+-      minPointsRequired: 5500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_56_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_56_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 56
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_57_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_57_FREE"
+-    eventPassTierSettings {
+-      rank: 57
+-      track: FREE
+-      minPointsRequired: 5600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_57_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_57_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 57
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_58_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_58_FREE"
+-    eventPassTierSettings {
+-      rank: 58
+-      track: FREE
+-      minPointsRequired: 5700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_58_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_58_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 58
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_59_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_59_FREE"
+-    eventPassTierSettings {
+-      rank: 59
+-      track: FREE
+-      minPointsRequired: 5800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_59_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_59_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 59
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_5_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_5_FREE"
+-    eventPassTierSettings {
+-      rank: 5
+-      track: FREE
+-      minPointsRequired: 400
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: MAREEP
+-          pokemonDisplay {
+-            form: MAREEP_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_5_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_5_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 5
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: MAREEP
+-          pokemonDisplay {
+-            form: MAREEP_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_60_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_60_FREE"
+-    eventPassTierSettings {
+-      rank: 60
+-      track: FREE
+-      minPointsRequired: 5900
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: MIMIKYU
+-          pokemonDisplay {
+-            form: MIMIKYU_DISGUISED
+-          }
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_60_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_60_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 60
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: MIMIKYU
+-          pokemonDisplay {
+-            form: MIMIKYU_DISGUISED
+-          }
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_6_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_6_FREE"
+-    eventPassTierSettings {
+-      rank: 6
+-      track: FREE
+-      minPointsRequired: 500
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GREAT_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_6_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_6_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 6
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GREAT_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_7_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_7_FREE"
+-    eventPassTierSettings {
+-      rank: 7
+-      track: FREE
+-      minPointsRequired: 600
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_7_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_7_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 7
+-      track: PREMIUM
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 7500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_8_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_8_FREE"
+-    eventPassTierSettings {
+-      rank: 8
+-      track: FREE
+-      minPointsRequired: 700
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: MAGNEMITE
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_8_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_8_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 8
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: MAGNEMITE
+-          pokemonDisplay {
+-            form: MAGNEMITE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_9_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_9_FREE"
+-    eventPassTierSettings {
+-      rank: 9
+-      track: FREE
+-      minPointsRequired: 800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: MAGNEMITE
+-          pokemonDisplay {
+-            form: MAGNEMITE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_9_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SHOCKINGLYGOOD2026_EVENT_9_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 9
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: MAGNEMITE
+-          pokemonDisplay {
+-            form: MAGNEMITE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
++      breadTierGroup: GROUP_2
+     }
+   }
+ }
+ template {
+-  template_id: "pgorelease.april1_2026_deluxe_event_pass_track_unlock"
++  template_id: "pgorelease.april2_2026_deluxe_event_pass_track_redirect"
+   data {
+-    template_id: "pgorelease.april1_2026_deluxe_event_pass_track_unlock"
++    template_id: "pgorelease.april2_2026_deluxe_event_pass_track_redirect"
+     iapItemDisplay {
+-      sku: "pgorelease.april1_2026_deluxe_event_pass_track_unlock"
++      sku: "pgorelease.april2_2026_deluxe_event_pass_track_redirect"
+       sortOrder: 1
+-      title: "season_pass_premium_track_title_shockingly_good_2026"
++      hidden: true
++      title: "season_pass_premium_track_title_sustainabilityweek2026"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2025-03-31T10:00:00"
+-      skuDisableTime: "2026-04-08T20:00:00"
+-      skuEnableTimeUtcMs: 1743415200000
+-      skuDisableTimeUtcMs: 1775678400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-shockingly-good-time-2026-nologo.jpg"
+-    }
+-  }
+-}
+-template {
+-  template_id: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
+-  data {
+-    template_id: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
+-    iapItemDisplay {
+-      sku: "pgorelease.april1_2026_deluxe_event_pass_track_unlock_plus_points"
+-      sortOrder: 1
+-      title: "season_pass_premium_track_plus_six_ranks_title_shockingly_good_2026"
+-      description: "event_pass_plus_points_6_ranks_description"
+-      skuEnableTime: "2025-03-31T10:00:00"
+-      skuDisableTime: "2026-04-08T20:00:00"
+-      skuEnableTimeUtcMs: 1743415200000
+-      skuDisableTimeUtcMs: 1775678400000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-shockingly-good-time-2026-nologo.jpg"
++      skuEnableTime: "2025-04-14T10:00:00"
++      skuDisableTime: "2025-04-22T20:00:00"
++      skuEnableTimeUtcMs: 1744624800000
++      skuDisableTimeUtcMs: 1745352000000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
+     }
+   }
+ }
+-batch_id: 1775003427703
++batch_id: 1775091248036
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
  experiment_id: 170
--experiment_id: 175
-+experiment_id: 176
+ experiment_id: 176
++experiment_id: 194
  experiment_id: 300
  experiment_id: 320
  experiment_id: 351
-@@ -483354,18 +483269,18 @@
- experiment_id: 3063
- experiment_id: 3105
- experiment_id: 3106
--experiment_id: 3111
--experiment_id: 3123
-+experiment_id: 3112
-+experiment_id: 3124
- experiment_id: 3126
- experiment_id: 3132
+@@ -483276,7 +483629,10 @@
  experiment_id: 3195
  experiment_id: 3887
  experiment_id: 3890
-+experiment_id: 3898
++experiment_id: 3893
++experiment_id: 3896
+ experiment_id: 3898
++experiment_id: 3905
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
- experiment_id: 5163
--experiment_id: 5204
- experiment_id: 5501
- experiment_id: 5502
- experiment_id: 5506
-@@ -483387,7 +483302,6 @@
- experiment_id: 99998
+@@ -483303,6 +483659,7 @@
  experiment_id: 173173
  experiment_id: 250415
--experiment_id: 944031
  experiment_id: 1000890
++experiment_id: 1600000
  experiment_id: 3500035
  experiment_id: 3500037
+ experiment_id: 4610000
