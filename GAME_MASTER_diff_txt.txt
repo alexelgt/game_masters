@@ -1,5305 +1,759 @@
---- GAME_MASTER_old.txt	2026-04-14 18:41:56.391313139 +0200
-+++ GAME_MASTER.txt	2026-04-15 18:31:44.393962981 +0200
-@@ -35869,6 +35869,21 @@
-   }
- }
- template {
-+  template_id: "BADGE_EVENT_0280"
-+  data {
-+    template_id: "BADGE_EVENT_0280"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0280
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "BADGE_EVOLVED_TOTAL"
-   data {
-     template_id: "BADGE_EVOLVED_TOTAL"
-@@ -88993,6 +89008,2091 @@
-   }
- }
- template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT"
-+    eventPassSettings {
-+      prefix: "EVENT_PASS_SUSTAINABILITY2026_EVENT"
-+      pointsItemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_07
-+      trackConditions {
-+        track: FREE
-+        trackTitleKey: "season_pass_base_track_title_sustainabilityweek2026"
-+      }
-+      trackConditions {
-+        track: PREMIUM
-+        badge: BADGE_EVENT_0189
-+        trackTitleKey: "season_pass_premium_track_title_sustainabilityweek2026"
-+      }
-+      expirationTime: "2026-04-20T20:00:00"
-+      maxTierLevel: 60
-+      additionalBonusTiersLevel: 31
-+      eventPassDisplaySettings {
-+        bonusBoxes {
-+          text: "quest_catch_pokemon_singular"
-+          iconType: SPAWN_UNKNOWN
-+          quantity: 5
-+        }
-+        bonusBoxes {
-+          text: "quest_hatch_egg_singular"
-+          iconType: EGG
-+          quantity: 40
-+        }
-+        bonusBoxes {
-+          text: "quest_win_raid_singular"
-+          iconType: RAID
-+          quantity: 100
-+        }
-+        eventPassTrackUpgradeDescriptions {
-+          passTrackUpgradeHeaderDescription: "season_pass_sustainabilityweek2026_track_upgrade_header_description"
-+          eventPassTrackToUpgradeTo: PREMIUM
-+          trackUnlockSkuId: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
-+          trackUnlockPlusPointsSkuId: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
-+          eventDurationKey: "season_pass_sustainabilityweek2026_event_duration"
-+          upgradeDescriptionKey: "season_pass_sustainabilityweek2026_upgrade_description"
-+          ranksToHighlightRewards: 1
-+          ranksToHighlightRewards: 3
-+          ranksToHighlightRewards: 15
-+          detailsLinkKey: "season_pass_details_link_sustainabilityweek2026"
-+          trackUnlockImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
-+          trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
-+        }
-+        eventPassTitleKey: "season_pass_base_track_title_sustainabilityweek2026"
-+        headerIconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
-+        premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
-+        premiumRewardBannerMiddle: "sustainabilityweek2026_avatar_item"
-+        premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text_rank_15_reward"
-+        premiumRewardBannerImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
-+        premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
-+        todayViewSection: SEASONAL_EVENT_PASS_SECTION
-+        sectionDisplayPriority: 11
-+      }
-+      gracePeriodEndTime: "2026-04-22T20:00:00"
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_FREE"
-+    eventPassTierSettings {
-+      rank: 10
-+      track: FREE
-+      minPointsRequired: 900
-+      rewards {
-+        type: PLAYER_ATTRIBUTE
-+        playerAttribute {
-+          key: "sustainabilityweek2026_season_pass_rank_01"
-+          durationMins: 131487
-+        }
-+      }
-+      bonusSettings {
-+        eventName: "season_pass_milestone_bonus_title_01"
-+        bonusBoxes {
-+          text: "pokestop_spin_xp_double"
-+          iconType: XP
-+        }
-+      }
-+      activeBonusDisplaySettings {
-+        bonusBoxes {
-+          text: "pokestop_spin_xp_double"
-+          iconType: XP
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 10
-+      track: PREMIUM
-+      rewards {
-+        type: PLAYER_ATTRIBUTE
-+        playerAttribute {
-+          key: "sustainabilityweek2026_season_pass_rank_01_paid"
-+          durationMins: 131487
-+        }
-+      }
-+      bonusSettings {
-+        eventName: "season_pass_milestone_bonus_title_01"
-+        bonusBoxes {
-+          text: "pokestop_spin_xp_triple"
-+          iconType: XP
-+        }
-+      }
-+      activeBonusDisplaySettings {
-+        bonusBoxes {
-+          text: "pokestop_spin_xp_triple"
-+          iconType: XP
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_FREE"
-+    eventPassTierSettings {
-+      rank: 11
-+      track: FREE
-+      minPointsRequired: 1000
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_ULTRA_BALL
-+          amount: 10
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 11
-+      track: PREMIUM
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_ULTRA_BALL
-+          amount: 20
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_FREE"
-+    eventPassTierSettings {
-+      rank: 12
-+      track: FREE
-+      minPointsRequired: 1100
-+      rewards {
-+        type: CANDY
-+        candy {
-+          pokemonId: COMBEE
-+          amount: 10
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 12
-+      track: PREMIUM
-+      rewards {
-+        type: XL_CANDY
-+        xlCandy {
-+          pokemonId: COMBEE
-+          amount: 5
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_FREE"
-+    eventPassTierSettings {
-+      rank: 13
-+      track: FREE
-+      minPointsRequired: 1200
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: COMBEE
-+          pokemonDisplay {
-+            form: COMBEE_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 13
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: COMBEE
-+          pokemonDisplay {
-+            form: COMBEE_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_FREE"
-+    eventPassTierSettings {
-+      rank: 14
-+      track: FREE
-+      minPointsRequired: 1300
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_RAZZ_BERRY
-+          amount: 5
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 14
-+      track: PREMIUM
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_XL_RARE_CANDY
-+          amount: 1
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_FREE"
-+    eventPassTierSettings {
-+      rank: 15
-+      track: FREE
-+      minPointsRequired: 1400
-+      rewards {
-+        type: STARDUST
-+        stardust: 2500
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 15
-+      track: PREMIUM
-+      rewards {
-+        type: AVATAR_CLOTHING
-+        neutralAvatarItemTemplate {
-+          itemTemplateId: "N_AVATAR_n_pose_sustainability"
-+          displayTemplateId: "N_DISPLAY_n_pose_sustainability"
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_FREE"
-+    eventPassTierSettings {
-+      rank: 16
-+      track: FREE
-+      minPointsRequired: 1500
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: SHELLOS
-+          pokemonDisplay {
-+            form: SHELLOS_WEST_SEA
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 16
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: SHELLOS
-+          pokemonDisplay {
-+            form: SHELLOS_WEST_SEA
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_FREE"
-+    eventPassTierSettings {
-+      rank: 17
-+      track: FREE
-+      minPointsRequired: 1600
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: SHELLOS
-+          pokemonDisplay {
-+            form: SHELLOS_EAST_SEA
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 17
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: SHELLOS
-+          pokemonDisplay {
-+            form: SHELLOS_EAST_SEA
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_FREE"
-+    eventPassTierSettings {
-+      rank: 18
-+      track: FREE
-+      minPointsRequired: 1700
-+      rewards {
-+        type: CANDY
-+        candy {
-+          pokemonId: CORSOLA
-+          amount: 10
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 18
-+      track: PREMIUM
-+      rewards {
-+        type: XL_CANDY
-+        xlCandy {
-+          pokemonId: CORSOLA
-+          amount: 5
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_FREE"
-+    eventPassTierSettings {
-+      rank: 19
-+      track: FREE
-+      minPointsRequired: 1800
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: CORSOLA
-+          pokemonDisplay {
-+            form: 3339
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 19
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: CORSOLA
-+          pokemonDisplay {
-+            form: 3339
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_FREE"
-+    eventPassTierSettings {
-+      rank: 1
-+      track: FREE
-+      rewards {
-+        type: EXPERIENCE
-+        exp: 5000
-+      }
-+      rewards {
-+        type: PLAYER_ATTRIBUTE
-+        playerAttribute {
-+          key: "sustainability2026_season_pass_entitlement"
-+          durationMins: 131487
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 1
-+      track: PREMIUM
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_INCUBATOR_BASIC
-+          amount: 1
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_FREE"
-+    eventPassTierSettings {
-+      rank: 20
-+      track: FREE
-+      minPointsRequired: 1900
-+      rewards {
-+        type: PLAYER_ATTRIBUTE
-+        playerAttribute {
-+          key: "sustainabilityweek2026_season_pass_rank_02"
-+          durationMins: 131487
-+        }
-+      }
-+      bonusSettings {
-+        eventName: "season_pass_milestone_bonus_title_02"
-+        bonusBoxes {
-+          text: "incubator_distance_half"
-+          iconType: EGG_INCUBATOR
-+        }
-+      }
-+      activeBonusDisplaySettings {
-+        bonusBoxes {
-+          text: "pokestop_spin_xp_double"
-+          iconType: XP
-+        }
-+        bonusBoxes {
-+          text: "incubator_distance_half"
-+          iconType: EGG_INCUBATOR
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 20
-+      track: PREMIUM
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_FREE"
-+    eventPassTierSettings {
-+      rank: 21
-+      track: FREE
-+      minPointsRequired: 2000
-+      rewards {
-+        type: CANDY
-+        candy {
-+          pokemonId: CHERUBI
-+          amount: 10
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 21
-+      track: PREMIUM
-+      rewards {
-+        type: XL_CANDY
-+        xlCandy {
-+          pokemonId: CHERUBI
-+          amount: 5
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_FREE"
-+    eventPassTierSettings {
-+      rank: 22
-+      track: FREE
-+      minPointsRequired: 2100
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: CHERUBI
-+          pokemonDisplay {
-+            form: CHERUBI_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 22
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: CHERUBI
-+          pokemonDisplay {
-+            form: CHERUBI_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_FREE"
-+    eventPassTierSettings {
-+      rank: 23
-+      track: FREE
-+      minPointsRequired: 2200
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_PINAP_BERRY
-+          amount: 5
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 23
-+      track: PREMIUM
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_XL_RARE_CANDY
-+          amount: 1
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_FREE"
-+    eventPassTierSettings {
-+      rank: 24
-+      track: FREE
-+      minPointsRequired: 2300
-+      rewards {
-+        type: STARDUST
-+        stardust: 2500
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 24
-+      track: PREMIUM
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_INCENSE_ORDINARY
-+          amount: 1
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_FREE"
-+    eventPassTierSettings {
-+      rank: 25
-+      track: FREE
-+      minPointsRequired: 2400
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_GOLDEN_RAZZ_BERRY
-+          amount: 2
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 25
-+      track: PREMIUM
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_GOLDEN_PINAP_BERRY
-+          amount: 2
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_FREE"
-+    eventPassTierSettings {
-+      rank: 26
-+      track: FREE
-+      minPointsRequired: 2500
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_RARE_CANDY
-+          amount: 2
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 26
-+      track: PREMIUM
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_XL_RARE_CANDY
-+          amount: 1
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_FREE"
-+    eventPassTierSettings {
-+      rank: 27
-+      track: FREE
-+      minPointsRequired: 2600
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: TOGETIC
-+          pokemonDisplay {
-+            form: TOGETIC_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 27
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: TOGETIC
-+          pokemonDisplay {
-+            form: TOGETIC_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_FREE"
-+    eventPassTierSettings {
-+      rank: 28
-+      track: FREE
-+      minPointsRequired: 2700
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: TRUBBISH
-+          pokemonDisplay {
-+            form: TRUBBISH_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 28
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: TRUBBISH
-+          pokemonDisplay {
-+            form: TRUBBISH_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_FREE"
-+    eventPassTierSettings {
-+      rank: 29
-+      track: FREE
-+      minPointsRequired: 2800
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: LAPRAS
-+          pokemonDisplay {
-+            form: LAPRAS_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 29
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: LAPRAS
-+          pokemonDisplay {
-+            form: LAPRAS_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_FREE"
-+    eventPassTierSettings {
-+      rank: 2
-+      track: FREE
-+      minPointsRequired: 100
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_POKE_BALL
-+          amount: 10
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 2
-+      track: PREMIUM
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_POKE_BALL
-+          amount: 30
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_FREE"
-+    eventPassTierSettings {
-+      rank: 30
-+      track: FREE
-+      minPointsRequired: 2900
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: CORSOLA
-+          pokemonDisplay {
-+            form: 3339
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 30
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: CORSOLA
-+          pokemonDisplay {
-+            form: 3339
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_FREE"
-+    eventPassTierSettings {
-+      rank: 31
-+      track: FREE
-+      minPointsRequired: 3000
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 31
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_FREE"
-+    eventPassTierSettings {
-+      rank: 32
-+      track: FREE
-+      minPointsRequired: 3100
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 32
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_FREE"
-+    eventPassTierSettings {
-+      rank: 33
-+      track: FREE
-+      minPointsRequired: 3200
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 33
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_FREE"
-+    eventPassTierSettings {
-+      rank: 34
-+      track: FREE
-+      minPointsRequired: 3300
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 34
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_FREE"
-+    eventPassTierSettings {
-+      rank: 35
-+      track: FREE
-+      minPointsRequired: 3400
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 35
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_FREE"
-+    eventPassTierSettings {
-+      rank: 36
-+      track: FREE
-+      minPointsRequired: 3500
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 36
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_FREE"
-+    eventPassTierSettings {
-+      rank: 37
-+      track: FREE
-+      minPointsRequired: 3600
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 37
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_FREE"
-+    eventPassTierSettings {
-+      rank: 38
-+      track: FREE
-+      minPointsRequired: 3700
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 38
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_FREE"
-+    eventPassTierSettings {
-+      rank: 39
-+      track: FREE
-+      minPointsRequired: 3800
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 39
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_FREE"
-+    eventPassTierSettings {
-+      rank: 3
-+      track: FREE
-+      minPointsRequired: 200
-+      rewards {
-+        type: STARDUST
-+        stardust: 2500
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 3
-+      track: PREMIUM
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_INCENSE_ORDINARY
-+          amount: 1
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_FREE"
-+    eventPassTierSettings {
-+      rank: 40
-+      track: FREE
-+      minPointsRequired: 3900
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 40
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_FREE"
-+    eventPassTierSettings {
-+      rank: 41
-+      track: FREE
-+      minPointsRequired: 4000
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 41
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_FREE"
-+    eventPassTierSettings {
-+      rank: 42
-+      track: FREE
-+      minPointsRequired: 4100
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 42
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_FREE"
-+    eventPassTierSettings {
-+      rank: 43
-+      track: FREE
-+      minPointsRequired: 4200
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 43
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_FREE"
-+    eventPassTierSettings {
-+      rank: 44
-+      track: FREE
-+      minPointsRequired: 4300
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 44
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_FREE"
-+    eventPassTierSettings {
-+      rank: 45
-+      track: FREE
-+      minPointsRequired: 4400
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 45
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_FREE"
-+    eventPassTierSettings {
-+      rank: 46
-+      track: FREE
-+      minPointsRequired: 4500
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 46
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_FREE"
-+    eventPassTierSettings {
-+      rank: 47
-+      track: FREE
-+      minPointsRequired: 4600
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 47
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_FREE"
-+    eventPassTierSettings {
-+      rank: 48
-+      track: FREE
-+      minPointsRequired: 4700
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 48
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_FREE"
-+    eventPassTierSettings {
-+      rank: 49
-+      track: FREE
-+      minPointsRequired: 4800
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 49
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_FREE"
-+    eventPassTierSettings {
-+      rank: 4
-+      track: FREE
-+      minPointsRequired: 300
-+      rewards {
-+        type: CANDY
-+        candy {
-+          pokemonId: CASTFORM
-+          amount: 10
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 4
-+      track: PREMIUM
-+      rewards {
-+        type: XL_CANDY
-+        xlCandy {
-+          pokemonId: CASTFORM
-+          amount: 5
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_FREE"
-+    eventPassTierSettings {
-+      rank: 50
-+      track: FREE
-+      minPointsRequired: 4900
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 50
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_FREE"
-+    eventPassTierSettings {
-+      rank: 51
-+      track: FREE
-+      minPointsRequired: 5000
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 51
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_FREE"
-+    eventPassTierSettings {
-+      rank: 52
-+      track: FREE
-+      minPointsRequired: 5100
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 52
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_FREE"
-+    eventPassTierSettings {
-+      rank: 53
-+      track: FREE
-+      minPointsRequired: 5200
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 53
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_FREE"
-+    eventPassTierSettings {
-+      rank: 54
-+      track: FREE
-+      minPointsRequired: 5300
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 54
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_FREE"
-+    eventPassTierSettings {
-+      rank: 55
-+      track: FREE
-+      minPointsRequired: 5400
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 55
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_FREE"
-+    eventPassTierSettings {
-+      rank: 56
-+      track: FREE
-+      minPointsRequired: 5500
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 56
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_FREE"
-+    eventPassTierSettings {
-+      rank: 57
-+      track: FREE
-+      minPointsRequired: 5600
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 57
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_FREE"
-+    eventPassTierSettings {
-+      rank: 58
-+      track: FREE
-+      minPointsRequired: 5700
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 58
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_FREE"
-+    eventPassTierSettings {
-+      rank: 59
-+      track: FREE
-+      minPointsRequired: 5800
-+      rewards {
-+        type: STARDUST
-+        stardust: 50
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 59
-+      track: PREMIUM
-+      rewards {
-+        type: STARDUST
-+        stardust: 100
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_FREE"
-+    eventPassTierSettings {
-+      rank: 5
-+      track: FREE
-+      minPointsRequired: 400
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: CASTFORM
-+          pokemonDisplay {
-+            form: CASTFORM_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 5
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: CASTFORM
-+          pokemonDisplay {
-+            form: CASTFORM_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_FREE"
-+    eventPassTierSettings {
-+      rank: 60
-+      track: FREE
-+      minPointsRequired: 5900
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: CORSOLA
-+          pokemonDisplay {
-+            form: 3339
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 60
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: CORSOLA
-+          pokemonDisplay {
-+            form: 3339
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_FREE"
-+    eventPassTierSettings {
-+      rank: 6
-+      track: FREE
-+      minPointsRequired: 500
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_GREAT_BALL
-+          amount: 10
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 6
-+      track: PREMIUM
-+      rewards {
-+        type: ITEM
-+        item {
-+          item: ITEM_GREAT_BALL
-+          amount: 20
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_FREE"
-+    eventPassTierSettings {
-+      rank: 7
-+      track: FREE
-+      minPointsRequired: 600
-+      rewards {
-+        type: EXPERIENCE
-+        exp: 5000
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 7
-+      track: PREMIUM
-+      rewards {
-+        type: EXPERIENCE
-+        exp: 7500
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_FREE"
-+    eventPassTierSettings {
-+      rank: 8
-+      track: FREE
-+      minPointsRequired: 700
-+      rewards {
-+        type: CANDY
-+        candy {
-+          pokemonId: FOONGUS
-+          amount: 10
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 8
-+      track: PREMIUM
-+      rewards {
-+        type: XL_CANDY
-+        xlCandy {
-+          pokemonId: FOONGUS
-+          amount: 5
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_FREE"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_FREE"
-+    eventPassTierSettings {
-+      rank: 9
-+      track: FREE
-+      minPointsRequired: 800
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: FOONGUS
-+          pokemonDisplay {
-+            form: FOONGUS_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_PREMIUM"
-+  data {
-+    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_PREMIUM"
-+    eventPassTierSettings {
-+      rank: 9
-+      track: PREMIUM
-+      rewards {
-+        type: POKEMON_ENCOUNTER
-+        pokemonEncounter {
-+          pokemonId: FOONGUS
-+          pokemonDisplay {
-+            form: FOONGUS_NORMAL
-+          }
-+          isFeaturedPokemon: true
-+        }
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "EVENT_PASS_WINTERHOLIDAYS2025_SEASON_STORE_REDIRECT"
-   data {
-     template_id: "EVENT_PASS_WINTERHOLIDAYS2025_SEASON_STORE_REDIRECT"
-@@ -157176,6 +159276,15 @@
-   }
- }
- template {
-+  template_id: "IS_SKU_AVAILABLE_NO_APP_ID_CODE_GATE"
-+  data {
-+    template_id: "IS_SKU_AVAILABLE_NO_APP_ID_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+template {
-   template_id: "ITEM_BATTLE_PASS_TICKET"
-   data {
-     template_id: "ITEM_BATTLE_PASS_TICKET"
-@@ -158896,7 +161005,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 6
-       incense {
--        incenseLifetimeSeconds: 900
-+        incenseLifetimeSeconds: 1800
-         spawnTableProbability: 0.25
-       }
+--- GAME_MASTER_old.txt	2026-04-15 18:31:44.393962981 +0200
++++ GAME_MASTER.txt	2026-04-16 19:03:01.658266293 +0200
+@@ -159603,14 +159603,13 @@
        ignoreInventorySpace: true
-@@ -161780,7 +163889,7 @@
-     template_id: "LC_2026_NPB_006"
-     locationCardSettings {
-       locationCard: LC_2026_NPB_006
--      imageUrl: "lc_2026_ppk_001"
-+      imageUrl: "lc_2026_NPB_hiroshimaCarp"
+       itemCap: 999999
+       eventPassPoint {
+-        eventPassId: "EVENT_PASS_30ANNIV2026_EVENT"
++        eventPassId: "EVENT_PASS_STEELEDRESOLVE2026_EVENT"
+       }
+       timePeriodCounters {
+         playerActivity {
+           limit: 300
+         }
+       }
+-      hideItemInInventory: true
      }
    }
  }
-@@ -161800,7 +163909,7 @@
-     template_id: "LC_2026_NPB_008"
-     locationCardSettings {
-       locationCard: LC_2026_NPB_008
--      imageUrl: "lc_2026_ppk_001"
-+      imageUrl: "lc_2026_NPB_softbankHawks"
+@@ -160615,8 +160614,8 @@
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_04"
+     itemExpirationSettings {
+       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_04
+-      expirationTime: "2026-03-17T10:00:00"
+-      emergencyExpirationTime: "2026-03-17T20:00:00"
++      expirationTime: "2026-05-08T20:00:00"
++      emergencyExpirationTime: "2026-05-09T10:00:00"
      }
    }
  }
-@@ -161810,7 +163919,7 @@
-     template_id: "LC_2026_NPB_009"
-     locationCardSettings {
-       locationCard: LC_2026_NPB_009
--      imageUrl: "lc_2026_ppk_001"
-+      imageUrl: "lc_2026_NPB_kyocera"
+@@ -398140,6 +398139,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 3
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 205
+@@ -398184,6 +398186,12 @@
+       }
+       isTransferable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 20000
++        purificationCandyNeeded: 20
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 7
+       ibfc {
+       }
+@@ -398223,6 +398231,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 3
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 205
+@@ -398268,6 +398279,12 @@
+       }
+       isTransferable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 20000
++        purificationCandyNeeded: 20
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 7
+       useIrisFlyingPlacement: true
+       ibfc {
+@@ -398308,6 +398325,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 3
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 205
+@@ -398353,6 +398373,12 @@
+       }
+       isTransferable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 20000
++        purificationCandyNeeded: 20
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 7
+       eliteCinematicMove: SANDSEAR_STORM
+       ibfc {
+@@ -413540,6 +413566,9 @@
+         cameraDistance: 2.5
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.3
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 127
+@@ -413569,6 +413598,7 @@
+         evolution: HELIOLISK
+         evolutionItemRequirement: ITEM_SUN_STONE
+         candyCost: 50
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1
+       third_move {
+@@ -413578,6 +413608,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -413610,6 +413646,9 @@
+         cameraDistance: 2.5
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.3
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 127
+@@ -413640,6 +413679,7 @@
+         evolutionItemRequirement: ITEM_SUN_STONE
+         candyCost: 50
+         form: HELIOLISK_NORMAL
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1
+       form: HELIOPTILE_NORMAL
+@@ -413650,6 +413690,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -413685,6 +413731,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.125
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 158
+@@ -413728,6 +413777,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -413763,6 +413818,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.125
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 158
+@@ -413807,6 +413865,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -424908,6 +424972,9 @@
+         cameraDistance: 2
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.3
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 116
+@@ -424929,6 +424996,7 @@
+       evolutionBranch {
+         evolution: ARAQUANID
+         candyCost: 50
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1.2
+       buddyOffsetMale: 0
+@@ -424948,6 +425016,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 1
+       raidBossDistanceOffset: 3
+       ibfc {
+@@ -424981,6 +425055,9 @@
+         cameraDistance: 2
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.3
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 116
+@@ -425003,6 +425080,7 @@
+         evolution: ARAQUANID
+         candyCost: 50
+         form: ARAQUANID_NORMAL
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1.2
+       form: DEWPIDER_NORMAL
+@@ -425023,6 +425101,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 1
+       raidBossDistanceOffset: 3
+       ibfc {
+@@ -425059,6 +425143,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.125
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 169
+@@ -425098,6 +425185,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       raidBossDistanceOffset: 8
+       ibfc {
+@@ -425134,6 +425227,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.125
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 169
+@@ -425174,6 +425270,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       raidBossDistanceOffset: 8
+       ibfc {
+@@ -425559,6 +425661,9 @@
+         cameraDistance: 2
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.3
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 120
+@@ -425578,6 +425683,7 @@
+       evolutionBranch {
+         evolution: SHIINOTIC
+         candyCost: 50
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1.1
+       buddyOffsetMale: 0
+@@ -425597,6 +425703,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -425630,6 +425742,9 @@
+         cameraDistance: 2
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.3
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 120
+@@ -425650,6 +425765,7 @@
+         evolution: SHIINOTIC
+         candyCost: 50
+         form: SHIINOTIC_NORMAL
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1.1
+       form: MORELULL_NORMAL
+@@ -425670,6 +425786,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -425704,6 +425826,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.125
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 155
+@@ -425740,6 +425865,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       raidBossDistanceOffset: 3
+       ibfc {
+@@ -425775,6 +425906,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.125
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 155
+@@ -425812,6 +425946,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       raidBossDistanceOffset: 3
+       ibfc {
+@@ -426159,6 +426299,9 @@
+         cameraDistance: 4
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.7
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 172
+@@ -426180,6 +426323,7 @@
+       evolutionBranch {
+         evolution: BEWEAR
+         candyCost: 400
++        candyCostPurified: 360
+       }
+       modelScaleV2: 1
+       buddyOffsetMale: 0
+@@ -426214,6 +426358,12 @@
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -426245,6 +426395,9 @@
+         cameraDistance: 4
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.7
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 172
+@@ -426267,6 +426420,7 @@
+         evolution: BEWEAR
+         candyCost: 400
+         form: BEWEAR_NORMAL
++        candyCostPurified: 360
+       }
+       modelScaleV2: 1
+       form: STUFFUL_NORMAL
+@@ -426302,6 +426456,12 @@
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -426337,6 +426497,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.1
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 260
+@@ -426391,6 +426554,12 @@
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       eliteCinematicMove: DRAIN_PUNCH
+       ibfc {
+@@ -426427,6 +426596,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.1
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 260
+@@ -426482,6 +426654,12 @@
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       eliteCinematicMove: DRAIN_PUNCH
+       ibfc {
+@@ -426518,6 +426696,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.1
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 260
+@@ -426573,6 +426754,12 @@
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       eliteCinematicMove: DRAIN_PUNCH
+       ibfc {
+@@ -460143,12 +460330,18 @@
+       pokemonId: ORTHWORM
+       type: POKEMON_TYPE_STEEL
+       camera {
++        cylinderRadiusM: 1.28
++        cylinderHeightM: 1.09
+       }
+       encounter {
++        collisionRadiusM: 0.24
++        collisionHeightM: 0.26
++        collisionHeadRadiusM: 0.28
+         jumpTimeS: 1
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 4.6
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+@@ -460168,13 +460361,43 @@
+       weightStdDev: 38.75
+       familyId: FAMILY_ORTHWORM
+       kmBuddyDistance: 5
++      modelHeight: 2.31
++      modelScaleV2: 1.28
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 15
++      buddyPortraitOffset: -50
++      buddyPortraitOffset: 100
++      buddyPortraitOffset: -560
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+       }
+       isTransferable: true
+       isDeployable: true
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
+       isTradable: true
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -460189,12 +460412,18 @@
+       pokemonId: ORTHWORM
+       type: POKEMON_TYPE_STEEL
+       camera {
++        cylinderRadiusM: 1.28
++        cylinderHeightM: 1.09
+       }
+       encounter {
++        collisionRadiusM: 0.24
++        collisionHeightM: 0.26
++        collisionHeadRadiusM: 0.28
+         jumpTimeS: 1
+         attackProbability: 0.1
+         dodgeProbability: 0.15
+         dodgeDurationS: 1
++        cameraDistance: 4.6
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+       }
+@@ -460214,14 +460443,44 @@
+       weightStdDev: 38.75
+       familyId: FAMILY_ORTHWORM
+       kmBuddyDistance: 5
++      modelHeight: 2.31
++      modelScaleV2: 1.28
+       form: ORTHWORM_NORMAL
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 15
++      buddyPortraitOffset: -50
++      buddyPortraitOffset: 100
++      buddyPortraitOffset: -560
+       third_move {
+         stardustToUnlock: 75000
+         candyToUnlock: 75
+       }
+       isTransferable: true
+       isDeployable: true
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
++      combatShoulderCameraAngle: 0
+       isTradable: true
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatDefaultCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatOpponentFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerFocusCameraAngle: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
++      combatPlayerPokemonPositionOffset: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
++      buddyPortraitRotation: 0
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
+@@ -460846,6 +461105,7 @@
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
++      97: 1
      }
    }
  }
-@@ -161820,7 +163929,7 @@
-     template_id: "LC_2026_NPB_010"
-     locationCardSettings {
-       locationCard: LC_2026_NPB_010
--      imageUrl: "lc_2026_ppk_001"
-+      imageUrl: "lc_2026_NPB_belluna"
+@@ -460908,6 +461168,7 @@
+       ibfc {
+       }
+       breadTierGroup: GROUP_3
++      97: 1
      }
    }
  }
-@@ -161830,7 +163939,7 @@
-     template_id: "LC_2026_NPB_011"
-     locationCardSettings {
-       locationCard: LC_2026_NPB_011
--      imageUrl: "lc_2026_ppk_001"
-+      imageUrl: "lc_2026_NPB_zozoMarine"
+@@ -476028,7 +476289,6 @@
+       sku: "general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_Riolu0426_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -476049,7 +476309,6 @@
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_Riolu0426_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -477915,7 +478174,6 @@
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_Riolu0426_title"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -477936,7 +478194,6 @@
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_Riolu0426_title"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -483739,12 +483996,13 @@
      }
    }
  }
-@@ -172731,6 +174840,16 @@
-   }
- }
- template {
-+  template_id: "N_DISPLAY_n_hat_mlb-padres_0"
-+  data {
-+    template_id: "N_DISPLAY_n_hat_mlb-padres_0"
-+    avatarItemDisplay {
-+      iconAddress: "n_hat_mlb-padres_0_icon"
-+      displayStringId: "avatar_hat_mlbpadres"
-+    }
-+  }
-+}
-+template {
-   template_id: "N_DISPLAY_n_hat_mlb-rangers_0"
-   data {
-     template_id: "N_DISPLAY_n_hat_mlb-rangers_0"
-@@ -225026,6 +227145,15 @@
-   }
- }
- template {
-+  template_id: "STAMP_COLLECTION_SNAPSHOT_ENABLED_CODE_GATE"
-+  data {
-+    template_id: "STAMP_COLLECTION_SNAPSHOT_ENABLED_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+template {
-   template_id: "STATIONED_POKEMON_POWER_BOOST_TABLE_SETTINGS"
-   data {
-     template_id: "STATIONED_POKEMON_POWER_BOOST_TABLE_SETTINGS"
-@@ -242277,6 +244405,15 @@
-   }
- }
- template {
-+  template_id: "USE_GMT_SKU_DATA_CODE_GATE"
-+  data {
-+    template_id: "USE_GMT_SKU_DATA_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+template {
-   template_id: "V0001_FAMILY_BULBASAUR"
-   data {
-     template_id: "V0001_FAMILY_BULBASAUR"
-@@ -466713,8 +468850,8 @@
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_SPRING_GREAT"
-     }
-   }
- }
-@@ -466727,31 +468864,31 @@
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-     }
-@@ -466766,31 +468903,31 @@
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -466806,7 +468943,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 530
-+          count: 2120
-         }
-       }
-       reward {
-@@ -466824,7 +468961,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-     }
-@@ -466839,7 +468976,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-       reward {
-@@ -466857,7 +468994,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2120
-+          count: 8480
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -466873,7 +469010,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 530
-+          count: 2120
-         }
-       }
-       reward {
-@@ -466891,7 +469028,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-     }
-@@ -466906,7 +469043,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-       reward {
-@@ -466924,7 +469061,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2120
-+          count: 8480
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -466940,7 +469077,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 570
-+          count: 2280
-         }
-       }
-       reward {
-@@ -466958,7 +469095,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1140
-+          count: 4560
-         }
-       }
-     }
-@@ -466973,7 +469110,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1140
-+          count: 4560
-         }
-       }
-       reward {
-@@ -466991,7 +469128,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2280
-+          count: 9120
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467007,7 +469144,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 600
-+          count: 2400
-         }
-       }
-       reward {
-@@ -467025,7 +469162,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 4800
-         }
-       }
-     }
-@@ -467040,7 +469177,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 4800
-         }
-       }
-       reward {
-@@ -467058,7 +469195,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2400
-+          count: 9600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467153,7 +469290,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 700
-+          count: 2800
-         }
-       }
-       reward {
-@@ -467171,7 +469308,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1400
-+          count: 5600
-         }
-       }
-     }
-@@ -467186,7 +469323,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1400
-+          count: 5600
-         }
-       }
-       reward {
-@@ -467204,7 +469341,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2800
-+          count: 11200
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467220,7 +469357,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 730
-+          count: 2920
-         }
-       }
-       reward {
-@@ -467238,7 +469375,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1460
-+          count: 5840
-         }
-       }
-     }
-@@ -467253,7 +469390,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1460
-+          count: 5840
-         }
-       }
-       reward {
-@@ -467271,7 +469408,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2920
-+          count: 11680
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467287,7 +469424,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 770
-+          count: 3080
-         }
-       }
-       reward {
-@@ -467305,7 +469442,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1540
-+          count: 6160
-         }
-       }
-     }
-@@ -467320,7 +469457,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1540
-+          count: 6160
-         }
-       }
-       reward {
-@@ -467338,7 +469475,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3080
-+          count: 12320
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467403,7 +469540,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 300
-+          count: 1200
-         }
-       }
-       reward {
-@@ -467421,7 +469558,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 600
-+          count: 2400
-         }
-       }
-     }
-@@ -467436,7 +469573,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 600
-+          count: 2400
-         }
-       }
-       reward {
-@@ -467454,7 +469591,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 4800
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467470,7 +469607,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 870
-+          count: 3480
-         }
-       }
-       reward {
-@@ -467488,7 +469625,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1740
-+          count: 6960
-         }
-       }
-     }
-@@ -467503,7 +469640,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1740
-+          count: 6960
-         }
-       }
-       reward {
-@@ -467521,7 +469658,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3480
-+          count: 13920
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467537,7 +469674,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -467555,7 +469692,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -467570,7 +469707,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -467588,7 +469725,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467604,7 +469741,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -467622,7 +469759,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -467637,7 +469774,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -467655,7 +469792,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467671,7 +469808,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -467689,7 +469826,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -467704,7 +469841,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -467722,7 +469859,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467738,7 +469875,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -467756,7 +469893,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -467771,7 +469908,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -467789,7 +469926,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467805,7 +469942,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 330
-+          count: 1320
-         }
-       }
-       reward {
-@@ -467823,7 +469960,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-     }
-@@ -467838,7 +469975,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-       reward {
-@@ -467856,7 +469993,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1320
-+          count: 5280
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467872,7 +470009,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 330
-+          count: 1320
-         }
-       }
-       reward {
-@@ -467890,7 +470027,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-     }
-@@ -467905,7 +470042,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-       reward {
-@@ -467923,7 +470060,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1320
-+          count: 5280
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -467939,7 +470076,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 370
-+          count: 1480
-         }
-       }
-       reward {
-@@ -467957,7 +470094,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 740
-+          count: 2960
-         }
-       }
-     }
-@@ -467972,7 +470109,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 740
-+          count: 2960
-         }
-       }
-       reward {
-@@ -467990,7 +470127,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1480
-+          count: 5920
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -468055,7 +470192,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 400
-+          count: 1600
-         }
-       }
-       reward {
-@@ -468073,7 +470210,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 800
-+          count: 3200
-         }
-       }
-     }
-@@ -468088,7 +470225,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 800
-+          count: 3200
-         }
-       }
-       reward {
-@@ -468106,7 +470243,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1600
-+          count: 6400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -468122,7 +470259,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 430
-+          count: 1720
-         }
-       }
-       reward {
-@@ -468140,7 +470277,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-     }
-@@ -468155,7 +470292,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-       reward {
-@@ -468173,7 +470310,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1720
-+          count: 6880
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -468189,7 +470326,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 430
-+          count: 1720
-         }
-       }
-       reward {
-@@ -468207,7 +470344,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-     }
-@@ -468222,7 +470359,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-       reward {
-@@ -468240,7 +470377,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1720
-+          count: 6880
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -468256,7 +470393,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 470
-+          count: 1880
-         }
-       }
-       reward {
-@@ -468274,7 +470411,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 940
-+          count: 3760
-         }
-       }
-     }
-@@ -468289,7 +470426,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 940
-+          count: 3760
-         }
-       }
-       reward {
-@@ -468307,7 +470444,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1880
-+          count: 7520
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -468967,9 +471104,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: KYOGRE
-+          pokemonId: GROUDON
-           pokemonDisplay {
--            form: KYOGRE_NORMAL
-+            form: GROUDON_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -469648,9 +471785,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: KYOGRE
-+          pokemonId: GROUDON
-           pokemonDisplay {
--            form: KYOGRE_NORMAL
-+            form: GROUDON_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -474703,6 +476840,40 @@
-   }
- }
- template {
-+  template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
-+  data {
-+    template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
-+    iapItemDisplay {
-+      sku: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
-+      sortOrder: 1
-+      title: "season_pass_premium_track_title_sustainabilityweek2026"
-+      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-+      skuEnableTime: "2025-04-14T10:00:00"
-+      skuDisableTime: "2026-04-22T20:00:00"
-+      skuEnableTimeUtcMs: 1744624800000
-+      skuDisableTimeUtcMs: 1776888000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
-+    }
-+  }
-+}
-+template {
-+  template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
-+  data {
-+    template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
-+    iapItemDisplay {
-+      sku: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
-+      sortOrder: 1
-+      title: "season_pass_premium_track_plus_six_ranks_title_sustainabilityweek2026"
-+      description: "event_pass_plus_points_6_ranks_description"
-+      skuEnableTime: "2025-04-14T10:00:00"
-+      skuDisableTime: "2026-04-22T20:00:00"
-+      skuEnableTimeUtcMs: 1744624800000
-+      skuDisableTimeUtcMs: 1776888000000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
-+    }
-+  }
-+}
-+template {
-   template_id: "pgorelease.bundle.1"
-   data {
-     template_id: "pgorelease.bundle.1"
-@@ -481568,2168 +483739,12 @@
-     }
-   }
- }
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT"
--    eventPassSettings {
--      prefix: "EVENT_PASS_SUSTAINABILITY2026_EVENT"
--      pointsItemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_07
--      trackConditions {
--        track: FREE
--        trackTitleKey: "season_pass_base_track_title_sustainabilityweek2026"
--      }
--      trackConditions {
--        track: PREMIUM
--        badge: BADGE_EVENT_0189
--        trackTitleKey: "season_pass_premium_track_title_sustainabilityweek2026"
--      }
--      expirationTime: "2026-04-20T20:00:00"
--      maxTierLevel: 60
--      additionalBonusTiersLevel: 31
--      eventPassDisplaySettings {
--        bonusBoxes {
--          text: "quest_catch_pokemon_singular"
--          iconType: SPAWN_UNKNOWN
--          quantity: 5
--        }
--        bonusBoxes {
--          text: "quest_hatch_egg_singular"
--          iconType: EGG
--          quantity: 40
--        }
--        bonusBoxes {
--          text: "quest_win_raid_singular"
--          iconType: RAID
--          quantity: 100
--        }
--        eventPassTrackUpgradeDescriptions {
--          passTrackUpgradeHeaderDescription: "season_pass_sustainabilityweek2026_track_upgrade_header_description"
--          eventPassTrackToUpgradeTo: PREMIUM
--          trackUnlockSkuId: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
--          trackUnlockPlusPointsSkuId: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
--          eventDurationKey: "season_pass_sustainabilityweek2026_event_duration"
--          upgradeDescriptionKey: "season_pass_sustainabilityweek2026_upgrade_description"
--          ranksToHighlightRewards: 1
--          ranksToHighlightRewards: 3
--          ranksToHighlightRewards: 15
--          detailsLinkKey: "season_pass_details_link_sustainabilityweek2026"
--          trackUnlockImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
--          trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
--        }
--        eventPassTitleKey: "season_pass_base_track_title_sustainabilityweek2026"
--        headerIconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
--        premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
--        premiumRewardBannerMiddle: "sustainabilityweek2026_avatar_item"
--        premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text_rank_15_reward"
--        premiumRewardBannerImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FS22_MemoriesInMotion_Logo.png"
--        premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
--        todayViewSection: SEASONAL_EVENT_PASS_SECTION
--        sectionDisplayPriority: 11
--      }
--      gracePeriodEndTime: "2026-04-22T20:00:00"
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_FREE"
--    eventPassTierSettings {
--      rank: 10
--      track: FREE
--      minPointsRequired: 900
--      rewards {
--        type: PLAYER_ATTRIBUTE
--        playerAttribute {
--          key: "sustainabilityweek2026_season_pass_rank_01"
--          durationMins: 131487
--        }
--      }
--      bonusSettings {
--        eventName: "season_pass_milestone_bonus_title_01"
--        bonusBoxes {
--          text: "pokestop_spin_xp_double"
--          iconType: XP
--        }
--      }
--      activeBonusDisplaySettings {
--        bonusBoxes {
--          text: "pokestop_spin_xp_double"
--          iconType: XP
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_10_PREMIUM"
--    eventPassTierSettings {
--      rank: 10
--      track: PREMIUM
--      rewards {
--        type: PLAYER_ATTRIBUTE
--        playerAttribute {
--          key: "sustainabilityweek2026_season_pass_rank_01_paid"
--          durationMins: 131487
--        }
--      }
--      bonusSettings {
--        eventName: "season_pass_milestone_bonus_title_01"
--        bonusBoxes {
--          text: "pokestop_spin_xp_triple"
--          iconType: XP
--        }
--      }
--      activeBonusDisplaySettings {
--        bonusBoxes {
--          text: "pokestop_spin_xp_triple"
--          iconType: XP
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_FREE"
--    eventPassTierSettings {
--      rank: 11
--      track: FREE
--      minPointsRequired: 1000
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_ULTRA_BALL
--          amount: 10
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_11_PREMIUM"
--    eventPassTierSettings {
--      rank: 11
--      track: PREMIUM
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_ULTRA_BALL
--          amount: 20
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_FREE"
--    eventPassTierSettings {
--      rank: 12
--      track: FREE
--      minPointsRequired: 1100
--      rewards {
--        type: CANDY
--        candy {
--          pokemonId: COMBEE
--          amount: 10
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_12_PREMIUM"
--    eventPassTierSettings {
--      rank: 12
--      track: PREMIUM
--      rewards {
--        type: XL_CANDY
--        xlCandy {
--          pokemonId: COMBEE
--          amount: 5
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_FREE"
--    eventPassTierSettings {
--      rank: 13
--      track: FREE
--      minPointsRequired: 1200
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: COMBEE
--          pokemonDisplay {
--            form: COMBEE_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_13_PREMIUM"
--    eventPassTierSettings {
--      rank: 13
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: COMBEE
--          pokemonDisplay {
--            form: COMBEE_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_FREE"
--    eventPassTierSettings {
--      rank: 14
--      track: FREE
--      minPointsRequired: 1300
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_RAZZ_BERRY
--          amount: 5
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_14_PREMIUM"
--    eventPassTierSettings {
--      rank: 14
--      track: PREMIUM
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_XL_RARE_CANDY
--          amount: 1
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_FREE"
--    eventPassTierSettings {
--      rank: 15
--      track: FREE
--      minPointsRequired: 1400
--      rewards {
--        type: STARDUST
--        stardust: 2500
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_15_PREMIUM"
--    eventPassTierSettings {
--      rank: 15
--      track: PREMIUM
--      rewards {
--        type: AVATAR_CLOTHING
--        neutralAvatarItemTemplate {
--          itemTemplateId: "N_AVATAR_n_pose_sustainability"
--          displayTemplateId: "N_DISPLAY_n_pose_sustainability"
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_FREE"
--    eventPassTierSettings {
--      rank: 16
--      track: FREE
--      minPointsRequired: 1500
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: SHELLOS
--          pokemonDisplay {
--            form: SHELLOS_WEST_SEA
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_16_PREMIUM"
--    eventPassTierSettings {
--      rank: 16
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: SHELLOS
--          pokemonDisplay {
--            form: SHELLOS_WEST_SEA
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_FREE"
--    eventPassTierSettings {
--      rank: 17
--      track: FREE
--      minPointsRequired: 1600
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: SHELLOS
--          pokemonDisplay {
--            form: SHELLOS_EAST_SEA
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_17_PREMIUM"
--    eventPassTierSettings {
--      rank: 17
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: SHELLOS
--          pokemonDisplay {
--            form: SHELLOS_EAST_SEA
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_FREE"
--    eventPassTierSettings {
--      rank: 18
--      track: FREE
--      minPointsRequired: 1700
--      rewards {
--        type: CANDY
--        candy {
--          pokemonId: CORSOLA
--          amount: 10
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_18_PREMIUM"
--    eventPassTierSettings {
--      rank: 18
--      track: PREMIUM
--      rewards {
--        type: XL_CANDY
--        xlCandy {
--          pokemonId: CORSOLA
--          amount: 5
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_FREE"
--    eventPassTierSettings {
--      rank: 19
--      track: FREE
--      minPointsRequired: 1800
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: CORSOLA
--          pokemonDisplay {
--            form: 3339
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_19_PREMIUM"
--    eventPassTierSettings {
--      rank: 19
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: CORSOLA
--          pokemonDisplay {
--            form: 3339
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_FREE"
--    eventPassTierSettings {
--      rank: 1
--      track: FREE
--      rewards {
--        type: EXPERIENCE
--        exp: 5000
--      }
--      rewards {
--        type: PLAYER_ATTRIBUTE
--        playerAttribute {
--          key: "sustainability2026_season_pass_entitlement"
--          durationMins: 131487
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_1_PREMIUM"
--    eventPassTierSettings {
--      rank: 1
--      track: PREMIUM
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_INCUBATOR_BASIC
--          amount: 1
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_FREE"
--    eventPassTierSettings {
--      rank: 20
--      track: FREE
--      minPointsRequired: 1900
--      rewards {
--        type: PLAYER_ATTRIBUTE
--        playerAttribute {
--          key: "sustainabilityweek2026_season_pass_rank_02"
--          durationMins: 131487
--        }
--      }
--      bonusSettings {
--        eventName: "season_pass_milestone_bonus_title_02"
--        bonusBoxes {
--          text: "incubator_distance_half"
--          iconType: EGG_INCUBATOR
--        }
--      }
--      activeBonusDisplaySettings {
--        bonusBoxes {
--          text: "pokestop_spin_xp_double"
--          iconType: XP
--        }
--        bonusBoxes {
--          text: "incubator_distance_half"
--          iconType: EGG_INCUBATOR
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_20_PREMIUM"
--    eventPassTierSettings {
--      rank: 20
--      track: PREMIUM
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_FREE"
--    eventPassTierSettings {
--      rank: 21
--      track: FREE
--      minPointsRequired: 2000
--      rewards {
--        type: CANDY
--        candy {
--          pokemonId: CHERUBI
--          amount: 10
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_21_PREMIUM"
--    eventPassTierSettings {
--      rank: 21
--      track: PREMIUM
--      rewards {
--        type: XL_CANDY
--        xlCandy {
--          pokemonId: CHERUBI
--          amount: 5
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_FREE"
--    eventPassTierSettings {
--      rank: 22
--      track: FREE
--      minPointsRequired: 2100
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: CHERUBI
--          pokemonDisplay {
--            form: CHERUBI_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_22_PREMIUM"
--    eventPassTierSettings {
--      rank: 22
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: CHERUBI
--          pokemonDisplay {
--            form: CHERUBI_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_FREE"
--    eventPassTierSettings {
--      rank: 23
--      track: FREE
--      minPointsRequired: 2200
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_PINAP_BERRY
--          amount: 5
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_23_PREMIUM"
--    eventPassTierSettings {
--      rank: 23
--      track: PREMIUM
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_XL_RARE_CANDY
--          amount: 1
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_FREE"
--    eventPassTierSettings {
--      rank: 24
--      track: FREE
--      minPointsRequired: 2300
--      rewards {
--        type: STARDUST
--        stardust: 2500
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_24_PREMIUM"
--    eventPassTierSettings {
--      rank: 24
--      track: PREMIUM
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_INCENSE_ORDINARY
--          amount: 1
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_FREE"
--    eventPassTierSettings {
--      rank: 25
--      track: FREE
--      minPointsRequired: 2400
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_GOLDEN_RAZZ_BERRY
--          amount: 2
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_25_PREMIUM"
--    eventPassTierSettings {
--      rank: 25
--      track: PREMIUM
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_GOLDEN_PINAP_BERRY
--          amount: 2
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_FREE"
--    eventPassTierSettings {
--      rank: 26
--      track: FREE
--      minPointsRequired: 2500
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_RARE_CANDY
--          amount: 2
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_26_PREMIUM"
--    eventPassTierSettings {
--      rank: 26
--      track: PREMIUM
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_XL_RARE_CANDY
--          amount: 1
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_FREE"
--    eventPassTierSettings {
--      rank: 27
--      track: FREE
--      minPointsRequired: 2600
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: TOGETIC
--          pokemonDisplay {
--            form: TOGETIC_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_27_PREMIUM"
--    eventPassTierSettings {
--      rank: 27
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: TOGETIC
--          pokemonDisplay {
--            form: TOGETIC_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_FREE"
--    eventPassTierSettings {
--      rank: 28
--      track: FREE
--      minPointsRequired: 2700
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: TRUBBISH
--          pokemonDisplay {
--            form: TRUBBISH_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_28_PREMIUM"
--    eventPassTierSettings {
--      rank: 28
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: TRUBBISH
--          pokemonDisplay {
--            form: TRUBBISH_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_FREE"
--    eventPassTierSettings {
--      rank: 29
--      track: FREE
--      minPointsRequired: 2800
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: LAPRAS
--          pokemonDisplay {
--            form: LAPRAS_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_29_PREMIUM"
--    eventPassTierSettings {
--      rank: 29
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: LAPRAS
--          pokemonDisplay {
--            form: LAPRAS_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_FREE"
--    eventPassTierSettings {
--      rank: 2
--      track: FREE
--      minPointsRequired: 100
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_POKE_BALL
--          amount: 10
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_2_PREMIUM"
--    eventPassTierSettings {
--      rank: 2
--      track: PREMIUM
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_POKE_BALL
--          amount: 30
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_FREE"
--    eventPassTierSettings {
--      rank: 30
--      track: FREE
--      minPointsRequired: 2900
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: CORSOLA
--          pokemonDisplay {
--            form: 3339
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_30_PREMIUM"
--    eventPassTierSettings {
--      rank: 30
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: CORSOLA
--          pokemonDisplay {
--            form: 3339
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_FREE"
--    eventPassTierSettings {
--      rank: 31
--      track: FREE
--      minPointsRequired: 3000
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_31_PREMIUM"
--    eventPassTierSettings {
--      rank: 31
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_FREE"
--    eventPassTierSettings {
--      rank: 32
--      track: FREE
--      minPointsRequired: 3100
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_32_PREMIUM"
--    eventPassTierSettings {
--      rank: 32
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_FREE"
--    eventPassTierSettings {
--      rank: 33
--      track: FREE
--      minPointsRequired: 3200
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_33_PREMIUM"
--    eventPassTierSettings {
--      rank: 33
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_FREE"
--    eventPassTierSettings {
--      rank: 34
--      track: FREE
--      minPointsRequired: 3300
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_34_PREMIUM"
--    eventPassTierSettings {
--      rank: 34
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_FREE"
--    eventPassTierSettings {
--      rank: 35
--      track: FREE
--      minPointsRequired: 3400
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_35_PREMIUM"
--    eventPassTierSettings {
--      rank: 35
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_FREE"
--    eventPassTierSettings {
--      rank: 36
--      track: FREE
--      minPointsRequired: 3500
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_36_PREMIUM"
--    eventPassTierSettings {
--      rank: 36
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_FREE"
--    eventPassTierSettings {
--      rank: 37
--      track: FREE
--      minPointsRequired: 3600
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_37_PREMIUM"
--    eventPassTierSettings {
--      rank: 37
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_FREE"
--    eventPassTierSettings {
--      rank: 38
--      track: FREE
--      minPointsRequired: 3700
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_38_PREMIUM"
--    eventPassTierSettings {
--      rank: 38
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_FREE"
--    eventPassTierSettings {
--      rank: 39
--      track: FREE
--      minPointsRequired: 3800
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_39_PREMIUM"
--    eventPassTierSettings {
--      rank: 39
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_FREE"
--    eventPassTierSettings {
--      rank: 3
--      track: FREE
--      minPointsRequired: 200
--      rewards {
--        type: STARDUST
--        stardust: 2500
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_3_PREMIUM"
--    eventPassTierSettings {
--      rank: 3
--      track: PREMIUM
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_INCENSE_ORDINARY
--          amount: 1
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_FREE"
--    eventPassTierSettings {
--      rank: 40
--      track: FREE
--      minPointsRequired: 3900
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_40_PREMIUM"
--    eventPassTierSettings {
--      rank: 40
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_FREE"
--    eventPassTierSettings {
--      rank: 41
--      track: FREE
--      minPointsRequired: 4000
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_41_PREMIUM"
--    eventPassTierSettings {
--      rank: 41
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_FREE"
--    eventPassTierSettings {
--      rank: 42
--      track: FREE
--      minPointsRequired: 4100
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_42_PREMIUM"
--    eventPassTierSettings {
--      rank: 42
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_FREE"
--    eventPassTierSettings {
--      rank: 43
--      track: FREE
--      minPointsRequired: 4200
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_43_PREMIUM"
--    eventPassTierSettings {
--      rank: 43
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_FREE"
--    eventPassTierSettings {
--      rank: 44
--      track: FREE
--      minPointsRequired: 4300
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_44_PREMIUM"
--    eventPassTierSettings {
--      rank: 44
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_FREE"
--    eventPassTierSettings {
--      rank: 45
--      track: FREE
--      minPointsRequired: 4400
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_45_PREMIUM"
--    eventPassTierSettings {
--      rank: 45
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_FREE"
--    eventPassTierSettings {
--      rank: 46
--      track: FREE
--      minPointsRequired: 4500
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_46_PREMIUM"
--    eventPassTierSettings {
--      rank: 46
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_FREE"
--    eventPassTierSettings {
--      rank: 47
--      track: FREE
--      minPointsRequired: 4600
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_47_PREMIUM"
--    eventPassTierSettings {
--      rank: 47
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_FREE"
--    eventPassTierSettings {
--      rank: 48
--      track: FREE
--      minPointsRequired: 4700
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_48_PREMIUM"
--    eventPassTierSettings {
--      rank: 48
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_FREE"
--    eventPassTierSettings {
--      rank: 49
--      track: FREE
--      minPointsRequired: 4800
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_49_PREMIUM"
--    eventPassTierSettings {
--      rank: 49
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_FREE"
--    eventPassTierSettings {
--      rank: 4
--      track: FREE
--      minPointsRequired: 300
--      rewards {
--        type: CANDY
--        candy {
--          pokemonId: CASTFORM
--          amount: 10
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_4_PREMIUM"
--    eventPassTierSettings {
--      rank: 4
--      track: PREMIUM
--      rewards {
--        type: XL_CANDY
--        xlCandy {
--          pokemonId: CASTFORM
--          amount: 5
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_FREE"
--    eventPassTierSettings {
--      rank: 50
--      track: FREE
--      minPointsRequired: 4900
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_50_PREMIUM"
--    eventPassTierSettings {
--      rank: 50
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_FREE"
--    eventPassTierSettings {
--      rank: 51
--      track: FREE
--      minPointsRequired: 5000
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_51_PREMIUM"
--    eventPassTierSettings {
--      rank: 51
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_FREE"
--    eventPassTierSettings {
--      rank: 52
--      track: FREE
--      minPointsRequired: 5100
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_52_PREMIUM"
--    eventPassTierSettings {
--      rank: 52
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_FREE"
--    eventPassTierSettings {
--      rank: 53
--      track: FREE
--      minPointsRequired: 5200
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_53_PREMIUM"
--    eventPassTierSettings {
--      rank: 53
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_FREE"
--    eventPassTierSettings {
--      rank: 54
--      track: FREE
--      minPointsRequired: 5300
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_54_PREMIUM"
--    eventPassTierSettings {
--      rank: 54
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_FREE"
--    eventPassTierSettings {
--      rank: 55
--      track: FREE
--      minPointsRequired: 5400
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_55_PREMIUM"
--    eventPassTierSettings {
--      rank: 55
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_FREE"
--    eventPassTierSettings {
--      rank: 56
--      track: FREE
--      minPointsRequired: 5500
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_56_PREMIUM"
--    eventPassTierSettings {
--      rank: 56
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_FREE"
--    eventPassTierSettings {
--      rank: 57
--      track: FREE
--      minPointsRequired: 5600
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_57_PREMIUM"
--    eventPassTierSettings {
--      rank: 57
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_FREE"
--    eventPassTierSettings {
--      rank: 58
--      track: FREE
--      minPointsRequired: 5700
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_58_PREMIUM"
--    eventPassTierSettings {
--      rank: 58
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_FREE"
--    eventPassTierSettings {
--      rank: 59
--      track: FREE
--      minPointsRequired: 5800
--      rewards {
--        type: STARDUST
--        stardust: 50
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_59_PREMIUM"
--    eventPassTierSettings {
--      rank: 59
--      track: PREMIUM
--      rewards {
--        type: STARDUST
--        stardust: 100
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_FREE"
--    eventPassTierSettings {
--      rank: 5
--      track: FREE
--      minPointsRequired: 400
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: CASTFORM
--          pokemonDisplay {
--            form: CASTFORM_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_5_PREMIUM"
--    eventPassTierSettings {
--      rank: 5
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: CASTFORM
--          pokemonDisplay {
--            form: CASTFORM_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_FREE"
--    eventPassTierSettings {
--      rank: 60
--      track: FREE
--      minPointsRequired: 5900
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: CORSOLA
--          pokemonDisplay {
--            form: 3339
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_60_PREMIUM"
--    eventPassTierSettings {
--      rank: 60
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: CORSOLA
--          pokemonDisplay {
--            form: 3339
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_FREE"
--    eventPassTierSettings {
--      rank: 6
--      track: FREE
--      minPointsRequired: 500
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_GREAT_BALL
--          amount: 10
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_6_PREMIUM"
--    eventPassTierSettings {
--      rank: 6
--      track: PREMIUM
--      rewards {
--        type: ITEM
--        item {
--          item: ITEM_GREAT_BALL
--          amount: 20
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_FREE"
--    eventPassTierSettings {
--      rank: 7
--      track: FREE
--      minPointsRequired: 600
--      rewards {
--        type: EXPERIENCE
--        exp: 5000
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_7_PREMIUM"
--    eventPassTierSettings {
--      rank: 7
--      track: PREMIUM
--      rewards {
--        type: EXPERIENCE
--        exp: 7500
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_FREE"
--    eventPassTierSettings {
--      rank: 8
--      track: FREE
--      minPointsRequired: 700
--      rewards {
--        type: CANDY
--        candy {
--          pokemonId: FOONGUS
--          amount: 10
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_8_PREMIUM"
--    eventPassTierSettings {
--      rank: 8
--      track: PREMIUM
--      rewards {
--        type: XL_CANDY
--        xlCandy {
--          pokemonId: FOONGUS
--          amount: 5
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_FREE"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_FREE"
--    eventPassTierSettings {
--      rank: 9
--      track: FREE
--      minPointsRequired: 800
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: FOONGUS
--          pokemonDisplay {
--            form: FOONGUS_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_PREMIUM"
--  data {
--    template_id: "EVENT_PASS_SUSTAINABILITY2026_EVENT_9_PREMIUM"
--    eventPassTierSettings {
--      rank: 9
--      track: PREMIUM
--      rewards {
--        type: POKEMON_ENCOUNTER
--        pokemonEncounter {
--          pokemonId: FOONGUS
--          pokemonDisplay {
--            form: FOONGUS_NORMAL
--          }
--          isFeaturedPokemon: true
--        }
--      }
--    }
--  }
--}
--template {
--  template_id: "IS_SKU_AVAILABLE_NO_APP_ID_CODE_GATE"
--  data {
--    template_id: "IS_SKU_AVAILABLE_NO_APP_ID_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
--  template_id: "N_DISPLAY_n_hat_mlb-padres_0"
--  data {
--    template_id: "N_DISPLAY_n_hat_mlb-padres_0"
--    avatarItemDisplay {
--      iconAddress: "n_hat_mlb-padres_0_icon"
--      displayStringId: "avatar_hat_mlbpadres"
--    }
--  }
--}
--template {
--  template_id: "STAMP_COLLECTION_SNAPSHOT_ENABLED_CODE_GATE"
--  data {
--    template_id: "STAMP_COLLECTION_SNAPSHOT_ENABLED_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
--  template_id: "USE_GMT_SKU_DATA_CODE_GATE"
--  data {
--    template_id: "USE_GMT_SKU_DATA_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
--  template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
--  data {
--    template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
--    iapItemDisplay {
--      sku: "pgorelease.april2_2026_deluxe_event_pass_track_unlock"
--      sortOrder: 1
--      title: "season_pass_premium_track_title_sustainabilityweek2026"
--      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
--      skuEnableTime: "2025-04-14T10:00:00"
--      skuDisableTime: "2026-04-22T20:00:00"
--      skuEnableTimeUtcMs: 1744624800000
--      skuDisableTimeUtcMs: 1776888000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
--    }
--  }
--}
--template {
--  template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
--  data {
--    template_id: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
--    iapItemDisplay {
--      sku: "pgorelease.april2_2026_deluxe_event_pass_track_unlock_plus_points"
--      sortOrder: 1
--      title: "season_pass_premium_track_plus_six_ranks_title_sustainabilityweek2026"
--      description: "event_pass_plus_points_6_ranks_description"
--      skuEnableTime: "2025-04-14T10:00:00"
--      skuDisableTime: "2026-04-22T20:00:00"
--      skuEnableTimeUtcMs: 1744624800000
--      skuDisableTimeUtcMs: 1776888000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-paid-sustainability-week-2026-nologo.jpg"
--    }
--  }
--}
--batch_id: 1776151546123
-+batch_id: 1776246458838
+-batch_id: 1776246458838
++batch_id: 1776322130177
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
  experiment_id: 170
--experiment_id: 177
-+experiment_id: 178
+ experiment_id: 178
++experiment_id: 196
  experiment_id: 300
  experiment_id: 320
  experiment_id: 351
-@@ -483754,7 +483769,7 @@
- experiment_id: 3063
- experiment_id: 3105
- experiment_id: 3106
--experiment_id: 3113
-+experiment_id: 3114
- experiment_id: 3124
+@@ -483774,11 +484032,13 @@
  experiment_id: 3126
  experiment_id: 3134
-@@ -483763,10 +483778,10 @@
+ experiment_id: 3195
++experiment_id: 3913
+ experiment_id: 3915
  experiment_id: 3916
- experiment_id: 3919
+-experiment_id: 3919
++experiment_id: 3920
++experiment_id: 3922
++experiment_id: 3925
  experiment_id: 4998
-+experiment_id: 5013
+-experiment_id: 5013
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
--experiment_id: 5206
- experiment_id: 5501
- experiment_id: 5502
- experiment_id: 5506
-@@ -483778,6 +483793,7 @@
- experiment_id: 7023
- experiment_id: 8667
- experiment_id: 8916
-+experiment_id: 8918
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
