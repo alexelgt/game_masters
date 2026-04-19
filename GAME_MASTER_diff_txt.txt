@@ -1,263 +1,62 @@
---- GAME_MASTER_old.txt	2026-04-16 19:03:01.658266293 +0200
-+++ GAME_MASTER.txt	2026-04-18 12:25:31.596300116 +0200
-@@ -81791,6 +81791,11 @@
-         priorityEventTypeList: DODGE
-         priorityEventTypeList: SWAP_POKEMON
-         priorityEventTypeList: CHARGE_ATTACK
-+        3: "\002"
-+        4 {
-+          1: 2
-+          2: "\003\005"
-+        }
-       }
-       breadInputBufferPriorityList {
-         eventPriority: DODGE
-@@ -81798,11 +81803,17 @@
-         priorityEventTypeList: DODGE
-         priorityEventTypeList: SWAP_POKEMON
-         priorityEventTypeList: CHARGE_ATTACK
-+        3: "\002\005"
-+        4 {
-+          1: 2
-+          2: "\003"
-+        }
-       }
-       combatInputBufferPriorityList {
-         eventPriority: SWAP_POKEMON
-         priorityEventTypeList: SWAP_POKEMON
-         priorityEventTypeList: CHARGE_ATTACK
-+        3: "\002\005"
+--- GAME_MASTER_old.txt	2026-04-18 12:25:31.596300116 +0200
++++ GAME_MASTER.txt	2026-04-19 10:57:14.992087693 +0200
+@@ -161066,7 +161066,7 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 1
+       incense {
+-        incenseLifetimeSeconds: 3600
++        incenseLifetimeSeconds: 7200
        }
      }
    }
-@@ -159610,6 +159621,7 @@
-           limit: 300
-         }
-       }
-+      hideItemInInventory: true
-     }
-   }
- }
-@@ -159672,7 +159684,6 @@
-       }
-       timePeriodCounters {
-         playerActivity {
--          limit: 500
-         }
-       }
-     }
-@@ -161088,7 +161099,7 @@
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
-         uses: 3
--        distanceMultiplier: 1
-+        distanceMultiplier: 0.5
-       }
-     }
-   }
-@@ -161104,7 +161115,7 @@
-       dropTrainerLevel: 100
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
--        distanceMultiplier: 1
-+        distanceMultiplier: 0.5
-       }
-     }
-   }
-@@ -161139,7 +161150,7 @@
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
-         uses: 3
--        distanceMultiplier: 0.666666687
-+        distanceMultiplier: 0.333333343
-       }
-     }
-   }
-@@ -161155,7 +161166,7 @@
-       dropTrainerLevel: 100
-       egg_incubator {
-         incubatorType: INCUBATOR_DISTANCE
--        distanceMultiplier: 1
-+        distanceMultiplier: 0.5
-         expiredIncubatorReplacement {
-           incubatorReplacement: ITEM_INCUBATOR_BASIC
-           usesCountOverride: 1
-@@ -244016,6 +244027,8 @@
-       pinClaimableQuestEnabled: true
-       notificationServerAuthoritative: true
-       favoriteQuestEnabled: true
-+      7: 1
-+      11: 1
-     }
-   }
- }
-@@ -483996,13 +484009,143 @@
-     }
-   }
- }
--batch_id: 1776322130177
-+template {
-+  template_id: "APRIL3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
-+  data {
-+    template_id: "APRIL3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
-+    iapItemDisplay {
-+      sku: "pgorelease.april3_2026_deluxe_event_pass_track_unlock"
-+      sortOrder: 1
+@@ -476302,6 +476302,7 @@
+       sku: "general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
 +      hidden: true
-+      title: "season_pass_premium_track_title_steeled_resolve_2026"
-+      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-+      skuEnableTime: "2025-04-28T10:00:00"
-+      skuDisableTime: "2025-05-06T20:00:00"
-+      skuEnableTimeUtcMs: 1745834400000
-+      skuDisableTimeUtcMs: 1746561600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Memory_Lane_Meltan_Celebration_SRR_v1-1024x576.jpg"
-+    }
-+  }
-+}
-+template {
-+  template_id: "APRIL3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
-+  data {
-+    template_id: "APRIL3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
-+    iapItemDisplay {
-+      sku: "pgorelease.april3_2026_deluxe_event_pass_track_unlock_plus_points"
-+      sortOrder: 1
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_Riolu0426_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -476322,6 +476323,7 @@
+       sku: "general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
 +      hidden: true
-+      title: "season_pass_premium_track_plus_six_ranks_title_steeled_resolve_2026"
-+      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
-+      skuEnableTime: "2025-04-28T10:00:00"
-+      skuDisableTime: "2025-05-06T20:00:00"
-+      skuEnableTimeUtcMs: 1745834400000
-+      skuDisableTimeUtcMs: 1746561600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Memory_Lane_Meltan_Celebration_SRR_v1-1024x576.jpg"
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0196"
-+  data {
-+    template_id: "BADGE_EVENT_0196"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0196
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_LIST_FEATURE_GATE"
-+  data {
-+    template_id: "EVENT_LIST_FEATURE_GATE"
-+    featureGate {
-+      status: 1
-+      rolloutPercentage: 100
-+    }
-+  }
-+}
-+template {
-+  template_id: "EVENT_PASS_APRIL3_EVENT_STORE_REDIRECT"
-+  data {
-+    template_id: "EVENT_PASS_APRIL3_EVENT_STORE_REDIRECT"
-+    iapItemDisplay {
-+      sku: "pgorelease.april3_2026_deluxe_event_pass_track_redirect"
-+      sortOrder: 1
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_Riolu0426_title"
+       skuEnableTime: "2023-01-01T11:00:01"
+@@ -478187,6 +478189,7 @@
+       sku: "pgorelease.general1.ticket.4"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
 +      hidden: true
-+      title: "season_pass_premium_track_title_steeled_resolve_2026"
-+      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-+      skuEnableTime: "2025-04-28T10:00:00"
-+      skuDisableTime: "2025-05-06T20:00:00"
-+      skuEnableTimeUtcMs: 1745834400000
-+      skuDisableTimeUtcMs: 1746561600000
-+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Memory_Lane_Meltan_Celebration_SRR_v1-1024x576.jpg"
-+    }
-+  }
-+}
-+template {
-+  template_id: "TODAY_VIEW_V3_CODE_GATE"
-+  data {
-+    template_id: "TODAY_VIEW_V3_CODE_GATE"
-+    codeGateProto {
-+      isEnabled: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "UPDATE_TICKETS_STRING_FEATURE_GATE"
-+  data {
-+    template_id: "UPDATE_TICKETS_STRING_FEATURE_GATE"
-+    featureGate {
-+      status: 29825861
-+      rolloutPercentage: 100
-+    }
-+  }
-+}
-+template {
-+  template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_08"
-+  data {
-+    template_id: "ITEM_EVENT_PASS_POINT_LIVE_OPS_08"
-+    itemSettings {
-+      itemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_08
-+      itemType: ITEM_TYPE_EVENT_PASS_POINT
-+      category: ITEM_CATEGORY_EVENT_PASS_POINT
-+      ignoreInventorySpace: true
-+      itemCap: 999999
-+      eventPassPoint {
-+        eventPassId: "EVENT_PASS_STEELEDRESOLVE2026_EVENT"
-+      }
-+      timePeriodCounters {
-+        playerActivity {
-+          limit: 300
-+        }
-+      }
-+      hideItemInInventory: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_08"
-+  data {
-+    template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_08"
-+    itemExpirationSettings {
-+      item: ITEM_EVENT_PASS_POINT_LIVE_OPS_08
-+      expirationTime: "2026-05-08T20:00:00"
-+      emergencyExpirationTime: "2026-05-09T10:00:00"
-+    }
-+  }
-+}
-+batch_id: 1776479042849
- experiment_id: 11
- experiment_id: 21
- experiment_id: 101
- experiment_id: 170
- experiment_id: 178
--experiment_id: 196
- experiment_id: 300
- experiment_id: 320
- experiment_id: 351
-@@ -484016,6 +484159,7 @@
- experiment_id: 602
- experiment_id: 805
- experiment_id: 807
-+experiment_id: 1205
- experiment_id: 1699
- experiment_id: 1816
- experiment_id: 2254
-@@ -484032,11 +484176,14 @@
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_Riolu0426_title"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -478207,6 +478210,7 @@
+       sku: "pgorelease.general1.ticket.4.giftable"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general1.ticket.4"
+       title: "general1.ticket.4_Riolu0426_title"
+       skuEnableTime: "2023-01-01T11:00:03"
+@@ -484175,9 +484179,8 @@
+ experiment_id: 3124
  experiment_id: 3126
  experiment_id: 3134
++experiment_id: 3174
  experiment_id: 3195
-+experiment_id: 3911
- experiment_id: 3913
+-experiment_id: 3911
+-experiment_id: 3913
  experiment_id: 3915
  experiment_id: 3916
--experiment_id: 3920
-+experiment_id: 3918
-+experiment_id: 3921
- experiment_id: 3922
-+experiment_id: 3923
- experiment_id: 3925
- experiment_id: 4998
- experiment_id: 5160
+ experiment_id: 3918
+@@ -484198,7 +484201,6 @@
+ experiment_id: 6075
+ experiment_id: 7020
+ experiment_id: 7023
+-experiment_id: 8667
+ experiment_id: 8916
+ experiment_id: 8918
+ experiment_id: 9521
