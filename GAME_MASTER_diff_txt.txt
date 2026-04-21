@@ -1,62 +1,148 @@
---- GAME_MASTER_old.txt	2026-04-18 12:25:31.596300116 +0200
-+++ GAME_MASTER.txt	2026-04-19 10:57:14.992087693 +0200
-@@ -161066,7 +161066,7 @@
+--- GAME_MASTER_old.txt	2026-04-19 10:57:14.992087693 +0200
++++ GAME_MASTER.txt	2026-04-21 18:31:59.583054333 +0200
+@@ -159684,6 +159684,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 500
+         }
+       }
+     }
+@@ -161066,7 +161067,7 @@
        category: ITEM_CATEGORY_INCENSE
        dropTrainerLevel: 1
        incense {
--        incenseLifetimeSeconds: 3600
-+        incenseLifetimeSeconds: 7200
+-        incenseLifetimeSeconds: 7200
++        incenseLifetimeSeconds: 3600
        }
      }
    }
-@@ -476302,6 +476302,7 @@
-       sku: "general1.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+@@ -161099,7 +161100,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 0.5
++        distanceMultiplier: 1
+       }
+     }
+   }
+@@ -161115,7 +161116,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 0.5
++        distanceMultiplier: 1
+       }
+     }
+   }
+@@ -161150,7 +161151,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 0.333333343
++        distanceMultiplier: 0.666666687
+       }
+     }
+   }
+@@ -161166,7 +161167,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 0.5
++        distanceMultiplier: 1
+         expiredIncubatorReplacement {
+           incubatorReplacement: ITEM_INCUBATOR_BASIC
+           usesCountOverride: 1
+@@ -163849,7 +163850,7 @@
+     template_id: "LC_2026_NPB_001"
+     locationCardSettings {
+       locationCard: LC_2026_NPB_001
+-      imageUrl: "lc_2026_ppk_001"
++      imageUrl: "lc_2026_NPB_yokohamaStadium"
+     }
+   }
+ }
+@@ -474424,15 +474425,9 @@
+       sku: "bundle.hatchbox2024.1"
+       category: IAP_CATEGORY_BUNDLE
        sortOrder: 1
 +      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket.4_Riolu0426_title"
-       skuEnableTime: "2023-01-01T11:00:01"
-@@ -476322,6 +476323,7 @@
-       sku: "general1.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       spriteId: "bundle.general.adventure.1"
+       title: "bundle.xmas.large.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2026-04-20T20:00:00"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1776715200000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 1910
+     }
+   }
+ }
+@@ -484040,7 +484035,7 @@
        sortOrder: 1
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket.4_Riolu0426_title"
-       skuEnableTime: "2023-01-01T11:00:01"
-@@ -478187,6 +478189,7 @@
-       sku: "pgorelease.general1.ticket.4"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket.4_Riolu0426_title"
-       skuEnableTime: "2023-01-01T11:00:03"
-@@ -478207,6 +478210,7 @@
-       sku: "pgorelease.general1.ticket.4.giftable"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
-+      hidden: true
-       spriteId: "general1.ticket.4"
-       title: "general1.ticket.4_Riolu0426_title"
-       skuEnableTime: "2023-01-01T11:00:03"
-@@ -484175,9 +484179,8 @@
+       hidden: true
+       title: "season_pass_premium_track_plus_six_ranks_title_steeled_resolve_2026"
+-      description: "gotour_2025_deluxe_event_pass_track_unlock_plus_points_description"
++      description: "event_pass_plus_points_6_ranks_description"
+       skuEnableTime: "2025-04-28T10:00:00"
+       skuDisableTime: "2025-05-06T20:00:00"
+       skuEnableTimeUtcMs: 1745834400000
+@@ -484144,7 +484139,17 @@
+     }
+   }
+ }
+-batch_id: 1776479042849
++template {
++  template_id: "N_DISPLAY_n_shoes_pikachuathletic"
++  data {
++    template_id: "N_DISPLAY_n_shoes_pikachuathletic"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_pikachuathletic_icon"
++      displayStringId: "avatar_shoes_marathon"
++    }
++  }
++}
++batch_id: 1776763322640
+ experiment_id: 11
+ experiment_id: 21
+ experiment_id: 101
+@@ -484166,7 +484171,6 @@
+ experiment_id: 1205
+ experiment_id: 1699
+ experiment_id: 1816
+-experiment_id: 2254
+ experiment_id: 2297
+ experiment_id: 2600
+ experiment_id: 2650
+@@ -484178,20 +484182,14 @@
+ experiment_id: 3114
  experiment_id: 3124
  experiment_id: 3126
- experiment_id: 3134
-+experiment_id: 3174
+-experiment_id: 3134
+-experiment_id: 3174
++experiment_id: 3135
  experiment_id: 3195
--experiment_id: 3911
--experiment_id: 3913
- experiment_id: 3915
+-experiment_id: 3915
  experiment_id: 3916
- experiment_id: 3918
-@@ -484198,7 +484201,6 @@
- experiment_id: 6075
- experiment_id: 7020
+-experiment_id: 3918
+-experiment_id: 3921
+-experiment_id: 3922
+-experiment_id: 3923
+-experiment_id: 3925
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
++experiment_id: 5207
+ experiment_id: 5501
+ experiment_id: 5502
+ experiment_id: 5506
+@@ -484203,6 +484201,7 @@
  experiment_id: 7023
--experiment_id: 8667
  experiment_id: 8916
  experiment_id: 8918
++experiment_id: 8919
  experiment_id: 9521
+ experiment_id: 9552
+ experiment_id: 9553
