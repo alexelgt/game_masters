@@ -1,159 +1,76 @@
---- GAME_MASTER_old.txt	2026-04-23 18:22:16.562533656 +0200
-+++ GAME_MASTER.txt	2026-04-24 19:07:50.500687215 +0200
-@@ -471942,9 +471942,12 @@
-       sku: "bundle.gmaxday.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
--      hidden: true
-       spriteId: "bundle3.sprite.d"
-       title: "ace_box_title"
-+      skuEnableTime: "2019-10-31T21:00:00"
-+      skuDisableTime: "2026-04-24T20:00:00"
-+      skuEnableTimeUtcMs: 1572555600000
-+      skuDisableTimeUtcMs: 1777060800000
-       showDiscountTag: true
-       showStrikethroughPrice: true
-       totalValue: 1000
-@@ -482884,13 +482887,122 @@
+--- GAME_MASTER_old.txt	2026-04-24 19:07:50.500687215 +0200
++++ GAME_MASTER.txt	2026-04-25 10:33:13.128021541 +0200
+@@ -45094,7 +45094,7 @@
+       rvnVersion: 1
+       maxPlayersPerBreadDoughLobby: 100
+       maxRemotePlayersPerBreadDoughLobby: 100
+-      maxRemoteBreadBattlePassesAllowed: 10
++      maxRemoteBreadBattlePassesAllowed: 20
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 98
+@@ -168038,8 +168038,8 @@
+   data {
+     template_id: "MP_SHARED_SETTINGS"
+     mpSettings {
+-      numMpFromWalkQuest: 300
+-      numMetersGoal: 2000
++      numMpFromWalkQuest: 600
++      numMetersGoal: 500
+       debugAllowRemoveWalkQuest: true
+       numMpFromLootStation: 100
+       numExtraMpFromFirstLootStation: 20
+@@ -189313,7 +189313,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 20
      }
    }
  }
--batch_id: 1776908271200
+@@ -482997,7 +482997,30 @@
+     }
+   }
+ }
+-batch_id: 1777022232239
 +template {
-+  template_id: "BADGE_GOFEST_2026_EVENT_PASS_DELUXE"
++  template_id: "ITEM_EVENT_TICKET_06_TO_GIFT"
 +  data {
-+    template_id: "BADGE_GOFEST_2026_EVENT_PASS_DELUXE"
-+    badgeSettings {
-+      badgeType: 6212
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
++    template_id: "ITEM_EVENT_TICKET_06_TO_GIFT"
++    itemSettings {
++      itemId: ITEM_EVENT_TICKET_06_TO_GIFT
++      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
++      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
++      globalEventTicket {
++        eventStartTime: "2026-04-25T14:00:00"
++        eventEndTime: "2026-04-25T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_06_details_REPLAY_GO_BIGGER"
++        ticketItem: ITEM_EVENT_TICKET_06
++        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-gmax-kanto-max-battle-day-2026-nologo.jpg"
++        clientEventStartTimeUtcMs: 1777125600000
++        clientEventEndTimeUtcMs: 1777136400000
 +      }
++      ignoreInventorySpace: true
++      nameOverride: "general2.ticket.6.REPLAY_GO_BIGGER"
++      descriptionOverride: "item_event_ticket_06_desc_REPLAY_GO_BIGGER"
 +    }
 +  }
 +}
-+template {
-+  template_id: "BADGE_GOFEST_2026_GLOBAL"
-+  data {
-+    template_id: "BADGE_GOFEST_2026_GLOBAL"
-+    badgeSettings {
-+      badgeType: 6210
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_GOFEST_2026_GLOBAL_TEST"
-+  data {
-+    template_id: "BADGE_GOFEST_2026_GLOBAL_TEST"
-+    badgeSettings {
-+      badgeType: 6211
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_QUEST_DIALOGUE_INBOX_CONTROL"
-+  data {
-+    template_id: "BADGE_QUEST_DIALOGUE_INBOX_CONTROL"
-+    badgeSettings {
-+      badgeType: 6214
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_QUEST_DIALOGUE_INBOX_ROLLOUT"
-+  data {
-+    template_id: "BADGE_QUEST_DIALOGUE_INBOX_ROLLOUT"
-+    badgeSettings {
-+      badgeType: 6213
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "QUEST_DIALOGUE_INBOX_SETTINGS"
-+  data {
-+    template_id: "QUEST_DIALOGUE_INBOX_SETTINGS"
-+    287 {
-+      2: 3600000
-+      4 {
-+        1: 1
-+        2: 3
-+      }
-+      4 {
-+        1: 2
-+        2: 1
-+      }
-+      4 {
-+        1: 3
-+        2: 1
-+      }
-+      4 {
-+        1: 4
-+        2: 1
-+      }
-+      4 {
-+        1: 5
-+        2: 1
-+      }
-+      4 {
-+        1: 6
-+        2: 1
-+      }
-+      4 {
-+        1: 7
-+        2: 1
-+      }
-+      4 {
-+        1: 8
-+        2: 1
-+      }
-+    }
-+  }
-+}
-+batch_id: 1777022232239
++batch_id: 1777074343872
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
- experiment_id: 170
- experiment_id: 179
--experiment_id: 197
- experiment_id: 300
- experiment_id: 320
- experiment_id: 351
-@@ -482907,6 +483019,7 @@
- experiment_id: 1205
- experiment_id: 1699
- experiment_id: 1816
-+experiment_id: 2256
- experiment_id: 2297
- experiment_id: 2600
- experiment_id: 2650
-@@ -482919,7 +483032,9 @@
+@@ -483032,10 +483055,11 @@
  experiment_id: 3124
  experiment_id: 3126
  experiment_id: 3135
-+experiment_id: 3162
+-experiment_id: 3162
  experiment_id: 3195
-+experiment_id: 4908
+ experiment_id: 4908
++experiment_id: 4913
  experiment_id: 4916
++experiment_id: 4917
  experiment_id: 4998
  experiment_id: 5160
+ experiment_id: 5162
