@@ -1,934 +1,303 @@
---- GAME_MASTER_old.txt	2026-04-30 15:29:51.951721758 +0200
-+++ GAME_MASTER.txt	2026-05-01 11:12:54.845419338 +0200
-@@ -49339,7 +49339,6 @@
-       bannedPokemon: COBALION
-       bannedPokemon: TERRAKION
-       bannedPokemon: VIRIZION
--      bannedPokemon: LANDORUS
-       bannedPokemon: RESHIRAM
-       bannedPokemon: ZEKROM
-       bannedPokemon: KYUREM
-@@ -161017,29 +161016,29 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-04-11T14:00:00"
--        eventEndTime: "2026-04-11T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Tinkatink26"
-+        eventStartTime: "2026-05-09T14:00:00"
-+        eventEndTime: "2026-05-09T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Lechonk26"
-         giftable: true
-         giftItem: ITEM_EVENT_TICKET_03_TO_GIFT
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-tinkatink-community-day-2026-nologo.jpg"
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-lechonk-community-day-2026-nologo.jpg"
-         displayV2Enabled: true
--        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-tinkatink-community-day-2026-nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CD_Tinkatink26"
--        textRewardsKey: "text_rewards_key_CD_Tinkatink26"
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-lechonk-community-day-2026-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CD_Lechonk26"
-+        textRewardsKey: "text_rewards_key_CD_Lechonk26"
-         iconRewards {
-           type: POKEMON_ENCOUNTER
-           pokemonEncounter {
--            pokemonId: TINKATON
-+            pokemonId: OINKOLOGNE
-             pokemonDisplay {
--              form: TINKATON_NORMAL
-+              form: OINKOLOGNE_NORMAL
-             }
-           }
-         }
-         iconRewards {
-           type: ITEM
-           item {
--            item: ITEM_STAR_PIECE
-+            item: ITEM_INCUBATOR_BASIC
-             amount: 1
-           }
-         }
-@@ -161051,11 +161050,11 @@
-           }
-         }
-         detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1775916000000
--        clientEventEndTimeUtcMs: 1775926800000
-+        clientEventStartTimeUtcMs: 1778335200000
-+        clientEventEndTimeUtcMs: 1778346000000
+--- GAME_MASTER_old.txt	2026-05-01 11:12:54.845419338 +0200
++++ GAME_MASTER.txt	2026-05-03 11:08:19.327603443 +0200
+@@ -145718,6 +145718,10 @@
+         form: 3345
+         isCostume: true
        }
--      nameOverride: "general1.ticket_CD_Tinkatink26_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Tinkatink26"
-+      nameOverride: "general1.ticket_CD_Lechonk26_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Lechonk26"
++      forms {
++        form: 3341
++        isCostume: true
++      }
      }
    }
  }
-@@ -161068,17 +161067,17 @@
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
--        eventStartTime: "2026-04-11T14:00:00"
--        eventEndTime: "2026-04-11T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Tinkatink26"
-+        eventStartTime: "2026-05-09T14:00:00"
-+        eventEndTime: "2026-05-09T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Lechonk26"
-         ticketItem: ITEM_EVENT_TICKET_03
--        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-tinkatink-community-day-2026-nologo.jpg"
--        clientEventStartTimeUtcMs: 1775916000000
--        clientEventEndTimeUtcMs: 1775926800000
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-lechonk-community-day-2026-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1778335200000
-+        clientEventEndTimeUtcMs: 1778346000000
+@@ -160875,7 +160879,6 @@
        }
-       ignoreInventorySpace: true
--      nameOverride: "general1.ticket_CD_Tinkatink26_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Tinkatink26"
-+      nameOverride: "general1.ticket_CD_Lechonk26_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Lechonk26"
+       timePeriodCounters {
+         playerActivity {
+-          limit: 500
+         }
+       }
+       hideItemInInventory: true
+@@ -160920,7 +160923,6 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 250
+         }
+       }
+     }
+@@ -162321,7 +162323,7 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 1
+       incense {
+-        incenseLifetimeSeconds: 3600
++        incenseLifetimeSeconds: 7200
+       }
      }
    }
+@@ -478297,6 +478299,7 @@
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general1.ticket.5"
+       title: "general1.ticket.5.ENTEI_SHADOW_RAID_DAY"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -478451,41 +478454,22 @@
+   }
  }
-@@ -471090,31 +471089,31 @@
-       reward {
-         item {
-           stardust: true
--          count: 3000
-+          count: 750
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 3000
-+          count: 750
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 3000
-+          count: 750
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 3000
-+          count: 750
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 3000
-+          count: 750
-         }
-       }
-     }
-@@ -471129,31 +471128,31 @@
-       reward {
-         item {
-           stardust: true
--          count: 6000
-+          count: 1500
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 6000
-+          count: 1500
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 6000
-+          count: 1500
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 6000
-+          count: 1500
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 6000
-+          count: 1500
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471169,7 +471168,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2120
-+          count: 530
-         }
-       }
-       reward {
-@@ -471187,7 +471186,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-     }
-@@ -471202,7 +471201,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-       reward {
-@@ -471220,7 +471219,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 8480
-+          count: 2120
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471236,7 +471235,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2120
-+          count: 530
-         }
-       }
-       reward {
-@@ -471254,7 +471253,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-     }
-@@ -471269,7 +471268,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4240
-+          count: 1060
-         }
-       }
-       reward {
-@@ -471287,7 +471286,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 8480
-+          count: 2120
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471303,7 +471302,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2280
-+          count: 570
-         }
-       }
-       reward {
-@@ -471321,7 +471320,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4560
-+          count: 1140
-         }
-       }
-     }
-@@ -471336,7 +471335,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4560
-+          count: 1140
-         }
-       }
-       reward {
-@@ -471354,7 +471353,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 9120
-+          count: 2280
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471370,7 +471369,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2400
-+          count: 600
-         }
-       }
-       reward {
-@@ -471388,7 +471387,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4800
-+          count: 1200
-         }
-       }
-     }
-@@ -471403,7 +471402,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4800
-+          count: 1200
-         }
-       }
-       reward {
-@@ -471421,7 +471420,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 9600
-+          count: 2400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471516,7 +471515,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2800
-+          count: 700
-         }
-       }
-       reward {
-@@ -471534,7 +471533,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5600
-+          count: 1400
-         }
-       }
-     }
-@@ -471549,7 +471548,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5600
-+          count: 1400
-         }
-       }
-       reward {
-@@ -471567,7 +471566,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 11200
-+          count: 2800
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471583,7 +471582,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2920
-+          count: 730
-         }
-       }
-       reward {
-@@ -471601,7 +471600,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5840
-+          count: 1460
-         }
-       }
-     }
-@@ -471616,7 +471615,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5840
-+          count: 1460
-         }
-       }
-       reward {
-@@ -471634,7 +471633,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 11680
-+          count: 2920
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471650,7 +471649,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3080
-+          count: 770
-         }
-       }
-       reward {
-@@ -471668,7 +471667,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6160
-+          count: 1540
-         }
-       }
-     }
-@@ -471683,7 +471682,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6160
-+          count: 1540
-         }
-       }
-       reward {
-@@ -471701,7 +471700,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 12320
-+          count: 3080
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471766,7 +471765,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 300
-         }
-       }
-       reward {
-@@ -471784,7 +471783,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2400
-+          count: 600
-         }
-       }
-     }
-@@ -471799,7 +471798,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2400
-+          count: 600
-         }
-       }
-       reward {
-@@ -471817,7 +471816,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 4800
-+          count: 1200
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471833,7 +471832,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3480
-+          count: 870
-         }
-       }
-       reward {
-@@ -471851,7 +471850,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6960
-+          count: 1740
-         }
-       }
-     }
-@@ -471866,7 +471865,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6960
-+          count: 1740
-         }
-       }
-       reward {
-@@ -471884,7 +471883,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 13920
-+          count: 3480
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471900,7 +471899,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -471918,7 +471917,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -471933,7 +471932,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -471951,7 +471950,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -471967,7 +471966,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -471985,7 +471984,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -472000,7 +471999,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -472018,7 +472017,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -472034,7 +472033,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -472052,7 +472051,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -472067,7 +472066,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -472085,7 +472084,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -472101,7 +472100,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 900
-         }
-       }
-       reward {
-@@ -472119,7 +472118,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-     }
-@@ -472134,7 +472133,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7200
-+          count: 1800
-         }
-       }
-       reward {
-@@ -472152,7 +472151,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 14400
-+          count: 3600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -472168,7 +472167,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1320
-+          count: 330
-         }
-       }
-       reward {
-@@ -472186,7 +472185,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-     }
-@@ -472201,7 +472200,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-       reward {
-@@ -472219,7 +472218,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5280
-+          count: 1320
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -472235,7 +472234,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1320
-+          count: 330
-         }
-       }
-       reward {
-@@ -472253,7 +472252,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-     }
-@@ -472268,7 +472267,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2640
-+          count: 660
-         }
-       }
-       reward {
-@@ -472286,7 +472285,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5280
-+          count: 1320
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -472302,7 +472301,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1480
-+          count: 370
-         }
-       }
-       reward {
-@@ -472320,7 +472319,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2960
-+          count: 740
-         }
-       }
-     }
-@@ -472335,7 +472334,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2960
-+          count: 740
-         }
-       }
-       reward {
-@@ -472353,7 +472352,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 5920
-+          count: 1480
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -472418,7 +472417,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1600
-+          count: 400
-         }
-       }
-       reward {
-@@ -472436,7 +472435,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3200
-+          count: 800
-         }
-       }
-     }
-@@ -472451,7 +472450,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3200
-+          count: 800
-         }
-       }
-       reward {
-@@ -472469,7 +472468,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6400
-+          count: 1600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -472485,7 +472484,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1720
-+          count: 430
-         }
-       }
-       reward {
-@@ -472503,7 +472502,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-     }
-@@ -472518,7 +472517,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-       reward {
-@@ -472536,7 +472535,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6880
-+          count: 1720
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -472552,7 +472551,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1720
-+          count: 430
-         }
-       }
-       reward {
-@@ -472570,7 +472569,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-     }
-@@ -472585,7 +472584,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3440
-+          count: 860
-         }
-       }
-       reward {
-@@ -472603,7 +472602,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 6880
-+          count: 1720
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -472619,7 +472618,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1880
-+          count: 470
-         }
-       }
-       reward {
-@@ -472637,7 +472636,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3760
-+          count: 940
-         }
-       }
-     }
-@@ -472652,7 +472651,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3760
-+          count: 940
-         }
-       }
-       reward {
-@@ -472670,7 +472669,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 7520
-+          count: 1880
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -477885,9 +477884,15 @@
-       sku: "bundle.ultrabeastraid.2024"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
+ template {
+-  template_id: "general2.ticket.3"
++  template_id: "N_DISPLAY_n_shirt_wcs2026"
+   data {
+-    template_id: "general2.ticket.3"
+-    iapItemDisplay {
+-      sku: "general2.ticket.3"
+-      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
 -      hidden: true
-       spriteId: "bundle.general.premiumbox.small.1"
-       title: "raiding_box"
-+      skuEnableTime: "2022-10-13T12:00:00"
-+      skuDisableTime: "2026-05-03T11:59:59"
-+      skuEnableTimeUtcMs: 1665662400000
-+      skuDisableTimeUtcMs: 1777809599000
-+      showDiscountTag: true
-+      showStrikethroughPrice: true
-+      totalValue: 785
+-      spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Tinkatink26_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2026-04-11T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1775926800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-tinkatink-community-day-2026-nologo.jpg"
+-      webstoreSkuId: "web-tinkatink-cd-deluxe"
+-      webstoreSkuPriceE6: 1990000
++    template_id: "N_DISPLAY_n_shirt_wcs2026"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_wcs2026_icon"
++      displayStringId: "avatar_shirt_wcsregional2026"
      }
    }
  }
-@@ -485904,13 +485909,12 @@
+ template {
+-  template_id: "general2.ticket.3.giftable"
++  template_id: "N_DISPLAY_n_shirt_10thanniversary-yellow"
+   data {
+-    template_id: "general2.ticket.3.giftable"
+-    iapItemDisplay {
+-      sku: "general2.ticket.3.giftable"
+-      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
+-      hidden: true
+-      spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Tinkatink26_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2026-04-11T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1775926800000
++    template_id: "N_DISPLAY_n_shirt_10thanniversary-yellow"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_10thanniversary-yellow_icon"
++      displayStringId: "avatar_shirt_10thanniversaryorange"
      }
    }
  }
--batch_id: 1777541514457
-+batch_id: 1777597418879
+@@ -480279,41 +480263,30 @@
+   }
+ }
+ template {
+-  template_id: "pgorelease.general2.ticket.3"
++  template_id: "N_DISPLAY_n_shirt_10thanniversary-beige"
+   data {
+-    template_id: "pgorelease.general2.ticket.3"
+-    iapItemDisplay {
+-      sku: "pgorelease.general2.ticket.3"
+-      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
+-      hidden: true
+-      spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Tinkatink26_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2026-04-11T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1775926800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-tinkatink-community-day-2026-nologo.jpg"
+-      webstoreSkuId: "web-tinkatink-cd-deluxe"
+-      webstoreSkuPriceE6: 1990000
++    template_id: "N_DISPLAY_n_shirt_10thanniversary-beige"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_10thanniversary-beige_icon"
++      displayStringId: "avatar_shirt_10thanniversarybeige"
+     }
+   }
+ }
+ template {
+-  template_id: "pgorelease.general2.ticket.3.giftable"
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_VISOR_2026"
+   data {
+-    template_id: "pgorelease.general2.ticket.3.giftable"
+-    iapItemDisplay {
+-      sku: "pgorelease.general2.ticket.3.giftable"
+-      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
+-      hidden: true
+-      spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CD_Tinkatink26_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2026-04-11T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1775926800000
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_VISOR_2026"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: 3341
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
+     }
+   }
+ }
+@@ -485909,7 +485882,117 @@
+     }
+   }
+ }
+-batch_id: 1777597418879
++template {
++  template_id: "N_DISPLAY_n_shirt_wcs2027"
++  data {
++    template_id: "N_DISPLAY_n_shirt_wcs2027"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_wcs2027_icon"
++      displayStringId: "avatar_shirt_wcsregional2027"
++    }
++  }
++}
++template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_VISOR_2026"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_VISOR_2026"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++    }
++  }
++}
++template {
++  template_id: "V0025_POKEMON_PIKACHU_VISOR_2026"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_VISOR_2026"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionIds: RAICHU
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      candyToEvolve: 50
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: 3341
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      eliteQuickMove: PRESENT_FAST
++      eliteCinematicMove: SURF
++      eliteCinematicMove: THUNDER
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++batch_id: 1777731954676
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
- experiment_id: 170
- experiment_id: 180
--experiment_id: 198
- experiment_id: 300
- experiment_id: 320
- experiment_id: 351
-@@ -485927,6 +485931,7 @@
- experiment_id: 1205
- experiment_id: 1699
- experiment_id: 1816
-+experiment_id: 2221
- experiment_id: 2272
- experiment_id: 2297
- experiment_id: 2600
-@@ -485940,6 +485945,7 @@
+@@ -485945,15 +486028,15 @@
  experiment_id: 3124
  experiment_id: 3126
  experiment_id: 3136
-+experiment_id: 3163
+-experiment_id: 3163
++experiment_id: 3176
  experiment_id: 3195
  experiment_id: 3929
  experiment_id: 3930
+ experiment_id: 3931
++experiment_id: 3933
+ experiment_id: 3934
+ experiment_id: 3937
+ experiment_id: 3938
+-experiment_id: 4924
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+@@ -485966,6 +486049,7 @@
+ experiment_id: 5514
+ experiment_id: 6075
+ experiment_id: 7020
++experiment_id: 7022
+ experiment_id: 7023
+ experiment_id: 8916
+ experiment_id: 8918
