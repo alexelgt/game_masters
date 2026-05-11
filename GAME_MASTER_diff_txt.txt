@@ -1,97 +1,102 @@
---- GAME_MASTER_old.txt	2026-05-09 11:11:26.150283008 +0200
-+++ GAME_MASTER.txt	2026-05-10 10:37:02.467319938 +0200
-@@ -82205,25 +82205,6 @@
-   }
- }
- template {
--  template_id: "general2.ticket.3"
--  data {
--    template_id: "general2.ticket.3"
--    iapItemDisplay {
--      sku: "pgorelease.general2.ticket.3"
--      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
--      sortOrder: 2
--      spriteId: "general1.ticket.2"
--      title: "general1.ticket_CD_Lechonk26_title"
--      skuEnableTime: "2019-03-14T08:00:00"
--      skuDisableTime: "2026-05-09T17:00:00"
--      skuEnableTimeUtcMs: 1552550400000
--      skuDisableTimeUtcMs: 1778346000000
--      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-lechonk-community-day-2026-nologo.jpg"
--      useEnvironmentPrefix: true
--    }
--  }
--}
--template {
-   template_id: "MAY1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
-   data {
-     template_id: "MAY1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
-@@ -153085,7 +153066,7 @@
+--- GAME_MASTER_old.txt	2026-05-10 10:37:02.467319938 +0200
++++ GAME_MASTER.txt	2026-05-11 18:15:24.437314595 +0200
+@@ -153066,7 +153066,7 @@
        category: ITEM_CATEGORY_INCENSE
        dropTrainerLevel: 1
        incense {
--        incenseLifetimeSeconds: 3600
-+        incenseLifetimeSeconds: 7200
+-        incenseLifetimeSeconds: 7200
++        incenseLifetimeSeconds: 3600
        }
      }
    }
-@@ -445917,6 +445898,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      eliteQuickMove: MUD_SLAP_FAST
-       raidBossDistanceOffset: 2
-       ibfc {
-       }
-@@ -445984,6 +445966,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      eliteQuickMove: MUD_SLAP_FAST
-       raidBossDistanceOffset: 2
-       ibfc {
-       }
-@@ -446051,6 +446034,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      eliteQuickMove: MUD_SLAP_FAST
-       raidBossDistanceOffset: 2
-       ibfc {
-       }
-@@ -484923,7 +484907,16 @@
+@@ -465882,13 +465882,10 @@
+       sku: "bundle.cd2022.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
++      hidden: true
+       sale: true
+-      spriteId: "bundle.general4.small.1"
+-      title: "bundle.general4.small.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2026-05-10T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1778457599000
++      spriteId: "bundle.halloween.small.1"
++      title: "bundle.halloween.small.1_title"
      }
    }
  }
--batch_id: 1778280703428
-+template {
-+  template_id: "EVENT_SERVER_SETTINGS"
-+  data {
-+    template_id: "EVENT_SERVER_SETTINGS"
-+    293 {
-+      1: "484769a62f4e0466590d0664cf05f427914e6cdaba72145abdf07651bba66698"
-+    }
-+  }
-+}
-+batch_id: 1778336762931
+@@ -465900,13 +465897,10 @@
+       sku: "bundle.cd2022.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 2
++      hidden: true
+       sale: true
+-      spriteId: "bundle.general1.medium.1"
+-      title: "bundle.general1.medium.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2026-05-10T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1778457599000
++      spriteId: "bundle.halloween.adventure.1"
++      title: "bundle.halloween.adventure.1_title"
+     }
+   }
+ }
+@@ -476882,17 +476876,17 @@
+         bonusBoxes {
+           text: "quest_catch_pokemon_singular"
+           iconType: SPAWN_UNKNOWN
+-          quantity: 5
++          quantity: 10
+         }
+         bonusBoxes {
+           text: "quest_hatch_egg_singular"
+           iconType: EGG
+-          quantity: 40
++          quantity: 80
+         }
+         bonusBoxes {
+           text: "quest_win_raid_singular"
+           iconType: RAID
+-          quantity: 100
++          quantity: 200
+         }
+         eventPassTrackUpgradeDescriptions {
+           passTrackUpgradeHeaderDescription: "season_pass_may2026_track_upgrade_header_description"
+@@ -484916,7 +484910,7 @@
+     }
+   }
+ }
+-batch_id: 1778336762931
++batch_id: 1778461688775
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -484959,6 +484952,7 @@
+@@ -484942,7 +484936,6 @@
+ experiment_id: 2297
+ experiment_id: 2600
+ experiment_id: 2650
+-experiment_id: 3025
+ experiment_id: 3032
+ experiment_id: 3033
+ experiment_id: 3063
+@@ -484951,8 +484944,8 @@
+ experiment_id: 3117
  experiment_id: 3125
  experiment_id: 3126
- experiment_id: 3137
-+experiment_id: 3177
+-experiment_id: 3137
+-experiment_id: 3177
++experiment_id: 3138
++experiment_id: 3151
  experiment_id: 3195
  experiment_id: 3401
  experiment_id: 4998
-@@ -484975,7 +484969,8 @@
+@@ -484969,6 +484962,7 @@
  experiment_id: 7023
  experiment_id: 7024
  experiment_id: 7027
--experiment_id: 8673
-+experiment_id: 8674
-+experiment_id: 8920
++experiment_id: 7079
+ experiment_id: 8674
+ experiment_id: 8920
  experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
