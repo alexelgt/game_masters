@@ -1,102 +1,5977 @@
---- GAME_MASTER_old.txt	2026-05-10 10:37:02.467319938 +0200
-+++ GAME_MASTER.txt	2026-05-11 18:15:24.437314595 +0200
-@@ -153066,7 +153066,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 1
-       incense {
--        incenseLifetimeSeconds: 7200
-+        incenseLifetimeSeconds: 3600
+--- GAME_MASTER_old.txt	2026-05-15 12:15:02.356517986 +0200
++++ GAME_MASTER.txt	2026-05-17 12:11:05.574731410 +0200
+@@ -86,6 +86,102 @@
+   }
+ }
+ template {
++  template_id: "AMUSE_BOUCHE_WELCOME_BACK_REWARDS"
++  data {
++    template_id: "AMUSE_BOUCHE_WELCOME_BACK_REWARDS"
++    290 {
++      1: 1
++      2: 1
++      3 {
++        1 {
++          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_0"
++          2 {
++            1: 2
++            3 {
++              1: 1
++              2: 5
++            }
++          }
++        }
++        1 {
++          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_1"
++          2 {
++            1: 2
++            3 {
++              1: 301
++              2: 1
++            }
++          }
++        }
++        1 {
++          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_2"
++          2 {
++            1: 2
++            3 {
++              1: 2
++              2: 5
++            }
++          }
++        }
++        1 {
++          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_3"
++          2 {
++            1: 2
++            3 {
++              1: 501
++              2: 1
++            }
++          }
++        }
++        1 {
++          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_4"
++          2 {
++            1: 2
++            3 {
++              1: 3
++              2: 5
++            }
++          }
++        }
++        1 {
++          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_5"
++          2 {
++            1: 2
++            3 {
++              1: 902
++              2: 1
++            }
++          }
++        }
++        1 {
++          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_6"
++          2 {
++            1: 2
++            3 {
++              1: 1402
++              2: 1
++            }
++          }
++          2 {
++            1: 2
++            3 {
++              1: 709
++              2: 1
++            }
++          }
++          2 {
++            1: 2
++            3 {
++              1: 1106
++              2: 1
++            }
++          }
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "ANDROID_SENSORS_ROLL_BACK"
+   data {
+     template_id: "ANDROID_SENSORS_ROLL_BACK"
+@@ -35890,6 +35986,21 @@
+   }
+ }
+ template {
++  template_id: "BADGE_EVENT_0190"
++  data {
++    template_id: "BADGE_EVENT_0190"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0190
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0193"
+   data {
+     template_id: "BADGE_EVENT_0193"
+@@ -42992,6 +43103,36 @@
+   }
+ }
+ template {
++  template_id: "BADGE_REDUCED_ENTRY_FLOW_CONTROL"
++  data {
++    template_id: "BADGE_REDUCED_ENTRY_FLOW_CONTROL"
++    badgeSettings {
++      badgeType: 6217
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_REDUCED_ENTRY_FLOW_ROLLOUT"
++  data {
++    template_id: "BADGE_REDUCED_ENTRY_FLOW_ROLLOUT"
++    badgeSettings {
++      badgeType: 6216
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_ROCKET_GIOVANNI_DEFEATED"
+   data {
+     template_id: "BADGE_ROCKET_GIOVANNI_DEFEATED"
+@@ -50525,6 +50666,7 @@
+       seasonEndTimeTimestamp: 1764709200000
+       seasonEndTimeTimestamp: 1772571600000
+       seasonEndTimeTimestamp: 1780430400000
++      seasonEndTimeTimestamp: 1788897600000
+       seasonEndTimeTimestamp: 4070980800000
+       ratingAdjustmentPercentage: 0.9
+       rankingAdjustmentPercentage: 0.01
+@@ -50606,6 +50748,35 @@
+   }
+ }
+ template {
++  template_id: "COMBAT_LEAGUE_DEFAULT_MASTER_NPC"
++  data {
++    template_id: "COMBAT_LEAGUE_DEFAULT_MASTER_NPC"
++    combat_league {
++      title: "combat_master_league"
++      enabled: true
++      unlockCondition {
++        type: WITH_POKEMON_CP_LIMIT
++        minPokemonCount: 3
++        withPokemonCpLimit {
++          minCp: 2500
++          maxCp: 50000
++        }
++      }
++      pokemonCondition {
++        type: WITH_POKEMON_CP_LIMIT
++        withPokemonCpLimit {
++          maxCp: 10000
++        }
++      }
++      iconUrl: "https://storage.googleapis.com/prod-public-images/pogo_master_league.png"
++      pokemonCount: 3
++      badgeType: BADGE_MASTER_LEAGUE
++      leagueType: STANDARD
++      allowTempEvos: true
++    }
++  }
++}
++template {
+   template_id: "COMBAT_LEAGUE_DEFAULT_ULTRA"
+   data {
+     template_id: "COMBAT_LEAGUE_DEFAULT_ULTRA"
+@@ -62558,6 +62729,1194 @@
+   }
+ }
+ template {
++  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_NAIC"
++  data {
++    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_NAIC"
++    combat_league {
++      title: "great_league_championship_series_2026"
++      enabled: true
++      unlockCondition {
++        type: WITH_UNIQUE_POKEMON
++        minPokemonCount: 3
++      }
++      pokemonCondition {
++        type: WITH_POKEMON_CP_LIMIT
++        withPokemonCpLimit {
++          maxCp: 1500
++        }
++      }
++      pokemonCondition {
++        type: WITH_UNIQUE_POKEMON
++      }
++      pokemonCondition {
++        type: POKEMON_WHITELIST
++        pokemonWhiteList {
++          pokemon {
++            id: SQUIRTLE
++          }
++          pokemon {
++            id: WARTORTLE
++          }
++          pokemon {
++            id: BLASTOISE
++          }
++          pokemon {
++            id: PIDGEY
++          }
++          pokemon {
++            id: PIDGEOTTO
++          }
++          pokemon {
++            id: PIDGEOT
++          }
++          pokemon {
++            id: RATTATA
++            forms: FORM_UNSET
++            forms: RATTATA_NORMAL
++          }
++          pokemon {
++            id: RATICATE
++            forms: FORM_UNSET
++            forms: RATICATE_NORMAL
++          }
++          pokemon {
++            id: SPEAROW
++          }
++          pokemon {
++            id: FEAROW
++          }
++          pokemon {
++            id: RAICHU
++            forms: RAICHU_ALOLA
++          }
++          pokemon {
++            id: CLEFAIRY
++          }
++          pokemon {
++            id: NINETALES
++            forms: NINETALES_ALOLA
++          }
++          pokemon {
++            id: JIGGLYPUFF
++          }
++          pokemon {
++            id: MEOWTH
++            forms: FORM_UNSET
++            forms: MEOWTH_NORMAL
++          }
++          pokemon {
++            id: PERSIAN
++            forms: FORM_UNSET
++            forms: PERSIAN_NORMAL
++          }
++          pokemon {
++            id: PSYDUCK
++          }
++          pokemon {
++            id: GOLDUCK
++          }
++          pokemon {
++            id: POLIWAG
++          }
++          pokemon {
++            id: POLIWHIRL
++          }
++          pokemon {
++            id: ABRA
++          }
++          pokemon {
++            id: KADABRA
++          }
++          pokemon {
++            id: ALAKAZAM
++          }
++          pokemon {
++            id: TENTACOOL
++          }
++          pokemon {
++            id: TENTACRUEL
++          }
++          pokemon {
++            id: PONYTA
++            forms: PONYTA_GALARIAN
++          }
++          pokemon {
++            id: RAPIDASH
++            forms: RAPIDASH_GALARIAN
++          }
++          pokemon {
++            id: SLOWPOKE
++          }
++          pokemon {
++            id: SLOWBRO
++          }
++          pokemon {
++            id: DODUO
++          }
++          pokemon {
++            id: DODRIO
++          }
++          pokemon {
++            id: SEEL
++          }
++          pokemon {
++            id: DEWGONG
++          }
++          pokemon {
++            id: SHELLDER
++          }
++          pokemon {
++            id: CLOYSTER
++          }
++          pokemon {
++            id: DROWZEE
++          }
++          pokemon {
++            id: HYPNO
++          }
++          pokemon {
++            id: KRABBY
++          }
++          pokemon {
++            id: KINGLER
++          }
++          pokemon {
++            id: WEEZING
++            forms: WEEZING_GALARIAN
++          }
++          pokemon {
++            id: KANGASKHAN
++          }
++          pokemon {
++            id: HORSEA
++          }
++          pokemon {
++            id: SEADRA
++          }
++          pokemon {
++            id: GOLDEEN
++          }
++          pokemon {
++            id: SEAKING
++          }
++          pokemon {
++            id: STARYU
++          }
++          pokemon {
++            id: STARMIE
++          }
++          pokemon {
++            id: MR_MIME
++          }
++          pokemon {
++            id: JYNX
++          }
++          pokemon {
++            id: TAUROS
++            forms: FORM_UNSET
++            forms: TAUROS_NORMAL
++            forms: TAUROS_PALDEA_AQUA
++          }
++          pokemon {
++            id: MAGIKARP
++          }
++          pokemon {
++            id: GYARADOS
++          }
++          pokemon {
++            id: LAPRAS
++          }
++          pokemon {
++            id: EEVEE
++          }
++          pokemon {
++            id: VAPOREON
++          }
++          pokemon {
++            id: PORYGON
++          }
++          pokemon {
++            id: OMANYTE
++          }
++          pokemon {
++            id: OMASTAR
++          }
++          pokemon {
++            id: KABUTO
++          }
++          pokemon {
++            id: KABUTOPS
++          }
++          pokemon {
++            id: SNORLAX
++          }
++          pokemon {
++            id: ARTICUNO
++            forms: ARTICUNO_GALARIAN
++          }
++          pokemon {
++            id: MEWTWO
++          }
++          pokemon {
++            id: MEW
++          }
++          pokemon {
++            id: TOTODILE
++          }
++          pokemon {
++            id: CROCONAW
++          }
++          pokemon {
++            id: FERALIGATR
++          }
++          pokemon {
++            id: SENTRET
++          }
++          pokemon {
++            id: HOOTHOOT
++          }
++          pokemon {
++            id: NOCTOWL
++          }
++          pokemon {
++            id: CLEFFA
++          }
++          pokemon {
++            id: IGGLYBUFF
++          }
++          pokemon {
++            id: TOGEPI
++          }
++          pokemon {
++            id: TOGETIC
++          }
++          pokemon {
++            id: NATU
++          }
++          pokemon {
++            id: XATU
++          }
++          pokemon {
++            id: MARILL
++          }
++          pokemon {
++            id: AZUMARILL
++          }
++          pokemon {
++            id: POLITOED
++          }
++          pokemon {
++            id: AIPOM
++          }
++          pokemon {
++            id: WOOPER
++            forms: FORM_UNSET
++            forms: WOOPER_NORMAL
++          }
++          pokemon {
++            id: QUAGSIRE
++          }
++          pokemon {
++            id: ESPEON
++          }
++          pokemon {
++            id: SLOWKING
++          }
++          pokemon {
++            id: UNOWN
++          }
++          pokemon {
++            id: WOBBUFFET
++          }
++          pokemon {
++            id: GIRAFARIG
++          }
++          pokemon {
++            id: DUNSPARCE
++          }
++          pokemon {
++            id: SNUBBULL
++          }
++          pokemon {
++            id: GRANBULL
++          }
++          pokemon {
++            id: QWILFISH
++            forms: FORM_UNSET
++            forms: QWILFISH_NORMAL
++          }
++          pokemon {
++            id: TEDDIURSA
++          }
++          pokemon {
++            id: URSARING
++          }
++          pokemon {
++            id: CORSOLA
++            forms: FORM_UNSET
++            forms: CORSOLA_NORMAL
++          }
++          pokemon {
++            id: REMORAID
++          }
++          pokemon {
++            id: OCTILLERY
++          }
++          pokemon {
++            id: MANTINE
++          }
++          pokemon {
++            id: KINGDRA
++          }
++          pokemon {
++            id: PORYGON2
++          }
++          pokemon {
++            id: STANTLER
++          }
++          pokemon {
++            id: SMEARGLE
++          }
++          pokemon {
++            id: SMOOCHUM
++          }
++          pokemon {
++            id: MILTANK
++          }
++          pokemon {
++            id: BLISSEY
++          }
++          pokemon {
++            id: SUICUNE
++          }
++          pokemon {
++            id: MUDKIP
++          }
++          pokemon {
++            id: MARSHTOMP
++          }
++          pokemon {
++            id: SWAMPERT
++          }
++          pokemon {
++            id: ZIGZAGOON
++            forms: FORM_UNSET
++            forms: ZIGZAGOON_NORMAL
++          }
++          pokemon {
++            id: LINOONE
++            forms: FORM_UNSET
++            forms: LINOONE_NORMAL
++          }
++          pokemon {
++            id: TAILLOW
++          }
++          pokemon {
++            id: SWELLOW
++          }
++          pokemon {
++            id: WINGULL
++          }
++          pokemon {
++            id: PELIPPER
++          }
++          pokemon {
++            id: RALTS
++          }
++          pokemon {
++            id: KIRLIA
++          }
++          pokemon {
++            id: GARDEVOIR
++          }
++          pokemon {
++            id: SURSKIT
++          }
++          pokemon {
++            id: SLAKOTH
++          }
++          pokemon {
++            id: VIGOROTH
++          }
++          pokemon {
++            id: SLAKING
++          }
++          pokemon {
++            id: WHISMUR
++          }
++          pokemon {
++            id: LOUDRED
++          }
++          pokemon {
++            id: EXPLOUD
++          }
++          pokemon {
++            id: AZURILL
++          }
++          pokemon {
++            id: SKITTY
++          }
++          pokemon {
++            id: DELCATTY
++          }
++          pokemon {
++            id: MEDITITE
++          }
++          pokemon {
++            id: WAILMER
++          }
++          pokemon {
++            id: WAILORD
++          }
++          pokemon {
++            id: SPOINK
++          }
++          pokemon {
++            id: GRUMPIG
++          }
++          pokemon {
++            id: SPINDA
++          }
++          pokemon {
++            id: SWABLU
++          }
++          pokemon {
++            id: ZANGOOSE
++          }
++          pokemon {
++            id: LUNATONE
++          }
++          pokemon {
++            id: SOLROCK
++          }
++          pokemon {
++            id: BARBOACH
++          }
++          pokemon {
++            id: WHISCASH
++          }
++          pokemon {
++            id: CORPHISH
++          }
++          pokemon {
++            id: BALTOY
++          }
++          pokemon {
++            id: FEEBAS
++          }
++          pokemon {
++            id: MILOTIC
++          }
++          pokemon {
++            id: CASTFORM
++            forms: FORM_UNSET
++            forms: CASTFORM_NORMAL
++            forms: CASTFORM_RAINY
++          }
++          pokemon {
++            id: KECLEON
++          }
++          pokemon {
++            id: CHIMECHO
++          }
++          pokemon {
++            id: WYNAUT
++          }
++          pokemon {
++            id: SPHEAL
++          }
++          pokemon {
++            id: SEALEO
++          }
++          pokemon {
++            id: WALREIN
++          }
++          pokemon {
++            id: CLAMPERL
++          }
++          pokemon {
++            id: HUNTAIL
++          }
++          pokemon {
++            id: GOREBYSS
++          }
++          pokemon {
++            id: RELICANTH
++          }
++          pokemon {
++            id: LUVDISC
++          }
++          pokemon {
++            id: LATIAS
++          }
++          pokemon {
++            id: LATIOS
++          }
++          pokemon {
++            id: KYOGRE
++          }
++          pokemon {
++            id: DEOXYS
++          }
++          pokemon {
++            id: PIPLUP
++          }
++          pokemon {
++            id: PRINPLUP
++          }
++          pokemon {
++            id: STARLY
++          }
++          pokemon {
++            id: STARAVIA
++          }
++          pokemon {
++            id: STARAPTOR
++          }
++          pokemon {
++            id: BIDOOF
++          }
++          pokemon {
++            id: BIBAREL
++          }
++          pokemon {
++            id: BUIZEL
++          }
++          pokemon {
++            id: FLOATZEL
++          }
++          pokemon {
++            id: SHELLOS
++          }
++          pokemon {
++            id: AMBIPOM
++          }
++          pokemon {
++            id: BUNEARY
++          }
++          pokemon {
++            id: LOPUNNY
++          }
++          pokemon {
++            id: GLAMEOW
++          }
++          pokemon {
++            id: PURUGLY
++          }
++          pokemon {
++            id: CHINGLING
++          }
++          pokemon {
++            id: MIME_JR
++          }
++          pokemon {
++            id: HAPPINY
++          }
++          pokemon {
++            id: CHATOT
++          }
++          pokemon {
++            id: MUNCHLAX
++          }
++          pokemon {
++            id: FINNEON
++          }
++          pokemon {
++            id: LUMINEON
++          }
++          pokemon {
++            id: MANTYKE
++          }
++          pokemon {
++            id: TOGEKISS
++          }
++          pokemon {
++            id: PORYGON_Z
++          }
++          pokemon {
++            id: GALLADE
++          }
++          pokemon {
++            id: UXIE
++          }
++          pokemon {
++            id: MESPRIT
++          }
++          pokemon {
++            id: AZELF
++          }
++          pokemon {
++            id: PALKIA
++          }
++          pokemon {
++            id: REGIGIGAS
++          }
++          pokemon {
++            id: PHIONE
++          }
++          pokemon {
++            id: MANAPHY
++          }
++          pokemon {
++            id: ARCEUS
++            forms: FORM_UNSET
++            forms: ARCEUS_FAIRY
++            forms: ARCEUS_NORMAL
++            forms: ARCEUS_PSYCHIC
++            forms: ARCEUS_WATER
++          }
++          pokemon {
++            id: VICTINI
++          }
++          pokemon {
++            id: OSHAWOTT
++          }
++          pokemon {
++            id: DEWOTT
++          }
++          pokemon {
++            id: SAMUROTT
++            forms: FORM_UNSET
++            forms: SAMUROTT_NORMAL
++          }
++          pokemon {
++            id: PATRAT
++          }
++          pokemon {
++            id: WATCHOG
++          }
++          pokemon {
++            id: LILLIPUP
++          }
++          pokemon {
++            id: HERDIER
++          }
++          pokemon {
++            id: STOUTLAND
++          }
++          pokemon {
++            id: PANPOUR
++          }
++          pokemon {
++            id: SIMIPOUR
++          }
++          pokemon {
++            id: MUNNA
++          }
++          pokemon {
++            id: MUSHARNA
++          }
++          pokemon {
++            id: PIDOVE
++          }
++          pokemon {
++            id: TRANQUILL
++          }
++          pokemon {
++            id: UNFEZANT
++          }
++          pokemon {
++            id: WOOBAT
++          }
++          pokemon {
++            id: SWOOBAT
++          }
++          pokemon {
++            id: AUDINO
++          }
++          pokemon {
++            id: TYMPOLE
++          }
++          pokemon {
++            id: PALPITOAD
++          }
++          pokemon {
++            id: SEISMITOAD
++          }
++          pokemon {
++            id: BASCULIN
++          }
++          pokemon {
++            id: DARMANITAN
++            forms: DARMANITAN_ZEN
++          }
++          pokemon {
++            id: SIGILYPH
++          }
++          pokemon {
++            id: TIRTOUGA
++          }
++          pokemon {
++            id: CARRACOSTA
++          }
++          pokemon {
++            id: ZORUA
++            forms: ZORUA_HISUIAN
++          }
++          pokemon {
++            id: ZOROARK
++            forms: ZOROARK_HISUIAN
++          }
++          pokemon {
++            id: MINCCINO
++          }
++          pokemon {
++            id: CINCCINO
++          }
++          pokemon {
++            id: GOTHITA
++          }
++          pokemon {
++            id: GOTHORITA
++          }
++          pokemon {
++            id: GOTHITELLE
++          }
++          pokemon {
++            id: SOLOSIS
++          }
++          pokemon {
++            id: DUOSION
++          }
++          pokemon {
++            id: REUNICLUS
++          }
++          pokemon {
++            id: DUCKLETT
++          }
++          pokemon {
++            id: SWANNA
++          }
++          pokemon {
++            id: FRILLISH
++          }
++          pokemon {
++            id: ALOMOMOLA
++          }
++          pokemon {
++            id: ELGYEM
++          }
++          pokemon {
++            id: BEHEEYEM
++          }
++          pokemon {
++            id: BOUFFALANT
++          }
++          pokemon {
++            id: RUFFLET
++          }
++          pokemon {
++            id: BRAVIARY
++          }
++          pokemon {
++            id: KELDEO
++          }
++          pokemon {
++            id: MELOETTA
++          }
++          pokemon {
++            id: DELPHOX
++          }
++          pokemon {
++            id: FROAKIE
++          }
++          pokemon {
++            id: FROGADIER
++          }
++          pokemon {
++            id: BUNNELBY
++          }
++          pokemon {
++            id: FLETCHLING
++          }
++          pokemon {
++            id: LITLEO
++          }
++          pokemon {
++            id: PYROAR
++          }
++          pokemon {
++            id: FLABEBE
++          }
++          pokemon {
++            id: FLOETTE
++          }
++          pokemon {
++            id: FLORGES
++          }
++          pokemon {
++            id: FURFROU
++          }
++          pokemon {
++            id: ESPURR
++          }
++          pokemon {
++            id: MEOWSTIC
++          }
++          pokemon {
++            id: SPRITZEE
++          }
++          pokemon {
++            id: AROMATISSE
++          }
++          pokemon {
++            id: SWIRLIX
++          }
++          pokemon {
++            id: SLURPUFF
++          }
++          pokemon {
++            id: BINACLE
++          }
++          pokemon {
++            id: BARBARACLE
++          }
++          pokemon {
++            id: SKRELP
++          }
++          pokemon {
++            id: CLAUNCHER
++          }
++          pokemon {
++            id: CLAWITZER
++          }
++          pokemon {
++            id: HELIOPTILE
++          }
++          pokemon {
++            id: HELIOLISK
++          }
++          pokemon {
++            id: SYLVEON
++          }
++          pokemon {
++            id: XERNEAS
++          }
++          pokemon {
++            id: DIANCIE
++          }
++          pokemon {
++            id: HOOPA
++            forms: FORM_UNSET
++            forms: HOOPA_CONFINED
++          }
++          pokemon {
++            id: VOLCANION
++          }
++          pokemon {
++            id: POPPLIO
++          }
++          pokemon {
++            id: BRIONNE
++          }
++          pokemon {
++            id: PRIMARINA
++          }
++          pokemon {
++            id: PIKIPEK
++          }
++          pokemon {
++            id: TRUMBEAK
++          }
++          pokemon {
++            id: TOUCANNON
++          }
++          pokemon {
++            id: YUNGOOS
++          }
++          pokemon {
++            id: GUMSHOOS
++          }
++          pokemon {
++            id: ORICORIO
++            forms: ORICORIO_PAU
++          }
++          pokemon {
++            id: CUTIEFLY
++          }
++          pokemon {
++            id: RIBOMBEE
++          }
++          pokemon {
++            id: WISHIWASHI
++          }
++          pokemon {
++            id: MAREANIE
++          }
++          pokemon {
++            id: DEWPIDER
++          }
++          pokemon {
++            id: STUFFUL
++          }
++          pokemon {
++            id: BEWEAR
++          }
++          pokemon {
++            id: COMFEY
++          }
++          pokemon {
++            id: WIMPOD
++          }
++          pokemon {
++            id: PYUKUMUKU
++          }
++          pokemon {
++            id: TYPE_NULL
++          }
++          pokemon {
++            id: SILVALLY
++            forms: FORM_UNSET
++            forms: SILVALLY_FAIRY
++            forms: SILVALLY_NORMAL
++            forms: SILVALLY_PSYCHIC
++            forms: SILVALLY_WATER
++          }
++          pokemon {
++            id: KOMALA
++          }
++          pokemon {
++            id: BRUXISH
++          }
++          pokemon {
++            id: DRAMPA
++          }
++          pokemon {
++            id: TAPU_KOKO
++          }
++          pokemon {
++            id: TAPU_LELE
++          }
++          pokemon {
++            id: TAPU_FINI
++          }
++          pokemon {
++            id: COSMOG
++          }
++          pokemon {
++            id: COSMOEM
++          }
++          pokemon {
++            id: LUNALA
++          }
++          pokemon {
++            id: NECROZMA
++            forms: FORM_UNSET
++            forms: NECROZMA_DAWN_WINGS
++            forms: NECROZMA_NORMAL
++            forms: NECROZMA_ULTRA
++          }
++          pokemon {
++            id: SOBBLE
++          }
++          pokemon {
++            id: DRIZZILE
++          }
++          pokemon {
++            id: INTELEON
++          }
++          pokemon {
++            id: SKWOVET
++          }
++          pokemon {
++            id: DOTTLER
++          }
++          pokemon {
++            id: ORBEETLE
++          }
++          pokemon {
++            id: WOOLOO
++          }
++          pokemon {
++            id: DUBWOOL
++          }
++          pokemon {
++            id: CHEWTLE
++          }
++          pokemon {
++            id: DREDNAW
++          }
++          pokemon {
++            id: CRAMORANT
++          }
++          pokemon {
++            id: ARROKUDA
++          }
++          pokemon {
++            id: BARRASKEWDA
++          }
++          pokemon {
++            id: HATENNA
++          }
++          pokemon {
++            id: HATTREM
++          }
++          pokemon {
++            id: HATTERENE
++          }
++          pokemon {
++            id: MR_RIME
++          }
++          pokemon {
++            id: MILCERY
++          }
++          pokemon {
++            id: ALCREMIE
++          }
++          pokemon {
++            id: INDEEDEE
++          }
++          pokemon {
++            id: DRACOVISH
++          }
++          pokemon {
++            id: ARCTOVISH
++          }
++          pokemon {
++            id: ZACIAN
++            forms: ZACIAN_HERO
++          }
++          pokemon {
++            id: URSHIFU
++            forms: URSHIFU_RAPID_STRIKE
++          }
++          pokemon {
++            id: CALYREX
++            forms: CALYREX_ICE_RIDER
++            forms: CALYREX_SHADOW_RIDER
++          }
++          pokemon {
++            id: WYRDEER
++          }
++          pokemon {
++            id: URSALUNA
++          }
++          pokemon {
++            id: BASCULEGION
++          }
++          pokemon {
++            id: ENAMORUS
++          }
++          pokemon {
++            id: QUAXLY
++          }
++          pokemon {
++            id: QUAXWELL
++          }
++          pokemon {
++            id: QUAQUAVAL
++          }
++          pokemon {
++            id: LECHONK
++          }
++          pokemon {
++            id: OINKOLOGNE
++          }
++          pokemon {
++            id: TANDEMAUS
++          }
++          pokemon {
++            id: MAUSHOLD
++          }
++          pokemon {
++            id: FIDOUGH
++          }
++          pokemon {
++            id: DACHSBUN
++          }
++          pokemon {
++            id: SQUAWKABILLY
++          }
++          pokemon {
++            id: ARMAROUGE
++          }
++          pokemon {
++            id: SHROODLE
++          }
++          pokemon {
++            id: GRAFAIAI
++          }
++          pokemon {
++            id: RABSCA
++          }
++          pokemon {
++            id: FLITTLE
++          }
++          pokemon {
++            id: ESPATHRA
++          }
++          pokemon {
++            id: WIGLETT
++          }
++          pokemon {
++            id: WUGTRIO
++          }
++          pokemon {
++            id: FINIZEN
++          }
++          pokemon {
++            id: PALAFIN
++          }
++          pokemon {
++            id: CYCLIZAR
++          }
++          pokemon {
++            id: VELUZA
++          }
++          pokemon {
++            id: DONDOZO
++          }
++          pokemon {
++            id: TATSUGIRI
++          }
++          pokemon {
++            id: FARIGIRAF
++          }
++          pokemon {
++            id: DUDUNSPARCE
++          }
++          pokemon {
++            id: SCREAMTAIL
++          }
++          pokemon {
++            id: FLUTTERMANE
++          }
++          pokemon {
++            id: IRONBUNDLE
++          }
++          pokemon {
++            id: IRONVALIANT
++          }
++          pokemon {
++            id: WALKINGWAKE
++          }
++          pokemon {
++            id: MUNKIDORI
++          }
++          pokemon {
++            id: FEZANDIPITI
++          }
++          pokemon {
++            id: IRONBOULDER
++          }
++          pokemon {
++            id: TERAPAGOS
++            forms: FORM_UNSET
++            forms: TERAPAGOS_NORMAL
++          }
++        }
++      }
++      iconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2FGBL_Pokemon_GO_Championship_Series_Logo.png"
++      pokemonCount: 3
++      bannedPokemon: DITTO
++      bannedPokemon: SHEDINJA
++      badgeType: BADGE_GREAT_LEAGUE
++      battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
++      leagueType: STANDARD
++    }
++  }
++}
++template {
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_SERIES"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_SERIES"
+@@ -70005,6 +71364,38 @@
+   }
+ }
+ template {
++  template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_MEGAS"
++  data {
++    template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_MEGAS"
++    combat_league {
++      title: "great_league_mega_title"
++      enabled: true
++      unlockCondition {
++        type: WITH_UNIQUE_POKEMON
++        minPokemonCount: 3
++      }
++      pokemonCondition {
++        type: WITH_POKEMON_CP_LIMIT
++        withPokemonCpLimit {
++          maxCp: 1500
++        }
++      }
++      pokemonCondition {
++        type: WITH_UNIQUE_POKEMON
++      }
++      iconUrl: "https://storage.googleapis.com/prod-public-images/pogo_great_league.png"
++      pokemonCount: 3
++      bannedPokemon: DITTO
++      bannedPokemon: SHEDINJA
++      bannedPokemon: MIMIKYU
++      badgeType: BADGE_GREAT_LEAGUE
++      battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
++      leagueType: STANDARD
++      allowTempEvos: true
++    }
++  }
++}
++template {
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_PVP_NEXT_PREVIEW"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_PVP_NEXT_PREVIEW"
+@@ -74601,7 +75992,7 @@
+       pokemonCondition {
+         type: WITH_POKEMON_CP_LIMIT
+         withPokemonCpLimit {
+-          maxCp: 7000
++          maxCp: 9999
+         }
+       }
+       pokemonCondition {
+@@ -75287,6 +76678,38 @@
+   }
+ }
+ template {
++  template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_MEGAS"
++  data {
++    template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_MEGAS"
++    combat_league {
++      title: "ultra_league_mega_title"
++      enabled: true
++      unlockCondition {
++        type: WITH_UNIQUE_POKEMON
++        minPokemonCount: 3
++      }
++      pokemonCondition {
++        type: WITH_POKEMON_CP_LIMIT
++        withPokemonCpLimit {
++          maxCp: 2500
++        }
++      }
++      pokemonCondition {
++        type: WITH_UNIQUE_POKEMON
++      }
++      iconUrl: "https://storage.googleapis.com/prod-public-images/pogo_ultra_league.png"
++      pokemonCount: 3
++      bannedPokemon: DITTO
++      bannedPokemon: SHEDINJA
++      bannedPokemon: MIMIKYU
++      badgeType: BADGE_ULTRA_LEAGUE
++      battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_ULTRA"
++      leagueType: STANDARD
++      allowTempEvos: true
++    }
++  }
++}
++template {
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_NO_LEGENDARY"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_NO_LEGENDARY"
+@@ -78081,6 +79504,115 @@
+   }
+ }
+ template {
++  template_id: "COMBAT_RANKING_SETTINGS_S30"
++  data {
++    template_id: "COMBAT_RANKING_SETTINGS_S30"
++    combat_ranking_proto_settings {
++      rankLevel {
++        rankLevel: 1
++      }
++      rankLevel {
++        rankLevel: 2
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 3
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 4
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 5
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 6
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 7
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 8
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 9
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 10
++        additionalWinsRequired: 1
++      }
++      rankLevel {
++        rankLevel: 11
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 12
++        additionalWinsRequired: 5
++      }
++      rankLevel {
++        rankLevel: 13
++        additionalWinsRequired: 6
++      }
++      rankLevel {
++        rankLevel: 14
++        additionalWinsRequired: 7
++      }
++      rankLevel {
++        rankLevel: 15
++        additionalWinsRequired: 8
++      }
++      rankLevel {
++        rankLevel: 16
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 17
++        additionalWinsRequired: 10
++      }
++      rankLevel {
++        rankLevel: 18
++        additionalWinsRequired: 15
++      }
++      rankLevel {
++        rankLevel: 19
++        additionalWinsRequired: 20
++      }
++      rankLevel {
++        rankLevel: 20
++        additionalTotalBattlesRequired: 5
++      }
++      rankLevel {
++        rankLevel: 21
++        minRatingRequired: 2000
++      }
++      rankLevel {
++        rankLevel: 22
++        minRatingRequired: 2500
++      }
++      rankLevel {
++        rankLevel: 23
++        minRatingRequired: 2750
++      }
++      rankLevel {
++        rankLevel: 24
++        minRatingRequired: 3000
++      }
++      required_for_rewards {
++        rankLevel: 1
++        additionalTotalBattlesRequired: 5
++      }
++      minRankToDisplayRating: 20
++      minRatingRequired: 30
++    }
++  }
++}
++template {
+   template_id: "COMBAT_RANKING_SETTINGS_S8"
+   data {
+     template_id: "COMBAT_RANKING_SETTINGS_S8"
+@@ -97799,6 +99331,68 @@
+   }
+ }
+ template {
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_FOSSIL_2026"
++  data {
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_FOSSIL_2026"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_FOSSIL_2026
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 31
++          cameraDistance: 27.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 62
++        }
++        maxStationVisualSettings {
++          scale: 4.22
++        }
++      }
++      breadOverrides {
++        breadMode: BREAD_DOUGH_MODE
++        averageHeightM: 21
++        camera {
++          cylinderRadiusM: 1.3
++          cylinderHeightM: 1.1
++        }
++        modelScaleV2: 0.86
++        modelHeight: 2.57
++        catchOverrideSettings {
++          collisionRadiusM: 0.25
++          collisionHeadRadiusM: 0.25
++        }
++        maxEncounterVisualSettings {
++          scale: 10.5
++          cameraDistance: 32.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 20
++          xOffset: 3
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++          yOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 1.25
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOFEST_2022"
+   data {
+     template_id: "EXTENDED_V0025_POKEMON_PIKACHU_GOFEST_2022"
+@@ -103803,6 +105397,20 @@
+         xlUpperBound: 1.65
+         xxlUpperBound: 1.925
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 14.28
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 28.56
++        }
++        maxStationVisualSettings {
++          scale: 1.94
++        }
++      }
+     }
+   }
+ }
+@@ -103821,6 +105429,20 @@
+         xlUpperBound: 1.65
+         xxlUpperBound: 1.925
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 14.28
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 28.56
++        }
++        maxStationVisualSettings {
++          scale: 1.94
++        }
++      }
+     }
+   }
+ }
+@@ -103838,6 +105460,23 @@
+         xlUpperBound: 1.95
+         xxlUpperBound: 2.275
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 11.36
++          cameraDistance: 28
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 25.38
++        }
++        maxStationVisualSettings {
++          scale: 1.73
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 1
++        }
++      }
+     }
+   }
+ }
+@@ -103856,6 +105495,23 @@
+         xlUpperBound: 1.95
+         xxlUpperBound: 2.275
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 11.36
++          cameraDistance: 28
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 25.38
++        }
++        maxStationVisualSettings {
++          scale: 1.73
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 1
++        }
++      }
+     }
+   }
+ }
+@@ -104019,6 +105675,20 @@
+         xlUpperBound: 1.35
+         xxlUpperBound: 1.8
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 19.04
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 38.08
++        }
++        maxStationVisualSettings {
++          scale: 2.59
++        }
++      }
+     }
+   }
+ }
+@@ -104037,6 +105707,20 @@
+         xlUpperBound: 1.35
+         xxlUpperBound: 1.8
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 19.04
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 38.08
++        }
++        maxStationVisualSettings {
++          scale: 2.59
++        }
++      }
+     }
+   }
+ }
+@@ -104065,6 +105749,25 @@
+         xlUpperBound: 9.75
+         xxlUpperBound: 13
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 4.43
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 11.56
++          yOffset: -5
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: 9
++          yOffset: 5
++        }
++        maxStationVisualSettings {
++          scale: 0.6
++        }
++      }
+     }
+   }
+ }
+@@ -104094,6 +105797,25 @@
+         xlUpperBound: 9.75
+         xxlUpperBound: 13
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 4.43
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 11.56
++          yOffset: -5
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: 9
++          yOffset: 5
++        }
++        maxStationVisualSettings {
++          scale: 0.6
++        }
++      }
+     }
+   }
+ }
+@@ -106010,6 +107732,22 @@
+         xlUpperBound: 1.065
+         xxlUpperBound: 1.2425
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 23.12
++          cameraDistance: 35
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 46.24
++        }
++        maxBattleTrainerVisualSettings {
++        }
++        maxStationVisualSettings {
++          scale: 3.15
++        }
++      }
+     }
+   }
+ }
+@@ -106028,6 +107766,22 @@
+         xlUpperBound: 1.065
+         xxlUpperBound: 1.2425
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 23.12
++          cameraDistance: 35
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 46.24
++        }
++        maxBattleTrainerVisualSettings {
++        }
++        maxStationVisualSettings {
++          scale: 3.15
++        }
++      }
+     }
+   }
+ }
+@@ -106045,6 +107799,25 @@
+         xlUpperBound: 2.4
+         xxlUpperBound: 2.8
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 12.98
++          cameraDistance: 35
++          maxReticleSize: 20
++        }
++        maxBattleVisualSettings {
++          scale: 25.96
++        }
++        maxBattleTrainerVisualSettings {
++        }
++        maxStationVisualSettings {
++          scale: 1.77
++        }
++        maxLobbyVisualSettings {
++          yOffset: -2
++        }
++      }
+     }
+   }
+ }
+@@ -106063,6 +107836,25 @@
+         xlUpperBound: 2.4
+         xxlUpperBound: 2.8
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 12.98
++          cameraDistance: 35
++          maxReticleSize: 20
++        }
++        maxBattleVisualSettings {
++          scale: 25.96
++        }
++        maxBattleTrainerVisualSettings {
++        }
++        maxStationVisualSettings {
++          scale: 1.77
++        }
++        maxLobbyVisualSettings {
++          yOffset: -2
++        }
++      }
+     }
+   }
+ }
+@@ -109472,6 +111264,23 @@
+         xlUpperBound: 1.065
+         xxlUpperBound: 1.2425
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 19.04
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 38.08
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 2.59
++        }
++      }
+     }
+   }
+ }
+@@ -109490,6 +111299,23 @@
+         xlUpperBound: 1.065
+         xxlUpperBound: 1.2425
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 19.04
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 38.08
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 2.59
++        }
++      }
+     }
+   }
+ }
+@@ -109507,6 +111333,20 @@
+         xlUpperBound: 2.1
+         xxlUpperBound: 2.45
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 13.18
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 26.36
++        }
++        maxStationVisualSettings {
++          scale: 1.79
++        }
++      }
+     }
+   }
+ }
+@@ -109525,6 +111365,20 @@
+         xlUpperBound: 2.1
+         xxlUpperBound: 2.45
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 13.18
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 26.36
++        }
++        maxStationVisualSettings {
++          scale: 1.79
++        }
++      }
+     }
+   }
+ }
+@@ -109577,6 +111431,20 @@
+         xlUpperBound: 0.915
+         xxlUpperBound: 1.0675
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 34.42
++          cameraDistance: 35
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 44.42
++        }
++        maxStationVisualSettings {
++          scale: 3.02
++        }
++      }
+     }
+   }
+ }
+@@ -109595,6 +111463,20 @@
+         xlUpperBound: 0.915
+         xxlUpperBound: 1.0675
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 34.42
++          cameraDistance: 35
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 44.42
++        }
++        maxStationVisualSettings {
++          scale: 3.02
++        }
++      }
+     }
+   }
+ }
+@@ -109612,6 +111494,23 @@
+         xlUpperBound: 1.065
+         xxlUpperBound: 1.2425
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 19.04
++          cameraDistance: 28
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 38.08
++        }
++        maxStationVisualSettings {
++          scale: 2.59
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 1
++        }
++      }
+     }
+   }
+ }
+@@ -109630,6 +111529,23 @@
+         xlUpperBound: 1.065
+         xxlUpperBound: 1.2425
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 19.04
++          cameraDistance: 28
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 38.08
++        }
++        maxStationVisualSettings {
++          scale: 2.59
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 1
++        }
++      }
+     }
+   }
+ }
+@@ -114762,6 +116678,20 @@
+         xlUpperBound: 0.915
+         xxlUpperBound: 1.22
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 25
++          cameraDistance: 39.2
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 50
++        }
++        maxLobbyVisualSettings {
++          scale: 50
++        }
++      }
+     }
+   }
+ }
+@@ -114780,6 +116710,20 @@
+         xlUpperBound: 0.915
+         xxlUpperBound: 1.22
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 25
++          cameraDistance: 39.2
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 50
++        }
++        maxLobbyVisualSettings {
++          scale: 50
++        }
++      }
+     }
+   }
+ }
+@@ -114797,6 +116741,31 @@
+         xlUpperBound: 9.3
+         xxlUpperBound: 12.4
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 8
++          cameraDistance: 39.2
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 16
++          xOffset: 4
++          yOffset: -17
++        }
++        maxBattleTrainerVisualSettings {
++          yOffset: 11
++        }
++        maxStationVisualSettings {
++          scale: 1.1
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 0.7
++        }
++        maxLobbyVisualSettings {
++          scale: 16
++        }
++      }
+     }
+   }
+ }
+@@ -114815,6 +116784,31 @@
+         xlUpperBound: 9.3
+         xxlUpperBound: 12.4
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 8
++          cameraDistance: 39.2
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 16
++          xOffset: 4
++          yOffset: -17
++        }
++        maxBattleTrainerVisualSettings {
++          yOffset: 11
++        }
++        maxStationVisualSettings {
++          scale: 1.1
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 0.7
++        }
++        maxLobbyVisualSettings {
++          scale: 16
++        }
++      }
+     }
+   }
+ }
+@@ -119927,6 +121921,20 @@
+         xlUpperBound: 2.7
+         xxlUpperBound: 2.79
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 10.34
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 20.68
++        }
++        maxStationVisualSettings {
++          scale: 1.41
++        }
++      }
+     }
+   }
+ }
+@@ -119945,6 +121953,20 @@
+         xlUpperBound: 2.7
+         xxlUpperBound: 2.79
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 10.34
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 20.68
++        }
++        maxStationVisualSettings {
++          scale: 1.41
++        }
++      }
+     }
+   }
+ }
+@@ -119962,6 +121984,23 @@
+         xlUpperBound: 2.4
+         xxlUpperBound: 2.8
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 9.36
++          cameraDistance: 28
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 20.68
++        }
++        maxStationVisualSettings {
++          scale: 1.41
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 0.89
++        }
++      }
+     }
+   }
+ }
+@@ -119980,6 +122019,23 @@
+         xlUpperBound: 2.4
+         xxlUpperBound: 2.8
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 9.36
++          cameraDistance: 28
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 20.68
++        }
++        maxStationVisualSettings {
++          scale: 1.41
++        }
++        maxPowerspotTopperVisualSettings {
++          scale: 0.89
++        }
++      }
+     }
+   }
+ }
+@@ -127410,6 +129466,23 @@
+         xlUpperBound: 1.2
+         xxlUpperBound: 1.4
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 18.8
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 34.5
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -10
++        }
++        maxStationVisualSettings {
++          scale: 3.02
++        }
++      }
+     }
+   }
+ }
+@@ -127428,6 +129501,23 @@
+         xlUpperBound: 1.2
+         xxlUpperBound: 1.4
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 18.8
++          cameraDistance: 30
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 34.5
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -10
++        }
++        maxStationVisualSettings {
++          scale: 3.02
++        }
++      }
+     }
+   }
+ }
+@@ -127445,6 +129535,23 @@
+         xlUpperBound: 2.1
+         xxlUpperBound: 2.45
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 13.5
++          cameraDistance: 40
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 24
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 1.78
++        }
++      }
+     }
+   }
+ }
+@@ -127463,6 +129570,23 @@
+         xlUpperBound: 2.1
+         xxlUpperBound: 2.45
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 13.5
++          cameraDistance: 40
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 24
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 1.78
++        }
++      }
+     }
+   }
+ }
+@@ -127480,6 +129604,20 @@
+         xlUpperBound: 2.7
+         xxlUpperBound: 3.15
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 11.14
++          cameraDistance: 31.65
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 22.28
++        }
++        maxStationVisualSettings {
++          scale: 1.52
++        }
++      }
+     }
+   }
+ }
+@@ -127498,6 +129636,20 @@
+         xlUpperBound: 2.7
+         xxlUpperBound: 3.15
+       }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 11.14
++          cameraDistance: 31.65
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 22.28
++        }
++        maxStationVisualSettings {
++          scale: 1.52
++        }
++      }
+     }
+   }
+ }
+@@ -161233,12 +163385,12 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2026-03-03T13:00:00"
+-        eventEndTime: "2026-04-03T10:00:00"
++        eventStartTime: "2026-06-02T13:00:00"
++        eventEndTime: "2026-06-16T10:00:00"
+         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
+         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-s22-gbl-nologo-2026.jpg"
+-        clientEventStartTimeUtcMs: 1772542800000
+-        clientEventEndTimeUtcMs: 1775210400000
++        clientEventStartTimeUtcMs: 1780405200000
++        clientEventEndTimeUtcMs: 1781604000000
        }
      }
    }
-@@ -465882,13 +465882,10 @@
+@@ -161581,7 +163733,6 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 500
+         }
+       }
+       hideItemInInventory: true
+@@ -163179,7 +165330,7 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 1
+       incense {
+-        incenseLifetimeSeconds: 3600
++        incenseLifetimeSeconds: 7200
+       }
+     }
+   }
+@@ -163212,7 +165363,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+       }
+     }
+   }
+@@ -163228,7 +165379,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+       }
+     }
+   }
+@@ -163263,7 +165414,7 @@
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+         uses: 3
+-        distanceMultiplier: 0.666666687
++        distanceMultiplier: 0.333333343
+       }
+     }
+   }
+@@ -163279,7 +165430,7 @@
+       dropTrainerLevel: 100
+       egg_incubator {
+         incubatorType: INCUBATOR_DISTANCE
+-        distanceMultiplier: 1
++        distanceMultiplier: 0.5
+         expiredIncubatorReplacement {
+           incubatorReplacement: ITEM_INCUBATOR_BASIC
+           usesCountOverride: 1
+@@ -167047,7 +169198,7 @@
+       locationCard: LC_SPECIALBACKGROUND_2026_MEWTWO_001
+       imageUrl: "sb_GoFest2026_mewtwo"
+       cardType: SPECIAL_BACKGROUND
+-      vfxAddress: "bgfx_goFest_2026_mewtwo_002"
++      vfxAddress: "bgfx_goFest_2026_mewtwo_001"
+     }
+   }
+ }
+@@ -167059,7 +169210,7 @@
+       locationCard: LC_SPECIALBACKGROUND_2026_MEWTWO_002
+       imageUrl: "sb_GoFest2026_mewtwo"
+       cardType: SPECIAL_BACKGROUND
+-      vfxAddress: "bgfx_goFest_2026_mewtwo_001"
++      vfxAddress: "bgfx_goFest_2026_mewtwo_002"
+     }
+   }
+ }
+@@ -199042,6 +201193,20 @@
+   }
+ }
+ template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_FOSSIL_2026"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_FOSSIL_2026"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 0.5
++        femalePercent: 0.5
++      }
++      form: PIKACHU_FOSSIL_2026
++    }
++  }
++}
++template {
+   template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOFEST_2022"
+   data {
+     template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOFEST_2022"
+@@ -246665,25 +248830,6 @@
+   }
+ }
+ template {
+-  template_id: "general2.ticket.3"
+-  data {
+-    template_id: "general2.ticket.3"
+-    iapItemDisplay {
+-      sku: "pgorelease.general2.ticket.3"
+-      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
+-      spriteId: "general1.ticket.2"
+-      title: "general1.ticket_CDC_Deino26_title"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2026-05-16T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1778950800000
+-      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fpgo-deino-community-day-classic-2026-nologo.jpg"
+-      useEnvironmentPrefix: true
+-    }
+-  }
+-}
+-template {
+   template_id: "TRAINER_BLANCHE_GREAT"
+   data {
+     template_id: "TRAINER_BLANCHE_GREAT"
+@@ -247059,92 +249205,6 @@
+   }
+ }
+ template {
+-  template_id: "V0025_POKEMON_PIKACHU_FOSSIL_2026"
+-  data {
+-    template_id: "V0025_POKEMON_PIKACHU_FOSSIL_2026"
+-    pokemonSettings {
+-      pokemonId: PIKACHU
+-      modelScale: 1.48
+-      type: POKEMON_TYPE_ELECTRIC
+-      camera {
+-        diskRadiusM: 0.555
+-        cylinderRadiusM: 0.37
+-        cylinderHeightM: 0.5
+-        shoulderModeScale: 0.5
+-      }
+-      encounter {
+-        collisionRadiusM: 0.16
+-        collisionHeightM: 0.16
+-        collisionHeadRadiusM: 0.13
+-        movementType: MOVEMENT_JUMP
+-        movementTimerS: 10
+-        jumpTimeS: 1
+-        attackTimerS: 29
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 1
+-        cameraDistance: 2.775
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-      }
+-      stats {
+-        baseStamina: 111
+-        baseAttack: 112
+-        baseDefense: 96
+-      }
+-      quickMoves: THUNDER_SHOCK_FAST
+-      quickMoves: QUICK_ATTACK_FAST
+-      cinematicMoves: DISCHARGE
+-      cinematicMoves: THUNDERBOLT
+-      cinematicMoves: WILD_CHARGE
+-      animationTime: 1.8333
+-      animationTime: 0.6667
+-      animationTime: 1.6
+-      animationTime: 1.5667
+-      animationTime: 0
+-      animationTime: 1.8
+-      animationTime: 1.1333
+-      animationTime: 1.06666696
+-      evolutionPips: 1
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 6
+-      parentPokemonId: PICHU
+-      heightStdDev: 0.05
+-      weightStdDev: 0.75
+-      familyId: FAMILY_PIKACHU
+-      candyToEvolve: 50
+-      kmBuddyDistance: 1
+-      buddy_size: BUDDY_SHOULDER
+-      modelHeight: 0.4
+-      modelScaleV2: 1.1
+-      form: PIKACHU_FOSSIL_2026
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 11
+-      third_move {
+-        stardustToUnlock: 10000
+-        candyToUnlock: 25
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 1
+-      eliteQuickMove: PRESENT_FAST
+-      eliteCinematicMove: SURF
+-      eliteCinematicMove: THUNDER
+-      disableTransferToPokemonHome: true
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
+-    }
+-  }
+-}
+-template {
+   template_id: "USE_EXTENDED_SETTINGS_FOR_MAX_SCALE_CODE_GATE"
+   data {
+     template_id: "USE_EXTENDED_SETTINGS_FOR_MAX_SCALE_CODE_GATE"
+@@ -254511,6 +256571,92 @@
+   }
+ }
+ template {
++  template_id: "V0025_POKEMON_PIKACHU_FOSSIL_2026"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_FOSSIL_2026"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      candyToEvolve: 50
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_FOSSIL_2026
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      eliteQuickMove: PRESENT_FAST
++      eliteCinematicMove: SURF
++      eliteCinematicMove: THUNDER
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
+   template_id: "V0025_POKEMON_PIKACHU_GOFEST_2022"
+   data {
+     template_id: "V0025_POKEMON_PIKACHU_GOFEST_2022"
+@@ -475930,6 +478076,2967 @@
+   }
+ }
+ template {
++  template_id: "avatar.n_backpack_alolaitemspoppliobp_0"
++  data {
++    template_id: "avatar.n_backpack_alolaitemspoppliobp_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_alolaitemsrowletbp_0"
++  data {
++    template_id: "avatar.n_backpack_alolaitemsrowletbp_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_backpacker_0"
++  data {
++    template_id: "avatar.n_backpack_backpacker_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_combeebackpack_0"
++  data {
++    template_id: "avatar.n_backpack_combeebackpack_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_eggbackpack_0"
++  data {
++    template_id: "avatar.n_backpack_eggbackpack_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_eggbackpack_1"
++  data {
++    template_id: "avatar.n_backpack_eggbackpack_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_eggbackpack_2"
++  data {
++    template_id: "avatar.n_backpack_eggbackpack_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_frlg_a_0"
++  data {
++    template_id: "avatar.n_backpack_frlg_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_frlg_b_0"
++  data {
++    template_id: "avatar.n_backpack_frlg_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_hgss_a_0"
++  data {
++    template_id: "avatar.n_backpack_hgss_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_lunarnewyr_0"
++  data {
++    template_id: "avatar.n_backpack_lunarnewyr_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_pkmnhoodie004_0"
++  data {
++    template_id: "avatar.n_backpack_pkmnhoodie004_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_tatsugiribackpack-stretchy_0"
++  data {
++    template_id: "avatar.n_backpack_tatsugiribackpack-stretchy_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_backpack_zubatbp_0"
++  data {
++    template_id: "avatar.n_backpack_zubatbp_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_belt_acetrainerbw_0"
++  data {
++    template_id: "avatar.n_belt_acetrainerbw_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_belt_simple_0"
++  data {
++    template_id: "avatar.n_belt_simple_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_belt_simple_1"
++  data {
++    template_id: "avatar.n_belt_simple_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_belt_simple_2"
++  data {
++    template_id: "avatar.n_belt_simple_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_belt_teamrocket_0"
++  data {
++    template_id: "avatar.n_belt_teamrocket_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_belt_teamrocket_1"
++  data {
++    template_id: "avatar.n_belt_teamrocket_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_glasses_divingsuit_0"
++  data {
++    template_id: "avatar.n_glasses_divingsuit_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_glasses_mask_0"
++  data {
++    template_id: "avatar.n_glasses_mask_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_glasses_mask_1"
++  data {
++    template_id: "avatar.n_glasses_mask_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_glasses_newyear2022_0"
++  data {
++    template_id: "avatar.n_glasses_newyear2022_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_glasses_newyearglasses2020_0"
++  data {
++    template_id: "avatar.n_glasses_newyearglasses2020_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_glasses_newyearglasses2021_0"
++  data {
++    template_id: "avatar.n_glasses_newyearglasses2021_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_gloves_battlegirl_0"
++  data {
++    template_id: "avatar.n_gloves_battlegirl_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_gloves_delibird_0"
++  data {
++    template_id: "avatar.n_gloves_delibird_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_gloves_swshuniformdragon_0"
++  data {
++    template_id: "avatar.n_gloves_swshuniformdragon_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_gloves_teamaqua_a_0"
++  data {
++    template_id: "avatar.n_gloves_teamaqua_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_gloves_teamspark_a_0"
++  data {
++    template_id: "avatar.n_gloves_teamspark_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_6thanniversary_a_0"
++  data {
++    template_id: "avatar.n_hat_6thanniversary_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_6thanniversary_b_0"
++  data {
++    template_id: "avatar.n_hat_6thanniversary_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_acetrainersm_a_0"
++  data {
++    template_id: "avatar.n_hat_acetrainersm_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_acetrainersm_b_0"
++  data {
++    template_id: "avatar.n_hat_acetrainersm_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_cetoddlehat_0"
++  data {
++    template_id: "avatar.n_hat_cetoddlehat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_cosmog_0"
++  data {
++    template_id: "avatar.n_hat_cosmog_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_darumakahat_0"
++  data {
++    template_id: "avatar.n_hat_darumakahat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_delibird_0"
++  data {
++    template_id: "avatar.n_hat_delibird_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_drifloon_0"
++  data {
++    template_id: "avatar.n_hat_drifloon_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_earringsburmysandy_0"
++  data {
++    template_id: "avatar.n_hat_earringsburmysandy_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_fedora_0"
++  data {
++    template_id: "avatar.n_hat_fedora_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_fedora_1"
++  data {
++    template_id: "avatar.n_hat_fedora_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_fisher_0"
++  data {
++    template_id: "avatar.n_hat_fisher_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_frlg_a_0"
++  data {
++    template_id: "avatar.n_hat_frlg_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_gimmighoulitems_0"
++  data {
++    template_id: "avatar.n_hat_gimmighoulitems_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_greavardwig_0"
++  data {
++    template_id: "avatar.n_hat_greavardwig_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_greencoat_0"
++  data {
++    template_id: "avatar.n_hat_greencoat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_growlithehelmet_0"
++  data {
++    template_id: "avatar.n_hat_growlithehelmet_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_gtr2024eeveefanmask_0"
++  data {
++    template_id: "avatar.n_hat_gtr2024eeveefanmask_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_gtr2024pikachufanmask_0"
++  data {
++    template_id: "avatar.n_hat_gtr2024pikachufanmask_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_halloween2024_0"
++  data {
++    template_id: "avatar.n_hat_halloween2024_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_hoopaearmuffs_0"
++  data {
++    template_id: "avatar.n_hat_hoopaearmuffs_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_jogger_0"
++  data {
++    template_id: "avatar.n_hat_jogger_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_litwickhat_0"
++  data {
++    template_id: "avatar.n_hat_litwickhat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_mareaniehat_0"
++  data {
++    template_id: "avatar.n_hat_mareaniehat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_newyear2022_0"
++  data {
++    template_id: "avatar.n_hat_newyear2022_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_newyearhat2021_0"
++  data {
++    template_id: "avatar.n_hat_newyearhat2021_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_newyearhat2023_0"
++  data {
++    template_id: "avatar.n_hat_newyearhat2023_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_noibat_0"
++  data {
++    template_id: "avatar.n_hat_noibat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_obstagoonitems_0"
++  data {
++    template_id: "avatar.n_hat_obstagoonitems_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_oricoriopink_0"
++  data {
++    template_id: "avatar.n_hat_oricoriopink_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_oricoriopurple_0"
++  data {
++    template_id: "avatar.n_hat_oricoriopurple_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_oricoriored_0"
++  data {
++    template_id: "avatar.n_hat_oricoriored_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_oricorioyellow_0"
++  data {
++    template_id: "avatar.n_hat_oricorioyellow_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_phantump_0"
++  data {
++    template_id: "avatar.n_hat_phantump_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_pikachubutler-yellow_0"
++  data {
++    template_id: "avatar.n_hat_pikachubutler-yellow_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_pikachufan_0"
++  data {
++    template_id: "avatar.n_hat_pikachufan_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_pkmncap_0"
++  data {
++    template_id: "avatar.n_hat_pkmncap_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_pkmncap_1"
++  data {
++    template_id: "avatar.n_hat_pkmncap_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_pkmncap_2"
++  data {
++    template_id: "avatar.n_hat_pkmncap_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_poipole_0"
++  data {
++    template_id: "avatar.n_hat_poipole_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_regiicejersies_0"
++  data {
++    template_id: "avatar.n_hat_regiicejersies_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_regirockjersies_0"
++  data {
++    template_id: "avatar.n_hat_regirockjersies_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_ruinmaniac_a_0"
++  data {
++    template_id: "avatar.n_hat_ruinmaniac_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_ruinmaniac_b_0"
++  data {
++    template_id: "avatar.n_hat_ruinmaniac_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_stantlerheadband_0"
++  data {
++    template_id: "avatar.n_hat_stantlerheadband_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_sylveonitems_b_0"
++  data {
++    template_id: "avatar.n_hat_sylveonitems_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_tophat_0"
++  data {
++    template_id: "avatar.n_hat_tophat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_wcs2025_0"
++  data {
++    template_id: "avatar.n_hat_wcs2025_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_whimsicottearmuff_0"
++  data {
++    template_id: "avatar.n_hat_whimsicottearmuff_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_woobatearrings_0"
++  data {
++    template_id: "avatar.n_hat_woobatearrings_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_yamaskhat_0"
++  data {
++    template_id: "avatar.n_hat_yamaskhat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_hat_zubathat_0"
++  data {
++    template_id: "avatar.n_hat_zubathat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_acetrainerbw_a_0"
++  data {
++    template_id: "avatar.n_pants_acetrainerbw_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_acetrainerbw_b_0"
++  data {
++    template_id: "avatar.n_pants_acetrainerbw_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_acetrainersm_0"
++  data {
++    template_id: "avatar.n_pants_acetrainersm_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_backpacker_a_0"
++  data {
++    template_id: "avatar.n_pants_backpacker_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_battlegirl_0"
++  data {
++    template_id: "avatar.n_pants_battlegirl_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_bounsweetitems_0"
++  data {
++    template_id: "avatar.n_pants_bounsweetitems_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_fisher_0"
++  data {
++    template_id: "avatar.n_pants_fisher_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_frlg_a_0"
++  data {
++    template_id: "avatar.n_pants_frlg_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_greencoat_0"
++  data {
++    template_id: "avatar.n_pants_greencoat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_gymleader_a_0"
++  data {
++    template_id: "avatar.n_pants_gymleader_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_gymleader_a_1"
++  data {
++    template_id: "avatar.n_pants_gymleader_a_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_gymleader_a_2"
++  data {
++    template_id: "avatar.n_pants_gymleader_a_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_gymleader_b_0"
++  data {
++    template_id: "avatar.n_pants_gymleader_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_gymleader_b_1"
++  data {
++    template_id: "avatar.n_pants_gymleader_b_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_gymleader_b_2"
++  data {
++    template_id: "avatar.n_pants_gymleader_b_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_hgss_b_0"
++  data {
++    template_id: "avatar.n_pants_hgss_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_jogger_0"
++  data {
++    template_id: "avatar.n_pants_jogger_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_luvdiscpack_b_0"
++  data {
++    template_id: "avatar.n_pants_luvdiscpack_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_miniskirt_0"
++  data {
++    template_id: "avatar.n_pants_miniskirt_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_miniskirt_1"
++  data {
++    template_id: "avatar.n_pants_miniskirt_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_miniskirt_2"
++  data {
++    template_id: "avatar.n_pants_miniskirt_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_miniskirt_3"
++  data {
++    template_id: "avatar.n_pants_miniskirt_3"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_neon-solid_0"
++  data {
++    template_id: "avatar.n_pants_neon-solid_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_neon-solid_1"
++  data {
++    template_id: "avatar.n_pants_neon-solid_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_neon-solid_2"
++  data {
++    template_id: "avatar.n_pants_neon-solid_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_neon-stripes_0"
++  data {
++    template_id: "avatar.n_pants_neon-stripes_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_neon-stripes_1"
++  data {
++    template_id: "avatar.n_pants_neon-stripes_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_pumpkabooitems_0"
++  data {
++    template_id: "avatar.n_pants_pumpkabooitems_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_regiicejersies_0"
++  data {
++    template_id: "avatar.n_pants_regiicejersies_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_shorts_1"
++  data {
++    template_id: "avatar.n_pants_shorts_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_shorts_2"
++  data {
++    template_id: "avatar.n_pants_shorts_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_shorts_3"
++  data {
++    template_id: "avatar.n_pants_shorts_3"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_sweats_0"
++  data {
++    template_id: "avatar.n_pants_sweats_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_sweats_1"
++  data {
++    template_id: "avatar.n_pants_sweats_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_sweats_2"
++  data {
++    template_id: "avatar.n_pants_sweats_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_sweats_3"
++  data {
++    template_id: "avatar.n_pants_sweats_3"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_swshuniformdark_a_0"
++  data {
++    template_id: "avatar.n_pants_swshuniformdark_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_swshuniformdark_b_0"
++  data {
++    template_id: "avatar.n_pants_swshuniformdark_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_swshuniformdragon_a_0"
++  data {
++    template_id: "avatar.n_pants_swshuniformdragon_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_teamaqua_b_0"
++  data {
++    template_id: "avatar.n_pants_teamaqua_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_teamblanche_a_0"
++  data {
++    template_id: "avatar.n_pants_teamblanche_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_teamblanche_b_0"
++  data {
++    template_id: "avatar.n_pants_teamblanche_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_teammagma_b_0"
++  data {
++    template_id: "avatar.n_pants_teammagma_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_teamrocket_b_0"
++  data {
++    template_id: "avatar.n_pants_teamrocket_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_turbine_0"
++  data {
++    template_id: "avatar.n_pants_turbine_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_turbine_1"
++  data {
++    template_id: "avatar.n_pants_turbine_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_turbine_2"
++  data {
++    template_id: "avatar.n_pants_turbine_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_veterantrainerxy_a_0"
++  data {
++    template_id: "avatar.n_pants_veterantrainerxy_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pants_veterantrainerxy_b_0"
++  data {
++    template_id: "avatar.n_pants_veterantrainerxy_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pose_038"
++  data {
++    template_id: "avatar.n_pose_038"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pose_040"
++  data {
++    template_id: "avatar.n_pose_040"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_pose_urshifusinglestrike"
++  data {
++    template_id: "avatar.n_pose_urshifusinglestrike"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_6thanniversary_a_0"
++  data {
++    template_id: "avatar.n_shirt_6thanniversary_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_7thanniversary_0"
++  data {
++    template_id: "avatar.n_shirt_7thanniversary_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_acetrainerbw_0"
++  data {
++    template_id: "avatar.n_shirt_acetrainerbw_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_acetrainersm_a_0"
++  data {
++    template_id: "avatar.n_shirt_acetrainersm_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_acetrainersm_b_0"
++  data {
++    template_id: "avatar.n_shirt_acetrainersm_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ballguy_0"
++  data {
++    template_id: "avatar.n_shirt_ballguy_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_battlegirl_0"
++  data {
++    template_id: "avatar.n_shirt_battlegirl_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_brock_0"
++  data {
++    template_id: "avatar.n_shirt_brock_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_buttondown_0"
++  data {
++    template_id: "avatar.n_shirt_buttondown_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_chimcharonesie_0"
++  data {
++    template_id: "avatar.n_shirt_chimcharonesie_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_cofagrigusitems_0"
++  data {
++    template_id: "avatar.n_shirt_cofagrigusitems_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_cowichansweater_0"
++  data {
++    template_id: "avatar.n_shirt_cowichansweater_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_delibird_0"
++  data {
++    template_id: "avatar.n_shirt_delibird_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_delibirdonesie_0"
++  data {
++    template_id: "avatar.n_shirt_delibirdonesie_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_divingsuit_0"
++  data {
++    template_id: "avatar.n_shirt_divingsuit_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_drifblim_0"
++  data {
++    template_id: "avatar.n_shirt_drifblim_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_dudunsparceitem_0"
++  data {
++    template_id: "avatar.n_shirt_dudunsparceitem_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_fashionweek2022_0"
++  data {
++    template_id: "avatar.n_shirt_fashionweek2022_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_fisher_0"
++  data {
++    template_id: "avatar.n_shirt_fisher_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_flabebepack_0"
++  data {
++    template_id: "avatar.n_shirt_flabebepack_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_frlg_a_0"
++  data {
++    template_id: "avatar.n_shirt_frlg_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_fw2022_b_0"
++  data {
++    template_id: "avatar.n_shirt_fw2022_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_galaxyoutfit_a_0"
++  data {
++    template_id: "avatar.n_shirt_galaxyoutfit_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_galaxyoutfit_b_0"
++  data {
++    template_id: "avatar.n_shirt_galaxyoutfit_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_giovanni_a_0"
++  data {
++    template_id: "avatar.n_shirt_giovanni_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_goteamrocketcliff_a_0"
++  data {
++    template_id: "avatar.n_shirt_goteamrocketcliff_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_goteamrocketsierra_a_0"
++  data {
++    template_id: "avatar.n_shirt_goteamrocketsierra_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_goteamrocketsierra_b_0"
++  data {
++    template_id: "avatar.n_shirt_goteamrocketsierra_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_greedentsweater_0"
++  data {
++    template_id: "avatar.n_shirt_greedentsweater_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_greencoat_0"
++  data {
++    template_id: "avatar.n_shirt_greencoat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_gymleader_a_0"
++  data {
++    template_id: "avatar.n_shirt_gymleader_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_gymleader_a_1"
++  data {
++    template_id: "avatar.n_shirt_gymleader_a_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_gymleader_a_2"
++  data {
++    template_id: "avatar.n_shirt_gymleader_a_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_gymleader_b_0"
++  data {
++    template_id: "avatar.n_shirt_gymleader_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_gymleader_b_1"
++  data {
++    template_id: "avatar.n_shirt_gymleader_b_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_gymleader_b_2"
++  data {
++    template_id: "avatar.n_shirt_gymleader_b_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_halloween2024_0"
++  data {
++    template_id: "avatar.n_shirt_halloween2024_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_happi_0"
++  data {
++    template_id: "avatar.n_shirt_happi_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_happi_1"
++  data {
++    template_id: "avatar.n_shirt_happi_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_happi_2"
++  data {
++    template_id: "avatar.n_shirt_happi_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_hgss_a_0"
++  data {
++    template_id: "avatar.n_shirt_hgss_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_hgss_b_0"
++  data {
++    template_id: "avatar.n_shirt_hgss_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_holiday2022santacostumes_0"
++  data {
++    template_id: "avatar.n_shirt_holiday2022santacostumes_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_holiday2024-marshtompsweater_0"
++  data {
++    template_id: "avatar.n_shirt_holiday2024-marshtompsweater_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_holiday2024-staryusweater_0"
++  data {
++    template_id: "avatar.n_shirt_holiday2024-staryusweater_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_jogger_0"
++  data {
++    template_id: "avatar.n_shirt_jogger_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ladiamondoutfit_a_0"
++  data {
++    template_id: "avatar.n_shirt_ladiamondoutfit_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ladiamondoutfit_b_0"
++  data {
++    template_id: "avatar.n_shirt_ladiamondoutfit_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_lapearloutfit_a_0"
++  data {
++    template_id: "avatar.n_shirt_lapearloutfit_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_lapearloutfit_b_0"
++  data {
++    template_id: "avatar.n_shirt_lapearloutfit_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_latias-latios_0"
++  data {
++    template_id: "avatar.n_shirt_latias-latios_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_longsleeves-charizard_0"
++  data {
++    template_id: "avatar.n_shirt_longsleeves-charizard_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_longsleeves-charizard_1"
++  data {
++    template_id: "avatar.n_shirt_longsleeves-charizard_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_longsleeves-charizard_2"
++  data {
++    template_id: "avatar.n_shirt_longsleeves-charizard_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_longsleeves-pikachu_0"
++  data {
++    template_id: "avatar.n_shirt_longsleeves-pikachu_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_longsleeves-pikachu_1"
++  data {
++    template_id: "avatar.n_shirt_longsleeves-pikachu_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_longsleeves-pikachu_2"
++  data {
++    template_id: "avatar.n_shirt_longsleeves-pikachu_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_luvdiscpack_b_0"
++  data {
++    template_id: "avatar.n_shirt_luvdiscpack_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_melmetaljacket_0"
++  data {
++    template_id: "avatar.n_shirt_melmetaljacket_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_meltan_0"
++  data {
++    template_id: "avatar.n_shirt_meltan_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_munnapack_a_0"
++  data {
++    template_id: "avatar.n_shirt_munnapack_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ocshirt-045_a_0"
++  data {
++    template_id: "avatar.n_shirt_ocshirt-045_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ocshirt-045_b_0"
++  data {
++    template_id: "avatar.n_shirt_ocshirt-045_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ocshirt-108_a_0"
++  data {
++    template_id: "avatar.n_shirt_ocshirt-108_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ocshirt-108_b_0"
++  data {
++    template_id: "avatar.n_shirt_ocshirt-108_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ocshirt-129_a_0"
++  data {
++    template_id: "avatar.n_shirt_ocshirt-129_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ocshirt-129_b_0"
++  data {
++    template_id: "avatar.n_shirt_ocshirt-129_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ocshirt-143_b_0"
++  data {
++    template_id: "avatar.n_shirt_ocshirt-143_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pajamas2022_0"
++  data {
++    template_id: "avatar.n_shirt_pajamas2022_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pajamas2022_1"
++  data {
++    template_id: "avatar.n_shirt_pajamas2022_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pikachufan_a_0"
++  data {
++    template_id: "avatar.n_shirt_pikachufan_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pikachufan_b_0"
++  data {
++    template_id: "avatar.n_shirt_pikachufan_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pkmnshirts-165_0"
++  data {
++    template_id: "avatar.n_shirt_pkmnshirts-165_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pkmnshirts-188_0"
++  data {
++    template_id: "avatar.n_shirt_pkmnshirts-188_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pkmnshirts-201_0"
++  data {
++    template_id: "avatar.n_shirt_pkmnshirts-201_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pkmnshirts-238_0"
++  data {
++    template_id: "avatar.n_shirt_pkmnshirts-238_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pkmnshirts2021_0"
++  data {
++    template_id: "avatar.n_shirt_pkmnshirts2021_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pkmnshirts2021_1"
++  data {
++    template_id: "avatar.n_shirt_pkmnshirts2021_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_pkmnshirts2021_2"
++  data {
++    template_id: "avatar.n_shirt_pkmnshirts2021_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_poloshirt_0"
++  data {
++    template_id: "avatar.n_shirt_poloshirt_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_poloshirt_1"
++  data {
++    template_id: "avatar.n_shirt_poloshirt_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_poloshirt_2"
++  data {
++    template_id: "avatar.n_shirt_poloshirt_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_regiicejersies_0"
++  data {
++    template_id: "avatar.n_shirt_regiicejersies_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_regirockjersies_0"
++  data {
++    template_id: "avatar.n_shirt_regirockjersies_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ruinmaniac_a_0"
++  data {
++    template_id: "avatar.n_shirt_ruinmaniac_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_spiritomb_0"
++  data {
++    template_id: "avatar.n_shirt_spiritomb_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_spring2021gulpin_a_0"
++  data {
++    template_id: "avatar.n_shirt_spring2021gulpin_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sukajanblastoise_0"
++  data {
++    template_id: "avatar.n_shirt_sukajanblastoise_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sukajancharizard_0"
++  data {
++    template_id: "avatar.n_shirt_sukajancharizard_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sukajanhouou_0"
++  data {
++    template_id: "avatar.n_shirt_sukajanhouou_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sukajanlugia_0"
++  data {
++    template_id: "avatar.n_shirt_sukajanlugia_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sukajanvenusaur_0"
++  data {
++    template_id: "avatar.n_shirt_sukajanvenusaur_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweater-30_0"
++  data {
++    template_id: "avatar.n_shirt_sweater-30_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweater-30_1"
++  data {
++    template_id: "avatar.n_shirt_sweater-30_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweater-30_2"
++  data {
++    template_id: "avatar.n_shirt_sweater-30_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweater-instinct_0"
++  data {
++    template_id: "avatar.n_shirt_sweater-instinct_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweater-mystic_0"
++  data {
++    template_id: "avatar.n_shirt_sweater-mystic_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweater-valor_0"
++  data {
++    template_id: "avatar.n_shirt_sweater-valor_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweatshirt-sporty_0"
++  data {
++    template_id: "avatar.n_shirt_sweatshirt-sporty_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweatshirt-sporty_1"
++  data {
++    template_id: "avatar.n_shirt_sweatshirt-sporty_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweatshirt-sporty_2"
++  data {
++    template_id: "avatar.n_shirt_sweatshirt-sporty_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweatshirt-sporty_3"
++  data {
++    template_id: "avatar.n_shirt_sweatshirt-sporty_3"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweatshirt-streak_0"
++  data {
++    template_id: "avatar.n_shirt_sweatshirt-streak_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweatshirt-streak_1"
++  data {
++    template_id: "avatar.n_shirt_sweatshirt-streak_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweatshirt-streak_2"
++  data {
++    template_id: "avatar.n_shirt_sweatshirt-streak_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_sweatshirt-streak_3"
++  data {
++    template_id: "avatar.n_shirt_sweatshirt-streak_3"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_swshuniformdark_b_0"
++  data {
++    template_id: "avatar.n_shirt_swshuniformdark_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tanktop-charizard_0"
++  data {
++    template_id: "avatar.n_shirt_tanktop-charizard_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tanktop-charizard_1"
++  data {
++    template_id: "avatar.n_shirt_tanktop-charizard_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tanktop-charizard_2"
++  data {
++    template_id: "avatar.n_shirt_tanktop-charizard_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tanktop-pikachu_0"
++  data {
++    template_id: "avatar.n_shirt_tanktop-pikachu_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tanktop-pikachu_1"
++  data {
++    template_id: "avatar.n_shirt_tanktop-pikachu_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tanktop-pikachu_2"
++  data {
++    template_id: "avatar.n_shirt_tanktop-pikachu_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tanktop_0"
++  data {
++    template_id: "avatar.n_shirt_tanktop_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tanktop_1"
++  data {
++    template_id: "avatar.n_shirt_tanktop_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tanktop_2"
++  data {
++    template_id: "avatar.n_shirt_tanktop_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_teamblanche_a_0"
++  data {
++    template_id: "avatar.n_shirt_teamblanche_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_teamblanche_b_0"
++  data {
++    template_id: "avatar.n_shirt_teamblanche_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_teamcandela_a_0"
++  data {
++    template_id: "avatar.n_shirt_teamcandela_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_teamcandela_b_0"
++  data {
++    template_id: "avatar.n_shirt_teamcandela_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_teamrocket_a_0"
++  data {
++    template_id: "avatar.n_shirt_teamrocket_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_teamrocket_a_1"
++  data {
++    template_id: "avatar.n_shirt_teamrocket_a_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_teamrocket_b_0"
++  data {
++    template_id: "avatar.n_shirt_teamrocket_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_teamrocket_b_1"
++  data {
++    template_id: "avatar.n_shirt_teamrocket_b_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_teamspark_a_0"
++  data {
++    template_id: "avatar.n_shirt_teamspark_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tracksuitskyogre_0"
++  data {
++    template_id: "avatar.n_shirt_tracksuitskyogre_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-cycling_0"
++  data {
++    template_id: "avatar.n_shirt_tshirt-cycling_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-cycling_1"
++  data {
++    template_id: "avatar.n_shirt_tshirt-cycling_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-cycling_2"
++  data {
++    template_id: "avatar.n_shirt_tshirt-cycling_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-cycling_3"
++  data {
++    template_id: "avatar.n_shirt_tshirt-cycling_3"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-geometric_0"
++  data {
++    template_id: "avatar.n_shirt_tshirt-geometric_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-geometric_1"
++  data {
++    template_id: "avatar.n_shirt_tshirt-geometric_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-geometric_2"
++  data {
++    template_id: "avatar.n_shirt_tshirt-geometric_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-instinct_0"
++  data {
++    template_id: "avatar.n_shirt_tshirt-instinct_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-mystic_0"
++  data {
++    template_id: "avatar.n_shirt_tshirt-mystic_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-pikachu_0"
++  data {
++    template_id: "avatar.n_shirt_tshirt-pikachu_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-pikachu_1"
++  data {
++    template_id: "avatar.n_shirt_tshirt-pikachu_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-pikachu_2"
++  data {
++    template_id: "avatar.n_shirt_tshirt-pikachu_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-pikachu_3"
++  data {
++    template_id: "avatar.n_shirt_tshirt-pikachu_3"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-pikachu_4"
++  data {
++    template_id: "avatar.n_shirt_tshirt-pikachu_4"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-pikachu_5"
++  data {
++    template_id: "avatar.n_shirt_tshirt-pikachu_5"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-pikachu_6"
++  data {
++    template_id: "avatar.n_shirt_tshirt-pikachu_6"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_tshirt-valor_0"
++  data {
++    template_id: "avatar.n_shirt_tshirt-valor_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_turtleneck-30_0"
++  data {
++    template_id: "avatar.n_shirt_turtleneck-30_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_turtleneck-30_1"
++  data {
++    template_id: "avatar.n_shirt_turtleneck-30_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_turtleneck-30_2"
++  data {
++    template_id: "avatar.n_shirt_turtleneck-30_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_turtleneck-30_3"
++  data {
++    template_id: "avatar.n_shirt_turtleneck-30_3"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_turtwigonesie_0"
++  data {
++    template_id: "avatar.n_shirt_turtwigonesie_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_uglysweatersudowoodo_0"
++  data {
++    template_id: "avatar.n_shirt_uglysweatersudowoodo_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_ultrareconsquad_0"
++  data {
++    template_id: "avatar.n_shirt_ultrareconsquad_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_veterantrainerxy_a_0"
++  data {
++    template_id: "avatar.n_shirt_veterantrainerxy_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_veterantrainerxy_b_0"
++  data {
++    template_id: "avatar.n_shirt_veterantrainerxy_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_wcs2023sukajan_0"
++  data {
++    template_id: "avatar.n_shirt_wcs2023sukajan_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_whitecoat_0"
++  data {
++    template_id: "avatar.n_shirt_whitecoat_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shirt_wintersweater2023_0"
++  data {
++    template_id: "avatar.n_shirt_wintersweater2023_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_acetrainerbw_a_0"
++  data {
++    template_id: "avatar.n_shoes_acetrainerbw_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_acetrainerbw_b_0"
++  data {
++    template_id: "avatar.n_shoes_acetrainerbw_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_acetrainersm_a_0"
++  data {
++    template_id: "avatar.n_shoes_acetrainersm_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_acetrainersm_b_0"
++  data {
++    template_id: "avatar.n_shoes_acetrainersm_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_backpacker_a_0"
++  data {
++    template_id: "avatar.n_shoes_backpacker_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_backpacker_b_0"
++  data {
++    template_id: "avatar.n_shoes_backpacker_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_battlegirl_0"
++  data {
++    template_id: "avatar.n_shoes_battlegirl_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_brock_0"
++  data {
++    template_id: "avatar.n_shoes_brock_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_delibird_0"
++  data {
++    template_id: "avatar.n_shoes_delibird_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_frlg_a_0"
++  data {
++    template_id: "avatar.n_shoes_frlg_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_giovanni_a_0"
++  data {
++    template_id: "avatar.n_shoes_giovanni_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_gymleader_0"
++  data {
++    template_id: "avatar.n_shoes_gymleader_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_gymleader_1"
++  data {
++    template_id: "avatar.n_shoes_gymleader_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_gymleader_2"
++  data {
++    template_id: "avatar.n_shoes_gymleader_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_hgss_a_0"
++  data {
++    template_id: "avatar.n_shoes_hgss_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_hgss_b_0"
++  data {
++    template_id: "avatar.n_shoes_hgss_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_jogger_0"
++  data {
++    template_id: "avatar.n_shoes_jogger_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_lapearloutfit_a_0"
++  data {
++    template_id: "avatar.n_shoes_lapearloutfit_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_lapearloutfit_b_0"
++  data {
++    template_id: "avatar.n_shoes_lapearloutfit_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_loosepants_1"
++  data {
++    template_id: "avatar.n_shoes_loosepants_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_loosepants_2"
++  data {
++    template_id: "avatar.n_shoes_loosepants_2"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_melmetalshoes_0"
++  data {
++    template_id: "avatar.n_shoes_melmetalshoes_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_misty_0"
++  data {
++    template_id: "avatar.n_shoes_misty_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_regiicejersies_0"
++  data {
++    template_id: "avatar.n_shoes_regiicejersies_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_regirockjersies_0"
++  data {
++    template_id: "avatar.n_shoes_regirockjersies_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_registeeljersies_0"
++  data {
++    template_id: "avatar.n_shoes_registeeljersies_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_ruinmaniac_a_0"
++  data {
++    template_id: "avatar.n_shoes_ruinmaniac_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_solgaleoitems_0"
++  data {
++    template_id: "avatar.n_shoes_solgaleoitems_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_teamblanche_a_0"
++  data {
++    template_id: "avatar.n_shoes_teamblanche_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_teamblanche_b_0"
++  data {
++    template_id: "avatar.n_shoes_teamblanche_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_teamrocket_a_0"
++  data {
++    template_id: "avatar.n_shoes_teamrocket_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_teamrocket_a_1"
++  data {
++    template_id: "avatar.n_shoes_teamrocket_a_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_teamrocket_b_0"
++  data {
++    template_id: "avatar.n_shoes_teamrocket_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_teamrocket_b_1"
++  data {
++    template_id: "avatar.n_shoes_teamrocket_b_1"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_veterantrainerxy_a_0"
++  data {
++    template_id: "avatar.n_shoes_veterantrainerxy_a_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_veterantrainerxy_b_0"
++  data {
++    template_id: "avatar.n_shoes_veterantrainerxy_b_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_shoes_winterboots_3"
++  data {
++    template_id: "avatar.n_shoes_winterboots_3"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
++  template_id: "avatar.n_teamyellgrunts-long_0"
++  data {
++    template_id: "avatar.n_teamyellgrunts-long_0"
++    iapItemDisplay {
++      hidden: true
++    }
++  }
++}
++template {
+   template_id: "avatar_store_footer_flags"
+   data {
+     template_id: "avatar_store_footer_flags"
+@@ -476393,10 +481500,13 @@
        sku: "bundle.cd2022.1"
        category: IAP_CATEGORY_BUNDLE
        sortOrder: 1
-+      hidden: true
+-      hidden: true
        sale: true
--      spriteId: "bundle.general4.small.1"
--      title: "bundle.general4.small.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2026-05-10T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1778457599000
-+      spriteId: "bundle.halloween.small.1"
-+      title: "bundle.halloween.small.1_title"
+-      spriteId: "bundle.halloween.small.1"
+-      title: "bundle.halloween.small.1_title"
++      spriteId: "bundle.general4.small.1"
++      title: "bundle.general4.small.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2026-05-17T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1779062399000
      }
    }
  }
-@@ -465900,13 +465897,10 @@
+@@ -476408,10 +481518,13 @@
        sku: "bundle.cd2022.2"
        category: IAP_CATEGORY_BUNDLE
        sortOrder: 2
-+      hidden: true
+-      hidden: true
        sale: true
--      spriteId: "bundle.general1.medium.1"
--      title: "bundle.general1.medium.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2026-05-10T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1778457599000
-+      spriteId: "bundle.halloween.adventure.1"
-+      title: "bundle.halloween.adventure.1_title"
+-      spriteId: "bundle.halloween.adventure.1"
+-      title: "bundle.halloween.adventure.1_title"
++      spriteId: "bundle.general1.medium.1"
++      title: "bundle.general1.medium.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2026-05-17T23:59:59"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1779062399000
      }
    }
  }
-@@ -476882,17 +476876,17 @@
-         bonusBoxes {
-           text: "quest_catch_pokemon_singular"
-           iconType: SPAWN_UNKNOWN
--          quantity: 5
-+          quantity: 10
-         }
-         bonusBoxes {
-           text: "quest_hatch_egg_singular"
-           iconType: EGG
--          quantity: 40
-+          quantity: 80
-         }
-         bonusBoxes {
-           text: "quest_win_raid_singular"
-           iconType: RAID
--          quantity: 100
-+          quantity: 200
-         }
-         eventPassTrackUpgradeDescriptions {
-           passTrackUpgradeHeaderDescription: "season_pass_may2026_track_upgrade_header_description"
-@@ -484916,7 +484910,7 @@
+@@ -479851,82 +484964,6 @@
+   }
+ }
+ template {
+-  template_id: "SPAWN_V0025_POKEMON_PIKACHU_FOSSIL_2026"
+-  data {
+-    template_id: "SPAWN_V0025_POKEMON_PIKACHU_FOSSIL_2026"
+-    genderSettings {
+-      pokemon: PIKACHU
+-      gender {
+-        malePercent: 0.5
+-        femalePercent: 0.5
+-      }
+-      form: PIKACHU_FOSSIL_2026
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_FOSSIL_2026"
+-  data {
+-    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_FOSSIL_2026"
+-    pokemonExtendedSettings {
+-      uniqueId: PIKACHU
+-      form: PIKACHU_FOSSIL_2026
+-      sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.7
+-      }
+-      breadOverrides {
+-        breadMode: BREAD_MODE
+-        maxEncounterVisualSettings {
+-          scale: 31
+-          cameraDistance: 27.5
+-          maxReticleSize: 14
+-        }
+-        maxBattleVisualSettings {
+-          scale: 62
+-        }
+-        maxStationVisualSettings {
+-          scale: 4.22
+-        }
+-      }
+-      breadOverrides {
+-        breadMode: BREAD_DOUGH_MODE
+-        averageHeightM: 21
+-        camera {
+-          cylinderRadiusM: 1.3
+-          cylinderHeightM: 1.1
+-        }
+-        modelScaleV2: 0.86
+-        modelHeight: 2.57
+-        catchOverrideSettings {
+-          collisionRadiusM: 0.25
+-          collisionHeadRadiusM: 0.25
+-        }
+-        maxEncounterVisualSettings {
+-          scale: 10.5
+-          cameraDistance: 32.5
+-          maxReticleSize: 14
+-        }
+-        maxBattleVisualSettings {
+-          scale: 20
+-          xOffset: 3
+-        }
+-        maxBattleTrainerVisualSettings {
+-          xOffset: -5
+-          yOffset: -5
+-        }
+-        maxStationVisualSettings {
+-          scale: 1.25
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+   template_id: "general2.ticket.6"
+   data {
+     template_id: "general2.ticket.6"
+@@ -481642,50 +486679,6 @@
+   }
+ }
+ template {
+-  template_id: "COMBAT_LEAGUE_DEFAULT_MASTER_NPC"
+-  data {
+-    template_id: "COMBAT_LEAGUE_DEFAULT_MASTER_NPC"
+-    combat_league {
+-      title: "combat_master_league"
+-      enabled: true
+-      unlockCondition {
+-        type: WITH_POKEMON_CP_LIMIT
+-        minPokemonCount: 3
+-        withPokemonCpLimit {
+-          minCp: 2500
+-          maxCp: 50000
+-        }
+-      }
+-      pokemonCondition {
+-        type: WITH_POKEMON_CP_LIMIT
+-        withPokemonCpLimit {
+-          maxCp: 10000
+-        }
+-      }
+-      iconUrl: "https://storage.googleapis.com/prod-public-images/pogo_master_league.png"
+-      pokemonCount: 3
+-      badgeType: BADGE_MASTER_LEAGUE
+-      leagueType: STANDARD
+-      allowTempEvos: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_EVENT_0190"
+-  data {
+-    template_id: "BADGE_EVENT_0190"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0190
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+   template_id: "pgorelease.general2.ticket.7"
+   data {
+     template_id: "pgorelease.general2.ticket.7"
+@@ -487318,7 +492311,7 @@
      }
    }
  }
--batch_id: 1778336762931
-+batch_id: 1778461688775
+-batch_id: 1778802594167
++batch_id: 1778999919879
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -484942,7 +484936,6 @@
+@@ -487327,6 +492320,7 @@
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 351
++experiment_id: 401
+ experiment_id: 408
+ experiment_id: 409
+ experiment_id: 419
+@@ -487342,6 +492336,7 @@
  experiment_id: 2297
  experiment_id: 2600
  experiment_id: 2650
--experiment_id: 3025
++experiment_id: 3025
  experiment_id: 3032
  experiment_id: 3033
  experiment_id: 3063
-@@ -484951,8 +484944,8 @@
- experiment_id: 3117
+@@ -487351,10 +492346,12 @@
  experiment_id: 3125
  experiment_id: 3126
--experiment_id: 3137
--experiment_id: 3177
-+experiment_id: 3138
-+experiment_id: 3151
- experiment_id: 3195
- experiment_id: 3401
+ experiment_id: 3138
+-experiment_id: 3165
++experiment_id: 3178
+ experiment_id: 3953
+ experiment_id: 3954
++experiment_id: 3956
+ experiment_id: 3957
++experiment_id: 3958
+ experiment_id: 3960
  experiment_id: 4998
-@@ -484969,6 +484962,7 @@
- experiment_id: 7023
+ experiment_id: 5160
+@@ -487369,8 +492366,7 @@
+ experiment_id: 6075
  experiment_id: 7024
  experiment_id: 7027
-+experiment_id: 7079
- experiment_id: 8674
+-experiment_id: 8674
+-experiment_id: 8680
++experiment_id: 8681
  experiment_id: 8920
+ experiment_id: 8922
  experiment_id: 9521
