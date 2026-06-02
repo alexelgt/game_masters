@@ -1,19 +1,464 @@
---- GAME_MASTER_old.txt	2026-05-30 13:57:59.093738684 +0200
-+++ GAME_MASTER.txt	2026-05-31 09:46:00.205674021 +0200
-@@ -496199,7 +496199,7 @@
+--- GAME_MASTER_old.txt	2026-05-31 09:46:00.205674021 +0200
++++ GAME_MASTER.txt	2026-06-02 09:23:37.340033626 +0200
+@@ -71657,7 +71657,7 @@
+       pokemonCondition {
+         type: WITH_UNIQUE_POKEMON
+       }
+-      iconUrl: "https://storage.googleapis.com/prod-public-images/pogo_great_league.png"
++      iconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F58ea0c64_pogo_mega_great_league.png"
+       pokemonCount: 3
+       bannedPokemon: DITTO
+       bannedPokemon: SHEDINJA
+@@ -76357,7 +76357,7 @@
+       pokemonCondition {
+         type: WITH_UNIQUE_POKEMON
+       }
+-      iconUrl: "https://storage.googleapis.com/prod-public-images/pogo_master_league.png"
++      iconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fe00ac85c_GblMasterLeague_icon.png"
+       pokemonCount: 3
+       bannedPokemon: DITTO
+       bannedPokemon: SHEDINJA
+@@ -77056,7 +77056,7 @@
+       pokemonCondition {
+         type: WITH_UNIQUE_POKEMON
+       }
+-      iconUrl: "https://storage.googleapis.com/prod-public-images/pogo_ultra_league.png"
++      iconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F34c7dd20_pogo_mega_ultra_league.png"
+       pokemonCount: 3
+       bannedPokemon: DITTO
+       bannedPokemon: SHEDINJA
+@@ -165814,11 +165814,13 @@
+   }
+ }
+ template {
+-  template_id: "INCREMENTAL_CM_MINIGAME_SCORE_UPDATES_ROLL_BACK"
++  template_id: "STICKER_PGO_FEST_2026.3"
+   data {
+-    template_id: "INCREMENTAL_CM_MINIGAME_SCORE_UPDATES_ROLL_BACK"
+-    rollBack {
+-      rollbackPercentage: 100
++    template_id: "STICKER_PGO_FEST_2026.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 12
      }
    }
  }
--batch_id: 1780121242887
-+batch_id: 1780186650412
+@@ -166734,6 +166736,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 500
+         }
+       }
+       hideItemInInventory: true
+@@ -166929,6 +166932,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 250
+         }
+       }
+       hideItemInInventory: true
+@@ -168310,7 +168314,6 @@
+       dropTrainerLevel: 1
+       incense {
+         incenseLifetimeSeconds: 3600
+-        spawnTableProbability: 0.6
+       }
+     }
+   }
+@@ -199477,7 +199480,7 @@
+       creationLimitPerWindow: 15
+       maxDistanceFromAnchorPotsM: 100
+       maxDistanceWarningDistanceMeters: 500
+-      maxRecordingSpeedMetersPerSecond: 1000
++      maxRecordingSpeedMetersPerSecond: 20
+       moderationEnabled: true
+       clientBreadcrumbSettings {
+         sessionDurationM: 120
+@@ -248162,7 +248165,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2026_1.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 492
++      sortOrder: 500
+     }
+   }
+ }
+@@ -248173,7 +248176,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2026_1.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 491
++      sortOrder: 499
+     }
+   }
+ }
+@@ -248198,7 +248201,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2026_2.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 490
++      sortOrder: 498
+     }
+   }
+ }
+@@ -248209,7 +248212,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2026_2.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 489
++      sortOrder: 497
+     }
+   }
+ }
+@@ -248234,7 +248237,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2026_3.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 488
++      sortOrder: 496
+     }
+   }
+ }
+@@ -248245,7 +248248,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2026_3.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 487
++      sortOrder: 495
+     }
+   }
+ }
+@@ -248270,7 +248273,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2026_4.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 486
++      sortOrder: 494
+     }
+   }
+ }
+@@ -248281,7 +248284,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SPRING_2026_4.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 485
++      sortOrder: 493
+     }
+   }
+ }
+@@ -254860,6 +254863,7 @@
+       buddyGroupNumber: 2
+       buddyWalkedMegaEnergyAward: 15
+       allowNoevolveEvolution: JAN_2020_NOEVOLVE
++      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -255048,6 +255052,7 @@
+       buddyGroupNumber: 2
+       buddyWalkedMegaEnergyAward: 15
+       allowNoevolveEvolution: JAN_2020_NOEVOLVE
++      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -255149,6 +255154,7 @@
+       buddyGroupNumber: 2
+       buddyWalkedMegaEnergyAward: 15
+       allowNoevolveEvolution: JAN_2020_NOEVOLVE
++      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -255251,6 +255257,7 @@
+       buddyGroupNumber: 2
+       buddyWalkedMegaEnergyAward: 15
+       allowNoevolveEvolution: JAN_2020_NOEVOLVE
++      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -496199,7 +496206,246 @@
+     }
+   }
+ }
+-batch_id: 1780186650412
++template {
++  template_id: "BADGE_EVENT_0202"
++  data {
++    template_id: "BADGE_EVENT_0202"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0202
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "BADGE_EVENT_0203"
++  data {
++    template_id: "BADGE_EVENT_0203"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0203
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2026.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 11
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026_1.3"
++  data {
++    template_id: "STICKER_PGO_FEST_2026_1.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 10
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026_1.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2026_1.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026_2.3"
++  data {
++    template_id: "STICKER_PGO_FEST_2026_2.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 8
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026_2.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2026_2.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026_3.3"
++  data {
++    template_id: "STICKER_PGO_FEST_2026_3.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 6
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026_3.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2026_3.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 5
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026_4.3"
++  data {
++    template_id: "STICKER_PGO_FEST_2026_4.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 4
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026_4.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2026_4.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 3
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026_LOGO.3"
++  data {
++    template_id: "STICKER_PGO_FEST_2026_LOGO.3"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026_LOGO.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 2
++    }
++  }
++}
++template {
++  template_id: "STICKER_PGO_FEST_2026_LOGO.5"
++  data {
++    template_id: "STICKER_PGO_FEST_2026_LOGO.5"
++    iapItemDisplay {
++      sku: "STICKER_PGO_FEST_2026_LOGO.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 1
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2026_1.3"
++  data {
++    template_id: "STICKER_SUMMER_2026_1.3"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2026_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 480
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2026_1.5"
++  data {
++    template_id: "STICKER_SUMMER_2026_1.5"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2026_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 479
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2026_2.3"
++  data {
++    template_id: "STICKER_SUMMER_2026_2.3"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2026_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 478
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2026_2.5"
++  data {
++    template_id: "STICKER_SUMMER_2026_2.5"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2026_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 477
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2026_3.3"
++  data {
++    template_id: "STICKER_SUMMER_2026_3.3"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2026_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 476
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2026_3.5"
++  data {
++    template_id: "STICKER_SUMMER_2026_3.5"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2026_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 475
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2026_4.3"
++  data {
++    template_id: "STICKER_SUMMER_2026_4.3"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2026_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 474
++    }
++  }
++}
++template {
++  template_id: "STICKER_SUMMER_2026_4.5"
++  data {
++    template_id: "STICKER_SUMMER_2026_4.5"
++    iapItemDisplay {
++      sku: "STICKER_SUMMER_2026_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 473
++    }
++  }
++}
++batch_id: 1780361034640
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -496232,6 +496232,7 @@
+@@ -496231,13 +496477,9 @@
+ experiment_id: 3122
  experiment_id: 3125
  experiment_id: 3126
- experiment_id: 3140
-+experiment_id: 3180
- experiment_id: 3964
+-experiment_id: 3140
+-experiment_id: 3180
+-experiment_id: 3964
++experiment_id: 3141
++experiment_id: 3217
  experiment_id: 3965
- experiment_id: 3967
+-experiment_id: 3967
+-experiment_id: 3968
+-experiment_id: 3971
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+@@ -496250,7 +496492,6 @@
+ experiment_id: 5514
+ experiment_id: 6075
+ experiment_id: 7024
+-experiment_id: 7026
+ experiment_id: 7027
+ experiment_id: 8920
+ experiment_id: 8922
+@@ -496261,6 +496502,7 @@
+ experiment_id: 9554
+ experiment_id: 20947
+ experiment_id: 60095
++experiment_id: 91000
+ experiment_id: 99998
+ experiment_id: 173173
+ experiment_id: 250415
