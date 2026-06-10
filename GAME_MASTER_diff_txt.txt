@@ -1,151 +1,43 @@
---- GAME_MASTER_old.txt	2026-06-09 19:33:57.398057774 +0200
-+++ GAME_MASTER.txt	2026-06-10 09:42:51.223803653 +0200
-@@ -84983,7 +84983,7 @@
-     template_id: "CONTEST_SETTINGS"
-     contestSettings {
-       isFeatureEnabled: true
--      playerContestMaxEntries: 5
-+      playerContestMaxEntries: 3
-       contestLimits {
-         contestMetric {
-           pokemonMetric: POKEMON_SIZE
-@@ -85034,8 +85034,10 @@
-       isFriendsDisplayEnabled: true
-       isV2FeatureEnabled: true
-       isAnticheatRemovalEnabled: true
-+      isNormalizedScoreToSpecies: true
-       isV2FocusesEnabled: true
-       isContestInNearbyMenu: true
-+      isPokemonScalarEnabled: true
+--- GAME_MASTER_old.txt	2026-06-10 09:42:51.223803653 +0200
++++ GAME_MASTER.txt	2026-06-10 19:50:32.893253141 +0200
+@@ -249719,7 +249719,6 @@
+       pokemonId: STARMIE
+       category: "Pokemon"
+       releaseDate: 20260602
+-      regionId: 1
      }
    }
  }
-@@ -165174,7 +165176,7 @@
-     friendshipMilestoneSettings {
-       minPointsToReach: 1
-       milestoneXpReward: 3000
--      attackBonusPercentage: 1.03
-+      attackBonusPercentage: 1.06
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-       unlockedTrading: REGULAR_NON_POKEDEX
-@@ -165194,7 +165196,7 @@
-     friendshipMilestoneSettings {
-       minPointsToReach: 7
-       milestoneXpReward: 10000
--      attackBonusPercentage: 1.05
-+      attackBonusPercentage: 1.1
-       raidBallBonus: 1
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -165217,7 +165219,7 @@
-     friendshipMilestoneSettings {
-       minPointsToReach: 30
-       milestoneXpReward: 50000
--      attackBonusPercentage: 1.07
-+      attackBonusPercentage: 1.14
-       raidBallBonus: 2
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -165240,7 +165242,7 @@
-     friendshipMilestoneSettings {
-       minPointsToReach: 90
-       milestoneXpReward: 100000
--      attackBonusPercentage: 1.1
-+      attackBonusPercentage: 1.2
-       raidBallBonus: 4
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -165263,7 +165265,7 @@
-     friendshipMilestoneSettings {
-       minPointsToReach: 90
-       milestoneXpReward: 150000
--      attackBonusPercentage: 1.12
-+      attackBonusPercentage: 1.26
-       raidBallBonus: 4
-       unlockedTrading: REGULAR_IN_POKEDEX
-       unlockedTrading: SPECIAL_IN_POKEDEX
-@@ -168481,7 +168483,7 @@
-       category: ITEM_CATEGORY_INCENSE
-       dropTrainerLevel: 6
-       incense {
--        incenseLifetimeSeconds: 900
-+        incenseLifetimeSeconds: 1800
-         spawnTableProbability: 0.25
-       }
-       ignoreInventorySpace: true
-@@ -479043,7 +479045,7 @@
-   data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
-       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_NAIC"
-       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_PVP_NEXT_PREVIEW"
-     }
-@@ -481293,9 +481295,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: RESHIRAM
-+          pokemonId: ZEKROM
-           pokemonDisplay {
--            form: RESHIRAM_NORMAL
-+            form: ZEKROM_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -481969,9 +481971,9 @@
-       }
-       availablePokemon {
-         pokemon {
--          pokemonId: RESHIRAM
-+          pokemonId: ZEKROM
-           pokemonDisplay {
--            form: RESHIRAM_NORMAL
-+            form: ZEKROM_NORMAL
-           }
-         }
-         unlockedAtRank: 20
-@@ -498830,13 +498832,12 @@
+@@ -249755,7 +249754,6 @@
+       pokemonId: VAPOREON
+       category: "Pokemon"
+       releaseDate: 20260602
+-      regionId: 1
      }
    }
  }
--batch_id: 1781014076260
-+batch_id: 1781052973974
+@@ -249791,7 +249789,6 @@
+       pokemonId: DRAGONAIR
+       category: "Pokemon"
+       releaseDate: 20260602
+-      regionId: 1
+     }
+   }
+ }
+@@ -498832,7 +498829,7 @@
+     }
+   }
+ }
+-batch_id: 1781052973974
++batch_id: 1781110920379
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
--experiment_id: 149
- experiment_id: 150
--experiment_id: 152
-+experiment_id: 153
- experiment_id: 300
- experiment_id: 320
- experiment_id: 351
-@@ -498860,15 +498861,15 @@
- experiment_id: 3063
- experiment_id: 3199
- experiment_id: 3200
--experiment_id: 3202
-+experiment_id: 3203
- experiment_id: 3217
- experiment_id: 3222
- experiment_id: 3225
- experiment_id: 3975
- experiment_id: 3986
+@@ -498870,6 +498867,7 @@
  experiment_id: 3987
-+experiment_id: 3991
+ experiment_id: 3991
  experiment_id: 4998
--experiment_id: 5106
++experiment_id: 5054
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
-@@ -498884,6 +498885,7 @@
- experiment_id: 8844
- experiment_id: 8960
- experiment_id: 8961
-+experiment_id: 8963
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
