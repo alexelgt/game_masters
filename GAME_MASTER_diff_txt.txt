@@ -1,99 +1,668 @@
---- GAME_MASTER_old.txt	2026-06-13 09:58:57.811006689 +0200
-+++ GAME_MASTER.txt	2026-06-15 19:51:35.623233216 +0200
-@@ -92631,7 +92631,7 @@
-   data {
-     template_id: "EVENT_SERVER_SETTINGS"
-     293 {
--      1: "1e7b119d67cd46a57ad8edec2324218cf03cd4ad837e72c3ab7bc1934a827b49"
-+      1: "484769a62f4e0466590d0664cf05f427914e6cdaba72145abdf07651bba66698"
-     }
-   }
- }
-@@ -197145,14 +197145,14 @@
-       maxRemoteRaidPasses: 3
-       remoteDamageModifier: 1
-       remoteRaidsMinPlayerLevel: 5
--      maxNumFriendInvites: 5
-+      maxNumFriendInvites: 10
-       friendInviteCutoffTimeSec: 20
-       canInviteFriendsInPerson: true
-       canInviteFriendsRemotely: true
-       maxPlayersPerLobby: 20
-       maxRemotePlayersPerLobby: 10
-       inviteCooldownDurationMillis: 30000
--      maxNumFriendInvitesPerAction: 5
-+      maxNumFriendInvitesPerAction: 10
-       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_EXTENDED_EGG
-       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_4
-       unsupportedRaidLevelsForFriendInvites: 18
-@@ -252282,6 +252282,7 @@
-         4: 3
+--- GAME_MASTER_old.txt	2026-06-15 19:51:35.623233216 +0200
++++ GAME_MASTER.txt	2026-06-15 23:28:00.374027738 +0200
+@@ -47407,7 +47407,7 @@
+           pokemonForm: BULBASAUR_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 19.04
+               cameraDistance: 25
+               maxReticleSize: 14
+@@ -47430,7 +47430,7 @@
+           pokemonForm: IVYSAUR_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 13.71
+               cameraDistance: 27.15
+               maxReticleSize: 14
+@@ -47453,7 +47453,7 @@
+           pokemonForm: VENUSAUR_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 9.52
+               cameraDistance: 30.72
+               maxReticleSize: 14
+@@ -47471,7 +47471,7 @@
+           }
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 10.74
+               cameraDistance: 32.3
+               maxReticleSize: 14
+@@ -47496,7 +47496,7 @@
+           pokemonForm: CHARMANDER_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 22.22
+               cameraDistance: 25
+               maxReticleSize: 14
+@@ -47519,7 +47519,7 @@
+           pokemonForm: CHARMELEON_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 16.64
+               cameraDistance: 26.45
+               maxReticleSize: 14
+@@ -47542,7 +47542,7 @@
+           pokemonForm: CHARIZARD_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 11.14
+               cameraDistance: 31.65
+               maxReticleSize: 14
+@@ -47556,7 +47556,7 @@
+           }
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 12.53
+               cameraDistance: 29.9
+               maxReticleSize: 18
+@@ -47579,7 +47579,7 @@
+           pokemonForm: SQUIRTLE_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 26.3
+               cameraDistance: 25
+               maxReticleSize: 14
+@@ -47602,7 +47602,7 @@
+           pokemonForm: WARTORTLE_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 17.14
+               cameraDistance: 27.32
+               maxReticleSize: 14
+@@ -47625,7 +47625,7 @@
+           pokemonForm: BLASTOISE_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 15.29
+               cameraDistance: 34
+               maxReticleSize: 14
+@@ -47639,7 +47639,7 @@
+           }
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 10.16
+               cameraDistance: 39.2
+               maxReticleSize: 22
+@@ -47664,7 +47664,7 @@
+           pokemonForm: MACHOP_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 20.23
+               cameraDistance: 28.5
+               maxReticleSize: 14
+@@ -47684,7 +47684,7 @@
+           pokemonForm: MACHOKE_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 12.922
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47704,7 +47704,7 @@
+           pokemonForm: MACHAMP_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 12.06
+               cameraDistance: 32.5
+               maxReticleSize: 14
+@@ -47724,7 +47724,7 @@
+           pokemonForm: GASTLY_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 14.69
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47747,7 +47747,7 @@
+           pokemonForm: HAUNTER_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 9.76
+               cameraDistance: 38.74
+               maxReticleSize: 14
+@@ -47767,7 +47767,7 @@
+           pokemonForm: GENGAR_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 10.34
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47790,7 +47790,7 @@
+           pokemonForm: GENGAR_NORMAL
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 10.67
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47810,7 +47810,7 @@
+           pokemonForm: KRABBY_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 18.775
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47830,7 +47830,7 @@
+           pokemonForm: KINGLER_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 12.5
+               cameraDistance: 35
+               maxReticleSize: 14
+@@ -47850,7 +47850,7 @@
+           pokemonForm: LAPRAS_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 13
+               cameraDistance: 35
+               maxReticleSize: 14
+@@ -47870,7 +47870,7 @@
+           pokemonForm: LAPRAS_NORMAL
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 7.47
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47890,7 +47890,7 @@
+           pokemonForm: BELDUM_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 26.53
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47910,7 +47910,7 @@
+           pokemonForm: METANG_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 11.83
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47930,7 +47930,7 @@
+           pokemonForm: METAGROSS_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 7.32
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47950,7 +47950,7 @@
+           pokemonForm: DRILBUR_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 39.2
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47973,7 +47973,7 @@
+           pokemonForm: EXCADRILL_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 24.16
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -47992,7 +47992,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 14.64
+               cameraDistance: 35
+               maxReticleSize: 14
+@@ -48011,7 +48011,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 39.2
+               cameraDistance: 25.27
+               maxReticleSize: 14
+@@ -48033,7 +48033,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 17.68
+               cameraDistance: 27.24
+               maxReticleSize: 14
+@@ -48055,7 +48055,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 9.07
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48075,7 +48075,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 10.67
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48094,7 +48094,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 39.2
+               cameraDistance: 26.5
+               maxReticleSize: 14
+@@ -48116,7 +48116,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 22.21
+               cameraDistance: 24.94
+               maxReticleSize: 14
+@@ -48138,7 +48138,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 12.92
+               cameraDistance: 26.5
+               maxReticleSize: 14
+@@ -48160,7 +48160,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 15.43
+               cameraDistance: 26.5
+               maxReticleSize: 14
+@@ -48182,7 +48182,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 39.2
+               cameraDistance: 22.23
+               maxReticleSize: 14
+@@ -48204,7 +48204,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 19.4
+               cameraDistance: 25.1
+               maxReticleSize: 14
+@@ -48226,7 +48226,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 9.52
+               cameraDistance: 24.78
+               maxReticleSize: 14
+@@ -48248,7 +48248,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 16.84
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48267,7 +48267,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 39.2
+               cameraDistance: 27.48
+               maxReticleSize: 14
+@@ -48289,7 +48289,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 25.39
+               cameraDistance: 30.72
+               maxReticleSize: 14
+@@ -48311,7 +48311,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 22.21
+               cameraDistance: 30.72
+               maxReticleSize: 14
+@@ -48330,7 +48330,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 13.18
+               cameraDistance: 30.72
+               maxReticleSize: 14
+@@ -48349,7 +48349,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 31.36
+               cameraDistance: 24.9
+               maxReticleSize: 14
+@@ -48372,7 +48372,7 @@
+           pokemonForm: TOXTRICITY_LOW_KEY
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 11.31
+               cameraDistance: 22.7
+               maxReticleSize: 14
+@@ -48395,7 +48395,7 @@
+           pokemonForm: TOXTRICITY_AMPED
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 11.31
+               cameraDistance: 22.7
+               maxReticleSize: 14
+@@ -48418,7 +48418,7 @@
+           pokemonForm: TOXTRICITY_LOW_KEY
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 12
+               cameraDistance: 30
+               maxReticleSize: 12
+@@ -48442,7 +48442,7 @@
+           pokemonForm: TOXTRICITY_AMPED
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 12
+               cameraDistance: 30
+               maxReticleSize: 12
+@@ -48465,7 +48465,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 7.94
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48485,7 +48485,7 @@
+           pokemonForm: KINGLER_NORMAL
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 11.1
+               cameraDistance: 35
+               maxReticleSize: 14
+@@ -48505,7 +48505,7 @@
+           pokemonForm: DARUMAKA_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 21.25
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48525,7 +48525,7 @@
+           pokemonForm: DARMANITAN_STANDARD
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 13.74
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48545,7 +48545,7 @@
+           pokemonForm: PIDOVE_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 40.55
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48565,7 +48565,7 @@
+           pokemonForm: TRANQUILL_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 19.13
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48585,7 +48585,7 @@
+           pokemonForm: UNFEZANT_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 15.58
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48605,7 +48605,7 @@
+           pokemonForm: ARTICUNO_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 8.62
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48625,7 +48625,7 @@
+           pokemonForm: ZAPDOS_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 9.49
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48645,7 +48645,7 @@
+           pokemonForm: MOLTRES_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 7.47
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48664,7 +48664,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 30
+               cameraDistance: 26
+               maxReticleSize: 14
+@@ -48684,7 +48684,7 @@
+           pokemonForm: URSHIFU_RAPID_STRIKE
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 8.9
+               cameraDistance: 25
+               maxReticleSize: 14
+@@ -48704,7 +48704,7 @@
+           pokemonForm: URSHIFU_SINGLE_STRIKE
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 8.9
+               cameraDistance: 25
+               maxReticleSize: 14
+@@ -48724,7 +48724,7 @@
+           pokemonForm: RAIKOU_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 10.05
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48744,7 +48744,7 @@
+           pokemonForm: ENTEI_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 9.07
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48764,7 +48764,7 @@
+           pokemonForm: SUICUNE_NORMAL
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 9.07
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48783,7 +48783,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 57.77
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48802,7 +48802,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 19.04
+               cameraDistance: 30
+             }
+@@ -48820,7 +48820,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 18.04
+               cameraDistance: 30
+               maxReticleSize: 14
+@@ -48839,7 +48839,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 15.58
+               cameraDistance: 32.5
+               maxReticleSize: 14
+@@ -48858,7 +48858,7 @@
+         pokemonFormData {
+           visualData {
+             breadMode: BREAD_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 8
+               cameraDistance: 20
+               maxReticleSize: 14
+@@ -48878,7 +48878,7 @@
+           pokemonForm: SNORLAX_NORMAL
+           visualData {
+             breadMode: BREAD_DOUGH_MODE
+-            breadEncounterVisiualData {
++            breadEncounterVisualData {
+               scale: 5
+               cameraDistance: 22.75
+               maxReticleSize: 14
+@@ -48897,7 +48897,7 @@
+         pokemonFormData {
+           pokemonForm: ETERNATUS_ETERNAMAX
+           visualData {
+-            breadMode: 4
++            breadMode: BREAD_SPECIAL_MODE
+             breadBattleBossVisualData {
+               scale: 4.63
+               xOffset: 3.06
+@@ -143908,7 +143908,7 @@
+         xxlUpperBound: 31
        }
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
-+      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
-       ibfc {
-       }
-       breadTierGroup: GROUP_1
-@@ -252488,6 +252489,7 @@
-         4: 3
-       }
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
-+      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
-       ibfc {
-       }
-       breadTierGroup: GROUP_1
-@@ -252599,6 +252601,7 @@
-         4: 3
-       }
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
-+      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
-       ibfc {
-       }
-       breadTierGroup: GROUP_1
-@@ -252711,6 +252714,7 @@
-         4: 3
-       }
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
-+      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
-       ibfc {
-       }
-       breadTierGroup: GROUP_1
-@@ -497129,7 +497133,7 @@
-     }
-   }
- }
--batch_id: 1781301049531
-+batch_id: 1781515522557
- experiment_id: 11
- experiment_id: 21
- experiment_id: 101
-@@ -497161,7 +497165,8 @@
- experiment_id: 3203
- experiment_id: 3217
- experiment_id: 3222
--experiment_id: 3225
-+experiment_id: 3226
-+experiment_id: 3240
- experiment_id: 3986
- experiment_id: 3987
- experiment_id: 3989
-@@ -497185,7 +497190,7 @@
- experiment_id: 8960
- experiment_id: 8961
- experiment_id: 8963
--experiment_id: 9106
-+experiment_id: 8964
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
-@@ -497194,8 +497199,10 @@
- experiment_id: 60095
- experiment_id: 91000
- experiment_id: 92000
-+experiment_id: 93000
- experiment_id: 99998
- experiment_id: 173173
-+experiment_id: 193151
- experiment_id: 250415
- experiment_id: 1000890
- experiment_id: 3500035
+       breadOverrides {
+-        breadMode: 4
++        breadMode: BREAD_SPECIAL_MODE
+         maxEncounterVisualSettings {
+           scale: 16
+           cameraDistance: 51
