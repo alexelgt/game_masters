@@ -1,552 +1,88 @@
---- GAME_MASTER_old.txt	2026-06-26 20:22:07.923391364 +0200
-+++ GAME_MASTER.txt	2026-06-27 09:41:38.389548848 +0200
-@@ -36001,6 +36001,21 @@
-   }
- }
- template {
-+  template_id: "BADGE_EVENT_0191"
-+  data {
-+    template_id: "BADGE_EVENT_0191"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0191
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "BADGE_EVENT_0193"
-   data {
-     template_id: "BADGE_EVENT_0193"
-@@ -46885,7 +46900,7 @@
+--- GAME_MASTER_old.txt	2026-06-27 09:41:38.389548848 +0200
++++ GAME_MASTER.txt	2026-06-28 10:15:01.915855777 +0200
+@@ -46900,7 +46900,7 @@
        rvnVersion: 1
        maxPlayersPerBreadDoughLobby: 100
        maxRemotePlayersPerBreadDoughLobby: 100
--      maxRemoteBreadBattlePassesAllowed: 10
-+      maxRemoteBreadBattlePassesAllowed: 20
+-      maxRemoteBreadBattlePassesAllowed: 20
++      maxRemoteBreadBattlePassesAllowed: 10
        maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
        fetchProfileFromSocialEnabled: true
        maxPlayersToPrepareBreadDoughLobby: 98
-@@ -85582,6 +85597,23 @@
-   }
- }
- template {
-+  template_id: "COMBAT_V0592_MOVE_SNIPE_SHOT"
-+  data {
-+    template_id: "COMBAT_V0592_MOVE_SNIPE_SHOT"
-+    combat_move {
-+      uniqueId: 592
-+      type: POKEMON_TYPE_WATER
-+      power: 65
-+      vfxName: "snipe_shot"
-+      energyDelta: -35
-+      buffs {
-+        attackerAttackStatStageChange: 2
-+        buffActivationChance: 0.125
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "COMBAT_VNEXT_CODE_GATE"
-   data {
-     template_id: "COMBAT_VNEXT_CODE_GATE"
-@@ -167666,7 +167698,6 @@
-       }
-       timePeriodCounters {
-         playerActivity {
--          limit: 500
-         }
-       }
-       hideItemInInventory: true
-@@ -168604,6 +168635,82 @@
-   }
- }
- template {
-+  template_id: "ITEM_EVENT_TICKET_S23_2026_02"
-+  data {
-+    template_id: "ITEM_EVENT_TICKET_S23_2026_02"
-+    itemSettings {
-+      itemId: 2206
-+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-+      globalEventTicket {
-+        eventStartTime: "2026-07-04T14:00:00"
-+        eventEndTime: "2026-07-04T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Sobble26"
-+        giftable: true
-+        giftItem: 2238
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/1024x512.jpg"
-+        displayV2Enabled: true
-+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pink-ticket-generic1024x512.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_CD_Sobble26"
-+        textRewardsKey: "text_rewards_key_CD_Sobble26"
-+        iconRewards {
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemonId: INTELEON
-+            pokemonDisplay {
-+              form: INTELEON_NORMAL
-+            }
-+          }
-+        }
-+        iconRewards {
-+          type: ITEM
-+          item {
-+            item: ITEM_INCUBATOR_BASIC
-+            amount: 1
-+          }
-+        }
-+        iconRewards {
-+          type: ITEM
-+          item {
-+            item: ITEM_XL_RARE_CANDY
-+            amount: 1
-+          }
-+        }
-+        detailsLinkKey: "details_link_key"
-+        clientEventStartTimeUtcMs: 1783173600000
-+        clientEventEndTimeUtcMs: 1783184400000
-+        27: "general2.ticket.3"
-+      }
-+      nameOverride: "general1.ticket_CD_Sobble26_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Sobble26"
-+    }
-+  }
-+}
-+template {
-+  template_id: "ITEM_EVENT_TICKET_S23_2026_02_TO_GIFT"
-+  data {
-+    template_id: "ITEM_EVENT_TICKET_S23_2026_02_TO_GIFT"
-+    itemSettings {
-+      itemId: 2238
-+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-+      globalEventTicket {
-+        eventStartTime: "2026-07-04T14:00:00"
-+        eventEndTime: "2026-07-04T17:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Sobble26"
-+        ticketItem: 2206
-+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/1024x512.jpg"
-+        clientEventStartTimeUtcMs: 1783173600000
-+        clientEventEndTimeUtcMs: 1783184400000
-+        27: "general2.ticket.3"
-+      }
-+      ignoreInventorySpace: true
-+      nameOverride: "general1.ticket_CD_Sobble26_title"
-+      descriptionOverride: "item_event_ticket_pink_details_CD_Sobble26"
-+    }
-+  }
-+}
-+template {
-   template_id: "ITEM_EVENT_TICKET_S23_2026_03"
-   data {
-     template_id: "ITEM_EVENT_TICKET_S23_2026_03"
-@@ -176262,6 +176369,29 @@
-   }
- }
- template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_0_V0227_POKEMON_SKARMORY"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_0_V0227_POKEMON_SKARMORY"
-+    megaEvoLevelSettings {
-+      pokemonId: SKARMORY
-+      progression {
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 1209600000
-+        bypassCostInitial: 300
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 1
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "MEGA_EVOLUTION_LEVEL_0_V0229_POKEMON_HOUNDOOM"
-   data {
-     template_id: "MEGA_EVOLUTION_LEVEL_0_V0229_POKEMON_HOUNDOOM"
-@@ -176875,6 +177005,31 @@
-   }
- }
- template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_1_V0227_POKEMON_SKARMORY"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_1_V0227_POKEMON_SKARMORY"
-+    megaEvoLevelSettings {
-+      level: 1
-+      pokemonId: SKARMORY
-+      progression {
-+        pointsRequired: 1
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 604800000
-+        bypassCostInitial: 60
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 1
-+      }
-+    }
-+  }
-+}
-+template {
-   template_id: "MEGA_EVOLUTION_LEVEL_1_V0229_POKEMON_HOUNDOOM"
-   data {
-     template_id: "MEGA_EVOLUTION_LEVEL_1_V0229_POKEMON_HOUNDOOM"
-@@ -177548,6 +177703,34 @@
-   }
- }
- template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_2_V0227_POKEMON_SKARMORY"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_2_V0227_POKEMON_SKARMORY"
-+    megaEvoLevelSettings {
-+      level: 2
-+      pokemonId: SKARMORY
-+      progression {
-+        pointsRequired: 7
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 432000000
-+        bypassCostInitial: 30
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 1
-+        sameTypeExtraCatchXp: 50
-+        sameTypeExtraCatchCandyXlChance: 0.1
-+      }
-+      9: 160
-+    }
-+  }
-+}
-+template {
-   template_id: "MEGA_EVOLUTION_LEVEL_2_V0229_POKEMON_HOUNDOOM"
-   data {
-     template_id: "MEGA_EVOLUTION_LEVEL_2_V0229_POKEMON_HOUNDOOM"
-@@ -178275,6 +178458,34 @@
-   }
- }
- template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_3_V0227_POKEMON_SKARMORY"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_3_V0227_POKEMON_SKARMORY"
-+    megaEvoLevelSettings {
-+      level: 3
-+      pokemonId: SKARMORY
-+      progression {
-+        pointsRequired: 30
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 259200000
-+        bypassCostInitial: 15
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 2
-+        sameTypeExtraCatchXp: 100
-+        sameTypeExtraCatchCandyXlChance: 0.25
-+      }
-+      9: 80
-+    }
-+  }
-+}
-+template {
-   template_id: "MEGA_EVOLUTION_LEVEL_3_V0229_POKEMON_HOUNDOOM"
-   data {
-     template_id: "MEGA_EVOLUTION_LEVEL_3_V0229_POKEMON_HOUNDOOM"
-@@ -178869,6 +179080,36 @@
-   }
- }
- template {
-+  template_id: "MEGA_EVOLUTION_LEVEL_4_V0227_POKEMON_SKARMORY"
-+  data {
-+    template_id: "MEGA_EVOLUTION_LEVEL_4_V0227_POKEMON_SKARMORY"
-+    megaEvoLevelSettings {
-+      level: 4
-+      pokemonId: SKARMORY
-+      progression {
-+        pointsRequired: 30
-+        pointsLimitPerPeriod: 1
-+        pointsPerMegaEvoAction: 1
-+      }
-+      cooldown {
-+        durationMs: 86400000
-+        bypassCostInitial: 5
-+        bypassCostRoundingValue: 1
-+      }
-+      effects {
-+        differentTypeAttackBoost: 1.1
-+        sameTypeAttackBoost: 1.3
-+        sameTypeExtraCatchCandy: 3
-+        sameTypeExtraCatchXp: 200
-+        sameTypeExtraCatchCandyXlChance: 0.3
-+        selfCpBoostAdditionalLevel: 2
-+      }
-+      megaEnergyCostToUnlock: 5000
-+      ftueExpirationTimestamp: 1775001600000
-+    }
-+  }
-+}
-+template {
-   template_id: "MEGA_EVOLUTION_LEVEL_4_V0687_POKEMON_MALAMAR"
-   data {
-     template_id: "MEGA_EVOLUTION_LEVEL_4_V0687_POKEMON_MALAMAR"
-@@ -200662,7 +200903,7 @@
+@@ -200903,7 +200903,7 @@
      template_id: "REMOTE_RAID_LIMIT_SETTINGS"
      squashSettings {
        enabled: true
--      dailySquashLimit: 10
-+      dailySquashLimit: 20
+-      dailySquashLimit: 20
++      dailySquashLimit: 10
      }
    }
  }
-@@ -398649,6 +398890,27 @@
-   }
- }
- template {
-+  template_id: "V0592_MOVE_SNIPE_SHOT"
-+  data {
-+    template_id: "V0592_MOVE_SNIPE_SHOT"
-+    moveSettings {
-+      movementId: 592
-+      animationId: 5
-+      pokemonType: POKEMON_TYPE_WATER
-+      power: 100
-+      accuracyChance: 1
-+      staminaLossScalar: 0.01
-+      trainerLevelMin: 1
-+      trainerLevelMax: 100
-+      vfxName: "snipe_shot"
-+      durationMs: 3500
-+      damageWindowStartMs: 2000
-+      damageWindowEndMs: 2900
-+      energyDelta: -33
-+    }
-+  }
-+}
-+template {
-   template_id: "V0592_POKEMON_FRILLISH"
-   data {
-     template_id: "V0592_POKEMON_FRILLISH"
-@@ -497107,6 +497369,21 @@
-   }
- }
- template {
-+  template_id: "sequence_snipe_shot"
-+  data {
-+    template_id: "sequence_snipe_shot"
-+    move_sequence_settings {
-+      sequence: "anim attacker atk-move"
-+      sequence: "wait 0.5"
-+      sequence: "vfx snipe_shot"
-+      sequence: "sfx attacker 745-0_snipe_shot"
-+      sequence: "wait 1.0"
-+      sequence: "sys ui-sync"
-+      sequence: "sys complete"
-+    }
-+  }
-+}
-+template {
-   template_id: "sequence_solar_beam"
-   data {
-     template_id: "sequence_solar_beam"
-@@ -498251,151 +498528,7 @@
+@@ -201069,7 +201069,7 @@
+       obRoutePlaySettingsNumber29: 1
+       obRoutePlaySettingsNumber30: 27
+       obRoutePlaySettingsNumber33: 7
+-      obRoutePlaySettingsNumber45: 1
++      obRoutePlaySettingsNumber45: 6
      }
    }
  }
--template {
--  template_id: "BADGE_EVENT_0191"
--  data {
--    template_id: "BADGE_EVENT_0191"
--    badgeSettings {
--      badgeType: BADGE_EVENT_0191
--      badgeRank: 2
--      targets: 100
--      eventBadge: true
--      eventBadgeSettings {
--        obEventBadgeSettingsNumber6: 1
--      }
--    }
--  }
--}
--template {
--  template_id: "COMBAT_V0592_MOVE_SNIPE_SHOT"
--  data {
--    template_id: "COMBAT_V0592_MOVE_SNIPE_SHOT"
--    combat_move {
--      uniqueId: 592
--      type: POKEMON_TYPE_WATER
--      power: 65
--      vfxName: "snipe_shot"
--      energyDelta: -35
--      buffs {
--        attackerAttackStatStageChange: 2
--        buffActivationChance: 0.125
--      }
--    }
--  }
--}
--template {
--  template_id: "ITEM_EVENT_TICKET_S23_2026_02"
--  data {
--    template_id: "ITEM_EVENT_TICKET_S23_2026_02"
--    itemSettings {
--      itemId: 2206
--      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
--      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
--      globalEventTicket {
--        eventStartTime: "2026-07-04T14:00:00"
--        eventEndTime: "2026-07-04T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Sobble26"
--        giftable: true
--        giftItem: 2238
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/1024x512.jpg"
--        displayV2Enabled: true
--        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pink-ticket-generic1024x512.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_CD_Sobble26"
--        textRewardsKey: "text_rewards_key_CD_Sobble26"
--        iconRewards {
--          type: POKEMON_ENCOUNTER
--          pokemonEncounter {
--            pokemonId: INTELEON
--            pokemonDisplay {
--              form: INTELEON_NORMAL
--            }
--          }
--        }
--        iconRewards {
--          type: ITEM
--          item {
--            item: ITEM_INCUBATOR_BASIC
--            amount: 1
--          }
--        }
--        iconRewards {
--          type: ITEM
--          item {
--            item: ITEM_XL_RARE_CANDY
--            amount: 1
--          }
--        }
--        detailsLinkKey: "details_link_key"
--        clientEventStartTimeUtcMs: 1783173600000
--        clientEventEndTimeUtcMs: 1783184400000
--        27: "general2.ticket.3"
--      }
--      nameOverride: "general1.ticket_CD_Sobble26_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Sobble26"
--    }
--  }
--}
--template {
--  template_id: "ITEM_EVENT_TICKET_S23_2026_02_TO_GIFT"
--  data {
--    template_id: "ITEM_EVENT_TICKET_S23_2026_02_TO_GIFT"
--    itemSettings {
--      itemId: 2238
--      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
--      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
--      globalEventTicket {
--        eventStartTime: "2026-07-04T14:00:00"
--        eventEndTime: "2026-07-04T17:00:00"
--        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Sobble26"
--        ticketItem: 2206
--        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/1024x512.jpg"
--        clientEventStartTimeUtcMs: 1783173600000
--        clientEventEndTimeUtcMs: 1783184400000
--        27: "general2.ticket.3"
--      }
--      ignoreInventorySpace: true
--      nameOverride: "general1.ticket_CD_Sobble26_title"
--      descriptionOverride: "item_event_ticket_pink_details_CD_Sobble26"
--    }
--  }
--}
--template {
--  template_id: "V0592_MOVE_SNIPE_SHOT"
--  data {
--    template_id: "V0592_MOVE_SNIPE_SHOT"
--    moveSettings {
--      movementId: 592
--      animationId: 5
--      pokemonType: POKEMON_TYPE_WATER
--      power: 100
--      accuracyChance: 1
--      staminaLossScalar: 0.01
--      trainerLevelMin: 1
--      trainerLevelMax: 100
--      vfxName: "snipe_shot"
--      durationMs: 3500
--      damageWindowStartMs: 2000
--      damageWindowEndMs: 2900
--      energyDelta: -33
--    }
--  }
--}
--template {
--  template_id: "sequence_snipe_shot"
--  data {
--    template_id: "sequence_snipe_shot"
--    move_sequence_settings {
--      sequence: "anim attacker atk-move"
--      sequence: "wait 0.5"
--      sequence: "vfx snipe_shot"
--      sequence: "sfx attacker 745-0_snipe_shot"
--      sequence: "wait 1.0"
--      sequence: "sys ui-sync"
--      sequence: "sys complete"
--    }
--  }
--}
--batch_id: 1782462898659
-+batch_id: 1782526635885
+@@ -491383,11 +491383,12 @@
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
++      hidden: true
+       spriteId: "general2.ticket.9"
+       title: "general2.ticket.5_MegaSkarmoryRaidDay"
+-      skuEnableTime: "2023-03-03T13:00:00"
++      skuEnableTime: "2026-03-03T13:00:00"
+       skuDisableTime: "2026-06-27T17:00:00"
+-      skuEnableTimeUtcMs: 1677848400000
++      skuEnableTimeUtcMs: 1772542800000
+       skuDisableTimeUtcMs: 1782579600000
+       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F9398cb22_PGO-MCS_Skarmory_Super_Mega_Raid_Day_v4-1024x576.jpg"
+       useEnvironmentPrefix: true
+@@ -498528,7 +498529,16 @@
+     }
+   }
+ }
+-batch_id: 1782526635885
++template {
++  template_id: "MAP_RADIUS_ENHANCE_GRAPHICS_ROLL_BACK"
++  data {
++    template_id: "MAP_RADIUS_ENHANCE_GRAPHICS_ROLL_BACK"
++    rollBack {
++      rollbackPercentage: 100
++    }
++  }
++}
++batch_id: 1782616570973
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -498435,10 +498568,14 @@
+@@ -498564,6 +498574,7 @@
+ experiment_id: 3217
+ experiment_id: 3222
+ experiment_id: 3227
++experiment_id: 3270
+ experiment_id: 3997
  experiment_id: 3999
  experiment_id: 4000
- experiment_id: 4001
-+experiment_id: 4003
- experiment_id: 4004
-+experiment_id: 4005
+@@ -498573,9 +498584,6 @@
+ experiment_id: 4005
  experiment_id: 4201
  experiment_id: 4205
- experiment_id: 4942
-+experiment_id: 4943
-+experiment_id: 4944
+-experiment_id: 4942
+-experiment_id: 4943
+-experiment_id: 4944
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
-@@ -498457,7 +498594,6 @@
+@@ -498589,7 +498597,6 @@
+ experiment_id: 6075
+ experiment_id: 7036
+ experiment_id: 7039
+-experiment_id: 8688
+ experiment_id: 8960
  experiment_id: 8961
  experiment_id: 8963
- experiment_id: 8964
--experiment_id: 8978
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
