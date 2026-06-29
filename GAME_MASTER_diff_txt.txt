@@ -1,88 +1,96 @@
---- GAME_MASTER_old.txt	2026-06-27 09:41:38.389548848 +0200
-+++ GAME_MASTER.txt	2026-06-28 10:15:01.915855777 +0200
-@@ -46900,7 +46900,7 @@
-       rvnVersion: 1
-       maxPlayersPerBreadDoughLobby: 100
-       maxRemotePlayersPerBreadDoughLobby: 100
--      maxRemoteBreadBattlePassesAllowed: 20
-+      maxRemoteBreadBattlePassesAllowed: 10
-       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
-       fetchProfileFromSocialEnabled: true
-       maxPlayersToPrepareBreadDoughLobby: 98
-@@ -200903,7 +200903,7 @@
-     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
-     squashSettings {
-       enabled: true
--      dailySquashLimit: 20
-+      dailySquashLimit: 10
-     }
-   }
- }
+--- GAME_MASTER_old.txt	2026-06-28 10:15:01.915855777 +0200
++++ GAME_MASTER.txt	2026-06-29 20:25:16.326221155 +0200
 @@ -201069,7 +201069,7 @@
        obRoutePlaySettingsNumber29: 1
        obRoutePlaySettingsNumber30: 27
        obRoutePlaySettingsNumber33: 7
--      obRoutePlaySettingsNumber45: 1
-+      obRoutePlaySettingsNumber45: 6
+-      obRoutePlaySettingsNumber45: 6
++      obRoutePlaySettingsNumber45: 1
      }
    }
  }
-@@ -491383,11 +491383,12 @@
-       sku: "pgorelease.general2.ticket.9"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 2
+@@ -256703,7 +256703,6 @@
+       buddyGroupNumber: 2
+       buddyWalkedMegaEnergyAward: 15
+       allowNoevolveEvolution: JAN_2020_NOEVOLVE
+-      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -256892,7 +256891,6 @@
+       buddyGroupNumber: 2
+       buddyWalkedMegaEnergyAward: 15
+       allowNoevolveEvolution: JAN_2020_NOEVOLVE
+-      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -256994,7 +256992,6 @@
+       buddyGroupNumber: 2
+       buddyWalkedMegaEnergyAward: 15
+       allowNoevolveEvolution: JAN_2020_NOEVOLVE
+-      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -257097,7 +257094,6 @@
+       buddyGroupNumber: 2
+       buddyWalkedMegaEnergyAward: 15
+       allowNoevolveEvolution: JAN_2020_NOEVOLVE
+-      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -489948,15 +489944,9 @@
+       sku: "bundle.rrpstar.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
 +      hidden: true
-       spriteId: "general2.ticket.9"
-       title: "general2.ticket.5_MegaSkarmoryRaidDay"
--      skuEnableTime: "2023-03-03T13:00:00"
-+      skuEnableTime: "2026-03-03T13:00:00"
-       skuDisableTime: "2026-06-27T17:00:00"
--      skuEnableTimeUtcMs: 1677848400000
-+      skuEnableTimeUtcMs: 1772542800000
-       skuDisableTimeUtcMs: 1782579600000
-       imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F9398cb22_PGO-MCS_Skarmory_Super_Mega_Raid_Day_v4-1024x576.jpg"
-       useEnvironmentPrefix: true
-@@ -498528,7 +498529,16 @@
+       spriteId: "bundle.general.remotebox.medium.1"
+       title: "great_raid_box_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2026-06-28T17:00:00"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1782666000000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 490
      }
    }
  }
--batch_id: 1782526635885
-+template {
-+  template_id: "MAP_RADIUS_ENHANCE_GRAPHICS_ROLL_BACK"
-+  data {
-+    template_id: "MAP_RADIUS_ENHANCE_GRAPHICS_ROLL_BACK"
-+    rollBack {
-+      rollbackPercentage: 100
-+    }
-+  }
-+}
-+batch_id: 1782616570973
+@@ -498538,7 +498528,7 @@
+     }
+   }
+ }
+-batch_id: 1782616570973
++batch_id: 1782748329015
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -498564,6 +498574,7 @@
+@@ -498561,7 +498551,6 @@
+ experiment_id: 1250
+ experiment_id: 1699
+ experiment_id: 1816
+-experiment_id: 2230
+ experiment_id: 2297
+ experiment_id: 2600
+ experiment_id: 2650
+@@ -498573,8 +498562,8 @@
+ experiment_id: 3206
  experiment_id: 3217
  experiment_id: 3222
- experiment_id: 3227
-+experiment_id: 3270
+-experiment_id: 3227
+-experiment_id: 3270
++experiment_id: 3228
++experiment_id: 3242
  experiment_id: 3997
  experiment_id: 3999
  experiment_id: 4000
-@@ -498573,9 +498584,6 @@
- experiment_id: 4005
- experiment_id: 4201
- experiment_id: 4205
--experiment_id: 4942
--experiment_id: 4943
--experiment_id: 4944
- experiment_id: 4998
- experiment_id: 5160
- experiment_id: 5162
-@@ -498589,7 +498597,6 @@
- experiment_id: 6075
- experiment_id: 7036
- experiment_id: 7039
--experiment_id: 8688
- experiment_id: 8960
- experiment_id: 8961
- experiment_id: 8963
+@@ -498607,7 +498596,6 @@
+ experiment_id: 9554
+ experiment_id: 20947
+ experiment_id: 60095
+-experiment_id: 91000
+ experiment_id: 92000
+ experiment_id: 93000
+ experiment_id: 99998
