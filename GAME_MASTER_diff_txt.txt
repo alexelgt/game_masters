@@ -1,96 +1,387 @@
---- GAME_MASTER_old.txt	2026-06-28 10:15:01.915855777 +0200
-+++ GAME_MASTER.txt	2026-06-29 20:25:16.326221155 +0200
-@@ -201069,7 +201069,7 @@
-       obRoutePlaySettingsNumber29: 1
-       obRoutePlaySettingsNumber30: 27
-       obRoutePlaySettingsNumber33: 7
--      obRoutePlaySettingsNumber45: 6
-+      obRoutePlaySettingsNumber45: 1
+--- GAME_MASTER_old.txt	2026-06-29 20:25:16.326221155 +0200
++++ GAME_MASTER.txt	2026-07-01 17:39:42.116743939 +0200
+@@ -43422,7 +43422,7 @@
+   data {
+     template_id: "BADGE_REDUCED_ENTRY_FLOW_CONTROL"
+     badgeSettings {
+-      badgeType: 6217
++      badgeType: BADGE_REDUCED_ENTRY_FLOW_CONTROL
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -43437,7 +43437,7 @@
+   data {
+     template_id: "BADGE_REDUCED_ENTRY_FLOW_ROLLOUT"
+     badgeSettings {
+-      badgeType: 6216
++      badgeType: BADGE_REDUCED_ENTRY_FLOW_ROLLOUT
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -85584,7 +85584,7 @@
+   data {
+     template_id: "COMBAT_V0590_MOVE_GLAIVE_RUSH"
+     combat_move {
+-      uniqueId: 590
++      uniqueId: GLAIVE_RUSH
+       type: POKEMON_TYPE_DRAGON
+       power: 90
+       vfxName: "glaive_rush"
+@@ -85601,7 +85601,7 @@
+   data {
+     template_id: "COMBAT_V0592_MOVE_SNIPE_SHOT"
+     combat_move {
+-      uniqueId: 592
++      uniqueId: SNIPE_SHOT
+       type: POKEMON_TYPE_WATER
+       power: 65
+       vfxName: "snipe_shot"
+@@ -150874,7 +150874,7 @@
+     template_id: "EXTENDED_V0999_POKEMON_GIMMIGHOUL_COIN_A2_2026"
+     pokemonExtendedSettings {
+       uniqueId: GIMMIGHOUL
+-      form: 3351
++      form: GIMMIGHOUL_COIN_A2_2026
+       sizeSettings {
+         xxsLowerBound: 0.049
+         xsLowerBound: 0.05
+@@ -165495,7 +165495,7 @@
+         isCostume: true
+       }
+       forms {
+-        form: 3351
++        form: GIMMIGHOUL_COIN_A2_2026
+         isCostume: true
+       }
+     }
+@@ -168563,7 +168563,7 @@
+   data {
+     template_id: "ITEM_EVENT_TICKET_S23_2026_01"
+     itemSettings {
+-      itemId: 2205
++      itemId: ITEM_EVENT_TICKET_S23_2026_01
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+@@ -168571,7 +168571,7 @@
+         eventEndTime: "2026-06-20T17:00:00"
+         itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Frigibax26"
+         giftable: true
+-        giftItem: 2237
++        giftItem: ITEM_EVENT_TICKET_S23_2026_01_TO_GIFT
+         eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Frigibax_v1-1024x576-nologo.jpg"
+         displayV2Enabled: true
+         backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Frigibax_v1-1024x576-nologo.jpg"
+@@ -168615,14 +168615,14 @@
+   data {
+     template_id: "ITEM_EVENT_TICKET_S23_2026_01_TO_GIFT"
+     itemSettings {
+-      itemId: 2237
++      itemId: ITEM_EVENT_TICKET_S23_2026_01_TO_GIFT
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+         eventStartTime: "2026-06-20T14:00:00"
+         eventEndTime: "2026-06-20T17:00:00"
+         itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Frigibax26"
+-        ticketItem: 2205
++        ticketItem: ITEM_EVENT_TICKET_S23_2026_01
+         eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2FPGO_MCS_CD_KeyArt_Frigibax_v1-1024x576-nologo.jpg"
+         clientEventStartTimeUtcMs: 1781964000000
+         clientEventEndTimeUtcMs: 1781974800000
+@@ -168639,7 +168639,7 @@
+   data {
+     template_id: "ITEM_EVENT_TICKET_S23_2026_02"
+     itemSettings {
+-      itemId: 2206
++      itemId: ITEM_EVENT_TICKET_S23_2026_02
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+@@ -168647,7 +168647,7 @@
+         eventEndTime: "2026-07-04T17:00:00"
+         itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Sobble26"
+         giftable: true
+-        giftItem: 2238
++        giftItem: ITEM_EVENT_TICKET_S23_2026_02_TO_GIFT
+         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/1024x512.jpg"
+         displayV2Enabled: true
+         backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pink-ticket-generic1024x512.jpg"
+@@ -168691,14 +168691,14 @@
+   data {
+     template_id: "ITEM_EVENT_TICKET_S23_2026_02_TO_GIFT"
+     itemSettings {
+-      itemId: 2238
++      itemId: ITEM_EVENT_TICKET_S23_2026_02_TO_GIFT
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+         eventStartTime: "2026-07-04T14:00:00"
+         eventEndTime: "2026-07-04T17:00:00"
+         itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Sobble26"
+-        ticketItem: 2206
++        ticketItem: ITEM_EVENT_TICKET_S23_2026_02
+         eventBannerUrl: "https://storage.googleapis.com/prod-public-images/1024x512.jpg"
+         clientEventStartTimeUtcMs: 1783173600000
+         clientEventEndTimeUtcMs: 1783184400000
+@@ -168715,7 +168715,7 @@
+   data {
+     template_id: "ITEM_EVENT_TICKET_S23_2026_03"
+     itemSettings {
+-      itemId: 2207
++      itemId: ITEM_EVENT_TICKET_S23_2026_03
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+@@ -168757,7 +168757,7 @@
+   data {
+     template_id: "ITEM_EVENT_TICKET_S23_2026_09"
+     itemSettings {
+-      itemId: 2213
++      itemId: ITEM_EVENT_TICKET_S23_2026_09
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+@@ -168776,7 +168776,7 @@
+           pokemonEncounter {
+             pokemonId: GIMMIGHOUL
+             pokemonDisplay {
+-              form: 3351
++              form: GIMMIGHOUL_COIN_A2_2026
+             }
+           }
+         }
+@@ -172697,7 +172697,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_1"
+     locationCardSettings {
+-      locationCard: 312
++      locationCard: LC_JAPAN_STAMP_RALLY_1
+       imageUrl: "lc_pokecenter_sapporo"
+     }
+   }
+@@ -172707,7 +172707,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_10"
+     locationCardSettings {
+-      locationCard: 321
++      locationCard: LC_JAPAN_STAMP_RALLY_10
+       imageUrl: "lc_pokecenter_kanazawa"
+     }
+   }
+@@ -172717,7 +172717,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_11"
+     locationCardSettings {
+-      locationCard: 322
++      locationCard: LC_JAPAN_STAMP_RALLY_11
+       imageUrl: "lc_pokecenter_kyoto"
+     }
+   }
+@@ -172727,7 +172727,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_12"
+     locationCardSettings {
+-      locationCard: 323
++      locationCard: LC_JAPAN_STAMP_RALLY_12
+       imageUrl: "lc_pokecenter_osakaDX"
+     }
+   }
+@@ -172737,7 +172737,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_13"
+     locationCardSettings {
+-      locationCard: 324
++      locationCard: LC_JAPAN_STAMP_RALLY_13
+       imageUrl: "lc_pokecenter_osaka"
+     }
+   }
+@@ -172747,7 +172747,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_14"
+     locationCardSettings {
+-      locationCard: 325
++      locationCard: LC_JAPAN_STAMP_RALLY_14
+       imageUrl: "lc_pokecenter_hiroshima"
+     }
+   }
+@@ -172757,7 +172757,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_15"
+     locationCardSettings {
+-      locationCard: 326
++      locationCard: LC_JAPAN_STAMP_RALLY_15
+       imageUrl: "lc_pokecenter_kagawa"
+     }
+   }
+@@ -172767,7 +172767,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_16"
+     locationCardSettings {
+-      locationCard: 327
++      locationCard: LC_JAPAN_STAMP_RALLY_16
+       imageUrl: "lc_pokecenter_fukuoka"
+     }
+   }
+@@ -172777,7 +172777,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_17"
+     locationCardSettings {
+-      locationCard: 328
++      locationCard: LC_JAPAN_STAMP_RALLY_17
+       imageUrl: "lc_pokecenter_okinawa"
+     }
+   }
+@@ -172787,7 +172787,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_18"
+     locationCardSettings {
+-      locationCard: 329
++      locationCard: LC_JAPAN_STAMP_RALLY_18
+       imageUrl: "lc_pokecenter_GOLab"
+     }
+   }
+@@ -172797,7 +172797,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_2"
+     locationCardSettings {
+-      locationCard: 313
++      locationCard: LC_JAPAN_STAMP_RALLY_2
+       imageUrl: "lc_pokecenter_tohoku"
+     }
+   }
+@@ -172807,7 +172807,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_3"
+     locationCardSettings {
+-      locationCard: 314
++      locationCard: LC_JAPAN_STAMP_RALLY_3
+       imageUrl: "lc_pokecenter_tokyoDX"
+     }
+   }
+@@ -172817,7 +172817,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_4"
+     locationCardSettings {
+-      locationCard: 315
++      locationCard: LC_JAPAN_STAMP_RALLY_4
+       imageUrl: "lc_pokecenter_megaTokyo"
+     }
+   }
+@@ -172827,7 +172827,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_5"
+     locationCardSettings {
+-      locationCard: 316
++      locationCard: LC_JAPAN_STAMP_RALLY_5
+       imageUrl: "lc_pokecenter_shibuya"
+     }
+   }
+@@ -172837,7 +172837,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_6"
+     locationCardSettings {
+-      locationCard: 317
++      locationCard: LC_JAPAN_STAMP_RALLY_6
+       imageUrl: "lc_pokecenter_skytreeTown"
+     }
+   }
+@@ -172847,7 +172847,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_7"
+     locationCardSettings {
+-      locationCard: 318
++      locationCard: LC_JAPAN_STAMP_RALLY_7
+       imageUrl: "lc_pokecenter_tokyoBay"
+     }
+   }
+@@ -172857,7 +172857,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_8"
+     locationCardSettings {
+-      locationCard: 319
++      locationCard: LC_JAPAN_STAMP_RALLY_8
+       imageUrl: "lc_pokecenter_yokohama"
+     }
+   }
+@@ -172867,7 +172867,7 @@
+   data {
+     template_id: "LC_JAPAN_STAMP_RALLY_9"
+     locationCardSettings {
+-      locationCard: 320
++      locationCard: LC_JAPAN_STAMP_RALLY_9
+       imageUrl: "lc_pokecenter_nagoya"
+     }
+   }
+@@ -173795,7 +173795,7 @@
+   data {
+     template_id: "LC_SPECIALBACKGROUND_GG2026"
+     locationCardSettings {
+-      locationCard: 333
++      locationCard: LC_SPECIALBACKGROUND_GG2026
+       imageUrl: "sb_9thAnniversary"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_10thAnni"
+@@ -173817,7 +173817,7 @@
+   data {
+     template_id: "LC_SPECIALBACKGROUND_LEGO_2026_01"
+     locationCardSettings {
+-      locationCard: 281
++      locationCard: LC_SPECIALBACKGROUND_LEGO_2026_01
+       imageUrl: "sb_lego_2026"
+       cardType: SPECIAL_BACKGROUND
+     }
+@@ -236190,7 +236190,7 @@
+       gender {
+         genderlessPercent: 1
+       }
+-      form: 3351
++      form: GIMMIGHOUL_COIN_A2_2026
      }
    }
  }
-@@ -256703,7 +256703,6 @@
-       buddyGroupNumber: 2
-       buddyWalkedMegaEnergyAward: 15
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
--      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
+@@ -398480,7 +398480,7 @@
+   data {
+     template_id: "V0590_MOVE_GLAIVE_RUSH"
+     moveSettings {
+-      movementId: 590
++      movementId: GLAIVE_RUSH
+       animationId: 5
+       pokemonType: POKEMON_TYPE_DRAGON
+       power: 105
+@@ -398890,7 +398890,7 @@
+   data {
+     template_id: "V0592_MOVE_SNIPE_SHOT"
+     moveSettings {
+-      movementId: 592
++      movementId: SNIPE_SHOT
+       animationId: 5
+       pokemonType: POKEMON_TYPE_WATER
+       power: 100
+@@ -476048,7 +476048,7 @@
+       isDeployable: true
+       isTradable: true
+       buddyGroupNumber: 3
+-      eliteCinematicMove: 590
++      eliteCinematicMove: GLAIVE_RUSH
+       raidBossDistanceOffset: 2
        ibfc {
        }
-       breadTierGroup: GROUP_1
-@@ -256892,7 +256891,6 @@
-       buddyGroupNumber: 2
-       buddyWalkedMegaEnergyAward: 15
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
--      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
+@@ -476120,7 +476120,7 @@
+       isDeployable: true
+       isTradable: true
+       buddyGroupNumber: 3
+-      eliteCinematicMove: 590
++      eliteCinematicMove: GLAIVE_RUSH
+       raidBossDistanceOffset: 2
        ibfc {
        }
-       breadTierGroup: GROUP_1
-@@ -256994,7 +256992,6 @@
-       buddyGroupNumber: 2
-       buddyWalkedMegaEnergyAward: 15
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
--      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
-       ibfc {
-       }
-       breadTierGroup: GROUP_1
-@@ -257097,7 +257094,6 @@
-       buddyGroupNumber: 2
-       buddyWalkedMegaEnergyAward: 15
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
--      allowNoevolveEvolution: SPRING_2020_NOEVOLVE
-       ibfc {
-       }
-       breadTierGroup: GROUP_1
-@@ -489948,15 +489944,9 @@
-       sku: "bundle.rrpstar.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
-+      hidden: true
-       spriteId: "bundle.general.remotebox.medium.1"
-       title: "great_raid_box_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2026-06-28T17:00:00"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1782666000000
--      showDiscountTag: true
--      showStrikethroughPrice: true
--      totalValue: 490
-     }
-   }
- }
-@@ -498538,7 +498528,7 @@
-     }
-   }
- }
--batch_id: 1782616570973
-+batch_id: 1782748329015
- experiment_id: 11
- experiment_id: 21
- experiment_id: 101
-@@ -498561,7 +498551,6 @@
- experiment_id: 1250
- experiment_id: 1699
- experiment_id: 1816
--experiment_id: 2230
- experiment_id: 2297
- experiment_id: 2600
- experiment_id: 2650
-@@ -498573,8 +498562,8 @@
- experiment_id: 3206
- experiment_id: 3217
- experiment_id: 3222
--experiment_id: 3227
--experiment_id: 3270
-+experiment_id: 3228
-+experiment_id: 3242
- experiment_id: 3997
- experiment_id: 3999
- experiment_id: 4000
-@@ -498607,7 +498596,6 @@
- experiment_id: 9554
- experiment_id: 20947
- experiment_id: 60095
--experiment_id: 91000
- experiment_id: 92000
- experiment_id: 93000
- experiment_id: 99998
+@@ -476358,7 +476358,7 @@
+       kmBuddyDistance: 5
+       modelHeight: 0.4
+       modelScaleV2: 1
+-      form: 3351
++      form: GIMMIGHOUL_COIN_A2_2026
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
