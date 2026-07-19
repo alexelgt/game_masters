@@ -1,510 +1,88 @@
---- GAME_MASTER_old.txt	2026-07-15 22:35:14.719179371 +0200
-+++ GAME_MASTER.txt	2026-07-18 10:12:48.173583650 +0200
+--- GAME_MASTER_old.txt	2026-07-18 10:12:48.173583650 +0200
++++ GAME_MASTER.txt	2026-07-19 09:45:14.564820094 +0200
 @@ -46973,7 +46973,7 @@
        rvnVersion: 1
        maxPlayersPerBreadDoughLobby: 100
        maxRemotePlayersPerBreadDoughLobby: 100
--      maxRemoteBreadBattlePassesAllowed: 10
-+      maxRemoteBreadBattlePassesAllowed: 20
+-      maxRemoteBreadBattlePassesAllowed: 20
++      maxRemoteBreadBattlePassesAllowed: 10
        maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
        fetchProfileFromSocialEnabled: true
        maxPlayersToPrepareBreadDoughLobby: 98
-@@ -169768,6 +169768,7 @@
-         detailsLinkKey: "details_link_key_shayminmasterworkrerun"
-         clientEventStartTimeUtcMs: 1784628000000
-         clientEventEndTimeUtcMs: 1785182400000
-+        27: "general2.ticket.6"
+@@ -168620,7 +168620,6 @@
        }
-       nameOverride: "general2.ticket.5_shayminmasterworkrerun"
-       descriptionOverride: "item_event_ticket_gray_desc_shayminmasterworkrerun"
-@@ -169788,13 +169789,31 @@
-         itemBagDescriptionKey: "item_event_ticket_pink_desc_MegaRayquaza26"
-         giftable: true
-         giftItem: 2243
-+        eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F0ba8ff0a_20260508_pgo_s23_megarayquaza_1024x576_nologo.jpg"
-         displayV2Enabled: true
-         backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F0ba8ff0a_20260508_pgo_s23_megarayquaza_1024x576_nologo.jpg"
-         eventDatetimeRangeKey: "event_datetime_range_key_MegaRayquaza26"
-         textRewardsKey: "text_rewards_key_MegaRayquaza26"
-+        iconRewards {
-+          type: ITEM
-+          item {
-+            item: ITEM_MOVE_REROLL_OTHER_SPECIAL_ATTACK_A
-+          }
-+        }
-+        iconRewards {
-+          type: POKEMON_ENCOUNTER
-+          pokemonEncounter {
-+            pokemonId: RAYQUAZA
-+          }
-+        }
-+        iconRewards {
-+          type: STARDUST
-+          stardust: 3840
-+        }
-         detailsLinkKey: "details_link_key"
-         clientEventStartTimeUtcMs: 1784973600000
-         clientEventEndTimeUtcMs: 1785096000000
-+        27: "general2.ticket.9"
+       timePeriodCounters {
+         playerActivity {
+-          limit: 500
+         }
        }
-       nameOverride: "general1.ticket.2_MegaRayquaza_title"
-       descriptionOverride: "item_event_ticket_pink_details_MegaRayquaza26"
-@@ -202401,7 +202420,7 @@
+       hideItemInInventory: true
+@@ -202420,7 +202419,7 @@
      template_id: "REMOTE_RAID_LIMIT_SETTINGS"
      squashSettings {
        enabled: true
--      dailySquashLimit: 10
-+      dailySquashLimit: 20
+-      dailySquashLimit: 20
++      dailySquashLimit: 10
      }
    }
  }
-@@ -300212,6 +300231,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
-+      eliteQuickMove: COUNTER_FAST
-       eliteCinematicMove: PSYSTRIKE
-       eliteCinematicMove: SHADOW_BALL
-       eliteCinematicMove: HYPER_BEAM
-@@ -300473,6 +300493,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
-+      eliteQuickMove: COUNTER_FAST
-       eliteCinematicMove: PSYSTRIKE
-       eliteCinematicMove: SHADOW_BALL
-       eliteCinematicMove: HYPER_BEAM
-@@ -498401,7 +498422,399 @@
+@@ -202586,7 +202585,7 @@
+       obRoutePlaySettingsNumber29: 1
+       obRoutePlaySettingsNumber30: 27
+       obRoutePlaySettingsNumber33: 7
+-      obRoutePlaySettingsNumber45: 1
++      obRoutePlaySettingsNumber45: 6
      }
    }
  }
--batch_id: 1784144806278
-+template {
-+  template_id: "general2.ticket.5"
-+  data {
-+    template_id: "general2.ticket.5"
-+    iapItemDisplay {
-+      sku: "pgorelease.general2.ticket.5"
-+      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-+      sortOrder: 2
-+      spriteId: "general2.ticket.6"
-+      title: "general2.ticket.5_MegaRaichuRaidDay"
-+      skuEnableTime: "2019-03-14T08:00:00"
-+      skuDisableTime: "2026-07-18T17:00:00"
-+      skuEnableTimeUtcMs: 1552550400000
-+      skuDisableTimeUtcMs: 1784394000000
-+      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F97c2eaee_PGO-MCS_Raichu_Super_Mega_Raid_Day_v3-1024x576-nologo.jpg"
-+      useEnvironmentPrefix: true
-+    }
-+  }
-+}
-+template {
-+  template_id: "HIDE_CAMPFIRE_MAP_BUTTONS_FEATURE_GATE"
-+  data {
-+    template_id: "HIDE_CAMPFIRE_MAP_BUTTONS_FEATURE_GATE"
-+    featureGate {
-+      status: 1
-+      rolloutPercentage: 100
-+    }
-+  }
-+}
-+template {
-+  template_id: "ITEM_EVENT_TICKET_S23_2026_08"
-+  data {
-+    template_id: "ITEM_EVENT_TICKET_S23_2026_08"
-+    itemSettings {
-+      itemId: 2212
-+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-+      globalEventTicket {
-+        eventStartTime: "2026-08-01T14:00:00"
-+        eventEndTime: "2026-08-01T17:00:00"
-+        itemBagDescriptionKey: "ITEM_EVENT_TICKET_S23_2026_08_desc_gmaxRillaboom26"
-+        giftable: true
-+        giftItem: 2244
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F871eef71_PGO-MCS_GMAX_Rillaboom_Max_Battle_Day_v1-1024x576-nologo.jpg"
-+        displayV2Enabled: true
-+        backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F871eef71_PGO-MCS_GMAX_Rillaboom_Max_Battle_Day_v1-1024x576-nologo.jpg"
-+        eventDatetimeRangeKey: "event_datetime_range_key_gmaxRillaboom26"
-+        textRewardsKey: "text_rewards_key_gmaxRillaboom26"
-+        iconRewards {
-+          type: ITEM
-+          item {
-+            item: ITEM_MAX_BOOST
-+            amount: 1
-+          }
-+        }
-+        iconRewards {
-+          type: EXPERIENCE
-+          exp: 25000
-+        }
-+        iconRewards {
-+          type: ITEM
-+          item {
-+            item: ITEM_MP
-+            amount: 6400
-+          }
-+        }
-+        detailsLinkKey: "details_link_key"
-+        clientEventStartTimeUtcMs: 1785592800000
-+        clientEventEndTimeUtcMs: 1785603600000
-+      }
-+      nameOverride: "general1.ticket.4_gmaxRillaboom26_title"
-+      descriptionOverride: "ITEM_EVENT_TICKET_S23_2026_08_desc_gmaxRillaboom26"
-+    }
-+  }
-+}
-+template {
-+  template_id: "ITEM_EVENT_TICKET_S23_2026_08_TO_GIFT"
-+  data {
-+    template_id: "ITEM_EVENT_TICKET_S23_2026_08_TO_GIFT"
-+    itemSettings {
-+      itemId: 2244
-+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-+      globalEventTicket {
-+        eventStartTime: "2026-08-01T14:00:00"
-+        eventEndTime: "2026-08-01T17:00:00"
-+        itemBagDescriptionKey: "ITEM_EVENT_TICKET_S23_2026_08_details_gmaxRillaboom26"
-+        ticketItem: 2212
-+        eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F871eef71_PGO-MCS_GMAX_Rillaboom_Max_Battle_Day_v1-1024x576-nologo.jpg"
-+        clientEventStartTimeUtcMs: 1785592800000
-+        clientEventEndTimeUtcMs: 1785603600000
-+      }
-+      ignoreInventorySpace: true
-+      descriptionOverride: "ITEM_EVENT_TICKET_S23_2026_08_details_gmaxRillaboom26"
-+    }
-+  }
-+}
-+template {
-+  template_id: "ITEM_EVENT_TICKET_S23_2026_07_TO_GIFT"
-+  data {
-+    template_id: "ITEM_EVENT_TICKET_S23_2026_07_TO_GIFT"
-+    itemSettings {
-+      itemId: 2243
-+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-+      globalEventTicket {
-+        eventStartTime: "2026-07-25T10:00:00"
-+        eventEndTime: "2026-07-26T20:00:00"
-+        itemBagDescriptionKey: "item_event_ticket_pink_details_MegaRayquaza26"
-+        ticketItem: 2211
-+        eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F0ba8ff0a_20260508_pgo_s23_megarayquaza_1024x576_nologo.jpg"
-+        backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F0ba8ff0a_20260508_pgo_s23_megarayquaza_1024x576_nologo.jpg"
-+        clientEventStartTimeUtcMs: 1784973600000
-+        clientEventEndTimeUtcMs: 1785096000000
-+        27: "general2.ticket.9"
-+      }
-+      ignoreInventorySpace: true
-+      nameOverride: "general1.ticket.2_MegaRayquaza_title"
-+      descriptionOverride: "item_event_ticket_pink_details_MegaRayquaza26"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_1"
-+  data {
-+    template_id: "LC_NT_1"
-+    locationCardSettings {
-+      locationCard: 282
-+      imageUrl: "lc_nationalTrust_angleseyAbbey"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_10"
-+  data {
-+    template_id: "LC_NT_10"
-+    locationCardSettings {
-+      locationCard: 291
-+      imageUrl: "lc_nationalTrust_gibslide"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_11"
-+  data {
-+    template_id: "LC_NT_11"
-+    locationCardSettings {
-+      locationCard: 292
-+      imageUrl: "lc_nationalTrust_hanbury"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_12"
-+  data {
-+    template_id: "LC_NT_12"
-+    locationCardSettings {
-+      locationCard: 293
-+      imageUrl: "lc_nationalTrust_hardwick"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_13"
-+  data {
-+    template_id: "LC_NT_13"
-+    locationCardSettings {
-+      locationCard: 294
-+      imageUrl: "lc_nationalTrust_killerton"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_14"
-+  data {
-+    template_id: "LC_NT_14"
-+    locationCardSettings {
-+      locationCard: 295
-+      imageUrl: "lc_nationalTrust_kingstonLacy"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_15"
-+  data {
-+    template_id: "LC_NT_15"
-+    locationCardSettings {
-+      locationCard: 296
-+      imageUrl: "lc_nationalTrust_lacock"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_16"
-+  data {
-+    template_id: "LC_NT_16"
-+    locationCardSettings {
-+      locationCard: 297
-+      imageUrl: "lc_nationalTrust_lymePark"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_17"
-+  data {
-+    template_id: "LC_NT_17"
-+    locationCardSettings {
-+      locationCard: 298
-+      imageUrl: "lc_nationalTrust_mottisfont"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_18"
-+  data {
-+    template_id: "LC_NT_18"
-+    locationCardSettings {
-+      locationCard: 299
-+      imageUrl: "lc_nationalTrust_mountStewart"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_19"
-+  data {
-+    template_id: "LC_NT_19"
-+    locationCardSettings {
-+      locationCard: 300
-+      imageUrl: "lc_nationalTrust_nymans"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_2"
-+  data {
-+    template_id: "LC_NT_2"
-+    locationCardSettings {
-+      locationCard: 283
-+      imageUrl: "lc_nationalTrust_attinghamPark"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_20"
-+  data {
-+    template_id: "LC_NT_20"
-+    locationCardSettings {
-+      locationCard: 301
-+      imageUrl: "lc_nationalTrust_polesden"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_21"
-+  data {
-+    template_id: "LC_NT_21"
-+    locationCardSettings {
-+      locationCard: 302
-+      imageUrl: "lc_nationalTrust_scotneyCastle"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_22"
-+  data {
-+    template_id: "LC_NT_22"
-+    locationCardSettings {
-+      locationCard: 303
-+      imageUrl: "lc_nationalTrust_stourhead"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_23"
-+  data {
-+    template_id: "LC_NT_23"
-+    locationCardSettings {
-+      locationCard: 304
-+      imageUrl: "lc_nationalTrust_stoweGardenPark"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_24"
-+  data {
-+    template_id: "LC_NT_24"
-+    locationCardSettings {
-+      locationCard: 305
-+      imageUrl: "lc_nationalTrust_tredegarHouse"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_25"
-+  data {
-+    template_id: "LC_NT_25"
-+    locationCardSettings {
-+      locationCard: 306
-+      imageUrl: "lc_nationalTrust_trelissick"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_26"
-+  data {
-+    template_id: "LC_NT_26"
-+    locationCardSettings {
-+      locationCard: 307
-+      imageUrl: "lc_nationalTrust_tyntesfield"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_27"
-+  data {
-+    template_id: "LC_NT_27"
-+    locationCardSettings {
-+      locationCard: 308
-+      imageUrl: "lc_nationalTrust_whimpole"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_3"
-+  data {
-+    template_id: "LC_NT_3"
-+    locationCardSettings {
-+      locationCard: 284
-+      imageUrl: "lc_nationalTrust_beltonHouse"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_4"
-+  data {
-+    template_id: "LC_NT_4"
-+    locationCardSettings {
-+      locationCard: 285
-+      imageUrl: "lc_nationalTrust_calkeAbbey"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_5"
-+  data {
-+    template_id: "LC_NT_5"
-+    locationCardSettings {
-+      locationCard: 286
-+      imageUrl: "lc_nationalTrust_chirk"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_6"
-+  data {
-+    template_id: "LC_NT_6"
-+    locationCardSettings {
-+      locationCard: 287
-+      imageUrl: "lc_nationalTrust_cliveden"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_7"
-+  data {
-+    template_id: "LC_NT_7"
-+    locationCardSettings {
-+      locationCard: 288
-+      imageUrl: "lc_nationalTrust_clumberPark"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_8"
-+  data {
-+    template_id: "LC_NT_8"
-+    locationCardSettings {
-+      locationCard: 289
-+      imageUrl: "lc_nationalTrust_dunhamMassey"
-+    }
-+  }
-+}
-+template {
-+  template_id: "LC_NT_9"
-+  data {
-+    template_id: "LC_NT_9"
-+    locationCardSettings {
-+      locationCard: 290
-+      imageUrl: "lc_nationalTrust_fountainsAbbeyEstate"
-+    }
-+  }
-+}
-+batch_id: 1784337589226
- experiment_id: 11
- experiment_id: 21
- experiment_id: 101
-@@ -498442,6 +498855,8 @@
+@@ -498423,25 +498422,6 @@
+   }
+ }
+ template {
+-  template_id: "general2.ticket.5"
+-  data {
+-    template_id: "general2.ticket.5"
+-    iapItemDisplay {
+-      sku: "pgorelease.general2.ticket.5"
+-      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 2
+-      spriteId: "general2.ticket.6"
+-      title: "general2.ticket.5_MegaRaichuRaidDay"
+-      skuEnableTime: "2019-03-14T08:00:00"
+-      skuDisableTime: "2026-07-18T17:00:00"
+-      skuEnableTimeUtcMs: 1552550400000
+-      skuDisableTimeUtcMs: 1784394000000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F97c2eaee_PGO-MCS_Raichu_Super_Mega_Raid_Day_v3-1024x576-nologo.jpg"
+-      useEnvironmentPrefix: true
+-    }
+-  }
+-}
+-template {
+   template_id: "HIDE_CAMPFIRE_MAP_BUTTONS_FEATURE_GATE"
+   data {
+     template_id: "HIDE_CAMPFIRE_MAP_BUTTONS_FEATURE_GATE"
+@@ -498849,14 +498829,13 @@
+ experiment_id: 3218
+ experiment_id: 3222
+ experiment_id: 3230
++experiment_id: 3272
+ experiment_id: 4226
+ experiment_id: 4235
+ experiment_id: 4527
  experiment_id: 4528
- experiment_id: 4530
+-experiment_id: 4530
++experiment_id: 4531
  experiment_id: 4532
-+experiment_id: 4953
-+experiment_id: 4954
+-experiment_id: 4953
+-experiment_id: 4954
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
-@@ -498457,6 +498872,7 @@
+@@ -498871,6 +498850,7 @@
+ experiment_id: 7040
  experiment_id: 7043
  experiment_id: 7049
++experiment_id: 7051
  experiment_id: 7052
-+experiment_id: 7053
+ experiment_id: 7053
  experiment_id: 7055
- experiment_id: 8965
- experiment_id: 8966
-@@ -498468,7 +498884,6 @@
- experiment_id: 20947
- experiment_id: 60095
- experiment_id: 94432
--experiment_id: 98097
- experiment_id: 99998
- experiment_id: 173173
- experiment_id: 193151
-@@ -498476,6 +498891,7 @@
- experiment_id: 1000890
- experiment_id: 3500035
- experiment_id: 3500037
-+experiment_id: 4687001
- experiment_id: 5000301
- experiment_id: 6600417
- experiment_id: 6600418
