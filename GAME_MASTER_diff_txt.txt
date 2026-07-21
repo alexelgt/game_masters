@@ -1,4035 +1,3540 @@
---- GAME_MASTER_old.txt	2026-07-19 09:45:14.564820094 +0200
-+++ GAME_MASTER.txt	2026-07-19 11:41:54.101089325 +0200
-@@ -62,8 +62,8 @@
-     template_id: "ADVANCED_SETTINGS"
-     advancedSettings {
-       downloadAllAssetsEnabled: true
--      11: 6144
--      12: 6100
-+      maxDeviceMemoryForHighQualityModeMb: 6144
-+      maxDeviceMemoryForStandardQualityModeMb: 6100
+--- GAME_MASTER_old.txt	2026-07-19 11:41:54.101089325 +0200
++++ GAME_MASTER.txt	2026-07-21 20:11:42.454117331 +0200
+@@ -93782,14 +93782,14 @@
+     template_id: "EVENT_PASS_JULY2_EVENT_STORE_REDIRECT"
+     iapItemDisplay {
+       sku: "pgorelease.july2_deluxe_event_pass_track_redirect"
++      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       title: "season_pass_premium_track_title_10th_anniversary_2026"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+       skuEnableTime: "2025-07-21T10:00:00"
+-      skuDisableTime: "2025-07-29T20:00:00"
++      skuDisableTime: "2026-07-29T20:00:00"
+       skuEnableTimeUtcMs: 1753092000000
+-      skuDisableTimeUtcMs: 1753819200000
++      skuDisableTimeUtcMs: 1785355200000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F07b0cffa_PGO-MCS_2026_Ultra_Unlock_01_v6-1024x576.jpg"
      }
    }
- }
-@@ -91,90 +91,90 @@
-   template_id: "AMUSE_BOUCHE_WELCOME_BACK_REWARDS"
-   data {
-     template_id: "AMUSE_BOUCHE_WELCOME_BACK_REWARDS"
--    290 {
--      2: 1
--      3 {
--        1 {
--          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_0"
--          2 {
--            1: 2
--            3 {
--              1: 1
--              2: 5
-+    welcomeBackRewardsSettings {
-+      enableMultiDayRewards: true
-+      carouselDisplaySettings {
-+        questIconCarousels {
-+          questTemplateId: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_0"
-+          rewardData {
-+            type: ITEM
-+            item {
-+              item: ITEM_POKE_BALL
-+              amount: 5
-             }
-           }
+@@ -167373,7 +167373,7 @@
+     iapCategoryDisplay {
+       category: IAP_CATEGORY_AVATAR
+       sortOrder: 5
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fb8273682_pgo_avatar_zeraora_nologo.jpg"
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F4e0ea87e_PGO_Professor_Willow_Avatar_Outfit.jpg"
+       description: "avatar_shop_description_new"
+     }
+   }
+@@ -168620,6 +168620,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 500
          }
--        1 {
--          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_1"
--          2 {
--            1: 2
--            3 {
--              1: 301
--              2: 1
-+        questIconCarousels {
-+          questTemplateId: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_1"
-+          rewardData {
-+            type: ITEM
-+            item {
-+              item: ITEM_LUCKY_EGG
-+              amount: 1
-             }
-           }
+       }
+       hideItemInInventory: true
+@@ -168641,7 +168642,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 300
++          limit: 500
          }
--        1 {
--          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_2"
--          2 {
--            1: 2
--            3 {
--              1: 2
--              2: 5
-+        questIconCarousels {
-+          questTemplateId: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_2"
-+          rewardData {
-+            type: ITEM
-+            item {
-+              item: ITEM_GREAT_BALL
-+              amount: 5
-             }
-           }
-         }
--        1 {
--          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_3"
--          2 {
--            1: 2
--            3 {
--              1: 501
--              2: 1
-+        questIconCarousels {
-+          questTemplateId: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_3"
-+          rewardData {
-+            type: ITEM
-+            item {
-+              item: ITEM_TROY_DISK
-+              amount: 1
-             }
-           }
-         }
--        1 {
--          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_4"
--          2 {
--            1: 2
--            3 {
--              1: 3
--              2: 5
-+        questIconCarousels {
-+          questTemplateId: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_4"
-+          rewardData {
-+            type: ITEM
-+            item {
-+              item: ITEM_ULTRA_BALL
-+              amount: 5
-             }
-           }
-         }
--        1 {
--          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_5"
--          2 {
--            1: 2
--            3 {
--              1: 902
--              2: 1
-+        questIconCarousels {
-+          questTemplateId: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_5"
-+          rewardData {
-+            type: ITEM
-+            item {
-+              item: ITEM_INCUBATOR_BASIC
-+              amount: 1
-             }
-           }
-         }
--        1 {
--          1: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_6"
--          2 {
--            1: 2
--            3 {
--              1: 1402
--              2: 1
-+        questIconCarousels {
-+          questTemplateId: "AMUSE_BOUCHE_WB_REWARDS_MULTIPLE_SHORT_6"
-+          rewardData {
-+            type: ITEM
-+            item {
-+              item: ITEM_PAID_RAID_TICKET
-+              amount: 1
-             }
-           }
--          2 {
--            1: 2
--            3 {
--              1: 709
--              2: 1
-+          rewardData {
-+            type: ITEM
-+            item {
-+              item: ITEM_POFFIN
-+              amount: 1
-             }
-           }
--          2 {
--            1: 2
--            3 {
--              1: 1106
--              2: 1
-+          rewardData {
-+            type: ITEM
-+            item {
-+              item: ITEM_GEN4_EVOLUTION_STONE
-+              amount: 1
-             }
-           }
-         }
-@@ -85660,7 +85660,7 @@
-   data {
-     template_id: "COMBAT_V0593_MOVE_DIVE"
-     combat_move {
--      uniqueId: 593
-+      uniqueId: DIVE
-       type: POKEMON_TYPE_WATER
-       power: 50
-       vfxName: "dive"
-@@ -85673,7 +85673,7 @@
-   data {
-     template_id: "COMBAT_V0594_MOVE_GULP_MISSILE_GULPING"
-     combat_move {
--      uniqueId: 594
-+      uniqueId: GULP_MISSILE_GULPING
-       type: POKEMON_TYPE_NORMAL
-       vfxName: "gulp_missile_gulping"
-       buffs {
-@@ -85688,7 +85688,7 @@
-   data {
-     template_id: "COMBAT_V0595_MOVE_GULP_MISSILE_GORGING"
-     combat_move {
--      uniqueId: 595
-+      uniqueId: GULP_MISSILE_GORGING
-       type: POKEMON_TYPE_NORMAL
-       vfxName: "gulp_missile_gorging"
-       buffs {
-@@ -85986,7 +85986,7 @@
-   template_id: "ENCOUNTER_SETTINGS"
-   data {
-     template_id: "ENCOUNTER_SETTINGS"
--    encounter_settings {
-+    encounterSettings {
-       spinBonusThreshold: 0.5
-       excellentThrowThreshold: 1.7
-       greatThrowThreshold: 1.3
-@@ -96108,8 +96108,8 @@
-   template_id: "EVENT_SERVER_SETTINGS"
-   data {
-     template_id: "EVENT_SERVER_SETTINGS"
--    293 {
--      1: "484769a62f4e0466590d0664cf05f427914e6cdaba72145abdf07651bba66698"
-+    eventMapRefreshSettings {
-+      eventServerSettingsHash: "484769a62f4e0466590d0664cf05f427914e6cdaba72145abdf07651bba66698"
+       }
+       hideItemInInventory: true
+@@ -172543,7 +172544,7 @@
+       itemType: ITEM_TYPE_DISK
+       category: ITEM_CATEGORY_DISK
+       dropTrainerLevel: 1
+-      itemCap: 1
++      itemCap: 5
      }
    }
  }
-@@ -145335,7 +145335,7 @@
-     template_id: "EXTENDED_V0845_POKEMON_CRAMORANT_GORGING"
-     pokemonExtendedSettings {
-       uniqueId: CRAMORANT
--      form: 3350
-+      form: CRAMORANT_GORGING
-       sizeSettings {
-         xxsLowerBound: 0.392
-         xsLowerBound: 0.4
-@@ -145353,7 +145353,7 @@
-     template_id: "EXTENDED_V0845_POKEMON_CRAMORANT_GULPING"
-     pokemonExtendedSettings {
-       uniqueId: CRAMORANT
--      form: 3349
-+      form: CRAMORANT_GULPING
-       sizeSettings {
-         xxsLowerBound: 0.392
-         xsLowerBound: 0.4
-@@ -164443,10 +164443,10 @@
-         form: CRAMORANT_NORMAL
-       }
-       forms {
--        form: 3349
-+        form: CRAMORANT_GULPING
-       }
-       forms {
--        form: 3350
-+        form: CRAMORANT_GORGING
-       }
+@@ -172726,13 +172727,12 @@
+     iapItemDisplay {
+       sku: "pgorelease.july2_deluxe_event_pass_track_unlock"
+       sortOrder: 1
+-      hidden: true
+       title: "season_pass_premium_track_title_10th_anniversary_2026"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+       skuEnableTime: "2025-07-21T10:00:00"
+-      skuDisableTime: "2025-07-29T20:00:00"
++      skuDisableTime: "2026-07-29T20:00:00"
+       skuEnableTimeUtcMs: 1753092000000
+-      skuDisableTimeUtcMs: 1753819200000
++      skuDisableTimeUtcMs: 1785355200000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F07b0cffa_PGO-MCS_2026_Ultra_Unlock_01_v6-1024x576.jpg"
      }
    }
-@@ -169624,7 +169624,7 @@
-         eventEndTime: "2026-06-27T17:00:00"
-         itemBagDescriptionKey: "item_event_ticket_gray_details_MegaSkarmoryRaidDay"
-         giftable: true
--        giftItem: 2239
-+        giftItem: ITEM_EVENT_TICKET_S23_2026_03_TO_GIFT
-         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F9398cb22_PGO-MCS_Skarmory_Super_Mega_Raid_Day_v4-1024x576.jpg"
-         displayV2Enabled: true
-         backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F9398cb22_PGO-MCS_Skarmory_Super_Mega_Raid_Day_v4-1024x576.jpg"
-@@ -169658,7 +169658,7 @@
-   data {
-     template_id: "ITEM_EVENT_TICKET_S23_2026_04"
-     itemSettings {
--      itemId: 2208
-+      itemId: ITEM_EVENT_TICKET_S23_2026_04
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
-@@ -169666,7 +169666,7 @@
-         eventEndTime: "2026-07-18T17:00:00"
-         itemBagDescriptionKey: "item_event_ticket_gray_details_MegaRaichuRaidDay"
-         giftable: true
--        giftItem: 2240
-+        giftItem: ITEM_EVENT_TICKET_S23_2026_04_TO_GIFT
-         eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F97c2eaee_PGO-MCS_Raichu_Super_Mega_Raid_Day_v3-1024x576-nologo.jpg"
-         displayV2Enabled: true
-         backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F97c2eaee_PGO-MCS_Raichu_Super_Mega_Raid_Day_v3-1024x576-nologo.jpg"
-@@ -169700,14 +169700,14 @@
-   data {
-     template_id: "ITEM_EVENT_TICKET_S23_2026_04_TO_GIFT"
-     itemSettings {
--      itemId: 2240
-+      itemId: ITEM_EVENT_TICKET_S23_2026_04_TO_GIFT
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
-         eventStartTime: "2026-07-18T14:00:00"
-         eventEndTime: "2026-07-18T17:00:00"
-         itemBagDescriptionKey: "item_event_ticket_gray_desc_MegaRaichuRaidDay"
--        ticketItem: 2208
-+        ticketItem: ITEM_EVENT_TICKET_S23_2026_04
-         eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F97c2eaee_PGO-MCS_Raichu_Super_Mega_Raid_Day_v3-1024x576-nologo.jpg"
-         backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F97c2eaee_PGO-MCS_Raichu_Super_Mega_Raid_Day_v3-1024x576-nologo.jpg"
-         clientEventStartTimeUtcMs: 1784383200000
-@@ -169724,7 +169724,7 @@
-   data {
-     template_id: "ITEM_EVENT_TICKET_S23_2026_06"
-     itemSettings {
--      itemId: 2210
-+      itemId: ITEM_EVENT_TICKET_S23_2026_06
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
-@@ -169732,7 +169732,7 @@
-         eventEndTime: "2026-07-27T20:00:00"
-         itemBagDescriptionKey: "item_event_ticket_gray_details_shayminmasterworkrerun"
-         giftable: true
--        giftItem: 2242
-+        giftItem: ITEM_EVENT_TICKET_S23_2026_06_TO_GIFT
-         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fe2400534_20260511_pgo_s23_ShinyShaymin_1024x576_nologo.jpg"
-         conflictStoryQuestIds: "RERUN_MASTERWORK_SHINY_SHAYMIN_SET_0_HEADER"
-         conflictStoryQuestIds: "MASTERWORK_SHINY_SHAYMIN_SET_0_HEADER"
-@@ -169779,7 +169779,7 @@
-   data {
-     template_id: "ITEM_EVENT_TICKET_S23_2026_07"
-     itemSettings {
--      itemId: 2211
-+      itemId: ITEM_EVENT_TICKET_S23_2026_07
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
-@@ -169787,7 +169787,7 @@
-         eventEndTime: "2026-07-26T20:00:00"
-         itemBagDescriptionKey: "item_event_ticket_pink_desc_MegaRayquaza26"
-         giftable: true
--        giftItem: 2243
-+        giftItem: ITEM_EVENT_TICKET_S23_2026_07_TO_GIFT
-         eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F0ba8ff0a_20260508_pgo_s23_megarayquaza_1024x576_nologo.jpg"
-         displayV2Enabled: true
-         backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F0ba8ff0a_20260508_pgo_s23_megarayquaza_1024x576_nologo.jpg"
-@@ -169832,7 +169832,7 @@
-         eventEndTime: "2026-07-06T20:00:00"
-         itemBagDescriptionKey: "item_event_ticket_evergreen_desc_10THPARTY0726"
-         giftable: true
--        giftItem: 2245
-+        giftItem: ITEM_EVENT_TICKET_S23_2026_09_TO_GIFT
-         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F3b085206_PGO-MCS_10th_Anniversary_Celebration_TICKET_v2-1024x576.jpg"
-         displayV2Enabled: true
-         backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F3b085206_PGO-MCS_10th_Anniversary_Celebration_TICKET_v2-1024x576.jpg"
-@@ -178805,7 +178805,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
+@@ -172744,13 +172744,12 @@
+     iapItemDisplay {
+       sku: "pgorelease.july2_deluxe_event_pass_track_unlock_plus_points"
+       sortOrder: 1
+-      hidden: true
+       title: "season_pass_premium_track_plus_six_ranks_title_10th_anniversary_2026"
+       description: "event_pass_plus_points_6_ranks_description"
+       skuEnableTime: "2025-07-21T10:00:00"
+-      skuDisableTime: "2025-07-29T20:00:00"
++      skuDisableTime: "2026-07-29T20:00:00"
+       skuEnableTimeUtcMs: 1753092000000
+-      skuDisableTimeUtcMs: 1753819200000
++      skuDisableTimeUtcMs: 1785355200000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F07b0cffa_PGO-MCS_2026_Ultra_Unlock_01_v6-1024x576.jpg"
+     }
+   }
+@@ -177208,6 +177207,7 @@
+     template_id: "MAP_DISPLAY_SETTINGS"
+     mapDisplaySettings {
+       showEnhancedSky: true
++      mapEffectName: "fx_map_fireworks_pokeball"
      }
    }
  }
-@@ -178833,7 +178833,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
+@@ -202577,7 +202577,7 @@
+       obRoutePlaySettingsNumber29: 1
+       obRoutePlaySettingsNumber30: 27
+       obRoutePlaySettingsNumber33: 7
+-      obRoutePlaySettingsNumber45: 6
++      obRoutePlaySettingsNumber45: 1
      }
    }
  }
-@@ -178861,7 +178861,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
+@@ -491105,7 +491105,6 @@
+       sku: "pgorelease.general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket.5_shayminmasterworkrerun"
+       skuEnableTime: "2025-06-21T10:00:00"
+@@ -498787,7 +498786,3383 @@
      }
    }
  }
-@@ -178889,7 +178889,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -178917,7 +178917,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -178945,7 +178945,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -178973,7 +178973,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179001,7 +179001,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179029,7 +179029,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179057,7 +179057,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179085,7 +179085,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179113,7 +179113,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179141,7 +179141,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179169,7 +179169,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179197,7 +179197,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179225,7 +179225,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179253,7 +179253,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179281,7 +179281,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179309,7 +179309,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179337,7 +179337,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179365,7 +179365,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179393,7 +179393,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179421,7 +179421,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179449,7 +179449,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179477,7 +179477,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179505,7 +179505,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179533,7 +179533,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179561,7 +179561,7 @@
-         sameTypeExtraCatchXp: 50
-         sameTypeExtraCatchCandyXlChance: 0.1
-       }
--      9: 160
-+      megaEnergyCostPerPoint: 160
-     }
-   }
- }
-@@ -179588,7 +179588,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 40
-+      megaEnergyCostPerPoint: 40
-     }
-   }
- }
-@@ -179616,7 +179616,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 40
-+      megaEnergyCostPerPoint: 40
-     }
-   }
- }
-@@ -179644,7 +179644,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 40
-+      megaEnergyCostPerPoint: 40
-     }
-   }
- }
-@@ -179672,7 +179672,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179700,7 +179700,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179728,7 +179728,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 40
-+      megaEnergyCostPerPoint: 40
-     }
-   }
- }
-@@ -179756,7 +179756,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179784,7 +179784,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179812,7 +179812,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179840,7 +179840,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179868,7 +179868,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 40
-+      megaEnergyCostPerPoint: 40
-     }
-   }
- }
-@@ -179896,7 +179896,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -179924,7 +179924,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 40
-+      megaEnergyCostPerPoint: 40
-     }
-   }
- }
-@@ -179952,7 +179952,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 40
-+      megaEnergyCostPerPoint: 40
-     }
-   }
- }
-@@ -179980,7 +179980,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 40
-+      megaEnergyCostPerPoint: 40
-     }
-   }
- }
-@@ -180008,7 +180008,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180036,7 +180036,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 40
-+      megaEnergyCostPerPoint: 40
-     }
-   }
- }
-@@ -180064,7 +180064,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180092,7 +180092,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180120,7 +180120,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180148,7 +180148,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180176,7 +180176,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180204,7 +180204,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180232,7 +180232,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180260,7 +180260,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180288,7 +180288,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180316,7 +180316,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180344,7 +180344,7 @@
-         sameTypeExtraCatchXp: 100
-         sameTypeExtraCatchCandyXlChance: 0.25
-       }
--      9: 80
-+      megaEnergyCostPerPoint: 80
-     }
-   }
- }
-@@ -180574,29 +180574,29 @@
-       numMegaLevels: 4
-       clientMegaCooldownBufferMs: 2000
-       enableMegaLevelLegacyAward: true
--      14 {
--        1: 6
--        2: 2
--      }
--      14 {
--        1: 6
--        2: 3
--      }
--      14 {
--        1: 150
--        2: 2
--      }
--      14 {
--        1: 150
--        2: 3
--      }
--      14 {
--        1: 26
--        2: 2
--      }
--      14 {
--        1: 26
--        2: 3
-+      separatedTempEvoBranches {
-+        pokedexId: CHARIZARD
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
+-batch_id: 1784337589226
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT"
++    eventPassSettings {
++      prefix: "EVENT_PASS_AFTERPARTY2026_EVENT"
++      pointsItemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_08
++      trackConditions {
++        track: FREE
++        trackTitleKey: "season_pass_base_track_title_10th_anniversary_2026"
 +      }
-+      separatedTempEvoBranches {
-+        pokedexId: CHARIZARD
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
++      trackConditions {
++        track: PREMIUM
++        badge: BADGE_EVENT_0208
++        trackTitleKey: "season_pass_premium_track_title_10th_anniversary_2026"
 +      }
-+      separatedTempEvoBranches {
-+        pokedexId: MEWTWO
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
++      expirationTime: "2026-07-27T20:00:00"
++      maxTierLevel: 60
++      additionalBonusTiersLevel: 31
++      eventPassDisplaySettings {
++        bonusBoxes {
++          text: "quest_catch_pokemon_singular"
++          iconType: SPAWN_UNKNOWN
++          quantity: 5
++        }
++        bonusBoxes {
++          text: "quest_hatch_egg_singular"
++          iconType: EGG
++          quantity: 40
++        }
++        bonusBoxes {
++          text: "quest_win_raid_singular"
++          iconType: RAID
++          quantity: 100
++        }
++        eventPassTrackUpgradeDescriptions {
++          passTrackUpgradeHeaderDescription: "season_pass_after_party_2026_track_upgrade_header_description"
++          eventPassTrackToUpgradeTo: PREMIUM
++          trackUnlockSkuId: "pgorelease.july2_deluxe_event_pass_track_unlock"
++          trackUnlockPlusPointsSkuId: "pgorelease.july2_deluxe_event_pass_track_unlock_plus_points"
++          eventDurationKey: "season_pass_after_party_2026_event_duration"
++          upgradeDescriptionKey: "season_pass_after_party_2026_upgrade_description"
++          ranksToHighlightRewards: 15
++          ranksToHighlightRewards: 16
++          ranksToHighlightRewards: 30
++          detailsLinkKey: "season_pass_details_link_afterparty_2026"
++          trackUnlockImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
++          trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
++        }
++        eventPassTitleKey: "season_pass_base_track_title_10th_anniversary_2026"
++        headerIconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fd99f7e15_Logo_256x256.png"
++        premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
++        premiumRewardBannerMiddle: "item_golden_lure_name"
++        premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text_bugoutbuddies2026"
++        premiumRewardBannerImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F3cdfb38a_Gold_Lure_270%20copy.png"
++        premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
++        todayViewSection: SEASONAL_EVENT_PASS_SECTION
++        sectionDisplayPriority: 51
 +      }
-+      separatedTempEvoBranches {
-+        pokedexId: MEWTWO
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
++      gracePeriodEndTime: "2026-07-29T20:00:00"
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_100_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_100_FREE"
++    eventPassTierSettings {
++      rank: 100
++      track: FREE
++      minPointsRequired: 9900
++      rewards {
++        type: STARDUST
++        stardust: 50
 +      }
-+      separatedTempEvoBranches {
-+        pokedexId: RAICHU
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_100_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_100_PREMIUM"
++    eventPassTierSettings {
++      rank: 100
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
 +      }
-+      separatedTempEvoBranches {
-+        pokedexId: RAICHU
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-     }
-   }
-@@ -201892,39 +201892,39 @@
-   template_id: "QUEST_DIALOGUE_INBOX_SETTINGS"
-   data {
-     template_id: "QUEST_DIALOGUE_INBOX_SETTINGS"
--    287 {
--      2: 300000
--      4 {
--        1: 1
--        2: 1
--      }
--      4 {
--        1: 2
--        2: 1
--      }
--      4 {
--        1: 3
--        2: 1
--      }
--      4 {
--        1: 4
--        2: 1
--      }
--      4 {
--        1: 5
--        2: 1
--      }
--      4 {
--        1: 6
--        2: 1
--      }
--      4 {
--        1: 7
--        2: 1
--      }
--      4 {
--        1: 8
--        2: 1
-+    questDialogueInboxSettings {
-+      cooldownDurationMs: 300000
-+      QuestDialogueTriggers {
-+        trigger: CATCH_POKEMON
-+        numberOfInteractions: 1
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_10_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_10_FREE"
++    eventPassTierSettings {
++      rank: 10
++      track: FREE
++      minPointsRequired: 900
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "afterparty2026_season_pass_rank_01"
++          durationMins: 131487
++        }
 +      }
-+      QuestDialogueTriggers {
-+        trigger: PLAYER_PROFILE
-+        numberOfInteractions: 1
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_01"
++        bonusBoxes {
++          text: "catch_candy_double"
++          iconType: CANDY_GENERAL
++        }
 +      }
-+      QuestDialogueTriggers {
-+        trigger: INCENSE
-+        numberOfInteractions: 1
++      activeBonusDisplaySettings {
++        eventName: "go_pass_cumulative_bonuses_header"
++        bonusBoxes {
++          text: "catch_candy_double"
++          iconType: CANDY_GENERAL
++        }
 +      }
-+      QuestDialogueTriggers {
-+        trigger: ROUTE
-+        numberOfInteractions: 1
++      7: 1
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_10_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_10_PREMIUM"
++    eventPassTierSettings {
++      rank: 10
++      track: PREMIUM
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "afterparty2026_season_pass_rank_01_paid"
++          durationMins: 131487
++        }
 +      }
-+      QuestDialogueTriggers {
-+        trigger: TGR
-+        numberOfInteractions: 1
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_01"
++        bonusBoxes {
++          text: "catch_candy_triple"
++          iconType: CANDY_GENERAL
++        }
 +      }
-+      QuestDialogueTriggers {
-+        trigger: PARTY_PLAY
-+        numberOfInteractions: 1
++      activeBonusDisplaySettings {
++        eventName: "go_pass_cumulative_bonuses_header"
++        bonusBoxes {
++          text: "catch_candy_triple"
++          iconType: CANDY_GENERAL
++        }
 +      }
-+      QuestDialogueTriggers {
-+        trigger: MEGA_ENERGY
-+        numberOfInteractions: 1
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_11_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_11_FREE"
++    eventPassTierSettings {
++      rank: 11
++      track: FREE
++      minPointsRequired: 1000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 10
++        }
 +      }
-+      QuestDialogueTriggers {
-+        trigger: POWER_SPOT
-+        numberOfInteractions: 1
-       }
-     }
-   }
-@@ -201999,12 +201999,12 @@
-       maxNumFriendInvitesPerAction: 10
-       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_EXTENDED_EGG
-       unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_4
--      unsupportedRaidLevelsForFriendInvites: 18
--      unsupportedRaidLevelsForFriendInvites: 19
-+      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_COORDINATED_1
-+      unsupportedRaidLevelsForFriendInvites: RAID_LEVEL_COORDINATED_2
-       unsupportedRemoteRaidLevels: RAID_LEVEL_EXTENDED_EGG
-       unsupportedRemoteRaidLevels: RAID_LEVEL_4
--      unsupportedRemoteRaidLevels: 18
--      unsupportedRemoteRaidLevels: 19
-+      unsupportedRemoteRaidLevels: RAID_LEVEL_COORDINATED_1
-+      unsupportedRemoteRaidLevels: RAID_LEVEL_COORDINATED_2
-       ablcemdnbkc: true
-       raidLevelMusicOverrides {
-         raidLevel: RAID_LEVEL_ULTRA_BEAST
-@@ -202111,15 +202111,15 @@
-         battleMusicKey: "RaidMegaMewtwoBattleMusic"
-       }
-       fetchProfileFromSocialEnabled: true
--      35 {
--        1: 16
--        2: 5
--        3: 20
--      }
--      35 {
--        1: 17
--        2: 20
--        3: 20
-+      raidLevelEncounterTimings {
-+        showCatchLootOnPokemonPage: true
-+        autoThrowCountdownStartSeconds: 5
-+        autoThrowSeconds: 20
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_11_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_11_PREMIUM"
++    eventPassTierSettings {
++      rank: 11
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 20
++        }
 +      }
-+      raidLevelEncounterTimings {
-+        showCatchLootOnPokemonPage: true
-+        autoThrowCountdownStartSeconds: 20
-+        autoThrowSeconds: 20
-       }
-       37: "\022\023"
-     }
-@@ -202129,136 +202129,128 @@
-   template_id: "RAID_ENTRY_COST_SETTINGS"
-   data {
-     template_id: "RAID_ENTRY_COST_SETTINGS"
--    285 {
--      1 {
--        1: 16
--        2 {
--          1: 1
--          2 {
--            1: 1402
--            2: 1
-+    raidEntryCostSettings {
-+      raidLevelEntryCost {
-+        raidLevel: RAID_LEVEL_4_MEGA_ENHANCED
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_PAID_RAID_TICKET
-+            count: 1
-           }
-         }
--        2 {
--          1: 2
--          2 {
--            1: 1408
--            2: 1
--          }
--          2 {
--            1: 1410
--            2: 200
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_REMOTE
-+          itemRequirement {
-+            item: ITEM_ENHANCED_CURRENCY
-+            count: 200
-           }
-         }
--        2 {
--          1: 1
--          2 {
--            1: 1401
--            2: 1
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_FREE_RAID_TICKET
-+            count: 1
-           }
-         }
--        2 {
--          1: 1
--          2 {
--            1: 1410
--            2: 200
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_ENHANCED_CURRENCY
-+            count: 200
-           }
-         }
-       }
--      1 {
--        1: 17
--        2 {
--          1: 1
--          2 {
--            1: 1402
--            2: 1
-+      raidLevelEntryCost {
-+        raidLevel: RAID_LEVEL_5_MEGA_ENHANCED
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_PAID_RAID_TICKET
-+            count: 1
-           }
-         }
--        2 {
--          1: 2
--          2 {
--            1: 1408
--            2: 1
--          }
--          2 {
--            1: 1410
--            2: 200
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_REMOTE
-+          itemRequirement {
-+            item: ITEM_ENHANCED_CURRENCY
-+            count: 200
-           }
-         }
--        2 {
--          1: 1
--          2 {
--            1: 1401
--            2: 1
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_FREE_RAID_TICKET
-+            count: 1
-           }
-         }
--        2 {
--          1: 1
--          2 {
--            1: 1410
--            2: 200
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_ENHANCED_CURRENCY
-+            count: 200
-           }
-         }
-       }
--      1 {
--        1: 6
--        2 {
--          1: 1
--          2 {
--            1: 1402
--            2: 1
-+      raidLevelEntryCost {
-+        raidLevel: RAID_LEVEL_MEGA
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_PAID_RAID_TICKET
-+            count: 1
-           }
-         }
--        2 {
--          1: 2
--          2 {
--            1: 1408
--            2: 1
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_REMOTE
-+          itemRequirement {
-+            item: ITEM_REMOTE_RAID_TICKET
-+            count: 1
-           }
-         }
--        2 {
--          1: 1
--          2 {
--            1: 1401
--            2: 1
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_FREE_RAID_TICKET
-+            count: 1
-           }
-         }
--        2 {
--          1: 1
--          2 {
--            1: 1410
--            2: 150
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_ENHANCED_CURRENCY
-+            count: 150
-           }
-         }
-       }
--      1 {
--        1: 7
--        2 {
--          1: 1
--          2 {
--            1: 1402
--            2: 1
-+      raidLevelEntryCost {
-+        raidLevel: RAID_LEVEL_MEGA_5
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_PAID_RAID_TICKET
-+            count: 1
-           }
-         }
--        2 {
--          1: 2
--          2 {
--            1: 1408
--            2: 1
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_REMOTE
-+          itemRequirement {
-+            item: ITEM_REMOTE_RAID_TICKET
-+            count: 1
-           }
-         }
--        2 {
--          1: 1
--          2 {
--            1: 1401
--            2: 1
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_FREE_RAID_TICKET
-+            count: 1
-           }
-         }
--        2 {
--          1: 1
--          2 {
--            1: 1410
--            2: 150
-+        raidEntryCost {
-+          raidType: RAID_LOCATION_REQUERIMENT_IN_PERSON
-+          itemRequirement {
-+            item: ITEM_ENHANCED_CURRENCY
-+            count: 150
-           }
-         }
-       }
-@@ -206387,9 +206379,9 @@
-     template_id: "SHARED_FUSION_SETTINGS"
-     sharedFusionSettings {
-       fusionEnabled: true
--      2 {
--        1: 1
--        2: 1
-+      fusionAlignmentSettings {
-+        disableShadowPokemonAsComponent: true
-+        disablePurifiedPokemonAsComponent: true
-       }
-     }
-   }
-@@ -206519,12 +206511,12 @@
-   template_id: "SOFT_SFIDA_SETTINGS"
-   data {
-     template_id: "SOFT_SFIDA_SETTINGS"
--    284 {
--      6: 20
--      7: 5000
--      8: 10000
--      9: 4
--      10: 0x42480000
-+    softSfidaSettings {
-+      minPlayerLevel: 20
-+      catchActionDelayMs: 5000
-+      spinActionDelayMs: 10000
-+      reservedGeofenceCount: 4
-+      geofenceSizeM: 50
-     }
-   }
- }
-@@ -238425,13 +238417,13 @@
-   template_id: "SPECIAL_RESEARCH_VISUAL_REFRESH_SETTINGS"
-   data {
-     template_id: "SPECIAL_RESEARCH_VISUAL_REFRESH_SETTINGS"
--    286 {
--      2: 1
--      3: 1
--      4: 1
--      5: 1
--      6: 1
--      7: 1
-+    specialResearchVisualRefreshSettings {
-+      newQuestIndicatorsEnabled: true
-+      specialResearchCategoriesEnabled: true
-+      specialResearchCategoryColorsEnabled: true
-+      updatedSortingEnabled: true
-+      multipleFavoritesEnabled: true
-+      tagNewQuestFromLapsedState: true
-     }
-   }
- }
-@@ -256933,7 +256925,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: FRENZY_PLANT
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -257169,7 +257161,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: FRENZY_PLANT
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -257297,12 +257289,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
-       allowNoevolveEvolution: SPRING_2020_NOEVOLVE
-@@ -257397,12 +257389,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -257504,12 +257496,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
-       allowNoevolveEvolution: SPRING_2020_NOEVOLVE
-@@ -257616,12 +257608,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
-       allowNoevolveEvolution: SPRING_2020_NOEVOLVE
-@@ -257729,12 +257721,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       allowNoevolveEvolution: JAN_2020_NOEVOLVE
-       allowNoevolveEvolution: SPRING_2020_NOEVOLVE
-@@ -257848,7 +257840,7 @@
-       eliteQuickMove: DRAGON_BREATH_FAST
-       eliteCinematicMove: BLAST_BURN
-       eliteCinematicMove: FLAMETHROWER
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_X
-         stats {
-           baseStamina: 186
-@@ -257867,7 +257859,7 @@
-         modelScaleV2: 1.1
-         modelHeight: 1.91
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_Y
-         stats {
-           baseStamina: 186
-@@ -257895,12 +257887,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       useIrisFlyingPlacement: true
-       irisPhotoEmote1: "PhysicalAttack"
-@@ -258008,12 +258000,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       useIrisFlyingPlacement: true
-@@ -258129,7 +258121,7 @@
-       eliteQuickMove: DRAGON_BREATH_FAST
-       eliteCinematicMove: BLAST_BURN
-       eliteCinematicMove: FLAMETHROWER
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_X
-         stats {
-           baseStamina: 186
-@@ -258148,7 +258140,7 @@
-         modelScaleV2: 1.1
-         modelHeight: 1.91
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_Y
-         stats {
-           baseStamina: 186
-@@ -258176,12 +258168,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: CHARIZARD
-         megaEnergyAwardAmount: 15
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       useIrisFlyingPlacement: true
-       irisPhotoEmote1: "PhysicalAttack"
-@@ -258788,7 +258780,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: HYDRO_CANNON
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 188
-@@ -258908,7 +258900,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: HYDRO_CANNON
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         camera {
-           cylinderRadiusM: 1.1
-           cylinderHeightM: 3
-@@ -259019,7 +259011,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: HYDRO_CANNON
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 188
-@@ -260250,7 +260242,7 @@
-       buddyGroupNumber: 4
-       eliteQuickMove: BUG_BITE_FAST
-       eliteCinematicMove: DRILL_RUN
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -260375,7 +260367,7 @@
-       buddyGroupNumber: 4
-       eliteQuickMove: BUG_BITE_FAST
-       eliteCinematicMove: DRILL_RUN
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -260962,7 +260954,7 @@
-       eliteQuickMove: WING_ATTACK_FAST
-       eliteQuickMove: GUST_FAST
-       eliteCinematicMove: AIR_CUTTER
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 195
-@@ -261096,7 +261088,7 @@
-       eliteQuickMove: WING_ATTACK_FAST
-       eliteQuickMove: GUST_FAST
-       eliteCinematicMove: AIR_CUTTER
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 195
-@@ -262650,12 +262642,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -262745,12 +262737,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -262841,12 +262833,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -262933,12 +262925,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -263028,12 +263020,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -263122,12 +263114,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       useIrisFlyingPlacement: true
-@@ -263219,12 +263211,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -263311,12 +263303,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -263406,12 +263398,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -263500,12 +263492,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       useIrisFlyingPlacement: true
-@@ -263595,12 +263587,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       useIrisFlyingPlacement: true
-@@ -263690,12 +263682,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       useIrisFlyingPlacement: true
-@@ -263785,12 +263777,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -263879,12 +263871,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       useIrisFlyingPlacement: true
-@@ -263974,12 +263966,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       useIrisFlyingPlacement: true
-@@ -264072,12 +264064,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -264167,12 +264159,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -264259,12 +264251,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -264351,12 +264343,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -264448,12 +264440,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -264545,12 +264537,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -264642,12 +264634,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -264739,12 +264731,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -264836,12 +264828,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -264933,12 +264925,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265029,12 +265021,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265125,12 +265117,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265221,12 +265213,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265313,12 +265305,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265405,12 +265397,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265497,12 +265489,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265589,12 +265581,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265681,12 +265673,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265773,12 +265765,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265865,12 +265857,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -265957,12 +265949,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266049,12 +266041,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266141,12 +266133,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266233,12 +266225,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266325,12 +266317,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266417,12 +266409,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266509,12 +266501,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266602,12 +266594,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266694,12 +266686,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266786,12 +266778,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266882,12 +266874,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -266983,12 +266975,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -267074,12 +267066,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -267166,12 +267158,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -267260,12 +267252,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -267353,12 +267345,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -267446,12 +267438,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -267539,12 +267531,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -267632,12 +267624,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -267723,12 +267715,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -267815,12 +267807,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -267907,12 +267899,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -268004,12 +267996,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -268096,12 +268088,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -268193,12 +268185,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -268290,12 +268282,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -268387,12 +268379,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -268483,12 +268475,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -268579,12 +268571,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -268707,7 +268699,7 @@
-       isTradable: true
-       buddyGroupNumber: 2
-       eliteCinematicMove: THUNDER
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_X
-         stats {
-           baseStamina: 155
-@@ -268725,7 +268717,7 @@
-         buddyPortraitOffset: 0
-         buddyPortraitOffset: -1100
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_Y
-         stats {
-           baseStamina: 155
-@@ -268739,12 +268731,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -268838,12 +268830,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -268944,7 +268936,7 @@
-       isTradable: true
-       buddyGroupNumber: 2
-       eliteCinematicMove: THUNDER
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_X
-         stats {
-           baseStamina: 155
-@@ -268962,7 +268954,7 @@
-         buddyPortraitOffset: 0
-         buddyPortraitOffset: -1100
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_Y
-         stats {
-           baseStamina: 155
-@@ -268976,12 +268968,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -278450,7 +278442,7 @@
-       eliteQuickMove: COUNTER_FAST
-       eliteCinematicMove: DAZZLING_GLEAM
-       eliteCinematicMove: PSYCHIC
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 146
-@@ -278564,7 +278556,7 @@
-       eliteQuickMove: COUNTER_FAST
-       eliteCinematicMove: DAZZLING_GLEAM
-       eliteCinematicMove: PSYCHIC
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 146
-@@ -279792,7 +279784,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteQuickMove: MAGICAL_LEAF_FAST
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -279915,7 +279907,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteQuickMove: MAGICAL_LEAF_FAST
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -282533,7 +282525,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: SURF
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 216
-@@ -282651,7 +282643,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: SURF
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 216
-@@ -282858,7 +282850,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: SURF
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 216
-@@ -286179,7 +286171,7 @@
-       eliteCinematicMove: DARK_PULSE
-       eliteCinematicMove: PSYCHIC
-       eliteCinematicMove: SHADOW_PUNCH
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 155
-@@ -286201,7 +286193,7 @@
-         buddyPortraitOffset: 0
-         raidBossDistanceOffset: 3
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         camera {
-           cylinderRadiusM: 2
-         }
-@@ -286319,7 +286311,7 @@
-       eliteCinematicMove: DARK_PULSE
-       eliteCinematicMove: PSYCHIC
-       eliteCinematicMove: SHADOW_PUNCH
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 155
-@@ -286340,7 +286332,7 @@
-         buddyPortraitOffset: 0
-         raidBossDistanceOffset: 3
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         camera {
-           cylinderRadiusM: 2
-         }
-@@ -286459,7 +286451,7 @@
-       eliteCinematicMove: DARK_PULSE
-       eliteCinematicMove: PSYCHIC
-       eliteCinematicMove: SHADOW_PUNCH
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 155
-@@ -286481,7 +286473,7 @@
-         buddyPortraitOffset: 0
-         raidBossDistanceOffset: 3
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         camera {
-           cylinderRadiusM: 2
-         }
-@@ -291374,7 +291366,7 @@
-       buddyGroupNumber: 3
-       eliteCinematicMove: BRICK_BREAK
-       eliteCinematicMove: STOMP
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 233
-@@ -291499,7 +291491,7 @@
-       buddyGroupNumber: 3
-       eliteCinematicMove: BRICK_BREAK
-       eliteCinematicMove: STOMP
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 233
-@@ -294098,7 +294090,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: SUBMISSION
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -294211,7 +294203,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: SUBMISSION
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -294968,7 +294960,7 @@
-       eliteQuickMove: DRAGON_TAIL_FAST
-       eliteCinematicMove: DRAGON_PULSE
-       eliteCinematicMove: AQUA_TAIL
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 216
-@@ -295087,7 +295079,7 @@
-       eliteQuickMove: DRAGON_TAIL_FAST
-       eliteCinematicMove: DRAGON_PULSE
-       eliteCinematicMove: AQUA_TAIL
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 216
-@@ -297974,7 +297966,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -298096,7 +298088,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -298218,7 +298210,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -299963,7 +299955,7 @@
-       buddyGroupNumber: 3
-       eliteCinematicMove: DRACO_METEOR
-       eliteCinematicMove: DRAGON_PULSE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 209
-@@ -300095,7 +300087,7 @@
-       buddyGroupNumber: 6
-       eliteCinematicMove: DRACO_METEOR
-       eliteCinematicMove: DRAGON_PULSE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 209
-@@ -300234,7 +300226,7 @@
-       eliteCinematicMove: PSYSTRIKE
-       eliteCinematicMove: SHADOW_BALL
-       eliteCinematicMove: HYPER_BEAM
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_X
-         stats {
-           baseStamina: 228
-@@ -300256,7 +300248,7 @@
-           2: 250
-         }
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_Y
-         stats {
-           baseStamina: 228
-@@ -300280,12 +300272,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: MEWTWO
-         megaEnergyAwardAmount: 100
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: MEWTWO
-         megaEnergyAwardAmount: 100
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -300382,12 +300374,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: MEWTWO
-         megaEnergyAwardAmount: 100
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: MEWTWO
-         megaEnergyAwardAmount: 100
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       disableTransferToPokemonHome: true
-       ibfc {
-@@ -300496,7 +300488,7 @@
-       eliteCinematicMove: PSYSTRIKE
-       eliteCinematicMove: SHADOW_BALL
-       eliteCinematicMove: HYPER_BEAM
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_X
-         stats {
-           baseStamina: 228
-@@ -300518,7 +300510,7 @@
-           2: 250
-         }
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA_Y
-         stats {
-           baseStamina: 228
-@@ -300542,12 +300534,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: MEWTWO
-         megaEnergyAwardAmount: 100
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: MEWTWO
-         megaEnergyAwardAmount: 100
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -304805,12 +304797,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -304901,12 +304893,12 @@
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 2
-+        tempEvoId: TEMP_EVOLUTION_MEGA_X
-       }
-       buddyWalkedMegaEnergyAwards {
-         megaPokemonId: RAICHU
-         megaEnergyAwardAmount: 5
--        4: 3
-+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
-       }
-       ibfc {
-       }
-@@ -306568,7 +306560,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: DRAGON_PULSE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 207
-@@ -306684,7 +306676,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: DRAGON_PULSE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 207
-@@ -314561,7 +314553,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 181
-@@ -314685,7 +314677,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 181
-@@ -315574,7 +315566,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -315699,7 +315691,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -316053,7 +316045,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -316172,7 +316164,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -319199,7 +319191,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 5
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -319317,7 +319309,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 5
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -319685,7 +319677,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 181
-@@ -319809,7 +319801,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 181
-@@ -324005,7 +323997,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteQuickMove: SMACK_DOWN_FAST
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 225
-@@ -324127,7 +324119,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteQuickMove: SMACK_DOWN_FAST
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 225
-@@ -325552,7 +325544,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: FRENZY_PLANT
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -325671,7 +325663,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: FRENZY_PLANT
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -326258,7 +326250,7 @@
-       buddyGroupNumber: 3
-       eliteCinematicMove: BLAST_BURN
-       eliteCinematicMove: STONE_EDGE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -326375,7 +326367,7 @@
-       buddyGroupNumber: 3
-       eliteCinematicMove: BLAST_BURN
-       eliteCinematicMove: STONE_EDGE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -326955,7 +326947,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: HYDRO_CANNON
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 225
-@@ -327075,7 +327067,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: HYDRO_CANNON
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 225
-@@ -331867,7 +331859,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: SYNCHRONOISE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 169
-@@ -331991,7 +331983,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: SYNCHRONOISE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 169
-@@ -336056,7 +336048,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 137
-@@ -336174,7 +336166,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 137
-@@ -336294,7 +336286,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 137
-@@ -336445,7 +336437,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 137
-@@ -336563,7 +336555,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 137
-@@ -337159,7 +337151,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -337175,7 +337167,7 @@
-         }
-         raidBossDistanceOffset: 4
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         camera {
-           cylinderRadiusM: 1.5
-           cylinderHeightM: 3.5
-@@ -337285,7 +337277,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -337301,7 +337293,7 @@
-         }
-         raidBossDistanceOffset: 4
-       }
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         camera {
-           cylinderRadiusM: 1.5
-           cylinderHeightM: 3.5
-@@ -337619,7 +337611,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 155
-@@ -337723,7 +337715,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 155
-@@ -338080,7 +338072,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -338195,7 +338187,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -339920,7 +339912,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -340040,7 +340032,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -340862,7 +340854,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -340985,7 +340977,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -344820,7 +344812,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: MOONBLAST
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 181
-@@ -344950,7 +344942,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: MOONBLAST
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 181
-@@ -349286,7 +349278,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 162
-@@ -349398,7 +349390,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 162
-@@ -350365,7 +350357,7 @@
-       }
-       buddyGroupNumber: 2
-       eliteCinematicMove: BRUTAL_SWING
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -350480,7 +350472,7 @@
-       }
-       buddyGroupNumber: 2
-       eliteCinematicMove: BRUTAL_SWING
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -351041,7 +351033,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -351167,7 +351159,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -353388,7 +353380,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: OUTRAGE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 216
-@@ -353516,7 +353508,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: OUTRAGE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 216
-@@ -354106,7 +354098,7 @@
-       buddyGroupNumber: 3
-       eliteQuickMove: SHADOW_CLAW_FAST
-       eliteCinematicMove: METEOR_MASH
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -354227,7 +354219,7 @@
-       buddyGroupNumber: 3
-       eliteQuickMove: SHADOW_CLAW_FAST
-       eliteCinematicMove: METEOR_MASH
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -355037,7 +355029,7 @@
-       }
-       buddyGroupNumber: 7
-       eliteCinematicMove: MIST_BALL
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -355165,7 +355157,7 @@
-       }
-       buddyGroupNumber: 7
-       eliteCinematicMove: MIST_BALL
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -355293,7 +355285,7 @@
-       }
-       buddyGroupNumber: 7
-       eliteCinematicMove: MIST_BALL
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -355451,7 +355443,7 @@
-       }
-       buddyGroupNumber: 7
-       eliteCinematicMove: LUSTER_PURGE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -355577,7 +355569,7 @@
-       }
-       buddyGroupNumber: 7
-       eliteCinematicMove: LUSTER_PURGE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -355703,7 +355695,7 @@
-       }
-       buddyGroupNumber: 7
-       eliteCinematicMove: LUSTER_PURGE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 190
-@@ -355859,7 +355851,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: ORIGIN_PULSE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_PRIMAL
-         stats {
-           baseStamina: 218
-@@ -355984,7 +355976,7 @@
-       }
-       buddyGroupNumber: 3
-       eliteCinematicMove: ORIGIN_PULSE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_PRIMAL
-         stats {
-           baseStamina: 218
-@@ -356138,7 +356130,7 @@
-       buddyGroupNumber: 3
-       eliteCinematicMove: FIRE_PUNCH
-       eliteCinematicMove: PRECIPICE_BLADES
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_PRIMAL
-         stats {
-           baseStamina: 218
-@@ -356261,7 +356253,7 @@
-       buddyGroupNumber: 3
-       eliteCinematicMove: FIRE_PUNCH
-       eliteCinematicMove: PRECIPICE_BLADES
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_PRIMAL
-         stats {
-           baseStamina: 218
-@@ -356410,7 +356402,7 @@
-       buddyGroupNumber: 7
-       eliteCinematicMove: HURRICANE
-       eliteCinematicMove: BREAKING_SWIPE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 227
-@@ -356527,7 +356519,7 @@
-       buddyGroupNumber: 7
-       eliteCinematicMove: HURRICANE
-       eliteCinematicMove: BREAKING_SWIPE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 227
-@@ -366115,7 +366107,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -366228,7 +366220,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -369359,7 +369351,7 @@
-       }
-       buddyGroupNumber: 2
-       eliteCinematicMove: EARTH_POWER
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 239
-@@ -369476,7 +369468,7 @@
-       }
-       buddyGroupNumber: 2
-       eliteCinematicMove: EARTH_POWER
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 239
-@@ -369938,7 +369930,7 @@
-       isTradable: true
-       buddyGroupNumber: 2
-       eliteQuickMove: FORCE_PALM_FAST
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -370053,7 +370045,7 @@
-       isTradable: true
-       buddyGroupNumber: 2
-       eliteQuickMove: FORCE_PALM_FAST
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 172
-@@ -372279,7 +372271,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 207
-@@ -372407,7 +372399,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 207
-@@ -375418,7 +375410,7 @@
-       }
-       buddyGroupNumber: 2
-       eliteCinematicMove: SYNCHRONOISE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 169
-@@ -375547,7 +375539,7 @@
-       }
-       buddyGroupNumber: 2
-       eliteCinematicMove: SYNCHRONOISE
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 169
-@@ -388515,7 +388507,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 230
-@@ -388615,7 +388607,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 230
-@@ -396632,7 +396624,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         raidBossDistanceOffset: 6
-       }
-       ibfc {
-@@ -401622,7 +401614,7 @@
-   data {
-     template_id: "V0593_MOVE_DIVE"
-     moveSettings {
--      movementId: 593
-+      movementId: DIVE
-       animationId: 5
-       pokemonType: POKEMON_TYPE_WATER
-       power: 70
-@@ -401913,7 +401905,7 @@
-   data {
-     template_id: "V0594_MOVE_GULP_MISSILE_GULPING"
-     moveSettings {
--      movementId: 594
-+      movementId: GULP_MISSILE_GULPING
-       animationId: 5
-       pokemonType: POKEMON_TYPE_NORMAL
-       vfxName: "gulp_missile_gulping"
-@@ -402097,7 +402089,7 @@
-   data {
-     template_id: "V0595_MOVE_GULP_MISSILE_GORGING"
-     moveSettings {
--      movementId: 595
-+      movementId: GULP_MISSILE_GORGING
-       animationId: 5
-       pokemonType: POKEMON_TYPE_NORMAL
-       vfxName: "gulp_missile_gorging"
-@@ -426312,7 +426304,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 200
-@@ -426426,7 +426418,7 @@
-         shadowChargeMove: FRUSTRATION
-       }
-       buddyGroupNumber: 3
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 200
-@@ -432823,7 +432815,7 @@
-         candyToUnlock: 100
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 137
-@@ -432915,7 +432907,7 @@
-         candyToUnlock: 100
-       }
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 137
-@@ -455396,7 +455388,7 @@
-       }
-       quickMoves: PECK_FAST
-       quickMoves: WATER_GUN_FAST
--      cinematicMoves: 593
-+      cinematicMoves: DIVE
-       cinematicMoves: FLY
-       cinematicMoves: HYDRO_PUMP
-       cinematicMoves: SURF
-@@ -455447,7 +455439,8 @@
-       ibfc {
-         combatEnable: true
-         defaultForm: CRAMORANT_NORMAL
--        9: "\225\032\226\032"
-+        aternateForms: CRAMORANT_GULPING
-+        aternateForms: CRAMORANT_GORGING
-       }
-       breadTierGroup: GROUP_2
-     }
-@@ -455483,7 +455476,7 @@
-       }
-       quickMoves: PECK_FAST
-       quickMoves: WATER_GUN_FAST
--      cinematicMoves: 593
-+      cinematicMoves: DIVE
-       cinematicMoves: FLY
-       cinematicMoves: HYDRO_PUMP
-       cinematicMoves: SURF
-@@ -455495,7 +455488,7 @@
-       kmBuddyDistance: 3
-       modelHeight: 0.9
-       modelScaleV2: 1.05
--      form: 3350
-+      form: CRAMORANT_GORGING
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -455553,7 +455546,7 @@
-       }
-       quickMoves: PECK_FAST
-       quickMoves: WATER_GUN_FAST
--      cinematicMoves: 593
-+      cinematicMoves: DIVE
-       cinematicMoves: FLY
-       cinematicMoves: HYDRO_PUMP
-       cinematicMoves: SURF
-@@ -455565,7 +455558,7 @@
-       kmBuddyDistance: 3
-       modelHeight: 0.9
-       modelScaleV2: 1.05
--      form: 3349
-+      form: CRAMORANT_GULPING
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-       buddyOffsetMale: 0
-@@ -455623,7 +455616,7 @@
-       }
-       quickMoves: PECK_FAST
-       quickMoves: WATER_GUN_FAST
--      cinematicMoves: 593
-+      cinematicMoves: DIVE
-       cinematicMoves: FLY
-       cinematicMoves: HYDRO_PUMP
-       cinematicMoves: SURF
-@@ -459624,7 +459617,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -459719,7 +459712,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -459815,7 +459808,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
--      temp_evo_overrides {
-+      tempEvoOverrides {
-         tempEvoId: TEMP_EVOLUTION_MEGA
-         stats {
-           baseStamina: 163
-@@ -482122,9 +482115,9 @@
-           transitionInterimDelaySeconds: 0.001
-           transitionOutDurationSeconds: 0.15
-         }
--        5 {
--          1: 1
--          2: 3
-+        missedFastAttackRecoverySettings {
-+          enabled: true
-+          maxCatchUpAttacks: 3
-         }
-       }
-     }
-@@ -498436,7 +498429,7 @@
-   data {
-     template_id: "ITEM_EVENT_TICKET_S23_2026_08"
-     itemSettings {
--      itemId: 2212
-+      itemId: ITEM_EVENT_TICKET_S23_2026_08
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
-@@ -498444,7 +498437,7 @@
-         eventEndTime: "2026-08-01T17:00:00"
-         itemBagDescriptionKey: "ITEM_EVENT_TICKET_S23_2026_08_desc_gmaxRillaboom26"
-         giftable: true
--        giftItem: 2244
-+        giftItem: ITEM_EVENT_TICKET_S23_2026_08_TO_GIFT
-         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F871eef71_PGO-MCS_GMAX_Rillaboom_Max_Battle_Day_v1-1024x576-nologo.jpg"
-         displayV2Enabled: true
-         backgroundImageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F871eef71_PGO-MCS_GMAX_Rillaboom_Max_Battle_Day_v1-1024x576-nologo.jpg"
-@@ -498482,14 +498475,14 @@
-   data {
-     template_id: "ITEM_EVENT_TICKET_S23_2026_08_TO_GIFT"
-     itemSettings {
--      itemId: 2244
-+      itemId: ITEM_EVENT_TICKET_S23_2026_08_TO_GIFT
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
-         eventStartTime: "2026-08-01T14:00:00"
-         eventEndTime: "2026-08-01T17:00:00"
-         itemBagDescriptionKey: "ITEM_EVENT_TICKET_S23_2026_08_details_gmaxRillaboom26"
--        ticketItem: 2212
-+        ticketItem: ITEM_EVENT_TICKET_S23_2026_08
-         eventBannerUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F871eef71_PGO-MCS_GMAX_Rillaboom_Max_Battle_Day_v1-1024x576-nologo.jpg"
-         clientEventStartTimeUtcMs: 1785592800000
-         clientEventEndTimeUtcMs: 1785603600000
-@@ -498504,14 +498497,14 @@
-   data {
-     template_id: "ITEM_EVENT_TICKET_S23_2026_07_TO_GIFT"
-     itemSettings {
--      itemId: 2243
-+      itemId: ITEM_EVENT_TICKET_S23_2026_07_TO_GIFT
-       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
-       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
-       globalEventTicket {
-         eventStartTime: "2026-07-25T10:00:00"
-         eventEndTime: "2026-07-26T20:00:00"
-         itemBagDescriptionKey: "item_event_ticket_pink_details_MegaRayquaza26"
--        ticketItem: 2211
-+        ticketItem: ITEM_EVENT_TICKET_S23_2026_07
-         eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F0ba8ff0a_20260508_pgo_s23_megarayquaza_1024x576_nologo.jpg"
-         backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F0ba8ff0a_20260508_pgo_s23_megarayquaza_1024x576_nologo.jpg"
-         clientEventStartTimeUtcMs: 1784973600000
-@@ -498529,7 +498522,7 @@
-   data {
-     template_id: "LC_NT_1"
-     locationCardSettings {
--      locationCard: 282
-+      locationCard: LC_NT_1
-       imageUrl: "lc_nationalTrust_angleseyAbbey"
-     }
-   }
-@@ -498539,7 +498532,7 @@
-   data {
-     template_id: "LC_NT_10"
-     locationCardSettings {
--      locationCard: 291
-+      locationCard: LC_NT_10
-       imageUrl: "lc_nationalTrust_gibslide"
-     }
-   }
-@@ -498549,7 +498542,7 @@
-   data {
-     template_id: "LC_NT_11"
-     locationCardSettings {
--      locationCard: 292
-+      locationCard: LC_NT_11
-       imageUrl: "lc_nationalTrust_hanbury"
-     }
-   }
-@@ -498559,7 +498552,7 @@
-   data {
-     template_id: "LC_NT_12"
-     locationCardSettings {
--      locationCard: 293
-+      locationCard: LC_NT_12
-       imageUrl: "lc_nationalTrust_hardwick"
-     }
-   }
-@@ -498569,7 +498562,7 @@
-   data {
-     template_id: "LC_NT_13"
-     locationCardSettings {
--      locationCard: 294
-+      locationCard: LC_NT_13
-       imageUrl: "lc_nationalTrust_killerton"
-     }
-   }
-@@ -498579,7 +498572,7 @@
-   data {
-     template_id: "LC_NT_14"
-     locationCardSettings {
--      locationCard: 295
-+      locationCard: LC_NT_14
-       imageUrl: "lc_nationalTrust_kingstonLacy"
-     }
-   }
-@@ -498589,7 +498582,7 @@
-   data {
-     template_id: "LC_NT_15"
-     locationCardSettings {
--      locationCard: 296
-+      locationCard: LC_NT_15
-       imageUrl: "lc_nationalTrust_lacock"
-     }
-   }
-@@ -498599,7 +498592,7 @@
-   data {
-     template_id: "LC_NT_16"
-     locationCardSettings {
--      locationCard: 297
-+      locationCard: LC_NT_16
-       imageUrl: "lc_nationalTrust_lymePark"
-     }
-   }
-@@ -498609,7 +498602,7 @@
-   data {
-     template_id: "LC_NT_17"
-     locationCardSettings {
--      locationCard: 298
-+      locationCard: LC_NT_17
-       imageUrl: "lc_nationalTrust_mottisfont"
-     }
-   }
-@@ -498619,7 +498612,7 @@
-   data {
-     template_id: "LC_NT_18"
-     locationCardSettings {
--      locationCard: 299
-+      locationCard: LC_NT_18
-       imageUrl: "lc_nationalTrust_mountStewart"
-     }
-   }
-@@ -498629,7 +498622,7 @@
-   data {
-     template_id: "LC_NT_19"
-     locationCardSettings {
--      locationCard: 300
-+      locationCard: LC_NT_19
-       imageUrl: "lc_nationalTrust_nymans"
-     }
-   }
-@@ -498639,7 +498632,7 @@
-   data {
-     template_id: "LC_NT_2"
-     locationCardSettings {
--      locationCard: 283
-+      locationCard: LC_NT_2
-       imageUrl: "lc_nationalTrust_attinghamPark"
-     }
-   }
-@@ -498649,7 +498642,7 @@
-   data {
-     template_id: "LC_NT_20"
-     locationCardSettings {
--      locationCard: 301
-+      locationCard: LC_NT_20
-       imageUrl: "lc_nationalTrust_polesden"
-     }
-   }
-@@ -498659,7 +498652,7 @@
-   data {
-     template_id: "LC_NT_21"
-     locationCardSettings {
--      locationCard: 302
-+      locationCard: LC_NT_21
-       imageUrl: "lc_nationalTrust_scotneyCastle"
-     }
-   }
-@@ -498669,7 +498662,7 @@
-   data {
-     template_id: "LC_NT_22"
-     locationCardSettings {
--      locationCard: 303
-+      locationCard: LC_NT_22
-       imageUrl: "lc_nationalTrust_stourhead"
-     }
-   }
-@@ -498679,7 +498672,7 @@
-   data {
-     template_id: "LC_NT_23"
-     locationCardSettings {
--      locationCard: 304
-+      locationCard: LC_NT_23
-       imageUrl: "lc_nationalTrust_stoweGardenPark"
-     }
-   }
-@@ -498689,7 +498682,7 @@
-   data {
-     template_id: "LC_NT_24"
-     locationCardSettings {
--      locationCard: 305
-+      locationCard: LC_NT_24
-       imageUrl: "lc_nationalTrust_tredegarHouse"
-     }
-   }
-@@ -498699,7 +498692,7 @@
-   data {
-     template_id: "LC_NT_25"
-     locationCardSettings {
--      locationCard: 306
-+      locationCard: LC_NT_25
-       imageUrl: "lc_nationalTrust_trelissick"
-     }
-   }
-@@ -498709,7 +498702,7 @@
-   data {
-     template_id: "LC_NT_26"
-     locationCardSettings {
--      locationCard: 307
-+      locationCard: LC_NT_26
-       imageUrl: "lc_nationalTrust_tyntesfield"
-     }
-   }
-@@ -498719,7 +498712,7 @@
-   data {
-     template_id: "LC_NT_27"
-     locationCardSettings {
--      locationCard: 308
-+      locationCard: LC_NT_27
-       imageUrl: "lc_nationalTrust_whimpole"
-     }
-   }
-@@ -498729,7 +498722,7 @@
-   data {
-     template_id: "LC_NT_3"
-     locationCardSettings {
--      locationCard: 284
-+      locationCard: LC_NT_3
-       imageUrl: "lc_nationalTrust_beltonHouse"
-     }
-   }
-@@ -498739,7 +498732,7 @@
-   data {
-     template_id: "LC_NT_4"
-     locationCardSettings {
--      locationCard: 285
-+      locationCard: LC_NT_4
-       imageUrl: "lc_nationalTrust_calkeAbbey"
-     }
-   }
-@@ -498749,7 +498742,7 @@
-   data {
-     template_id: "LC_NT_5"
-     locationCardSettings {
--      locationCard: 286
-+      locationCard: LC_NT_5
-       imageUrl: "lc_nationalTrust_chirk"
-     }
-   }
-@@ -498759,7 +498752,7 @@
-   data {
-     template_id: "LC_NT_6"
-     locationCardSettings {
--      locationCard: 287
-+      locationCard: LC_NT_6
-       imageUrl: "lc_nationalTrust_cliveden"
-     }
-   }
-@@ -498769,7 +498762,7 @@
-   data {
-     template_id: "LC_NT_7"
-     locationCardSettings {
--      locationCard: 288
-+      locationCard: LC_NT_7
-       imageUrl: "lc_nationalTrust_clumberPark"
-     }
-   }
-@@ -498779,7 +498772,7 @@
-   data {
-     template_id: "LC_NT_8"
-     locationCardSettings {
--      locationCard: 289
-+      locationCard: LC_NT_8
-       imageUrl: "lc_nationalTrust_dunhamMassey"
-     }
-   }
-@@ -498789,7 +498782,7 @@
-   data {
-     template_id: "LC_NT_9"
-     locationCardSettings {
--      locationCard: 290
-+      locationCard: LC_NT_9
-       imageUrl: "lc_nationalTrust_fountainsAbbeyEstate"
-     }
-   }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_12_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_12_FREE"
++    eventPassTierSettings {
++      rank: 12
++      track: FREE
++      minPointsRequired: 1100
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_12_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_12_PREMIUM"
++    eventPassTierSettings {
++      rank: 12
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LUCKY_EGG
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_13_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_13_FREE"
++    eventPassTierSettings {
++      rank: 13
++      track: FREE
++      minPointsRequired: 1200
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_ANNIVERSARY_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_13_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_13_PREMIUM"
++    eventPassTierSettings {
++      rank: 13
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_ANNIVERSARY_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_14_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_14_FREE"
++    eventPassTierSettings {
++      rank: 14
++      track: FREE
++      minPointsRequired: 1300
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_PINAP_BERRY
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_14_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_14_PREMIUM"
++    eventPassTierSettings {
++      rank: 14
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_PINAP_BERRY
++          amount: 20
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_15_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_15_FREE"
++    eventPassTierSettings {
++      rank: 15
++      track: FREE
++      minPointsRequired: 1400
++      rewards {
++        type: AVATAR_CLOTHING
++        neutralAvatarItemTemplate {
++          itemTemplateId: "N_AVATAR_n_shirt_10thanniversary-yellow"
++          displayTemplateId: "N_DISPLAY_n_shirt_10thanniversary-yellow"
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_15_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_15_PREMIUM"
++    eventPassTierSettings {
++      rank: 15
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 2026
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_16_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_16_FREE"
++    eventPassTierSettings {
++      rank: 16
++      track: FREE
++      minPointsRequired: 1500
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: GIMMIGHOUL
++          pokemonDisplay {
++            form: GIMMIGHOUL_COIN_A2_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_GG2026
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_16_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_16_PREMIUM"
++    eventPassTierSettings {
++      rank: 16
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: GIMMIGHOUL
++          pokemonDisplay {
++            form: GIMMIGHOUL_COIN_A2_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_GG2026
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_17_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_17_FREE"
++    eventPassTierSettings {
++      rank: 17
++      track: FREE
++      minPointsRequired: 1600
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_RAZZ_BERRY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_17_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_17_PREMIUM"
++    eventPassTierSettings {
++      rank: 17
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_RAZZ_BERRY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_18_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_18_FREE"
++    eventPassTierSettings {
++      rank: 18
++      track: FREE
++      minPointsRequired: 1700
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_18_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_18_PREMIUM"
++    eventPassTierSettings {
++      rank: 18
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 20
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_19_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_19_FREE"
++    eventPassTierSettings {
++      rank: 19
++      track: FREE
++      minPointsRequired: 1800
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_ANNIVERSARY_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_19_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_19_PREMIUM"
++    eventPassTierSettings {
++      rank: 19
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_ANNIVERSARY_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_1_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_1_FREE"
++    eventPassTierSettings {
++      rank: 1
++      track: FREE
++      rewards {
++        type: EXPERIENCE
++        exp: 1010
++      }
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "afterparty2026_season_pass_entitlement"
++          durationMins: 131487
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_1_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_1_PREMIUM"
++    eventPassTierSettings {
++      rank: 1
++      track: PREMIUM
++      rewards {
++        type: EXPERIENCE
++        exp: 2026
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_20_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_20_FREE"
++    eventPassTierSettings {
++      rank: 20
++      track: FREE
++      minPointsRequired: 1900
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "afterparty2026_season_pass_rank_02"
++          durationMins: 131487
++        }
++      }
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_02"
++        bonusBoxes {
++          text: "increased_XL_candy_chance_catch_bonus"
++          iconType: CANDY_XL
++        }
++      }
++      activeBonusDisplaySettings {
++        eventName: "go_pass_cumulative_bonuses_header"
++        bonusBoxes {
++          text: "catch_candy_double"
++          iconType: CANDY_GENERAL
++        }
++        bonusBoxes {
++          text: "bonus_xl_candy_nice_great_excel"
++          iconType: CANDY_XL
++        }
++      }
++      7: 1
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_20_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_20_PREMIUM"
++    eventPassTierSettings {
++      rank: 20
++      track: PREMIUM
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_02"
++      }
++      activeBonusDisplaySettings {
++        eventName: "go_pass_cumulative_bonuses_header"
++        bonusBoxes {
++          text: "catch_candy_triple"
++          iconType: CANDY_GENERAL
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_21_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_21_FREE"
++    eventPassTierSettings {
++      rank: 21
++      track: FREE
++      minPointsRequired: 2000
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_RAZZ_BERRY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_21_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_21_PREMIUM"
++    eventPassTierSettings {
++      rank: 21
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_RAZZ_BERRY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_22_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_22_FREE"
++    eventPassTierSettings {
++      rank: 22
++      track: FREE
++      minPointsRequired: 2100
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_ANNIVERSARY_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_22_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_22_PREMIUM"
++    eventPassTierSettings {
++      rank: 22
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_ANNIVERSARY_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_23_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_23_FREE"
++    eventPassTierSettings {
++      rank: 23
++      track: FREE
++      minPointsRequired: 2200
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 15
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_23_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_23_PREMIUM"
++    eventPassTierSettings {
++      rank: 23
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 30
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_24_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_24_FREE"
++    eventPassTierSettings {
++      rank: 24
++      track: FREE
++      minPointsRequired: 2300
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_PINAP_BERRY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_24_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_24_PREMIUM"
++    eventPassTierSettings {
++      rank: 24
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_PINAP_BERRY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_25_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_25_FREE"
++    eventPassTierSettings {
++      rank: 25
++      track: FREE
++      minPointsRequired: 2400
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_LUCKY_EGG
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_25_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_25_PREMIUM"
++    eventPassTierSettings {
++      rank: 25
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_PAID_RAID_TICKET
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_26_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_26_FREE"
++    eventPassTierSettings {
++      rank: 26
++      track: FREE
++      minPointsRequired: 2500
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: BULBASAUR
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: BULBASAUR_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_26_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_26_PREMIUM"
++    eventPassTierSettings {
++      rank: 26
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: BULBASAUR
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: BULBASAUR_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_27_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_27_FREE"
++    eventPassTierSettings {
++      rank: 27
++      track: FREE
++      minPointsRequired: 2600
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: CHARMANDER
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: CHARMANDER_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_27_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_27_PREMIUM"
++    eventPassTierSettings {
++      rank: 27
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: CHARMANDER
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: CHARMANDER_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_28_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_28_FREE"
++    eventPassTierSettings {
++      rank: 28
++      track: FREE
++      minPointsRequired: 2700
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: SQUIRTLE
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: SQUIRTLE_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_28_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_28_PREMIUM"
++    eventPassTierSettings {
++      rank: 28
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: SQUIRTLE
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: SQUIRTLE_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_29_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_29_FREE"
++    eventPassTierSettings {
++      rank: 29
++      track: FREE
++      minPointsRequired: 2800
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_ANNIVERSARY_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_29_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_29_PREMIUM"
++    eventPassTierSettings {
++      rank: 29
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_ANNIVERSARY_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_2_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_2_FREE"
++    eventPassTierSettings {
++      rank: 2
++      track: FREE
++      minPointsRequired: 100
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: BULBASAUR
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: BULBASAUR_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_2_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_2_PREMIUM"
++    eventPassTierSettings {
++      rank: 2
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: BULBASAUR
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: BULBASAUR_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_30_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_30_FREE"
++    eventPassTierSettings {
++      rank: 30
++      track: FREE
++      minPointsRequired: 2900
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_TROY_DISK_SPARKLY
++          amount: 1
++        }
++      }
++      7: 1
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_30_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_30_PREMIUM"
++    eventPassTierSettings {
++      rank: 30
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_TROY_DISK_SPARKLY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_31_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_31_FREE"
++    eventPassTierSettings {
++      rank: 31
++      track: FREE
++      minPointsRequired: 3000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_31_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_31_PREMIUM"
++    eventPassTierSettings {
++      rank: 31
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_32_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_32_FREE"
++    eventPassTierSettings {
++      rank: 32
++      track: FREE
++      minPointsRequired: 3100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_32_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_32_PREMIUM"
++    eventPassTierSettings {
++      rank: 32
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_33_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_33_FREE"
++    eventPassTierSettings {
++      rank: 33
++      track: FREE
++      minPointsRequired: 3200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_33_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_33_PREMIUM"
++    eventPassTierSettings {
++      rank: 33
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_34_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_34_FREE"
++    eventPassTierSettings {
++      rank: 34
++      track: FREE
++      minPointsRequired: 3300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_34_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_34_PREMIUM"
++    eventPassTierSettings {
++      rank: 34
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_35_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_35_FREE"
++    eventPassTierSettings {
++      rank: 35
++      track: FREE
++      minPointsRequired: 3400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_35_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_35_PREMIUM"
++    eventPassTierSettings {
++      rank: 35
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_36_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_36_FREE"
++    eventPassTierSettings {
++      rank: 36
++      track: FREE
++      minPointsRequired: 3500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_36_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_36_PREMIUM"
++    eventPassTierSettings {
++      rank: 36
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_37_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_37_FREE"
++    eventPassTierSettings {
++      rank: 37
++      track: FREE
++      minPointsRequired: 3600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_37_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_37_PREMIUM"
++    eventPassTierSettings {
++      rank: 37
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_38_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_38_FREE"
++    eventPassTierSettings {
++      rank: 38
++      track: FREE
++      minPointsRequired: 3700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_38_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_38_PREMIUM"
++    eventPassTierSettings {
++      rank: 38
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_39_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_39_FREE"
++    eventPassTierSettings {
++      rank: 39
++      track: FREE
++      minPointsRequired: 3800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_39_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_39_PREMIUM"
++    eventPassTierSettings {
++      rank: 39
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_3_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_3_FREE"
++    eventPassTierSettings {
++      rank: 3
++      track: FREE
++      minPointsRequired: 200
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: CHARMANDER
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: CHARMANDER_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_3_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_3_PREMIUM"
++    eventPassTierSettings {
++      rank: 3
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: CHARMANDER
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: CHARMANDER_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_40_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_40_FREE"
++    eventPassTierSettings {
++      rank: 40
++      track: FREE
++      minPointsRequired: 3900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_40_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_40_PREMIUM"
++    eventPassTierSettings {
++      rank: 40
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_41_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_41_FREE"
++    eventPassTierSettings {
++      rank: 41
++      track: FREE
++      minPointsRequired: 4000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_41_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_41_PREMIUM"
++    eventPassTierSettings {
++      rank: 41
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_42_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_42_FREE"
++    eventPassTierSettings {
++      rank: 42
++      track: FREE
++      minPointsRequired: 4100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_42_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_42_PREMIUM"
++    eventPassTierSettings {
++      rank: 42
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_43_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_43_FREE"
++    eventPassTierSettings {
++      rank: 43
++      track: FREE
++      minPointsRequired: 4200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_43_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_43_PREMIUM"
++    eventPassTierSettings {
++      rank: 43
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_44_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_44_FREE"
++    eventPassTierSettings {
++      rank: 44
++      track: FREE
++      minPointsRequired: 4300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_44_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_44_PREMIUM"
++    eventPassTierSettings {
++      rank: 44
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_45_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_45_FREE"
++    eventPassTierSettings {
++      rank: 45
++      track: FREE
++      minPointsRequired: 4400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_45_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_45_PREMIUM"
++    eventPassTierSettings {
++      rank: 45
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_46_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_46_FREE"
++    eventPassTierSettings {
++      rank: 46
++      track: FREE
++      minPointsRequired: 4500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_46_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_46_PREMIUM"
++    eventPassTierSettings {
++      rank: 46
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_47_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_47_FREE"
++    eventPassTierSettings {
++      rank: 47
++      track: FREE
++      minPointsRequired: 4600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_47_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_47_PREMIUM"
++    eventPassTierSettings {
++      rank: 47
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_48_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_48_FREE"
++    eventPassTierSettings {
++      rank: 48
++      track: FREE
++      minPointsRequired: 4700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_48_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_48_PREMIUM"
++    eventPassTierSettings {
++      rank: 48
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_49_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_49_FREE"
++    eventPassTierSettings {
++      rank: 49
++      track: FREE
++      minPointsRequired: 4800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_49_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_49_PREMIUM"
++    eventPassTierSettings {
++      rank: 49
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_4_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_4_FREE"
++    eventPassTierSettings {
++      rank: 4
++      track: FREE
++      minPointsRequired: 300
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: SQUIRTLE
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: SQUIRTLE_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_4_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_4_PREMIUM"
++    eventPassTierSettings {
++      rank: 4
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: SQUIRTLE
++          pokemonDisplay {
++            costume: JAN_2020_NOEVOLVE
++            form: SQUIRTLE_NORMAL
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_50_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_50_FREE"
++    eventPassTierSettings {
++      rank: 50
++      track: FREE
++      minPointsRequired: 4900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_50_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_50_PREMIUM"
++    eventPassTierSettings {
++      rank: 50
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_51_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_51_FREE"
++    eventPassTierSettings {
++      rank: 51
++      track: FREE
++      minPointsRequired: 5000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_51_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_51_PREMIUM"
++    eventPassTierSettings {
++      rank: 51
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_52_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_52_FREE"
++    eventPassTierSettings {
++      rank: 52
++      track: FREE
++      minPointsRequired: 5100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_52_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_52_PREMIUM"
++    eventPassTierSettings {
++      rank: 52
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_53_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_53_FREE"
++    eventPassTierSettings {
++      rank: 53
++      track: FREE
++      minPointsRequired: 5200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_53_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_53_PREMIUM"
++    eventPassTierSettings {
++      rank: 53
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_54_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_54_FREE"
++    eventPassTierSettings {
++      rank: 54
++      track: FREE
++      minPointsRequired: 5300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_54_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_54_PREMIUM"
++    eventPassTierSettings {
++      rank: 54
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_55_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_55_FREE"
++    eventPassTierSettings {
++      rank: 55
++      track: FREE
++      minPointsRequired: 5400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_55_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_55_PREMIUM"
++    eventPassTierSettings {
++      rank: 55
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_56_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_56_FREE"
++    eventPassTierSettings {
++      rank: 56
++      track: FREE
++      minPointsRequired: 5500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_56_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_56_PREMIUM"
++    eventPassTierSettings {
++      rank: 56
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_57_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_57_FREE"
++    eventPassTierSettings {
++      rank: 57
++      track: FREE
++      minPointsRequired: 5600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_57_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_57_PREMIUM"
++    eventPassTierSettings {
++      rank: 57
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_58_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_58_FREE"
++    eventPassTierSettings {
++      rank: 58
++      track: FREE
++      minPointsRequired: 5700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_58_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_58_PREMIUM"
++    eventPassTierSettings {
++      rank: 58
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_59_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_59_FREE"
++    eventPassTierSettings {
++      rank: 59
++      track: FREE
++      minPointsRequired: 5800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_59_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_59_PREMIUM"
++    eventPassTierSettings {
++      rank: 59
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_5_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_5_FREE"
++    eventPassTierSettings {
++      rank: 5
++      track: FREE
++      minPointsRequired: 400
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_INCENSE_ORDINARY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_5_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_5_PREMIUM"
++    eventPassTierSettings {
++      rank: 5
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_INCENSE_ORDINARY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_60_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_60_FREE"
++    eventPassTierSettings {
++      rank: 60
++      track: FREE
++      minPointsRequired: 5900
++      rewards {
++        type: POKECOIN
++        pokecoin: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_60_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_60_PREMIUM"
++    eventPassTierSettings {
++      rank: 60
++      track: PREMIUM
++      rewards {
++        type: POKECOIN
++        pokecoin: 250
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_61_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_61_FREE"
++    eventPassTierSettings {
++      rank: 61
++      track: FREE
++      minPointsRequired: 6000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_61_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_61_PREMIUM"
++    eventPassTierSettings {
++      rank: 61
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_62_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_62_FREE"
++    eventPassTierSettings {
++      rank: 62
++      track: FREE
++      minPointsRequired: 6100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_62_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_62_PREMIUM"
++    eventPassTierSettings {
++      rank: 62
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_63_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_63_FREE"
++    eventPassTierSettings {
++      rank: 63
++      track: FREE
++      minPointsRequired: 6200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_63_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_63_PREMIUM"
++    eventPassTierSettings {
++      rank: 63
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_64_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_64_FREE"
++    eventPassTierSettings {
++      rank: 64
++      track: FREE
++      minPointsRequired: 6300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_64_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_64_PREMIUM"
++    eventPassTierSettings {
++      rank: 64
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_65_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_65_FREE"
++    eventPassTierSettings {
++      rank: 65
++      track: FREE
++      minPointsRequired: 6400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_65_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_65_PREMIUM"
++    eventPassTierSettings {
++      rank: 65
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_66_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_66_FREE"
++    eventPassTierSettings {
++      rank: 66
++      track: FREE
++      minPointsRequired: 6500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_66_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_66_PREMIUM"
++    eventPassTierSettings {
++      rank: 66
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_67_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_67_FREE"
++    eventPassTierSettings {
++      rank: 67
++      track: FREE
++      minPointsRequired: 6600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_67_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_67_PREMIUM"
++    eventPassTierSettings {
++      rank: 67
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_68_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_68_FREE"
++    eventPassTierSettings {
++      rank: 68
++      track: FREE
++      minPointsRequired: 6700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_68_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_68_PREMIUM"
++    eventPassTierSettings {
++      rank: 68
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_69_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_69_FREE"
++    eventPassTierSettings {
++      rank: 69
++      track: FREE
++      minPointsRequired: 6800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_69_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_69_PREMIUM"
++    eventPassTierSettings {
++      rank: 69
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_6_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_6_FREE"
++    eventPassTierSettings {
++      rank: 6
++      track: FREE
++      minPointsRequired: 500
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RAZZ_BERRY
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_6_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_6_PREMIUM"
++    eventPassTierSettings {
++      rank: 6
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RAZZ_BERRY
++          amount: 20
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_70_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_70_FREE"
++    eventPassTierSettings {
++      rank: 70
++      track: FREE
++      minPointsRequired: 6900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_70_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_70_PREMIUM"
++    eventPassTierSettings {
++      rank: 70
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_71_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_71_FREE"
++    eventPassTierSettings {
++      rank: 71
++      track: FREE
++      minPointsRequired: 7000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_71_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_71_PREMIUM"
++    eventPassTierSettings {
++      rank: 71
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_72_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_72_FREE"
++    eventPassTierSettings {
++      rank: 72
++      track: FREE
++      minPointsRequired: 7100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_72_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_72_PREMIUM"
++    eventPassTierSettings {
++      rank: 72
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_73_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_73_FREE"
++    eventPassTierSettings {
++      rank: 73
++      track: FREE
++      minPointsRequired: 7200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_73_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_73_PREMIUM"
++    eventPassTierSettings {
++      rank: 73
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_74_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_74_FREE"
++    eventPassTierSettings {
++      rank: 74
++      track: FREE
++      minPointsRequired: 7300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_74_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_74_PREMIUM"
++    eventPassTierSettings {
++      rank: 74
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_75_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_75_FREE"
++    eventPassTierSettings {
++      rank: 75
++      track: FREE
++      minPointsRequired: 7400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_75_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_75_PREMIUM"
++    eventPassTierSettings {
++      rank: 75
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_76_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_76_FREE"
++    eventPassTierSettings {
++      rank: 76
++      track: FREE
++      minPointsRequired: 7500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_76_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_76_PREMIUM"
++    eventPassTierSettings {
++      rank: 76
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_77_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_77_FREE"
++    eventPassTierSettings {
++      rank: 77
++      track: FREE
++      minPointsRequired: 7600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_77_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_77_PREMIUM"
++    eventPassTierSettings {
++      rank: 77
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_78_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_78_FREE"
++    eventPassTierSettings {
++      rank: 78
++      track: FREE
++      minPointsRequired: 7700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_78_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_78_PREMIUM"
++    eventPassTierSettings {
++      rank: 78
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_79_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_79_FREE"
++    eventPassTierSettings {
++      rank: 79
++      track: FREE
++      minPointsRequired: 7800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_79_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_79_PREMIUM"
++    eventPassTierSettings {
++      rank: 79
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_7_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_7_FREE"
++    eventPassTierSettings {
++      rank: 7
++      track: FREE
++      minPointsRequired: 600
++      rewards {
++        type: STARDUST
++        stardust: 1010
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_7_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_7_PREMIUM"
++    eventPassTierSettings {
++      rank: 7
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 2026
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_80_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_80_FREE"
++    eventPassTierSettings {
++      rank: 80
++      track: FREE
++      minPointsRequired: 7900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_80_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_80_PREMIUM"
++    eventPassTierSettings {
++      rank: 80
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_81_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_81_FREE"
++    eventPassTierSettings {
++      rank: 81
++      track: FREE
++      minPointsRequired: 8000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_81_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_81_PREMIUM"
++    eventPassTierSettings {
++      rank: 81
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_82_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_82_FREE"
++    eventPassTierSettings {
++      rank: 82
++      track: FREE
++      minPointsRequired: 8100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_82_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_82_PREMIUM"
++    eventPassTierSettings {
++      rank: 82
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_83_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_83_FREE"
++    eventPassTierSettings {
++      rank: 83
++      track: FREE
++      minPointsRequired: 8200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_83_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_83_PREMIUM"
++    eventPassTierSettings {
++      rank: 83
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_84_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_84_FREE"
++    eventPassTierSettings {
++      rank: 84
++      track: FREE
++      minPointsRequired: 8300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_84_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_84_PREMIUM"
++    eventPassTierSettings {
++      rank: 84
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_85_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_85_FREE"
++    eventPassTierSettings {
++      rank: 85
++      track: FREE
++      minPointsRequired: 8400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_85_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_85_PREMIUM"
++    eventPassTierSettings {
++      rank: 85
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_86_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_86_FREE"
++    eventPassTierSettings {
++      rank: 86
++      track: FREE
++      minPointsRequired: 8500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_86_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_86_PREMIUM"
++    eventPassTierSettings {
++      rank: 86
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_87_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_87_FREE"
++    eventPassTierSettings {
++      rank: 87
++      track: FREE
++      minPointsRequired: 8600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_87_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_87_PREMIUM"
++    eventPassTierSettings {
++      rank: 87
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_88_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_88_FREE"
++    eventPassTierSettings {
++      rank: 88
++      track: FREE
++      minPointsRequired: 8700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_88_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_88_PREMIUM"
++    eventPassTierSettings {
++      rank: 88
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_89_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_89_FREE"
++    eventPassTierSettings {
++      rank: 89
++      track: FREE
++      minPointsRequired: 8800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_89_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_89_PREMIUM"
++    eventPassTierSettings {
++      rank: 89
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_8_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_8_FREE"
++    eventPassTierSettings {
++      rank: 8
++      track: FREE
++      minPointsRequired: 700
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RAZZ_BERRY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_8_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_8_PREMIUM"
++    eventPassTierSettings {
++      rank: 8
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_TROY_DISK
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_90_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_90_FREE"
++    eventPassTierSettings {
++      rank: 90
++      track: FREE
++      minPointsRequired: 8900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_90_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_90_PREMIUM"
++    eventPassTierSettings {
++      rank: 90
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_91_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_91_FREE"
++    eventPassTierSettings {
++      rank: 91
++      track: FREE
++      minPointsRequired: 9000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_91_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_91_PREMIUM"
++    eventPassTierSettings {
++      rank: 91
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_92_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_92_FREE"
++    eventPassTierSettings {
++      rank: 92
++      track: FREE
++      minPointsRequired: 9100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_92_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_92_PREMIUM"
++    eventPassTierSettings {
++      rank: 92
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_93_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_93_FREE"
++    eventPassTierSettings {
++      rank: 93
++      track: FREE
++      minPointsRequired: 9200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_93_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_93_PREMIUM"
++    eventPassTierSettings {
++      rank: 93
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_94_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_94_FREE"
++    eventPassTierSettings {
++      rank: 94
++      track: FREE
++      minPointsRequired: 9300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_94_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_94_PREMIUM"
++    eventPassTierSettings {
++      rank: 94
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_95_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_95_FREE"
++    eventPassTierSettings {
++      rank: 95
++      track: FREE
++      minPointsRequired: 9400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_95_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_95_PREMIUM"
++    eventPassTierSettings {
++      rank: 95
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_96_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_96_FREE"
++    eventPassTierSettings {
++      rank: 96
++      track: FREE
++      minPointsRequired: 9500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_96_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_96_PREMIUM"
++    eventPassTierSettings {
++      rank: 96
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_97_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_97_FREE"
++    eventPassTierSettings {
++      rank: 97
++      track: FREE
++      minPointsRequired: 9600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_97_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_97_PREMIUM"
++    eventPassTierSettings {
++      rank: 97
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_98_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_98_FREE"
++    eventPassTierSettings {
++      rank: 98
++      track: FREE
++      minPointsRequired: 9700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_98_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_98_PREMIUM"
++    eventPassTierSettings {
++      rank: 98
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_99_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_99_FREE"
++    eventPassTierSettings {
++      rank: 99
++      track: FREE
++      minPointsRequired: 9800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_99_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_99_PREMIUM"
++    eventPassTierSettings {
++      rank: 99
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_9_FREE"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_9_FREE"
++    eventPassTierSettings {
++      rank: 9
++      track: FREE
++      minPointsRequired: 800
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_ANNIVERSARY_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_9_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_AFTERPARTY2026_EVENT_9_PREMIUM"
++    eventPassTierSettings {
++      rank: 9
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PIKACHU
++          pokemonDisplay {
++            form: PIKACHU_ANNIVERSARY_2026
++            locationCard {
++              locationCard: LC_SPECIALBACKGROUND_TEAM_YELLOW
++            }
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "pgorelease.july2_deluxe_event_pass_track_unlock"
++  data {
++    template_id: "pgorelease.july2_deluxe_event_pass_track_unlock"
++    iapItemDisplay {
++      sku: "pgorelease.july2_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      title: "season_pass_premium_track_title_10th_anniversary_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-07-21T10:00:00"
++      skuDisableTime: "2026-07-29T20:00:00"
++      skuEnableTimeUtcMs: 1753092000000
++      skuDisableTimeUtcMs: 1785355200000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F07b0cffa_PGO-MCS_2026_Ultra_Unlock_01_v6-1024x576.jpg"
++    }
++  }
++}
++template {
++  template_id: "pgorelease.july2_deluxe_event_pass_track_unlock_plus_points"
++  data {
++    template_id: "pgorelease.july2_deluxe_event_pass_track_unlock_plus_points"
++    iapItemDisplay {
++      sku: "pgorelease.july2_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      title: "season_pass_premium_track_plus_six_ranks_title_10th_anniversary_2026"
++      description: "event_pass_plus_points_6_ranks_description"
++      skuEnableTime: "2025-07-21T10:00:00"
++      skuDisableTime: "2026-07-29T20:00:00"
++      skuEnableTimeUtcMs: 1753092000000
++      skuDisableTimeUtcMs: 1785355200000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F07b0cffa_PGO-MCS_2026_Ultra_Unlock_01_v6-1024x576.jpg"
++    }
++  }
++}
++batch_id: 1784583497498
+ experiment_id: 11
+ experiment_id: 21
+ experiment_id: 101
+@@ -498821,15 +502196,24 @@
+ experiment_id: 3208
+ experiment_id: 3218
+ experiment_id: 3222
+-experiment_id: 3230
+-experiment_id: 3272
++experiment_id: 3231
++experiment_id: 4206
++experiment_id: 4207
++experiment_id: 4208
++experiment_id: 4210
++experiment_id: 4211
++experiment_id: 4212
++experiment_id: 4215
++experiment_id: 4216
++experiment_id: 4217
++experiment_id: 4218
+ experiment_id: 4226
++experiment_id: 4228
+ experiment_id: 4235
+-experiment_id: 4527
+-experiment_id: 4528
+-experiment_id: 4531
+-experiment_id: 4532
++experiment_id: 4270
++experiment_id: 4519
+ experiment_id: 4998
++experiment_id: 5111
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+@@ -498843,10 +502227,7 @@
+ experiment_id: 7040
+ experiment_id: 7043
+ experiment_id: 7049
+-experiment_id: 7051
+-experiment_id: 7052
+-experiment_id: 7053
+-experiment_id: 7055
++experiment_id: 7109
+ experiment_id: 8965
+ experiment_id: 8966
+ experiment_id: 8968
