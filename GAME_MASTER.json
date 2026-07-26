@@ -54694,7 +54694,7 @@
                 "rvnVersion": 1,
                 "maxPlayersPerBreadDoughLobby": 100,
                 "maxRemotePlayersPerBreadDoughLobby": 100,
-                "maxRemoteBreadBattlePassesAllowed": 10,
+                "maxRemoteBreadBattlePassesAllowed": 999999,
                 "maxNumFriendInvitesToBreadDoughLobbyPerAction": 10,
                 "fetchProfileFromSocialEnabled": true,
                 "maxPlayersToPrepareBreadDoughLobby": 98
@@ -188398,7 +188398,7 @@
                 "category": "ITEM_CATEGORY_ENHANCED_CURRENCY",
                 "dropTrainerLevel": 1,
                 "ignoreInventorySpace": true,
-                "itemCap": 600
+                "itemCap": 2000
             }
         }
     },
@@ -218031,8 +218031,8 @@
                 "complianceZonesEnabled": true,
                 "enablePartyRaidInformation": true,
                 "friendRequestsEnabled": true,
-                "partyExpiryDurationMs": "10800000",
-                "partyExpiryWarningMinutes": 10,
+                "partyExpiryDurationMs": "32400000",
+                "partyExpiryWarningMinutes": 30,
                 "enabledFriendStatusIncrease": true,
                 "restartPartyRejoinPromptEnabled": true,
                 "partyIapBoostsEnabled": true,
@@ -218041,7 +218041,10 @@
                 "partyCatchTagsEnabled": true,
                 "partyQuestEncounterRewardEnabled": true,
                 "maxStackedEncounterReward": 1,
-                "fallbackPartyQuestEnabled": true
+                "fallbackPartyQuestEnabled": true,
+                "partySchedulingSettings": {
+                    "partyExpiryDurationMs": "32400000"
+                }
             }
         }
     },
@@ -222100,7 +222103,6 @@
                 "friendRequestsEnabled": true,
                 "remoteRaidDistanceValidation": true,
                 "popupTimeMs": 30000,
-                "failedFriendInviteInfoEnabled": true,
                 "minPlayersToBoot": 2,
                 "bootCutoffMs": 15000,
                 "bootSoloMs": 30000,
@@ -222504,8 +222506,7 @@
         "data": {
             "templateId": "REMOTE_RAID_LIMIT_SETTINGS",
             "squashSettings": {
-                "enabled": true,
-                "dailySquashLimit": 10
+                "dailySquashLimit": 999999
             }
         }
     },
@@ -222685,7 +222686,7 @@
                 "obRoutePlaySettingsNumber29": 1,
                 "obRoutePlaySettingsNumber30": 27.0,
                 "obRoutePlaySettingsNumber33": 7.0,
-                "obRoutePlaySettingsNumber45": 1
+                "obRoutePlaySettingsNumber45": 6
             }
         }
     },
@@ -413188,6 +413189,9 @@
                     "shadowChargeMove": "FRUSTRATION"
                 },
                 "buddyGroupNumber": 3,
+                "eliteCinematicMove": [
+                    "ROAR_OF_TIME"
+                ],
                 "disableTransferToPokemonHome": true,
                 "raidBossDistanceOffset": 3.5,
                 "ibfc": {},
@@ -413531,6 +413535,9 @@
                     "shadowChargeMove": "FRUSTRATION"
                 },
                 "buddyGroupNumber": 3,
+                "eliteCinematicMove": [
+                    "SPACIAL_REND"
+                ],
                 "disableTransferToPokemonHome": true,
                 "raidBossDistanceOffset": 4.0,
                 "ibfc": {},

@@ -47039,7 +47039,7 @@ template {
       rvnVersion: 1
       maxPlayersPerBreadDoughLobby: 100
       maxRemotePlayersPerBreadDoughLobby: 100
-      maxRemoteBreadBattlePassesAllowed: 10
+      maxRemoteBreadBattlePassesAllowed: 999999
       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
       fetchProfileFromSocialEnabled: true
       maxPlayersToPrepareBreadDoughLobby: 98
@@ -169701,7 +169701,7 @@ template {
       category: ITEM_CATEGORY_ENHANCED_CURRENCY
       dropTrainerLevel: 1
       ignoreInventorySpace: true
-      itemCap: 600
+      itemCap: 2000
     }
   }
 }
@@ -199920,8 +199920,8 @@ template {
       complianceZonesEnabled: true
       enablePartyRaidInformation: true
       friendRequestsEnabled: true
-      partyExpiryDurationMs: 10800000
-      partyExpiryWarningMinutes: 10
+      partyExpiryDurationMs: 32400000
+      partyExpiryWarningMinutes: 30
       enabledFriendStatusIncrease: true
       restartPartyRejoinPromptEnabled: true
       partyIapBoostsEnabled: true
@@ -199931,6 +199931,9 @@ template {
       partyQuestEncounterRewardEnabled: true
       maxStackedEncounterReward: 1
       fallbackPartyQuestEnabled: true
+      partySchedulingSettings {
+        partyExpiryDurationMs: 32400000
+      }
     }
   }
 }
@@ -203813,7 +203816,6 @@ template {
       friendRequestsEnabled: true
       remoteRaidDistanceValidation: true
       popupTimeMs: 30000
-      failedFriendInviteInfoEnabled: true
       minPlayersToBoot: 2
       bootCutoffMs: 15000
       bootSoloMs: 30000
@@ -204190,8 +204192,7 @@ template {
   data {
     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
     squashSettings {
-      enabled: true
-      dailySquashLimit: 10
+      dailySquashLimit: 999999
     }
   }
 }
@@ -204357,7 +204358,7 @@ template {
       obRoutePlaySettingsNumber29: 1
       obRoutePlaySettingsNumber30: 27
       obRoutePlaySettingsNumber33: 7
-      obRoutePlaySettingsNumber45: 1
+      obRoutePlaySettingsNumber45: 6
     }
   }
 }
@@ -379363,6 +379364,7 @@ template {
         shadowChargeMove: FRUSTRATION
       }
       buddyGroupNumber: 3
+      eliteCinematicMove: ROAR_OF_TIME
       disableTransferToPokemonHome: true
       raidBossDistanceOffset: 3.5
       ibfc {
@@ -379677,6 +379679,7 @@ template {
         shadowChargeMove: FRUSTRATION
       }
       buddyGroupNumber: 3
+      eliteCinematicMove: SPACIAL_REND
       disableTransferToPokemonHome: true
       raidBossDistanceOffset: 4
       ibfc {
@@ -500229,6 +500232,7 @@ experiment_id: 3209
 experiment_id: 3218
 experiment_id: 3222
 experiment_id: 3231
+experiment_id: 3273
 experiment_id: 4206
 experiment_id: 4210
 experiment_id: 4211
@@ -500274,6 +500278,11 @@ experiment_id: 9554
 experiment_id: 20947
 experiment_id: 60095
 experiment_id: 94432
+experiment_id: 96101
+experiment_id: 96102
+experiment_id: 96113
+experiment_id: 96118
+experiment_id: 96119
 experiment_id: 98097
 experiment_id: 99998
 experiment_id: 173173
