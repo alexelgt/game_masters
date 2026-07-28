@@ -54491,19 +54491,6 @@
         }
     },
     {
-        "templateId": "BATTLE_ACCESSIBILITY_CODE_GATE",
-        "data": {
-            "templateId": "BATTLE_ACCESSIBILITY_CODE_GATE",
-            "codeGateProto": {
-                "isEnabled": true,
-                "subCodeGateList": {
-                    "name": "show_move_effectiveness",
-                    "isEnabled": true
-                }
-            }
-        }
-    },
-    {
         "templateId": "BATTLE_HUB_BADGE_SETTINGS",
         "data": {
             "templateId": "BATTLE_HUB_BADGE_SETTINGS",
@@ -54694,7 +54681,7 @@
                 "rvnVersion": 1,
                 "maxPlayersPerBreadDoughLobby": 100,
                 "maxRemotePlayersPerBreadDoughLobby": 100,
-                "maxRemoteBreadBattlePassesAllowed": 999999,
+                "maxRemoteBreadBattlePassesAllowed": 10,
                 "maxNumFriendInvitesToBreadDoughLobbyPerAction": 10,
                 "fetchProfileFromSocialEnabled": true,
                 "maxPlayersToPrepareBreadDoughLobby": 98
@@ -99525,15 +99512,6 @@
                     "name": "LEADER_VNEXT_CODE_GATE",
                     "isEnabled": true
                 }
-            }
-        }
-    },
-    {
-        "templateId": "COMBAT_VNEXT_USE_MATCHING_START_TURN_FOR_FAST_ATTACK_ENABLE_ROLL_BACK",
-        "data": {
-            "templateId": "COMBAT_VNEXT_USE_MATCHING_START_TURN_FOR_FAST_ATTACK_ENABLE_ROLL_BACK",
-            "rollBack": {
-                "rollbackPercentage": 100
             }
         }
     },
@@ -188398,7 +188376,7 @@
                 "category": "ITEM_CATEGORY_ENHANCED_CURRENCY",
                 "dropTrainerLevel": 1,
                 "ignoreInventorySpace": true,
-                "itemCap": 2000
+                "itemCap": 600
             }
         }
     },
@@ -188710,7 +188688,9 @@
                     "eventPassId": "EVENT_PASS_AFTERPARTY2026_EVENT"
                 },
                 "timePeriodCounters": {
-                    "playerActivity": {}
+                    "playerActivity": {
+                        "limit": 500
+                    }
                 },
                 "hideItemInInventory": true
             }
@@ -197027,8 +197007,7 @@
         "data": {
             "templateId": "MAP_DISPLAY_SETTINGS",
             "mapDisplaySettings": {
-                "showEnhancedSky": true,
-                "mapEffectName": "fx_map_fireworks_pokeball"
+                "showEnhancedSky": true
             }
         }
     },
@@ -218031,8 +218010,8 @@
                 "complianceZonesEnabled": true,
                 "enablePartyRaidInformation": true,
                 "friendRequestsEnabled": true,
-                "partyExpiryDurationMs": "32400000",
-                "partyExpiryWarningMinutes": 30,
+                "partyExpiryDurationMs": "10800000",
+                "partyExpiryWarningMinutes": 10,
                 "enabledFriendStatusIncrease": true,
                 "restartPartyRejoinPromptEnabled": true,
                 "partyIapBoostsEnabled": true,
@@ -218041,10 +218020,7 @@
                 "partyCatchTagsEnabled": true,
                 "partyQuestEncounterRewardEnabled": true,
                 "maxStackedEncounterReward": 1,
-                "fallbackPartyQuestEnabled": true,
-                "partySchedulingSettings": {
-                    "partyExpiryDurationMs": "32400000"
-                }
+                "fallbackPartyQuestEnabled": true
             }
         }
     },
@@ -222103,6 +222079,7 @@
                 "friendRequestsEnabled": true,
                 "remoteRaidDistanceValidation": true,
                 "popupTimeMs": 30000,
+                "failedFriendInviteInfoEnabled": true,
                 "minPlayersToBoot": 2,
                 "bootCutoffMs": 15000,
                 "bootSoloMs": 30000,
@@ -222506,7 +222483,8 @@
         "data": {
             "templateId": "REMOTE_RAID_LIMIT_SETTINGS",
             "squashSettings": {
-                "dailySquashLimit": 999999
+                "enabled": true,
+                "dailySquashLimit": 10
             }
         }
     },
@@ -222686,7 +222664,7 @@
                 "obRoutePlaySettingsNumber29": 1,
                 "obRoutePlaySettingsNumber30": 27.0,
                 "obRoutePlaySettingsNumber33": 7.0,
-                "obRoutePlaySettingsNumber45": 6
+                "obRoutePlaySettingsNumber45": 1
             }
         }
     },
@@ -272625,12 +272603,12 @@
             "stickerMetadata": {
                 "stickerId": "STICKER_SPRING_2026_2",
                 "maxCount": 25,
-                "pokemonId": "LEAFEON",
+                "pokemonId": "FEEBAS",
                 "category": [
                     "Pokemon"
                 ],
                 "releaseDate": 20260303,
-                "regionId": 3
+                "regionId": 2
             }
         }
     },
@@ -272663,12 +272641,12 @@
             "stickerMetadata": {
                 "stickerId": "STICKER_SPRING_2026_3",
                 "maxCount": 25,
-                "pokemonId": "ESPURR",
+                "pokemonId": "LEAFEON",
                 "category": [
                     "Pokemon"
                 ],
                 "releaseDate": 20260303,
-                "regionId": 5
+                "regionId": 3
             }
         }
     },
@@ -272701,12 +272679,12 @@
             "stickerMetadata": {
                 "stickerId": "STICKER_SPRING_2026_4",
                 "maxCount": 25,
-                "pokemonId": "FEEBAS",
+                "pokemonId": "ESPURR",
                 "category": [
                     "Pokemon"
                 ],
                 "releaseDate": 20260303,
-                "regionId": 2
+                "regionId": 5
             }
         }
     },
@@ -413189,9 +413167,6 @@
                     "shadowChargeMove": "FRUSTRATION"
                 },
                 "buddyGroupNumber": 3,
-                "eliteCinematicMove": [
-                    "ROAR_OF_TIME"
-                ],
                 "disableTransferToPokemonHome": true,
                 "raidBossDistanceOffset": 3.5,
                 "ibfc": {},
@@ -413535,9 +413510,6 @@
                     "shadowChargeMove": "FRUSTRATION"
                 },
                 "buddyGroupNumber": 3,
-                "eliteCinematicMove": [
-                    "SPACIAL_REND"
-                ],
                 "disableTransferToPokemonHome": true,
                 "raidBossDistanceOffset": 4.0,
                 "ibfc": {},
@@ -539132,6 +539104,7 @@
                 "sku": "pgorelease.general2.ticket.6",
                 "category": "IAP_CATEGORY_GLOBAL_EVENT_TICKET",
                 "sortOrder": 1,
+                "hidden": true,
                 "spriteId": "general2.ticket.6",
                 "title": "general2.ticket.5_shayminmasterworkrerun",
                 "skuEnableTime": "2025-06-21T10:00:00",
@@ -539230,14 +539203,15 @@
             "iapItemDisplay": {
                 "sku": "pgorelease.general2.ticket.9",
                 "category": "IAP_CATEGORY_GLOBAL_EVENT_TICKET",
-                "sortOrder": 1,
-                "spriteId": "general2.ticket.2",
-                "title": "general1.ticket.2_MegaRayquaza_title",
-                "skuEnableTime": "2023-01-01T11:00:01",
-                "skuDisableTime": "2026-07-26T20:00:00",
-                "skuEnableTimeUtcMs": "1672570801000",
-                "skuDisableTimeUtcMs": "1785096000000",
-                "imageUrl": "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F0ba8ff0a_20260508_pgo_s23_megarayquaza_1024x576_nologo.jpg",
+                "sortOrder": 2,
+                "hidden": true,
+                "spriteId": "general2.ticket.9",
+                "title": "general2.ticket.5_MegaSkarmoryRaidDay",
+                "skuEnableTime": "2026-03-03T13:00:00",
+                "skuDisableTime": "2026-06-27T17:00:00",
+                "skuEnableTimeUtcMs": "1772542800000",
+                "skuDisableTimeUtcMs": "1782579600000",
+                "imageUrl": "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F9398cb22_PGO-MCS_Skarmory_Super_Mega_Raid_Day_v4-1024x576.jpg",
                 "useEnvironmentPrefix": true
             }
         }

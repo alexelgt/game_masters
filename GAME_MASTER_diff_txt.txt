@@ -1,104 +1,269 @@
---- GAME_MASTER_old.txt	2026-07-25 13:25:12.165861103 +0200
-+++ GAME_MASTER.txt	2026-07-26 18:33:07.874810493 +0200
-@@ -47039,7 +47039,7 @@
+--- GAME_MASTER_old.txt	2026-07-26 18:33:07.874810493 +0200
++++ GAME_MASTER.txt	2026-07-28 21:02:53.771572053 +0200
+@@ -46862,19 +46862,6 @@
+   }
+ }
+ template {
+-  template_id: "BATTLE_ACCESSIBILITY_CODE_GATE"
+-  data {
+-    template_id: "BATTLE_ACCESSIBILITY_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-      subCodeGateList {
+-        name: "show_move_effectiveness"
+-        isEnabled: true
+-      }
+-    }
+-  }
+-}
+-template {
+   template_id: "BATTLE_HUB_BADGE_SETTINGS"
+   data {
+     template_id: "BATTLE_HUB_BADGE_SETTINGS"
+@@ -47039,7 +47026,7 @@
        rvnVersion: 1
        maxPlayersPerBreadDoughLobby: 100
        maxRemotePlayersPerBreadDoughLobby: 100
--      maxRemoteBreadBattlePassesAllowed: 10
-+      maxRemoteBreadBattlePassesAllowed: 999999
+-      maxRemoteBreadBattlePassesAllowed: 999999
++      maxRemoteBreadBattlePassesAllowed: 10
        maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
        fetchProfileFromSocialEnabled: true
        maxPlayersToPrepareBreadDoughLobby: 98
-@@ -169701,7 +169701,7 @@
+@@ -85774,15 +85761,6 @@
+   }
+ }
+ template {
+-  template_id: "COMBAT_VNEXT_USE_MATCHING_START_TURN_FOR_FAST_ATTACK_ENABLE_ROLL_BACK"
+-  data {
+-    template_id: "COMBAT_VNEXT_USE_MATCHING_START_TURN_FOR_FAST_ATTACK_ENABLE_ROLL_BACK"
+-    rollBack {
+-      rollbackPercentage: 100
+-    }
+-  }
+-}
+-template {
+   template_id: "CONTEST_SETTINGS"
+   data {
+     template_id: "CONTEST_SETTINGS"
+@@ -169701,7 +169679,7 @@
        category: ITEM_CATEGORY_ENHANCED_CURRENCY
        dropTrainerLevel: 1
        ignoreInventorySpace: true
--      itemCap: 600
-+      itemCap: 2000
+-      itemCap: 2000
++      itemCap: 600
      }
    }
  }
-@@ -199920,8 +199920,8 @@
+@@ -170014,6 +169992,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 500
+         }
+       }
+       hideItemInInventory: true
+@@ -178987,7 +178966,6 @@
+     template_id: "MAP_DISPLAY_SETTINGS"
+     mapDisplaySettings {
+       showEnhancedSky: true
+-      mapEffectName: "fx_map_fireworks_pokeball"
+     }
+   }
+ }
+@@ -199920,8 +199898,8 @@
        complianceZonesEnabled: true
        enablePartyRaidInformation: true
        friendRequestsEnabled: true
--      partyExpiryDurationMs: 10800000
--      partyExpiryWarningMinutes: 10
-+      partyExpiryDurationMs: 32400000
-+      partyExpiryWarningMinutes: 30
+-      partyExpiryDurationMs: 32400000
+-      partyExpiryWarningMinutes: 30
++      partyExpiryDurationMs: 10800000
++      partyExpiryWarningMinutes: 10
        enabledFriendStatusIncrease: true
        restartPartyRejoinPromptEnabled: true
        partyIapBoostsEnabled: true
-@@ -199931,6 +199931,9 @@
+@@ -199931,9 +199909,6 @@
        partyQuestEncounterRewardEnabled: true
        maxStackedEncounterReward: 1
        fallbackPartyQuestEnabled: true
-+      partySchedulingSettings {
-+        partyExpiryDurationMs: 32400000
-+      }
+-      partySchedulingSettings {
+-        partyExpiryDurationMs: 32400000
+-      }
      }
    }
  }
-@@ -203813,7 +203816,6 @@
+@@ -203816,6 +203791,7 @@
        friendRequestsEnabled: true
        remoteRaidDistanceValidation: true
        popupTimeMs: 30000
--      failedFriendInviteInfoEnabled: true
++      failedFriendInviteInfoEnabled: true
        minPlayersToBoot: 2
        bootCutoffMs: 15000
        bootSoloMs: 30000
-@@ -204190,8 +204192,7 @@
+@@ -204192,7 +204168,8 @@
    data {
      template_id: "REMOTE_RAID_LIMIT_SETTINGS"
      squashSettings {
--      enabled: true
--      dailySquashLimit: 10
-+      dailySquashLimit: 999999
+-      dailySquashLimit: 999999
++      enabled: true
++      dailySquashLimit: 10
      }
    }
  }
-@@ -204357,7 +204358,7 @@
+@@ -204358,7 +204335,7 @@
        obRoutePlaySettingsNumber29: 1
        obRoutePlaySettingsNumber30: 27
        obRoutePlaySettingsNumber33: 7
--      obRoutePlaySettingsNumber45: 1
-+      obRoutePlaySettingsNumber45: 6
+-      obRoutePlaySettingsNumber45: 6
++      obRoutePlaySettingsNumber45: 1
      }
    }
  }
-@@ -379363,6 +379364,7 @@
+@@ -253252,10 +253229,10 @@
+     stickerMetadata {
+       stickerId: "STICKER_SPRING_2026_2"
+       maxCount: 25
+-      pokemonId: LEAFEON
++      pokemonId: FEEBAS
+       category: "Pokemon"
+       releaseDate: 20260303
+-      regionId: 3
++      regionId: 2
+     }
+   }
+ }
+@@ -253288,10 +253265,10 @@
+     stickerMetadata {
+       stickerId: "STICKER_SPRING_2026_3"
+       maxCount: 25
+-      pokemonId: ESPURR
++      pokemonId: LEAFEON
+       category: "Pokemon"
+       releaseDate: 20260303
+-      regionId: 5
++      regionId: 3
+     }
+   }
+ }
+@@ -253324,10 +253301,10 @@
+     stickerMetadata {
+       stickerId: "STICKER_SPRING_2026_4"
+       maxCount: 25
+-      pokemonId: FEEBAS
++      pokemonId: ESPURR
+       category: "Pokemon"
+       releaseDate: 20260303
+-      regionId: 2
++      regionId: 5
+     }
+   }
+ }
+@@ -379364,7 +379341,6 @@
          shadowChargeMove: FRUSTRATION
        }
        buddyGroupNumber: 3
-+      eliteCinematicMove: ROAR_OF_TIME
+-      eliteCinematicMove: ROAR_OF_TIME
        disableTransferToPokemonHome: true
        raidBossDistanceOffset: 3.5
        ibfc {
-@@ -379677,6 +379679,7 @@
+@@ -379679,7 +379655,6 @@
          shadowChargeMove: FRUSTRATION
        }
        buddyGroupNumber: 3
-+      eliteCinematicMove: SPACIAL_REND
+-      eliteCinematicMove: SPACIAL_REND
        disableTransferToPokemonHome: true
        raidBossDistanceOffset: 4
        ibfc {
-@@ -500229,6 +500232,7 @@
+@@ -492889,6 +492864,7 @@
+       sku: "pgorelease.general2.ticket.6"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       spriteId: "general2.ticket.6"
+       title: "general2.ticket.5_shayminmasterworkrerun"
+       skuEnableTime: "2025-06-21T10:00:00"
+@@ -492987,14 +492963,15 @@
+     iapItemDisplay {
+       sku: "pgorelease.general2.ticket.9"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+-      sortOrder: 1
+-      spriteId: "general2.ticket.2"
+-      title: "general1.ticket.2_MegaRayquaza_title"
+-      skuEnableTime: "2023-01-01T11:00:01"
+-      skuDisableTime: "2026-07-26T20:00:00"
+-      skuEnableTimeUtcMs: 1672570801000
+-      skuDisableTimeUtcMs: 1785096000000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F0ba8ff0a_20260508_pgo_s23_megarayquaza_1024x576_nologo.jpg"
++      sortOrder: 2
++      hidden: true
++      spriteId: "general2.ticket.9"
++      title: "general2.ticket.5_MegaSkarmoryRaidDay"
++      skuEnableTime: "2026-03-03T13:00:00"
++      skuDisableTime: "2026-06-27T17:00:00"
++      skuEnableTimeUtcMs: 1772542800000
++      skuDisableTimeUtcMs: 1782579600000
++      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F9398cb22_PGO-MCS_Skarmory_Super_Mega_Raid_Day_v4-1024x576.jpg"
+       useEnvironmentPrefix: true
+     }
+   }
+@@ -500196,7 +500173,7 @@
+     }
+   }
+ }
+-batch_id: 1784936118350
++batch_id: 1785264567475
+ experiment_id: 11
+ experiment_id: 21
+ experiment_id: 101
+@@ -500231,27 +500208,14 @@
+ experiment_id: 3209
  experiment_id: 3218
  experiment_id: 3222
- experiment_id: 3231
-+experiment_id: 3273
- experiment_id: 4206
- experiment_id: 4210
- experiment_id: 4211
-@@ -500274,6 +500278,11 @@
+-experiment_id: 3231
+-experiment_id: 3273
+-experiment_id: 4206
+-experiment_id: 4210
+-experiment_id: 4211
+-experiment_id: 4212
+-experiment_id: 4215
+-experiment_id: 4216
+-experiment_id: 4217
+-experiment_id: 4220
++experiment_id: 3232
+ experiment_id: 4226
+ experiment_id: 4228
+-experiment_id: 4230
+-experiment_id: 4232
+-experiment_id: 4233
+-experiment_id: 4234
+ experiment_id: 4235
+ experiment_id: 4270
+-experiment_id: 4519
+-experiment_id: 4956
+-experiment_id: 4958
++experiment_id: 4727
++experiment_id: 4728
++experiment_id: 4732
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+@@ -500266,7 +500230,6 @@
+ experiment_id: 7040
+ experiment_id: 7043
+ experiment_id: 7109
+-experiment_id: 7110
+ experiment_id: 8965
+ experiment_id: 8966
+ experiment_id: 8968
+@@ -500278,12 +500241,6 @@
  experiment_id: 20947
  experiment_id: 60095
  experiment_id: 94432
-+experiment_id: 96101
-+experiment_id: 96102
-+experiment_id: 96113
-+experiment_id: 96118
-+experiment_id: 96119
- experiment_id: 98097
+-experiment_id: 96101
+-experiment_id: 96102
+-experiment_id: 96113
+-experiment_id: 96118
+-experiment_id: 96119
+-experiment_id: 98097
  experiment_id: 99998
  experiment_id: 173173
+ experiment_id: 193151
