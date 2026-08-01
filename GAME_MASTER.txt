@@ -47026,7 +47026,7 @@ template {
       rvnVersion: 1
       maxPlayersPerBreadDoughLobby: 100
       maxRemotePlayersPerBreadDoughLobby: 100
-      maxRemoteBreadBattlePassesAllowed: 10
+      maxRemoteBreadBattlePassesAllowed: 20
       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
       fetchProfileFromSocialEnabled: true
       maxPlayersToPrepareBreadDoughLobby: 98
@@ -166741,7 +166741,6 @@ template {
       }
       timePeriodCounters {
         playerActivity {
-          limit: 250
         }
       }
       hideItemInInventory: true
@@ -168694,7 +168693,7 @@ template {
       egg_incubator {
         incubatorType: INCUBATOR_DISTANCE
         uses: 3
-        distanceMultiplier: 1
+        distanceMultiplier: 0.5
       }
     }
   }
@@ -168710,7 +168709,7 @@ template {
       dropTrainerLevel: 100
       egg_incubator {
         incubatorType: INCUBATOR_DISTANCE
-        distanceMultiplier: 1
+        distanceMultiplier: 0.5
       }
     }
   }
@@ -168745,7 +168744,7 @@ template {
       egg_incubator {
         incubatorType: INCUBATOR_DISTANCE
         uses: 3
-        distanceMultiplier: 0.666666687
+        distanceMultiplier: 0.333333343
       }
     }
   }
@@ -168761,7 +168760,7 @@ template {
       dropTrainerLevel: 100
       egg_incubator {
         incubatorType: INCUBATOR_DISTANCE
-        distanceMultiplier: 1
+        distanceMultiplier: 0.5
         expiredIncubatorReplacement {
           incubatorReplacement: ITEM_INCUBATOR_BASIC
           usesCountOverride: 1
@@ -179332,8 +179331,8 @@ template {
   data {
     template_id: "MP_SHARED_SETTINGS"
     mpSettings {
-      numMpFromWalkQuest: 300
-      numMetersGoal: 2000
+      numMpFromWalkQuest: 600
+      numMetersGoal: 500
       debugAllowRemoveWalkQuest: true
       numMpFromLootStation: 100
       numExtraMpFromFirstLootStation: 20
@@ -201000,7 +200999,7 @@ template {
     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
     squashSettings {
       enabled: true
-      dailySquashLimit: 10
+      dailySquashLimit: 20
     }
   }
 }
@@ -236995,7 +236994,6 @@ template {
     specialEggSettings {
       enabled: true
       minLevel: 15
-      mapIconEnabled: true
       xpReward: 10000
       7: 1
     }
@@ -480802,7 +480800,7 @@ template {
         battleEndTimeoutThresholdMs: 2000
         badNetworkWarningThresholdTurns: 12
         deadNetworkDisconnectThresholdTurns: 120
-        noOpponentConnectionDisconnectThresholdTurns: 12
+        noOpponentConnectionDisconnectThresholdTurns: 21
         submitTurnNumberWithPlayerAction: true
         preResponseInputBlockDurationMs: 500
       }
@@ -487103,9 +487101,12 @@ template {
       sku: "bundle.gmaxday.1"
       category: IAP_CATEGORY_BUNDLE
       sortOrder: 1
-      hidden: true
       spriteId: "bundle3.sprite.d"
       title: "ace_box_title"
+      skuEnableTime: "2019-10-31T21:00:00"
+      skuDisableTime: "2026-08-01T20:00:00"
+      skuEnableTimeUtcMs: 1572555600000
+      skuDisableTimeUtcMs: 1785614400000
       showDiscountTag: true
       showStrikethroughPrice: true
       totalValue: 1000
@@ -489705,12 +489706,12 @@ template {
       sortOrder: 2
       hidden: true
       spriteId: "general1.ticket.2"
-      title: "general1.ticket_CD_Sobble26_title"
+      title: "general1.ticket_CD_Nickit26_title"
       skuEnableTime: "2019-03-14T08:00:00"
-      skuDisableTime: "2026-07-04T17:00:00"
+      skuDisableTime: "2026-08-16T17:00:00"
       skuEnableTimeUtcMs: 1552550400000
-      skuDisableTimeUtcMs: 1783184400000
-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Ff314609f_PGO_MCS_CD_KeyArt_Sobble_v2-1024x576-nologo.jpg"
+      skuDisableTimeUtcMs: 1786899600000
+      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F11274b46_PGO_MCS_CD_KeyArt_Nickit_v1-1024x576-nologo.jpg"
       useEnvironmentPrefix: true
     }
   }
@@ -497038,7 +497039,142 @@ template {
     }
   }
 }
-batch_id: 1785355417077
+template {
+  template_id: "ITEM_EVENT_TICKET_S23_2026_10"
+  data {
+    template_id: "ITEM_EVENT_TICKET_S23_2026_10"
+    itemSettings {
+      itemId: ITEM_EVENT_TICKET_S23_2026_10
+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+      globalEventTicket {
+        eventStartTime: "2026-08-16T14:00:00"
+        eventEndTime: "2026-08-16T17:00:00"
+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Nickit26"
+        giftable: true
+        giftItem: ITEM_EVENT_TICKET_S23_2026_10_TO_GIFT
+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/1024x512.jpg"
+        displayV2Enabled: true
+        backgroundImageUrl: "https://storage.googleapis.com/prod-public-images/pink-ticket-generic1024x512.jpg"
+        eventDatetimeRangeKey: "event_datetime_range_key_CD_Nickit26"
+        textRewardsKey: "text_rewards_key_CD_Nickit26"
+        iconRewards {
+          type: POKEMON_ENCOUNTER
+          pokemonEncounter {
+            pokemonId: THIEVUL
+            pokemonDisplay {
+              form: THIEVUL_NORMAL
+            }
+          }
+        }
+        iconRewards {
+          type: ITEM
+          item {
+            item: ITEM_STAR_PIECE
+            amount: 1
+          }
+        }
+        iconRewards {
+          type: ITEM
+          item {
+            item: ITEM_XL_RARE_CANDY
+            amount: 1
+          }
+        }
+        detailsLinkKey: "details_link_key"
+        clientEventStartTimeUtcMs: 1786888800000
+        clientEventEndTimeUtcMs: 1786899600000
+        27: "general2.ticket.3"
+      }
+      nameOverride: "general1.ticket_CD_Nickit26_title"
+      descriptionOverride: "item_event_ticket_pink_details_CD_Nickit26"
+    }
+  }
+}
+template {
+  template_id: "ITEM_EVENT_TICKET_S23_2026_10_TO_GIFT"
+  data {
+    template_id: "ITEM_EVENT_TICKET_S23_2026_10_TO_GIFT"
+    itemSettings {
+      itemId: ITEM_EVENT_TICKET_S23_2026_10_TO_GIFT
+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+      globalEventTicket {
+        eventStartTime: "2026-08-16T14:00:00"
+        eventEndTime: "2026-08-16T17:00:00"
+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Nickit26"
+        ticketItem: ITEM_EVENT_TICKET_S23_2026_10
+        eventBannerUrl: "https://storage.googleapis.com/prod-public-images/1024x512.jpg"
+        clientEventStartTimeUtcMs: 1786888800000
+        clientEventEndTimeUtcMs: 1786899600000
+        27: "general2.ticket.3"
+      }
+      ignoreInventorySpace: true
+      nameOverride: "general1.ticket_CD_Nickit26_title"
+      descriptionOverride: "item_event_ticket_pink_details_CD_Nickit26"
+    }
+  }
+}
+template {
+  template_id: "LC_2026_MLB_TBRAYS"
+  data {
+    template_id: "LC_2026_MLB_TBRAYS"
+    locationCardSettings {
+      locationCard: LC_2026_MLB_TBRAYS
+      imageUrl: "lc_MLB_tampaBayRays2"
+    }
+  }
+}
+template {
+  template_id: "N_DISPLAY_n_shirt_gofest2026finblue"
+  data {
+    template_id: "N_DISPLAY_n_shirt_gofest2026finblue"
+    avatarItemDisplay {
+      iconAddress: "n_shirt_gofest2026finblue_icon"
+      displayStringId: "avatar_shirt_gofest_finale_greninja"
+    }
+  }
+}
+template {
+  template_id: "N_DISPLAY_n_shirt_gofest2026fingreen"
+  data {
+    template_id: "N_DISPLAY_n_shirt_gofest2026fingreen"
+    avatarItemDisplay {
+      iconAddress: "n_shirt_gofest2026fingreen_icon"
+      displayStringId: "avatar_shirt_gofest_finale_chesnaught"
+    }
+  }
+}
+template {
+  template_id: "N_DISPLAY_n_shirt_gofest2026finred"
+  data {
+    template_id: "N_DISPLAY_n_shirt_gofest2026finred"
+    avatarItemDisplay {
+      iconAddress: "n_shirt_gofest2026finred_icon"
+      displayStringId: "avatar_shirt_gofest_finale_delphox"
+    }
+  }
+}
+template {
+  template_id: "general2.ticket.5"
+  data {
+    template_id: "general2.ticket.5"
+    iapItemDisplay {
+      sku: "pgorelease.general2.ticket.5"
+      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+      sortOrder: 2
+      spriteId: "general2.ticket.8"
+      title: "general1.ticket.4_gmaxRillaboom26_title"
+      skuEnableTime: "2019-03-14T08:00:00"
+      skuDisableTime: "2026-08-01T17:00:00"
+      skuEnableTimeUtcMs: 1552550400000
+      skuDisableTimeUtcMs: 1785603600000
+      imageUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2F871eef71_PGO-MCS_GMAX_Rillaboom_Max_Battle_Day_v1-1024x576-nologo.jpg"
+      useEnvironmentPrefix: true
+    }
+  }
+}
+batch_id: 1785541400670
 experiment_id: 11
 experiment_id: 21
 experiment_id: 101
@@ -497062,6 +497198,7 @@ experiment_id: 1250
 experiment_id: 1699
 experiment_id: 1816
 experiment_id: 2220
+experiment_id: 2256
 experiment_id: 2297
 experiment_id: 2600
 experiment_id: 2650
@@ -497074,11 +497211,15 @@ experiment_id: 3210
 experiment_id: 3218
 experiment_id: 3222
 experiment_id: 3232
-experiment_id: 4226
 experiment_id: 4235
 experiment_id: 4727
 experiment_id: 4728
+experiment_id: 4729
 experiment_id: 4732
+experiment_id: 4989
+experiment_id: 4990
+experiment_id: 4993
+experiment_id: 4994
 experiment_id: 4998
 experiment_id: 5160
 experiment_id: 5162
@@ -497091,6 +497232,7 @@ experiment_id: 5510
 experiment_id: 5514
 experiment_id: 6075
 experiment_id: 7040
+experiment_id: 7042
 experiment_id: 7043
 experiment_id: 8965
 experiment_id: 8966
