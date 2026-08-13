@@ -1,238 +1,4697 @@
---- GAME_MASTER_old.txt	2026-08-07 08:10:21.738362667 +0200
-+++ GAME_MASTER.txt	2026-08-08 09:55:59.858580428 +0200
-@@ -168001,7 +168001,7 @@
-       ignoreInventorySpace: true
-       itemCap: 999999
-       eventPassPoint {
--        eventPassId: "EVENT_PASS_GOFEST2025_MAXFINALE"
-+        eventPassId: "EVENT_PASS_GOFEST2026_FINALE"
-       }
-       timePeriodCounters {
-         playerActivity {
-@@ -168265,7 +168265,6 @@
-       }
-       timePeriodCounters {
-         playerActivity {
--          limit: 500
-         }
-       }
-       hideItemInInventory: true
-@@ -168283,6 +168282,7 @@
-       category: ITEM_CATEGORY_EVENT_PASS_POINT
-       ignoreInventorySpace: true
-       itemCap: 999999
-+      nameOverride: "ITEM_EVENT_PASS_POINT_GO_TOUR_01_name"
-       eventPassPoint {
-         eventPassId: "EVENT_PASS_UU_WATER_FESTIVAL_2026_EVENT"
-       }
-@@ -168292,6 +168292,7 @@
-         }
-       }
-       hideItemInInventory: true
-+      25: "ITEM_EVENT_PASS_POINT_GO_TOUR_01_name"
+--- GAME_MASTER_old.txt	2026-08-08 09:55:59.858580428 +0200
++++ GAME_MASTER.txt	2026-08-13 19:43:19.635625753 +0200
+@@ -780,12 +780,13 @@
+     iapItemDisplay {
+       sku: "pgorelease.august1_deluxe_event_pass_track_unlock"
+       sortOrder: 1
++      hidden: true
+       title: "season_pass_premium_track_title_summermarathon2026"
+       description: "deluxe_event_pass_track_unlock_description"
+       skuEnableTime: "2025-08-04T10:00:00"
+-      skuDisableTime: "2026-08-12T20:00:00"
++      skuDisableTime: "2025-08-12T20:00:00"
+       skuEnableTimeUtcMs: 1754301600000
+-      skuDisableTimeUtcMs: 1786564800000
++      skuDisableTimeUtcMs: 1755028800000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Faab1ed22_PGO-MCS_Summer_Marathon_Fire_Ice_v3b-1024x576.jpg"
+     }
+   }
+@@ -797,12 +798,13 @@
+     iapItemDisplay {
+       sku: "pgorelease.august1_deluxe_event_pass_track_unlock_plus_points"
+       sortOrder: 1
++      hidden: true
+       title: "season_pass_premium_track_plus_six_ranks_title_summermarathon2026"
+       description: "event_pass_plus_points_6_ranks_description"
+       skuEnableTime: "2025-08-04T10:00:00"
+-      skuDisableTime: "2026-08-12T20:00:00"
++      skuDisableTime: "2025-08-12T20:00:00"
+       skuEnableTimeUtcMs: 1754301600000
+-      skuDisableTimeUtcMs: 1786564800000
++      skuDisableTimeUtcMs: 1755028800000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Faab1ed22_PGO-MCS_Summer_Marathon_Fire_Ice_v3b-1024x576.jpg"
+     }
+   }
+@@ -32447,6 +32449,7 @@
+       itemsCount: 25
+       itemsUnlocked: ITEM_ULTRA_BALL
+       featuresUnlocked: FEATURE_MAX_BATTLE
++      featuresUnlocked: 19
+       clientOverrideDisplayOrder: true
+     }
+   }
+@@ -49602,7 +49605,6 @@
+       catchCardAvailableSeconds: 1800
+       catchCardShareCampfireEnabled: true
+       arCatchCardShareCampfireEnabled: true
+-      meetupQueryTimerMs: 3600000
+       passwordlessLoginEnabled: true
+     }
+   }
+@@ -51811,6 +51813,7 @@
+       seasonEndTimeTimestamp: 1772571600000
+       seasonEndTimeTimestamp: 1780430400000
+       seasonEndTimeTimestamp: 1788897600000
++      seasonEndTimeTimestamp: 1796158800000
+       seasonEndTimeTimestamp: 4070980800000
+       ratingAdjustmentPercentage: 0.9
+       rankingAdjustmentPercentage: 0.01
+@@ -93463,2113 +93466,486 @@
+     template_id: "EVENT_PASS_REDIRECT_SUMMER_MARATHON_2026"
+     iapItemDisplay {
+       sku: "pgorelease.august1_deluxe_event_pass_track_unlock_redirect"
+-      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       title: "season_pass_premium_track_title_summermarathon2026"
+       description: "deluxe_event_pass_track_unlock_description"
+       skuEnableTime: "2025-08-04T10:00:00"
+-      skuDisableTime: "2026-08-12T20:00:00"
++      skuDisableTime: "2025-08-12T20:00:00"
+       skuEnableTimeUtcMs: 1754301600000
+-      skuDisableTimeUtcMs: 1786564800000
++      skuDisableTimeUtcMs: 1755028800000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Faab1ed22_PGO-MCS_Summer_Marathon_Fire_Ice_v3b-1024x576.jpg"
      }
    }
  }
-@@ -169654,7 +169655,7 @@
-             amount: 1
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT"
+-    eventPassSettings {
+-      prefix: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT"
+-      pointsItemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_09
+-      trackConditions {
+-        track: FREE
+-        trackTitleKey: "season_pass_base_track_title_summermarathon2026"
+-      }
+-      trackConditions {
+-        track: PREMIUM
+-        badge: BADGE_EVENT_0227
+-        trackTitleKey: "season_pass_premium_track_title_summermarathon2026"
+-      }
+-      expirationTime: "2026-08-10T20:00:00"
+-      maxTierLevel: 60
+-      additionalBonusTiersLevel: 31
+-      eventPassDisplaySettings {
+-        bonusBoxes {
+-          text: "quest_catch_pokemon_singular"
+-          iconType: SPAWN_UNKNOWN
+-          quantity: 5
+-        }
+-        bonusBoxes {
+-          text: "quest_hatch_egg_singular"
+-          iconType: EGG
+-          quantity: 40
+-        }
+-        bonusBoxes {
+-          text: "quest_win_raid_singular"
+-          iconType: RAID
+-          quantity: 100
+-        }
+-        eventPassTrackUpgradeDescriptions {
+-          passTrackUpgradeHeaderDescription: "season_pass_premium_track_title_summermarathon2026"
+-          eventPassTrackToUpgradeTo: PREMIUM
+-          trackUnlockSkuId: "pgorelease.august1_deluxe_event_pass_track_unlock"
+-          trackUnlockPlusPointsSkuId: "pgorelease.august1_deluxe_event_pass_track_unlock_plus_points"
+-          eventDurationKey: "season_pass_summermarathon2026_event_duration"
+-          upgradeDescriptionKey: "season_pass_summermarathon2026_upgrade_description"
+-          ranksToHighlightRewards: 15
+-          ranksToHighlightRewards: 23
+-          ranksToHighlightRewards: 30
+-          detailsLinkKey: "season_pass_details_link_summermarathon2026"
+-          trackUnlockImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
+-          trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
+-        }
+-        eventPassTitleKey: "season_pass_base_track_title_summermarathon2026"
+-        headerIconUrl: "https://pgorelease-assets.nianticstatic.com/GameDesignAssets%2Fd99f7e15_Logo_256x256.png"
+-        todayViewSection: SEASONAL_EVENT_PASS_SECTION
+-        sectionDisplayPriority: 50
+-      }
+-      gracePeriodEndTime: "2026-08-12T20:00:00"
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_10_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_10_FREE"
+-    eventPassTierSettings {
+-      rank: 10
+-      track: FREE
+-      minPointsRequired: 900
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "summermarathon2026_season_pass_rank_01_free"
+-          durationMins: 14000
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_01"
+-        bonusBoxes {
+-          text: "pokestop_spin_xp_double"
+-          iconType: POKESTOP
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        eventName: "go_pass_cumulative_bonuses_header"
+-        bonusBoxes {
+-          text: "pokestop_spin_xp_double"
+-          iconType: POKESTOP
+-        }
+-      }
+-      7: 1
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_10_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_10_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 10
+-      track: PREMIUM
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "summermarathon2026_season_pass_rank_01_paid"
+-          durationMins: 14000
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_01"
+-        bonusBoxes {
+-          text: "pokestop_spin_xp_triple"
+-          iconType: POKESTOP
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        bonusBoxes {
+-          text: "pokestop_spin_xp_triple"
+-          iconType: POKESTOP
+-        }
+-      }
+-      7: 1
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_11_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_11_FREE"
+-    eventPassTierSettings {
+-      rank: 11
+-      track: FREE
+-      minPointsRequired: 1000
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_11_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_11_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 11
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_12_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_12_FREE"
+-    eventPassTierSettings {
+-      rank: 12
+-      track: FREE
+-      minPointsRequired: 1100
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: SLUGMA
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_12_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_12_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 12
+-      track: PREMIUM
+-      rewards {
+-        type: XL_CANDY
+-        xlCandy {
+-          pokemonId: SLUGMA
+-          amount: 5
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_13_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_13_FREE"
+-    eventPassTierSettings {
+-      rank: 13
+-      track: FREE
+-      minPointsRequired: 1200
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SLUGMA
+-          pokemonDisplay {
+-            form: SLUGMA_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_13_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_13_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 13
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SLUGMA
+-          pokemonDisplay {
+-            form: SLUGMA_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_14_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_14_FREE"
+-    eventPassTierSettings {
+-      rank: 14
+-      track: FREE
+-      minPointsRequired: 1300
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_RAZZ_BERRY
+-          amount: 5
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_14_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_14_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 14
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_XL_RARE_CANDY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_15_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_15_FREE"
+-    eventPassTierSettings {
+-      rank: 15
+-      track: FREE
+-      minPointsRequired: 1400
+-      rewards {
+-        type: STARDUST
+-        stardust: 2500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_15_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_15_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 15
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_INCUBATOR_SUPER
+-          amount: 3
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_16_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_16_FREE"
+-    eventPassTierSettings {
+-      rank: 16
+-      track: FREE
+-      minPointsRequired: 1500
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: SNOM
+-          amount: 5
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_16_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_16_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 16
+-      track: PREMIUM
+-      rewards {
+-        type: XL_CANDY
+-        xlCandy {
+-          pokemonId: SNOM
+-          amount: 5
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_17_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_17_FREE"
+-    eventPassTierSettings {
+-      rank: 17
+-      track: FREE
+-      minPointsRequired: 1600
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: SNOM
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_17_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_17_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 17
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SNOM
+-          pokemonDisplay {
+-            form: SNOM_NORMAL
+-          }
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_18_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_18_FREE"
+-    eventPassTierSettings {
+-      rank: 18
+-      track: FREE
+-      minPointsRequired: 1700
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: VULPIX
+-          pokemonDisplay {
+-            form: VULPIX_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_18_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_18_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 18
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: VULPIX
+-          pokemonDisplay {
+-            form: VULPIX_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_19_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_19_FREE"
+-    eventPassTierSettings {
+-      rank: 19
+-      track: FREE
+-      minPointsRequired: 1800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: VULPIX
+-          pokemonDisplay {
+-            form: VULPIX_ALOLA
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_19_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_19_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 19
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: VULPIX
+-          pokemonDisplay {
+-            form: VULPIX_ALOLA
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_1_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_1_FREE"
+-    eventPassTierSettings {
+-      rank: 1
+-      track: FREE
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_1_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_1_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 1
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_INCENSE_ORDINARY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_20_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_20_FREE"
+-    eventPassTierSettings {
+-      rank: 20
+-      track: FREE
+-      minPointsRequired: 1900
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "summermarathon2026_season_pass_rank_02_free"
+-          durationMins: 14000
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_02"
+-        bonusBoxes {
+-          text: "incubator_distance_half"
+-          iconType: EGG_INCUBATOR
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        eventName: "go_pass_cumulative_bonuses_header"
+-        bonusBoxes {
+-          text: "pokestop_spin_xp_double"
+-          iconType: POKESTOP
+-        }
+-        bonusBoxes {
+-          text: "incubator_distance_half"
+-          iconType: EGG_INCUBATOR
+-        }
+-      }
+-      7: 1
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_20_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_20_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 20
+-      track: PREMIUM
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "summermarathon2026_season_pass_rank_02_paid"
+-          durationMins: 14000
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_02"
+-        bonusBoxes {
+-          text: "incubator_distance_quarter"
+-          iconType: EGG_INCUBATOR
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        bonusBoxes {
+-          text: "pokestop_spin_xp_triple"
+-          iconType: POKESTOP
+-        }
+-        bonusBoxes {
+-          text: "incubator_distance_quarter"
+-          iconType: EGG_INCUBATOR
+-        }
+-      }
+-      7: 1
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_21_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_21_FREE"
+-    eventPassTierSettings {
+-      rank: 21
+-      track: FREE
+-      minPointsRequired: 2000
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 15
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_21_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_21_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 21
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 30
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_22_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_22_FREE"
+-    eventPassTierSettings {
+-      rank: 22
+-      track: FREE
+-      minPointsRequired: 2100
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_PINAP_BERRY
+-          amount: 5
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_22_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_22_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 22
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_XL_RARE_CANDY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_23_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_23_FREE"
+-    eventPassTierSettings {
+-      rank: 23
+-      track: FREE
+-      minPointsRequired: 2200
+-      rewards {
+-        type: STARDUST
+-        stardust: 2500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_23_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_23_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 23
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_INCUBATOR_BASIC
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_24_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_24_FREE"
+-    eventPassTierSettings {
+-      rank: 24
+-      track: FREE
+-      minPointsRequired: 2300
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GOLDEN_RAZZ_BERRY
+-          amount: 2
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_24_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_24_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 24
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GOLDEN_PINAP_BERRY
+-          amount: 2
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_25_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_25_FREE"
+-    eventPassTierSettings {
+-      rank: 25
+-      track: FREE
+-      minPointsRequired: 2400
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_RARE_CANDY
+-          amount: 2
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_25_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_25_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 25
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_XL_RARE_CANDY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_26_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_26_FREE"
+-    eventPassTierSettings {
+-      rank: 26
+-      track: FREE
+-      minPointsRequired: 2500
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: DARUMAKA
+-          pokemonDisplay {
+-            form: DARUMAKA_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_26_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_26_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 26
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: DARUMAKA
+-          pokemonDisplay {
+-            form: DARUMAKA_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_27_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_27_FREE"
+-    eventPassTierSettings {
+-      rank: 27
+-      track: FREE
+-      minPointsRequired: 2600
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: DARUMAKA
+-          pokemonDisplay {
+-            form: DARUMAKA_GALARIAN
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_27_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_27_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 27
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: DARUMAKA
+-          pokemonDisplay {
+-            form: DARUMAKA_GALARIAN
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_28_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_28_FREE"
+-    eventPassTierSettings {
+-      rank: 28
+-      track: FREE
+-      minPointsRequired: 2700
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SNEASEL
+-          pokemonDisplay {
+-            form: SNEASEL_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_28_PREMIUM"
++  template_id: "V0025_POKEMON_PIKACHU_WCS_2026"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_28_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 28
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SNEASEL
+-          pokemonDisplay {
+-            form: SNEASEL_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_29_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_29_FREE"
+-    eventPassTierSettings {
+-      rank: 29
+-      track: FREE
+-      minPointsRequired: 2800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SIZZLIPEDE
+-          pokemonDisplay {
+-            form: SIZZLIPEDE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_29_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_29_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 29
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SIZZLIPEDE
+-          pokemonDisplay {
+-            form: SIZZLIPEDE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_2_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_2_FREE"
+-    eventPassTierSettings {
+-      rank: 2
+-      track: FREE
+-      minPointsRequired: 100
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_POKE_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_2_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_2_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 2
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_POKE_BALL
+-          amount: 30
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_30_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_30_FREE"
+-    eventPassTierSettings {
+-      rank: 30
+-      track: FREE
+-      minPointsRequired: 2900
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SNOM
+-          pokemonDisplay {
+-            form: SNOM_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-      7: 1
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_30_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_30_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 30
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SNOM
+-          pokemonDisplay {
+-            form: SNOM_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_31_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_31_FREE"
+-    eventPassTierSettings {
+-      rank: 31
+-      track: FREE
+-      minPointsRequired: 3000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_31_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_31_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 31
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_32_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_32_FREE"
+-    eventPassTierSettings {
+-      rank: 32
+-      track: FREE
+-      minPointsRequired: 3100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_32_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_32_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 32
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_33_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_33_FREE"
+-    eventPassTierSettings {
+-      rank: 33
+-      track: FREE
+-      minPointsRequired: 3200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_33_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_33_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 33
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_34_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_34_FREE"
+-    eventPassTierSettings {
+-      rank: 34
+-      track: FREE
+-      minPointsRequired: 3300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_34_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_34_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 34
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_35_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_35_FREE"
+-    eventPassTierSettings {
+-      rank: 35
+-      track: FREE
+-      minPointsRequired: 3400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_35_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_35_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 35
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_36_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_36_FREE"
+-    eventPassTierSettings {
+-      rank: 36
+-      track: FREE
+-      minPointsRequired: 3500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_36_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_36_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 36
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_37_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_37_FREE"
+-    eventPassTierSettings {
+-      rank: 37
+-      track: FREE
+-      minPointsRequired: 3600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_37_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_37_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 37
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_38_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_38_FREE"
+-    eventPassTierSettings {
+-      rank: 38
+-      track: FREE
+-      minPointsRequired: 3700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_38_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_38_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 38
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_39_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_39_FREE"
+-    eventPassTierSettings {
+-      rank: 39
+-      track: FREE
+-      minPointsRequired: 3800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_39_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_39_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 39
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_3_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_3_FREE"
+-    eventPassTierSettings {
+-      rank: 3
+-      track: FREE
+-      minPointsRequired: 200
+-      rewards {
+-        type: STARDUST
+-        stardust: 2500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_3_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_3_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 3
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_INCUBATOR_BASIC
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_40_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_40_FREE"
+-    eventPassTierSettings {
+-      rank: 40
+-      track: FREE
+-      minPointsRequired: 3900
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_40_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_40_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 40
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_41_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_41_FREE"
+-    eventPassTierSettings {
+-      rank: 41
+-      track: FREE
+-      minPointsRequired: 4000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_41_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_41_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 41
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_42_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_42_FREE"
+-    eventPassTierSettings {
+-      rank: 42
+-      track: FREE
+-      minPointsRequired: 4100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_42_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_42_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 42
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_43_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_43_FREE"
+-    eventPassTierSettings {
+-      rank: 43
+-      track: FREE
+-      minPointsRequired: 4200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_43_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_43_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 43
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_44_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_44_FREE"
+-    eventPassTierSettings {
+-      rank: 44
+-      track: FREE
+-      minPointsRequired: 4300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_44_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_44_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 44
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_45_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_45_FREE"
+-    eventPassTierSettings {
+-      rank: 45
+-      track: FREE
+-      minPointsRequired: 4400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_45_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_45_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 45
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_46_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_46_FREE"
+-    eventPassTierSettings {
+-      rank: 46
+-      track: FREE
+-      minPointsRequired: 4500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_46_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_46_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 46
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_47_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_47_FREE"
+-    eventPassTierSettings {
+-      rank: 47
+-      track: FREE
+-      minPointsRequired: 4600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_47_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_47_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 47
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_48_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_48_FREE"
+-    eventPassTierSettings {
+-      rank: 48
+-      track: FREE
+-      minPointsRequired: 4700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
++    template_id: "V0025_POKEMON_PIKACHU_WCS_2026"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_48_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_48_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 48
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_49_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_49_FREE"
+-    eventPassTierSettings {
+-      rank: 49
+-      track: FREE
+-      minPointsRequired: 4800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_49_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_49_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 49
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionIds: RAICHU
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_WCS_2026
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_4_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_4_FREE"
+-    eventPassTierSettings {
+-      rank: 4
+-      track: FREE
+-      minPointsRequired: 300
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: PONYTA
+-          amount: 10
+-        }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      eliteQuickMove: PRESENT_FAST
++      eliteCinematicMove: SURF
++      eliteCinematicMove: THUNDER
++      buddyWalkedMegaEnergyAwards {
++        megaPokemonId: RAICHU
++        megaEnergyAwardAmount: 5
++        tempEvoId: TEMP_EVOLUTION_MEGA_X
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_4_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_4_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 4
+-      track: PREMIUM
+-      rewards {
+-        type: XL_CANDY
+-        xlCandy {
+-          pokemonId: PONYTA
+-          amount: 5
+-        }
++      buddyWalkedMegaEnergyAwards {
++        megaPokemonId: RAICHU
++        megaEnergyAwardAmount: 5
++        tempEvoId: TEMP_EVOLUTION_MEGA_Y
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_50_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_50_FREE"
+-    eventPassTierSettings {
+-      rank: 50
+-      track: FREE
+-      minPointsRequired: 4900
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
++      disableTransferToPokemonHome: true
++      ibfc {
+       }
++      breadTierGroup: GROUP_1
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_50_PREMIUM"
++  template_id: "V0025_POKEMON_PIKACHU_PXP_2026"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_50_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 50
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
++    template_id: "V0025_POKEMON_PIKACHU_PXP_2026"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_51_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_51_FREE"
+-    eventPassTierSettings {
+-      rank: 51
+-      track: FREE
+-      minPointsRequired: 5000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_51_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_51_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 51
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_52_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_52_FREE"
+-    eventPassTierSettings {
+-      rank: 52
+-      track: FREE
+-      minPointsRequired: 5100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionIds: RAICHU
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_PXP_2026
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_52_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_52_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 52
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      eliteQuickMove: PRESENT_FAST
++      eliteCinematicMove: SURF
++      eliteCinematicMove: THUNDER
++      buddyWalkedMegaEnergyAwards {
++        megaPokemonId: RAICHU
++        megaEnergyAwardAmount: 5
++        tempEvoId: TEMP_EVOLUTION_MEGA_X
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_53_FREE"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_53_FREE"
+-    eventPassTierSettings {
+-      rank: 53
+-      track: FREE
+-      minPointsRequired: 5200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
++      buddyWalkedMegaEnergyAwards {
++        megaPokemonId: RAICHU
++        megaEnergyAwardAmount: 5
++        tempEvoId: TEMP_EVOLUTION_MEGA_Y
+       }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_53_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_53_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 53
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
++      disableTransferToPokemonHome: true
++      ibfc {
+       }
++      breadTierGroup: GROUP_1
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_54_FREE"
++  template_id: "STICKER_WCSPXP2026_6.5"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_54_FREE"
+-    eventPassTierSettings {
+-      rank: 54
+-      track: FREE
+-      minPointsRequired: 5300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
++    template_id: "STICKER_WCSPXP2026_6.5"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_6.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 1
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_54_PREMIUM"
++  template_id: "STICKER_WCSPXP2026_6.3"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_54_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 54
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
++    template_id: "STICKER_WCSPXP2026_6.3"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_6.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 2
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_55_FREE"
++  template_id: "STICKER_WCSPXP2026_6"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_55_FREE"
+-    eventPassTierSettings {
+-      rank: 55
+-      track: FREE
+-      minPointsRequired: 5400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
++    template_id: "STICKER_WCSPXP2026_6"
++    stickerMetadata {
++      stickerId: "STICKER_WCSPXP2026_6"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20260828
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_55_PREMIUM"
++  template_id: "STICKER_WCSPXP2026_5.5"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_55_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 55
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
++    template_id: "STICKER_WCSPXP2026_5.5"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_5.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 3
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_56_FREE"
++  template_id: "STICKER_WCSPXP2026_5.3"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_56_FREE"
+-    eventPassTierSettings {
+-      rank: 56
+-      track: FREE
+-      minPointsRequired: 5500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
++    template_id: "STICKER_WCSPXP2026_5.3"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_5.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 4
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_56_PREMIUM"
++  template_id: "STICKER_WCSPXP2026_5"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_56_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 56
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
++    template_id: "STICKER_WCSPXP2026_5"
++    stickerMetadata {
++      stickerId: "STICKER_WCSPXP2026_5"
++      maxCount: 25
++      pokemonId: INCINEROAR
++      category: "Pokemon"
++      releaseDate: 20260828
++      regionId: 6
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_57_FREE"
++  template_id: "STICKER_WCSPXP2026_4.5"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_57_FREE"
+-    eventPassTierSettings {
+-      rank: 57
+-      track: FREE
+-      minPointsRequired: 5600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
++    template_id: "STICKER_WCSPXP2026_4.5"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_4.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 5
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_57_PREMIUM"
++  template_id: "STICKER_WCSPXP2026_4.3"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_57_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 57
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
++    template_id: "STICKER_WCSPXP2026_4.3"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_4.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 6
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_58_FREE"
++  template_id: "STICKER_WCSPXP2026_4"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_58_FREE"
+-    eventPassTierSettings {
+-      rank: 58
+-      track: FREE
+-      minPointsRequired: 5700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
++    template_id: "STICKER_WCSPXP2026_4"
++    stickerMetadata {
++      stickerId: "STICKER_WCSPXP2026_4"
++      maxCount: 25
++      pokemonId: GRENINJA
++      category: "Pokemon"
++      releaseDate: 20260828
++      regionId: 5
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_58_PREMIUM"
++  template_id: "STICKER_WCSPXP2026_3.5"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_58_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 58
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
++    template_id: "STICKER_WCSPXP2026_3.5"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 7
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_59_FREE"
++  template_id: "STICKER_WCSPXP2026_3.3"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_59_FREE"
+-    eventPassTierSettings {
+-      rank: 59
+-      track: FREE
+-      minPointsRequired: 5800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
++    template_id: "STICKER_WCSPXP2026_3.3"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 8
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_59_PREMIUM"
++  template_id: "STICKER_WCSPXP2026_3"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_59_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 59
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
++    template_id: "STICKER_WCSPXP2026_3"
++    stickerMetadata {
++      stickerId: "STICKER_WCSPXP2026_3"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20260828
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_5_FREE"
++  template_id: "STICKER_WCSPXP2026_2.5"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_5_FREE"
+-    eventPassTierSettings {
+-      rank: 5
+-      track: FREE
+-      minPointsRequired: 400
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: PONYTA
+-          pokemonDisplay {
+-            form: PONYTA_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
++    template_id: "STICKER_WCSPXP2026_2.5"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_5_PREMIUM"
++  template_id: "STICKER_WCSPXP2026_2.3"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_5_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 5
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: PONYTA
+-          pokemonDisplay {
+-            form: PONYTA_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
++    template_id: "STICKER_WCSPXP2026_2.3"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 10
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_60_FREE"
++  template_id: "STICKER_WCSPXP2026_2"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_60_FREE"
+-    eventPassTierSettings {
+-      rank: 60
+-      track: FREE
+-      minPointsRequired: 5900
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SNOM
+-          pokemonDisplay {
+-            form: SNOM_NORMAL
+-          }
+-        }
+-      }
++    template_id: "STICKER_WCSPXP2026_2"
++    stickerMetadata {
++      stickerId: "STICKER_WCSPXP2026_2"
++      maxCount: 25
++      pokemonId: FERROTHORN
++      category: "Pokemon"
++      releaseDate: 20260828
++      regionId: 4
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_60_PREMIUM"
++  template_id: "STICKER_WCSPXP2026_1.5"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_60_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 60
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SNOM
+-          pokemonDisplay {
+-            form: SNOM_NORMAL
+-          }
+-        }
+-      }
++    template_id: "STICKER_WCSPXP2026_1.5"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 11
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_6_FREE"
++  template_id: "STICKER_WCSPXP2026_1.3"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_6_FREE"
+-    eventPassTierSettings {
+-      rank: 6
+-      track: FREE
+-      minPointsRequired: 500
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GREAT_BALL
+-          amount: 10
+-        }
+-      }
++    template_id: "STICKER_WCSPXP2026_1.3"
++    iapItemDisplay {
++      sku: "STICKER_WCSPXP2026_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 12
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_6_PREMIUM"
++  template_id: "STICKER_WCSPXP2026_1"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_6_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 6
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GREAT_BALL
+-          amount: 20
+-        }
+-      }
++    template_id: "STICKER_WCSPXP2026_1"
++    stickerMetadata {
++      stickerId: "STICKER_WCSPXP2026_1"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20260828
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_7_FREE"
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_WCS_2026"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_7_FREE"
+-    eventPassTierSettings {
+-      rank: 7
+-      track: FREE
+-      minPointsRequired: 600
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 5000
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_WCS_2026"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 1
+       }
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_7_PREMIUM"
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_PXP_2026"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_7_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 7
+-      track: PREMIUM
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 7500
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_PXP_2026"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        femalePercent: 1
+       }
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_8_FREE"
++  template_id: "MEP_EGG_WRITE_MIGRATION_FEATURE_GATE"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_8_FREE"
+-    eventPassTierSettings {
+-      rank: 8
+-      track: FREE
+-      minPointsRequired: 700
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: SNOVER
+-          amount: 10
+-        }
+-      }
++    template_id: "MEP_EGG_WRITE_MIGRATION_FEATURE_GATE"
++    featureGate {
++      status: 11
++      rolloutPercentage: 100
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_8_PREMIUM"
++  template_id: "MEP_EGG_READ_MIGRATION_FEATURE_GATE"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_8_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 8
+-      track: PREMIUM
+-      rewards {
+-        type: XL_CANDY
+-        xlCandy {
+-          pokemonId: SNOVER
+-          amount: 5
+-        }
+-      }
++    template_id: "MEP_EGG_READ_MIGRATION_FEATURE_GATE"
++    featureGate {
++      status: 11
++      rolloutPercentage: 100
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_9_FREE"
++  template_id: "LC_SPECIALBACKGROUND_2026_WCS"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_9_FREE"
+-    eventPassTierSettings {
+-      rank: 9
+-      track: FREE
+-      minPointsRequired: 800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SNOVER
+-          pokemonDisplay {
+-            form: SNOVER_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
++    template_id: "LC_SPECIALBACKGROUND_2026_WCS"
++    locationCardSettings {
++      locationCard: LC_SPECIALBACKGROUND_2026_WCS
++      imageUrl: "sb_WorldSpecial_Blue"
++      cardType: SPECIAL_BACKGROUND
++      vfxAddress: "bgfx_WorldSpecial"
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_9_PREMIUM"
++  template_id: "LC_2026_SANFRANCISCO_WCS_001"
+   data {
+-    template_id: "EVENT_PASS_SUMMER_MARATHON_2026_EVENT_9_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 9
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SNOVER
+-          pokemonDisplay {
+-            form: SNOVER_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
++    template_id: "LC_2026_SANFRANCISCO_WCS_001"
++    locationCardSettings {
++      locationCard: LC_2026_SANFRANCISCO_WCS_001
++      imageUrl: "lc_Wcs2026_sanFrancisco"
+     }
+   }
+ }
+@@ -134669,6 +133045,17 @@
+     template_id: "EXTENDED_V0652_POKEMON_CHESNAUGHT"
+     pokemonExtendedSettings {
+       uniqueId: CHESNAUGHT
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 0.784
++          xsLowerBound: 0.8
++          mLowerBound: 1.2
++          mUpperBound: 2
++          xlUpperBound: 2.4
++          xxlUpperBound: 2.48
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.784
+         xsLowerBound: 0.8
+@@ -134687,6 +133074,17 @@
+     pokemonExtendedSettings {
+       uniqueId: CHESNAUGHT
+       form: CHESNAUGHT_NORMAL
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 0.784
++          xsLowerBound: 0.8
++          mLowerBound: 1.2
++          mUpperBound: 2
++          xlUpperBound: 2.4
++          xxlUpperBound: 2.48
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.784
+         xsLowerBound: 0.8
+@@ -134774,6 +133172,17 @@
+     template_id: "EXTENDED_V0655_POKEMON_DELPHOX"
+     pokemonExtendedSettings {
+       uniqueId: DELPHOX
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 0.735
++          xsLowerBound: 0.75
++          mLowerBound: 1.125
++          mUpperBound: 1.875
++          xlUpperBound: 2.25
++          xxlUpperBound: 2.325
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.735
+         xsLowerBound: 0.75
+@@ -134792,6 +133201,17 @@
+     pokemonExtendedSettings {
+       uniqueId: DELPHOX
+       form: DELPHOX_NORMAL
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 0.735
++          xsLowerBound: 0.75
++          mLowerBound: 1.125
++          mUpperBound: 1.875
++          xlUpperBound: 2.25
++          xxlUpperBound: 2.325
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.735
+         xsLowerBound: 0.75
+@@ -134879,6 +133299,17 @@
+     template_id: "EXTENDED_V0658_POKEMON_GRENINJA"
+     pokemonExtendedSettings {
+       uniqueId: GRENINJA
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 0.735
++          xsLowerBound: 0.75
++          mLowerBound: 1.125
++          mUpperBound: 1.875
++          xlUpperBound: 2.25
++          xxlUpperBound: 2.325
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.735
+         xsLowerBound: 0.75
+@@ -134897,6 +133328,17 @@
+     pokemonExtendedSettings {
+       uniqueId: GRENINJA
+       form: GRENINJA_NORMAL
++      temp_evo_overrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        sizeSettings {
++          xxsLowerBound: 0.735
++          xsLowerBound: 0.75
++          mLowerBound: 1.125
++          mUpperBound: 1.875
++          xlUpperBound: 2.25
++          xxlUpperBound: 2.325
++        }
++      }
+       sizeSettings {
+         xxsLowerBound: 0.735
+         xsLowerBound: 0.75
+@@ -153003,6 +151445,14 @@
+         form: PIKACHU_ANNIVERSARY_2026
+         isCostume: true
+       }
++      forms {
++        form: PIKACHU_WCS_2026
++        isCostume: true
++      }
++      forms {
++        form: PIKACHU_PXP_2026
++        isCostume: true
++      }
+     }
+   }
+ }
+@@ -167740,12 +166190,12 @@
+       itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+       category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+       globalEventTicket {
+-        eventStartTime: "2026-06-02T13:00:00"
+-        eventEndTime: "2026-06-16T10:00:00"
++        eventStartTime: "2026-09-08T13:00:00"
++        eventEndTime: "2026-09-22T10:00:00"
+         itemBagDescriptionKey: "item_battle_pass_ticket_desc"
+         eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fpgo-s22-gbl-nologo-2026.jpg"
+-        clientEventStartTimeUtcMs: 1780405200000
+-        clientEventEndTimeUtcMs: 1781604000000
++        clientEventStartTimeUtcMs: 1788872400000
++        clientEventEndTimeUtcMs: 1790071200000
+       }
+     }
+   }
+@@ -168216,7 +166666,7 @@
+       ignoreInventorySpace: true
+       itemCap: 999999
+       eventPassPoint {
+-        eventPassId: "EVENT_PASS_PIKACHU_CELEBRATION_2026_EVENT"
++        eventPassId: "EVENT_PASS_WCS2026_EVENT"
+       }
+       timePeriodCounters {
+         playerActivity {
+@@ -168265,6 +166715,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 300
+         }
+       }
+       hideItemInInventory: true
+@@ -169954,8 +168405,8 @@
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_07"
+     itemExpirationSettings {
+       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_07
+-      expirationTime: "2026-07-24T20:00:00"
+-      emergencyExpirationTime: "2026-07-25T10:00:00"
++      expirationTime: "2026-09-03T20:00:00"
++      emergencyExpirationTime: "2026-09-04T10:00:00"
+     }
+   }
+ }
+@@ -206879,10 +205330,12 @@
+     template_id: "SOFT_SFIDA_SETTINGS"
+     softSfidaSettings {
+       minPlayerLevel: 20
+-      catchActionDelayMs: 5000
+-      spinActionDelayMs: 10000
++      catchActionDelayMs: 8000
++      spinActionDelayMs: 8000
+       reservedGeofenceCount: 4
+       geofenceSizeM: 50
++      1: 1
++      5: 1
+     }
+   }
+ }
+@@ -238843,11 +237296,64 @@
+   }
+ }
+ template {
+-  template_id: "STAMP_COLLECTION_SNAPSHOT_ENABLED_CODE_GATE"
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_WCS_2026"
+   data {
+-    template_id: "STAMP_COLLECTION_SNAPSHOT_ENABLED_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_WCS_2026"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_WCS_2026
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 31
++          cameraDistance: 27.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 62
++        }
++        maxStationVisualSettings {
++          scale: 4.22
++        }
++      }
++      breadOverrides {
++        breadMode: BREAD_DOUGH_MODE
++        averageHeightM: 21
++        camera {
++          cylinderRadiusM: 1.3
++          cylinderHeightM: 1.1
++        }
++        modelScaleV2: 0.86
++        modelHeight: 2.57
++        catchOverrideSettings {
++          collisionRadiusM: 0.25
++          collisionHeadRadiusM: 0.25
++        }
++        maxEncounterVisualSettings {
++          scale: 10.5
++          cameraDistance: 32.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 20
++          xOffset: 3
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++          yOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 1.25
++        }
++      }
+     }
+   }
+ }
+@@ -248803,7 +247309,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 16
++      sortOrder: 24
+     }
+   }
+ }
+@@ -248814,7 +247320,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 15
++      sortOrder: 23
+     }
+   }
+ }
+@@ -248838,7 +247344,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026_1.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 14
++      sortOrder: 22
+     }
+   }
+ }
+@@ -248849,7 +247355,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026_1.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 13
++      sortOrder: 21
+     }
+   }
+ }
+@@ -248873,7 +247379,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026_2.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 12
++      sortOrder: 20
+     }
+   }
+ }
+@@ -248884,7 +247390,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026_2.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 11
++      sortOrder: 19
+     }
+   }
+ }
+@@ -248908,7 +247414,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026_3.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 10
++      sortOrder: 18
+     }
+   }
+ }
+@@ -248919,7 +247425,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026_3.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 9
++      sortOrder: 17
+     }
+   }
+ }
+@@ -248944,7 +247450,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026_4.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 8
++      sortOrder: 16
+     }
+   }
+ }
+@@ -248955,7 +247461,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026_4.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 7
++      sortOrder: 15
+     }
+   }
+ }
+@@ -248978,7 +247484,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026_LOGO.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 6
++      sortOrder: 14
+     }
+   }
+ }
+@@ -248989,7 +247495,7 @@
+     iapItemDisplay {
+       sku: "STICKER_PGO_FEST_2026_LOGO.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 5
++      sortOrder: 13
+     }
+   }
+ }
+@@ -253007,7 +251513,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SUMMER_2026_1.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 480
++      sortOrder: 32
+     }
+   }
+ }
+@@ -253018,7 +251524,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SUMMER_2026_1.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 479
++      sortOrder: 31
+     }
+   }
+ }
+@@ -253042,7 +251548,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SUMMER_2026_2.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 478
++      sortOrder: 30
+     }
+   }
+ }
+@@ -253053,7 +251559,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SUMMER_2026_2.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 477
++      sortOrder: 29
+     }
+   }
+ }
+@@ -253077,7 +251583,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SUMMER_2026_3.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 476
++      sortOrder: 28
+     }
+   }
+ }
+@@ -253088,7 +251594,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SUMMER_2026_3.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 475
++      sortOrder: 27
+     }
+   }
+ }
+@@ -253113,7 +251619,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SUMMER_2026_4.3"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 474
++      sortOrder: 26
+     }
+   }
+ }
+@@ -253124,7 +251630,7 @@
+     iapItemDisplay {
+       sku: "STICKER_SUMMER_2026_4.5"
+       category: IAP_CATEGORY_STICKER
+-      sortOrder: 473
++      sortOrder: 25
+     }
+   }
+ }
+@@ -414215,6 +412721,7 @@
+     pokemonFamily {
+       familyId: FAMILY_CHESPIN
+       candyPerXlCandy: 100
++      megaEvolvablePokemonId: CHESNAUGHT
+     }
+   }
+ }
+@@ -414646,6 +413153,11 @@
+       kmBuddyDistance: 3
+       buddy_size: BUDDY_BIG
+       modelHeight: 1.84
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 300
++        temporaryEvolutionEnergyCostSubsequent: 80
++      }
+       modelScaleV2: 1
+       buddyOffsetMale: 12
+       buddyOffsetMale: 0
+@@ -414669,6 +413181,19 @@
+       }
+       buddyGroupNumber: 3
+       eliteCinematicMove: FRENZY_PLANT
++      tempEvoOverrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 204
++          baseAttack: 242
++          baseDefense: 282
++        }
++        averageHeightM: 1.6
++        averageWeightKg: 90
++        typeOverride1: POKEMON_TYPE_GRASS
++        typeOverride2: POKEMON_TYPE_FIGHTING
++      }
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -414739,6 +413264,11 @@
+       kmBuddyDistance: 3
+       buddy_size: BUDDY_BIG
+       modelHeight: 1.84
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 300
++        temporaryEvolutionEnergyCostSubsequent: 80
++      }
+       modelScaleV2: 1
+       form: CHESNAUGHT_NORMAL
+       buddyOffsetMale: 12
+@@ -414763,6 +413293,19 @@
+       }
+       buddyGroupNumber: 3
+       eliteCinematicMove: FRENZY_PLANT
++      tempEvoOverrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 204
++          baseAttack: 242
++          baseDefense: 282
++        }
++        averageHeightM: 1.6
++        averageWeightKg: 90
++        typeOverride1: POKEMON_TYPE_GRASS
++        typeOverride2: POKEMON_TYPE_FIGHTING
++      }
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -414776,6 +413319,7 @@
+     pokemonFamily {
+       familyId: FAMILY_FENNEKIN
+       candyPerXlCandy: 100
++      megaEvolvablePokemonId: DELPHOX
+     }
+   }
+ }
+@@ -415204,6 +413748,11 @@
+       kmBuddyDistance: 3
+       buddy_size: BUDDY_BIG
+       modelHeight: 1.77
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 300
++        temporaryEvolutionEnergyCostSubsequent: 80
++      }
+       modelScaleV2: 1
+       buddyOffsetMale: 17.5
+       buddyOffsetMale: 0
+@@ -415227,6 +413776,26 @@
+       }
+       buddyGroupNumber: 3
+       eliteCinematicMove: BLAST_BURN
++      tempEvoOverrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 181
++          baseAttack: 331
++          baseDefense: 235
++        }
++        averageHeightM: 1.5
++        averageWeightKg: 39
++        typeOverride1: POKEMON_TYPE_FIRE
++        typeOverride2: POKEMON_TYPE_PSYCHIC
++        camera {
++          cylinderRadiusM: 1.6
++          cylinderHeightM: 3
++        }
++        buddyPortraitOffset: 0
++        buddyPortraitOffset: 0
++        buddyPortraitOffset: -300
++      }
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -415298,6 +413867,11 @@
+       kmBuddyDistance: 3
+       buddy_size: BUDDY_BIG
+       modelHeight: 1.77
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 300
++        temporaryEvolutionEnergyCostSubsequent: 80
++      }
+       modelScaleV2: 1
+       form: DELPHOX_NORMAL
+       buddyOffsetMale: 17.5
+@@ -415322,6 +413896,26 @@
+       }
+       buddyGroupNumber: 3
+       eliteCinematicMove: BLAST_BURN
++      tempEvoOverrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 181
++          baseAttack: 331
++          baseDefense: 235
++        }
++        averageHeightM: 1.5
++        averageWeightKg: 39
++        typeOverride1: POKEMON_TYPE_FIRE
++        typeOverride2: POKEMON_TYPE_PSYCHIC
++        camera {
++          cylinderRadiusM: 1.6
++          cylinderHeightM: 3
++        }
++        buddyPortraitOffset: 0
++        buddyPortraitOffset: 0
++        buddyPortraitOffset: -300
++      }
++      buddyWalkedMegaEnergyAward: 15
+       ibfc {
+       }
+       breadTierGroup: GROUP_1
+@@ -415335,6 +413929,7 @@
+     pokemonFamily {
+       familyId: FAMILY_FROAKIE
+       candyPerXlCandy: 100
++      megaEvolvablePokemonId: GRENINJA
+     }
+   }
+ }
+@@ -415771,6 +414366,11 @@
+       kmBuddyDistance: 3
+       buddy_size: BUDDY_BIG
+       modelHeight: 0.98
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 300
++        temporaryEvolutionEnergyCostSubsequent: 80
++      }
+       modelScaleV2: 1
+       buddyOffsetMale: 12.9
+       buddyOffsetMale: 0
+@@ -415794,6 +414394,28 @@
+       }
+       buddyGroupNumber: 3
+       eliteCinematicMove: HYDRO_CANNON
++      tempEvoOverrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 176
++          baseAttack: 299
++          baseDefense: 180
++        }
++        averageHeightM: 1.5
++        averageWeightKg: 40
++        typeOverride1: POKEMON_TYPE_WATER
++        typeOverride2: POKEMON_TYPE_DARK
++        camera {
++          cylinderRadiusM: 1.4
++          cylinderHeightM: 1.8
++        }
++        modelScaleV2: 0.7
++        modelHeight: 2.8
++        buddyPortraitOffset: 0
++        buddyPortraitOffset: 0
++        buddyPortraitOffset: -2000
++      }
++      buddyWalkedMegaEnergyAward: 15
+       raidBossDistanceOffset: 3
+       ibfc {
+       }
+@@ -415864,6 +414486,11 @@
+       kmBuddyDistance: 3
+       buddy_size: BUDDY_BIG
+       modelHeight: 0.98
++      evolutionBranch {
++        temporaryEvolution: TEMP_EVOLUTION_MEGA
++        temporaryEvolutionEnergyCost: 300
++        temporaryEvolutionEnergyCostSubsequent: 80
++      }
+       modelScaleV2: 1
+       form: GRENINJA_NORMAL
+       buddyOffsetMale: 12.9
+@@ -415888,6 +414515,28 @@
+       }
+       buddyGroupNumber: 3
+       eliteCinematicMove: HYDRO_CANNON
++      tempEvoOverrides {
++        tempEvoId: TEMP_EVOLUTION_MEGA
++        stats {
++          baseStamina: 176
++          baseAttack: 299
++          baseDefense: 180
++        }
++        averageHeightM: 1.5
++        averageWeightKg: 40
++        typeOverride1: POKEMON_TYPE_WATER
++        typeOverride2: POKEMON_TYPE_DARK
++        camera {
++          cylinderRadiusM: 1.4
++          cylinderHeightM: 1.8
++        }
++        modelScaleV2: 0.7
++        modelHeight: 2.8
++        buddyPortraitOffset: 0
++        buddyPortraitOffset: 0
++        buddyPortraitOffset: -2000
++      }
++      buddyWalkedMegaEnergyAward: 15
+       raidBossDistanceOffset: 3
+       ibfc {
+       }
+@@ -484067,8 +482716,8 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_WEATHER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_EVOLUTION"
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIPS_LEGACY"
+     }
+   }
+@@ -484082,31 +482731,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 750
++          count: 3000
+         }
+       }
+     }
+@@ -484121,31 +482770,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 1500
++          count: 6000
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484161,7 +482810,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -484179,7 +482828,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -484194,7 +482843,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -484212,7 +482861,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484228,7 +482877,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 530
++          count: 2120
+         }
+       }
+       reward {
+@@ -484246,7 +482895,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+     }
+@@ -484261,7 +482910,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1060
++          count: 4240
+         }
+       }
+       reward {
+@@ -484279,7 +482928,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 8480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484295,7 +482944,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 570
++          count: 2280
+         }
+       }
+       reward {
+@@ -484313,7 +482962,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+     }
+@@ -484328,7 +482977,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1140
++          count: 4560
+         }
+       }
+       reward {
+@@ -484346,7 +482995,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 9120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484362,7 +483011,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -484380,7 +483029,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+     }
+@@ -484395,7 +483044,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       reward {
+@@ -484413,7 +483062,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 9600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484508,7 +483157,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 700
++          count: 2800
+         }
+       }
+       reward {
+@@ -484526,7 +483175,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+     }
+@@ -484541,7 +483190,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1400
++          count: 5600
+         }
+       }
+       reward {
+@@ -484559,7 +483208,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 11200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484575,7 +483224,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 730
++          count: 2920
+         }
+       }
+       reward {
+@@ -484593,7 +483242,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+     }
+@@ -484608,7 +483257,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1460
++          count: 5840
+         }
+       }
+       reward {
+@@ -484626,7 +483275,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 11680
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484642,7 +483291,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 770
++          count: 3080
+         }
+       }
+       reward {
+@@ -484660,7 +483309,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+     }
+@@ -484675,7 +483324,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1540
++          count: 6160
+         }
+       }
+       reward {
+@@ -484693,7 +483342,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 12320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484758,7 +483407,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 300
++          count: 1200
+         }
+       }
+       reward {
+@@ -484776,7 +483425,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+     }
+@@ -484791,7 +483440,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 600
++          count: 2400
+         }
+       }
+       reward {
+@@ -484809,7 +483458,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 4800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484825,7 +483474,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 870
++          count: 3480
+         }
+       }
+       reward {
+@@ -484843,7 +483492,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+     }
+@@ -484858,7 +483507,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1740
++          count: 6960
+         }
+       }
+       reward {
+@@ -484876,7 +483525,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 13920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484892,7 +483541,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -484910,7 +483559,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -484925,7 +483574,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -484943,7 +483592,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -484959,7 +483608,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -484977,7 +483626,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -484992,7 +483641,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -485010,7 +483659,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -485026,7 +483675,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -485044,7 +483693,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -485059,7 +483708,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -485077,7 +483726,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -485093,7 +483742,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 900
++          count: 3600
+         }
+       }
+       reward {
+@@ -485111,7 +483760,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+     }
+@@ -485126,7 +483775,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1800
++          count: 7200
+         }
+       }
+       reward {
+@@ -485144,7 +483793,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 14400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -485160,7 +483809,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -485178,7 +483827,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -485193,7 +483842,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -485211,7 +483860,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -485227,7 +483876,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 330
++          count: 1320
+         }
+       }
+       reward {
+@@ -485245,7 +483894,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+     }
+@@ -485260,7 +483909,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 660
++          count: 2640
+         }
+       }
+       reward {
+@@ -485278,7 +483927,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 5280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -485294,7 +483943,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 370
++          count: 1480
+         }
+       }
+       reward {
+@@ -485312,7 +483961,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+     }
+@@ -485327,7 +483976,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 740
++          count: 2960
+         }
+       }
+       reward {
+@@ -485345,7 +483994,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 5920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -485410,7 +484059,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 400
++          count: 1600
+         }
+       }
+       reward {
+@@ -485428,7 +484077,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+     }
+@@ -485443,7 +484092,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 800
++          count: 3200
+         }
+       }
+       reward {
+@@ -485461,7 +484110,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 6400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -485477,7 +484126,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -485495,7 +484144,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -485510,7 +484159,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -485528,7 +484177,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -485544,7 +484193,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 430
++          count: 1720
+         }
+       }
+       reward {
+@@ -485562,7 +484211,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+     }
+@@ -485577,7 +484226,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 860
++          count: 3440
+         }
+       }
+       reward {
+@@ -485595,7 +484244,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 6880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -485611,7 +484260,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 470
++          count: 1880
+         }
+       }
+       reward {
+@@ -485629,7 +484278,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+     }
+@@ -485644,7 +484293,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 940
++          count: 3760
+         }
+       }
+       reward {
+@@ -485662,7 +484311,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 7520
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -486317,9 +484966,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: MESPRIT
++          pokemonId: GROUDON
+           pokemonDisplay {
+-            form: MESPRIT_NORMAL
++            form: GROUDON_NORMAL
            }
          }
--        detailsLinkKey: "details_link_key"
-+        detailsLinkKey: "nickit_website_link"
-         clientEventStartTimeUtcMs: 1786888800000
-         clientEventEndTimeUtcMs: 1786899600000
-         27: "general2.ticket.3"
-@@ -169705,7 +169706,6 @@
-         eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F4988f5ae_PGO-MCS_Mega_Starmie_Mega_Raid_Day_v1-1024x576-nologo.jpg"
-         displayV2Enabled: true
-         backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F4988f5ae_PGO-MCS_Mega_Starmie_Mega_Raid_Day_v1-1024x576-nologo.jpg"
--        eventDatetimeRangeKey: "event_datetime_range_key_MegaStarmieRaidDay"
-         textRewardsKey: "text_rewards_key_StarmieRaidDay"
-         iconRewards {
-           type: ITEM
-@@ -169848,8 +169848,7 @@
-     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_FEST_02"
-     itemExpirationSettings {
-       item: ITEM_EVENT_PASS_POINT_GO_FEST_02
--      expirationTime: "2025-08-26T21:00:00"
--      emergencyExpirationTime: "2025-09-25T21:00:00"
-+      expirationTime: "2026-09-08T23:59:59"
+         unlockedAtRank: 20
+@@ -486993,9 +485642,9 @@
+       }
+       availablePokemon {
+         pokemon {
+-          pokemonId: MESPRIT
++          pokemonId: GROUDON
+           pokemonDisplay {
+-            form: MESPRIT_NORMAL
++            form: GROUDON_NORMAL
+           }
+         }
+         unlockedAtRank: 20
+@@ -489461,15 +488110,9 @@
+       sku: "bundle.hatchbox2024.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
++      hidden: true
+       spriteId: "bundle.general.adventure.1"
+       title: "bundle.xmas.large.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2026-08-10T20:00:00"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1786392000000
+-      showDiscountTag: true
+-      showStrikethroughPrice: true
+-      totalValue: 1910
      }
    }
  }
-@@ -498900,11 +498899,11 @@
-       sortOrder: 1
-       hidden: true
-       title: "season_pass_premium_track_title_uu_water_festival_2026"
--      description: "season_pass_uu_water_festival_2026_upgrade_description"
-+      description: "deluxe_event_pass_track_unlock_description"
-       skuEnableTime: "2025-08-18T10:00:02"
--      skuDisableTime: "2026-08-24T20:00:00"
-+      skuDisableTime: "2026-08-26T20:00:00"
-       skuEnableTimeUtcMs: 1755511202000
--      skuDisableTimeUtcMs: 1787601600000
-+      skuDisableTimeUtcMs: 1787774400000
-       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fe8d77631_PGO-MCS_Water_Festival_2026_TICKET_v2-1024x576.jpg"
-     }
+@@ -491521,7 +490164,6 @@
+       sku: "pgorelease.general2.ticket.3"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 2
+-      hidden: true
+       spriteId: "general1.ticket.2"
+       title: "general1.ticket_CD_Nickit26_title"
+       skuEnableTime: "2019-03-14T08:00:00"
+@@ -492028,36 +490670,79 @@
    }
-@@ -498920,9 +498919,9 @@
-       title: "season_pass_premium_track_plus_six_ranks_title_uu_water_festival_2026"
-       description: "event_pass_plus_points_6_ranks_description"
-       skuEnableTime: "2025-08-18T10:00:04"
--      skuDisableTime: "2026-08-24T20:00:00"
-+      skuDisableTime: "2026-08-26T20:00:00"
-       skuEnableTimeUtcMs: 1755511204000
--      skuDisableTimeUtcMs: 1787601600000
-+      skuDisableTimeUtcMs: 1787774400000
-       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fe8d77631_PGO-MCS_Water_Festival_2026_TICKET_v2-1024x576.jpg"
-     }
-   }
-@@ -499144,11 +499143,11 @@
-       sortOrder: 1
-       hidden: true
-       title: "season_pass_premium_track_title_uu_water_festival_2026"
--      description: "season_pass_uu_water_festival_2026_upgrade_description"
-+      description: "deluxe_event_pass_track_unlock_description"
-       skuEnableTime: "2025-08-18T10:00:00"
--      skuDisableTime: "2026-08-24T20:00:00"
-+      skuDisableTime: "2026-08-26T20:00:00"
-       skuEnableTimeUtcMs: 1755511200000
--      skuDisableTimeUtcMs: 1787601600000
-+      skuDisableTimeUtcMs: 1787774400000
-       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fe8d77631_PGO-MCS_Water_Festival_2026_TICKET_v2-1024x576.jpg"
-     }
-   }
-@@ -499477,7 +499476,111 @@
+ }
+ template {
+-  template_id: "pgorelease.august1_deluxe_event_pass_track_unlock"
++  template_id: "EXTENDED_V0025_POKEMON_PIKACHU_PXP_2026"
+   data {
+-    template_id: "pgorelease.august1_deluxe_event_pass_track_unlock"
+-    iapItemDisplay {
+-      sku: "pgorelease.august1_deluxe_event_pass_track_unlock"
+-      sortOrder: 1
+-      title: "season_pass_premium_track_title_summermarathon2026"
+-      description: "deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2025-08-04T10:00:00"
+-      skuDisableTime: "2026-08-12T20:00:00"
+-      skuEnableTimeUtcMs: 1754301600000
+-      skuDisableTimeUtcMs: 1786564800000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Faab1ed22_PGO-MCS_Summer_Marathon_Fire_Ice_v3b-1024x576.jpg"
++    template_id: "EXTENDED_V0025_POKEMON_PIKACHU_PXP_2026"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_PXP_2026
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 31
++          cameraDistance: 27.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 62
++        }
++        maxStationVisualSettings {
++          scale: 4.22
++        }
++      }
++      breadOverrides {
++        breadMode: BREAD_DOUGH_MODE
++        averageHeightM: 21
++        camera {
++          cylinderRadiusM: 1.3
++          cylinderHeightM: 1.1
++        }
++        modelScaleV2: 0.86
++        modelHeight: 2.57
++        catchOverrideSettings {
++          collisionRadiusM: 0.25
++          collisionHeadRadiusM: 0.25
++        }
++        maxEncounterVisualSettings {
++          scale: 10.5
++          cameraDistance: 32.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 20
++          xOffset: 3
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++          yOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 1.25
++        }
++      }
      }
    }
  }
--batch_id: 1786077277244
-+template {
-+  template_id: "BADGE_GOFEST_FINALE_2026_EVENT_PASS_DELUXE"
-+  data {
-+    template_id: "BADGE_GOFEST_FINALE_2026_EVENT_PASS_DELUXE"
+ template {
+-  template_id: "pgorelease.august1_deluxe_event_pass_track_unlock_plus_points"
++  template_id: "BADGE_EVENT_0231"
+   data {
+-    template_id: "pgorelease.august1_deluxe_event_pass_track_unlock_plus_points"
+-    iapItemDisplay {
+-      sku: "pgorelease.august1_deluxe_event_pass_track_unlock_plus_points"
+-      sortOrder: 1
+-      title: "season_pass_premium_track_plus_six_ranks_title_summermarathon2026"
+-      description: "event_pass_plus_points_6_ranks_description"
+-      skuEnableTime: "2025-08-04T10:00:00"
+-      skuDisableTime: "2026-08-12T20:00:00"
+-      skuEnableTimeUtcMs: 1754301600000
+-      skuDisableTimeUtcMs: 1786564800000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Faab1ed22_PGO-MCS_Summer_Marathon_Fire_Ice_v3b-1024x576.jpg"
++    template_id: "BADGE_EVENT_0231"
 +    badgeSettings {
-+      badgeType: 6261
++      badgeType: BADGE_EVENT_0231
 +      badgeRank: 2
 +      targets: 100
 +      eventBadge: true
 +      eventBadgeSettings {
 +        obEventBadgeSettingsNumber6: 1
 +      }
+     }
+   }
+ }
+@@ -499580,12 +498265,502 @@
+     }
+   }
+ }
+-batch_id: 1786142605867
++template {
++  template_id: "AUGUST3_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++  data {
++    template_id: "AUGUST3_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++    iapItemDisplay {
++      sku: "august3_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_WCS_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-08-25T10:00:00"
++      skuDisableTime: "2025-09-01T20:00:00"
++      skuEnableTimeUtcMs: 1756116000000
++      skuDisableTimeUtcMs: 1756756800000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Ff9eaebcb_PGO-WCS_2026_Backpack_v2-1024x512-nologo.jpg"
 +    }
 +  }
 +}
 +template {
-+  template_id: "N_DISPLAY_n_backpack_wcspxp2026"
++  template_id: "AUGUST3_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
 +  data {
-+    template_id: "N_DISPLAY_n_backpack_wcspxp2026"
-+    avatarItemDisplay {
-+      iconAddress: "n_backpack_wcspxp2026_icon"
-+      displayStringId: "avatar_backpack_wcspxp"
++    template_id: "AUGUST3_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++    iapItemDisplay {
++      sku: "august3_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_plus_six_ranks_title_WCS_2026"
++      description: "event_pass_plus_points_6_ranks_description"
++      skuEnableTime: "2025-08-25T10:00:00"
++      skuDisableTime: "2025-09-01T20:00:00"
++      skuEnableTimeUtcMs: 1756116000000
++      skuDisableTimeUtcMs: 1756756800000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Ff9eaebcb_PGO-WCS_2026_Backpack_v2-1024x512-nologo.jpg"
 +    }
 +  }
 +}
 +template {
-+  template_id: "N_DISPLAY_n_gloves_wcs2026winnersitems"
++  template_id: "MEGA_EVOLUTION_LEVEL_0_V0652_POKEMON_CHESNAUGHT"
 +  data {
-+    template_id: "N_DISPLAY_n_gloves_wcs2026winnersitems"
-+    avatarItemDisplay {
-+      iconAddress: "n_gloves_wcs2026winnersitems_icon"
-+      displayStringId: "avatar_gloves_wcs2026champion"
++    template_id: "MEGA_EVOLUTION_LEVEL_0_V0652_POKEMON_CHESNAUGHT"
++    megaEvoLevelSettings {
++      pokemonId: CHESNAUGHT
++      progression {
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 1209600000
++        bypassCostInitial: 300
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "N_DISPLAY_n_hat_wcs2026winnersitems"
++  template_id: "MEGA_EVOLUTION_LEVEL_0_V0655_POKEMON_DELPHOX"
 +  data {
-+    template_id: "N_DISPLAY_n_hat_wcs2026winnersitems"
-+    avatarItemDisplay {
-+      iconAddress: "n_hat_wcs2026winnersitems_icon"
-+      displayStringId: "avatar_hat_wcs2026champion"
++    template_id: "MEGA_EVOLUTION_LEVEL_0_V0655_POKEMON_DELPHOX"
++    megaEvoLevelSettings {
++      pokemonId: DELPHOX
++      progression {
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 1209600000
++        bypassCostInitial: 300
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "N_DISPLAY_n_pants_wcs2026winnersitems"
++  template_id: "MEGA_EVOLUTION_LEVEL_0_V0658_POKEMON_GRENINJA"
 +  data {
-+    template_id: "N_DISPLAY_n_pants_wcs2026winnersitems"
-+    avatarItemDisplay {
-+      iconAddress: "n_pants_wcs2026winnersitems_icon"
-+      displayStringId: "avatar_pants_wcs2026champion"
++    template_id: "MEGA_EVOLUTION_LEVEL_0_V0658_POKEMON_GRENINJA"
++    megaEvoLevelSettings {
++      pokemonId: GRENINJA
++      progression {
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 1209600000
++        bypassCostInitial: 300
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "N_DISPLAY_n_shirt_wcs2026sf-green"
++  template_id: "MEGA_EVOLUTION_LEVEL_1_V0652_POKEMON_CHESNAUGHT"
 +  data {
-+    template_id: "N_DISPLAY_n_shirt_wcs2026sf-green"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_wcs2026sf-green_icon"
-+      displayStringId: "avatar_shirt_wcs2026green"
++    template_id: "MEGA_EVOLUTION_LEVEL_1_V0652_POKEMON_CHESNAUGHT"
++    megaEvoLevelSettings {
++      level: 1
++      pokemonId: CHESNAUGHT
++      progression {
++        pointsRequired: 1
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 604800000
++        bypassCostInitial: 80
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "N_DISPLAY_n_shirt_wcs2026sf-red"
++  template_id: "MEGA_EVOLUTION_LEVEL_1_V0655_POKEMON_DELPHOX"
 +  data {
-+    template_id: "N_DISPLAY_n_shirt_wcs2026sf-red"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_wcs2026sf-red_icon"
-+      displayStringId: "avatar_shirt_wcs2026red"
++    template_id: "MEGA_EVOLUTION_LEVEL_1_V0655_POKEMON_DELPHOX"
++    megaEvoLevelSettings {
++      level: 1
++      pokemonId: DELPHOX
++      progression {
++        pointsRequired: 1
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 604800000
++        bypassCostInitial: 80
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "N_DISPLAY_n_shirt_wcs2026winnersitems"
++  template_id: "MEGA_EVOLUTION_LEVEL_1_V0658_POKEMON_GRENINJA"
 +  data {
-+    template_id: "N_DISPLAY_n_shirt_wcs2026winnersitems"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_wcs2026winnersitems_icon"
-+      displayStringId: "avatar_shirt_wcs2026champion"
++    template_id: "MEGA_EVOLUTION_LEVEL_1_V0658_POKEMON_GRENINJA"
++    megaEvoLevelSettings {
++      level: 1
++      pokemonId: GRENINJA
++      progression {
++        pointsRequired: 1
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 604800000
++        bypassCostInitial: 80
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "N_DISPLAY_n_shoes_wcs2026winnersitems"
++  template_id: "MEGA_EVOLUTION_LEVEL_2_V0652_POKEMON_CHESNAUGHT"
 +  data {
-+    template_id: "N_DISPLAY_n_shoes_wcs2026winnersitems"
-+    avatarItemDisplay {
-+      iconAddress: "n_shoes_wcs2026winnersitems_icon"
-+      displayStringId: "avatar_shoes_wcs2026champion"
++    template_id: "MEGA_EVOLUTION_LEVEL_2_V0652_POKEMON_CHESNAUGHT"
++    megaEvoLevelSettings {
++      level: 2
++      pokemonId: CHESNAUGHT
++      progression {
++        pointsRequired: 7
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 432000000
++        bypassCostInitial: 40
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++        sameTypeExtraCatchXp: 50
++        sameTypeExtraCatchCandyXlChance: 0.1
++      }
 +    }
 +  }
 +}
 +template {
-+  template_id: "N_DISPLAY_set_wcs2026winnersitems"
++  template_id: "MEGA_EVOLUTION_LEVEL_2_V0655_POKEMON_DELPHOX"
 +  data {
-+    template_id: "N_DISPLAY_set_wcs2026winnersitems"
-+    avatarItemDisplay {
-+      iconAddress: "set_wcs2026winnersitems"
++    template_id: "MEGA_EVOLUTION_LEVEL_2_V0655_POKEMON_DELPHOX"
++    megaEvoLevelSettings {
++      level: 2
++      pokemonId: DELPHOX
++      progression {
++        pointsRequired: 7
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 432000000
++        bypassCostInitial: 40
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++        sameTypeExtraCatchXp: 50
++        sameTypeExtraCatchCandyXlChance: 0.1
++      }
 +    }
 +  }
 +}
-+batch_id: 1786142605867
++template {
++  template_id: "MEGA_EVOLUTION_LEVEL_2_V0658_POKEMON_GRENINJA"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_2_V0658_POKEMON_GRENINJA"
++    megaEvoLevelSettings {
++      level: 2
++      pokemonId: GRENINJA
++      progression {
++        pointsRequired: 7
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 432000000
++        bypassCostInitial: 40
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 1
++        sameTypeExtraCatchXp: 50
++        sameTypeExtraCatchCandyXlChance: 0.1
++      }
++    }
++  }
++}
++template {
++  template_id: "MEGA_EVOLUTION_LEVEL_3_V0652_POKEMON_CHESNAUGHT"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_3_V0652_POKEMON_CHESNAUGHT"
++    megaEvoLevelSettings {
++      level: 3
++      pokemonId: CHESNAUGHT
++      progression {
++        pointsRequired: 30
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 259200000
++        bypassCostInitial: 20
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 2
++        sameTypeExtraCatchXp: 100
++        sameTypeExtraCatchCandyXlChance: 0.25
++      }
++    }
++  }
++}
++template {
++  template_id: "MEGA_EVOLUTION_LEVEL_3_V0655_POKEMON_DELPHOX"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_3_V0655_POKEMON_DELPHOX"
++    megaEvoLevelSettings {
++      level: 3
++      pokemonId: DELPHOX
++      progression {
++        pointsRequired: 30
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 259200000
++        bypassCostInitial: 20
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 2
++        sameTypeExtraCatchXp: 100
++        sameTypeExtraCatchCandyXlChance: 0.25
++      }
++    }
++  }
++}
++template {
++  template_id: "MEGA_EVOLUTION_LEVEL_3_V0658_POKEMON_GRENINJA"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_3_V0658_POKEMON_GRENINJA"
++    megaEvoLevelSettings {
++      level: 3
++      pokemonId: GRENINJA
++      progression {
++        pointsRequired: 30
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 259200000
++        bypassCostInitial: 20
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 2
++        sameTypeExtraCatchXp: 100
++        sameTypeExtraCatchCandyXlChance: 0.25
++      }
++    }
++  }
++}
++template {
++  template_id: "MEGA_EVOLUTION_LEVEL_4_V0652_POKEMON_CHESNAUGHT"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_4_V0652_POKEMON_CHESNAUGHT"
++    megaEvoLevelSettings {
++      level: 4
++      pokemonId: CHESNAUGHT
++      progression {
++        pointsRequired: 30
++        pointsLimitPerPeriod: 40
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 86400000
++        bypassCostInitial: 5
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 3
++        sameTypeExtraCatchXp: 200
++        sameTypeExtraCatchCandyXlChance: 0.3
++        selfCpBoostAdditionalLevel: 4
++      }
++      megaEnergyCostToUnlock: 5000
++      ftueExpirationTimestamp: 1777147462000
++    }
++  }
++}
++template {
++  template_id: "MEGA_EVOLUTION_LEVEL_4_V0655_POKEMON_DELPHOX"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_4_V0655_POKEMON_DELPHOX"
++    megaEvoLevelSettings {
++      level: 4
++      pokemonId: DELPHOX
++      progression {
++        pointsRequired: 30
++        pointsLimitPerPeriod: 40
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 86400000
++        bypassCostInitial: 5
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 3
++        sameTypeExtraCatchXp: 200
++        sameTypeExtraCatchCandyXlChance: 0.3
++        selfCpBoostAdditionalLevel: 4
++      }
++      megaEnergyCostToUnlock: 5000
++      ftueExpirationTimestamp: 1777147462000
++    }
++  }
++}
++template {
++  template_id: "MEGA_EVOLUTION_LEVEL_4_V0658_POKEMON_GRENINJA"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_4_V0658_POKEMON_GRENINJA"
++    megaEvoLevelSettings {
++      level: 4
++      pokemonId: GRENINJA
++      progression {
++        pointsRequired: 30
++        pointsLimitPerPeriod: 40
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 86400000
++        bypassCostInitial: 5
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 3
++        sameTypeExtraCatchXp: 200
++        sameTypeExtraCatchCandyXlChance: 0.3
++        selfCpBoostAdditionalLevel: 4
++      }
++      megaEnergyCostToUnlock: 5000
++      ftueExpirationTimestamp: 1777147462000
++    }
++  }
++}
++template {
++  template_id: "TEMPORARY_EVOLUTION_V0652_POKEMON_CHESNAUGHT"
++  data {
++    template_id: "TEMPORARY_EVOLUTION_V0652_POKEMON_CHESNAUGHT"
++    temporaryEvolutionSettings {
++      pokemonId: CHESNAUGHT
++      temporary_evolutions {
++        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
++        assetBundleValue: 51
++      }
++    }
++  }
++}
++template {
++  template_id: "TEMPORARY_EVOLUTION_V0655_POKEMON_DELPHOX"
++  data {
++    template_id: "TEMPORARY_EVOLUTION_V0655_POKEMON_DELPHOX"
++    temporaryEvolutionSettings {
++      pokemonId: DELPHOX
++      temporary_evolutions {
++        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
++        assetBundleValue: 51
++      }
++    }
++  }
++}
++template {
++  template_id: "TEMPORARY_EVOLUTION_V0658_POKEMON_GRENINJA"
++  data {
++    template_id: "TEMPORARY_EVOLUTION_V0658_POKEMON_GRENINJA"
++    temporaryEvolutionSettings {
++      pokemonId: GRENINJA
++      temporary_evolutions {
++        temporaryEvolutionId: TEMP_EVOLUTION_MEGA
++        assetBundleValue: 51
++      }
++    }
++  }
++}
++template {
++  template_id: "august3_deluxe_event_pass_track_unlock_redirect"
++  data {
++    template_id: "august3_deluxe_event_pass_track_unlock_redirect"
++    iapItemDisplay {
++      sku: "august3_deluxe_event_pass_track_unlock_redirect"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_WCS_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-08-25T10:00:00"
++      skuDisableTime: "2025-09-01T20:00:00"
++      skuEnableTimeUtcMs: 1756116000000
++      skuDisableTimeUtcMs: 1756756800000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Ff9eaebcb_PGO-WCS_2026_Backpack_v2-1024x512-nologo.jpg"
++    }
++  }
++}
++batch_id: 1786641230434
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -499515,10 +499618,11 @@
+ experiment_id: 150
+-experiment_id: 161
++experiment_id: 162
++experiment_id: 217
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 351
+@@ -499604,7 +498779,6 @@
+ experiment_id: 1699
+ experiment_id: 1816
+ experiment_id: 2220
+-experiment_id: 2254
+ experiment_id: 2297
+ experiment_id: 2600
+ experiment_id: 2650
+@@ -499613,16 +498787,12 @@
+ experiment_id: 3063
+ experiment_id: 3199
+ experiment_id: 3200
+-experiment_id: 3212
++experiment_id: 3214
+ experiment_id: 3219
  experiment_id: 3222
- experiment_id: 3233
- experiment_id: 4252
--experiment_id: 4254
-+experiment_id: 4253
- experiment_id: 4256
- experiment_id: 4258
- experiment_id: 4262
-+experiment_id: 4263
+-experiment_id: 3233
+-experiment_id: 4252
+-experiment_id: 4253
+-experiment_id: 4256
+-experiment_id: 4258
+-experiment_id: 4262
+-experiment_id: 4263
++experiment_id: 3234
++experiment_id: 4652
++experiment_id: 4735
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
-@@ -499534,7 +499638,6 @@
+@@ -499634,9 +498804,9 @@
+ experiment_id: 5510
+ experiment_id: 5514
+ experiment_id: 6075
+-experiment_id: 7043
  experiment_id: 7044
  experiment_id: 7047
++experiment_id: 8787
  experiment_id: 8970
--experiment_id: 8983
  experiment_id: 9521
  experiment_id: 9552
- experiment_id: 9553
+@@ -499645,6 +498815,7 @@
+ experiment_id: 20947
+ experiment_id: 60095
+ experiment_id: 94432
++experiment_id: 98250
+ experiment_id: 99998
+ experiment_id: 173173
+ experiment_id: 193151
+@@ -499661,4 +498832,5 @@
+ experiment_id: 6600434
+ experiment_id: 6600435
+ experiment_id: 6600436
++experiment_id: 6600449
+ experiment_id: 173173183
