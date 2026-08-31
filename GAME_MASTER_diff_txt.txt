@@ -1,41 +1,1527 @@
---- GAME_MASTER_old.txt	2026-08-28 10:01:10.232008096 +0200
-+++ GAME_MASTER.txt	2026-08-29 09:26:26.217717230 +0200
-@@ -167105,7 +167105,6 @@
-       }
-       timePeriodCounters {
-         playerActivity {
--          limit: 500
-         }
-       }
-       hideItemInInventory: true
-@@ -503455,7 +503454,7 @@
+--- GAME_MASTER_old.txt	2026-08-29 09:26:26.217717230 +0200
++++ GAME_MASTER.txt	2026-08-31 11:32:53.097243519 +0200
+@@ -47218,7 +47218,7 @@
+       rvnVersion: 1
+       maxPlayersPerBreadDoughLobby: 100
+       maxRemotePlayersPerBreadDoughLobby: 100
+-      maxRemoteBreadBattlePassesAllowed: 10
++      maxRemoteBreadBattlePassesAllowed: 30
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 98
+@@ -58689,7 +58689,6 @@
+       combatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
+       combatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_ULTRA"
+       combatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_MASTER"
+-      combatLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIPS_LEGACY"
      }
    }
  }
--batch_id: 1787902550208
-+batch_id: 1787968586312
+@@ -167105,6 +167104,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
++          limit: 500
+         }
+       }
+       hideItemInInventory: true
+@@ -174008,6 +174008,9 @@
+       imageUrl: "sb_GoTour2026_mega"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_Mega"
++      5 {
++        2: 331
++      }
+     }
+   }
+ }
+@@ -176547,13 +176550,18 @@
+         rolloutPercentage: 100
+       }
+       subFeatureGateList {
+-        name: "MEGA_CP_BOOST_ENABLED_SUB_FEATURE_GATE"
+-        status: 368387608
++        name: "MEGA_LEVEL_SPEEDUP_SUB_FEATURE_GATE"
++        status: 344171892
+         rolloutPercentage: 100
+       }
+       subFeatureGateList {
+-        name: "MEGA_LEVEL_SPEEDUP_SUB_FEATURE_GATE"
+-        status: 344171892
++        name: "THIRD_CHARGE_MOVE_SUB_FEATURE_GATE"
++        status: 755488416
++        rolloutPercentage: 100
++      }
++      subFeatureGateList {
++        name: "MEGA_COMBAT_BUTTONS_SUB_FEATURE_GATE"
++        status: 276593972
+         rolloutPercentage: 100
+       }
+     }
+@@ -180089,7 +180097,7 @@
+         selfCpBoostAdditionalLevel: 2
+       }
+       megaEnergyCostToUnlock: 5000
+-      ftueExpirationTimestamp: 1777147462000
++      ftueExpirationTimestamp: 1775001600000
+     }
+   }
+ }
+@@ -180119,7 +180127,7 @@
+         selfCpBoostAdditionalLevel: 2
+       }
+       megaEnergyCostToUnlock: 5000
+-      ftueExpirationTimestamp: 1777147462000
++      ftueExpirationTimestamp: 1775001600000
+     }
+   }
+ }
+@@ -180149,7 +180157,7 @@
+         selfCpBoostAdditionalLevel: 2
+       }
+       megaEnergyCostToUnlock: 5000
+-      ftueExpirationTimestamp: 1777147462000
++      ftueExpirationTimestamp: 1775001600000
+     }
+   }
+ }
+@@ -180253,6 +180261,8 @@
+         pokedexId: RAICHU
+         tempEvoId: TEMP_EVOLUTION_MEGA_Y
+       }
++      13: 1
++      15: 1
+     }
+   }
+ }
+@@ -202317,7 +202327,7 @@
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 30
+     }
+   }
+ }
+@@ -269133,6 +269143,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: -1100
++        18: 504
+       }
+       tempEvoOverrides {
+         tempEvoId: TEMP_EVOLUTION_MEGA_Y
+@@ -269144,6 +269155,7 @@
+         averageHeightM: 1
+         averageWeightKg: 26
+         typeOverride1: POKEMON_TYPE_ELECTRIC
++        18: 505
+       }
+       buddyWalkedMegaEnergyAwards {
+         megaPokemonId: RAICHU
+@@ -269370,6 +269382,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: -1100
++        18: 504
+       }
+       tempEvoOverrides {
+         tempEvoId: TEMP_EVOLUTION_MEGA_Y
+@@ -269381,6 +269394,7 @@
+         averageHeightM: 1
+         averageWeightKg: 26
+         typeOverride1: POKEMON_TYPE_ELECTRIC
++        18: 505
+       }
+       buddyWalkedMegaEnergyAwards {
+         megaPokemonId: RAICHU
+@@ -280219,6 +280233,7 @@
+         modelScaleV2: 0.7
+         modelHeight: 4.5
+         raidBossDistanceOffset: 4.5
++        18: 508
+       }
+       buddyWalkedMegaEnergyAward: 15
+       ibfc {
+@@ -280342,6 +280357,7 @@
+         modelScaleV2: 0.7
+         modelHeight: 4.5
+         raidBossDistanceOffset: 4.5
++        18: 508
+       }
+       buddyWalkedMegaEnergyAward: 15
+       ibfc {
+@@ -293118,6 +293134,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: 220
+         buddyPortraitOffset: 0
++        18: 512
+       }
+       buddyWalkedMegaEnergyAward: 15
+       ibfc {
+@@ -293246,6 +293263,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: 220
+         buddyPortraitOffset: 0
++        18: 512
+       }
+       buddyWalkedMegaEnergyAward: 15
+       ibfc {
+@@ -300447,6 +300465,7 @@
+         }
+         modelScaleV2: 0.9
+         modelHeight: 2.2
++        18: 515
+       }
+       buddyWalkedMegaEnergyAward: 25
+       useIrisFlyingPlacement: true
+@@ -300579,6 +300598,7 @@
+         }
+         modelScaleV2: 0.9
+         modelHeight: 2.2
++        18: 515
+       }
+       buddyWalkedMegaEnergyAward: 25
+       useIrisFlyingPlacement: true
+@@ -300717,6 +300737,7 @@
+         }
+         modelScaleV2: 0.86
+         modelHeight: 2.3
++        18: 495
+         20 {
+           1: 249
+           2: 250
+@@ -300738,6 +300759,7 @@
+         }
+         modelScaleV2: 1.2
+         modelHeight: 1.7
++        18: 496
+         20 {
+           1: 249
+           2: 250
+@@ -300979,6 +301001,7 @@
+         }
+         modelScaleV2: 0.86
+         modelHeight: 2.3
++        18: 495
+         20 {
+           1: 249
+           2: 250
+@@ -301000,6 +301023,7 @@
+         }
+         modelScaleV2: 1.2
+         modelHeight: 1.7
++        18: 496
+         20 {
+           1: 249
+           2: 250
+@@ -319683,6 +319707,7 @@
+         }
+         modelScaleV2: 1
+         modelHeight: 1.1
++        18: 522
+       }
+       buddyWalkedMegaEnergyAward: 25
+       useIrisFlyingPlacement: true
+@@ -319801,6 +319826,7 @@
+         }
+         modelScaleV2: 1
+         modelHeight: 1.1
++        18: 522
+       }
+       buddyWalkedMegaEnergyAward: 25
+       useIrisFlyingPlacement: true
+@@ -414726,6 +414752,7 @@
+         averageWeightKg: 90
+         typeOverride1: POKEMON_TYPE_GRASS
+         typeOverride2: POKEMON_TYPE_FIGHTING
++        18: 566
+       }
+       buddyWalkedMegaEnergyAward: 15
+       ibfc {
+@@ -414838,6 +414865,7 @@
+         averageWeightKg: 90
+         typeOverride1: POKEMON_TYPE_GRASS
+         typeOverride2: POKEMON_TYPE_FIGHTING
++        18: 566
+       }
+       buddyWalkedMegaEnergyAward: 15
+       ibfc {
+@@ -415328,6 +415356,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: -300
++        18: 567
+       }
+       buddyWalkedMegaEnergyAward: 15
+       ibfc {
+@@ -415448,6 +415477,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: -300
++        18: 567
+       }
+       buddyWalkedMegaEnergyAward: 15
+       ibfc {
+@@ -415948,6 +415978,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: -2000
++        18: 568
+       }
+       buddyWalkedMegaEnergyAward: 15
+       raidBossDistanceOffset: 3
+@@ -416069,6 +416100,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: -2000
++        18: 568
+       }
+       buddyWalkedMegaEnergyAward: 15
+       raidBossDistanceOffset: 3
+@@ -426939,6 +426971,7 @@
+         }
+         modelScaleV2: 0.8
+         modelHeight: 2.9
++        18: 572
+       }
+       buddyWalkedMegaEnergyAward: 15
+       ibfc {
+@@ -427053,6 +427086,7 @@
+         }
+         modelScaleV2: 0.8
+         modelHeight: 2.9
++        18: 572
+       }
+       buddyWalkedMegaEnergyAward: 15
+       ibfc {
+@@ -460291,6 +460325,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: -200
+         buddyPortraitOffset: 0
++        18: 583
+       }
+       buddyWalkedMegaEnergyAward: 25
+       raidBossDistanceOffset: 17
+@@ -460386,6 +460421,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: -200
+         buddyPortraitOffset: 0
++        18: 583
+       }
+       buddyWalkedMegaEnergyAward: 25
+       disableTransferToPokemonHome: true
+@@ -460482,6 +460518,7 @@
+         buddyPortraitOffset: 0
+         buddyPortraitOffset: -200
+         buddyPortraitOffset: 0
++        18: 583
+       }
+       buddyWalkedMegaEnergyAward: 25
+       raidBossDistanceOffset: 17
+@@ -482741,7 +482778,6 @@
+       isVistaEncounterEnabled: true
+       isVistaMapEnabled: true
+       isVistaSpawnsEnabled: true
+-      themeOverride: "WCS"
+     }
+   }
+ }
+@@ -484551,7 +484587,6 @@
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+       allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIPS_LEGACY"
+     }
+   }
+ }
+@@ -486170,16 +486205,19 @@
+         unlockedAtRank: 24
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486198,16 +486236,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486222,16 +486263,19 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486250,16 +486294,19 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486278,16 +486325,19 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486306,16 +486356,19 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486330,16 +486383,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486354,16 +486410,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486378,16 +486437,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486402,16 +486464,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486426,16 +486491,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486450,16 +486518,19 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486474,16 +486545,19 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486498,16 +486572,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486522,16 +486599,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486546,16 +486626,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486570,16 +486653,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486594,16 +486680,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486618,16 +486707,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486642,16 +486734,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486666,16 +486761,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486690,16 +486788,19 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486714,16 +486815,19 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486819,16 +486923,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486855,16 +486962,19 @@
+         unlockedAtRank: 24
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486883,16 +486993,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486907,16 +487020,19 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486935,16 +487051,19 @@
+         unlockedAtRank: 21
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486963,16 +487082,19 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -486991,16 +487113,19 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487015,16 +487140,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487039,16 +487167,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487063,16 +487194,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487087,16 +487221,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487111,16 +487248,19 @@
+         unlockedAtRank: 1
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487135,16 +487275,19 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487159,16 +487302,19 @@
+         unlockedAtRank: 6
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487183,16 +487329,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487207,16 +487356,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487231,16 +487383,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487255,16 +487410,19 @@
+         unlockedAtRank: 11
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487279,16 +487437,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487303,16 +487464,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487327,16 +487491,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487351,16 +487518,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487375,16 +487545,19 @@
+         unlockedAtRank: 22
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487399,16 +487572,19 @@
+         unlockedAtRank: 23
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -487504,16 +487680,19 @@
+         unlockedAtRank: 16
+         attackIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         defenseIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+         staminaIvOverride {
+           range {
++            min: 10
+             max: 15
+           }
+         }
+@@ -488285,13 +488464,12 @@
+       sku: "bundle.GOFest2026Finale.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general.remotebox.small.1"
+       title: "box_goraid"
+       skuEnableTime: "2026-01-02T20:00:00"
+-      skuDisableTime: "2026-01-02T22:00:00"
++      skuDisableTime: "2026-09-06T22:00:00"
+       skuEnableTimeUtcMs: 1767384000000
+-      skuDisableTimeUtcMs: 1767391200000
++      skuDisableTimeUtcMs: 1788732000000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+     }
+@@ -488305,13 +488483,12 @@
+       sku: "bundle.GOFest2026Finale.2"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 2
+-      hidden: true
+       spriteId: "bundle.general1.small.2"
+       title: "box_gocatch"
+       skuEnableTime: "2026-01-02T20:00:00"
+-      skuDisableTime: "2026-01-02T22:00:00"
++      skuDisableTime: "2026-09-06T22:00:00"
+       skuEnableTimeUtcMs: 1767384000000
+-      skuDisableTimeUtcMs: 1767391200000
++      skuDisableTimeUtcMs: 1788732000000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+     }
+@@ -488325,13 +488502,12 @@
+       sku: "bundle.GOFest2026Finale.3"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 3
+-      hidden: true
+       spriteId: "bundle.general.premiumbox.large.1"
+       title: "box_gomaster"
+       skuEnableTime: "2026-01-02T20:00:00"
+-      skuDisableTime: "2026-01-02T22:00:00"
++      skuDisableTime: "2026-09-06T22:00:00"
+       skuEnableTimeUtcMs: 1767384000000
+-      skuDisableTimeUtcMs: 1767391200000
++      skuDisableTimeUtcMs: 1788732000000
+     }
+   }
+ }
+@@ -488343,13 +488519,12 @@
+       sku: "bundle.GOFest2026Finale.4"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 4
+-      hidden: true
+       spriteId: "bundle.general.adventure.1"
+       title: "box_gosticker"
+       skuEnableTime: "2026-01-02T20:00:00"
+-      skuDisableTime: "2026-01-02T22:00:00"
++      skuDisableTime: "2026-09-06T22:00:00"
+       skuEnableTimeUtcMs: 1767384000000
+-      skuDisableTimeUtcMs: 1767391200000
++      skuDisableTimeUtcMs: 1788732000000
+       showDiscountTag: true
+       showStrikethroughPrice: true
+     }
+@@ -503454,7 +503629,115 @@
+     }
+   }
+ }
+-batch_id: 1787968586312
++template {
++  template_id: "ENHANCED_MEGA_RAID_READY_CHECK_FEATURE_GATE"
++  data {
++    template_id: "ENHANCED_MEGA_RAID_READY_CHECK_FEATURE_GATE"
++    featureGate {
++      status: 195735672
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
++  template_id: "NON_COMBAT_VM_MOVE_TEMP_EVOLUTION_MEGA_X_V0150_POKEMON_MEWTWO"
++  data {
++    template_id: "NON_COMBAT_VM_MOVE_TEMP_EVOLUTION_MEGA_X_V0150_POKEMON_MEWTWO"
++    nonCombatMoveSettings {
++      uniqueId: TEMP_EVOLUTION_MEGA_X_V0150_POKEMON_MEWTWO
++      cost {
++        candyCost: 5
++        3 {
++          1 {
++            1: 150
++            2: 2
++          }
++          2: 75
++        }
++      }
++      bonusEffect {
++        7 {
++          1: 495
++          2: 0x3f933333
++          3: 1
++        }
++      }
++      durationMs: 600000
++      bonusType: 10
++      enableMultiUse: true
++      extraDurationMs: 4000
++      enableNonCombatMove: true
++      9 {
++        2: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "NON_COMBAT_VM_MOVE_TEMP_EVOLUTION_MEGA_Y_V0150_POKEMON_MEWTWO"
++  data {
++    template_id: "NON_COMBAT_VM_MOVE_TEMP_EVOLUTION_MEGA_Y_V0150_POKEMON_MEWTWO"
++    nonCombatMoveSettings {
++      uniqueId: TEMP_EVOLUTION_MEGA_Y_V0150_POKEMON_MEWTWO
++      cost {
++        candyCost: 5
++        3 {
++          1 {
++            1: 150
++            2: 3
++          }
++          2: 75
++        }
++      }
++      bonusEffect {
++        7 {
++          1: 496
++          4: "\003\004"
++        }
++      }
++      durationMs: 720000
++      bonusType: 11
++      enableMultiUse: true
++      extraDurationMs: 4000
++      enableNonCombatMove: true
++      9 {
++        1: 1
++        3: 1
++      }
++    }
++  }
++}
++template {
++  template_id: "PRELOADED_MEGA_STATUS_STRING_FEATURE_GATE"
++  data {
++    template_id: "PRELOADED_MEGA_STATUS_STRING_FEATURE_GATE"
++    featureGate {
++      status: 1
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
++  template_id: "SHIELD_BREAK_POWER_DISPLAY_FEATURE_GATE"
++  data {
++    template_id: "SHIELD_BREAK_POWER_DISPLAY_FEATURE_GATE"
++    featureGate {
++      status: 1
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
++  template_id: "UPDATED_PRELOADED_MEGA_ANIMATION_FEATURE_GATE"
++  data {
++    template_id: "UPDATED_PRELOADED_MEGA_ANIMATION_FEATURE_GATE"
++    featureGate {
++      status: 1
++      rolloutPercentage: 100
++    }
++  }
++}
++batch_id: 1788151452501
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -503491,7 +503490,7 @@
+@@ -503477,6 +503760,7 @@
+ experiment_id: 1250
+ experiment_id: 1699
+ experiment_id: 1816
++experiment_id: 2287
+ experiment_id: 2297
+ experiment_id: 2600
+ experiment_id: 2650
+@@ -503488,12 +503772,7 @@
+ experiment_id: 3216
+ experiment_id: 3219
  experiment_id: 3222
- experiment_id: 3236
- experiment_id: 4272
--experiment_id: 4273
-+experiment_id: 4274
- experiment_id: 4275
- experiment_id: 4276
- experiment_id: 4278
-@@ -503509,10 +503508,11 @@
- experiment_id: 7044
+-experiment_id: 3236
+-experiment_id: 4272
+-experiment_id: 4274
+-experiment_id: 4275
+-experiment_id: 4276
+-experiment_id: 4278
++experiment_id: 3237
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+@@ -503509,7 +503788,6 @@
  experiment_id: 7047
  experiment_id: 7100
-+experiment_id: 7102
-+experiment_id: 7103
+ experiment_id: 7102
+-experiment_id: 7103
  experiment_id: 8970
  experiment_id: 8971
  experiment_id: 8973
--experiment_id: 8986
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
+@@ -503519,7 +503797,13 @@
+ experiment_id: 9554
+ experiment_id: 20947
+ experiment_id: 60095
++experiment_id: 70581
+ experiment_id: 94432
++experiment_id: 96000
++experiment_id: 96001
++experiment_id: 96002
++experiment_id: 96003
++experiment_id: 96034
+ experiment_id: 98250
+ experiment_id: 99998
+ experiment_id: 173173
+@@ -503542,3 +503826,4 @@
+ experiment_id: 6600449
+ experiment_id: 6600451
+ experiment_id: 173173183
++experiment_id: 173173184
