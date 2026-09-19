@@ -1,114 +1,1028 @@
---- GAME_MASTER_old.txt	2026-09-12 17:06:12.909558880 +0200
-+++ GAME_MASTER.txt	2026-09-15 08:15:23.792290270 +0200
-@@ -32557,7 +32557,6 @@
-       itemsCount: 25
-       itemsUnlocked: ITEM_ULTRA_BALL
-       featuresUnlocked: FEATURE_MAX_BATTLE
--      featuresUnlocked: 19
-       clientOverrideDisplayOrder: true
-     }
-   }
-@@ -161300,6 +161299,7 @@
-       }
-       timePeriodCounters {
-         playerActivity {
-+          limit: 500
-         }
-       }
-       hideItemInInventory: true
-@@ -174792,15 +174792,6 @@
+--- GAME_MASTER_old.txt	2026-09-17 19:04:21.665988663 +0200
++++ GAME_MASTER.txt	2026-09-19 14:32:39.340584003 +0200
+@@ -36528,6 +36528,21 @@
    }
  }
  template {
--  template_id: "MEMORY_CLEANUP_CODE_GATE"
--  data {
--    template_id: "MEMORY_CLEANUP_CODE_GATE"
--    codeGateProto {
--      isEnabled: true
--    }
--  }
--}
--template {
-   template_id: "MEP_EGG_READ_MIGRATION_FEATURE_GATE"
++  template_id: "BADGE_EVENT_0243"
++  data {
++    template_id: "BADGE_EVENT_0243"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0243
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0253"
    data {
-     template_id: "MEP_EGG_READ_MIGRATION_FEATURE_GATE"
-@@ -486332,13 +486323,10 @@
-       sku: "bundle.cd2022.1"
-       category: IAP_CATEGORY_BUNDLE
-       sortOrder: 1
+     template_id: "BADGE_EVENT_0253"
+@@ -47588,7 +47603,7 @@
+       rvnVersion: 1
+       maxPlayersPerBreadDoughLobby: 100
+       maxRemotePlayersPerBreadDoughLobby: 100
+-      maxRemoteBreadBattlePassesAllowed: 10
++      maxRemoteBreadBattlePassesAllowed: 20
+       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
+       fetchProfileFromSocialEnabled: true
+       maxPlayersToPrepareBreadDoughLobby: 98
+@@ -86758,6 +86773,16 @@
+   }
+ }
+ template {
++  template_id: "COMBAT_VNEXT_INITIALIZE_BD_LAST_FEATURE_GATE"
++  data {
++    template_id: "COMBAT_VNEXT_INITIALIZE_BD_LAST_FEATURE_GATE"
++    featureGate {
++      status: 1
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
+   template_id: "CONTEST_SETTINGS"
+   data {
+     template_id: "CONTEST_SETTINGS"
+@@ -95987,6 +96012,24 @@
+   }
+ }
+ template {
++  template_id: "EVENT_PASS_SEPTEMBER3_EVENT_STORE_REDIRECT"
++  data {
++    template_id: "EVENT_PASS_SEPTEMBER3_EVENT_STORE_REDIRECT"
++    iapItemDisplay {
++      sku: "pgorelease.september3_2026_deluxe_event_pass_track_unlock_redirect"
++      sortOrder: 1
 +      hidden: true
-       sale: true
--      spriteId: "bundle.general4.small.1"
--      title: "bundle.general4.small.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2026-09-13T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1789343999000
-+      spriteId: "bundle.halloween.small.1"
-+      title: "bundle.halloween.small.1_title"
++      title: "season_pass_premium_track_title_harvest_festival_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-09-29T10:00:00"
++      skuDisableTime: "2025-10-07T20:00:00"
++      skuEnableTimeUtcMs: 1759140000000
++      skuDisableTimeUtcMs: 1759867200000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F3cd7734c_PGO-MCS_Harvest_Festival_2026_TICKET_v1-1024x512_nologo.png"
++    }
++  }
++}
++template {
+   template_id: "EVENT_PLANNER_POPULAR_RAID_RSVP_SETTINGS"
+   data {
+     template_id: "EVENT_PLANNER_POPULAR_RAID_RSVP_SETTINGS"
+@@ -168453,6 +168496,15 @@
+   }
+ }
+ template {
++  template_id: "IOS_KEYBOARD_APPEARANCE_FIX_ROLL_BACK"
++  data {
++    template_id: "IOS_KEYBOARD_APPEARANCE_FIX_ROLL_BACK"
++    rollBack {
++      rollbackPercentage: 100
++    }
++  }
++}
++template {
+   template_id: "IRIS_SOCIAL_SETTINGS"
+   data {
+     template_id: "IRIS_SOCIAL_SETTINGS"
+@@ -169256,7 +169308,7 @@
+       ignoreInventorySpace: true
+       itemCap: 999999
+       eventPassPoint {
+-        eventPassId: "EVENT_PASS_AMER2026_EVENT"
++        eventPassId: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT"
+       }
+       timePeriodCounters {
+         playerActivity {
+@@ -171075,7 +171127,7 @@
+         detailsLinkKey: "details_link_key_mega_staraptor_raid_day"
+         clientEventStartTimeUtcMs: 1789826400000
+         clientEventEndTimeUtcMs: 1789837200000
+-        27: "general1.ticket.5"
++        27: "general1.ticket.4"
+       }
+       nameOverride: "general1.ticket.5_MegaStaraptorRaidDay"
+       descriptionOverride: "item_event_ticket_gray_desc_MegaStaraptorRaidDay"
+@@ -171283,8 +171335,8 @@
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_03"
+     itemExpirationSettings {
+       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_03
+-      expirationTime: "2026-06-12T20:00:00"
+-      emergencyExpirationTime: "2026-06-13T10:00:00"
++      expirationTime: "2026-10-07T20:00:00"
++      emergencyExpirationTime: "2026-10-08T10:00:00"
      }
    }
  }
-@@ -486350,13 +486338,10 @@
-       sku: "bundle.cd2022.2"
-       category: IAP_CATEGORY_BUNDLE
+@@ -204800,12 +204852,22 @@
+   }
+ }
+ template {
++  template_id: "REGISTER_DEVICE_FEATURE_GATE"
++  data {
++    template_id: "REGISTER_DEVICE_FEATURE_GATE"
++    featureGate {
++      status: 1
++      rolloutPercentage: 30
++    }
++  }
++}
++template {
+   template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+   data {
+     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
+     squashSettings {
+       enabled: true
+-      dailySquashLimit: 10
++      dailySquashLimit: 20
+     }
+   }
+ }
+@@ -205099,6 +205161,42 @@
+   }
+ }
+ template {
++  template_id: "SEPTEMBER3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++  data {
++    template_id: "SEPTEMBER3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++    iapItemDisplay {
++      sku: "pgorelease.september3_2026_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_harvest_festival_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-09-29T10:00:00"
++      skuDisableTime: "2025-10-07T20:00:00"
++      skuEnableTimeUtcMs: 1759140000000
++      skuDisableTimeUtcMs: 1759867200000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F3cd7734c_PGO-MCS_Harvest_Festival_2026_TICKET_v1-1024x512_nologo.png"
++    }
++  }
++}
++template {
++  template_id: "SEPTEMBER3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++  data {
++    template_id: "SEPTEMBER3_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++    iapItemDisplay {
++      sku: "pgorelease.september3_2026_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_plus_six_ranks_title_harvest_festival_2026"
++      description: "event_pass_plus_points_6_ranks_description"
++      skuEnableTime: "2025-09-29T10:00:00"
++      skuDisableTime: "2025-10-07T20:00:00"
++      skuEnableTimeUtcMs: 1759140000000
++      skuDisableTimeUtcMs: 1759867200000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F3cd7734c_PGO-MCS_Harvest_Festival_2026_TICKET_v1-1024x512_nologo.png"
++    }
++  }
++}
++template {
+   template_id: "SETTINGS_RULES_ALLOW_ASUSASUS_I006D"
+   data {
+     template_id: "SETTINGS_RULES_ALLOW_ASUSASUS_I006D"
+@@ -488439,31 +488537,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 3000
++          count: 750
+         }
+       }
+     }
+@@ -488478,31 +488576,31 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       reward {
+         item {
+           stardust: true
+-          count: 6000
++          count: 1500
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -488518,7 +488616,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 530
+         }
+       }
+       reward {
+@@ -488536,7 +488634,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+     }
+@@ -488551,7 +488649,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+       reward {
+@@ -488569,7 +488667,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 8480
++          count: 2120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -488585,7 +488683,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2120
++          count: 530
+         }
+       }
+       reward {
+@@ -488603,7 +488701,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+     }
+@@ -488618,7 +488716,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4240
++          count: 1060
+         }
+       }
+       reward {
+@@ -488636,7 +488734,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 8480
++          count: 2120
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -488652,7 +488750,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2280
++          count: 570
+         }
+       }
+       reward {
+@@ -488670,7 +488768,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4560
++          count: 1140
+         }
+       }
+     }
+@@ -488685,7 +488783,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4560
++          count: 1140
+         }
+       }
+       reward {
+@@ -488703,7 +488801,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 9120
++          count: 2280
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -488719,7 +488817,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+       reward {
+@@ -488737,7 +488835,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+     }
+@@ -488752,7 +488850,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+       reward {
+@@ -488770,7 +488868,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 9600
++          count: 2400
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -488865,7 +488963,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2800
++          count: 700
+         }
+       }
+       reward {
+@@ -488883,7 +488981,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5600
++          count: 1400
+         }
+       }
+     }
+@@ -488898,7 +488996,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5600
++          count: 1400
+         }
+       }
+       reward {
+@@ -488916,7 +489014,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 11200
++          count: 2800
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -488932,7 +489030,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2920
++          count: 730
+         }
+       }
+       reward {
+@@ -488950,7 +489048,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5840
++          count: 1460
+         }
+       }
+     }
+@@ -488965,7 +489063,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5840
++          count: 1460
+         }
+       }
+       reward {
+@@ -488983,7 +489081,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 11680
++          count: 2920
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -488999,7 +489097,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3080
++          count: 770
+         }
+       }
+       reward {
+@@ -489017,7 +489115,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6160
++          count: 1540
+         }
+       }
+     }
+@@ -489032,7 +489130,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6160
++          count: 1540
+         }
+       }
+       reward {
+@@ -489050,7 +489148,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 12320
++          count: 3080
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489115,7 +489213,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1200
++          count: 300
+         }
+       }
+       reward {
+@@ -489133,7 +489231,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+     }
+@@ -489148,7 +489246,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2400
++          count: 600
+         }
+       }
+       reward {
+@@ -489166,7 +489264,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 4800
++          count: 1200
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489182,7 +489280,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3480
++          count: 870
+         }
+       }
+       reward {
+@@ -489200,7 +489298,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6960
++          count: 1740
+         }
+       }
+     }
+@@ -489215,7 +489313,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6960
++          count: 1740
+         }
+       }
+       reward {
+@@ -489233,7 +489331,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 13920
++          count: 3480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489249,7 +489347,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -489267,7 +489365,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -489282,7 +489380,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -489300,7 +489398,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489316,7 +489414,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -489334,7 +489432,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -489349,7 +489447,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -489367,7 +489465,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489383,7 +489481,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -489401,7 +489499,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -489416,7 +489514,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -489434,7 +489532,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489450,7 +489548,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3600
++          count: 900
+         }
+       }
+       reward {
+@@ -489468,7 +489566,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+     }
+@@ -489483,7 +489581,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7200
++          count: 1800
+         }
+       }
+       reward {
+@@ -489501,7 +489599,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 14400
++          count: 3600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489517,7 +489615,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 330
+         }
+       }
+       reward {
+@@ -489535,7 +489633,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+     }
+@@ -489550,7 +489648,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+       reward {
+@@ -489568,7 +489666,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5280
++          count: 1320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489584,7 +489682,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1320
++          count: 330
+         }
+       }
+       reward {
+@@ -489602,7 +489700,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+     }
+@@ -489617,7 +489715,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2640
++          count: 660
+         }
+       }
+       reward {
+@@ -489635,7 +489733,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5280
++          count: 1320
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489651,7 +489749,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1480
++          count: 370
+         }
+       }
+       reward {
+@@ -489669,7 +489767,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2960
++          count: 740
+         }
+       }
+     }
+@@ -489684,7 +489782,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 2960
++          count: 740
+         }
+       }
+       reward {
+@@ -489702,7 +489800,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 5920
++          count: 1480
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489767,7 +489865,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1600
++          count: 400
+         }
+       }
+       reward {
+@@ -489785,7 +489883,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3200
++          count: 800
+         }
+       }
+     }
+@@ -489800,7 +489898,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3200
++          count: 800
+         }
+       }
+       reward {
+@@ -489818,7 +489916,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6400
++          count: 1600
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489834,7 +489932,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 430
+         }
+       }
+       reward {
+@@ -489852,7 +489950,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+     }
+@@ -489867,7 +489965,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+       reward {
+@@ -489885,7 +489983,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6880
++          count: 1720
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489901,7 +489999,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1720
++          count: 430
+         }
+       }
+       reward {
+@@ -489919,7 +490017,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+     }
+@@ -489934,7 +490032,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3440
++          count: 860
+         }
+       }
+       reward {
+@@ -489952,7 +490050,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 6880
++          count: 1720
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -489968,7 +490066,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 1880
++          count: 470
+         }
+       }
+       reward {
+@@ -489986,7 +490084,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3760
++          count: 940
+         }
+       }
+     }
+@@ -490001,7 +490099,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 3760
++          count: 940
+         }
+       }
+       reward {
+@@ -490019,7 +490117,7 @@
+       reward {
+         item {
+           stardust: true
+-          count: 7520
++          count: 1880
+         }
+       }
+       rewardTrack: PREMIUM
+@@ -497804,7 +497902,7 @@
+       sku: "pgorelease.general1.ticket.5"
+       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
        sortOrder: 2
-+      hidden: true
-       sale: true
--      spriteId: "bundle.general1.medium.1"
--      title: "bundle.general1.medium.1_title"
--      skuEnableTime: "2022-10-13T12:00:00"
--      skuDisableTime: "2026-09-13T23:59:59"
--      skuEnableTimeUtcMs: 1665662400000
--      skuDisableTimeUtcMs: 1789343999000
-+      spriteId: "bundle.halloween.adventure.1"
-+      title: "bundle.halloween.adventure.1_title"
+-      spriteId: "general1.ticket.5"
++      spriteId: "general1.ticket.4"
+       title: "general1.ticket.5_MegaStaraptorRaidDay"
+       skuEnableTime: "2019-03-14T08:00:00"
+       skuDisableTime: "2026-09-19T17:00:00"
+@@ -504465,13 +504563,12 @@
      }
    }
  }
-@@ -506647,7 +506632,7 @@
-     }
-   }
- }
--batch_id: 1789198229277
-+batch_id: 1789430474577
+-batch_id: 1789662296605
++batch_id: 1789790403222
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -506674,7 +506659,6 @@
- experiment_id: 2297
- experiment_id: 2600
- experiment_id: 2650
--experiment_id: 3025
- experiment_id: 3032
- experiment_id: 3033
- experiment_id: 3063
-@@ -506683,12 +506667,8 @@
- experiment_id: 3106
- experiment_id: 3108
+ experiment_id: 170
+ experiment_id: 173
+-experiment_id: 191
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 351
+@@ -504503,17 +504600,20 @@
  experiment_id: 3120
--experiment_id: 3238
--experiment_id: 4280
--experiment_id: 4282
-+experiment_id: 3123
- experiment_id: 4283
--experiment_id: 4285
--experiment_id: 4286
- experiment_id: 4289
- experiment_id: 4290
- experiment_id: 4291
-@@ -506708,7 +506688,6 @@
- experiment_id: 7003
- experiment_id: 7012
- experiment_id: 7047
--experiment_id: 8706
- experiment_id: 8830
- experiment_id: 8926
- experiment_id: 8999
-@@ -506740,6 +506719,4 @@
- experiment_id: 6600434
- experiment_id: 6600435
- experiment_id: 6600436
--experiment_id: 6600449
--experiment_id: 6600451
- experiment_id: 173173183
+ experiment_id: 3123
+ experiment_id: 3534
+-experiment_id: 3536
++experiment_id: 3535
+ experiment_id: 3537
+ experiment_id: 3540
+ experiment_id: 3545
+ experiment_id: 4523
++experiment_id: 4974
+ experiment_id: 4978
++experiment_id: 4979
++experiment_id: 4980
+ experiment_id: 4998
+ experiment_id: 5160
+ experiment_id: 5162
+ experiment_id: 5163
+-experiment_id: 5203
++experiment_id: 5205
+ experiment_id: 5501
+ experiment_id: 5502
+ experiment_id: 5506
