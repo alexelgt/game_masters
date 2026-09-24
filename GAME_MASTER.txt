@@ -47603,7 +47603,7 @@ template {
       rvnVersion: 1
       maxPlayersPerBreadDoughLobby: 100
       maxRemotePlayersPerBreadDoughLobby: 100
-      maxRemoteBreadBattlePassesAllowed: 20
+      maxRemoteBreadBattlePassesAllowed: 10
       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
       fetchProfileFromSocialEnabled: true
       maxPlayersToPrepareBreadDoughLobby: 98
@@ -154375,6 +154375,10 @@ template {
         form: PIKACHU_K_2026_A_01
         isCostume: true
       }
+      forms {
+        form: PIKACHU_GLASS_HELMET_2026
+        isCostume: true
+      }
     }
   }
 }
@@ -169330,7 +169334,7 @@ template {
       ignoreInventorySpace: true
       itemCap: 999999
       eventPassPoint {
-        eventPassId: "EVENT_PASS_STEELEDRESOLVE2026_EVENT"
+        eventPassId: "EVENT_PASS_FALLMARATHON2026_EVENT"
       }
       timePeriodCounters {
         playerActivity {
@@ -169510,11 +169514,11 @@ template {
       ignoreInventorySpace: true
       itemCap: 999999
       eventPassPoint {
-        eventPassId: "EVENT_PASS_JULY2026_SEASON"
+        eventPassId: "EVENT_PASS_OCTOBER2026_SEASON"
       }
       timePeriodCounters {
         playerActivity {
-          limit: 300
+          limit: 250
         }
       }
       hideItemInInventory: true
@@ -171335,8 +171339,8 @@ template {
     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_03"
     itemExpirationSettings {
       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_03
-      expirationTime: "2026-10-07T20:00:00"
-      emergencyExpirationTime: "2026-10-08T10:00:00"
+      expirationTime: "2026-10-09T20:00:00"
+      emergencyExpirationTime: "2026-10-10T10:00:00"
     }
   }
 }
@@ -171346,8 +171350,8 @@ template {
     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_LIVE_OPS_04"
     itemExpirationSettings {
       item: ITEM_EVENT_PASS_POINT_LIVE_OPS_04
-      expirationTime: "2026-05-08T20:00:00"
-      emergencyExpirationTime: "2026-05-09T10:00:00"
+      expirationTime: "2026-10-23T20:00:00"
+      emergencyExpirationTime: "2026-10-24T10:00:00"
     }
   }
 }
@@ -171433,8 +171437,8 @@ template {
     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_MONTHLY_02"
     itemExpirationSettings {
       item: ITEM_EVENT_PASS_POINT_MONTHLY_02
-      expirationTime: "2026-08-06T10:00:00"
-      emergencyExpirationTime: "2026-08-08T10:00:00"
+      expirationTime: "2026-11-05T10:00:00"
+      emergencyExpirationTime: "2026-11-07T10:00:00"
     }
   }
 }
@@ -171466,7 +171470,7 @@ template {
     template_id: "ITEM_EXPIRATION_ITEM_LUCKY_FRIEND_APPLICATOR"
     itemExpirationSettings {
       item: ITEM_LUCKY_FRIEND_APPLICATOR
-      expirationTime: "2026-09-20T23:59:00"
+      expirationTime: "2026-09-20T23:59:59"
       emergencyExpirationTime: "2026-09-21T10:00:00"
     }
   }
@@ -182826,7 +182830,7 @@ template {
   data {
     template_id: "MEP_EGG_WRITE_MIGRATION_FEATURE_GATE"
     featureGate {
-      status: 11
+      status: 12
       rolloutPercentage: 100
     }
   }
@@ -200437,7 +200441,6 @@ template {
     onboarding_settings {
       disableInitialArPrompt: true
       arPromptPlayerLevel: 55
-      adventureSyncPromptStep: 1
     }
   }
 }
@@ -204857,7 +204860,7 @@ template {
     template_id: "REGISTER_DEVICE_FEATURE_GATE"
     featureGate {
       status: 1
-      rolloutPercentage: 30
+      rolloutPercentage: 60
     }
   }
 }
@@ -204867,7 +204870,7 @@ template {
     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
     squashSettings {
       enabled: true
-      dailySquashLimit: 20
+      dailySquashLimit: 10
     }
   }
 }
@@ -209111,11 +209114,15 @@ template {
     softSfidaSettings {
       enable: true
       minPlayerLevel: 20
-      catchActionDelayMs: 8000
-      spinActionDelayMs: 8000
+      catchActionDelayMs: 3000
+      spinActionDelayMs: 3000
       reservedGeofenceCount: 4
       geofenceSizeM: 50
+      3: 1
       5: 1
+      22: 0x40e00000
+      25: 0x40e00000
+      28: 18446744073471124441
       29: 1
       30: 1
       31: 15
@@ -363371,7 +363378,7 @@ template {
     pokemonFamily {
       familyId: FAMILY_STARLY
       candyPerXlCandy: 100
-      megaEvolvablePokemonIds: STARAPTOR
+      megaEvolvablePokemonId: STARAPTOR
     }
   }
 }
@@ -487073,6 +487080,24 @@ template {
         preResponseInputBlockDurationMs: 500
         10: 250
       }
+      4 {
+        1: 2000
+        2: 12
+        3: 120
+        4: 21
+        7: 1
+        8: 500
+        10: 250
+      }
+      5 {
+        1: 2000
+        2: 12
+        3: 120
+        4: 21
+        7: 1
+        8: 500
+        10: 250
+      }
     }
   }
 }
@@ -488522,9 +488547,9 @@ template {
   data {
     template_id: "VS_SEEKER_CLIENT_SETTINGS"
     vs_seeker_client_settings {
-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_MEGAS"
-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_WILLPOWER"
+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
     }
   }
 }
@@ -488537,31 +488562,31 @@ template {
       reward {
         item {
           stardust: true
-          count: 750
+          count: 3000
         }
       }
       reward {
         item {
           stardust: true
-          count: 750
+          count: 3000
         }
       }
       reward {
         item {
           stardust: true
-          count: 750
+          count: 3000
         }
       }
       reward {
         item {
           stardust: true
-          count: 750
+          count: 3000
         }
       }
       reward {
         item {
           stardust: true
-          count: 750
+          count: 3000
         }
       }
     }
@@ -488576,31 +488601,31 @@ template {
       reward {
         item {
           stardust: true
-          count: 1500
+          count: 6000
         }
       }
       reward {
         item {
           stardust: true
-          count: 1500
+          count: 6000
         }
       }
       reward {
         item {
           stardust: true
-          count: 1500
+          count: 6000
         }
       }
       reward {
         item {
           stardust: true
-          count: 1500
+          count: 6000
         }
       }
       reward {
         item {
           stardust: true
-          count: 1500
+          count: 6000
         }
       }
       rewardTrack: PREMIUM
@@ -488616,7 +488641,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 530
+          count: 2120
         }
       }
       reward {
@@ -488634,7 +488659,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1060
+          count: 4240
         }
       }
     }
@@ -488649,7 +488674,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1060
+          count: 4240
         }
       }
       reward {
@@ -488667,7 +488692,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2120
+          count: 8480
         }
       }
       rewardTrack: PREMIUM
@@ -488683,7 +488708,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 530
+          count: 2120
         }
       }
       reward {
@@ -488701,7 +488726,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1060
+          count: 4240
         }
       }
     }
@@ -488716,7 +488741,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1060
+          count: 4240
         }
       }
       reward {
@@ -488734,7 +488759,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2120
+          count: 8480
         }
       }
       rewardTrack: PREMIUM
@@ -488750,7 +488775,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 570
+          count: 2280
         }
       }
       reward {
@@ -488768,7 +488793,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1140
+          count: 4560
         }
       }
     }
@@ -488783,7 +488808,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1140
+          count: 4560
         }
       }
       reward {
@@ -488801,7 +488826,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2280
+          count: 9120
         }
       }
       rewardTrack: PREMIUM
@@ -488817,7 +488842,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 600
+          count: 2400
         }
       }
       reward {
@@ -488835,7 +488860,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1200
+          count: 4800
         }
       }
     }
@@ -488850,7 +488875,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1200
+          count: 4800
         }
       }
       reward {
@@ -488868,7 +488893,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2400
+          count: 9600
         }
       }
       rewardTrack: PREMIUM
@@ -488963,7 +488988,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 700
+          count: 2800
         }
       }
       reward {
@@ -488981,7 +489006,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1400
+          count: 5600
         }
       }
     }
@@ -488996,7 +489021,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1400
+          count: 5600
         }
       }
       reward {
@@ -489014,7 +489039,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2800
+          count: 11200
         }
       }
       rewardTrack: PREMIUM
@@ -489030,7 +489055,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 730
+          count: 2920
         }
       }
       reward {
@@ -489048,7 +489073,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1460
+          count: 5840
         }
       }
     }
@@ -489063,7 +489088,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1460
+          count: 5840
         }
       }
       reward {
@@ -489081,7 +489106,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 2920
+          count: 11680
         }
       }
       rewardTrack: PREMIUM
@@ -489097,7 +489122,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 770
+          count: 3080
         }
       }
       reward {
@@ -489115,7 +489140,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1540
+          count: 6160
         }
       }
     }
@@ -489130,7 +489155,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1540
+          count: 6160
         }
       }
       reward {
@@ -489148,7 +489173,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3080
+          count: 12320
         }
       }
       rewardTrack: PREMIUM
@@ -489213,7 +489238,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 300
+          count: 1200
         }
       }
       reward {
@@ -489231,7 +489256,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 600
+          count: 2400
         }
       }
     }
@@ -489246,7 +489271,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 600
+          count: 2400
         }
       }
       reward {
@@ -489264,7 +489289,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1200
+          count: 4800
         }
       }
       rewardTrack: PREMIUM
@@ -489280,7 +489305,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 870
+          count: 3480
         }
       }
       reward {
@@ -489298,7 +489323,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1740
+          count: 6960
         }
       }
     }
@@ -489313,7 +489338,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1740
+          count: 6960
         }
       }
       reward {
@@ -489331,7 +489356,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3480
+          count: 13920
         }
       }
       rewardTrack: PREMIUM
@@ -489347,7 +489372,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 900
+          count: 3600
         }
       }
       reward {
@@ -489365,7 +489390,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1800
+          count: 7200
         }
       }
     }
@@ -489380,7 +489405,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1800
+          count: 7200
         }
       }
       reward {
@@ -489398,7 +489423,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3600
+          count: 14400
         }
       }
       rewardTrack: PREMIUM
@@ -489414,7 +489439,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 900
+          count: 3600
         }
       }
       reward {
@@ -489432,7 +489457,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1800
+          count: 7200
         }
       }
     }
@@ -489447,7 +489472,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1800
+          count: 7200
         }
       }
       reward {
@@ -489465,7 +489490,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3600
+          count: 14400
         }
       }
       rewardTrack: PREMIUM
@@ -489481,7 +489506,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 900
+          count: 3600
         }
       }
       reward {
@@ -489499,7 +489524,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1800
+          count: 7200
         }
       }
     }
@@ -489514,7 +489539,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1800
+          count: 7200
         }
       }
       reward {
@@ -489532,7 +489557,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3600
+          count: 14400
         }
       }
       rewardTrack: PREMIUM
@@ -489548,7 +489573,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 900
+          count: 3600
         }
       }
       reward {
@@ -489566,7 +489591,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1800
+          count: 7200
         }
       }
     }
@@ -489581,7 +489606,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1800
+          count: 7200
         }
       }
       reward {
@@ -489599,7 +489624,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 3600
+          count: 14400
         }
       }
       rewardTrack: PREMIUM
@@ -489615,7 +489640,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 330
+          count: 1320
         }
       }
       reward {
@@ -489633,7 +489658,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 660
+          count: 2640
         }
       }
     }
@@ -489648,7 +489673,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 660
+          count: 2640
         }
       }
       reward {
@@ -489666,7 +489691,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1320
+          count: 5280
         }
       }
       rewardTrack: PREMIUM
@@ -489682,7 +489707,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 330
+          count: 1320
         }
       }
       reward {
@@ -489700,7 +489725,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 660
+          count: 2640
         }
       }
     }
@@ -489715,7 +489740,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 660
+          count: 2640
         }
       }
       reward {
@@ -489733,7 +489758,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1320
+          count: 5280
         }
       }
       rewardTrack: PREMIUM
@@ -489749,7 +489774,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 370
+          count: 1480
         }
       }
       reward {
@@ -489767,7 +489792,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 740
+          count: 2960
         }
       }
     }
@@ -489782,7 +489807,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 740
+          count: 2960
         }
       }
       reward {
@@ -489800,7 +489825,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1480
+          count: 5920
         }
       }
       rewardTrack: PREMIUM
@@ -489865,7 +489890,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 400
+          count: 1600
         }
       }
       reward {
@@ -489883,7 +489908,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 800
+          count: 3200
         }
       }
     }
@@ -489898,7 +489923,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 800
+          count: 3200
         }
       }
       reward {
@@ -489916,7 +489941,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1600
+          count: 6400
         }
       }
       rewardTrack: PREMIUM
@@ -489932,7 +489957,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 430
+          count: 1720
         }
       }
       reward {
@@ -489950,7 +489975,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 860
+          count: 3440
         }
       }
     }
@@ -489965,7 +489990,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 860
+          count: 3440
         }
       }
       reward {
@@ -489983,7 +490008,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1720
+          count: 6880
         }
       }
       rewardTrack: PREMIUM
@@ -489999,7 +490024,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 430
+          count: 1720
         }
       }
       reward {
@@ -490017,7 +490042,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 860
+          count: 3440
         }
       }
     }
@@ -490032,7 +490057,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 860
+          count: 3440
         }
       }
       reward {
@@ -490050,7 +490075,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1720
+          count: 6880
         }
       }
       rewardTrack: PREMIUM
@@ -490066,7 +490091,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 470
+          count: 1880
         }
       }
       reward {
@@ -490084,7 +490109,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 940
+          count: 3760
         }
       }
     }
@@ -490099,7 +490124,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 940
+          count: 3760
         }
       }
       reward {
@@ -490117,7 +490142,7 @@ template {
       reward {
         item {
           stardust: true
-          count: 1880
+          count: 7520
         }
       }
       rewardTrack: PREMIUM
@@ -494245,14 +494270,15 @@ template {
       sku: "battlepassticket.1"
       category: IAP_CATEGORY_FREE
       sortOrder: 1
+      hidden: true
       spriteId: "battlepassticket.1"
       title: "iap_battle_pass_ticket_name"
       description: "battle_pass_ticket_IAP_description"
       skuEnableTime: "2023-02-27T20:00:00"
-      skuDisableTime: "2026-09-22T13:00:00"
+      skuDisableTime: "2024-06-15T13:00:00"
       skuEnableTimeUtcMs: 1677528000000
-      skuDisableTimeUtcMs: 1790082000000
-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F035aa0ae_PGO-MCS_S24_GBL_v1-1024x576.jpg"
+      skuDisableTimeUtcMs: 1718456400000
+      imageUrl: "https://storage.googleapis.com/prod-public-images/GBL_SharedSkies_2024.jpeg"
     }
   }
 }
@@ -496655,14 +496681,9 @@ template {
       sku: "bundle.mheracrossraidday2024.1"
       category: IAP_CATEGORY_BUNDLE
       sortOrder: 1
+      hidden: true
       spriteId: "bundle.general.premiumbox.small.1"
       title: "raiding_box"
-      skuEnableTime: "2022-10-13T12:00:00"
-      skuDisableTime: "2026-09-20T17:00:00"
-      skuEnableTimeUtcMs: 1665662400000
-      skuDisableTimeUtcMs: 1789923600000
-      showDiscountTag: true
-      showStrikethroughPrice: true
     }
   }
 }
@@ -497902,13 +497923,16 @@ template {
       sku: "pgorelease.general1.ticket.5"
       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sortOrder: 2
-      spriteId: "general1.ticket.4"
-      title: "general1.ticket.5_MegaStaraptorRaidDay"
+      hidden: true
+      spriteId: "general1.ticket.5"
+      title: "general1.ticket.5.ENTEI_SHADOW_RAID_DAY"
       skuEnableTime: "2019-03-14T08:00:00"
-      skuDisableTime: "2026-09-19T17:00:00"
+      skuDisableTime: "2026-05-02T17:00:00"
       skuEnableTimeUtcMs: 1552550400000
-      skuDisableTimeUtcMs: 1789837200000
-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fc397eb56_PGO-MCS_Staraptor_Super_Mega_Raid_Day_v1-1024x576.jpg"
+      skuDisableTimeUtcMs: 1777741200000
+      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fpgo-entei-shadow-raid-day-2026-nologo.jpg"
+      webstoreSkuId: "web-shadow-entei-raid-box-ultra"
+      webstoreSkuPriceE6: 4990000
       useEnvironmentPrefix: true
     }
   }
@@ -497943,12 +497967,12 @@ template {
       sortOrder: 2
       hidden: true
       spriteId: "general1.ticket.2"
-      title: "general1.ticket_CDC_Gible26_title"
+      title: "general1.ticket_CD_Zorua26_title"
       skuEnableTime: "2019-03-14T08:00:00"
-      skuDisableTime: "2026-09-12T17:00:00"
+      skuDisableTime: "2026-10-10T17:00:00"
       skuEnableTimeUtcMs: 1552550400000
-      skuDisableTimeUtcMs: 1789232400000
-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fdaa6a9dd_PGO_MCS_CD_Classic_KeyArt_Gible_v1-1024x576.jpg"
+      skuDisableTimeUtcMs: 1791651600000
+      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7278ea4f_PGO_MCS_CD_KeyArt_Zorua_v3-1024x576-nologo.jpg"
       useEnvironmentPrefix: true
     }
   }
@@ -504563,12 +504587,462 @@ template {
     }
   }
 }
-batch_id: 1789790403222
+template {
+  template_id: "BADGE_EVENT_0237"
+  data {
+    template_id: "BADGE_EVENT_0237"
+    badgeSettings {
+      badgeType: BADGE_EVENT_0237
+      badgeRank: 2
+      targets: 100
+      eventBadge: true
+      eventBadgeSettings {
+        obEventBadgeSettingsNumber6: 1
+      }
+    }
+  }
+}
+template {
+  template_id: "DISABLE_LEGACY_NEARBY_POKEMON_FEATURE_GATE"
+  data {
+    template_id: "DISABLE_LEGACY_NEARBY_POKEMON_FEATURE_GATE"
+    featureGate {
+      status: 1
+      rolloutPercentage: 100
+    }
+  }
+}
+template {
+  template_id: "ENABLE_NEARBY_POKEMON_SNAPSHOT_FEATURE_GATE"
+  data {
+    template_id: "ENABLE_NEARBY_POKEMON_SNAPSHOT_FEATURE_GATE"
+    featureGate {
+      status: 1
+      rolloutPercentage: 100
+    }
+  }
+}
+template {
+  template_id: "EXTENDED_V0025_PIKACHU_GLASS_HELMET_2026"
+  data {
+    template_id: "EXTENDED_V0025_PIKACHU_GLASS_HELMET_2026"
+    pokemonExtendedSettings {
+      uniqueId: PIKACHU
+      form: PIKACHU_GLASS_HELMET_2026
+      sizeSettings {
+        xxsLowerBound: 0.196
+        xsLowerBound: 0.2
+        mLowerBound: 0.3
+        mUpperBound: 0.5
+        xlUpperBound: 0.6
+        xxlUpperBound: 0.7
+      }
+      breadOverrides {
+        breadMode: BREAD_MODE
+        maxEncounterVisualSettings {
+          scale: 31
+          cameraDistance: 27.5
+          maxReticleSize: 14
+        }
+        maxBattleVisualSettings {
+          scale: 62
+        }
+        maxStationVisualSettings {
+          scale: 4.22
+        }
+      }
+      breadOverrides {
+        breadMode: BREAD_DOUGH_MODE
+        averageHeightM: 21
+        camera {
+          cylinderRadiusM: 1.3
+          cylinderHeightM: 1.1
+        }
+        modelScaleV2: 0.86
+        modelHeight: 2.57
+        catchOverrideSettings {
+          collisionRadiusM: 0.25
+          collisionHeadRadiusM: 0.25
+        }
+        maxEncounterVisualSettings {
+          scale: 10.5
+          cameraDistance: 32.5
+          maxReticleSize: 14
+        }
+        maxBattleVisualSettings {
+          scale: 20
+          xOffset: 3
+        }
+        maxBattleTrainerVisualSettings {
+          xOffset: -5
+          yOffset: -5
+        }
+        maxStationVisualSettings {
+          scale: 1.25
+        }
+      }
+    }
+  }
+}
+template {
+  template_id: "GMO_WILD_POKEMON_S2_LOCATION_FEATURE_GATE"
+  data {
+    template_id: "GMO_WILD_POKEMON_S2_LOCATION_FEATURE_GATE"
+    featureGate {
+      status: 1
+      rolloutPercentage: 100
+    }
+  }
+}
+template {
+  template_id: "GMO_WILD_POKEMON_S2_LOCATION_SERVER_FEATURE_GATE"
+  data {
+    template_id: "GMO_WILD_POKEMON_S2_LOCATION_SERVER_FEATURE_GATE"
+    featureGate {
+      status: 1
+      rolloutPercentage: 100
+    }
+  }
+}
+template {
+  template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY"
+  data {
+    template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY"
+    itemSettings {
+      itemId: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY
+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+      globalEventTicket {
+        eventStartTime: "2026-10-10T14:00:00"
+        eventEndTime: "2026-10-10T17:00:00"
+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Zorua26"
+        giftable: true
+        giftItem: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT
+        eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7278ea4f_PGO_MCS_CD_KeyArt_Zorua_v3-1024x576-nologo.jpg"
+        displayV2Enabled: true
+        backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7278ea4f_PGO_MCS_CD_KeyArt_Zorua_v3-1024x576-nologo.jpg"
+        eventDatetimeRangeKey: "event_datetime_range_key_CD_Zorua26"
+        textRewardsKey: "text_rewards_key_CD_Zorua26"
+        iconRewards {
+          type: POKEMON_ENCOUNTER
+          pokemonEncounter {
+            pokemonId: ZOROARK
+            pokemonDisplay {
+              form: ZOROARK_NORMAL
+            }
+          }
+        }
+        iconRewards {
+          type: ITEM
+          item {
+            item: ITEM_LUCKY_EGG
+            amount: 1
+          }
+        }
+        iconRewards {
+          type: ITEM
+          item {
+            item: ITEM_XL_RARE_CANDY
+            amount: 1
+          }
+        }
+        detailsLinkKey: "details_link_key"
+        clientEventStartTimeUtcMs: 1791640800000
+        clientEventEndTimeUtcMs: 1791651600000
+        27: "general2.ticket.3"
+      }
+      nameOverride: "general1.ticket_CD_Zorua26_title"
+      descriptionOverride: "item_event_ticket_pink_details_CD_Zorua26"
+    }
+  }
+}
+template {
+  template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT"
+  data {
+    template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT"
+    itemSettings {
+      itemId: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT
+      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+      globalEventTicket {
+        eventStartTime: "2026-10-10T14:00:00"
+        eventEndTime: "2026-10-10T17:00:00"
+        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Zorua26"
+        ticketItem: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY
+        eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7278ea4f_PGO_MCS_CD_KeyArt_Zorua_v3-1024x576-nologo.jpg"
+        clientEventStartTimeUtcMs: 1791640800000
+        clientEventEndTimeUtcMs: 1791651600000
+        27: "general2.ticket.3"
+      }
+      ignoreInventorySpace: true
+      nameOverride: "general1.ticket_CD_Zorua26_title"
+      descriptionOverride: "item_event_ticket_pink_details_CD_Zorua26"
+    }
+  }
+}
+template {
+  template_id: "QUICK_INVITE_SETTINGS_DMAX"
+  data {
+    template_id: "QUICK_INVITE_SETTINGS_DMAX"
+    quickInviteSettings {
+      enabled: true
+      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+    }
+  }
+}
+template {
+  template_id: "QUICK_INVITE_SETTINGS_GMAX"
+  data {
+    template_id: "QUICK_INVITE_SETTINGS_GMAX"
+    quickInviteSettings {
+      enabled: true
+      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+    }
+  }
+}
+template {
+  template_id: "QUICK_INVITE_SETTINGS_GMAX_RSVP"
+  data {
+    template_id: "QUICK_INVITE_SETTINGS_GMAX_RSVP"
+    quickInviteSettings {
+      enabled: true
+      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+    }
+  }
+}
+template {
+  template_id: "QUICK_INVITE_SETTINGS_RAID_RSVP"
+  data {
+    template_id: "QUICK_INVITE_SETTINGS_RAID_RSVP"
+    quickInviteSettings {
+      enabled: true
+      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+    }
+  }
+}
+template {
+  template_id: "QUICK_INVITE_SETTINGS_WEEKLY_CHALLENGE"
+  data {
+    template_id: "QUICK_INVITE_SETTINGS_WEEKLY_CHALLENGE"
+    quickInviteSettings {
+      enabled: true
+      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+    }
+  }
+}
+template {
+  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
+  data {
+    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
+    genderSettings {
+      pokemon: PIKACHU
+      gender {
+        malePercent: 1
+      }
+    }
+  }
+}
+template {
+  template_id: "V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
+  data {
+    template_id: "V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
+    pokemonSettings {
+      pokemonId: PIKACHU
+      modelScale: 1.48
+      type: POKEMON_TYPE_ELECTRIC
+      camera {
+        diskRadiusM: 0.555
+        cylinderRadiusM: 0.37
+        cylinderHeightM: 0.5
+        shoulderModeScale: 0.5
+      }
+      encounter {
+        collisionRadiusM: 0.16
+        collisionHeightM: 0.16
+        collisionHeadRadiusM: 0.13
+        movementType: MOVEMENT_JUMP
+        movementTimerS: 10
+        jumpTimeS: 1
+        attackTimerS: 29
+        attackProbability: 0.1
+        dodgeProbability: 0.15
+        dodgeDurationS: 1
+        dodgeDistance: 1
+        cameraDistance: 2.775
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+      }
+      stats {
+        baseStamina: 111
+        baseAttack: 112
+        baseDefense: 96
+      }
+      quickMoves: THUNDER_SHOCK_FAST
+      quickMoves: QUICK_ATTACK_FAST
+      cinematicMoves: DISCHARGE
+      cinematicMoves: THUNDERBOLT
+      cinematicMoves: WILD_CHARGE
+      animationTime: 1.8333
+      animationTime: 0.6667
+      animationTime: 1.6
+      animationTime: 1.5667
+      animationTime: 0
+      animationTime: 1.8
+      animationTime: 1.1333
+      animationTime: 1.06666696
+      evolutionIds: RAICHU
+      evolutionPips: 1
+      pokedexHeightM: 0.4
+      pokedexWeightKg: 6
+      parentPokemonId: PICHU
+      heightStdDev: 0.05
+      weightStdDev: 0.75
+      familyId: FAMILY_PIKACHU
+      candyToEvolve: 50
+      kmBuddyDistance: 1
+      buddy_size: BUDDY_SHOULDER
+      modelHeight: 0.4
+      modelScaleV2: 1.1
+      form: PIKACHU_GLASS_HELMET_2026
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyScale: 11
+      third_move {
+        stardustToUnlock: 10000
+        candyToUnlock: 25
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 1
+      eliteQuickMove: PRESENT_FAST
+      eliteCinematicMove: SURF
+      eliteCinematicMove: THUNDER
+      buddyWalkedMegaEnergyAwards {
+        megaPokemonId: RAICHU
+        megaEnergyAwardAmount: 5
+        tempEvoId: TEMP_EVOLUTION_MEGA_X
+      }
+      buddyWalkedMegaEnergyAwards {
+        megaPokemonId: RAICHU
+        megaEnergyAwardAmount: 5
+        tempEvoId: TEMP_EVOLUTION_MEGA_Y
+      }
+      disableTransferToPokemonHome: true
+      ibfc {
+      }
+      breadTierGroup: GROUP_1
+    }
+  }
+}
+template {
+  template_id: "BADGE_EVENT_0244"
+  data {
+    template_id: "BADGE_EVENT_0244"
+    badgeSettings {
+      badgeType: BADGE_EVENT_0244
+      badgeRank: 2
+      targets: 100
+      eventBadge: true
+      eventBadgeSettings {
+        obEventBadgeSettingsNumber6: 1
+      }
+    }
+  }
+}
+template {
+  template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
+  data {
+    template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
+    iapItemDisplay {
+      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
+      sortOrder: 1
+      hidden: true
+      title: "season_pass_premium_track_title_fall_marathon_2026"
+      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+      skuEnableTime: "2025-10-13T10:00:00"
+      skuDisableTime: "2025-10-21T20:00:00"
+      skuEnableTimeUtcMs: 1760349600000
+      skuDisableTimeUtcMs: 1761076800000
+      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+    }
+  }
+}
+template {
+  template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
+  data {
+    template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
+    iapItemDisplay {
+      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
+      sortOrder: 1
+      hidden: true
+      title: "season_pass_premium_track_plus_six_ranks_title_fall_marathon_2026"
+      description: "event_pass_plus_points_6_ranks_description"
+      skuEnableTime: "2025-10-13T10:00:00"
+      skuDisableTime: "2025-10-21T20:00:00"
+      skuEnableTimeUtcMs: 1760349600000
+      skuDisableTimeUtcMs: 1761076800000
+      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+    }
+  }
+}
+template {
+  template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_REDIRECT"
+  data {
+    template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_REDIRECT"
+    iapItemDisplay {
+      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_redirect"
+      sortOrder: 1
+      hidden: true
+      title: "season_pass_premium_track_title_fall_marathon_2026"
+      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+      skuEnableTime: "2025-10-13T10:00:00"
+      skuDisableTime: "2025-10-21T20:00:00"
+      skuEnableTimeUtcMs: 1760349600000
+      skuDisableTimeUtcMs: 1761076800000
+      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+    }
+  }
+}
+template {
+  template_id: "SOFT_SFIDA_FOREGROUND_DESCRIPTION_TEXT_CODE_GATE"
+  data {
+    template_id: "SOFT_SFIDA_FOREGROUND_DESCRIPTION_TEXT_CODE_GATE"
+    codeGateProto {
+      isEnabled: true
+    }
+  }
+}
+template {
+  template_id: "general2.ticket.4"
+  data {
+    template_id: "general2.ticket.4"
+    iapItemDisplay {
+      sku: "pgorelease.general2.ticket.4"
+      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+      sortOrder: 2
+      spriteId: "general2.ticket.4"
+      title: "general2.ticket4.catch_mastery_Phantump"
+      skuEnableTime: "2019-03-14T08:00:00"
+      skuDisableTime: "2026-09-26T20:00:00"
+      skuEnableTimeUtcMs: 1552550400000
+      skuDisableTimeUtcMs: 1790452800000
+      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fe4d25391_PGO-MCS_Phantump_Catch_Mastery_v1-1024x576.jpg"
+      useEnvironmentPrefix: true
+    }
+  }
+}
+batch_id: 1790233307107
 experiment_id: 11
 experiment_id: 21
 experiment_id: 101
 experiment_id: 170
-experiment_id: 173
+experiment_id: 174
+experiment_id: 192
 experiment_id: 300
 experiment_id: 320
 experiment_id: 351
@@ -504586,7 +505060,6 @@ experiment_id: 1205
 experiment_id: 1250
 experiment_id: 1699
 experiment_id: 1816
-experiment_id: 2219
 experiment_id: 2297
 experiment_id: 2600
 experiment_id: 2650
@@ -504596,24 +505069,19 @@ experiment_id: 3063
 experiment_id: 3104
 experiment_id: 3105
 experiment_id: 3106
-experiment_id: 3109
 experiment_id: 3120
-experiment_id: 3123
-experiment_id: 3534
-experiment_id: 3535
+experiment_id: 3124
+experiment_id: 3163
 experiment_id: 3537
-experiment_id: 3540
-experiment_id: 3545
 experiment_id: 4523
-experiment_id: 4974
-experiment_id: 4978
-experiment_id: 4979
-experiment_id: 4980
+experiment_id: 4742
+experiment_id: 4772
+experiment_id: 4784
+experiment_id: 4819
 experiment_id: 4998
 experiment_id: 5160
 experiment_id: 5162
 experiment_id: 5163
-experiment_id: 5205
 experiment_id: 5501
 experiment_id: 5502
 experiment_id: 5506
@@ -504624,10 +505092,8 @@ experiment_id: 6075
 experiment_id: 7000
 experiment_id: 7003
 experiment_id: 7012
-experiment_id: 7047
 experiment_id: 8830
 experiment_id: 8831
-experiment_id: 8926
 experiment_id: 8999
 experiment_id: 9521
 experiment_id: 9552
@@ -504643,6 +505109,7 @@ experiment_id: 173173
 experiment_id: 193151
 experiment_id: 250415
 experiment_id: 1000890
+experiment_id: 1210000
 experiment_id: 3500035
 experiment_id: 3500037
 experiment_id: 4610010
@@ -504657,4 +505124,5 @@ experiment_id: 6600429
 experiment_id: 6600434
 experiment_id: 6600435
 experiment_id: 6600436
+experiment_id: 6600443
 experiment_id: 173173183
