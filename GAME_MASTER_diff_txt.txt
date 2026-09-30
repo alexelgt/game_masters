@@ -1,84 +1,144 @@
---- GAME_MASTER_old.txt	2026-09-28 19:42:44.639815528 +0200
-+++ GAME_MASTER.txt	2026-09-29 19:50:07.766615967 +0200
-@@ -94081,14 +94081,14 @@
-     template_id: "EVENT_PASS_SEPTEMBER3_EVENT_STORE_REDIRECT"
-     iapItemDisplay {
-       sku: "pgorelease.september3_2026_deluxe_event_pass_track_unlock_redirect"
-+      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
-       sortOrder: 1
--      hidden: true
-       title: "season_pass_premium_track_title_harvest_festival_2026"
-       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-       skuEnableTime: "2025-09-29T10:00:00"
--      skuDisableTime: "2025-10-07T20:00:00"
-+      skuDisableTime: "2026-10-07T20:00:00"
-       skuEnableTimeUtcMs: 1759140000000
--      skuDisableTimeUtcMs: 1759867200000
-+      skuDisableTimeUtcMs: 1791403200000
-       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F3cd7734c_PGO-MCS_Harvest_Festival_2026_TICKET_v1-1024x512_nologo.png"
-     }
-   }
-@@ -167380,7 +167380,7 @@
-       }
-       timePeriodCounters {
-         playerActivity {
--          limit: 300
-+          limit: 500
-         }
-       }
-       hideItemInInventory: true
-@@ -202924,7 +202924,7 @@
-     template_id: "REGISTER_DEVICE_FEATURE_GATE"
-     featureGate {
-       status: 1
--      rolloutPercentage: 60
-+      rolloutPercentage: 100
-     }
-   }
- }
-@@ -203236,13 +203236,12 @@
-     iapItemDisplay {
-       sku: "pgorelease.september3_2026_deluxe_event_pass_track_unlock"
-       sortOrder: 1
--      hidden: true
-       title: "season_pass_premium_track_title_harvest_festival_2026"
-       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
-       skuEnableTime: "2025-09-29T10:00:00"
--      skuDisableTime: "2025-10-07T20:00:00"
-+      skuDisableTime: "2026-10-07T20:00:00"
-       skuEnableTimeUtcMs: 1759140000000
--      skuDisableTimeUtcMs: 1759867200000
-+      skuDisableTimeUtcMs: 1791403200000
-       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F3cd7734c_PGO-MCS_Harvest_Festival_2026_TICKET_v1-1024x512_nologo.png"
-     }
-   }
-@@ -203254,13 +203253,12 @@
-     iapItemDisplay {
-       sku: "pgorelease.september3_2026_deluxe_event_pass_track_unlock_plus_points"
-       sortOrder: 1
--      hidden: true
-       title: "season_pass_premium_track_plus_six_ranks_title_harvest_festival_2026"
-       description: "event_pass_plus_points_6_ranks_description"
-       skuEnableTime: "2025-09-29T10:00:00"
--      skuDisableTime: "2025-10-07T20:00:00"
-+      skuDisableTime: "2026-10-07T20:00:00"
-       skuEnableTimeUtcMs: 1759140000000
--      skuDisableTimeUtcMs: 1759867200000
-+      skuDisableTimeUtcMs: 1791403200000
-       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F3cd7734c_PGO-MCS_Harvest_Festival_2026_TICKET_v1-1024x512_nologo.png"
-     }
-   }
-@@ -502635,22 +502633,76 @@
+--- GAME_MASTER_old.txt	2026-09-29 19:50:07.766615967 +0200
++++ GAME_MASTER.txt	2026-09-30 18:49:20.185954623 +0200
+@@ -68,6 +68,17 @@
    }
  }
  template {
--  template_id: "DISABLE_LEGACY_NEARBY_POKEMON_FEATURE_GATE"
-+  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT"
++  template_id: "ADV_SYNC_TWO_FEATURE_GATE"
++  data {
++    template_id: "ADV_SYNC_TWO_FEATURE_GATE"
++    featureGate {
++      status: 952347117
++      rolloutPercentage: 100
++      6: "0.429.0"
++    }
++  }
++}
++template {
+   template_id: "AMS_FEATURE_GATE"
    data {
--    template_id: "DISABLE_LEGACY_NEARBY_POKEMON_FEATURE_GATE"
--    featureGate {
--      status: 1
--      rolloutPercentage: 100
+     template_id: "AMS_FEATURE_GATE"
+@@ -33415,7 +33426,6 @@
+       itemsCount: 1
+       itemsCount: 75
+       featuresUnlocked: FEATURE_LUCKY_CHANCE_INCREASE
+-      obLevelUpRewardsNumber9: 0.01
+       clientOverrideDisplayOrder: true
+     }
+   }
+@@ -33962,7 +33972,6 @@
+       level: 70
+       items: ITEM_ITEM_STORAGE_UPGRADE_EARNED
+       itemsCount: 75
+-      obLevelUpRewardsNumber9: 0.01
+       isBackfill: true
+     }
+   }
+@@ -36483,6 +36492,21 @@
+   }
+ }
+ template {
++  template_id: "BADGE_EVENT_0237"
++  data {
++    template_id: "BADGE_EVENT_0237"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0237
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0240"
+   data {
+     template_id: "BADGE_EVENT_0240"
+@@ -36543,6 +36567,21 @@
+   }
+ }
+ template {
++  template_id: "BADGE_EVENT_0244"
++  data {
++    template_id: "BADGE_EVENT_0244"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0244
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0253"
+   data {
+     template_id: "BADGE_EVENT_0253"
+@@ -36603,6 +36642,21 @@
+   }
+ }
+ template {
++  template_id: "BADGE_EVENT_0273"
++  data {
++    template_id: "BADGE_EVENT_0273"
++    badgeSettings {
++      badgeType: BADGE_EVENT_0273
++      badgeRank: 2
++      targets: 100
++      eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "BADGE_EVENT_0279"
+   data {
+     template_id: "BADGE_EVENT_0279"
+@@ -47581,6 +47635,24 @@
+   }
+ }
+ template {
++  template_id: "BRAMBLEGHAST_EVOLUTION_QUEST"
++  data {
++    template_id: "BRAMBLEGHAST_EVOLUTION_QUEST"
++    evolution_quest_template {
++      questTemplateId: "BRAMBLEGHAST_EVOLUTION_QUEST"
++      questType: QUEST_BUDDY_EVOLUTION_WALK
++      goals {
++        target: 20
++      }
++      context: EVOLUTION_QUEST
++      display {
++        description: "quest_buddy_walk_km_plural"
++        title: "quest_buddy_walk_km_plural"
++      }
++    }
++  }
++}
++template {
+   template_id: "BREAD_BATTLE_CLIENT_SETTINGS"
+   data {
+     template_id: "BREAD_BATTLE_CLIENT_SETTINGS"
+@@ -81974,7 +82046,6 @@
+       combatExperiment: 20
+       combatExperiment: 22
+       showQuickSwapButtonsDuringCountdown: true
+-      obCombatSettingsNotPushedBool2: true
+       clockSyncSettings {
+         syncAttemptCount: 10
+         enabled: true
+@@ -87385,6 +87456,2151 @@
+   }
+ }
+ template {
++  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT"
++  data {
 +    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT"
 +    eventPassSettings {
 +      prefix: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT"
@@ -136,28 +196,9 @@
 +        sectionDisplayPriority: 50
 +      }
 +      gracePeriodEndTime: "2026-10-07T20:00:00"
-     }
-   }
- }
- template {
--  template_id: "ENABLE_NEARBY_POKEMON_SNAPSHOT_FEATURE_GATE"
-+  template_id: "ADV_SYNC_TWO_FEATURE_GATE"
-   data {
--    template_id: "ENABLE_NEARBY_POKEMON_SNAPSHOT_FEATURE_GATE"
-+    template_id: "ADV_SYNC_TWO_FEATURE_GATE"
-     featureGate {
--      status: 1
-+      status: 952347117
-       rolloutPercentage: 100
-+      6: "0.429.0"
-     }
-   }
- }
-@@ -503059,7 +503111,2144 @@
-     }
-   }
- }
--batch_id: 1790616331780
++    }
++  }
++}
 +template {
 +  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_10_FREE"
 +  data {
@@ -2241,6 +2282,1269 @@
 +  }
 +}
 +template {
+   template_id: "EVENT_PASS_MILESTONE_REWARDS_FEATURE_GATE"
+   data {
+     template_id: "EVENT_PASS_MILESTONE_REWARDS_FEATURE_GATE"
+@@ -99400,6 +101616,68 @@
+   }
+ }
+ template {
++  template_id: "EXTENDED_V0025_PIKACHU_GLASS_HELMET_2026"
++  data {
++    template_id: "EXTENDED_V0025_PIKACHU_GLASS_HELMET_2026"
++    pokemonExtendedSettings {
++      uniqueId: PIKACHU
++      form: PIKACHU_GLASS_HELMET_2026
++      sizeSettings {
++        xxsLowerBound: 0.196
++        xsLowerBound: 0.2
++        mLowerBound: 0.3
++        mUpperBound: 0.5
++        xlUpperBound: 0.6
++        xxlUpperBound: 0.7
++      }
++      breadOverrides {
++        breadMode: BREAD_MODE
++        maxEncounterVisualSettings {
++          scale: 31
++          cameraDistance: 27.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 62
++        }
++        maxStationVisualSettings {
++          scale: 4.22
++        }
++      }
++      breadOverrides {
++        breadMode: BREAD_DOUGH_MODE
++        averageHeightM: 21
++        camera {
++          cylinderRadiusM: 1.3
++          cylinderHeightM: 1.1
++        }
++        modelScaleV2: 0.86
++        modelHeight: 2.57
++        catchOverrideSettings {
++          collisionRadiusM: 0.25
++          collisionHeadRadiusM: 0.25
++        }
++        maxEncounterVisualSettings {
++          scale: 10.5
++          cameraDistance: 32.5
++          maxReticleSize: 14
++        }
++        maxBattleVisualSettings {
++          scale: 20
++          xOffset: 3
++        }
++        maxBattleTrainerVisualSettings {
++          xOffset: -5
++          yOffset: -5
++        }
++        maxStationVisualSettings {
++          scale: 1.25
++        }
++      }
++    }
++  }
++}
++template {
+   template_id: "EXTENDED_V0025_POKEMON_PIKACHU"
+   data {
+     template_id: "EXTENDED_V0025_POKEMON_PIKACHU"
+@@ -166088,6 +168366,26 @@
+   }
+ }
+ template {
++  template_id: "GMO_WILD_POKEMON_S2_LOCATION_FEATURE_GATE"
++  data {
++    template_id: "GMO_WILD_POKEMON_S2_LOCATION_FEATURE_GATE"
++    featureGate {
++      status: 1
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
++  template_id: "GMO_WILD_POKEMON_S2_LOCATION_SERVER_FEATURE_GATE"
++  data {
++    template_id: "GMO_WILD_POKEMON_S2_LOCATION_SERVER_FEATURE_GATE"
++    featureGate {
++      status: 1
++      rolloutPercentage: 100
++    }
++  }
++}
++template {
+   template_id: "GO_SAFARI_BALL_IAP_10"
+   data {
+     template_id: "GO_SAFARI_BALL_IAP_10"
+@@ -169040,6 +171338,129 @@
+   }
+ }
+ template {
++  template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY"
++  data {
++    template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY"
++    itemSettings {
++      itemId: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY
++      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
++      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
++      globalEventTicket {
++        eventStartTime: "2026-10-10T14:00:00"
++        eventEndTime: "2026-10-10T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Zorua26"
++        giftable: true
++        giftItem: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT
++        eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7278ea4f_PGO_MCS_CD_KeyArt_Zorua_v3-1024x576-nologo.jpg"
++        displayV2Enabled: true
++        backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7278ea4f_PGO_MCS_CD_KeyArt_Zorua_v3-1024x576-nologo.jpg"
++        eventDatetimeRangeKey: "event_datetime_range_key_CD_Zorua26"
++        textRewardsKey: "text_rewards_key_CD_Zorua26"
++        iconRewards {
++          type: POKEMON_ENCOUNTER
++          pokemonEncounter {
++            pokemonId: ZOROARK
++            pokemonDisplay {
++              form: ZOROARK_NORMAL
++            }
++          }
++        }
++        iconRewards {
++          type: ITEM
++          item {
++            item: ITEM_LUCKY_EGG
++            amount: 1
++          }
++        }
++        iconRewards {
++          type: ITEM
++          item {
++            item: ITEM_XL_RARE_CANDY
++            amount: 1
++          }
++        }
++        detailsLinkKey: "details_link_key"
++        clientEventStartTimeUtcMs: 1791640800000
++        clientEventEndTimeUtcMs: 1791651600000
++        27: "general2.ticket.3"
++      }
++      nameOverride: "general1.ticket_CD_Zorua26_title"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Zorua26"
++    }
++  }
++}
++template {
++  template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT"
++  data {
++    template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT"
++    itemSettings {
++      itemId: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT
++      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
++      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
++      globalEventTicket {
++        eventStartTime: "2026-10-10T14:00:00"
++        eventEndTime: "2026-10-10T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Zorua26"
++        ticketItem: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY
++        eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7278ea4f_PGO_MCS_CD_KeyArt_Zorua_v3-1024x576-nologo.jpg"
++        clientEventStartTimeUtcMs: 1791640800000
++        clientEventEndTimeUtcMs: 1791651600000
++        27: "general2.ticket.3"
++      }
++      ignoreInventorySpace: true
++      nameOverride: "general1.ticket_CD_Zorua26_title"
++      descriptionOverride: "item_event_ticket_pink_details_CD_Zorua26"
++    }
++  }
++}
++template {
++  template_id: "ITEM_EVENT_TICKET_S24_OCT_17_HATCH"
++  data {
++    template_id: "ITEM_EVENT_TICKET_S24_OCT_17_HATCH"
++    itemSettings {
++      itemId: ITEM_EVENT_TICKET_S24_OCT_17_HATCH
++      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
++      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
++      globalEventTicket {
++        eventStartTime: "2026-10-17T11:00:00"
++        eventEndTime: "2026-10-17T17:00:00"
++        itemBagDescriptionKey: "item_event_ticket_gray_desc_SandileHatchDay26"
++        giftable: true
++        giftItem: ITEM_EVENT_TICKET_S24_OCT_17_HATCH_TO_GIFT
++        eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F440cb25d_PGO-MCS_Sandile_Hatch_Day_v1-1024x576%20No%20Logo.png"
++        displayV2Enabled: true
++        backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F440cb25d_PGO-MCS_Sandile_Hatch_Day_v1-1024x576%20No%20Logo.png"
++        eventDatetimeRangeKey: "event_datetime_range_key_SandileHatchDay26"
++        textRewardsKey: "text_rewards_key_SandileHatchDay26"
++        iconRewards {
++          type: ITEM
++          item {
++            item: ITEM_INCUBATOR_SUPER
++            amount: 2
++          }
++        }
++        iconRewards {
++          type: ITEM
++          item {
++            item: ITEM_STAR_PIECE
++            amount: 1
++          }
++        }
++        iconRewards {
++          type: EXPERIENCE
++          exp: 10000
++        }
++        detailsLinkKey: "details_link_key"
++        clientEventStartTimeUtcMs: 1792234800000
++        clientEventEndTimeUtcMs: 1792256400000
++        27: "general2.ticket.2"
++      }
++      nameOverride: "general2.ticket.2_SandileHatchDay26_title"
++      descriptionOverride: "item_event_ticket_gray_details_SandileHatchDay26"
++    }
++  }
++}
++template {
+   template_id: "ITEM_EVENT_TICKET_S24_OCT_3_MAXBATTLE"
+   data {
+     template_id: "ITEM_EVENT_TICKET_S24_OCT_3_MAXBATTLE"
+@@ -169848,7 +172269,7 @@
+       category: ITEM_CATEGORY_INCENSE
+       dropTrainerLevel: 6
+       incense {
+-        incenseLifetimeSeconds: 900
++        incenseLifetimeSeconds: 1800
+         spawnTableProbability: 0.25
+       }
+       ignoreInventorySpace: true
+@@ -170696,501 +173117,6 @@
+       ignoreInventorySpace: true
+       statIncrease {
+         statsToIncreaseLimit: 1
+-        2 {
+-          1: 1
+-          2 {
+-            1: 1
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-          }
+-          2 {
+-            1: 2
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_2"
+-          }
+-          2 {
+-            1: 3
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-          }
+-          2 {
+-            1: 4
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-          }
+-          2 {
+-            1: 5
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_5"
+-          }
+-          2 {
+-            1: 6
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-          }
+-          2 {
+-            1: 7
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-          }
+-          2 {
+-            1: 8
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-          }
+-          2 {
+-            1: 9
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_9"
+-          }
+-          2 {
+-            1: 10
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_10"
+-          }
+-          2 {
+-            1: 11
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-          }
+-          2 {
+-            1: 12
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-          }
+-          2 {
+-            1: 13
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_13"
+-          }
+-          2 {
+-            1: 14
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_14"
+-          }
+-          2 {
+-            1: 15
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-          }
+-        }
+-        2 {
+-          1: 2
+-          2 {
+-            1: 1
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_1"
+-          }
+-          2 {
+-            1: 2
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_2"
+-          }
+-          2 {
+-            1: 3
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_3"
+-          }
+-          2 {
+-            1: 4
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_4"
+-          }
+-          2 {
+-            1: 5
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_5"
+-          }
+-          2 {
+-            1: 6
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_6"
+-          }
+-          2 {
+-            1: 7
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_7"
+-          }
+-          2 {
+-            1: 8
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_8"
+-          }
+-          2 {
+-            1: 9
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_9"
+-          }
+-          2 {
+-            1: 10
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_10"
+-          }
+-          2 {
+-            1: 11
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_11"
+-          }
+-          2 {
+-            1: 12
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_12"
+-          }
+-          2 {
+-            1: 13
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_13"
+-          }
+-          2 {
+-            1: 14
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_14"
+-          }
+-          2 {
+-            1: 15
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_15"
+-          }
+-        }
+-        2 {
+-          1: 3
+-          2 {
+-            1: 1
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_1"
+-          }
+-          2 {
+-            1: 2
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_2"
+-          }
+-          2 {
+-            1: 3
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_3"
+-          }
+-          2 {
+-            1: 4
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_4"
+-          }
+-          2 {
+-            1: 5
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_5"
+-          }
+-          2 {
+-            1: 6
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_6"
+-          }
+-          2 {
+-            1: 7
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_7"
+-          }
+-          2 {
+-            1: 8
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_8"
+-          }
+-          2 {
+-            1: 9
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_9"
+-          }
+-          2 {
+-            1: 10
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_10"
+-          }
+-          2 {
+-            1: 11
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_11"
+-          }
+-          2 {
+-            1: 12
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_12"
+-          }
+-          2 {
+-            1: 13
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_13"
+-          }
+-          2 {
+-            1: 14
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_14"
+-          }
+-          2 {
+-            1: 15
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_15"
+-          }
+-        }
+-        3 {
+-          1: 132
+-          2 {
+-            1: 1
+-            2 {
+-              1: 10
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_10"
+-            }
+-            2 {
+-              1: 13
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_13"
+-            }
+-            2 {
+-              1: 14
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_14"
+-            }
+-            2 {
+-              1: 2
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_2"
+-            }
+-            2 {
+-              1: 5
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_5"
+-            }
+-            2 {
+-              1: 9
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_9"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 877
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 11
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 15
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-            2 {
+-              1: 3
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 6
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 679
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 11
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 15
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-            2 {
+-              1: 3
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 6
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 680
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 11
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 15
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-            2 {
+-              1: 3
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 6
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 681
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 11
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 15
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-            2 {
+-              1: 3
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 6
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 778
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 2
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_2"
+-            }
+-            2 {
+-              1: 3
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 5
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_5"
+-            }
+-            2 {
+-              1: 6
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-            2 {
+-              1: 9
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_9"
+-            }
+-            2 {
+-              1: 10
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_10"
+-            }
+-            2 {
+-              1: 11
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 13
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_13"
+-            }
+-            2 {
+-              1: 14
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_14"
+-            }
+-            2 {
+-              1: 15
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 845
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 11
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 15
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-            2 {
+-              1: 3
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 6
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-          }
+-        }
+       }
+     }
+   }
+@@ -171374,501 +173300,6 @@
+       ignoreInventorySpace: true
+       statIncrease {
+         statsToIncreaseLimit: 3
+-        2 {
+-          1: 1
+-          2 {
+-            1: 1
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-          }
+-          2 {
+-            1: 2
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_2"
+-          }
+-          2 {
+-            1: 3
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-          }
+-          2 {
+-            1: 4
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-          }
+-          2 {
+-            1: 5
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_5"
+-          }
+-          2 {
+-            1: 6
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-          }
+-          2 {
+-            1: 7
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-          }
+-          2 {
+-            1: 8
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-          }
+-          2 {
+-            1: 9
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_9"
+-          }
+-          2 {
+-            1: 10
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_10"
+-          }
+-          2 {
+-            1: 11
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-          }
+-          2 {
+-            1: 12
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-          }
+-          2 {
+-            1: 13
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_13"
+-          }
+-          2 {
+-            1: 14
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_14"
+-          }
+-          2 {
+-            1: 15
+-            2: "HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-          }
+-        }
+-        2 {
+-          1: 2
+-          2 {
+-            1: 1
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_1"
+-          }
+-          2 {
+-            1: 2
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_2"
+-          }
+-          2 {
+-            1: 3
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_3"
+-          }
+-          2 {
+-            1: 4
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_4"
+-          }
+-          2 {
+-            1: 5
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_5"
+-          }
+-          2 {
+-            1: 6
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_6"
+-          }
+-          2 {
+-            1: 7
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_7"
+-          }
+-          2 {
+-            1: 8
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_8"
+-          }
+-          2 {
+-            1: 9
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_9"
+-          }
+-          2 {
+-            1: 10
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_10"
+-          }
+-          2 {
+-            1: 11
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_11"
+-          }
+-          2 {
+-            1: 12
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_12"
+-          }
+-          2 {
+-            1: 13
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_13"
+-          }
+-          2 {
+-            1: 14
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_14"
+-          }
+-          2 {
+-            1: 15
+-            2: "HYPER_TRAINING_QUEST_DEFENSE_LEVEL_15"
+-          }
+-        }
+-        2 {
+-          1: 3
+-          2 {
+-            1: 1
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_1"
+-          }
+-          2 {
+-            1: 2
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_2"
+-          }
+-          2 {
+-            1: 3
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_3"
+-          }
+-          2 {
+-            1: 4
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_4"
+-          }
+-          2 {
+-            1: 5
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_5"
+-          }
+-          2 {
+-            1: 6
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_6"
+-          }
+-          2 {
+-            1: 7
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_7"
+-          }
+-          2 {
+-            1: 8
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_8"
+-          }
+-          2 {
+-            1: 9
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_9"
+-          }
+-          2 {
+-            1: 10
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_10"
+-          }
+-          2 {
+-            1: 11
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_11"
+-          }
+-          2 {
+-            1: 12
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_12"
+-          }
+-          2 {
+-            1: 13
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_13"
+-          }
+-          2 {
+-            1: 14
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_14"
+-          }
+-          2 {
+-            1: 15
+-            2: "HYPER_TRAINING_QUEST_STAMINA_LEVEL_15"
+-          }
+-        }
+-        3 {
+-          1: 132
+-          2 {
+-            1: 1
+-            2 {
+-              1: 10
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_10"
+-            }
+-            2 {
+-              1: 13
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_13"
+-            }
+-            2 {
+-              1: 14
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_14"
+-            }
+-            2 {
+-              1: 2
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_2"
+-            }
+-            2 {
+-              1: 5
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_5"
+-            }
+-            2 {
+-              1: 9
+-              2: "DITTO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_9"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 877
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 11
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 15
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-            2 {
+-              1: 3
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 6
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 679
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 11
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 15
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-            2 {
+-              1: 3
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 6
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 680
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 11
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 15
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-            2 {
+-              1: 3
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 6
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 681
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 11
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 15
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-            2 {
+-              1: 3
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 6
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 778
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 2
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_2"
+-            }
+-            2 {
+-              1: 3
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 5
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_5"
+-            }
+-            2 {
+-              1: 6
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-            2 {
+-              1: 9
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_9"
+-            }
+-            2 {
+-              1: 10
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_10"
+-            }
+-            2 {
+-              1: 11
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 13
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_13"
+-            }
+-            2 {
+-              1: 14
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_14"
+-            }
+-            2 {
+-              1: 15
+-              2: "MIMIKYU_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-          }
+-        }
+-        3 {
+-          1: 845
+-          2 {
+-            1: 1
+-            2 {
+-              1: 1
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_1"
+-            }
+-            2 {
+-              1: 11
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_11"
+-            }
+-            2 {
+-              1: 12
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_12"
+-            }
+-            2 {
+-              1: 15
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_15"
+-            }
+-            2 {
+-              1: 3
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_3"
+-            }
+-            2 {
+-              1: 4
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_4"
+-            }
+-            2 {
+-              1: 6
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_6"
+-            }
+-            2 {
+-              1: 7
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_7"
+-            }
+-            2 {
+-              1: 8
+-              2: "MORPEKO_HYPER_TRAINING_QUEST_ATTACK_LEVEL_8"
+-            }
+-          }
+-        }
+       }
+     }
+   }
+@@ -172903,6 +174334,16 @@
+   }
+ }
+ template {
++  template_id: "LC_2026_COMICCON_MALAGA"
++  data {
++    template_id: "LC_2026_COMICCON_MALAGA"
++    locationCardSettings {
++      locationCard: 416
++      imageUrl: "lc_2026_ComicCon_Malaga"
++    }
++  }
++}
++template {
+   template_id: "LC_2026_COPENHAGEN_GOFEST_001"
+   data {
+     template_id: "LC_2026_COPENHAGEN_GOFEST_001"
+@@ -173869,6 +175310,16 @@
+   }
+ }
+ template {
 +  template_id: "LC_POKELID_NAGANO"
 +  data {
 +    template_id: "LC_POKELID_NAGANO"
@@ -2251,6 +3555,23 @@
 +  }
 +}
 +template {
+   template_id: "LC_POKELID_NAGASAKI"
+   data {
+     template_id: "LC_POKELID_NAGASAKI"
+@@ -174508,9 +175959,6 @@
+       imageUrl: "sb_GoTour2026_mega"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_Mega"
+-      5 {
+-        2: 331
+-      }
+     }
+   }
+ }
+@@ -176948,6 +178396,17 @@
+   }
+ }
+ template {
 +  template_id: "MAP_OBJECT_COLLISION_AVOIDANCE_SETTINGS"
 +  data {
 +    template_id: "MAP_OBJECT_COLLISION_AVOIDANCE_SETTINGS"
@@ -2262,6 +3583,1519 @@
 +  }
 +}
 +template {
+   template_id: "MAP_RADIUS_ENHANCE_GRAPHICS_ROLL_BACK"
+   data {
+     template_id: "MAP_RADIUS_ENHANCE_GRAPHICS_ROLL_BACK"
+@@ -198499,6 +199958,60 @@
+   }
+ }
+ template {
++  template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++  data {
++    template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
++    iapItemDisplay {
++      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_fall_marathon_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-10-13T10:00:00"
++      skuDisableTime: "2025-10-21T20:00:00"
++      skuEnableTimeUtcMs: 1760349600000
++      skuDisableTimeUtcMs: 1761076800000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
++    }
++  }
++}
++template {
++  template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++  data {
++    template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
++    iapItemDisplay {
++      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_plus_six_ranks_title_fall_marathon_2026"
++      description: "event_pass_plus_points_6_ranks_description"
++      skuEnableTime: "2025-10-13T10:00:00"
++      skuDisableTime: "2025-10-21T20:00:00"
++      skuEnableTimeUtcMs: 1760349600000
++      skuDisableTimeUtcMs: 1761076800000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
++    }
++  }
++}
++template {
++  template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_REDIRECT"
++  data {
++    template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_REDIRECT"
++    iapItemDisplay {
++      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_redirect"
++      sortOrder: 1
++      hidden: true
++      title: "season_pass_premium_track_title_fall_marathon_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-10-13T10:00:00"
++      skuDisableTime: "2025-10-21T20:00:00"
++      skuEnableTimeUtcMs: 1760349600000
++      skuDisableTimeUtcMs: 1761076800000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
++    }
++  }
++}
++template {
+   template_id: "ONBOARDING_SETTINGS"
+   data {
+     template_id: "ONBOARDING_SETTINGS"
+@@ -201295,10 +202808,8 @@
+         threshold: 1000000
+       }
+       smoreFtueImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2FPGO-MCS_Smores_Launch_KeyArt_v8_1024x512_ingame.jpg"
+-      11: 1
+       12: 70
+       23: 2592000
+-      24: "2025-10-15T00:00:00"
+     }
+   }
+ }
+@@ -201537,6 +203048,16 @@
+   }
+ }
+ template {
++  template_id: "POKEMON_SPAWN_AVOIDANCE_REWORK_FEATURE_GATE"
++  data {
++    template_id: "POKEMON_SPAWN_AVOIDANCE_REWORK_FEATURE_GATE"
++    featureGate {
++      status: 67485911
++      rolloutPercentage: 10
++    }
++  }
++}
++template {
+   template_id: "POKEMON_TAG_SETTINGS"
+   data {
+     template_id: "POKEMON_TAG_SETTINGS"
+@@ -202484,6 +204005,36 @@
+   }
+ }
+ template {
++  template_id: "QUICK_INVITE_SETTINGS_DMAX"
++  data {
++    template_id: "QUICK_INVITE_SETTINGS_DMAX"
++    quickInviteSettings {
++      enabled: true
++      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
++    }
++  }
++}
++template {
++  template_id: "QUICK_INVITE_SETTINGS_GMAX"
++  data {
++    template_id: "QUICK_INVITE_SETTINGS_GMAX"
++    quickInviteSettings {
++      enabled: true
++      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
++    }
++  }
++}
++template {
++  template_id: "QUICK_INVITE_SETTINGS_GMAX_RSVP"
++  data {
++    template_id: "QUICK_INVITE_SETTINGS_GMAX_RSVP"
++    quickInviteSettings {
++      enabled: true
++      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
++    }
++  }
++}
++template {
+   template_id: "QUICK_INVITE_SETTINGS_RAID"
+   data {
+     template_id: "QUICK_INVITE_SETTINGS_RAID"
+@@ -202494,6 +204045,26 @@
+   }
+ }
+ template {
++  template_id: "QUICK_INVITE_SETTINGS_RAID_RSVP"
++  data {
++    template_id: "QUICK_INVITE_SETTINGS_RAID_RSVP"
++    quickInviteSettings {
++      enabled: true
++      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
++    }
++  }
++}
++template {
++  template_id: "QUICK_INVITE_SETTINGS_WEEKLY_CHALLENGE"
++  data {
++    template_id: "QUICK_INVITE_SETTINGS_WEEKLY_CHALLENGE"
++    quickInviteSettings {
++      enabled: true
++      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
++    }
++  }
++}
++template {
+   template_id: "RAID_CLIENT_SETTINGS"
+   data {
+     template_id: "RAID_CLIENT_SETTINGS"
+@@ -203107,10 +204678,6 @@
+       resumeRangeMeters: 40
+       routeEngagementStatsShardCount: 3
+       enableRouteRatingDetails: true
+-      obRoutePlaySettingsNumber29: 1
+-      obRoutePlaySettingsNumber30: 27
+-      obRoutePlaySettingsNumber33: 7
+-      obRoutePlaySettingsNumber45: 1
+     }
+   }
+ }
+@@ -207172,6 +208739,15 @@
+   }
+ }
+ template {
++  template_id: "SOFT_SFIDA_FOREGROUND_DESCRIPTION_TEXT_CODE_GATE"
++  data {
++    template_id: "SOFT_SFIDA_FOREGROUND_DESCRIPTION_TEXT_CODE_GATE"
++    codeGateProto {
++      isEnabled: true
++    }
++  }
++}
++template {
+   template_id: "SOFT_SFIDA_SETTINGS"
+   data {
+     template_id: "SOFT_SFIDA_SETTINGS"
+@@ -208533,6 +210109,18 @@
+   }
+ }
+ template {
++  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
++  data {
++    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
++    genderSettings {
++      pokemon: PIKACHU
++      gender {
++        malePercent: 1
++      }
++    }
++  }
++}
++template {
+   template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOFEST_2022"
+   data {
+     template_id: "SPAWN_V0025_POKEMON_PIKACHU_GOFEST_2022"
+@@ -239207,7 +240795,6 @@
+       enabled: true
+       minLevel: 15
+       xpReward: 10000
+-      7: 1
+     }
+   }
+ }
+@@ -265970,6 +267557,103 @@
+   }
+ }
+ template {
++  template_id: "V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
++  data {
++    template_id: "V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
++    pokemonSettings {
++      pokemonId: PIKACHU
++      modelScale: 1.48
++      type: POKEMON_TYPE_ELECTRIC
++      camera {
++        diskRadiusM: 0.555
++        cylinderRadiusM: 0.37
++        cylinderHeightM: 0.5
++        shoulderModeScale: 0.5
++      }
++      encounter {
++        collisionRadiusM: 0.16
++        collisionHeightM: 0.16
++        collisionHeadRadiusM: 0.13
++        movementType: MOVEMENT_JUMP
++        movementTimerS: 10
++        jumpTimeS: 1
++        attackTimerS: 29
++        attackProbability: 0.1
++        dodgeProbability: 0.15
++        dodgeDurationS: 1
++        dodgeDistance: 1
++        cameraDistance: 2.775
++        minPokemonActionFrequencyS: 0.2
++        maxPokemonActionFrequencyS: 1.6
++      }
++      stats {
++        baseStamina: 111
++        baseAttack: 112
++        baseDefense: 96
++      }
++      quickMoves: THUNDER_SHOCK_FAST
++      quickMoves: QUICK_ATTACK_FAST
++      cinematicMoves: DISCHARGE
++      cinematicMoves: THUNDERBOLT
++      cinematicMoves: WILD_CHARGE
++      animationTime: 1.8333
++      animationTime: 0.6667
++      animationTime: 1.6
++      animationTime: 1.5667
++      animationTime: 0
++      animationTime: 1.8
++      animationTime: 1.1333
++      animationTime: 1.06666696
++      evolutionIds: RAICHU
++      evolutionPips: 1
++      pokedexHeightM: 0.4
++      pokedexWeightKg: 6
++      parentPokemonId: PICHU
++      heightStdDev: 0.05
++      weightStdDev: 0.75
++      familyId: FAMILY_PIKACHU
++      candyToEvolve: 50
++      kmBuddyDistance: 1
++      buddy_size: BUDDY_SHOULDER
++      modelHeight: 0.4
++      modelScaleV2: 1.1
++      form: PIKACHU_GLASS_HELMET_2026
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetMale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyOffsetFemale: 0
++      buddyScale: 11
++      third_move {
++        stardustToUnlock: 10000
++        candyToUnlock: 25
++      }
++      isTransferable: true
++      isDeployable: true
++      isTradable: true
++      buddyGroupNumber: 1
++      eliteQuickMove: PRESENT_FAST
++      eliteCinematicMove: SURF
++      eliteCinematicMove: THUNDER
++      buddyWalkedMegaEnergyAwards {
++        megaPokemonId: RAICHU
++        megaEnergyAwardAmount: 5
++        tempEvoId: TEMP_EVOLUTION_MEGA_X
++      }
++      buddyWalkedMegaEnergyAwards {
++        megaPokemonId: RAICHU
++        megaEnergyAwardAmount: 5
++        tempEvoId: TEMP_EVOLUTION_MEGA_Y
++      }
++      disableTransferToPokemonHome: true
++      ibfc {
++      }
++      breadTierGroup: GROUP_1
++    }
++  }
++}
++template {
+   template_id: "V0025_POKEMON_PIKACHU_GOFEST_2022"
+   data {
+     template_id: "V0025_POKEMON_PIKACHU_GOFEST_2022"
+@@ -414172,6 +415856,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 3
++        shadowBaseCaptureRate: 0.02
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 205
+@@ -414217,6 +415904,12 @@
+       }
+       isTransferable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 20000
++        purificationCandyNeeded: 20
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 7
+       eliteCinematicMove: FUSION_BOLT
+       ibfc {
+@@ -414256,6 +415949,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 3
++        shadowBaseCaptureRate: 0.02
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 205
+@@ -414302,6 +415998,12 @@
+       }
+       isTransferable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 20000
++        purificationCandyNeeded: 20
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 7
+       eliteCinematicMove: FUSION_BOLT
+       ibfc {
+@@ -425885,6 +427587,9 @@
+         cameraDistance: 2.5
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.3
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 167
+@@ -425916,6 +427621,7 @@
+         questDisplay {
+           questRequirementTemplateId: "PANCHAM_EVOLUTION_QUEST"
+         }
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1
+       buddyPortraitOffset: 0
+@@ -425928,6 +427634,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 5000
++        purificationCandyNeeded: 5
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -425959,6 +427671,9 @@
+         cameraDistance: 2.5
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.3
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 167
+@@ -425991,6 +427706,7 @@
+         questDisplay {
+           questRequirementTemplateId: "PANCHAM_EVOLUTION_QUEST"
+         }
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1
+       form: PANCHAM_NORMAL
+@@ -426004,6 +427720,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 5000
++        purificationCandyNeeded: 5
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -426039,6 +427761,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.1
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 216
+@@ -426077,6 +427802,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 5000
++        purificationCandyNeeded: 5
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -426112,6 +427843,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.1
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 216
+@@ -426151,6 +427885,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 5000
++        purificationCandyNeeded: 5
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       ibfc {
+       }
+       breadTierGroup: GROUP_2
+@@ -441750,6 +443490,9 @@
+         cameraDistance: 2
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 120
+@@ -441774,6 +443517,7 @@
+         evolution: LURANTIS
+         candyCost: 50
+         onlyDaytime: true
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1.03
+       buddyOffsetMale: 0
+@@ -441808,6 +443552,12 @@
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 1
+       ibfc {
+       }
+@@ -441839,6 +443589,9 @@
+         cameraDistance: 2
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 120
+@@ -441864,6 +443617,7 @@
+         candyCost: 50
+         form: LURANTIS_NORMAL
+         onlyDaytime: true
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1.03
+       form: FOMANTIS_NORMAL
+@@ -441899,6 +443653,12 @@
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
+       combatPlayerPokemonPositionOffset: 0
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 1
+       ibfc {
+       }
+@@ -441933,6 +443693,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 172
+@@ -441973,6 +443736,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       raidBossDistanceOffset: 2
+       ibfc {
+@@ -442008,6 +443777,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 172
+@@ -442049,6 +443821,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       raidBossDistanceOffset: 2
+       ibfc {
+@@ -444141,6 +445919,9 @@
+         cameraDistance: 2.5
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 93
+@@ -444159,6 +445940,7 @@
+       evolutionBranch {
+         evolution: GOLISOPOD
+         candyCost: 400
++        candyCostPurified: 360
+       }
+       modelScaleV2: 1
+       buddyOffsetMale: 9
+@@ -444178,6 +445960,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 1
+       raidBossDistanceOffset: 3
+       ibfc {
+@@ -444211,6 +445999,9 @@
+         cameraDistance: 2.5
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.5
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 93
+@@ -444230,6 +446021,7 @@
+         evolution: GOLISOPOD
+         candyCost: 400
+         form: GOLISOPOD_NORMAL
++        candyCostPurified: 360
+       }
+       modelScaleV2: 1
+       form: WIMPOD_NORMAL
+@@ -444250,6 +446042,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 1
+       raidBossDistanceOffset: 3
+       ibfc {
+@@ -444286,6 +446084,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 181
+@@ -444328,6 +446129,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       raidBossDistanceOffset: 1.7
+       ibfc {
+@@ -444364,6 +446171,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 181
+@@ -444407,6 +446217,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 1000
++        purificationCandyNeeded: 1
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 3
+       raidBossDistanceOffset: 1.7
+       ibfc {
+@@ -444449,6 +446265,9 @@
+         cameraDistance: 4
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 146
+@@ -444472,6 +446291,7 @@
+       evolutionBranch {
+         evolution: PALOSSAND
+         candyCost: 50
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1
+       buddyOffsetMale: 38.8
+@@ -444488,6 +446308,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -444519,6 +446345,9 @@
+         cameraDistance: 4
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 146
+@@ -444543,6 +446372,7 @@
+         evolution: PALOSSAND
+         candyCost: 50
+         form: PALOSSAND_NORMAL
++        candyCostPurified: 45
+       }
+       modelScaleV2: 1
+       form: SANDYGAST_NORMAL
+@@ -444560,6 +446390,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -444594,6 +446430,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 198
+@@ -444631,6 +446470,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -444665,6 +446510,9 @@
+         minPokemonActionFrequencyS: 0.2
+         maxPokemonActionFrequencyS: 1.6
+         bonusXlCandyCaptureReward: 1
++        shadowBaseCaptureRate: 0.2
++        shadowAttackProbability: 0.7
++        shadowDodgeProbability: 0.2
+       }
+       stats {
+         baseStamina: 198
+@@ -444703,6 +446551,12 @@
+       isTransferable: true
+       isDeployable: true
+       isTradable: true
++      shadow {
++        purificationStardustNeeded: 3000
++        purificationCandyNeeded: 3
++        purifiedChargeMove: RETURN
++        shadowChargeMove: FRUSTRATION
++      }
+       buddyGroupNumber: 2
+       ibfc {
+       }
+@@ -474544,6 +476398,10 @@
+       evolutionBranch {
+         evolution: BRAMBLEGHAST
+         candyCost: 50
++        kmBuddyDistanceRequirement: 20
++        questDisplay {
++          questRequirementTemplateId: "BRAMBLEGHAST_EVOLUTION_QUEST"
++        }
+       }
+       third_move {
+         stardustToUnlock: 75000
+@@ -474596,7 +476454,11 @@
+       evolutionBranch {
+         evolution: BRAMBLEGHAST
+         candyCost: 50
++        kmBuddyDistanceRequirement: 20
+         form: BRAMBLEGHAST_NORMAL
++        questDisplay {
++          questRequirementTemplateId: "BRAMBLEGHAST_EVOLUTION_QUEST"
++        }
+       }
+       form: BRAMBLIN_NORMAL
+       third_move {
+@@ -485196,10 +487058,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485219,10 +487077,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485242,10 +487096,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485265,10 +487115,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485288,10 +487134,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485311,10 +487153,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485334,10 +487172,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485357,10 +487191,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485380,10 +487210,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485403,10 +487229,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485426,10 +487248,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485449,10 +487267,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485472,10 +487286,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485495,10 +487305,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485518,10 +487324,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485541,10 +487343,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485564,10 +487362,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485587,10 +487381,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -485610,10 +487400,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485633,10 +487419,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485656,10 +487438,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485679,10 +487457,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485702,10 +487476,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485725,10 +487495,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485748,10 +487514,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485771,10 +487533,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485794,10 +487552,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485817,10 +487571,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485840,10 +487590,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485863,10 +487609,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485886,10 +487628,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485909,10 +487647,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485932,10 +487666,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485955,10 +487685,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -485978,10 +487704,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486001,10 +487723,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486024,10 +487742,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486047,10 +487761,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486070,10 +487780,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486093,10 +487799,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486116,10 +487818,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486139,10 +487837,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486162,10 +487856,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486185,10 +487875,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486208,10 +487894,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486231,10 +487913,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486254,10 +487932,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486277,10 +487951,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486300,10 +487970,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486323,10 +487989,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486346,10 +488008,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486369,10 +488027,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+     }
+   }
+ }
+@@ -486392,10 +488046,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+     }
+   }
+ }
+@@ -486415,10 +488065,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+     }
+   }
+ }
+@@ -486438,10 +488084,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+     }
+   }
+ }
+@@ -486461,10 +488103,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+     }
+   }
+ }
+@@ -486484,10 +488122,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+     }
+   }
+ }
+@@ -486507,10 +488141,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+     }
+   }
+ }
+@@ -486530,10 +488160,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+-      obMoveSettingsNumber18: 0
+     }
+   }
+ }
+@@ -486553,10 +488179,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -486576,10 +488198,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 250
+-      obMoveSettingsNumber18: 300
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 450
+     }
+   }
+ }
+@@ -486599,10 +488217,6 @@
+       durationMs: 2500
+       damageWindowStartMs: 2000
+       damageWindowEndMs: 3400
+-      obMoveSettingsNumber18: 350
+-      obMoveSettingsNumber18: 400
+-      obMoveSettingsNumber18: 450
+-      obMoveSettingsNumber18: 550
+     }
+   }
+ }
+@@ -486611,9 +488225,8 @@
+   data {
+     template_id: "VS_SEEKER_CLIENT_SETTINGS"
+     vs_seeker_client_settings {
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
+-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
++      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT_MEGAS"
+     }
+   }
+ }
+@@ -497283,6 +498896,40 @@
+   }
+ }
+ template {
 +  template_id: "pgorelease.september3_2026_deluxe_event_pass_track_unlock"
 +  data {
 +    template_id: "pgorelease.september3_2026_deluxe_event_pass_track_unlock"
@@ -2295,48 +5129,2682 @@
 +    }
 +  }
 +}
-+batch_id: 1790661633037
++template {
+   template_id: "poffin"
+   data {
+     template_id: "poffin"
+@@ -502617,2643 +504264,12 @@
+     }
+   }
+ }
+-template {
+-  template_id: "BADGE_EVENT_0237"
+-  data {
+-    template_id: "BADGE_EVENT_0237"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0237
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT"
+-    eventPassSettings {
+-      prefix: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT"
+-      pointsItemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_03
+-      trackConditions {
+-        track: FREE
+-        trackTitleKey: "season_pass_base_track_title_harvest_festival_2026"
+-      }
+-      trackConditions {
+-        track: PREMIUM
+-        badge: BADGE_EVENT_0243
+-        trackTitleKey: "season_pass_premium_track_title_harvest_festival_2026"
+-      }
+-      expirationTime: "2026-10-05T20:00:00"
+-      maxTierLevel: 60
+-      additionalBonusTiersLevel: 31
+-      eventPassDisplaySettings {
+-        bonusBoxes {
+-          text: "quest_catch_pokemon_singular"
+-          iconType: SPAWN_UNKNOWN
+-          quantity: 5
+-        }
+-        bonusBoxes {
+-          text: "quest_hatch_egg_singular"
+-          iconType: EGG
+-          quantity: 40
+-        }
+-        bonusBoxes {
+-          text: "quest_win_raid_singular"
+-          iconType: RAID
+-          quantity: 100
+-        }
+-        eventPassTrackUpgradeDescriptions {
+-          passTrackUpgradeHeaderDescription: "deluxe_event_pass_track_unlock_description"
+-          eventPassTrackToUpgradeTo: PREMIUM
+-          trackUnlockSkuId: "pgorelease.september3_2026_deluxe_event_pass_track_unlock"
+-          trackUnlockPlusPointsSkuId: "pgorelease.september3_2026_deluxe_event_pass_track_unlock_plus_points"
+-          eventDurationKey: "season_pass_harvest_festival_2026_event_duration"
+-          upgradeDescriptionKey: "season_pass_harvest_festival_2026_upgrade_description"
+-          ranksToHighlightRewards: 2
+-          ranksToHighlightRewards: 15
+-          ranksToHighlightRewards: 30
+-          detailsLinkKey: "season_pass_details_link_harvest_festival_2026"
+-          trackUnlockImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
+-          trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
+-        }
+-        eventPassTitleKey: "season_pass_base_track_title_harvest_festival_2026"
+-        headerIconUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7150419b_s24-logo-512x512.png"
+-        premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
+-        premiumRewardBannerMiddle: "item_flying_taxi_milestone_name"
+-        premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text_steeled_resolve_2026"
+-        premiumRewardBannerImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7150419b_s24-logo-512x512.png"
+-        premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
+-        todayViewSection: SEASONAL_EVENT_PASS_SECTION
+-        sectionDisplayPriority: 50
+-      }
+-      gracePeriodEndTime: "2026-10-07T20:00:00"
+-    }
+-  }
+-}
+-template {
+-  template_id: "ADV_SYNC_TWO_FEATURE_GATE"
+-  data {
+-    template_id: "ADV_SYNC_TWO_FEATURE_GATE"
+-    featureGate {
+-      status: 952347117
+-      rolloutPercentage: 100
+-      6: "0.429.0"
+-    }
+-  }
+-}
+-template {
+-  template_id: "EXTENDED_V0025_PIKACHU_GLASS_HELMET_2026"
+-  data {
+-    template_id: "EXTENDED_V0025_PIKACHU_GLASS_HELMET_2026"
+-    pokemonExtendedSettings {
+-      uniqueId: PIKACHU
+-      form: PIKACHU_GLASS_HELMET_2026
+-      sizeSettings {
+-        xxsLowerBound: 0.196
+-        xsLowerBound: 0.2
+-        mLowerBound: 0.3
+-        mUpperBound: 0.5
+-        xlUpperBound: 0.6
+-        xxlUpperBound: 0.7
+-      }
+-      breadOverrides {
+-        breadMode: BREAD_MODE
+-        maxEncounterVisualSettings {
+-          scale: 31
+-          cameraDistance: 27.5
+-          maxReticleSize: 14
+-        }
+-        maxBattleVisualSettings {
+-          scale: 62
+-        }
+-        maxStationVisualSettings {
+-          scale: 4.22
+-        }
+-      }
+-      breadOverrides {
+-        breadMode: BREAD_DOUGH_MODE
+-        averageHeightM: 21
+-        camera {
+-          cylinderRadiusM: 1.3
+-          cylinderHeightM: 1.1
+-        }
+-        modelScaleV2: 0.86
+-        modelHeight: 2.57
+-        catchOverrideSettings {
+-          collisionRadiusM: 0.25
+-          collisionHeadRadiusM: 0.25
+-        }
+-        maxEncounterVisualSettings {
+-          scale: 10.5
+-          cameraDistance: 32.5
+-          maxReticleSize: 14
+-        }
+-        maxBattleVisualSettings {
+-          scale: 20
+-          xOffset: 3
+-        }
+-        maxBattleTrainerVisualSettings {
+-          xOffset: -5
+-          yOffset: -5
+-        }
+-        maxStationVisualSettings {
+-          scale: 1.25
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "GMO_WILD_POKEMON_S2_LOCATION_FEATURE_GATE"
+-  data {
+-    template_id: "GMO_WILD_POKEMON_S2_LOCATION_FEATURE_GATE"
+-    featureGate {
+-      status: 1
+-      rolloutPercentage: 100
+-    }
+-  }
+-}
+-template {
+-  template_id: "GMO_WILD_POKEMON_S2_LOCATION_SERVER_FEATURE_GATE"
+-  data {
+-    template_id: "GMO_WILD_POKEMON_S2_LOCATION_SERVER_FEATURE_GATE"
+-    featureGate {
+-      status: 1
+-      rolloutPercentage: 100
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY"
+-  data {
+-    template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY"
+-    itemSettings {
+-      itemId: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY
+-      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+-      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+-      globalEventTicket {
+-        eventStartTime: "2026-10-10T14:00:00"
+-        eventEndTime: "2026-10-10T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Zorua26"
+-        giftable: true
+-        giftItem: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT
+-        eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7278ea4f_PGO_MCS_CD_KeyArt_Zorua_v3-1024x576-nologo.jpg"
+-        displayV2Enabled: true
+-        backgroundImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7278ea4f_PGO_MCS_CD_KeyArt_Zorua_v3-1024x576-nologo.jpg"
+-        eventDatetimeRangeKey: "event_datetime_range_key_CD_Zorua26"
+-        textRewardsKey: "text_rewards_key_CD_Zorua26"
+-        iconRewards {
+-          type: POKEMON_ENCOUNTER
+-          pokemonEncounter {
+-            pokemonId: ZOROARK
+-            pokemonDisplay {
+-              form: ZOROARK_NORMAL
+-            }
+-          }
+-        }
+-        iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_LUCKY_EGG
+-            amount: 1
+-          }
+-        }
+-        iconRewards {
+-          type: ITEM
+-          item {
+-            item: ITEM_XL_RARE_CANDY
+-            amount: 1
+-          }
+-        }
+-        detailsLinkKey: "details_link_key"
+-        clientEventStartTimeUtcMs: 1791640800000
+-        clientEventEndTimeUtcMs: 1791651600000
+-        27: "general2.ticket.3"
+-      }
+-      nameOverride: "general1.ticket_CD_Zorua26_title"
+-      descriptionOverride: "item_event_ticket_pink_details_CD_Zorua26"
+-    }
+-  }
+-}
+-template {
+-  template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT"
+-  data {
+-    template_id: "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT"
+-    itemSettings {
+-      itemId: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY_TO_GIFT
+-      itemType: ITEM_TYPE_GLOBAL_EVENT_TICKET
+-      category: ITEM_CATEGORY_GLOBAL_EVENT_TICKET
+-      globalEventTicket {
+-        eventStartTime: "2026-10-10T14:00:00"
+-        eventEndTime: "2026-10-10T17:00:00"
+-        itemBagDescriptionKey: "item_event_ticket_pink_desc_CD_Zorua26"
+-        ticketItem: ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY
+-        eventBannerUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7278ea4f_PGO_MCS_CD_KeyArt_Zorua_v3-1024x576-nologo.jpg"
+-        clientEventStartTimeUtcMs: 1791640800000
+-        clientEventEndTimeUtcMs: 1791651600000
+-        27: "general2.ticket.3"
+-      }
+-      ignoreInventorySpace: true
+-      nameOverride: "general1.ticket_CD_Zorua26_title"
+-      descriptionOverride: "item_event_ticket_pink_details_CD_Zorua26"
+-    }
+-  }
+-}
+-template {
+-  template_id: "QUICK_INVITE_SETTINGS_DMAX"
+-  data {
+-    template_id: "QUICK_INVITE_SETTINGS_DMAX"
+-    quickInviteSettings {
+-      enabled: true
+-      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+-    }
+-  }
+-}
+-template {
+-  template_id: "QUICK_INVITE_SETTINGS_GMAX"
+-  data {
+-    template_id: "QUICK_INVITE_SETTINGS_GMAX"
+-    quickInviteSettings {
+-      enabled: true
+-      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+-    }
+-  }
+-}
+-template {
+-  template_id: "QUICK_INVITE_SETTINGS_GMAX_RSVP"
+-  data {
+-    template_id: "QUICK_INVITE_SETTINGS_GMAX_RSVP"
+-    quickInviteSettings {
+-      enabled: true
+-      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+-    }
+-  }
+-}
+-template {
+-  template_id: "QUICK_INVITE_SETTINGS_RAID_RSVP"
+-  data {
+-    template_id: "QUICK_INVITE_SETTINGS_RAID_RSVP"
+-    quickInviteSettings {
+-      enabled: true
+-      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+-    }
+-  }
+-}
+-template {
+-  template_id: "QUICK_INVITE_SETTINGS_WEEKLY_CHALLENGE"
+-  data {
+-    template_id: "QUICK_INVITE_SETTINGS_WEEKLY_CHALLENGE"
+-    quickInviteSettings {
+-      enabled: true
+-      suggestedPlayersVariation: "PGO_RAID_A_TEST_0611"
+-    }
+-  }
+-}
+-template {
+-  template_id: "SPAWN_V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
+-  data {
+-    template_id: "SPAWN_V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
+-    genderSettings {
+-      pokemon: PIKACHU
+-      gender {
+-        malePercent: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
+-  data {
+-    template_id: "V0025_POKEMON_PIKACHU_GLASS_HELMET_2026"
+-    pokemonSettings {
+-      pokemonId: PIKACHU
+-      modelScale: 1.48
+-      type: POKEMON_TYPE_ELECTRIC
+-      camera {
+-        diskRadiusM: 0.555
+-        cylinderRadiusM: 0.37
+-        cylinderHeightM: 0.5
+-        shoulderModeScale: 0.5
+-      }
+-      encounter {
+-        collisionRadiusM: 0.16
+-        collisionHeightM: 0.16
+-        collisionHeadRadiusM: 0.13
+-        movementType: MOVEMENT_JUMP
+-        movementTimerS: 10
+-        jumpTimeS: 1
+-        attackTimerS: 29
+-        attackProbability: 0.1
+-        dodgeProbability: 0.15
+-        dodgeDurationS: 1
+-        dodgeDistance: 1
+-        cameraDistance: 2.775
+-        minPokemonActionFrequencyS: 0.2
+-        maxPokemonActionFrequencyS: 1.6
+-      }
+-      stats {
+-        baseStamina: 111
+-        baseAttack: 112
+-        baseDefense: 96
+-      }
+-      quickMoves: THUNDER_SHOCK_FAST
+-      quickMoves: QUICK_ATTACK_FAST
+-      cinematicMoves: DISCHARGE
+-      cinematicMoves: THUNDERBOLT
+-      cinematicMoves: WILD_CHARGE
+-      animationTime: 1.8333
+-      animationTime: 0.6667
+-      animationTime: 1.6
+-      animationTime: 1.5667
+-      animationTime: 0
+-      animationTime: 1.8
+-      animationTime: 1.1333
+-      animationTime: 1.06666696
+-      evolutionIds: RAICHU
+-      evolutionPips: 1
+-      pokedexHeightM: 0.4
+-      pokedexWeightKg: 6
+-      parentPokemonId: PICHU
+-      heightStdDev: 0.05
+-      weightStdDev: 0.75
+-      familyId: FAMILY_PIKACHU
+-      candyToEvolve: 50
+-      kmBuddyDistance: 1
+-      buddy_size: BUDDY_SHOULDER
+-      modelHeight: 0.4
+-      modelScaleV2: 1.1
+-      form: PIKACHU_GLASS_HELMET_2026
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetMale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyOffsetFemale: 0
+-      buddyScale: 11
+-      third_move {
+-        stardustToUnlock: 10000
+-        candyToUnlock: 25
+-      }
+-      isTransferable: true
+-      isDeployable: true
+-      isTradable: true
+-      buddyGroupNumber: 1
+-      eliteQuickMove: PRESENT_FAST
+-      eliteCinematicMove: SURF
+-      eliteCinematicMove: THUNDER
+-      buddyWalkedMegaEnergyAwards {
+-        megaPokemonId: RAICHU
+-        megaEnergyAwardAmount: 5
+-        tempEvoId: TEMP_EVOLUTION_MEGA_X
+-      }
+-      buddyWalkedMegaEnergyAwards {
+-        megaPokemonId: RAICHU
+-        megaEnergyAwardAmount: 5
+-        tempEvoId: TEMP_EVOLUTION_MEGA_Y
+-      }
+-      disableTransferToPokemonHome: true
+-      ibfc {
+-      }
+-      breadTierGroup: GROUP_1
+-    }
+-  }
+-}
+-template {
+-  template_id: "BADGE_EVENT_0244"
+-  data {
+-    template_id: "BADGE_EVENT_0244"
+-    badgeSettings {
+-      badgeType: BADGE_EVENT_0244
+-      badgeRank: 2
+-      targets: 100
+-      eventBadge: true
+-      eventBadgeSettings {
+-        obEventBadgeSettingsNumber6: 1
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
+-  data {
+-    template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK"
+-    iapItemDisplay {
+-      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
+-      sortOrder: 1
+-      hidden: true
+-      title: "season_pass_premium_track_title_fall_marathon_2026"
+-      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2025-10-21T20:00:00"
+-      skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1761076800000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+-    }
+-  }
+-}
+-template {
+-  template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
+-  data {
+-    template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_PLUS_POINTS"
+-    iapItemDisplay {
+-      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
+-      sortOrder: 1
+-      hidden: true
+-      title: "season_pass_premium_track_plus_six_ranks_title_fall_marathon_2026"
+-      description: "event_pass_plus_points_6_ranks_description"
+-      skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2025-10-21T20:00:00"
+-      skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1761076800000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+-    }
+-  }
+-}
+-template {
+-  template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_REDIRECT"
+-  data {
+-    template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_REDIRECT"
+-    iapItemDisplay {
+-      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_redirect"
+-      sortOrder: 1
+-      hidden: true
+-      title: "season_pass_premium_track_title_fall_marathon_2026"
+-      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2025-10-21T20:00:00"
+-      skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1761076800000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+-    }
+-  }
+-}
+-template {
+-  template_id: "SOFT_SFIDA_FOREGROUND_DESCRIPTION_TEXT_CODE_GATE"
+-  data {
+-    template_id: "SOFT_SFIDA_FOREGROUND_DESCRIPTION_TEXT_CODE_GATE"
+-    codeGateProto {
+-      isEnabled: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "POKEMON_SPAWN_AVOIDANCE_REWORK_FEATURE_GATE"
+-  data {
+-    template_id: "POKEMON_SPAWN_AVOIDANCE_REWORK_FEATURE_GATE"
+-    featureGate {
+-      status: 67485911
+-      rolloutPercentage: 10
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_10_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_10_FREE"
+-    eventPassTierSettings {
+-      rank: 10
+-      track: FREE
+-      minPointsRequired: 900
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "harvestfestival2026_season_pass_rank_02"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_02"
+-        bonusBoxes {
+-          text: "mossy_lure_duration_double"
+-          iconType: LURE_MODULE
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        eventName: "go_pass_cumulative_bonuses_header"
+-        bonusBoxes {
+-          text: "applin_apple_drop_bonus"
+-          iconType: SPAWN_UNKNOWN
+-        }
+-        bonusBoxes {
+-          text: "mossy_lure_duration_double"
+-          iconType: LURE_MODULE
+-        }
+-      }
+-      isMilestoneRank: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_10_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_10_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 10
+-      track: PREMIUM
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "harvestfestival2026_season_pass_rank_02"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_02"
+-        bonusBoxes {
+-          text: "mossy_lure_duration_double"
+-          iconType: LURE_MODULE
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        eventName: "go_pass_cumulative_bonuses_header"
+-        bonusBoxes {
+-          text: "applin_apple_drop_bonus"
+-          iconType: SPAWN_UNKNOWN
+-        }
+-        bonusBoxes {
+-          text: "mossy_lure_duration_double"
+-          iconType: LURE_MODULE
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_11_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_11_FREE"
+-    eventPassTierSettings {
+-      rank: 11
+-      track: FREE
+-      minPointsRequired: 1000
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_11_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_11_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 11
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 7500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_12_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_12_FREE"
+-    eventPassTierSettings {
+-      rank: 12
+-      track: FREE
+-      minPointsRequired: 1100
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_12_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_12_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 12
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_13_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_13_FREE"
+-    eventPassTierSettings {
+-      rank: 13
+-      track: FREE
+-      minPointsRequired: 1200
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_OTHER_EVOLUTION_STONE_MAPLE_B
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_13_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_13_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 13
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_OTHER_EVOLUTION_STONE_MAPLE_B
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_14_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_14_FREE"
+-    eventPassTierSettings {
+-      rank: 14
+-      track: FREE
+-      minPointsRequired: 1300
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SHROOMISH
+-          pokemonDisplay {
+-            form: SHROOMISH_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_14_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_14_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 14
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SKIDDO
+-          pokemonDisplay {
+-            form: SKIDDO_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_15_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_15_FREE"
+-    eventPassTierSettings {
+-      rank: 15
+-      track: FREE
+-      minPointsRequired: 1400
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_TROY_DISK_MOSSY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_15_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_15_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 15
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_TROY_DISK_MOSSY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_16_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_16_FREE"
+-    eventPassTierSettings {
+-      rank: 16
+-      track: FREE
+-      minPointsRequired: 1500
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_16_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_16_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 16
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 7500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_17_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_17_FREE"
+-    eventPassTierSettings {
+-      rank: 17
+-      track: FREE
+-      minPointsRequired: 1600
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_17_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_17_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 17
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_18_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_18_FREE"
+-    eventPassTierSettings {
+-      rank: 18
+-      track: FREE
+-      minPointsRequired: 1700
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SMOLIV
+-          pokemonDisplay {
+-            form: SMOLIV_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_18_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_18_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 18
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SMOLIV
+-          pokemonDisplay {
+-            form: SMOLIV_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_19_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_19_FREE"
+-    eventPassTierSettings {
+-      rank: 19
+-      track: FREE
+-      minPointsRequired: 1800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: COTTONEE
+-          pokemonDisplay {
+-            costume: SPRING_2024
+-            form: COTTONEE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_19_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_19_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 19
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: COTTONEE
+-          pokemonDisplay {
+-            costume: SPRING_2024
+-            form: COTTONEE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_1_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_1_FREE"
+-    eventPassTierSettings {
+-      rank: 1
+-      track: FREE
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "harvestfestival2026_season_pass_rank_01"
+-          durationMins: 131487
+-        }
+-      }
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "harvestfestival2026_season_pass_entitlement"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_01"
+-        bonusBoxes {
+-          text: "applin_apple_drop_bonus"
+-          iconType: SPAWN_UNKNOWN
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        eventName: "go_pass_cumulative_bonuses_header"
+-        bonusBoxes {
+-          text: "applin_apple_drop_bonus"
+-          iconType: SPAWN_UNKNOWN
+-        }
+-      }
+-      isMilestoneRank: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_1_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_1_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 1
+-      track: PREMIUM
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "harvestfestival2026_season_pass_rank_01"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_01"
+-        bonusBoxes {
+-          text: "applin_apple_drop_bonus"
+-          iconType: SPAWN_UNKNOWN
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        eventName: "go_pass_cumulative_bonuses_header"
+-        bonusBoxes {
+-          text: "applin_apple_drop_bonus"
+-          iconType: SPAWN_UNKNOWN
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_20_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_20_FREE"
+-    eventPassTierSettings {
+-      rank: 20
+-      track: FREE
+-      minPointsRequired: 1900
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "harvestfestival2026_season_pass_rank_03"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_03"
+-        bonusBoxes {
+-          text: "bonus_tgr_stardust"
+-          iconType: TEAM_ROCKET
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        eventName: "go_pass_cumulative_bonuses_header"
+-        bonusBoxes {
+-          text: "applin_apple_drop_bonus"
+-          iconType: SPAWN_UNKNOWN
+-        }
+-        bonusBoxes {
+-          text: "mossy_lure_duration_double"
+-          iconType: LURE_MODULE
+-        }
+-        bonusBoxes {
+-          text: "bonus_tgr_stardust"
+-          iconType: TEAM_ROCKET
+-        }
+-      }
+-      isMilestoneRank: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_20_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_20_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 20
+-      track: PREMIUM
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "harvestfestival2026_season_pass_rank_03"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_03"
+-        bonusBoxes {
+-          text: "bonus_tgr_stardust"
+-          iconType: TEAM_ROCKET
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        eventName: "go_pass_cumulative_bonuses_header"
+-        bonusBoxes {
+-          text: "applin_apple_drop_bonus"
+-          iconType: SPAWN_UNKNOWN
+-        }
+-        bonusBoxes {
+-          text: "mossy_lure_duration_double"
+-          iconType: LURE_MODULE
+-        }
+-        bonusBoxes {
+-          text: "bonus_tgr_stardust"
+-          iconType: TEAM_ROCKET
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_21_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_21_FREE"
+-    eventPassTierSettings {
+-      rank: 21
+-      track: FREE
+-      minPointsRequired: 2000
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 7500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_21_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_21_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 21
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 10000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_22_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_22_FREE"
+-    eventPassTierSettings {
+-      rank: 22
+-      track: FREE
+-      minPointsRequired: 2100
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_22_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_22_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 22
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_23_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_23_FREE"
+-    eventPassTierSettings {
+-      rank: 23
+-      track: FREE
+-      minPointsRequired: 2200
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_OTHER_EVOLUTION_STONE_MAPLE_C
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_23_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_23_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 23
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_OTHER_EVOLUTION_STONE_MAPLE_C
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_24_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_24_FREE"
+-    eventPassTierSettings {
+-      rank: 24
+-      track: FREE
+-      minPointsRequired: 2300
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SMOLIV
+-          pokemonDisplay {
+-            form: SMOLIV_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_24_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_24_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 24
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SMOLIV
+-          pokemonDisplay {
+-            form: SMOLIV_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_25_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_25_FREE"
+-    eventPassTierSettings {
+-      rank: 25
+-      track: FREE
+-      minPointsRequired: 2400
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GOLDEN_PINAP_BERRY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_25_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_25_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 25
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_TROY_DISK_MOSSY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_26_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_26_FREE"
+-    eventPassTierSettings {
+-      rank: 26
+-      track: FREE
+-      minPointsRequired: 2500
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 7500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_26_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_26_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 26
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 10000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_27_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_27_FREE"
+-    eventPassTierSettings {
+-      rank: 27
+-      track: FREE
+-      minPointsRequired: 2600
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: APPLIN
+-          amount: 25
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_27_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_27_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 27
+-      track: PREMIUM
+-      rewards {
+-        type: CANDY
+-        candy {
+-          pokemonId: APPLIN
+-          amount: 75
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_28_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_28_FREE"
+-    eventPassTierSettings {
+-      rank: 28
+-      track: FREE
+-      minPointsRequired: 2700
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: COTTONEE
+-          pokemonDisplay {
+-            costume: SPRING_2024
+-            form: COTTONEE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_28_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_28_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 28
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: COTTONEE
+-          pokemonDisplay {
+-            costume: SPRING_2024
+-            form: COTTONEE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_29_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_29_FREE"
+-    eventPassTierSettings {
+-      rank: 29
+-      track: FREE
+-      minPointsRequired: 2800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: APPLIN
+-          pokemonDisplay {
+-            form: APPLIN_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_29_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_29_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 29
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SNORLAX
+-          pokemonDisplay {
+-            form: SNORLAX_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_2_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_2_FREE"
+-    eventPassTierSettings {
+-      rank: 2
+-      track: FREE
+-      minPointsRequired: 100
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_POKE_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_2_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_2_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 2
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GIOVANNI_MAP
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_30_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_30_FREE"
+-    eventPassTierSettings {
+-      rank: 30
+-      track: FREE
+-      minPointsRequired: 2900
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GIOVANNI_MAP
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_30_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_30_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 30
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: APPLIN
+-          pokemonDisplay {
+-            form: APPLIN_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_31_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_31_FREE"
+-    eventPassTierSettings {
+-      rank: 31
+-      track: FREE
+-      minPointsRequired: 3000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_31_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_31_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 31
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_32_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_32_FREE"
+-    eventPassTierSettings {
+-      rank: 32
+-      track: FREE
+-      minPointsRequired: 3100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_32_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_32_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 32
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_33_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_33_FREE"
+-    eventPassTierSettings {
+-      rank: 33
+-      track: FREE
+-      minPointsRequired: 3200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_33_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_33_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 33
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_34_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_34_FREE"
+-    eventPassTierSettings {
+-      rank: 34
+-      track: FREE
+-      minPointsRequired: 3300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_34_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_34_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 34
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_35_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_35_FREE"
+-    eventPassTierSettings {
+-      rank: 35
+-      track: FREE
+-      minPointsRequired: 3400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_35_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_35_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 35
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_36_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_36_FREE"
+-    eventPassTierSettings {
+-      rank: 36
+-      track: FREE
+-      minPointsRequired: 3500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_36_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_36_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 36
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_37_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_37_FREE"
+-    eventPassTierSettings {
+-      rank: 37
+-      track: FREE
+-      minPointsRequired: 3600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_37_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_37_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 37
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_38_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_38_FREE"
+-    eventPassTierSettings {
+-      rank: 38
+-      track: FREE
+-      minPointsRequired: 3700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_38_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_38_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 38
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_39_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_39_FREE"
+-    eventPassTierSettings {
+-      rank: 39
+-      track: FREE
+-      minPointsRequired: 3800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_39_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_39_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 39
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_3_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_3_FREE"
+-    eventPassTierSettings {
+-      rank: 3
+-      track: FREE
+-      minPointsRequired: 200
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_OTHER_EVOLUTION_STONE_MAPLE_A
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_3_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_3_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 3
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_OTHER_EVOLUTION_STONE_MAPLE_A
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_40_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_40_FREE"
+-    eventPassTierSettings {
+-      rank: 40
+-      track: FREE
+-      minPointsRequired: 3900
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_40_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_40_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 40
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_41_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_41_FREE"
+-    eventPassTierSettings {
+-      rank: 41
+-      track: FREE
+-      minPointsRequired: 4000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_41_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_41_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 41
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_42_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_42_FREE"
+-    eventPassTierSettings {
+-      rank: 42
+-      track: FREE
+-      minPointsRequired: 4100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_42_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_42_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 42
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_43_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_43_FREE"
+-    eventPassTierSettings {
+-      rank: 43
+-      track: FREE
+-      minPointsRequired: 4200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_43_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_43_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 43
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_44_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_44_FREE"
+-    eventPassTierSettings {
+-      rank: 44
+-      track: FREE
+-      minPointsRequired: 4300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_44_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_44_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 44
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_45_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_45_FREE"
+-    eventPassTierSettings {
+-      rank: 45
+-      track: FREE
+-      minPointsRequired: 4400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_45_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_45_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 45
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_46_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_46_FREE"
+-    eventPassTierSettings {
+-      rank: 46
+-      track: FREE
+-      minPointsRequired: 4500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_46_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_46_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 46
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_47_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_47_FREE"
+-    eventPassTierSettings {
+-      rank: 47
+-      track: FREE
+-      minPointsRequired: 4600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_47_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_47_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 47
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_48_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_48_FREE"
+-    eventPassTierSettings {
+-      rank: 48
+-      track: FREE
+-      minPointsRequired: 4700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_48_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_48_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 48
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_49_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_49_FREE"
+-    eventPassTierSettings {
+-      rank: 49
+-      track: FREE
+-      minPointsRequired: 4800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_49_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_49_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 49
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_4_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_4_FREE"
+-    eventPassTierSettings {
+-      rank: 4
+-      track: FREE
+-      minPointsRequired: 300
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: LECHONK
+-          pokemonDisplay {
+-            form: LECHONK_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_4_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_4_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 4
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: FOONGUS
+-          pokemonDisplay {
+-            form: FOONGUS_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_50_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_50_FREE"
+-    eventPassTierSettings {
+-      rank: 50
+-      track: FREE
+-      minPointsRequired: 4900
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_50_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_50_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 50
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_51_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_51_FREE"
+-    eventPassTierSettings {
+-      rank: 51
+-      track: FREE
+-      minPointsRequired: 5000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_51_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_51_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 51
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_52_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_52_FREE"
+-    eventPassTierSettings {
+-      rank: 52
+-      track: FREE
+-      minPointsRequired: 5100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_52_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_52_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 52
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_53_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_53_FREE"
+-    eventPassTierSettings {
+-      rank: 53
+-      track: FREE
+-      minPointsRequired: 5200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_53_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_53_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 53
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_54_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_54_FREE"
+-    eventPassTierSettings {
+-      rank: 54
+-      track: FREE
+-      minPointsRequired: 5300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_54_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_54_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 54
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_55_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_55_FREE"
+-    eventPassTierSettings {
+-      rank: 55
+-      track: FREE
+-      minPointsRequired: 5400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_55_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_55_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 55
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_56_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_56_FREE"
+-    eventPassTierSettings {
+-      rank: 56
+-      track: FREE
+-      minPointsRequired: 5500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_56_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_56_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 56
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_57_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_57_FREE"
+-    eventPassTierSettings {
+-      rank: 57
+-      track: FREE
+-      minPointsRequired: 5600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_57_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_57_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 57
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_58_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_58_FREE"
+-    eventPassTierSettings {
+-      rank: 58
+-      track: FREE
+-      minPointsRequired: 5700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_58_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_58_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 58
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_59_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_59_FREE"
+-    eventPassTierSettings {
+-      rank: 59
+-      track: FREE
+-      minPointsRequired: 5800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_59_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_59_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 59
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_5_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_5_FREE"
+-    eventPassTierSettings {
+-      rank: 5
+-      track: FREE
+-      minPointsRequired: 400
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 2500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_5_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_5_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 5
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_60_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_60_FREE"
+-    eventPassTierSettings {
+-      rank: 60
+-      track: FREE
+-      minPointsRequired: 5900
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: APPLIN
+-          pokemonDisplay {
+-            form: APPLIN_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_60_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_60_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 60
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: APPLIN
+-          pokemonDisplay {
+-            form: APPLIN_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_6_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_6_FREE"
+-    eventPassTierSettings {
+-      rank: 6
+-      track: FREE
+-      minPointsRequired: 500
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GOLDEN_RAZZ_BERRY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_6_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_6_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 6
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_TROY_DISK_MOSSY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_7_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_7_FREE"
+-    eventPassTierSettings {
+-      rank: 7
+-      track: FREE
+-      minPointsRequired: 600
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GREAT_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_7_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_7_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 7
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GREAT_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_8_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_8_FREE"
+-    eventPassTierSettings {
+-      rank: 8
+-      track: FREE
+-      minPointsRequired: 700
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SMOLIV
+-          pokemonDisplay {
+-            form: SMOLIV_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_8_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_8_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 8
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: APPLIN
+-          pokemonDisplay {
+-            form: APPLIN_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_9_FREE"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_9_FREE"
+-    eventPassTierSettings {
+-      rank: 9
+-      track: FREE
+-      minPointsRequired: 800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: COTTONEE
+-          pokemonDisplay {
+-            costume: SPRING_2024
+-            form: COTTONEE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_9_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_HARVESTFESTIVAL2026_EVENT_9_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 9
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: COTTONEE
+-          pokemonDisplay {
+-            costume: SPRING_2024
+-            form: COTTONEE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "LC_POKELID_NAGANO"
+-  data {
+-    template_id: "LC_POKELID_NAGANO"
+-    locationCardSettings {
+-      locationCard: LC_POKELID_NAGANO
+-      imageUrl: "lc_pokelid_nagano"
+-    }
+-  }
+-}
+-template {
+-  template_id: "MAP_OBJECT_COLLISION_AVOIDANCE_SETTINGS"
+-  data {
+-    template_id: "MAP_OBJECT_COLLISION_AVOIDANCE_SETTINGS"
+-    300 {
+-      1: 0x3f800000
+-      2: 0x3e800000
+-      3: 0x40c00000
+-    }
+-  }
+-}
+-template {
+-  template_id: "pgorelease.september3_2026_deluxe_event_pass_track_unlock"
+-  data {
+-    template_id: "pgorelease.september3_2026_deluxe_event_pass_track_unlock"
+-    iapItemDisplay {
+-      sku: "pgorelease.september3_2026_deluxe_event_pass_track_unlock"
+-      sortOrder: 1
+-      title: "season_pass_premium_track_title_harvest_festival_2026"
+-      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2025-09-29T10:00:00"
+-      skuDisableTime: "2026-10-07T20:00:00"
+-      skuEnableTimeUtcMs: 1759140000000
+-      skuDisableTimeUtcMs: 1791403200000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F3cd7734c_PGO-MCS_Harvest_Festival_2026_TICKET_v1-1024x512_nologo.png"
+-    }
+-  }
+-}
+-template {
+-  template_id: "pgorelease.september3_2026_deluxe_event_pass_track_unlock_plus_points"
+-  data {
+-    template_id: "pgorelease.september3_2026_deluxe_event_pass_track_unlock_plus_points"
+-    iapItemDisplay {
+-      sku: "pgorelease.september3_2026_deluxe_event_pass_track_unlock_plus_points"
+-      sortOrder: 1
+-      title: "season_pass_premium_track_plus_six_ranks_title_harvest_festival_2026"
+-      description: "event_pass_plus_points_6_ranks_description"
+-      skuEnableTime: "2025-09-29T10:00:00"
+-      skuDisableTime: "2026-10-07T20:00:00"
+-      skuEnableTimeUtcMs: 1759140000000
+-      skuDisableTimeUtcMs: 1791403200000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F3cd7734c_PGO-MCS_Harvest_Festival_2026_TICKET_v1-1024x512_nologo.png"
+-    }
+-  }
+-}
+-batch_id: 1790661633037
++batch_id: 1790753454239
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -503070,6 +505259,7 @@
+ experiment_id: 170
+-experiment_id: 174
++experiment_id: 175
+ experiment_id: 300
+ experiment_id: 320
  experiment_id: 351
- experiment_id: 408
- experiment_id: 409
-+experiment_id: 410
- experiment_id: 421
- experiment_id: 427
- experiment_id: 511
-@@ -503094,14 +505284,14 @@
+@@ -505281,17 +504297,18 @@
+ experiment_id: 3104
+ experiment_id: 3105
+ experiment_id: 3106
++experiment_id: 3111
  experiment_id: 3120
  experiment_id: 3125
- experiment_id: 3163
--experiment_id: 4772
--experiment_id: 4812
--experiment_id: 4819
-+experiment_id: 4744
-+experiment_id: 4745
-+experiment_id: 4749
+-experiment_id: 3163
++experiment_id: 3168
+ experiment_id: 4744
+ experiment_id: 4745
+ experiment_id: 4749
  experiment_id: 4998
++experiment_id: 5007
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
--experiment_id: 5262
-+experiment_id: 5209
+-experiment_id: 5209
  experiment_id: 5501
  experiment_id: 5502
  experiment_id: 5506
-@@ -503115,6 +505305,7 @@
+@@ -505304,6 +504321,7 @@
+ experiment_id: 7012
  experiment_id: 8830
  experiment_id: 8831
++experiment_id: 8833
  experiment_id: 8999
-+experiment_id: 9315
+ experiment_id: 9315
  experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
-@@ -503145,4 +505336,5 @@
- experiment_id: 6600435
- experiment_id: 6600436
- experiment_id: 6600443
-+experiment_id: 11000099
- experiment_id: 173173183
