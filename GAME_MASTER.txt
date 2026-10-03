@@ -47675,7 +47675,7 @@ template {
       rvnVersion: 1
       maxPlayersPerBreadDoughLobby: 100
       maxRemotePlayersPerBreadDoughLobby: 100
-      maxRemoteBreadBattlePassesAllowed: 10
+      maxRemoteBreadBattlePassesAllowed: 20
       maxNumFriendInvitesToBreadDoughLobbyPerAction: 10
       fetchProfileFromSocialEnabled: true
       maxPlayersToPrepareBreadDoughLobby: 98
@@ -163706,6 +163706,9 @@ template {
       forms {
         form: SLIGGOO_NORMAL
       }
+      forms {
+        form: SLIGGOO_HISUIAN
+      }
     }
   }
 }
@@ -163717,6 +163720,9 @@ template {
       pokemon: GOODRA
       forms {
         form: GOODRA_NORMAL
+      }
+      forms {
+        form: GOODRA_HISUIAN
       }
     }
   }
@@ -169491,7 +169497,6 @@ template {
       }
       timePeriodCounters {
         playerActivity {
-          limit: 500
         }
       }
       hideItemInInventory: true
@@ -169671,7 +169676,6 @@ template {
       }
       timePeriodCounters {
         playerActivity {
-          limit: 250
         }
       }
       hideItemInInventory: true
@@ -171811,38 +171815,35 @@ template {
     template_id: "ITEM_EXPIRATION_ITEM_WILD_BALL"
     itemExpirationSettings {
       item: ITEM_WILD_BALL
-      expirationTime: "2025-11-16T18:00:00"
-      emergencyExpirationTime: "2025-11-16T18:00:00"
+      expirationTime: "2026-11-15T18:00:00"
+      emergencyExpirationTime: "2026-11-15T18:00:00"
       itemEnablementSettings {
         enabledTimePeriods {
-          enabledStartTime: "2025-11-15T10:00:00"
-          enabledEndTime: "2025-11-15T18:00:00"
+          enabledStartTime: "2026-11-14T10:00:00"
+          enabledEndTime: "2026-11-14T18:00:00"
         }
         enabledTimePeriods {
-          enabledStartTime: "2025-11-16T10:00:00"
-          enabledEndTime: "2025-11-16T18:00:00"
+          enabledStartTime: "2026-11-15T10:00:00"
+          enabledEndTime: "2026-11-15T18:00:00"
         }
       }
     }
   }
 }
 template {
-  template_id: "ITEM_EXPIRATION_ITEM_WILD_BALL_PREMIER"
+  template_id: "EXTENDED_V0705_POKEMON_SLIGGOO_HISUIAN"
   data {
-    template_id: "ITEM_EXPIRATION_ITEM_WILD_BALL_PREMIER"
-    itemExpirationSettings {
-      item: ITEM_WILD_BALL_PREMIER
-      expirationTime: "2025-11-16T18:00:00"
-      emergencyExpirationTime: "2025-11-16T18:00:00"
-      itemEnablementSettings {
-        enabledTimePeriods {
-          enabledStartTime: "2025-11-15T10:00:00"
-          enabledEndTime: "2025-11-15T18:00:00"
-        }
-        enabledTimePeriods {
-          enabledStartTime: "2025-11-16T10:00:00"
-          enabledEndTime: "2025-11-16T18:00:00"
-        }
+    template_id: "EXTENDED_V0705_POKEMON_SLIGGOO_HISUIAN"
+    pokemonExtendedSettings {
+      uniqueId: SLIGGOO
+      form: SLIGGOO_HISUIAN
+      sizeSettings {
+        xxsLowerBound: 0.392
+        xsLowerBound: 0.4
+        mLowerBound: 0.6
+        mUpperBound: 1
+        xlUpperBound: 1.2
+        xxlUpperBound: 1.4
       }
     }
   }
@@ -173504,6 +173505,7 @@ template {
     locationCardSettings {
       locationCard: LC_2024_BALI_AIRADVENTURES_001
       imageUrl: "lc_AirAdv2024_bali"
+      13: 1
     }
   }
 }
@@ -173514,6 +173516,7 @@ template {
     locationCardSettings {
       locationCard: LC_2024_FUKUOKA_GOWA_001
       imageUrl: "lc_GOWA_fukuoka"
+      13: 1
     }
   }
 }
@@ -173564,6 +173567,7 @@ template {
     locationCardSettings {
       locationCard: LC_2024_LOSANGELES_GOTOUR_001
       imageUrl: "lc_GoTour2024_losAngeles"
+      13: 1
     }
   }
 }
@@ -173585,6 +173589,7 @@ template {
     locationCardSettings {
       locationCard: LC_2024_MILAN_CITYSAFARI_001
       imageUrl: "lc_CitySafari2024_milan"
+      13: 1
     }
   }
 }
@@ -173735,6 +173740,7 @@ template {
     locationCardSettings {
       locationCard: LC_2024_MUMBAI_CITYSAFARI_001
       imageUrl: "lc_CitySafari2024_mumbai"
+      13: 1
     }
   }
 }
@@ -173746,6 +173752,7 @@ template {
       locationCard: LC_2024_NYC_GOFEST_001
       imageUrl: "lc_GoFest2024_newyork"
       cardType: LOCATION_CARD
+      13: 1
     }
   }
 }
@@ -173756,6 +173763,7 @@ template {
     locationCardSettings {
       locationCard: LC_2024_SANTIAGO_CITYSAFARI_001
       imageUrl: "lc_CitySafari2024_santiago"
+      13: 1
     }
   }
 }
@@ -173787,6 +173795,7 @@ template {
     locationCardSettings {
       locationCard: LC_2024_SINGAPORE_CITYSAFARI_001
       imageUrl: "lc_CitySafari2024_singapore"
+      13: 1
     }
   }
 }
@@ -173817,6 +173826,7 @@ template {
     locationCardSettings {
       locationCard: LC_2024_YOGYAKARTA_AIRADVENTURES_001
       imageUrl: "lc_AirAdv2024_yogyakarta"
+      13: 1
     }
   }
 }
@@ -173928,6 +173938,7 @@ template {
       locationCard: LC_2025_JERSEYCITY_GOFEST_001
       imageUrl: "lc_GoFest2025_jerseycity"
       cardType: LOCATION_CARD
+      13: 1
     }
   }
 }
@@ -173938,6 +173949,7 @@ template {
     locationCardSettings {
       locationCard: LC_2025_KR_PYEONGCHANG_WINTER_FESTIVAL
       imageUrl: "lc_2025_kr_pyeongchangWinterFestival"
+      13: 1
     }
   }
 }
@@ -173959,6 +173971,7 @@ template {
       locationCard: LC_2025_LOSANGELES_GOTOUR_001
       imageUrl: "lc_GoTour2025_losAngeles"
       cardType: LOCATION_CARD
+      13: 1
     }
   }
 }
@@ -174031,6 +174044,7 @@ template {
       locationCard: LC_2025_OSAKA_GOFEST_001
       imageUrl: "lc_GoFest2025_osaka"
       cardType: LOCATION_CARD
+      13: 1
     }
   }
 }
@@ -174062,6 +174076,7 @@ template {
       locationCard: LC_2025_PARIS_GOFEST_001
       imageUrl: "lc_GoFest2025_paris"
       cardType: LOCATION_CARD
+      13: 1
     }
   }
 }
@@ -174122,6 +174137,7 @@ template {
     locationCardSettings {
       locationCard: LC_2026_BR_001
       imageUrl: "lc_2026_br_001"
+      13: 1
     }
   }
 }
@@ -174184,6 +174200,7 @@ template {
     locationCardSettings {
       locationCard: LC_2026_JP_RED
       imageUrl: "lc_2026_jp_red"
+      13: 1
     }
   }
 }
@@ -174205,6 +174222,7 @@ template {
     locationCardSettings {
       locationCard: LC_2026_MLB_TBRAYS
       imageUrl: "lc_MLB_tampaBayRays2"
+      13: 1
     }
   }
 }
@@ -174305,6 +174323,7 @@ template {
     locationCardSettings {
       locationCard: LC_2026_NPB_010
       imageUrl: "lc_2026_NPB_belluna"
+      13: 1
     }
   }
 }
@@ -174315,6 +174334,7 @@ template {
     locationCardSettings {
       locationCard: LC_2026_NPB_011
       imageUrl: "lc_2026_NPB_zozoMarine"
+      13: 1
     }
   }
 }
@@ -174365,6 +174385,7 @@ template {
     locationCardSettings {
       locationCard: LC_2026_SANFRANCISCO_WCS_001
       imageUrl: "lc_Wcs2026_sanFrancisco"
+      13: 1
     }
   }
 }
@@ -174397,6 +174418,7 @@ template {
     locationCardSettings {
       locationCard: LC_CITYSAFARI2025_BUENOSAIRES
       imageUrl: "lc_CitySafari2025_buenosAires"
+      13: 1
     }
   }
 }
@@ -174448,6 +174470,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_1
       imageUrl: "lc_pokecenter_sapporo"
+      13: 1
     }
   }
 }
@@ -174458,6 +174481,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_10
       imageUrl: "lc_pokecenter_kanazawa"
+      13: 1
     }
   }
 }
@@ -174468,6 +174492,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_11
       imageUrl: "lc_pokecenter_kyoto"
+      13: 1
     }
   }
 }
@@ -174478,6 +174503,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_12
       imageUrl: "lc_pokecenter_osakaDX"
+      13: 1
     }
   }
 }
@@ -174488,6 +174514,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_13
       imageUrl: "lc_pokecenter_osaka"
+      13: 1
     }
   }
 }
@@ -174498,6 +174525,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_14
       imageUrl: "lc_pokecenter_hiroshima"
+      13: 1
     }
   }
 }
@@ -174508,6 +174536,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_15
       imageUrl: "lc_pokecenter_kagawa"
+      13: 1
     }
   }
 }
@@ -174518,6 +174547,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_16
       imageUrl: "lc_pokecenter_fukuoka"
+      13: 1
     }
   }
 }
@@ -174528,6 +174558,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_17
       imageUrl: "lc_pokecenter_okinawa"
+      13: 1
     }
   }
 }
@@ -174538,6 +174569,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_18
       imageUrl: "lc_pokecenter_GOLab"
+      13: 1
     }
   }
 }
@@ -174548,6 +174580,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_2
       imageUrl: "lc_pokecenter_tohoku"
+      13: 1
     }
   }
 }
@@ -174558,6 +174591,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_3
       imageUrl: "lc_pokecenter_tokyoDX"
+      13: 1
     }
   }
 }
@@ -174568,6 +174602,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_4
       imageUrl: "lc_pokecenter_megaTokyo"
+      13: 1
     }
   }
 }
@@ -174578,6 +174613,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_5
       imageUrl: "lc_pokecenter_shibuya"
+      13: 1
     }
   }
 }
@@ -174588,6 +174624,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_6
       imageUrl: "lc_pokecenter_skytreeTown"
+      13: 1
     }
   }
 }
@@ -174598,6 +174635,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_7
       imageUrl: "lc_pokecenter_tokyoBay"
+      13: 1
     }
   }
 }
@@ -174608,6 +174646,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_8
       imageUrl: "lc_pokecenter_yokohama"
+      13: 1
     }
   }
 }
@@ -174618,6 +174657,7 @@ template {
     locationCardSettings {
       locationCard: LC_JAPAN_STAMP_RALLY_9
       imageUrl: "lc_pokecenter_nagoya"
+      13: 1
     }
   }
 }
@@ -175329,6 +175369,7 @@ template {
     locationCardSettings {
       locationCard: LC_SAFARI_2026_BOSTON
       imageUrl: "lc_CitySafari2026_boston"
+      13: 1
     }
   }
 }
@@ -175339,6 +175380,7 @@ template {
     locationCardSettings {
       locationCard: LC_SAFARI_2026_BRISBANE
       imageUrl: "lc_CitySafari2026_brisbane"
+      13: 1
     }
   }
 }
@@ -175349,6 +175391,7 @@ template {
     locationCardSettings {
       locationCard: LC_SAFARI_2026_LISBON
       imageUrl: "lc_CitySafari2026_lisbon"
+      13: 1
     }
   }
 }
@@ -175359,6 +175402,7 @@ template {
     locationCardSettings {
       locationCard: LC_SAFARI_2026_MARSEILLE
       imageUrl: "lc_CitySafari2026_marseille"
+      13: 1
     }
   }
 }
@@ -175369,6 +175413,7 @@ template {
     locationCardSettings {
       locationCard: LC_SAFARI_2026_MUNICH
       imageUrl: "lc_CitySafari2026_munich"
+      13: 1
     }
   }
 }
@@ -175379,6 +175424,7 @@ template {
     locationCardSettings {
       locationCard: LC_SAFARI_2026_RDJ
       imageUrl: "lc_CitySafari2026_rio"
+      13: 1
     }
   }
 }
@@ -176098,6 +176144,7 @@ template {
     locationCardSettings {
       locationCard: LC_TOKMUN_STAMP_01
       imageUrl: "lc_TokMun_shinagawa"
+      13: 1
     }
   }
 }
@@ -176128,6 +176175,7 @@ template {
     locationCardSettings {
       locationCard: LC_TPC30_MY
       imageUrl: "lc_tpc30th_malaysia"
+      13: 1
     }
   }
 }
@@ -176138,6 +176186,7 @@ template {
     locationCardSettings {
       locationCard: LC_TPC30_PH
       imageUrl: "lc_tpc30th_philippines"
+      13: 1
     }
   }
 }
@@ -176148,6 +176197,7 @@ template {
     locationCardSettings {
       locationCard: LC_TPC30_SG
       imageUrl: "lc_tpc30th_singapore"
+      13: 1
     }
   }
 }
@@ -176158,6 +176208,7 @@ template {
     locationCardSettings {
       locationCard: LC_TPC30_TW
       imageUrl: "lc_tpc30th_taiwan"
+      13: 1
     }
   }
 }
@@ -182241,8 +182292,8 @@ template {
   data {
     template_id: "MP_SHARED_SETTINGS"
     mpSettings {
-      numMpFromWalkQuest: 300
-      numMetersGoal: 2000
+      numMpFromWalkQuest: 600
+      numMetersGoal: 500
       debugAllowRemoveWalkQuest: true
       numMpFromLootStation: 100
       numExtraMpFromFirstLootStation: 20
@@ -204307,7 +204358,7 @@ template {
     template_id: "REMOTE_RAID_LIMIT_SETTINGS"
     squashSettings {
       enabled: true
-      dailySquashLimit: 10
+      dailySquashLimit: 20
     }
   }
 }
@@ -504735,7 +504786,7 @@ template {
   data {
     template_id: "LC_EMEA_MUSEUM_01"
     locationCardSettings {
-      locationCard: 410
+      locationCard: LC_EMEA_MUSEUM_01
       imageUrl: "lc_ESA_spaceExpoNL"
       13: 1
     }
@@ -504746,7 +504797,7 @@ template {
   data {
     template_id: "LC_EMEA_MUSEUM_02"
     locationCardSettings {
-      locationCard: 411
+      locationCard: LC_EMEA_MUSEUM_02
       imageUrl: "lc_ESA_spaceCenterGermany"
       13: 1
     }
@@ -504757,7 +504808,7 @@ template {
   data {
     template_id: "LC_EMEA_MUSEUM_03"
     locationCardSettings {
-      locationCard: 412
+      locationCard: LC_EMEA_MUSEUM_03
       imageUrl: "lc_ESA_scienceMuseumLondon"
       13: 1
     }
@@ -504768,7 +504819,7 @@ template {
   data {
     template_id: "LC_EMEA_MUSEUM_04"
     locationCardSettings {
-      locationCard: 413
+      locationCard: LC_EMEA_MUSEUM_04
       imageUrl: "lc_ESA_euroSpaceCenter"
       13: 1
     }
@@ -504779,7 +504830,7 @@ template {
   data {
     template_id: "LC_EMEA_MUSEUM_05"
     locationCardSettings {
-      locationCard: 414
+      locationCard: LC_EMEA_MUSEUM_05
       imageUrl: "lc_ESA_ciudadDeLasArtes"
       13: 1
     }
@@ -504790,7 +504841,7 @@ template {
   data {
     template_id: "LC_EMEA_MUSEUM_06"
     locationCardSettings {
-      locationCard: 415
+      locationCard: LC_EMEA_MUSEUM_06
       imageUrl: "lc_ESA_citeDeEspace"
       13: 1
     }
@@ -504909,7 +504960,207 @@ template {
     }
   }
 }
-batch_id: 1790941195705
+template {
+  template_id: "EXTENDED_V0706_POKEMON_GOODRA_HISUIAN"
+  data {
+    template_id: "EXTENDED_V0706_POKEMON_GOODRA_HISUIAN"
+    pokemonExtendedSettings {
+      uniqueId: GOODRA
+      form: GOODRA_HISUIAN
+      sizeSettings {
+        xxsLowerBound: 0.98
+        xsLowerBound: 1
+        mLowerBound: 1.5
+        mUpperBound: 2.5
+        xlUpperBound: 3
+        xxlUpperBound: 3.1
+      }
+    }
+  }
+}
+template {
+  template_id: "SPAWN_V0705_POKEMON_SLIGGOO_HISUIAN"
+  data {
+    template_id: "SPAWN_V0705_POKEMON_SLIGGOO_HISUIAN"
+    genderSettings {
+      pokemon: SLIGGOO
+      gender {
+        malePercent: 0.5
+        femalePercent: 0.5
+      }
+    }
+  }
+}
+template {
+  template_id: "SPAWN_V0706_POKEMON_GOODRA_HISUIAN"
+  data {
+    template_id: "SPAWN_V0706_POKEMON_GOODRA_HISUIAN"
+    genderSettings {
+      pokemon: GOODRA
+      gender {
+        malePercent: 0.5
+        femalePercent: 0.5
+      }
+    }
+  }
+}
+template {
+  template_id: "V0705_POKEMON_SLIGGOO_HISUIAN"
+  data {
+    template_id: "V0705_POKEMON_SLIGGOO_HISUIAN"
+    pokemonSettings {
+      pokemonId: SLIGGOO
+      modelScale: 0.91
+      type: POKEMON_TYPE_STEEL
+      type2: POKEMON_TYPE_DRAGON
+      camera {
+        cylinderRadiusM: 0.8
+        cylinderHeightM: 1.2
+      }
+      encounter {
+        collisionRadiusM: 0.1
+        collisionHeightM: 0.1
+        collisionHeadRadiusM: 0.126
+        movementType: MOVEMENT_JUMP
+        movementTimerS: 10
+        jumpTimeS: 0.9
+        attackTimerS: 29
+        bonusCandyCaptureReward: 2
+        bonusStardustCaptureReward: 200
+        attackProbability: 0.3
+        dodgeProbability: 0.05
+        cameraDistance: 4
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+        bonusXlCandyCaptureReward: 1
+      }
+      stats {
+        baseStamina: 151
+        baseAttack: 153
+        baseDefense: 190
+      }
+      quickMoves: TACKLE_FAST
+      quickMoves: WATER_GUN_FAST
+      cinematicMoves: HEAVY_SLAM
+      cinematicMoves: DRAGON_PULSE
+      cinematicMoves: SLUDGE_WAVE
+      cinematicMoves: WATER_PULSE
+      animationTime: 1.9
+      animationTime: 0.6666
+      animationTime: 1.7666
+      animationTime: 0
+      animationTime: 2.4
+      animationTime: 0.08667
+      animationTime: 0
+      pokedexHeightM: 0.8
+      pokedexWeightKg: 17.5
+      parentPokemonId: GOOMY
+      heightStdDev: 0.1
+      weightStdDev: 2.1875
+      familyId: FAMILY_GOOMY
+      kmBuddyDistance: 5
+      modelHeight: 1.17
+      evolutionBranch {
+        evolution: GOODRA
+        candyCost: 100
+        form: GOODRA_HISUIAN
+        lureItemRequirement: ITEM_TROY_DISK_RAINY
+      }
+      modelScaleV2: 1
+      form: SLIGGOO_HISUIAN
+      buddyScale: 11
+      third_move {
+        stardustToUnlock: 75000
+        candyToUnlock: 75
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 1
+      raidBossDistanceOffset: 2
+      ibfc {
+      }
+      breadTierGroup: GROUP_3
+    }
+  }
+}
+template {
+  template_id: "V0706_POKEMON_GOODRA_HISUIAN"
+  data {
+    template_id: "V0706_POKEMON_GOODRA_HISUIAN"
+    pokemonSettings {
+      pokemonId: GOODRA
+      modelScale: 0.72
+      type: POKEMON_TYPE_STEEL
+      type2: POKEMON_TYPE_DRAGON
+      camera {
+        cylinderRadiusM: 1.4
+        cylinderHeightM: 2.4
+      }
+      encounter {
+        collisionRadiusM: 0.1
+        collisionHeightM: 0.1
+        collisionHeadRadiusM: 0.126
+        movementType: MOVEMENT_JUMP
+        movementTimerS: 10
+        jumpTimeS: 0.9
+        attackTimerS: 29
+        bonusCandyCaptureReward: 7
+        bonusStardustCaptureReward: 400
+        attackProbability: 0.3
+        dodgeProbability: 0.15
+        cameraDistance: 5
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+        bonusXlCandyCaptureReward: 2
+      }
+      stats {
+        baseStamina: 190
+        baseAttack: 211
+        baseDefense: 255
+      }
+      quickMoves: DRAGON_TAIL_FAST
+      quickMoves: IRON_TAIL_FAST
+      quickMoves: WATER_GUN_FAST
+      cinematicMoves: HEAVY_SLAM
+      cinematicMoves: DRACO_METEOR
+      cinematicMoves: SLUDGE_WAVE
+      cinematicMoves: HYDRO_PUMP
+      animationTime: 1.9
+      animationTime: 0.6666
+      animationTime: 1.7666
+      animationTime: 0
+      animationTime: 2.4
+      animationTime: 0.08667
+      animationTime: 0
+      pokedexHeightM: 2
+      pokedexWeightKg: 150.5
+      parentPokemonId: SLIGGOO
+      heightStdDev: 0.25
+      weightStdDev: 18.8125
+      familyId: FAMILY_GOOMY
+      kmBuddyDistance: 5
+      buddy_size: BUDDY_BIG
+      modelHeight: 2.15
+      modelScaleV2: 0.98
+      form: GOODRA_HISUIAN
+      buddyScale: 19
+      third_move {
+        stardustToUnlock: 75000
+        candyToUnlock: 75
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 3
+      raidBossDistanceOffset: 6
+      ibfc {
+      }
+      breadTierGroup: GROUP_3
+    }
+  }
+}
+batch_id: 1790991366795
 experiment_id: 11
 experiment_id: 21
 experiment_id: 101
@@ -504946,14 +505197,17 @@ experiment_id: 3106
 experiment_id: 3111
 experiment_id: 3120
 experiment_id: 3125
-experiment_id: 3141
 experiment_id: 4744
 experiment_id: 4745
+experiment_id: 4747
 experiment_id: 4748
 experiment_id: 4749
 experiment_id: 4750
+experiment_id: 4754
 experiment_id: 4981
+experiment_id: 4982
 experiment_id: 4985
+experiment_id: 4986
 experiment_id: 4998
 experiment_id: 5160
 experiment_id: 5162
@@ -504966,6 +505220,7 @@ experiment_id: 5510
 experiment_id: 5514
 experiment_id: 6075
 experiment_id: 7000
+experiment_id: 7002
 experiment_id: 7003
 experiment_id: 7012
 experiment_id: 8830
