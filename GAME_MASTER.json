@@ -76178,7 +76178,8 @@
                     "ZAMAZENTA",
                     "ENAMORUS",
                     "MIMIKYU",
-                    "CRAMORANT"
+                    "CRAMORANT",
+                    "MINIOR"
                 ],
                 "badgeType": "BADGE_GREAT_LEAGUE",
                 "battlePartyCombatLeagueTemplateId": "COMBAT_LEAGUE_DEFAULT_GREAT",
@@ -190959,10 +190960,13 @@
                 "pokemon": "MINIOR",
                 "forms": [
                     {
-                        "form": "MINIOR_BLUE"
+                        "form": "MINIOR_RED"
                     },
                     {
                         "form": "MINIOR_GREEN"
+                    },
+                    {
+                        "form": "MINIOR_BLUE"
                     },
                     {
                         "form": "MINIOR_INDIGO"
@@ -190971,13 +190975,34 @@
                         "form": "MINIOR_ORANGE"
                     },
                     {
-                        "form": "MINIOR_RED"
-                    },
-                    {
                         "form": "MINIOR_VIOLET"
                     },
                     {
                         "form": "MINIOR_YELLOW"
+                    },
+                    {
+                        "form": "MINIOR_METEOR_BLUE"
+                    },
+                    {
+                        "form": "MINIOR_METEOR_GREEN"
+                    },
+                    {
+                        "form": "MINIOR_METEOR_INDIGO"
+                    },
+                    {
+                        "form": "MINIOR_METEOR_ORANGE"
+                    },
+                    {
+                        "form": "MINIOR_METEOR_RED"
+                    },
+                    {
+                        "form": "MINIOR_METEOR_VIOLET"
+                    },
+                    {
+                        "form": "MINIOR_METEOR_YELLOW"
+                    },
+                    {
+                        "form": "MINIOR_METEOR"
                     }
                 ]
             }
@@ -261445,6 +261470,103 @@
         }
     },
     {
+        "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR",
+        "data": {
+            "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR",
+            "genderSettings": {
+                "pokemon": "MINIOR",
+                "gender": {
+                    "genderlessPercent": 1.0
+                },
+                "form": "MINIOR_METEOR"
+            }
+        }
+    },
+    {
+        "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_BLUE",
+        "data": {
+            "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_BLUE",
+            "genderSettings": {
+                "pokemon": "MINIOR",
+                "gender": {
+                    "genderlessPercent": 1.0
+                }
+            }
+        }
+    },
+    {
+        "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_GREEN",
+        "data": {
+            "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_GREEN",
+            "genderSettings": {
+                "pokemon": "MINIOR",
+                "gender": {
+                    "genderlessPercent": 1.0
+                }
+            }
+        }
+    },
+    {
+        "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_INDIGO",
+        "data": {
+            "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_INDIGO",
+            "genderSettings": {
+                "pokemon": "MINIOR",
+                "gender": {
+                    "genderlessPercent": 1.0
+                }
+            }
+        }
+    },
+    {
+        "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_ORANGE",
+        "data": {
+            "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_ORANGE",
+            "genderSettings": {
+                "pokemon": "MINIOR",
+                "gender": {
+                    "genderlessPercent": 1.0
+                }
+            }
+        }
+    },
+    {
+        "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_RED",
+        "data": {
+            "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_RED",
+            "genderSettings": {
+                "pokemon": "MINIOR",
+                "gender": {
+                    "genderlessPercent": 1.0
+                }
+            }
+        }
+    },
+    {
+        "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_VIOLET",
+        "data": {
+            "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_VIOLET",
+            "genderSettings": {
+                "pokemon": "MINIOR",
+                "gender": {
+                    "genderlessPercent": 1.0
+                }
+            }
+        }
+    },
+    {
+        "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_YELLOW",
+        "data": {
+            "templateId": "SPAWN_V0774_POKEMON_MINIOR_METEOR_YELLOW",
+            "genderSettings": {
+                "pokemon": "MINIOR",
+                "gender": {
+                    "genderlessPercent": 1.0
+                }
+            }
+        }
+    },
+    {
         "templateId": "SPAWN_V0774_POKEMON_MINIOR_ORANGE",
         "data": {
             "templateId": "SPAWN_V0774_POKEMON_MINIOR_ORANGE",
@@ -287484,15 +287606,6 @@
                 "pinClaimableQuestEnabled": true,
                 "notificationServerAuthoritative": true,
                 "favoriteQuestEnabled": true
-            }
-        }
-    },
-    {
-        "templateId": "TODAY_VIEW_V3_CODE_GATE",
-        "data": {
-            "templateId": "TODAY_VIEW_V3_CODE_GATE",
-            "codeGateProto": {
-                "isEnabled": true
             }
         }
     },
@@ -499352,21 +499465,29 @@
                 "pokemonId": "MINIOR",
                 "type": "POKEMON_TYPE_ROCK",
                 "type2": "POKEMON_TYPE_FLYING",
-                "camera": {},
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
                 "encounter": {
-                    "movementType": "MOVEMENT_JUMP",
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
                     "attackProbability": 0.1,
                     "dodgeProbability": 0.15,
                     "dodgeDurationS": 1.0,
                     "dodgeDistance": 0.5,
-                    "cameraDistance": 4.0,
+                    "cameraDistance": 3.0,
                     "minPokemonActionFrequencyS": 0.2,
                     "maxPokemonActionFrequencyS": 1.6
                 },
                 "stats": {
                     "baseStamina": 155,
-                    "baseAttack": 116,
-                    "baseDefense": 194
+                    "baseAttack": 218,
+                    "baseDefense": 131
                 },
                 "quickMoves": [
                     "ROLLOUT_FAST",
@@ -499383,8 +499504,8 @@
                 "weightStdDev": 5.0,
                 "familyId": "FAMILY_MINIOR",
                 "kmBuddyDistance": 3.0,
-                "modelHeight": 1.0,
-                "modelScaleV2": 1.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
                 "buddyOffsetMale": [
                     0.0,
                     0.0,
@@ -499404,7 +499525,20 @@
                 "isDeployable": true,
                 "isTradable": true,
                 "buddyGroupNumber": 2,
-                "ibfc": {},
+                "ibfc": {
+                    "combatEnable": true,
+                    "alternateForm": "MINIOR_METEOR",
+                    "defaultToAlternateIbfcSettings": {
+                        "animationDurationTurns": 5,
+                        "animationPlayPoint": "BEFORE_CM_ATTACKER",
+                        "ibfcVfxKey": "DEFAULT_TO_ALTERNATE"
+                    },
+                    "alternateToDefaultIbfcSettings": {
+                        "animationDurationTurns": 5,
+                        "animationPlayPoint": "BEFORE_CM_ATTACKER",
+                        "ibfcVfxKey": "ALTERNATE_TO_DEFAULT"
+                    }
+                },
                 "breadTierGroup": "GROUP_2"
             }
         }
@@ -499417,14 +499551,22 @@
                 "pokemonId": "MINIOR",
                 "type": "POKEMON_TYPE_ROCK",
                 "type2": "POKEMON_TYPE_FLYING",
-                "camera": {},
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
                 "encounter": {
-                    "movementType": "MOVEMENT_JUMP",
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
                     "attackProbability": 0.1,
                     "dodgeProbability": 0.15,
                     "dodgeDurationS": 1.0,
                     "dodgeDistance": 0.5,
-                    "cameraDistance": 4.0,
+                    "cameraDistance": 3.0,
                     "minPokemonActionFrequencyS": 0.2,
                     "maxPokemonActionFrequencyS": 1.6
                 },
@@ -499448,8 +499590,8 @@
                 "weightStdDev": 0.0375,
                 "familyId": "FAMILY_MINIOR",
                 "kmBuddyDistance": 3.0,
-                "modelHeight": 1.0,
-                "modelScaleV2": 1.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
                 "form": "MINIOR_BLUE",
                 "buddyOffsetMale": [
                     0.0,
@@ -499483,14 +499625,22 @@
                 "pokemonId": "MINIOR",
                 "type": "POKEMON_TYPE_ROCK",
                 "type2": "POKEMON_TYPE_FLYING",
-                "camera": {},
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
                 "encounter": {
-                    "movementType": "MOVEMENT_JUMP",
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
                     "attackProbability": 0.1,
                     "dodgeProbability": 0.15,
                     "dodgeDurationS": 1.0,
                     "dodgeDistance": 0.5,
-                    "cameraDistance": 4.0,
+                    "cameraDistance": 3.0,
                     "minPokemonActionFrequencyS": 0.2,
                     "maxPokemonActionFrequencyS": 1.6
                 },
@@ -499514,8 +499664,8 @@
                 "weightStdDev": 0.0375,
                 "familyId": "FAMILY_MINIOR",
                 "kmBuddyDistance": 3.0,
-                "modelHeight": 1.0,
-                "modelScaleV2": 1.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
                 "form": "MINIOR_GREEN",
                 "buddyOffsetMale": [
                     0.0,
@@ -499549,14 +499699,22 @@
                 "pokemonId": "MINIOR",
                 "type": "POKEMON_TYPE_ROCK",
                 "type2": "POKEMON_TYPE_FLYING",
-                "camera": {},
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
                 "encounter": {
-                    "movementType": "MOVEMENT_JUMP",
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
                     "attackProbability": 0.1,
                     "dodgeProbability": 0.15,
                     "dodgeDurationS": 1.0,
                     "dodgeDistance": 0.5,
-                    "cameraDistance": 4.0,
+                    "cameraDistance": 3.0,
                     "minPokemonActionFrequencyS": 0.2,
                     "maxPokemonActionFrequencyS": 1.6
                 },
@@ -499580,9 +499738,601 @@
                 "weightStdDev": 0.0375,
                 "familyId": "FAMILY_MINIOR",
                 "kmBuddyDistance": 3.0,
-                "modelHeight": 1.0,
-                "modelScaleV2": 1.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
                 "form": "MINIOR_INDIGO",
+                "buddyOffsetMale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyOffsetFemale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyScale": 19.0,
+                "thirdMove": {
+                    "stardustToUnlock": 50000,
+                    "candyToUnlock": 50
+                },
+                "isTransferable": true,
+                "isDeployable": true,
+                "isTradable": true,
+                "buddyGroupNumber": 2,
+                "ibfc": {},
+                "breadTierGroup": "GROUP_2"
+            }
+        }
+    },
+    {
+        "templateId": "V0774_POKEMON_MINIOR_METEOR",
+        "data": {
+            "templateId": "V0774_POKEMON_MINIOR_METEOR",
+            "pokemonSettings": {
+                "pokemonId": "MINIOR",
+                "type": "POKEMON_TYPE_ROCK",
+                "type2": "POKEMON_TYPE_FLYING",
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
+                "encounter": {
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
+                    "attackProbability": 0.1,
+                    "dodgeProbability": 0.15,
+                    "dodgeDurationS": 1.0,
+                    "dodgeDistance": 0.5,
+                    "cameraDistance": 3.0,
+                    "minPokemonActionFrequencyS": 0.2,
+                    "maxPokemonActionFrequencyS": 1.6
+                },
+                "stats": {
+                    "baseStamina": 155,
+                    "baseAttack": 116,
+                    "baseDefense": 194
+                },
+                "quickMoves": [
+                    "ROLLOUT_FAST",
+                    "TAKE_DOWN_FAST"
+                ],
+                "cinematicMoves": [
+                    "POWER_GEM",
+                    "ANCIENT_POWER",
+                    "ACROBATICS"
+                ],
+                "pokedexHeightM": 0.3,
+                "pokedexWeightKg": 0.3,
+                "heightStdDev": 0.0375,
+                "weightStdDev": 0.0375,
+                "familyId": "FAMILY_MINIOR",
+                "kmBuddyDistance": 3.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
+                "form": "MINIOR_METEOR",
+                "buddyOffsetMale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyOffsetFemale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyScale": 19.0,
+                "thirdMove": {
+                    "stardustToUnlock": 50000,
+                    "candyToUnlock": 50
+                },
+                "isTransferable": true,
+                "isDeployable": true,
+                "isTradable": true,
+                "buddyGroupNumber": 2,
+                "ibfc": {},
+                "breadTierGroup": "GROUP_2"
+            }
+        }
+    },
+    {
+        "templateId": "V0774_POKEMON_MINIOR_METEOR_BLUE",
+        "data": {
+            "templateId": "V0774_POKEMON_MINIOR_METEOR_BLUE",
+            "pokemonSettings": {
+                "pokemonId": "MINIOR",
+                "type": "POKEMON_TYPE_ROCK",
+                "type2": "POKEMON_TYPE_FLYING",
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
+                "encounter": {
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
+                    "attackProbability": 0.1,
+                    "dodgeProbability": 0.15,
+                    "dodgeDurationS": 1.0,
+                    "dodgeDistance": 0.5,
+                    "cameraDistance": 3.0,
+                    "minPokemonActionFrequencyS": 0.2,
+                    "maxPokemonActionFrequencyS": 1.6
+                },
+                "stats": {
+                    "baseStamina": 155,
+                    "baseAttack": 116,
+                    "baseDefense": 194
+                },
+                "quickMoves": [
+                    "ROLLOUT_FAST",
+                    "TAKE_DOWN_FAST"
+                ],
+                "cinematicMoves": [
+                    "POWER_GEM",
+                    "ANCIENT_POWER",
+                    "ACROBATICS"
+                ],
+                "pokedexHeightM": 0.3,
+                "pokedexWeightKg": 0.3,
+                "heightStdDev": 0.0375,
+                "weightStdDev": 0.0375,
+                "familyId": "FAMILY_MINIOR",
+                "kmBuddyDistance": 3.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
+                "form": "MINIOR_METEOR_BLUE",
+                "buddyOffsetMale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyOffsetFemale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyScale": 19.0,
+                "thirdMove": {
+                    "stardustToUnlock": 50000,
+                    "candyToUnlock": 50
+                },
+                "isTransferable": true,
+                "isDeployable": true,
+                "isTradable": true,
+                "buddyGroupNumber": 2,
+                "ibfc": {},
+                "breadTierGroup": "GROUP_2"
+            }
+        }
+    },
+    {
+        "templateId": "V0774_POKEMON_MINIOR_METEOR_GREEN",
+        "data": {
+            "templateId": "V0774_POKEMON_MINIOR_METEOR_GREEN",
+            "pokemonSettings": {
+                "pokemonId": "MINIOR",
+                "type": "POKEMON_TYPE_ROCK",
+                "type2": "POKEMON_TYPE_FLYING",
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
+                "encounter": {
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
+                    "attackProbability": 0.1,
+                    "dodgeProbability": 0.15,
+                    "dodgeDurationS": 1.0,
+                    "dodgeDistance": 0.5,
+                    "cameraDistance": 3.0,
+                    "minPokemonActionFrequencyS": 0.2,
+                    "maxPokemonActionFrequencyS": 1.6
+                },
+                "stats": {
+                    "baseStamina": 155,
+                    "baseAttack": 116,
+                    "baseDefense": 194
+                },
+                "quickMoves": [
+                    "ROLLOUT_FAST",
+                    "TAKE_DOWN_FAST"
+                ],
+                "cinematicMoves": [
+                    "POWER_GEM",
+                    "ANCIENT_POWER",
+                    "ACROBATICS"
+                ],
+                "pokedexHeightM": 0.3,
+                "pokedexWeightKg": 0.3,
+                "heightStdDev": 0.0375,
+                "weightStdDev": 0.0375,
+                "familyId": "FAMILY_MINIOR",
+                "kmBuddyDistance": 3.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
+                "form": "MINIOR_METEOR_GREEN",
+                "buddyOffsetMale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyOffsetFemale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyScale": 19.0,
+                "thirdMove": {
+                    "stardustToUnlock": 50000,
+                    "candyToUnlock": 50
+                },
+                "isTransferable": true,
+                "isDeployable": true,
+                "isTradable": true,
+                "buddyGroupNumber": 2,
+                "ibfc": {},
+                "breadTierGroup": "GROUP_2"
+            }
+        }
+    },
+    {
+        "templateId": "V0774_POKEMON_MINIOR_METEOR_INDIGO",
+        "data": {
+            "templateId": "V0774_POKEMON_MINIOR_METEOR_INDIGO",
+            "pokemonSettings": {
+                "pokemonId": "MINIOR",
+                "type": "POKEMON_TYPE_ROCK",
+                "type2": "POKEMON_TYPE_FLYING",
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
+                "encounter": {
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
+                    "attackProbability": 0.1,
+                    "dodgeProbability": 0.15,
+                    "dodgeDurationS": 1.0,
+                    "dodgeDistance": 0.5,
+                    "cameraDistance": 3.0,
+                    "minPokemonActionFrequencyS": 0.2,
+                    "maxPokemonActionFrequencyS": 1.6
+                },
+                "stats": {
+                    "baseStamina": 155,
+                    "baseAttack": 116,
+                    "baseDefense": 194
+                },
+                "quickMoves": [
+                    "ROLLOUT_FAST",
+                    "TAKE_DOWN_FAST"
+                ],
+                "cinematicMoves": [
+                    "POWER_GEM",
+                    "ANCIENT_POWER",
+                    "ACROBATICS"
+                ],
+                "pokedexHeightM": 0.3,
+                "pokedexWeightKg": 0.3,
+                "heightStdDev": 0.0375,
+                "weightStdDev": 0.0375,
+                "familyId": "FAMILY_MINIOR",
+                "kmBuddyDistance": 3.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
+                "form": "MINIOR_METEOR_INDIGO",
+                "buddyOffsetMale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyOffsetFemale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyScale": 19.0,
+                "thirdMove": {
+                    "stardustToUnlock": 50000,
+                    "candyToUnlock": 50
+                },
+                "isTransferable": true,
+                "isDeployable": true,
+                "isTradable": true,
+                "buddyGroupNumber": 2,
+                "ibfc": {},
+                "breadTierGroup": "GROUP_2"
+            }
+        }
+    },
+    {
+        "templateId": "V0774_POKEMON_MINIOR_METEOR_ORANGE",
+        "data": {
+            "templateId": "V0774_POKEMON_MINIOR_METEOR_ORANGE",
+            "pokemonSettings": {
+                "pokemonId": "MINIOR",
+                "type": "POKEMON_TYPE_ROCK",
+                "type2": "POKEMON_TYPE_FLYING",
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
+                "encounter": {
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
+                    "attackProbability": 0.1,
+                    "dodgeProbability": 0.15,
+                    "dodgeDurationS": 1.0,
+                    "dodgeDistance": 0.5,
+                    "cameraDistance": 3.0,
+                    "minPokemonActionFrequencyS": 0.2,
+                    "maxPokemonActionFrequencyS": 1.6
+                },
+                "stats": {
+                    "baseStamina": 155,
+                    "baseAttack": 116,
+                    "baseDefense": 194
+                },
+                "quickMoves": [
+                    "ROLLOUT_FAST",
+                    "TAKE_DOWN_FAST"
+                ],
+                "cinematicMoves": [
+                    "POWER_GEM",
+                    "ANCIENT_POWER",
+                    "ACROBATICS"
+                ],
+                "pokedexHeightM": 0.3,
+                "pokedexWeightKg": 0.3,
+                "heightStdDev": 0.0375,
+                "weightStdDev": 0.0375,
+                "familyId": "FAMILY_MINIOR",
+                "kmBuddyDistance": 3.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
+                "form": "MINIOR_METEOR_ORANGE",
+                "buddyOffsetMale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyOffsetFemale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyScale": 19.0,
+                "thirdMove": {
+                    "stardustToUnlock": 50000,
+                    "candyToUnlock": 50
+                },
+                "isTransferable": true,
+                "isDeployable": true,
+                "isTradable": true,
+                "buddyGroupNumber": 2,
+                "ibfc": {},
+                "breadTierGroup": "GROUP_2"
+            }
+        }
+    },
+    {
+        "templateId": "V0774_POKEMON_MINIOR_METEOR_RED",
+        "data": {
+            "templateId": "V0774_POKEMON_MINIOR_METEOR_RED",
+            "pokemonSettings": {
+                "pokemonId": "MINIOR",
+                "type": "POKEMON_TYPE_ROCK",
+                "type2": "POKEMON_TYPE_FLYING",
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
+                "encounter": {
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
+                    "attackProbability": 0.1,
+                    "dodgeProbability": 0.15,
+                    "dodgeDurationS": 1.0,
+                    "dodgeDistance": 0.5,
+                    "cameraDistance": 3.0,
+                    "minPokemonActionFrequencyS": 0.2,
+                    "maxPokemonActionFrequencyS": 1.6
+                },
+                "stats": {
+                    "baseStamina": 155,
+                    "baseAttack": 116,
+                    "baseDefense": 194
+                },
+                "quickMoves": [
+                    "ROLLOUT_FAST",
+                    "TAKE_DOWN_FAST"
+                ],
+                "cinematicMoves": [
+                    "POWER_GEM",
+                    "ANCIENT_POWER",
+                    "ACROBATICS"
+                ],
+                "pokedexHeightM": 0.3,
+                "pokedexWeightKg": 0.3,
+                "heightStdDev": 0.0375,
+                "weightStdDev": 0.0375,
+                "familyId": "FAMILY_MINIOR",
+                "kmBuddyDistance": 3.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
+                "form": "MINIOR_METEOR_RED",
+                "buddyOffsetMale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyOffsetFemale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyScale": 19.0,
+                "thirdMove": {
+                    "stardustToUnlock": 50000,
+                    "candyToUnlock": 50
+                },
+                "isTransferable": true,
+                "isDeployable": true,
+                "isTradable": true,
+                "buddyGroupNumber": 2,
+                "ibfc": {},
+                "breadTierGroup": "GROUP_2"
+            }
+        }
+    },
+    {
+        "templateId": "V0774_POKEMON_MINIOR_METEOR_VIOLET",
+        "data": {
+            "templateId": "V0774_POKEMON_MINIOR_METEOR_VIOLET",
+            "pokemonSettings": {
+                "pokemonId": "MINIOR",
+                "type": "POKEMON_TYPE_ROCK",
+                "type2": "POKEMON_TYPE_FLYING",
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
+                "encounter": {
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
+                    "attackProbability": 0.1,
+                    "dodgeProbability": 0.15,
+                    "dodgeDurationS": 1.0,
+                    "dodgeDistance": 0.5,
+                    "cameraDistance": 3.0,
+                    "minPokemonActionFrequencyS": 0.2,
+                    "maxPokemonActionFrequencyS": 1.6
+                },
+                "stats": {
+                    "baseStamina": 155,
+                    "baseAttack": 116,
+                    "baseDefense": 194
+                },
+                "quickMoves": [
+                    "ROLLOUT_FAST",
+                    "TAKE_DOWN_FAST"
+                ],
+                "cinematicMoves": [
+                    "POWER_GEM",
+                    "ANCIENT_POWER",
+                    "ACROBATICS"
+                ],
+                "pokedexHeightM": 0.3,
+                "pokedexWeightKg": 0.3,
+                "heightStdDev": 0.0375,
+                "weightStdDev": 0.0375,
+                "familyId": "FAMILY_MINIOR",
+                "kmBuddyDistance": 3.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
+                "form": "MINIOR_METEOR_VIOLET",
+                "buddyOffsetMale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyOffsetFemale": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "buddyScale": 19.0,
+                "thirdMove": {
+                    "stardustToUnlock": 50000,
+                    "candyToUnlock": 50
+                },
+                "isTransferable": true,
+                "isDeployable": true,
+                "isTradable": true,
+                "buddyGroupNumber": 2,
+                "ibfc": {},
+                "breadTierGroup": "GROUP_2"
+            }
+        }
+    },
+    {
+        "templateId": "V0774_POKEMON_MINIOR_METEOR_YELLOW",
+        "data": {
+            "templateId": "V0774_POKEMON_MINIOR_METEOR_YELLOW",
+            "pokemonSettings": {
+                "pokemonId": "MINIOR",
+                "type": "POKEMON_TYPE_ROCK",
+                "type2": "POKEMON_TYPE_FLYING",
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
+                "encounter": {
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
+                    "attackProbability": 0.1,
+                    "dodgeProbability": 0.15,
+                    "dodgeDurationS": 1.0,
+                    "dodgeDistance": 0.5,
+                    "cameraDistance": 3.0,
+                    "minPokemonActionFrequencyS": 0.2,
+                    "maxPokemonActionFrequencyS": 1.6
+                },
+                "stats": {
+                    "baseStamina": 155,
+                    "baseAttack": 116,
+                    "baseDefense": 194
+                },
+                "quickMoves": [
+                    "ROLLOUT_FAST",
+                    "TAKE_DOWN_FAST"
+                ],
+                "cinematicMoves": [
+                    "POWER_GEM",
+                    "ANCIENT_POWER",
+                    "ACROBATICS"
+                ],
+                "pokedexHeightM": 0.3,
+                "pokedexWeightKg": 0.3,
+                "heightStdDev": 0.0375,
+                "weightStdDev": 0.0375,
+                "familyId": "FAMILY_MINIOR",
+                "kmBuddyDistance": 3.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
+                "form": "MINIOR_METEOR_YELLOW",
                 "buddyOffsetMale": [
                     0.0,
                     0.0,
@@ -499615,14 +500365,22 @@
                 "pokemonId": "MINIOR",
                 "type": "POKEMON_TYPE_ROCK",
                 "type2": "POKEMON_TYPE_FLYING",
-                "camera": {},
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
                 "encounter": {
-                    "movementType": "MOVEMENT_JUMP",
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
                     "attackProbability": 0.1,
                     "dodgeProbability": 0.15,
                     "dodgeDurationS": 1.0,
                     "dodgeDistance": 0.5,
-                    "cameraDistance": 4.0,
+                    "cameraDistance": 3.0,
                     "minPokemonActionFrequencyS": 0.2,
                     "maxPokemonActionFrequencyS": 1.6
                 },
@@ -499646,8 +500404,8 @@
                 "weightStdDev": 0.0375,
                 "familyId": "FAMILY_MINIOR",
                 "kmBuddyDistance": 3.0,
-                "modelHeight": 1.0,
-                "modelScaleV2": 1.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
                 "form": "MINIOR_ORANGE",
                 "buddyOffsetMale": [
                     0.0,
@@ -499681,14 +500439,22 @@
                 "pokemonId": "MINIOR",
                 "type": "POKEMON_TYPE_ROCK",
                 "type2": "POKEMON_TYPE_FLYING",
-                "camera": {},
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
                 "encounter": {
-                    "movementType": "MOVEMENT_JUMP",
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
                     "attackProbability": 0.1,
                     "dodgeProbability": 0.15,
                     "dodgeDurationS": 1.0,
                     "dodgeDistance": 0.5,
-                    "cameraDistance": 4.0,
+                    "cameraDistance": 3.0,
                     "minPokemonActionFrequencyS": 0.2,
                     "maxPokemonActionFrequencyS": 1.6
                 },
@@ -499712,8 +500478,8 @@
                 "weightStdDev": 0.0375,
                 "familyId": "FAMILY_MINIOR",
                 "kmBuddyDistance": 3.0,
-                "modelHeight": 1.0,
-                "modelScaleV2": 1.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
                 "form": "MINIOR_RED",
                 "buddyOffsetMale": [
                     0.0,
@@ -499747,14 +500513,22 @@
                 "pokemonId": "MINIOR",
                 "type": "POKEMON_TYPE_ROCK",
                 "type2": "POKEMON_TYPE_FLYING",
-                "camera": {},
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
                 "encounter": {
-                    "movementType": "MOVEMENT_JUMP",
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
                     "attackProbability": 0.1,
                     "dodgeProbability": 0.15,
                     "dodgeDurationS": 1.0,
                     "dodgeDistance": 0.5,
-                    "cameraDistance": 4.0,
+                    "cameraDistance": 3.0,
                     "minPokemonActionFrequencyS": 0.2,
                     "maxPokemonActionFrequencyS": 1.6
                 },
@@ -499778,8 +500552,8 @@
                 "weightStdDev": 0.0375,
                 "familyId": "FAMILY_MINIOR",
                 "kmBuddyDistance": 3.0,
-                "modelHeight": 1.0,
-                "modelScaleV2": 1.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
                 "form": "MINIOR_VIOLET",
                 "buddyOffsetMale": [
                     0.0,
@@ -499813,14 +500587,22 @@
                 "pokemonId": "MINIOR",
                 "type": "POKEMON_TYPE_ROCK",
                 "type2": "POKEMON_TYPE_FLYING",
-                "camera": {},
+                "camera": {
+                    "cylinderRadiusM": 0.2,
+                    "cylinderHeightM": 0.32,
+                    "cylinderGroundM": 0.2
+                },
                 "encounter": {
-                    "movementType": "MOVEMENT_JUMP",
+                    "collisionRadiusM": 0.18,
+                    "collisionHeightM": 0.18,
+                    "collisionHeadRadiusM": 0.18,
+                    "movementType": "MOVEMENT_HOVERING",
+                    "bonusStardustCaptureReward": 900,
                     "attackProbability": 0.1,
                     "dodgeProbability": 0.15,
                     "dodgeDurationS": 1.0,
                     "dodgeDistance": 0.5,
-                    "cameraDistance": 4.0,
+                    "cameraDistance": 3.0,
                     "minPokemonActionFrequencyS": 0.2,
                     "maxPokemonActionFrequencyS": 1.6
                 },
@@ -499844,8 +500626,8 @@
                 "weightStdDev": 0.0375,
                 "familyId": "FAMILY_MINIOR",
                 "kmBuddyDistance": 3.0,
-                "modelHeight": 1.0,
-                "modelScaleV2": 1.0,
+                "modelHeight": 0.3,
+                "modelScaleV2": 1.27,
                 "form": "MINIOR_YELLOW",
                 "buddyOffsetMale": [
                     0.0,
@@ -543841,8 +544623,9 @@
             "templateId": "VS_SEEKER_CLIENT_SETTINGS",
             "vsSeekerClientSettings": {
                 "allowedVsSeekerLeagueTemplateId": [
-                    "COMBAT_LEAGUE_VS_SEEKER_MASTER",
-                    "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT_MEGAS"
+                    "COMBAT_LEAGUE_VS_SEEKER_GREAT_MEGAS",
+                    "COMBAT_LEAGUE_VS_SEEKER_ULTRA_MEGAS",
+                    "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
                 ]
             }
         }

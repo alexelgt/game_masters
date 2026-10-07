@@ -64653,6 +64653,7 @@ template {
       bannedPokemon: ENAMORUS
       bannedPokemon: MIMIKYU
       bannedPokemon: CRAMORANT
+      bannedPokemon: MINIOR
       badgeType: BADGE_GREAT_LEAGUE
       battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
       leagueType: STANDARD
@@ -164692,10 +164693,13 @@ template {
     formSettings {
       pokemon: MINIOR
       forms {
-        form: MINIOR_BLUE
+        form: MINIOR_RED
       }
       forms {
         form: MINIOR_GREEN
+      }
+      forms {
+        form: MINIOR_BLUE
       }
       forms {
         form: MINIOR_INDIGO
@@ -164704,13 +164708,35 @@ template {
         form: MINIOR_ORANGE
       }
       forms {
-        form: MINIOR_RED
-      }
-      forms {
         form: MINIOR_VIOLET
       }
       forms {
         form: MINIOR_YELLOW
+      }
+      forms {
+        form: MINIOR_METEOR_BLUE
+      }
+      forms {
+        form: MINIOR_METEOR_GREEN
+      }
+      forms {
+        form: MINIOR_METEOR_INDIGO
+      }
+      forms {
+        form: MINIOR_METEOR_ORANGE
+      }
+      forms {
+        form: MINIOR_METEOR_RED
+      }
+      forms {
+        form: MINIOR_METEOR_VIOLET
+      }
+      forms {
+        form: MINIOR_METEOR_YELLOW
+      }
+      forms {
+        form: MINIOR_METEOR
+        7: 1
       }
     }
   }
@@ -202878,6 +202904,7 @@ template {
       transporterMaxEnergy: 10000
       energySkuId: "hometransport.1"
       transporterEnergyGainPerHour: 60
+      6: 1
     }
   }
 }
@@ -258455,11 +258482,15 @@ template {
   }
 }
 template {
-  template_id: "TODAY_VIEW_V3_CODE_GATE"
+  template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR"
   data {
-    template_id: "TODAY_VIEW_V3_CODE_GATE"
-    codeGateProto {
-      isEnabled: true
+    template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR"
+    genderSettings {
+      pokemon: MINIOR
+      gender {
+        genderlessPercent: 1
+      }
+      form: MINIOR_METEOR
     }
   }
 }
@@ -447905,21 +447936,28 @@ template {
       type: POKEMON_TYPE_ROCK
       type2: POKEMON_TYPE_FLYING
       camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
       }
       encounter {
-        movementType: MOVEMENT_JUMP
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
         attackProbability: 0.1
         dodgeProbability: 0.15
         dodgeDurationS: 1
         dodgeDistance: 0.5
-        cameraDistance: 4
+        cameraDistance: 3
         minPokemonActionFrequencyS: 0.2
         maxPokemonActionFrequencyS: 1.6
       }
       stats {
         baseStamina: 155
-        baseAttack: 116
-        baseDefense: 194
+        baseAttack: 218
+        baseDefense: 131
       }
       quickMoves: ROLLOUT_FAST
       quickMoves: TAKE_DOWN_FAST
@@ -447932,8 +447970,8 @@ template {
       weightStdDev: 5
       familyId: FAMILY_MINIOR
       kmBuddyDistance: 3
-      modelHeight: 1
-      modelScaleV2: 1
+      modelHeight: 0.3
+      modelScaleV2: 1.27
       buddyOffsetMale: 0
       buddyOffsetMale: 0
       buddyOffsetMale: 0
@@ -447950,6 +447988,19 @@ template {
       isTradable: true
       buddyGroupNumber: 2
       ibfc {
+        combatEnable: true
+        alternateForm: MINIOR_METEOR
+        defaultToAlternateIbfcSettings {
+          animationDurationTurns: 5
+          animationPlayPoint: BEFORE_CM_ATTACKER
+          ibfcVfxKey: DEFAULT_TO_ALTERNATE
+        }
+        alternateToDefaultIbfcSettings {
+          animationDurationTurns: 5
+          animationPlayPoint: BEFORE_CM_ATTACKER
+          ibfcVfxKey: ALTERNATE_TO_DEFAULT
+        }
+        10: "\224\025\225\025\226\025\227\025\230\025\231\025\232\025"
       }
       breadTierGroup: GROUP_2
     }
@@ -447964,14 +448015,21 @@ template {
       type: POKEMON_TYPE_ROCK
       type2: POKEMON_TYPE_FLYING
       camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
       }
       encounter {
-        movementType: MOVEMENT_JUMP
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
         attackProbability: 0.1
         dodgeProbability: 0.15
         dodgeDurationS: 1
         dodgeDistance: 0.5
-        cameraDistance: 4
+        cameraDistance: 3
         minPokemonActionFrequencyS: 0.2
         maxPokemonActionFrequencyS: 1.6
       }
@@ -447991,8 +448049,8 @@ template {
       weightStdDev: 0.0375
       familyId: FAMILY_MINIOR
       kmBuddyDistance: 3
-      modelHeight: 1
-      modelScaleV2: 1
+      modelHeight: 0.3
+      modelScaleV2: 1.27
       form: MINIOR_BLUE
       buddyOffsetMale: 0
       buddyOffsetMale: 0
@@ -448024,14 +448082,21 @@ template {
       type: POKEMON_TYPE_ROCK
       type2: POKEMON_TYPE_FLYING
       camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
       }
       encounter {
-        movementType: MOVEMENT_JUMP
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
         attackProbability: 0.1
         dodgeProbability: 0.15
         dodgeDurationS: 1
         dodgeDistance: 0.5
-        cameraDistance: 4
+        cameraDistance: 3
         minPokemonActionFrequencyS: 0.2
         maxPokemonActionFrequencyS: 1.6
       }
@@ -448051,8 +448116,8 @@ template {
       weightStdDev: 0.0375
       familyId: FAMILY_MINIOR
       kmBuddyDistance: 3
-      modelHeight: 1
-      modelScaleV2: 1
+      modelHeight: 0.3
+      modelScaleV2: 1.27
       form: MINIOR_GREEN
       buddyOffsetMale: 0
       buddyOffsetMale: 0
@@ -448084,14 +448149,21 @@ template {
       type: POKEMON_TYPE_ROCK
       type2: POKEMON_TYPE_FLYING
       camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
       }
       encounter {
-        movementType: MOVEMENT_JUMP
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
         attackProbability: 0.1
         dodgeProbability: 0.15
         dodgeDurationS: 1
         dodgeDistance: 0.5
-        cameraDistance: 4
+        cameraDistance: 3
         minPokemonActionFrequencyS: 0.2
         maxPokemonActionFrequencyS: 1.6
       }
@@ -448111,8 +448183,8 @@ template {
       weightStdDev: 0.0375
       familyId: FAMILY_MINIOR
       kmBuddyDistance: 3
-      modelHeight: 1
-      modelScaleV2: 1
+      modelHeight: 0.3
+      modelScaleV2: 1.27
       form: MINIOR_INDIGO
       buddyOffsetMale: 0
       buddyOffsetMale: 0
@@ -448144,14 +448216,21 @@ template {
       type: POKEMON_TYPE_ROCK
       type2: POKEMON_TYPE_FLYING
       camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
       }
       encounter {
-        movementType: MOVEMENT_JUMP
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
         attackProbability: 0.1
         dodgeProbability: 0.15
         dodgeDurationS: 1
         dodgeDistance: 0.5
-        cameraDistance: 4
+        cameraDistance: 3
         minPokemonActionFrequencyS: 0.2
         maxPokemonActionFrequencyS: 1.6
       }
@@ -448171,8 +448250,8 @@ template {
       weightStdDev: 0.0375
       familyId: FAMILY_MINIOR
       kmBuddyDistance: 3
-      modelHeight: 1
-      modelScaleV2: 1
+      modelHeight: 0.3
+      modelScaleV2: 1.27
       form: MINIOR_ORANGE
       buddyOffsetMale: 0
       buddyOffsetMale: 0
@@ -448204,14 +448283,21 @@ template {
       type: POKEMON_TYPE_ROCK
       type2: POKEMON_TYPE_FLYING
       camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
       }
       encounter {
-        movementType: MOVEMENT_JUMP
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
         attackProbability: 0.1
         dodgeProbability: 0.15
         dodgeDurationS: 1
         dodgeDistance: 0.5
-        cameraDistance: 4
+        cameraDistance: 3
         minPokemonActionFrequencyS: 0.2
         maxPokemonActionFrequencyS: 1.6
       }
@@ -448231,8 +448317,8 @@ template {
       weightStdDev: 0.0375
       familyId: FAMILY_MINIOR
       kmBuddyDistance: 3
-      modelHeight: 1
-      modelScaleV2: 1
+      modelHeight: 0.3
+      modelScaleV2: 1.27
       form: MINIOR_RED
       buddyOffsetMale: 0
       buddyOffsetMale: 0
@@ -448264,14 +448350,21 @@ template {
       type: POKEMON_TYPE_ROCK
       type2: POKEMON_TYPE_FLYING
       camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
       }
       encounter {
-        movementType: MOVEMENT_JUMP
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
         attackProbability: 0.1
         dodgeProbability: 0.15
         dodgeDurationS: 1
         dodgeDistance: 0.5
-        cameraDistance: 4
+        cameraDistance: 3
         minPokemonActionFrequencyS: 0.2
         maxPokemonActionFrequencyS: 1.6
       }
@@ -448291,8 +448384,8 @@ template {
       weightStdDev: 0.0375
       familyId: FAMILY_MINIOR
       kmBuddyDistance: 3
-      modelHeight: 1
-      modelScaleV2: 1
+      modelHeight: 0.3
+      modelScaleV2: 1.27
       form: MINIOR_VIOLET
       buddyOffsetMale: 0
       buddyOffsetMale: 0
@@ -448324,14 +448417,21 @@ template {
       type: POKEMON_TYPE_ROCK
       type2: POKEMON_TYPE_FLYING
       camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
       }
       encounter {
-        movementType: MOVEMENT_JUMP
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
         attackProbability: 0.1
         dodgeProbability: 0.15
         dodgeDurationS: 1
         dodgeDistance: 0.5
-        cameraDistance: 4
+        cameraDistance: 3
         minPokemonActionFrequencyS: 0.2
         maxPokemonActionFrequencyS: 1.6
       }
@@ -448351,8 +448451,8 @@ template {
       weightStdDev: 0.0375
       familyId: FAMILY_MINIOR
       kmBuddyDistance: 3
-      modelHeight: 1
-      modelScaleV2: 1
+      modelHeight: 0.3
+      modelScaleV2: 1.27
       form: MINIOR_YELLOW
       buddyOffsetMale: 0
       buddyOffsetMale: 0
@@ -488059,8 +488159,9 @@ template {
   data {
     template_id: "VS_SEEKER_CLIENT_SETTINGS"
     vs_seeker_client_settings {
-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
-      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT_MEGAS"
+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_MEGAS"
+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_MEGAS"
+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
     }
   }
 }
@@ -511828,12 +511929,632 @@ template {
     }
   }
 }
-batch_id: 1791274463804
+template {
+  template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_BLUE"
+  data {
+    template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_BLUE"
+    genderSettings {
+      pokemon: MINIOR
+      gender {
+        genderlessPercent: 1
+      }
+    }
+  }
+}
+template {
+  template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_GREEN"
+  data {
+    template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_GREEN"
+    genderSettings {
+      pokemon: MINIOR
+      gender {
+        genderlessPercent: 1
+      }
+    }
+  }
+}
+template {
+  template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_INDIGO"
+  data {
+    template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_INDIGO"
+    genderSettings {
+      pokemon: MINIOR
+      gender {
+        genderlessPercent: 1
+      }
+    }
+  }
+}
+template {
+  template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_ORANGE"
+  data {
+    template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_ORANGE"
+    genderSettings {
+      pokemon: MINIOR
+      gender {
+        genderlessPercent: 1
+      }
+    }
+  }
+}
+template {
+  template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_RED"
+  data {
+    template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_RED"
+    genderSettings {
+      pokemon: MINIOR
+      gender {
+        genderlessPercent: 1
+      }
+    }
+  }
+}
+template {
+  template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_VIOLET"
+  data {
+    template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_VIOLET"
+    genderSettings {
+      pokemon: MINIOR
+      gender {
+        genderlessPercent: 1
+      }
+    }
+  }
+}
+template {
+  template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_YELLOW"
+  data {
+    template_id: "SPAWN_V0774_POKEMON_MINIOR_METEOR_YELLOW"
+    genderSettings {
+      pokemon: MINIOR
+      gender {
+        genderlessPercent: 1
+      }
+    }
+  }
+}
+template {
+  template_id: "V0774_POKEMON_MINIOR_METEOR"
+  data {
+    template_id: "V0774_POKEMON_MINIOR_METEOR"
+    pokemonSettings {
+      pokemonId: MINIOR
+      type: POKEMON_TYPE_ROCK
+      type2: POKEMON_TYPE_FLYING
+      camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
+      }
+      encounter {
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
+        attackProbability: 0.1
+        dodgeProbability: 0.15
+        dodgeDurationS: 1
+        dodgeDistance: 0.5
+        cameraDistance: 3
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+      }
+      stats {
+        baseStamina: 155
+        baseAttack: 116
+        baseDefense: 194
+      }
+      quickMoves: ROLLOUT_FAST
+      quickMoves: TAKE_DOWN_FAST
+      cinematicMoves: POWER_GEM
+      cinematicMoves: ANCIENT_POWER
+      cinematicMoves: ACROBATICS
+      pokedexHeightM: 0.3
+      pokedexWeightKg: 0.3
+      heightStdDev: 0.0375
+      weightStdDev: 0.0375
+      familyId: FAMILY_MINIOR
+      kmBuddyDistance: 3
+      modelHeight: 0.3
+      modelScaleV2: 1.27
+      form: MINIOR_METEOR
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyScale: 19
+      third_move {
+        stardustToUnlock: 50000
+        candyToUnlock: 50
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 2
+      ibfc {
+      }
+      breadTierGroup: GROUP_2
+    }
+  }
+}
+template {
+  template_id: "V0774_POKEMON_MINIOR_METEOR_BLUE"
+  data {
+    template_id: "V0774_POKEMON_MINIOR_METEOR_BLUE"
+    pokemonSettings {
+      pokemonId: MINIOR
+      type: POKEMON_TYPE_ROCK
+      type2: POKEMON_TYPE_FLYING
+      camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
+      }
+      encounter {
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
+        attackProbability: 0.1
+        dodgeProbability: 0.15
+        dodgeDurationS: 1
+        dodgeDistance: 0.5
+        cameraDistance: 3
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+      }
+      stats {
+        baseStamina: 155
+        baseAttack: 116
+        baseDefense: 194
+      }
+      quickMoves: ROLLOUT_FAST
+      quickMoves: TAKE_DOWN_FAST
+      cinematicMoves: POWER_GEM
+      cinematicMoves: ANCIENT_POWER
+      cinematicMoves: ACROBATICS
+      pokedexHeightM: 0.3
+      pokedexWeightKg: 0.3
+      heightStdDev: 0.0375
+      weightStdDev: 0.0375
+      familyId: FAMILY_MINIOR
+      kmBuddyDistance: 3
+      modelHeight: 0.3
+      modelScaleV2: 1.27
+      form: MINIOR_METEOR_BLUE
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyScale: 19
+      third_move {
+        stardustToUnlock: 50000
+        candyToUnlock: 50
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 2
+      ibfc {
+      }
+      breadTierGroup: GROUP_2
+    }
+  }
+}
+template {
+  template_id: "V0774_POKEMON_MINIOR_METEOR_GREEN"
+  data {
+    template_id: "V0774_POKEMON_MINIOR_METEOR_GREEN"
+    pokemonSettings {
+      pokemonId: MINIOR
+      type: POKEMON_TYPE_ROCK
+      type2: POKEMON_TYPE_FLYING
+      camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
+      }
+      encounter {
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
+        attackProbability: 0.1
+        dodgeProbability: 0.15
+        dodgeDurationS: 1
+        dodgeDistance: 0.5
+        cameraDistance: 3
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+      }
+      stats {
+        baseStamina: 155
+        baseAttack: 116
+        baseDefense: 194
+      }
+      quickMoves: ROLLOUT_FAST
+      quickMoves: TAKE_DOWN_FAST
+      cinematicMoves: POWER_GEM
+      cinematicMoves: ANCIENT_POWER
+      cinematicMoves: ACROBATICS
+      pokedexHeightM: 0.3
+      pokedexWeightKg: 0.3
+      heightStdDev: 0.0375
+      weightStdDev: 0.0375
+      familyId: FAMILY_MINIOR
+      kmBuddyDistance: 3
+      modelHeight: 0.3
+      modelScaleV2: 1.27
+      form: MINIOR_METEOR_GREEN
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyScale: 19
+      third_move {
+        stardustToUnlock: 50000
+        candyToUnlock: 50
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 2
+      ibfc {
+      }
+      breadTierGroup: GROUP_2
+    }
+  }
+}
+template {
+  template_id: "V0774_POKEMON_MINIOR_METEOR_INDIGO"
+  data {
+    template_id: "V0774_POKEMON_MINIOR_METEOR_INDIGO"
+    pokemonSettings {
+      pokemonId: MINIOR
+      type: POKEMON_TYPE_ROCK
+      type2: POKEMON_TYPE_FLYING
+      camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
+      }
+      encounter {
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
+        attackProbability: 0.1
+        dodgeProbability: 0.15
+        dodgeDurationS: 1
+        dodgeDistance: 0.5
+        cameraDistance: 3
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+      }
+      stats {
+        baseStamina: 155
+        baseAttack: 116
+        baseDefense: 194
+      }
+      quickMoves: ROLLOUT_FAST
+      quickMoves: TAKE_DOWN_FAST
+      cinematicMoves: POWER_GEM
+      cinematicMoves: ANCIENT_POWER
+      cinematicMoves: ACROBATICS
+      pokedexHeightM: 0.3
+      pokedexWeightKg: 0.3
+      heightStdDev: 0.0375
+      weightStdDev: 0.0375
+      familyId: FAMILY_MINIOR
+      kmBuddyDistance: 3
+      modelHeight: 0.3
+      modelScaleV2: 1.27
+      form: MINIOR_METEOR_INDIGO
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyScale: 19
+      third_move {
+        stardustToUnlock: 50000
+        candyToUnlock: 50
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 2
+      ibfc {
+      }
+      breadTierGroup: GROUP_2
+    }
+  }
+}
+template {
+  template_id: "V0774_POKEMON_MINIOR_METEOR_ORANGE"
+  data {
+    template_id: "V0774_POKEMON_MINIOR_METEOR_ORANGE"
+    pokemonSettings {
+      pokemonId: MINIOR
+      type: POKEMON_TYPE_ROCK
+      type2: POKEMON_TYPE_FLYING
+      camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
+      }
+      encounter {
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
+        attackProbability: 0.1
+        dodgeProbability: 0.15
+        dodgeDurationS: 1
+        dodgeDistance: 0.5
+        cameraDistance: 3
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+      }
+      stats {
+        baseStamina: 155
+        baseAttack: 116
+        baseDefense: 194
+      }
+      quickMoves: ROLLOUT_FAST
+      quickMoves: TAKE_DOWN_FAST
+      cinematicMoves: POWER_GEM
+      cinematicMoves: ANCIENT_POWER
+      cinematicMoves: ACROBATICS
+      pokedexHeightM: 0.3
+      pokedexWeightKg: 0.3
+      heightStdDev: 0.0375
+      weightStdDev: 0.0375
+      familyId: FAMILY_MINIOR
+      kmBuddyDistance: 3
+      modelHeight: 0.3
+      modelScaleV2: 1.27
+      form: MINIOR_METEOR_ORANGE
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyScale: 19
+      third_move {
+        stardustToUnlock: 50000
+        candyToUnlock: 50
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 2
+      ibfc {
+      }
+      breadTierGroup: GROUP_2
+    }
+  }
+}
+template {
+  template_id: "V0774_POKEMON_MINIOR_METEOR_RED"
+  data {
+    template_id: "V0774_POKEMON_MINIOR_METEOR_RED"
+    pokemonSettings {
+      pokemonId: MINIOR
+      type: POKEMON_TYPE_ROCK
+      type2: POKEMON_TYPE_FLYING
+      camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
+      }
+      encounter {
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
+        attackProbability: 0.1
+        dodgeProbability: 0.15
+        dodgeDurationS: 1
+        dodgeDistance: 0.5
+        cameraDistance: 3
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+      }
+      stats {
+        baseStamina: 155
+        baseAttack: 116
+        baseDefense: 194
+      }
+      quickMoves: ROLLOUT_FAST
+      quickMoves: TAKE_DOWN_FAST
+      cinematicMoves: POWER_GEM
+      cinematicMoves: ANCIENT_POWER
+      cinematicMoves: ACROBATICS
+      pokedexHeightM: 0.3
+      pokedexWeightKg: 0.3
+      heightStdDev: 0.0375
+      weightStdDev: 0.0375
+      familyId: FAMILY_MINIOR
+      kmBuddyDistance: 3
+      modelHeight: 0.3
+      modelScaleV2: 1.27
+      form: MINIOR_METEOR_RED
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyScale: 19
+      third_move {
+        stardustToUnlock: 50000
+        candyToUnlock: 50
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 2
+      ibfc {
+      }
+      breadTierGroup: GROUP_2
+    }
+  }
+}
+template {
+  template_id: "V0774_POKEMON_MINIOR_METEOR_VIOLET"
+  data {
+    template_id: "V0774_POKEMON_MINIOR_METEOR_VIOLET"
+    pokemonSettings {
+      pokemonId: MINIOR
+      type: POKEMON_TYPE_ROCK
+      type2: POKEMON_TYPE_FLYING
+      camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
+      }
+      encounter {
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
+        attackProbability: 0.1
+        dodgeProbability: 0.15
+        dodgeDurationS: 1
+        dodgeDistance: 0.5
+        cameraDistance: 3
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+      }
+      stats {
+        baseStamina: 155
+        baseAttack: 116
+        baseDefense: 194
+      }
+      quickMoves: ROLLOUT_FAST
+      quickMoves: TAKE_DOWN_FAST
+      cinematicMoves: POWER_GEM
+      cinematicMoves: ANCIENT_POWER
+      cinematicMoves: ACROBATICS
+      pokedexHeightM: 0.3
+      pokedexWeightKg: 0.3
+      heightStdDev: 0.0375
+      weightStdDev: 0.0375
+      familyId: FAMILY_MINIOR
+      kmBuddyDistance: 3
+      modelHeight: 0.3
+      modelScaleV2: 1.27
+      form: MINIOR_METEOR_VIOLET
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyScale: 19
+      third_move {
+        stardustToUnlock: 50000
+        candyToUnlock: 50
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 2
+      ibfc {
+      }
+      breadTierGroup: GROUP_2
+    }
+  }
+}
+template {
+  template_id: "V0774_POKEMON_MINIOR_METEOR_YELLOW"
+  data {
+    template_id: "V0774_POKEMON_MINIOR_METEOR_YELLOW"
+    pokemonSettings {
+      pokemonId: MINIOR
+      type: POKEMON_TYPE_ROCK
+      type2: POKEMON_TYPE_FLYING
+      camera {
+        cylinderRadiusM: 0.2
+        cylinderHeightM: 0.32
+        cylinderGroundM: 0.2
+      }
+      encounter {
+        collisionRadiusM: 0.18
+        collisionHeightM: 0.18
+        collisionHeadRadiusM: 0.18
+        movementType: MOVEMENT_HOVERING
+        bonusStardustCaptureReward: 900
+        attackProbability: 0.1
+        dodgeProbability: 0.15
+        dodgeDurationS: 1
+        dodgeDistance: 0.5
+        cameraDistance: 3
+        minPokemonActionFrequencyS: 0.2
+        maxPokemonActionFrequencyS: 1.6
+      }
+      stats {
+        baseStamina: 155
+        baseAttack: 116
+        baseDefense: 194
+      }
+      quickMoves: ROLLOUT_FAST
+      quickMoves: TAKE_DOWN_FAST
+      cinematicMoves: POWER_GEM
+      cinematicMoves: ANCIENT_POWER
+      cinematicMoves: ACROBATICS
+      pokedexHeightM: 0.3
+      pokedexWeightKg: 0.3
+      heightStdDev: 0.0375
+      weightStdDev: 0.0375
+      familyId: FAMILY_MINIOR
+      kmBuddyDistance: 3
+      modelHeight: 0.3
+      modelScaleV2: 1.27
+      form: MINIOR_METEOR_YELLOW
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetMale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyOffsetFemale: 0
+      buddyScale: 19
+      third_move {
+        stardustToUnlock: 50000
+        candyToUnlock: 50
+      }
+      isTransferable: true
+      isDeployable: true
+      isTradable: true
+      buddyGroupNumber: 2
+      ibfc {
+      }
+      breadTierGroup: GROUP_2
+    }
+  }
+}
+batch_id: 1791353384805
 experiment_id: 11
 experiment_id: 21
 experiment_id: 101
 experiment_id: 170
-experiment_id: 175
+experiment_id: 176
 experiment_id: 300
 experiment_id: 320
 experiment_id: 351
@@ -511861,16 +512582,17 @@ experiment_id: 3063
 experiment_id: 3104
 experiment_id: 3105
 experiment_id: 3106
-experiment_id: 3111
-experiment_id: 3120
+experiment_id: 3112
+experiment_id: 3121
 experiment_id: 3126
+experiment_id: 3169
 experiment_id: 3546
 experiment_id: 4745
 experiment_id: 4998
+experiment_id: 5009
 experiment_id: 5160
 experiment_id: 5162
 experiment_id: 5163
-experiment_id: 5210
 experiment_id: 5501
 experiment_id: 5502
 experiment_id: 5506
@@ -511892,7 +512614,6 @@ experiment_id: 9554
 experiment_id: 20947
 experiment_id: 60095
 experiment_id: 90000
-experiment_id: 96034
 experiment_id: 99998
 experiment_id: 173173
 experiment_id: 193151
