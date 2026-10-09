@@ -1,103 +1,345 @@
---- GAME_MASTER_old.txt	2026-10-08 19:59:19.488916295 +0200
-+++ GAME_MASTER.txt	2026-10-08 22:57:13.045434804 +0200
-@@ -160634,6 +160634,7 @@
-       completeStartLetterCountPerLanguage: "hi-IN,2"
-       completeStartLetterCountPerLanguage: "id-ID,2"
-       completeStartLetterCountPerLanguage: "es-MX,2"
-+      11: 1
-     }
-   }
- }
-@@ -195302,7 +195303,7 @@
-     template_id: "POKEMON_SPAWN_AVOIDANCE_REWORK_FEATURE_GATE"
-     featureGate {
-       status: 67485911
--      rolloutPercentage: 50
-+      rolloutPercentage: 100
-     }
-   }
- }
-@@ -504972,7 +504973,82 @@
-     }
-   }
- }
--batch_id: 1791479425373
-+template {
-+  template_id: "COMBINE_COMPASS_AND_WEATHER_FEATURE_GATE"
-+  data {
-+    template_id: "COMBINE_COMPASS_AND_WEATHER_FEATURE_GATE"
-+    featureGate {
-+      status: 2059828614
-+      rolloutPercentage: 100
-+    }
-+  }
-+}
-+template {
-+  template_id: "MICHELIN_MAP_LURE_BOTTOM_RING_REMOVAL_FEATURE_GATE"
-+  data {
-+    template_id: "MICHELIN_MAP_LURE_BOTTOM_RING_REMOVAL_FEATURE_GATE"
-+    featureGate {
-+      status: 1
-+      rolloutPercentage: 100
-+    }
-+  }
-+}
-+template {
-+  template_id: "MICHELIN_MAP_ZYGARDE_CELL_REWARD_FEATURE_GATE"
-+  data {
-+    template_id: "MICHELIN_MAP_ZYGARDE_CELL_REWARD_FEATURE_GATE"
-+    featureGate {
-+      status: 58439049
-+      rolloutPercentage: 100
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_pants_halloween2026"
-+  data {
-+    template_id: "N_DISPLAY_n_pants_halloween2026"
-+    avatarItemDisplay {
-+      iconAddress: "n_pants_halloween2026_icon"
-+      displayStringId: "avatar_pants_halloween2026"
-+    }
-+  }
-+}
-+template {
-+  template_id: "N_DISPLAY_n_shirt_halloween2026"
-+  data {
-+    template_id: "N_DISPLAY_n_shirt_halloween2026"
-+    avatarItemDisplay {
-+      iconAddress: "n_shirt_halloween2026_icon"
-+      displayStringId: "avatar_shirt_halloween2026"
-+    }
-+  }
-+}
-+template {
-+  template_id: "TRANSFER_FEATURE_GATE"
-+  data {
-+    template_id: "TRANSFER_FEATURE_GATE"
-+    featureGate {
-+      status: 899172904
-+      rolloutPercentage: 100
-+    }
-+  }
-+}
-+template {
-+  template_id: "VNEXT_FAST_ATTACK_INPUT_TYPE_FEATURE_GATE"
-+  data {
-+    template_id: "VNEXT_FAST_ATTACK_INPUT_TYPE_FEATURE_GATE"
-+    featureGate {
-+      status: 1
-+      rolloutPercentage: 100
-+      subFeatureGateList {
-+        name: "COMBAT"
-+        status: 2
-+        rolloutPercentage: 100
+--- GAME_MASTER_old.txt	2026-10-08 22:57:13.045434804 +0200
++++ GAME_MASTER.txt	2026-10-09 19:33:08.770364628 +0200
+@@ -278,9 +278,6 @@
+       excludedPokemonIds: MAGEARNA
+       excludedPokemonIds: CHEWTLE
+       excludedPokemonIds: DREDNAW
+-      excludedPokemonIds: CRAMORANT
+-      excludedPokemonIds: ARROKUDA
+-      excludedPokemonIds: BARRASKEWDA
+       excludedPokemonIds: MILCERY
+       excludedPokemonIds: ALCREMIE
+       excludedPokemonIds: PINCURCHIN
+@@ -295,21 +292,15 @@
+       excludedPokemonIds: SPECTRIER
+       excludedPokemonIds: CALYREX
+       excludedPokemonIds: BASCULEGION
+-      excludedPokemonIds: SQUAWKABILLY
+-      excludedPokemonIds: MASCHIFF
+-      excludedPokemonIds: MABOSSTIFF
+       excludedPokemonIds: BRAMBLIN
+       excludedPokemonIds: BRAMBLEGHAST
+       excludedPokemonIds: CAPSAKID
+       excludedPokemonIds: SCOVILLAIN
+       excludedPokemonIds: RELLOR
+       excludedPokemonIds: RABSCA
+-      excludedPokemonIds: FLITTLE
+-      excludedPokemonIds: ESPATHRA
+       excludedPokemonIds: FINIZEN
+       excludedPokemonIds: PALAFIN
+       excludedPokemonIds: CYCLIZAR
+-      excludedPokemonIds: ORTHWORM
+       excludedPokemonIds: VELUZA
+       excludedPokemonIds: FARIGIRAF
+       excludedPokemonIds: GREATTUSK
+@@ -359,10 +350,6 @@
+         excludedForms: BLASTOISE_COPY_2019
+       }
+       pokemonWithExcludedForms {
+-        pokemonId: PIKACHU
+-        excludedForms: PIKACHU_COPY_2019
+-      }
+-      pokemonWithExcludedForms {
+         pokemonId: PSYDUCK
+         excludedForms: PSYDUCK_SWIM_2025
+       }
+@@ -625,6 +612,83 @@
+         excludedForms: GIMMIGHOUL_NORMAL
+       }
+       pokemonWithExcludedForms {
++        pokemonId: CORSOLA
++        excludedForms: CORSOLA_SPRING_2026
 +      }
++      pokemonWithExcludedForms {
++        pokemonId: PIKACHU
++        excludedForms: PIKACHU_VISOR_2026
++        excludedForms: PIKACHU_ADVENTURE_HAT_2020
++        excludedForms: PIKACHU_COPY_2019
++        excludedForms: PIKACHU_COSTUME_2020
++        excludedForms: PIKACHU_DIWALI_2024
++        excludedForms: PIKACHU_DOCTOR
++        excludedForms: PIKACHU_FALL_2019
++        excludedForms: PIKACHU_FLYING_01
++        excludedForms: PIKACHU_FLYING_02
++        excludedForms: PIKACHU_FLYING_03
++        excludedForms: PIKACHU_FLYING_04
++        excludedForms: PIKACHU_FLYING_5TH_ANNIV
++        excludedForms: PIKACHU_FLYING_OKINAWA
++        excludedForms: PIKACHU_GOFEST_2022
++        excludedForms: PIKACHU_GOFEST_2024_MTIARA
++        excludedForms: PIKACHU_GOFEST_2024_STIARA
++        excludedForms: PIKACHU_GOFEST_2025_GOGGLES_BLUE
++        excludedForms: PIKACHU_GOFEST_2025_GOGGLES_RED
++        excludedForms: PIKACHU_GOFEST_2025_GOGGLES_YELLOW
++        excludedForms: PIKACHU_GOFEST_2025_MONOCLE_BLUE
++        excludedForms: PIKACHU_GOFEST_2025_MONOCLE_RED
++        excludedForms: PIKACHU_GOFEST_2025_MONOCLE_YELLOW
++        excludedForms: PIKACHU_GOTOUR_2024_A
++        excludedForms: PIKACHU_GOTOUR_2024_A_02
++        excludedForms: PIKACHU_GOTOUR_2024_B
++        excludedForms: PIKACHU_GOTOUR_2024_B_02
++        excludedForms: PIKACHU_GOTOUR_2025_A
++        excludedForms: PIKACHU_GOTOUR_2025_A_02
++        excludedForms: PIKACHU_GOTOUR_2025_B
++        excludedForms: PIKACHU_GOTOUR_2025_B_02
++        excludedForms: PIKACHU_GOTOUR_2026_A
++        excludedForms: PIKACHU_GOTOUR_2026_A_02
++        excludedForms: PIKACHU_GOTOUR_2026_B
++        excludedForms: PIKACHU_GOTOUR_2026_B_02
++        excludedForms: PIKACHU_GOTOUR_2026_C
++        excludedForms: PIKACHU_GOTOUR_2026_C_02
++        excludedForms: PIKACHU_HORIZONS
++        excludedForms: PIKACHU_JEJU
++        excludedForms: PIKACHU_KARIYUSHI
++        excludedForms: PIKACHU_KURTA
++        excludedForms: PIKACHU_NORMAL
++        excludedForms: PIKACHU_POP_STAR
++        excludedForms: PIKACHU_ROCK_STAR
++        excludedForms: PIKACHU_SUMMER_2023_A
++        excludedForms: PIKACHU_SUMMER_2023_B
++        excludedForms: PIKACHU_SUMMER_2023_C
++        excludedForms: PIKACHU_SUMMER_2023_D
++        excludedForms: PIKACHU_SUMMER_2023_E
++        excludedForms: PIKACHU_TSHIRT_01
++        excludedForms: PIKACHU_TSHIRT_02
++        excludedForms: PIKACHU_TSHIRT_03
++        excludedForms: PIKACHU_VS_2019
++        excludedForms: PIKACHU_WCS_2022
++        excludedForms: PIKACHU_WCS_2023
++        excludedForms: PIKACHU_WCS_2024
++        excludedForms: PIKACHU_WCS_2025
++        excludedForms: PIKACHU_WINTER_2020
++        excludedForms: PIKACHU_BB_2026
++        excludedForms: PIKACHU_GOFEST_2026_CAP_RED
++        excludedForms: PIKACHU_GOFEST_2026_CAP_BLUE
++        excludedForms: PIKACHU_GOFEST_2026_CAP_YELLOW
++      }
++      pokemonWithExcludedForms {
++        pokemonId: DITTO
++        excludedForms: DITTO_SPRING_2026_A
++        excludedForms: DITTO_SPRING_2026_B
++      }
++      pokemonWithExcludedForms {
++        pokemonId: CATERPIE
++        excludedForms: CATERPIE_GOFEST_2026
++      }
++      pokemonWithExcludedForms {
+         pokemonId: CHARMANDER
+         excludedForms: CHARMANDER_GOGGLES_2026
+       }
+@@ -632,6 +696,11 @@
+         pokemonId: CHARMELEON
+         excludedForms: CHARMELEON_GOGGLES_2026
+       }
++      pokemonWithExcludedForms {
++        pokemonId: CRAMORANT
++        excludedForms: CRAMORANT_GORGING
++        excludedForms: CRAMORANT_GULPING
++      }
+       showSticker: SOMETIMES_SHOW
+       mainMenuEntryEnabled: -1412802175
+       arMenuEntryEnabled: -716916653
+@@ -88019,6 +88088,7 @@
+     stickerMetadata {
+       stickerId: "STICKER_GOWA2026_2"
+       maxCount: 25
++      category: "Misc"
+       releaseDate: 20261105
+     }
+   }
+@@ -505048,13 +505118,185 @@
+     }
+   }
+ }
+-batch_id: 1791492225217
++template {
++  template_id: "STICKER_GOWA2026_1.3"
++  data {
++    template_id: "STICKER_GOWA2026_1.3"
++    iapItemDisplay {
++      sku: "STICKER_GOWA2026_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 6
 +    }
 +  }
 +}
-+batch_id: 1791492225217
++template {
++  template_id: "STICKER_GOWA2026_1.5"
++  data {
++    template_id: "STICKER_GOWA2026_1.5"
++    iapItemDisplay {
++      sku: "STICKER_GOWA2026_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 5
++    }
++  }
++}
++template {
++  template_id: "STICKER_GOWA2026_2.3"
++  data {
++    template_id: "STICKER_GOWA2026_2.3"
++    iapItemDisplay {
++      sku: "STICKER_GOWA2026_2.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 4
++    }
++  }
++}
++template {
++  template_id: "STICKER_GOWA2026_2.5"
++  data {
++    template_id: "STICKER_GOWA2026_2.5"
++    iapItemDisplay {
++      sku: "STICKER_GOWA2026_2.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 3
++    }
++  }
++}
++template {
++  template_id: "STICKER_GOWA2026_3.3"
++  data {
++    template_id: "STICKER_GOWA2026_3.3"
++    iapItemDisplay {
++      sku: "STICKER_GOWA2026_3.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 2
++    }
++  }
++}
++template {
++  template_id: "STICKER_GOWA2026_3.5"
++  data {
++    template_id: "STICKER_GOWA2026_3.5"
++    iapItemDisplay {
++      sku: "STICKER_GOWA2026_3.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 1
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN_CROBAT"
++  data {
++    template_id: "STICKER_HALLOWEEN_CROBAT"
++    stickerMetadata {
++      stickerId: "STICKER_HALLOWEEN_CROBAT"
++      maxCount: 25
++      pokemonId: CROBAT
++      category: "Pokemon"
++      releaseDate: 20261027
++      regionId: 1
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN_CROBAT_1.3"
++  data {
++    template_id: "STICKER_HALLOWEEN_CROBAT_1.3"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN_CROBAT_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 10
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN_CROBAT_1.5"
++  data {
++    template_id: "STICKER_HALLOWEEN_CROBAT_1.5"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN_CROBAT_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 9
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN_PIKACHU_PANCAKE"
++  data {
++    template_id: "STICKER_HALLOWEEN_PIKACHU_PANCAKE"
++    stickerMetadata {
++      stickerId: "STICKER_HALLOWEEN_PIKACHU_PANCAKE"
++      maxCount: 25
++      pokemonId: PIKACHU
++      category: "Pokemon"
++      releaseDate: 20261027
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN_PIKACHU_PANCAKE_1.3"
++  data {
++    template_id: "STICKER_HALLOWEEN_PIKACHU_PANCAKE_1.3"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN_PIKACHU_PANCAKE_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 12
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN_PIKACHU_PANCAKE_1.5"
++  data {
++    template_id: "STICKER_HALLOWEEN_PIKACHU_PANCAKE_1.5"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN_PIKACHU_PANCAKE_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 11
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN_POLTEAGEIST"
++  data {
++    template_id: "STICKER_HALLOWEEN_POLTEAGEIST"
++    stickerMetadata {
++      stickerId: "STICKER_HALLOWEEN_POLTEAGEIST"
++      maxCount: 25
++      pokemonId: POLTEAGEIST
++      category: "Pokemon"
++      releaseDate: 20261027
++      regionId: 7
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN_POLTEAGEIST_1.3"
++  data {
++    template_id: "STICKER_HALLOWEEN_POLTEAGEIST_1.3"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN_POLTEAGEIST_1.3"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 8
++    }
++  }
++}
++template {
++  template_id: "STICKER_HALLOWEEN_POLTEAGEIST_1.5"
++  data {
++    template_id: "STICKER_HALLOWEEN_POLTEAGEIST_1.5"
++    iapItemDisplay {
++      sku: "STICKER_HALLOWEEN_POLTEAGEIST_1.5"
++      category: IAP_CATEGORY_STICKER
++      sortOrder: 7
++    }
++  }
++}
++batch_id: 1791542216859
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
+ experiment_id: 170
+ experiment_id: 176
+-experiment_id: 194
+ experiment_id: 300
+ experiment_id: 320
+ experiment_id: 351
+@@ -505086,6 +505328,7 @@
+ experiment_id: 3112
+ experiment_id: 3121
+ experiment_id: 3126
++experiment_id: 3142
+ experiment_id: 3546
+ experiment_id: 4998
+ experiment_id: 5160
