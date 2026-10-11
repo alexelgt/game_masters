@@ -120664,6 +120664,24 @@ template {
         xlUpperBound: 8.1
         xxlUpperBound: 8.37
       }
+      breadOverrides {
+        breadMode: BREAD_MODE
+        maxEncounterVisualSettings {
+          scale: 4.41
+          cameraDistance: 35
+          maxReticleSize: 11
+        }
+        maxBattleVisualSettings {
+          scale: 8.81
+        }
+        maxStationVisualSettings {
+          scale: 0.6
+          yOffset: -0.55
+        }
+        maxLobbyVisualSettings {
+          yOffset: -0.55
+        }
+      }
     }
   }
 }
@@ -120681,6 +120699,24 @@ template {
         mUpperBound: 6.75
         xlUpperBound: 8.1
         xxlUpperBound: 8.37
+      }
+      breadOverrides {
+        breadMode: BREAD_MODE
+        maxEncounterVisualSettings {
+          scale: 4.41
+          cameraDistance: 35
+          maxReticleSize: 11
+        }
+        maxBattleVisualSettings {
+          scale: 8.81
+        }
+        maxStationVisualSettings {
+          scale: 0.6
+          yOffset: -0.55
+        }
+        maxLobbyVisualSettings {
+          yOffset: -0.55
+        }
       }
     }
   }
@@ -120717,6 +120753,26 @@ template {
         xlUpperBound: 6.3
         xxlUpperBound: 6.51
       }
+      breadOverrides {
+        breadMode: BREAD_MODE
+        maxEncounterVisualSettings {
+          scale: 5
+          cameraDistance: 39.2
+          maxReticleSize: 14
+        }
+        maxBattleVisualSettings {
+          scale: 9.5
+        }
+        maxStationVisualSettings {
+          scale: 0.65
+        }
+        maxPowerspotTopperVisualSettings {
+          scale: 0.6
+        }
+        maxLobbyVisualSettings {
+          scale: 12
+        }
+      }
     }
   }
 }
@@ -120734,6 +120790,26 @@ template {
         mUpperBound: 5.25
         xlUpperBound: 6.3
         xxlUpperBound: 6.51
+      }
+      breadOverrides {
+        breadMode: BREAD_MODE
+        maxEncounterVisualSettings {
+          scale: 5
+          cameraDistance: 39.2
+          maxReticleSize: 14
+        }
+        maxBattleVisualSettings {
+          scale: 9.5
+        }
+        maxStationVisualSettings {
+          scale: 0.65
+        }
+        maxPowerspotTopperVisualSettings {
+          scale: 0.6
+        }
+        maxLobbyVisualSettings {
+          scale: 12
+        }
       }
     }
   }
@@ -140707,6 +140783,29 @@ template {
           scale: 0.65
         }
       }
+      breadOverrides {
+        breadMode: BREAD_DOUGH_MODE
+        averageHeightM: 43
+        camera {
+          cylinderRadiusM: 1.25
+          cylinderHeightM: 1.8
+        }
+        modelScaleV2: 1
+        maxEncounterVisualSettings {
+          scale: 10
+          cameraDistance: 36
+          maxReticleSize: 17
+        }
+        maxBattleVisualSettings {
+          scale: 17
+        }
+        maxStationVisualSettings {
+          scale: 1.2
+        }
+        maxPowerspotTopperVisualSettings {
+          scale: 0.7
+        }
+      }
     }
   }
 }
@@ -140740,6 +140839,29 @@ template {
         }
         maxPowerspotTopperVisualSettings {
           scale: 0.65
+        }
+      }
+      breadOverrides {
+        breadMode: BREAD_DOUGH_MODE
+        averageHeightM: 43
+        camera {
+          cylinderRadiusM: 1.25
+          cylinderHeightM: 1.8
+        }
+        modelScaleV2: 1
+        maxEncounterVisualSettings {
+          scale: 10
+          cameraDistance: 36
+          maxReticleSize: 17
+        }
+        maxBattleVisualSettings {
+          scale: 17
+        }
+        maxStationVisualSettings {
+          scale: 1.2
+        }
+        maxPowerspotTopperVisualSettings {
+          scale: 0.7
         }
       }
     }
@@ -163617,7 +163739,7 @@ template {
             amount: 1
           }
         }
-        detailsLinkKey: "details_link_key"
+        detailsLinkKey: "zorua_website_link"
         clientEventStartTimeUtcMs: 1791640800000
         clientEventEndTimeUtcMs: 1791651600000
         27: "general2.ticket.3"
@@ -393101,6 +393223,7 @@ template {
       isDeployable: true
       isTradable: true
       buddyGroupNumber: 2
+      eliteQuickMove: SUCKER_PUNCH_FAST
       ibfc {
       }
       breadTierGroup: GROUP_3
@@ -393278,6 +393401,7 @@ template {
       isDeployable: true
       isTradable: true
       buddyGroupNumber: 2
+      eliteQuickMove: SUCKER_PUNCH_FAST
       ibfc {
       }
       breadTierGroup: GROUP_3
@@ -490032,6 +490156,7 @@ template {
       sku: "pgorelease.general2.ticket.3"
       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
       sortOrder: 2
+      hidden: true
       spriteId: "general1.ticket.2"
       title: "general1.ticket_CD_Zorua26_title"
       skuEnableTime: "2019-03-14T08:00:00"
@@ -505291,7 +505416,27 @@ template {
     }
   }
 }
-batch_id: 1791542216859
+template {
+  template_id: "COMBAT_VNEXT_SHOW_MINIOR_IBFC_TOASTS_FEATURE_GATE"
+  data {
+    template_id: "COMBAT_VNEXT_SHOW_MINIOR_IBFC_TOASTS_FEATURE_GATE"
+    featureGate {
+      status: 1
+      rolloutPercentage: 100
+    }
+  }
+}
+template {
+  template_id: "HIDE_UI_IN_MINIOR_IBFC_FEATURE_GATE"
+  data {
+    template_id: "HIDE_UI_IN_MINIOR_IBFC_FEATURE_GATE"
+    featureGate {
+      status: 1
+      rolloutPercentage: 100
+    }
+  }
+}
+batch_id: 1791665208383
 experiment_id: 11
 experiment_id: 21
 experiment_id: 101
@@ -505328,8 +505473,7 @@ experiment_id: 3106
 experiment_id: 3112
 experiment_id: 3121
 experiment_id: 3126
-experiment_id: 3142
-experiment_id: 3546
+experiment_id: 3155
 experiment_id: 4998
 experiment_id: 5160
 experiment_id: 5162
@@ -505345,9 +505489,9 @@ experiment_id: 7003
 experiment_id: 7004
 experiment_id: 7007
 experiment_id: 7013
-experiment_id: 8701
+experiment_id: 8702
 experiment_id: 8836
-experiment_id: 9315
+experiment_id: 8837
 experiment_id: 9521
 experiment_id: 9552
 experiment_id: 9553
