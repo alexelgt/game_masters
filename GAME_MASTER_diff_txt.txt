@@ -1,250 +1,2385 @@
---- GAME_MASTER_old.txt	2026-10-09 19:33:08.770364628 +0200
-+++ GAME_MASTER.txt	2026-10-11 11:44:37.773189086 +0200
-@@ -120664,6 +120664,24 @@
-         xlUpperBound: 8.1
-         xxlUpperBound: 8.37
+--- GAME_MASTER_old.txt	2026-10-11 11:44:37.773189086 +0200
++++ GAME_MASTER.txt	2026-10-13 19:44:24.954889804 +0200
+@@ -162060,7 +162060,7 @@
        }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 4.41
-+          cameraDistance: 35
-+          maxReticleSize: 11
-+        }
-+        maxBattleVisualSettings {
-+          scale: 8.81
-+        }
-+        maxStationVisualSettings {
-+          scale: 0.6
-+          yOffset: -0.55
-+        }
-+        maxLobbyVisualSettings {
-+          yOffset: -0.55
-+        }
-+      }
-     }
-   }
- }
-@@ -120682,6 +120700,24 @@
-         xlUpperBound: 8.1
-         xxlUpperBound: 8.37
-       }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 4.41
-+          cameraDistance: 35
-+          maxReticleSize: 11
-+        }
-+        maxBattleVisualSettings {
-+          scale: 8.81
-+        }
-+        maxStationVisualSettings {
-+          scale: 0.6
-+          yOffset: -0.55
-+        }
-+        maxLobbyVisualSettings {
-+          yOffset: -0.55
-+        }
-+      }
-     }
-   }
- }
-@@ -120717,6 +120753,26 @@
-         xlUpperBound: 6.3
-         xxlUpperBound: 6.51
-       }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 5
-+          cameraDistance: 39.2
-+          maxReticleSize: 14
-+        }
-+        maxBattleVisualSettings {
-+          scale: 9.5
-+        }
-+        maxStationVisualSettings {
-+          scale: 0.65
-+        }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 0.6
-+        }
-+        maxLobbyVisualSettings {
-+          scale: 12
-+        }
-+      }
-     }
-   }
- }
-@@ -120735,6 +120791,26 @@
-         xlUpperBound: 6.3
-         xxlUpperBound: 6.51
-       }
-+      breadOverrides {
-+        breadMode: BREAD_MODE
-+        maxEncounterVisualSettings {
-+          scale: 5
-+          cameraDistance: 39.2
-+          maxReticleSize: 14
-+        }
-+        maxBattleVisualSettings {
-+          scale: 9.5
-+        }
-+        maxStationVisualSettings {
-+          scale: 0.65
-+        }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 0.6
-+        }
-+        maxLobbyVisualSettings {
-+          scale: 12
-+        }
-+      }
-     }
-   }
- }
-@@ -140707,6 +140783,29 @@
-           scale: 0.65
+       timePeriodCounters {
+         playerActivity {
+-          limit: 300
++          limit: 500
          }
        }
-+      breadOverrides {
-+        breadMode: BREAD_DOUGH_MODE
-+        averageHeightM: 43
-+        camera {
-+          cylinderRadiusM: 1.25
-+          cylinderHeightM: 1.8
-+        }
-+        modelScaleV2: 1
-+        maxEncounterVisualSettings {
-+          scale: 10
-+          cameraDistance: 36
-+          maxReticleSize: 17
-+        }
-+        maxBattleVisualSettings {
-+          scale: 17
-+        }
-+        maxStationVisualSettings {
-+          scale: 1.2
-+        }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 0.7
-+        }
-+      }
+       hideItemInInventory: true
+@@ -164304,8 +164304,7 @@
+     template_id: "ITEM_EXPIRATION_ITEM_INCUBATOR_TIMED"
+     itemExpirationSettings {
+       item: ITEM_INCUBATOR_TIMED
+-      expirationTime: "2026-10-13T10:00:00"
+-      emergencyExpirationTime: "2026-10-13T10:00:00"
++      expirationTime: "2026-01-13T10:00:00"
      }
    }
  }
-@@ -140742,6 +140841,29 @@
-           scale: 0.65
-         }
+@@ -164679,6 +164678,7 @@
+       dropTrainerLevel: 1
+       incense {
+         incenseLifetimeSeconds: 3600
++        spawnTableProbability: 0.6
        }
-+      breadOverrides {
-+        breadMode: BREAD_DOUGH_MODE
-+        averageHeightM: 43
-+        camera {
-+          cylinderRadiusM: 1.25
-+          cylinderHeightM: 1.8
-+        }
-+        modelScaleV2: 1
-+        maxEncounterVisualSettings {
-+          scale: 10
-+          cameraDistance: 36
-+          maxReticleSize: 17
-+        }
-+        maxBattleVisualSettings {
-+          scale: 17
-+        }
-+        maxStationVisualSettings {
-+          scale: 1.2
-+        }
-+        maxPowerspotTopperVisualSettings {
-+          scale: 0.7
-+        }
-+      }
+     }
+   }
+@@ -192365,13 +192365,12 @@
+     iapItemDisplay {
+       sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
+       sortOrder: 1
+-      hidden: true
+       title: "season_pass_premium_track_title_fall_marathon_2026"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+       skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2025-10-21T20:00:00"
++      skuDisableTime: "2026-10-21T20:00:00"
+       skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1761076800000
++      skuDisableTimeUtcMs: 1792612800000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+     }
+   }
+@@ -192383,13 +192382,12 @@
+     iapItemDisplay {
+       sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
+       sortOrder: 1
+-      hidden: true
+       title: "season_pass_premium_track_plus_six_ranks_title_fall_marathon_2026"
+       description: "event_pass_plus_points_6_ranks_description"
+       skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2025-10-21T20:00:00"
++      skuDisableTime: "2026-10-21T20:00:00"
+       skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1761076800000
++      skuDisableTimeUtcMs: 1792612800000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+     }
+   }
+@@ -192400,14 +192398,14 @@
+     template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_REDIRECT"
+     iapItemDisplay {
+       sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_redirect"
++      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
+-      hidden: true
+       title: "season_pass_premium_track_title_fall_marathon_2026"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+       skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2025-10-21T20:00:00"
++      skuDisableTime: "2026-10-21T20:00:00"
+       skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1761076800000
++      skuDisableTimeUtcMs: 1792612800000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+     }
+   }
+@@ -334430,6 +334428,7 @@
+         averageWeightKg: 44
+         typeOverride1: POKEMON_TYPE_ELECTRIC
+         raidBossDistanceOffset: 9
++        specialMove: TEMP_EVOLUTION_MEGA_V0310_POKEMON_MANECTRIC
+       }
+       buddyWalkedMegaEnergyAward: 15
+       raidBossDistanceOffset: 3
+@@ -334545,6 +334544,7 @@
+         averageWeightKg: 44
+         typeOverride1: POKEMON_TYPE_ELECTRIC
+         raidBossDistanceOffset: 9
++        specialMove: TEMP_EVOLUTION_MEGA_V0310_POKEMON_MANECTRIC
+       }
+       buddyWalkedMegaEnergyAward: 15
+       raidBossDistanceOffset: 3
+@@ -486991,13 +486991,10 @@
+       sku: "bundle.cd2022.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
++      hidden: true
+       sale: true
+-      spriteId: "bundle.general4.small.1"
+-      title: "bundle.general4.small.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2026-10-11T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1791763199000
++      spriteId: "bundle.halloween.small.1"
++      title: "bundle.halloween.small.1_title"
      }
    }
  }
-@@ -163617,7 +163739,7 @@
-             amount: 1
-           }
-         }
--        detailsLinkKey: "details_link_key"
-+        detailsLinkKey: "zorua_website_link"
-         clientEventStartTimeUtcMs: 1791640800000
-         clientEventEndTimeUtcMs: 1791651600000
-         27: "general2.ticket.3"
-@@ -393101,6 +393223,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      eliteQuickMove: SUCKER_PUNCH_FAST
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -393278,6 +393401,7 @@
-       isDeployable: true
-       isTradable: true
-       buddyGroupNumber: 2
-+      eliteQuickMove: SUCKER_PUNCH_FAST
-       ibfc {
-       }
-       breadTierGroup: GROUP_3
-@@ -490032,6 +490156,7 @@
-       sku: "pgorelease.general2.ticket.3"
-       category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+@@ -487009,13 +487006,10 @@
+       sku: "bundle.cd2022.2"
+       category: IAP_CATEGORY_BUNDLE
        sortOrder: 2
 +      hidden: true
-       spriteId: "general1.ticket.2"
-       title: "general1.ticket_CD_Zorua26_title"
-       skuEnableTime: "2019-03-14T08:00:00"
-@@ -505291,7 +505416,27 @@
+       sale: true
+-      spriteId: "bundle.general1.medium.1"
+-      title: "bundle.general1.medium.1_title"
+-      skuEnableTime: "2022-10-13T12:00:00"
+-      skuDisableTime: "2026-10-11T23:59:59"
+-      skuEnableTimeUtcMs: 1665662400000
+-      skuDisableTimeUtcMs: 1791763199000
++      spriteId: "bundle.halloween.adventure.1"
++      title: "bundle.halloween.adventure.1_title"
      }
    }
  }
--batch_id: 1791542216859
+@@ -488376,9 +488370,14 @@
+       sku: "bundle.hatchbox2024.1"
+       category: IAP_CATEGORY_BUNDLE
+       sortOrder: 1
+-      hidden: true
+       spriteId: "bundle.general.adventure.1"
+       title: "bundle.xmas.large.1_title"
++      skuEnableTime: "2022-10-13T12:00:00"
++      skuDisableTime: "2026-10-19T20:00:00"
++      skuEnableTimeUtcMs: 1665662400000
++      skuDisableTimeUtcMs: 1792440000000
++      showDiscountTag: true
++      showStrikethroughPrice: true
+     }
+   }
+ }
+@@ -505436,7 +505435,2200 @@
+     }
+   }
+ }
+-batch_id: 1791665208383
 +template {
-+  template_id: "COMBAT_VNEXT_SHOW_MINIOR_IBFC_TOASTS_FEATURE_GATE"
++  template_id: "COMBAT_VM_MOVE_TEMP_EVOLUTION_MEGA_V0310_POKEMON_MANECTRIC"
 +  data {
-+    template_id: "COMBAT_VNEXT_SHOW_MINIOR_IBFC_TOASTS_FEATURE_GATE"
-+    featureGate {
-+      status: 1
-+      rolloutPercentage: 100
++    template_id: "COMBAT_VM_MOVE_TEMP_EVOLUTION_MEGA_V0310_POKEMON_MANECTRIC"
++    combat_move {
++      uniqueId: TEMP_EVOLUTION_MEGA_V0310_POKEMON_MANECTRIC
++      type: POKEMON_TYPE_ELECTRIC
++      power: 50
++      vfxName: "discharge"
++      energyDelta: -35
 +    }
 +  }
 +}
 +template {
-+  template_id: "HIDE_UI_IN_MINIOR_IBFC_FEATURE_GATE"
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT"
 +  data {
-+    template_id: "HIDE_UI_IN_MINIOR_IBFC_FEATURE_GATE"
-+    featureGate {
-+      status: 1
-+      rolloutPercentage: 100
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT"
++    eventPassSettings {
++      prefix: "EVENT_PASS_FALLMARATHON2026_EVENT"
++      pointsItemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_04
++      trackConditions {
++        track: FREE
++        trackTitleKey: "season_pass_base_track_title_fall_marathon_2026"
++      }
++      trackConditions {
++        track: PREMIUM
++        badge: BADGE_EVENT_0244
++        trackTitleKey: "season_pass_premium_track_title_fall_marathon_2026"
++      }
++      expirationTime: "2026-10-19T20:00:00"
++      maxTierLevel: 60
++      additionalBonusTiersLevel: 31
++      eventPassDisplaySettings {
++        bonusBoxes {
++          text: "quest_catch_pokemon_singular"
++          iconType: SPAWN_UNKNOWN
++          quantity: 5
++        }
++        bonusBoxes {
++          text: "quest_hatch_egg_singular"
++          iconType: EGG
++          quantity: 40
++        }
++        bonusBoxes {
++          text: "quest_win_raid_singular"
++          iconType: RAID
++          quantity: 100
++        }
++        eventPassTrackUpgradeDescriptions {
++          passTrackUpgradeHeaderDescription: "season_pass_fall_marathon_2026_track_upgrade_header_description"
++          eventPassTrackToUpgradeTo: PREMIUM
++          trackUnlockSkuId: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
++          trackUnlockPlusPointsSkuId: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
++          upgradeDescriptionKey: "season_pass_fall_marathon_2026_upgrade_description"
++          ranksToHighlightRewards: 6
++          ranksToHighlightRewards: 15
++          ranksToHighlightRewards: 30
++          detailsLinkKey: "season_pass_details_link_fall_marathon_2026"
++          trackUnlockImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
++          trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
++        }
++        eventPassTitleKey: "season_pass_base_track_title_fall_marathon_2026"
++        headerIconUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7150419b_s24-logo-512x512.png"
++        premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
++        premiumRewardBannerMiddle: "item_fall_marathon_2026_milestone_name"
++        premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text_bugoutbuddies2026"
++        premiumRewardBannerImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7150419b_s24-logo-512x512.png"
++        premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
++        todayViewSection: SEASONAL_EVENT_PASS_SECTION
++        sectionDisplayPriority: 50
++      }
++      gracePeriodEndTime: "2026-10-21T20:00:00"
 +    }
 +  }
 +}
-+batch_id: 1791665208383
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_10_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_10_FREE"
++    eventPassTierSettings {
++      rank: 10
++      track: FREE
++      minPointsRequired: 900
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "fallmarathon2026_season_pass_rank_01"
++          durationMins: 131487
++        }
++      }
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_01"
++        bonusBoxes {
++          text: "incense_duration_double"
++          iconType: INCENSE
++        }
++      }
++      activeBonusDisplaySettings {
++        eventName: "go_pass_cumulative_bonuses_header"
++        bonusBoxes {
++          text: "incense_duration_double"
++          iconType: INCENSE
++        }
++      }
++      isMilestoneRank: true
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_10_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_10_PREMIUM"
++    eventPassTierSettings {
++      rank: 10
++      track: PREMIUM
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_11_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_11_FREE"
++    eventPassTierSettings {
++      rank: 11
++      track: FREE
++      minPointsRequired: 1000
++      rewards {
++        type: EXPERIENCE
++        exp: 5000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_11_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_11_PREMIUM"
++    eventPassTierSettings {
++      rank: 11
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 7500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_12_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_12_FREE"
++    eventPassTierSettings {
++      rank: 12
++      track: FREE
++      minPointsRequired: 1100
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_12_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_12_PREMIUM"
++    eventPassTierSettings {
++      rank: 12
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 20
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_13_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_13_FREE"
++    eventPassTierSettings {
++      rank: 13
++      track: FREE
++      minPointsRequired: 1200
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RARE_CANDY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_13_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_13_PREMIUM"
++    eventPassTierSettings {
++      rank: 13
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_XL_RARE_CANDY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_14_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_14_FREE"
++    eventPassTierSettings {
++      rank: 14
++      track: FREE
++      minPointsRequired: 1300
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: BLITZLE
++          pokemonDisplay {
++            form: BLITZLE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_14_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_14_PREMIUM"
++    eventPassTierSettings {
++      rank: 14
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: DWEBBLE
++          pokemonDisplay {
++            form: DWEBBLE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_15_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_15_FREE"
++    eventPassTierSettings {
++      rank: 15
++      track: FREE
++      minPointsRequired: 1400
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_INCENSE_ORDINARY
++          amount: 1
++        }
++      }
++      isMilestoneRank: true
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_15_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_15_PREMIUM"
++    eventPassTierSettings {
++      rank: 15
++      track: PREMIUM
++      rewards {
++        type: MEGA_RESOURCE
++        megaResource {
++          pokemonId: MANECTRIC
++          amount: 500
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_16_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_16_FREE"
++    eventPassTierSettings {
++      rank: 16
++      track: FREE
++      minPointsRequired: 1500
++      rewards {
++        type: EXPERIENCE
++        exp: 5000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_16_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_16_PREMIUM"
++    eventPassTierSettings {
++      rank: 16
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 7500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_17_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_17_FREE"
++    eventPassTierSettings {
++      rank: 17
++      track: FREE
++      minPointsRequired: 1600
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_17_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_17_PREMIUM"
++    eventPassTierSettings {
++      rank: 17
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 20
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_18_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_18_FREE"
++    eventPassTierSettings {
++      rank: 18
++      track: FREE
++      minPointsRequired: 1700
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: ELECTRIKE
++          pokemonDisplay {
++            form: ELECTRIKE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_18_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_18_PREMIUM"
++    eventPassTierSettings {
++      rank: 18
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: ELECTRIKE
++          pokemonDisplay {
++            form: ELECTRIKE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_19_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_19_FREE"
++    eventPassTierSettings {
++      rank: 19
++      track: FREE
++      minPointsRequired: 1800
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: SKARMORY
++          pokemonDisplay {
++            form: SKARMORY_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_19_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_19_PREMIUM"
++    eventPassTierSettings {
++      rank: 19
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: SKARMORY
++          pokemonDisplay {
++            form: SKARMORY_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_1_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_1_FREE"
++    eventPassTierSettings {
++      rank: 1
++      track: FREE
++      rewards {
++        type: EXPERIENCE
++        exp: 2500
++      }
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "fallmarathon2026_season_pass_entitlement"
++          durationMins: 131487
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_1_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_1_PREMIUM"
++    eventPassTierSettings {
++      rank: 1
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 5000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_20_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_20_FREE"
++    eventPassTierSettings {
++      rank: 20
++      track: FREE
++      minPointsRequired: 1900
++      rewards {
++        type: PLAYER_ATTRIBUTE
++        playerAttribute {
++          key: "fallmarathon2026_season_pass_rank_02"
++          durationMins: 131487
++        }
++      }
++      bonusSettings {
++        eventName: "season_pass_milestone_bonus_title_02"
++        bonusBoxes {
++          text: "5x_mega_energy_electrike_manectric_buddy"
++          iconType: BUDDY
++        }
++      }
++      activeBonusDisplaySettings {
++        eventName: "go_pass_cumulative_bonuses_header"
++        bonusBoxes {
++          text: "incense_duration_double"
++          iconType: INCENSE
++        }
++        bonusBoxes {
++          text: "5x_mega_energy_electrike_manectric_buddy"
++          iconType: BUDDY
++        }
++      }
++      isMilestoneRank: true
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_20_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_20_PREMIUM"
++    eventPassTierSettings {
++      rank: 20
++      track: PREMIUM
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_21_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_21_FREE"
++    eventPassTierSettings {
++      rank: 21
++      track: FREE
++      minPointsRequired: 2000
++      rewards {
++        type: EXPERIENCE
++        exp: 7500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_21_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_21_PREMIUM"
++    eventPassTierSettings {
++      rank: 21
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 10000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_22_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_22_FREE"
++    eventPassTierSettings {
++      rank: 22
++      track: FREE
++      minPointsRequired: 2100
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_22_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_22_PREMIUM"
++    eventPassTierSettings {
++      rank: 22
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_ULTRA_BALL
++          amount: 20
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_23_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_23_FREE"
++    eventPassTierSettings {
++      rank: 23
++      track: FREE
++      minPointsRequired: 2200
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RARE_CANDY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_23_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_23_PREMIUM"
++    eventPassTierSettings {
++      rank: 23
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_XL_RARE_CANDY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_24_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_24_FREE"
++    eventPassTierSettings {
++      rank: 24
++      track: FREE
++      minPointsRequired: 2300
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_PINAP_BERRY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_24_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_24_PREMIUM"
++    eventPassTierSettings {
++      rank: 24
++      track: PREMIUM
++      rewards {
++        type: MEGA_RESOURCE
++        megaResource {
++          pokemonId: MANECTRIC
++          amount: 500
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_25_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_25_FREE"
++    eventPassTierSettings {
++      rank: 25
++      track: FREE
++      minPointsRequired: 2400
++      rewards {
++        type: EXPERIENCE
++        exp: 7500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_25_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_25_PREMIUM"
++    eventPassTierSettings {
++      rank: 25
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 10000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_26_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_26_FREE"
++    eventPassTierSettings {
++      rank: 26
++      track: FREE
++      minPointsRequired: 2500
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: ELECTRIKE
++          pokemonDisplay {
++            form: ELECTRIKE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_26_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_26_PREMIUM"
++    eventPassTierSettings {
++      rank: 26
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: ELECTRIKE
++          pokemonDisplay {
++            form: ELECTRIKE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_27_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_27_FREE"
++    eventPassTierSettings {
++      rank: 27
++      track: FREE
++      minPointsRequired: 2600
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: ELECTRIKE
++          pokemonDisplay {
++            form: ELECTRIKE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_27_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_27_PREMIUM"
++    eventPassTierSettings {
++      rank: 27
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: ELECTRIKE
++          pokemonDisplay {
++            form: ELECTRIKE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_28_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_28_FREE"
++    eventPassTierSettings {
++      rank: 28
++      track: FREE
++      minPointsRequired: 2700
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: GROWLITHE
++          pokemonDisplay {
++            form: GROWLITHE_HISUIAN
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_28_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_28_PREMIUM"
++    eventPassTierSettings {
++      rank: 28
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: GROWLITHE
++          pokemonDisplay {
++            form: GROWLITHE_HISUIAN
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_29_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_29_FREE"
++    eventPassTierSettings {
++      rank: 29
++      track: FREE
++      minPointsRequired: 2800
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: GROWLITHE
++          pokemonDisplay {
++            form: GROWLITHE_HISUIAN
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_29_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_29_PREMIUM"
++    eventPassTierSettings {
++      rank: 29
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: GROWLITHE
++          pokemonDisplay {
++            form: GROWLITHE_HISUIAN
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_2_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_2_FREE"
++    eventPassTierSettings {
++      rank: 2
++      track: FREE
++      minPointsRequired: 100
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_POKE_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_2_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_2_PREMIUM"
++    eventPassTierSettings {
++      rank: 2
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_POKE_BALL
++          amount: 30
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_30_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_30_FREE"
++    eventPassTierSettings {
++      rank: 30
++      track: FREE
++      minPointsRequired: 2900
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: BRAMBLIN
++          pokemonDisplay {
++            form: BRAMBLIN_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++      isMilestoneRank: true
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_30_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_30_PREMIUM"
++    eventPassTierSettings {
++      rank: 30
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: BRAMBLIN
++          pokemonDisplay {
++            form: BRAMBLIN_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_31_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_31_FREE"
++    eventPassTierSettings {
++      rank: 31
++      track: FREE
++      minPointsRequired: 3000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_31_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_31_PREMIUM"
++    eventPassTierSettings {
++      rank: 31
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_32_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_32_FREE"
++    eventPassTierSettings {
++      rank: 32
++      track: FREE
++      minPointsRequired: 3100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_32_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_32_PREMIUM"
++    eventPassTierSettings {
++      rank: 32
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_33_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_33_FREE"
++    eventPassTierSettings {
++      rank: 33
++      track: FREE
++      minPointsRequired: 3200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_33_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_33_PREMIUM"
++    eventPassTierSettings {
++      rank: 33
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_34_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_34_FREE"
++    eventPassTierSettings {
++      rank: 34
++      track: FREE
++      minPointsRequired: 3300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_34_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_34_PREMIUM"
++    eventPassTierSettings {
++      rank: 34
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_35_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_35_FREE"
++    eventPassTierSettings {
++      rank: 35
++      track: FREE
++      minPointsRequired: 3400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_35_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_35_PREMIUM"
++    eventPassTierSettings {
++      rank: 35
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_36_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_36_FREE"
++    eventPassTierSettings {
++      rank: 36
++      track: FREE
++      minPointsRequired: 3500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_36_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_36_PREMIUM"
++    eventPassTierSettings {
++      rank: 36
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_37_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_37_FREE"
++    eventPassTierSettings {
++      rank: 37
++      track: FREE
++      minPointsRequired: 3600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_37_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_37_PREMIUM"
++    eventPassTierSettings {
++      rank: 37
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_38_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_38_FREE"
++    eventPassTierSettings {
++      rank: 38
++      track: FREE
++      minPointsRequired: 3700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_38_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_38_PREMIUM"
++    eventPassTierSettings {
++      rank: 38
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_39_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_39_FREE"
++    eventPassTierSettings {
++      rank: 39
++      track: FREE
++      minPointsRequired: 3800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_39_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_39_PREMIUM"
++    eventPassTierSettings {
++      rank: 39
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_3_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_3_FREE"
++    eventPassTierSettings {
++      rank: 3
++      track: FREE
++      minPointsRequired: 200
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_RARE_CANDY
++          amount: 1
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_3_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_3_PREMIUM"
++    eventPassTierSettings {
++      rank: 3
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_XL_RARE_CANDY
++          amount: 3
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_40_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_40_FREE"
++    eventPassTierSettings {
++      rank: 40
++      track: FREE
++      minPointsRequired: 3900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_40_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_40_PREMIUM"
++    eventPassTierSettings {
++      rank: 40
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_41_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_41_FREE"
++    eventPassTierSettings {
++      rank: 41
++      track: FREE
++      minPointsRequired: 4000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_41_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_41_PREMIUM"
++    eventPassTierSettings {
++      rank: 41
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_42_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_42_FREE"
++    eventPassTierSettings {
++      rank: 42
++      track: FREE
++      minPointsRequired: 4100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_42_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_42_PREMIUM"
++    eventPassTierSettings {
++      rank: 42
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_43_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_43_FREE"
++    eventPassTierSettings {
++      rank: 43
++      track: FREE
++      minPointsRequired: 4200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_43_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_43_PREMIUM"
++    eventPassTierSettings {
++      rank: 43
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_44_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_44_FREE"
++    eventPassTierSettings {
++      rank: 44
++      track: FREE
++      minPointsRequired: 4300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_44_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_44_PREMIUM"
++    eventPassTierSettings {
++      rank: 44
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_45_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_45_FREE"
++    eventPassTierSettings {
++      rank: 45
++      track: FREE
++      minPointsRequired: 4400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_45_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_45_PREMIUM"
++    eventPassTierSettings {
++      rank: 45
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_46_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_46_FREE"
++    eventPassTierSettings {
++      rank: 46
++      track: FREE
++      minPointsRequired: 4500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_46_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_46_PREMIUM"
++    eventPassTierSettings {
++      rank: 46
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_47_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_47_FREE"
++    eventPassTierSettings {
++      rank: 47
++      track: FREE
++      minPointsRequired: 4600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_47_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_47_PREMIUM"
++    eventPassTierSettings {
++      rank: 47
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_48_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_48_FREE"
++    eventPassTierSettings {
++      rank: 48
++      track: FREE
++      minPointsRequired: 4700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_48_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_48_PREMIUM"
++    eventPassTierSettings {
++      rank: 48
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_49_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_49_FREE"
++    eventPassTierSettings {
++      rank: 49
++      track: FREE
++      minPointsRequired: 4800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_49_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_49_PREMIUM"
++    eventPassTierSettings {
++      rank: 49
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_4_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_4_FREE"
++    eventPassTierSettings {
++      rank: 4
++      track: FREE
++      minPointsRequired: 300
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: CACNEA
++          pokemonDisplay {
++            form: CACNEA_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_4_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_4_PREMIUM"
++    eventPassTierSettings {
++      rank: 4
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: HOPPIP
++          pokemonDisplay {
++            form: HOPPIP_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_50_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_50_FREE"
++    eventPassTierSettings {
++      rank: 50
++      track: FREE
++      minPointsRequired: 4900
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_50_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_50_PREMIUM"
++    eventPassTierSettings {
++      rank: 50
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_51_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_51_FREE"
++    eventPassTierSettings {
++      rank: 51
++      track: FREE
++      minPointsRequired: 5000
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_51_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_51_PREMIUM"
++    eventPassTierSettings {
++      rank: 51
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_52_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_52_FREE"
++    eventPassTierSettings {
++      rank: 52
++      track: FREE
++      minPointsRequired: 5100
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_52_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_52_PREMIUM"
++    eventPassTierSettings {
++      rank: 52
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_53_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_53_FREE"
++    eventPassTierSettings {
++      rank: 53
++      track: FREE
++      minPointsRequired: 5200
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_53_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_53_PREMIUM"
++    eventPassTierSettings {
++      rank: 53
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_54_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_54_FREE"
++    eventPassTierSettings {
++      rank: 54
++      track: FREE
++      minPointsRequired: 5300
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_54_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_54_PREMIUM"
++    eventPassTierSettings {
++      rank: 54
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_55_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_55_FREE"
++    eventPassTierSettings {
++      rank: 55
++      track: FREE
++      minPointsRequired: 5400
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_55_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_55_PREMIUM"
++    eventPassTierSettings {
++      rank: 55
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_56_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_56_FREE"
++    eventPassTierSettings {
++      rank: 56
++      track: FREE
++      minPointsRequired: 5500
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_56_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_56_PREMIUM"
++    eventPassTierSettings {
++      rank: 56
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_57_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_57_FREE"
++    eventPassTierSettings {
++      rank: 57
++      track: FREE
++      minPointsRequired: 5600
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_57_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_57_PREMIUM"
++    eventPassTierSettings {
++      rank: 57
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_58_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_58_FREE"
++    eventPassTierSettings {
++      rank: 58
++      track: FREE
++      minPointsRequired: 5700
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_58_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_58_PREMIUM"
++    eventPassTierSettings {
++      rank: 58
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_59_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_59_FREE"
++    eventPassTierSettings {
++      rank: 59
++      track: FREE
++      minPointsRequired: 5800
++      rewards {
++        type: STARDUST
++        stardust: 50
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_59_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_59_PREMIUM"
++    eventPassTierSettings {
++      rank: 59
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 100
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_5_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_5_FREE"
++    eventPassTierSettings {
++      rank: 5
++      track: FREE
++      minPointsRequired: 400
++      rewards {
++        type: EXPERIENCE
++        exp: 2500
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_5_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_5_PREMIUM"
++    eventPassTierSettings {
++      rank: 5
++      track: PREMIUM
++      rewards {
++        type: STARDUST
++        stardust: 5000
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_60_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_60_FREE"
++    eventPassTierSettings {
++      rank: 60
++      track: FREE
++      minPointsRequired: 5900
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: BRAMBLIN
++          pokemonDisplay {
++            form: BRAMBLIN_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_60_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_60_PREMIUM"
++    eventPassTierSettings {
++      rank: 60
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: BRAMBLIN
++          pokemonDisplay {
++            form: BRAMBLIN_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_6_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_6_FREE"
++    eventPassTierSettings {
++      rank: 6
++      track: FREE
++      minPointsRequired: 500
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GOLDEN_RAZZ_BERRY
++          amount: 1
++        }
++      }
++      isMilestoneRank: true
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_6_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_6_PREMIUM"
++    eventPassTierSettings {
++      rank: 6
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_INCENSE_ORDINARY
++          amount: 5
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_7_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_7_FREE"
++    eventPassTierSettings {
++      rank: 7
++      track: FREE
++      minPointsRequired: 600
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 10
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_7_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_7_PREMIUM"
++    eventPassTierSettings {
++      rank: 7
++      track: PREMIUM
++      rewards {
++        type: ITEM
++        item {
++          item: ITEM_GREAT_BALL
++          amount: 20
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_8_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_8_FREE"
++    eventPassTierSettings {
++      rank: 8
++      track: FREE
++      minPointsRequired: 700
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PONYTA
++          pokemonDisplay {
++            form: PONYTA_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_8_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_8_PREMIUM"
++    eventPassTierSettings {
++      rank: 8
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: PONYTA
++          pokemonDisplay {
++            form: PONYTA_GALARIAN
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_9_FREE"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_9_FREE"
++    eventPassTierSettings {
++      rank: 9
++      track: FREE
++      minPointsRequired: 800
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: ELECTRIKE
++          pokemonDisplay {
++            form: ELECTRIKE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_9_PREMIUM"
++  data {
++    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_9_PREMIUM"
++    eventPassTierSettings {
++      rank: 9
++      track: PREMIUM
++      rewards {
++        type: POKEMON_ENCOUNTER
++        pokemonEncounter {
++          pokemonId: ELECTRIKE
++          pokemonDisplay {
++            form: ELECTRIKE_NORMAL
++          }
++          isFeaturedPokemon: true
++        }
++      }
++    }
++  }
++}
++template {
++  template_id: "MEGA_EVOLUTION_LEVEL_4_V0310_POKEMON_MANECTRIC"
++  data {
++    template_id: "MEGA_EVOLUTION_LEVEL_4_V0310_POKEMON_MANECTRIC"
++    megaEvoLevelSettings {
++      level: 4
++      pokemonId: MANECTRIC
++      progression {
++        pointsRequired: 30
++        pointsLimitPerPeriod: 1
++        pointsPerMegaEvoAction: 1
++      }
++      cooldown {
++        durationMs: 86400000
++        bypassCostInitial: 5
++        bypassCostRoundingValue: 1
++      }
++      effects {
++        differentTypeAttackBoost: 1.1
++        sameTypeAttackBoost: 1.3
++        sameTypeExtraCatchCandy: 3
++        sameTypeExtraCatchXp: 200
++        sameTypeExtraCatchCandyXlChance: 0.3
++        selfCpBoostAdditionalLevel: 2
++      }
++      megaEnergyCostToUnlock: 5000
++      ftueExpirationTimestamp: 1775001600000
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_gothiclolita-shorts"
++  data {
++    template_id: "N_DISPLAY_n_shirt_gothiclolita-shorts"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_gothiclolita-shorts_icon"
++      displayStringId: "avatar_shirt_gothiclolitashorts"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shirt_gothiclolita-skirt"
++  data {
++    template_id: "N_DISPLAY_n_shirt_gothiclolita-skirt"
++    avatarItemDisplay {
++      iconAddress: "n_shirt_gothiclolita-skirt_icon"
++      displayStringId: "avatar_shirt_gothiclolitaskirt"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_shoes_gothiclolita"
++  data {
++    template_id: "N_DISPLAY_n_shoes_gothiclolita"
++    avatarItemDisplay {
++      iconAddress: "n_shoes_gothiclolita_icon"
++      displayStringId: "avatar_shoes_gothiclolita"
++    }
++  }
++}
++template {
++  template_id: "N_DISPLAY_n_socks_gothiclolita"
++  data {
++    template_id: "N_DISPLAY_n_socks_gothiclolita"
++    avatarItemDisplay {
++      iconAddress: "n_socks_gothiclolita_icon"
++      displayStringId: "avatar_socks_gothiclolita"
++    }
++  }
++}
++template {
++  template_id: "VM_MOVE_TEMP_EVOLUTION_MEGA_V0310_POKEMON_MANECTRIC"
++  data {
++    template_id: "VM_MOVE_TEMP_EVOLUTION_MEGA_V0310_POKEMON_MANECTRIC"
++    moveSettings {
++      movementId: TEMP_EVOLUTION_MEGA_V0310_POKEMON_MANECTRIC
++      animationId: 5
++      pokemonType: POKEMON_TYPE_ELECTRIC
++      power: 150
++      accuracyChance: 1
++      criticalChance: 0.05
++      staminaLossScalar: 0.08
++      trainerLevelMin: 1
++      trainerLevelMax: 100
++      vfxName: "discharge"
++      durationMs: 2500
++      damageWindowStartMs: 1700
++      damageWindowEndMs: 2100
++      energyDelta: -100
++      isLocked: true
++    }
++  }
++}
++template {
++  template_id: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
++  data {
++    template_id: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
++    iapItemDisplay {
++      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
++      sortOrder: 1
++      title: "season_pass_premium_track_title_fall_marathon_2026"
++      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
++      skuEnableTime: "2025-10-13T10:00:00"
++      skuDisableTime: "2026-10-21T20:00:00"
++      skuEnableTimeUtcMs: 1760349600000
++      skuDisableTimeUtcMs: 1792612800000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
++    }
++  }
++}
++template {
++  template_id: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
++  data {
++    template_id: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
++    iapItemDisplay {
++      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
++      sortOrder: 1
++      title: "season_pass_premium_track_plus_six_ranks_title_fall_marathon_2026"
++      description: "event_pass_plus_points_6_ranks_description"
++      skuEnableTime: "2025-10-13T10:00:00"
++      skuDisableTime: "2026-10-21T20:00:00"
++      skuEnableTimeUtcMs: 1760349600000
++      skuDisableTimeUtcMs: 1792612800000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
++    }
++  }
++}
++batch_id: 1791906639332
  experiment_id: 11
  experiment_id: 21
  experiment_id: 101
-@@ -505328,8 +505473,7 @@
+@@ -505460,10 +507652,10 @@
+ experiment_id: 1250
+ experiment_id: 1699
+ experiment_id: 1816
++experiment_id: 2254
+ experiment_id: 2297
+ experiment_id: 2600
+ experiment_id: 2650
+-experiment_id: 3025
+ experiment_id: 3032
+ experiment_id: 3033
+ experiment_id: 3063
+@@ -505472,12 +507664,15 @@
+ experiment_id: 3106
  experiment_id: 3112
  experiment_id: 3121
- experiment_id: 3126
--experiment_id: 3142
--experiment_id: 3546
-+experiment_id: 3155
+-experiment_id: 3126
+-experiment_id: 3155
++experiment_id: 3127
++experiment_id: 3552
++experiment_id: 3553
++experiment_id: 3555
  experiment_id: 4998
  experiment_id: 5160
  experiment_id: 5162
-@@ -505345,9 +505489,9 @@
+ experiment_id: 5163
++experiment_id: 5211
+ experiment_id: 5501
+ experiment_id: 5502
+ experiment_id: 5506
+@@ -505485,7 +507680,6 @@
+ experiment_id: 5510
+ experiment_id: 5514
+ experiment_id: 6075
+-experiment_id: 7003
  experiment_id: 7004
  experiment_id: 7007
  experiment_id: 7013
--experiment_id: 8701
-+experiment_id: 8702
- experiment_id: 8836
--experiment_id: 9315
-+experiment_id: 8837
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
