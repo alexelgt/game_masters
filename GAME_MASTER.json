@@ -42816,6 +42816,23 @@
         }
     },
     {
+        "templateId": "BADGE_EVENT_0271",
+        "data": {
+            "templateId": "BADGE_EVENT_0271",
+            "badgeSettings": {
+                "badgeType": "BADGE_EVENT_0271",
+                "badgeRank": 2,
+                "targets": [
+                    100
+                ],
+                "eventBadge": true,
+                "eventBadgeSettings": {
+                    "obEventBadgeSettingsNumber6": 1
+                }
+            }
+        }
+    },
+    {
         "templateId": "BADGE_EVENT_0272",
         "data": {
             "templateId": "BADGE_EVENT_0272",
@@ -101274,6 +101291,24 @@
         }
     },
     {
+        "templateId": "COMBAT_VM_MOVE_TEMP_EVOLUTION_MEGA_V0609_POKEMON_CHANDELURE",
+        "data": {
+            "templateId": "COMBAT_VM_MOVE_TEMP_EVOLUTION_MEGA_V0609_POKEMON_CHANDELURE",
+            "combatMove": {
+                "uniqueId": "TEMP_EVOLUTION_MEGA_V0609_POKEMON_CHANDELURE",
+                "type": "POKEMON_TYPE_GHOST",
+                "power": 50.0,
+                "vfxName": "ominous_wind",
+                "energyDelta": -40,
+                "buffs": {
+                    "attackerAttackStatStageChange": 1,
+                    "attackerDefenseStatStageChange": 1,
+                    "buffActivationChance": 0.1
+                }
+            }
+        }
+    },
+    {
         "templateId": "COMBAT_VM_MOVE_TEMP_EVOLUTION_MEGA_V0652_POKEMON_CHESNAUGHT",
         "data": {
             "templateId": "COMBAT_VM_MOVE_TEMP_EVOLUTION_MEGA_V0652_POKEMON_CHESNAUGHT",
@@ -101423,6 +101458,16 @@
         "templateId": "COMBAT_VNEXT_INITIALIZE_BD_LAST_FEATURE_GATE",
         "data": {
             "templateId": "COMBAT_VNEXT_INITIALIZE_BD_LAST_FEATURE_GATE",
+            "featureGate": {
+                "status": 1,
+                "rolloutPercentage": 100
+            }
+        }
+    },
+    {
+        "templateId": "COMBAT_VNEXT_PLAY_MISSED_FM_FEATURE_GATE",
+        "data": {
+            "templateId": "COMBAT_VNEXT_PLAY_MISSED_FM_FEATURE_GATE",
             "featureGate": {
                 "status": 1,
                 "rolloutPercentage": 100
@@ -151383,6 +151428,19 @@
             "templateId": "EXTENDED_V0609_POKEMON_CHANDELURE",
             "pokemonExtendedSettings": {
                 "uniqueId": "CHANDELURE",
+                "tempEvoOverrides": [
+                    {
+                        "tempEvoId": "TEMP_EVOLUTION_MEGA",
+                        "sizeSettings": {
+                            "xxsLowerBound": 0.7,
+                            "xsLowerBound": 1.25,
+                            "mLowerBound": 1.875,
+                            "mUpperBound": 3.125,
+                            "xlUpperBound": 3.75,
+                            "xxlUpperBound": 3.875
+                        }
+                    }
+                ],
                 "sizeSettings": {
                     "xxsLowerBound": 0.49,
                     "xsLowerBound": 0.5,
@@ -151401,6 +151459,19 @@
             "pokemonExtendedSettings": {
                 "uniqueId": "CHANDELURE",
                 "form": "CHANDELURE_NORMAL",
+                "tempEvoOverrides": [
+                    {
+                        "tempEvoId": "TEMP_EVOLUTION_MEGA",
+                        "sizeSettings": {
+                            "xxsLowerBound": 0.7,
+                            "xsLowerBound": 1.25,
+                            "mLowerBound": 1.875,
+                            "mUpperBound": 3.125,
+                            "xlUpperBound": 3.75,
+                            "xxlUpperBound": 3.875
+                        }
+                    }
+                ],
                 "sizeSettings": {
                     "xxsLowerBound": 0.49,
                     "xsLowerBound": 0.5,
@@ -191066,6 +191137,49 @@
         }
     },
     {
+        "templateId": "ITEM_EVENT_TICKET_S24_OCT31_MEGARAID",
+        "data": {
+            "templateId": "ITEM_EVENT_TICKET_S24_OCT31_MEGARAID",
+            "itemSettings": {
+                "itemId": "ITEM_EVENT_TICKET_S24_OCT31_MEGARAID",
+                "itemType": "ITEM_TYPE_GLOBAL_EVENT_TICKET",
+                "category": "ITEM_CATEGORY_GLOBAL_EVENT_TICKET",
+                "globalEventTicket": {
+                    "eventStartTime": "2026-10-31T14:00:00",
+                    "eventEndTime": "2026-10-31T17:00:00",
+                    "itemBagDescriptionKey": "item_event_ticket_gray_desc_MegaChandelureRaidDay",
+                    "giftable": true,
+                    "giftItem": "ITEM_EVENT_TICKET_S24_OCT31_MEGARAID",
+                    "eventBannerUrl": "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F452fd1a0_PGO-MCS_Chandelure_Super_Mega_Raid_Day_v3_1024x576.jpg",
+                    "displayV2Enabled": true,
+                    "backgroundImageUrl": "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F452fd1a0_PGO-MCS_Chandelure_Super_Mega_Raid_Day_v3_1024x576.jpg",
+                    "eventDatetimeRangeKey": "event_datetime_range_key_MegaChandelureRaidDay",
+                    "textRewardsKey": "text_rewards_key_ChandelureRaidDay",
+                    "iconRewards": [
+                        {
+                            "type": "ITEM",
+                            "item": {
+                                "item": "ITEM_FREE_RAID_TICKET",
+                                "amount": 8
+                            }
+                        },
+                        {
+                            "type": "ITEM",
+                            "item": {
+                                "item": "ITEM_XL_RARE_CANDY"
+                            }
+                        }
+                    ],
+                    "detailsLinkKey": "details_link_key_MegaChandelureRaidDay",
+                    "clientEventStartTimeUtcMs": "1793455200000",
+                    "clientEventEndTimeUtcMs": "1793466000000"
+                },
+                "nameOverride": "general2.ticket.5_MegaChandelureRaidDay",
+                "descriptionOverride": "item_event_ticket_gray_desc_MegaChandelureRaidDay"
+            }
+        }
+    },
+    {
         "templateId": "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY",
         "data": {
             "templateId": "ITEM_EVENT_TICKET_S24_OCT_10_COMMUNITY",
@@ -191201,6 +191315,8 @@
                     "eventStartTime": "2026-10-24T14:00:00",
                     "eventEndTime": "2026-10-24T17:00:00",
                     "itemBagDescriptionKey": "ITEM_EVENT_TICKET_S24_OCT_24_MAXBATTLE_details",
+                    "giftable": true,
+                    "giftItem": "ITEM_EVENT_TICKET_S24_OCT_24_MAXBATTLE_TO_GIFT",
                     "eventBannerUrl": "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fafa245c1_PGO-MCS_Lake_Guardians_Max_Battle_Day_v1-1025x576.jpg",
                     "displayV2Enabled": true,
                     "backgroundImageUrl": "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fafa245c1_PGO-MCS_Lake_Guardians_Max_Battle_Day_v1-1025x576.jpg",
@@ -192087,7 +192203,7 @@
                 "category": "ITEM_CATEGORY_INCENSE",
                 "dropTrainerLevel": 1,
                 "incense": {
-                    "incenseLifetimeSeconds": 3600,
+                    "incenseLifetimeSeconds": 7200,
                     "spawnTableProbability": 0.6
                 }
             }
@@ -199198,6 +199314,29 @@
         }
     },
     {
+        "templateId": "MEGA_EVOLUTION_LEVEL_0_V0609_POKEMON_CHANDELURE",
+        "data": {
+            "templateId": "MEGA_EVOLUTION_LEVEL_0_V0609_POKEMON_CHANDELURE",
+            "megaEvoLevelSettings": {
+                "pokemonId": "CHANDELURE",
+                "progression": {
+                    "pointsLimitPerPeriod": 1,
+                    "pointsPerMegaEvoAction": 1
+                },
+                "cooldown": {
+                    "durationMs": "1209600000",
+                    "bypassCostInitial": 300,
+                    "bypassCostRoundingValue": 1
+                },
+                "effects": {
+                    "differentTypeAttackBoost": 1.1,
+                    "sameTypeAttackBoost": 1.3,
+                    "sameTypeExtraCatchCandy": 1
+                }
+            }
+        }
+    },
+    {
         "templateId": "MEGA_EVOLUTION_LEVEL_0_V0652_POKEMON_CHESNAUGHT",
         "data": {
             "templateId": "MEGA_EVOLUTION_LEVEL_0_V0652_POKEMON_CHESNAUGHT",
@@ -199991,6 +200130,31 @@
             "megaEvoLevelSettings": {
                 "level": 1,
                 "pokemonId": "GARCHOMP",
+                "progression": {
+                    "pointsRequired": 1,
+                    "pointsLimitPerPeriod": 1,
+                    "pointsPerMegaEvoAction": 1
+                },
+                "cooldown": {
+                    "durationMs": "604800000",
+                    "bypassCostInitial": 60,
+                    "bypassCostRoundingValue": 1
+                },
+                "effects": {
+                    "differentTypeAttackBoost": 1.1,
+                    "sameTypeAttackBoost": 1.3,
+                    "sameTypeExtraCatchCandy": 1
+                }
+            }
+        }
+    },
+    {
+        "templateId": "MEGA_EVOLUTION_LEVEL_1_V0609_POKEMON_CHANDELURE",
+        "data": {
+            "templateId": "MEGA_EVOLUTION_LEVEL_1_V0609_POKEMON_CHANDELURE",
+            "megaEvoLevelSettings": {
+                "level": 1,
+                "pokemonId": "CHANDELURE",
                 "progression": {
                     "pointsRequired": 1,
                     "pointsLimitPerPeriod": 1,
@@ -200893,6 +201057,34 @@
             "megaEvoLevelSettings": {
                 "level": 2,
                 "pokemonId": "GARCHOMP",
+                "progression": {
+                    "pointsRequired": 7,
+                    "pointsLimitPerPeriod": 1,
+                    "pointsPerMegaEvoAction": 1
+                },
+                "cooldown": {
+                    "durationMs": "432000000",
+                    "bypassCostInitial": 30,
+                    "bypassCostRoundingValue": 1
+                },
+                "effects": {
+                    "differentTypeAttackBoost": 1.1,
+                    "sameTypeAttackBoost": 1.3,
+                    "sameTypeExtraCatchCandy": 1,
+                    "sameTypeExtraCatchXp": 50,
+                    "sameTypeExtraCatchCandyXlChance": 0.1
+                },
+                "megaEnergyCostPerPoint": 160
+            }
+        }
+    },
+    {
+        "templateId": "MEGA_EVOLUTION_LEVEL_2_V0609_POKEMON_CHANDELURE",
+        "data": {
+            "templateId": "MEGA_EVOLUTION_LEVEL_2_V0609_POKEMON_CHANDELURE",
+            "megaEvoLevelSettings": {
+                "level": 2,
+                "pokemonId": "CHANDELURE",
                 "progression": {
                     "pointsRequired": 7,
                     "pointsLimitPerPeriod": 1,
@@ -201838,6 +202030,34 @@
         }
     },
     {
+        "templateId": "MEGA_EVOLUTION_LEVEL_3_V0609_POKEMON_CHANDELURE",
+        "data": {
+            "templateId": "MEGA_EVOLUTION_LEVEL_3_V0609_POKEMON_CHANDELURE",
+            "megaEvoLevelSettings": {
+                "level": 3,
+                "pokemonId": "CHANDELURE",
+                "progression": {
+                    "pointsRequired": 30,
+                    "pointsLimitPerPeriod": 1,
+                    "pointsPerMegaEvoAction": 1
+                },
+                "cooldown": {
+                    "durationMs": "259200000",
+                    "bypassCostInitial": 15,
+                    "bypassCostRoundingValue": 1
+                },
+                "effects": {
+                    "differentTypeAttackBoost": 1.1,
+                    "sameTypeAttackBoost": 1.3,
+                    "sameTypeExtraCatchCandy": 2,
+                    "sameTypeExtraCatchXp": 100,
+                    "sameTypeExtraCatchCandyXlChance": 0.25
+                },
+                "megaEnergyCostPerPoint": 80
+            }
+        }
+    },
+    {
         "templateId": "MEGA_EVOLUTION_LEVEL_3_V0652_POKEMON_CHESNAUGHT",
         "data": {
             "templateId": "MEGA_EVOLUTION_LEVEL_3_V0652_POKEMON_CHESNAUGHT",
@@ -202282,6 +202502,36 @@
             "megaEvoLevelSettings": {
                 "level": 4,
                 "pokemonId": "STARAPTOR",
+                "progression": {
+                    "pointsRequired": 30,
+                    "pointsLimitPerPeriod": 1,
+                    "pointsPerMegaEvoAction": 1
+                },
+                "cooldown": {
+                    "durationMs": "86400000",
+                    "bypassCostInitial": 5,
+                    "bypassCostRoundingValue": 1
+                },
+                "effects": {
+                    "differentTypeAttackBoost": 1.1,
+                    "sameTypeAttackBoost": 1.3,
+                    "sameTypeExtraCatchCandy": 3,
+                    "sameTypeExtraCatchXp": 200,
+                    "sameTypeExtraCatchCandyXlChance": 0.3,
+                    "selfCpBoostAdditionalLevel": 2
+                },
+                "megaEnergyCostToUnlock": 5000,
+                "ftueExpirationTimestamp": "1775001600000"
+            }
+        }
+    },
+    {
+        "templateId": "MEGA_EVOLUTION_LEVEL_4_V0609_POKEMON_CHANDELURE",
+        "data": {
+            "templateId": "MEGA_EVOLUTION_LEVEL_4_V0609_POKEMON_CHANDELURE",
+            "megaEvoLevelSettings": {
+                "level": 4,
+                "pokemonId": "CHANDELURE",
                 "progression": {
                     "pointsRequired": 30,
                     "pointsLimitPerPeriod": 1,
@@ -280996,6 +281246,21 @@
             "templateId": "TEMPORARY_EVOLUTION_V0531_POKEMON_AUDINO",
             "temporaryEvolutionSettings": {
                 "pokemonId": "AUDINO",
+                "temporaryEvolutions": [
+                    {
+                        "temporaryEvolutionId": "TEMP_EVOLUTION_MEGA",
+                        "assetBundleValue": 51
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "templateId": "TEMPORARY_EVOLUTION_V0609_POKEMON_CHANDELURE",
+        "data": {
+            "templateId": "TEMPORARY_EVOLUTION_V0609_POKEMON_CHANDELURE",
+            "temporaryEvolutionSettings": {
+                "pokemonId": "CHANDELURE",
                 "temporaryEvolutions": [
                     {
                         "temporaryEvolutionId": "TEMP_EVOLUTION_MEGA",
@@ -448679,7 +448944,8 @@
             "templateId": "V0607_FAMILY_LITWICK",
             "pokemonFamily": {
                 "familyId": "FAMILY_LITWICK",
-                "candyPerXlCandy": 100
+                "candyPerXlCandy": 100,
+                "megaEvolvablePokemonId": "CHANDELURE"
             }
         }
     },
@@ -448784,6 +449050,7 @@
                     "shadowChargeMove": "FRUSTRATION"
                 },
                 "buddyGroupNumber": 2,
+                "buddyWalkedMegaEnergyAward": 25,
                 "ibfc": {},
                 "breadTierGroup": "GROUP_3"
             }
@@ -448892,6 +449159,7 @@
                     "shadowChargeMove": "FRUSTRATION"
                 },
                 "buddyGroupNumber": 2,
+                "buddyWalkedMegaEnergyAward": 25,
                 "ibfc": {},
                 "breadTierGroup": "GROUP_3"
             }
@@ -449003,6 +449271,7 @@
                     "shadowChargeMove": "FRUSTRATION"
                 },
                 "buddyGroupNumber": 2,
+                "buddyWalkedMegaEnergyAward": 25,
                 "useIrisFlyingPlacement": true,
                 "irisFlyingHeightLimitMeters": 3.0,
                 "ibfc": {},
@@ -449118,6 +449387,7 @@
                     "shadowChargeMove": "FRUSTRATION"
                 },
                 "buddyGroupNumber": 2,
+                "buddyWalkedMegaEnergyAward": 25,
                 "useIrisFlyingPlacement": true,
                 "irisFlyingHeightLimitMeters": 3.0,
                 "ibfc": {},
@@ -449201,6 +449471,13 @@
                 "kmBuddyDistance": 5.0,
                 "buddySize": "BUDDY_FLYING",
                 "modelHeight": 2.3,
+                "evolutionBranch": [
+                    {
+                        "temporaryEvolution": "TEMP_EVOLUTION_MEGA",
+                        "temporaryEvolutionEnergyCost": 300,
+                        "temporaryEvolutionEnergyCostSubsequent": 60
+                    }
+                ],
                 "modelScaleV2": 0.96,
                 "buddyOffsetMale": [
                     70.1,
@@ -449230,6 +449507,29 @@
                 "eliteCinematicMove": [
                     "POLTERGEIST"
                 ],
+                "tempEvoOverrides": [
+                    {
+                        "tempEvoId": "TEMP_EVOLUTION_MEGA",
+                        "stats": {
+                            "baseStamina": 155,
+                            "baseAttack": 335,
+                            "baseDefense": 227
+                        },
+                        "averageHeightM": 2.5,
+                        "averageWeightKg": 69.6,
+                        "typeOverride1": "POKEMON_TYPE_GHOST",
+                        "typeOverride2": "POKEMON_TYPE_FIRE",
+                        "camera": {
+                            "cylinderRadiusM": 1.7,
+                            "cylinderHeightM": 3.0,
+                            "cylinderGroundM": 1.2
+                        },
+                        "modelScaleV2": 0.8,
+                        "modelHeight": 2.5,
+                        "specialMove": "TEMP_EVOLUTION_MEGA_V0609_POKEMON_CHANDELURE"
+                    }
+                ],
+                "buddyWalkedMegaEnergyAward": 25,
                 "useIrisFlyingPlacement": true,
                 "irisFlyingHeightLimitMeters": 2.0,
                 "ibfc": {},
@@ -449313,6 +449613,13 @@
                 "kmBuddyDistance": 5.0,
                 "buddySize": "BUDDY_FLYING",
                 "modelHeight": 2.3,
+                "evolutionBranch": [
+                    {
+                        "temporaryEvolution": "TEMP_EVOLUTION_MEGA",
+                        "temporaryEvolutionEnergyCost": 300,
+                        "temporaryEvolutionEnergyCostSubsequent": 60
+                    }
+                ],
                 "modelScaleV2": 0.96,
                 "form": "CHANDELURE_NORMAL",
                 "buddyOffsetMale": [
@@ -449343,6 +449650,29 @@
                 "eliteCinematicMove": [
                     "POLTERGEIST"
                 ],
+                "tempEvoOverrides": [
+                    {
+                        "tempEvoId": "TEMP_EVOLUTION_MEGA",
+                        "stats": {
+                            "baseStamina": 155,
+                            "baseAttack": 335,
+                            "baseDefense": 227
+                        },
+                        "averageHeightM": 2.5,
+                        "averageWeightKg": 69.6,
+                        "typeOverride1": "POKEMON_TYPE_GHOST",
+                        "typeOverride2": "POKEMON_TYPE_FIRE",
+                        "camera": {
+                            "cylinderRadiusM": 1.7,
+                            "cylinderHeightM": 3.0,
+                            "cylinderGroundM": 1.2
+                        },
+                        "modelScaleV2": 0.8,
+                        "modelHeight": 2.5,
+                        "specialMove": "TEMP_EVOLUTION_MEGA_V0609_POKEMON_CHANDELURE"
+                    }
+                ],
+                "buddyWalkedMegaEnergyAward": 25,
                 "useIrisFlyingPlacement": true,
                 "irisFlyingHeightLimitMeters": 2.0,
                 "ibfc": {},
@@ -537555,6 +537885,29 @@
         }
     },
     {
+        "templateId": "VM_MOVE_TEMP_EVOLUTION_MEGA_V0609_POKEMON_CHANDELURE",
+        "data": {
+            "templateId": "VM_MOVE_TEMP_EVOLUTION_MEGA_V0609_POKEMON_CHANDELURE",
+            "moveSettings": {
+                "movementId": "TEMP_EVOLUTION_MEGA_V0609_POKEMON_CHANDELURE",
+                "animationId": 5,
+                "pokemonType": "POKEMON_TYPE_GHOST",
+                "power": 145.0,
+                "accuracyChance": 1.0,
+                "criticalChance": 0.05,
+                "staminaLossScalar": 0.06,
+                "trainerLevelMin": 1,
+                "trainerLevelMax": 100,
+                "vfxName": "ominous_wind",
+                "durationMs": 2500,
+                "damageWindowStartMs": 2050,
+                "damageWindowEndMs": 2300,
+                "energyDelta": -100,
+                "isLocked": true
+            }
+        }
+    },
+    {
         "templateId": "VM_MOVE_TEMP_EVOLUTION_MEGA_V0652_POKEMON_CHESNAUGHT",
         "data": {
             "templateId": "VM_MOVE_TEMP_EVOLUTION_MEGA_V0652_POKEMON_CHESNAUGHT",
@@ -539037,9 +539390,9 @@
             "templateId": "VS_SEEKER_CLIENT_SETTINGS",
             "vsSeekerClientSettings": {
                 "allowedVsSeekerLeagueTemplateId": [
-                    "COMBAT_LEAGUE_VS_SEEKER_GREAT_MEGAS",
+                    "COMBAT_LEAGUE_VS_SEEKER_GREAT",
                     "COMBAT_LEAGUE_VS_SEEKER_ULTRA_MEGAS",
-                    "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
+                    "COMBAT_LEAGUE_VS_SEEKER_GREAT_LITTLE"
                 ]
             }
         }
@@ -539054,31 +539407,31 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3000
+                            "count": 750
                         }
                     },
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3000
+                            "count": 750
                         }
                     },
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3000
+                            "count": 750
                         }
                     },
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3000
+                            "count": 750
                         }
                     },
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3000
+                            "count": 750
                         }
                     }
                 ]
@@ -539095,31 +539448,31 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6000
+                            "count": 1500
                         }
                     },
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6000
+                            "count": 1500
                         }
                     },
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6000
+                            "count": 1500
                         }
                     },
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6000
+                            "count": 1500
                         }
                     },
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6000
+                            "count": 1500
                         }
                     }
                 ],
@@ -539137,7 +539490,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2120
+                            "count": 530
                         }
                     },
                     {
@@ -539155,7 +539508,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 4240
+                            "count": 1060
                         }
                     }
                 ]
@@ -539172,7 +539525,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 4240
+                            "count": 1060
                         }
                     },
                     {
@@ -539190,7 +539543,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 8480
+                            "count": 2120
                         }
                     }
                 ],
@@ -539208,7 +539561,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2120
+                            "count": 530
                         }
                     },
                     {
@@ -539226,7 +539579,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 4240
+                            "count": 1060
                         }
                     }
                 ]
@@ -539243,7 +539596,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 4240
+                            "count": 1060
                         }
                     },
                     {
@@ -539261,7 +539614,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 8480
+                            "count": 2120
                         }
                     }
                 ],
@@ -539279,7 +539632,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2280
+                            "count": 570
                         }
                     },
                     {
@@ -539297,7 +539650,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 4560
+                            "count": 1140
                         }
                     }
                 ]
@@ -539314,7 +539667,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 4560
+                            "count": 1140
                         }
                     },
                     {
@@ -539332,7 +539685,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 9120
+                            "count": 2280
                         }
                     }
                 ],
@@ -539350,7 +539703,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2400
+                            "count": 600
                         }
                     },
                     {
@@ -539368,7 +539721,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 4800
+                            "count": 1200
                         }
                     }
                 ]
@@ -539385,7 +539738,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 4800
+                            "count": 1200
                         }
                     },
                     {
@@ -539403,7 +539756,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 9600
+                            "count": 2400
                         }
                     }
                 ],
@@ -539504,7 +539857,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2800
+                            "count": 700
                         }
                     },
                     {
@@ -539522,7 +539875,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 5600
+                            "count": 1400
                         }
                     }
                 ]
@@ -539539,7 +539892,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 5600
+                            "count": 1400
                         }
                     },
                     {
@@ -539557,7 +539910,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 11200
+                            "count": 2800
                         }
                     }
                 ],
@@ -539575,7 +539928,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2920
+                            "count": 730
                         }
                     },
                     {
@@ -539593,7 +539946,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 5840
+                            "count": 1460
                         }
                     }
                 ]
@@ -539610,7 +539963,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 5840
+                            "count": 1460
                         }
                     },
                     {
@@ -539628,7 +539981,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 11680
+                            "count": 2920
                         }
                     }
                 ],
@@ -539646,7 +539999,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3080
+                            "count": 770
                         }
                     },
                     {
@@ -539664,7 +540017,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6160
+                            "count": 1540
                         }
                     }
                 ]
@@ -539681,7 +540034,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6160
+                            "count": 1540
                         }
                     },
                     {
@@ -539699,7 +540052,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 12320
+                            "count": 3080
                         }
                     }
                 ],
@@ -539770,7 +540123,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 1200
+                            "count": 300
                         }
                     },
                     {
@@ -539788,7 +540141,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2400
+                            "count": 600
                         }
                     }
                 ]
@@ -539805,7 +540158,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2400
+                            "count": 600
                         }
                     },
                     {
@@ -539823,7 +540176,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 4800
+                            "count": 1200
                         }
                     }
                 ],
@@ -539841,7 +540194,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3480
+                            "count": 870
                         }
                     },
                     {
@@ -539859,7 +540212,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6960
+                            "count": 1740
                         }
                     }
                 ]
@@ -539876,7 +540229,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6960
+                            "count": 1740
                         }
                     },
                     {
@@ -539894,7 +540247,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 13920
+                            "count": 3480
                         }
                     }
                 ],
@@ -539912,7 +540265,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3600
+                            "count": 900
                         }
                     },
                     {
@@ -539930,7 +540283,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 7200
+                            "count": 1800
                         }
                     }
                 ]
@@ -539947,7 +540300,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 7200
+                            "count": 1800
                         }
                     },
                     {
@@ -539965,7 +540318,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 14400
+                            "count": 3600
                         }
                     }
                 ],
@@ -539983,7 +540336,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3600
+                            "count": 900
                         }
                     },
                     {
@@ -540001,7 +540354,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 7200
+                            "count": 1800
                         }
                     }
                 ]
@@ -540018,7 +540371,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 7200
+                            "count": 1800
                         }
                     },
                     {
@@ -540036,7 +540389,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 14400
+                            "count": 3600
                         }
                     }
                 ],
@@ -540054,7 +540407,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3600
+                            "count": 900
                         }
                     },
                     {
@@ -540072,7 +540425,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 7200
+                            "count": 1800
                         }
                     }
                 ]
@@ -540089,7 +540442,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 7200
+                            "count": 1800
                         }
                     },
                     {
@@ -540107,7 +540460,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 14400
+                            "count": 3600
                         }
                     }
                 ],
@@ -540125,7 +540478,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3600
+                            "count": 900
                         }
                     },
                     {
@@ -540143,7 +540496,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 7200
+                            "count": 1800
                         }
                     }
                 ]
@@ -540160,7 +540513,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 7200
+                            "count": 1800
                         }
                     },
                     {
@@ -540178,7 +540531,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 14400
+                            "count": 3600
                         }
                     }
                 ],
@@ -540196,7 +540549,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 1320
+                            "count": 330
                         }
                     },
                     {
@@ -540214,7 +540567,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2640
+                            "count": 660
                         }
                     }
                 ]
@@ -540231,7 +540584,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2640
+                            "count": 660
                         }
                     },
                     {
@@ -540249,7 +540602,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 5280
+                            "count": 1320
                         }
                     }
                 ],
@@ -540267,7 +540620,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 1320
+                            "count": 330
                         }
                     },
                     {
@@ -540285,7 +540638,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2640
+                            "count": 660
                         }
                     }
                 ]
@@ -540302,7 +540655,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2640
+                            "count": 660
                         }
                     },
                     {
@@ -540320,7 +540673,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 5280
+                            "count": 1320
                         }
                     }
                 ],
@@ -540338,7 +540691,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 1480
+                            "count": 370
                         }
                     },
                     {
@@ -540356,7 +540709,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2960
+                            "count": 740
                         }
                     }
                 ]
@@ -540373,7 +540726,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 2960
+                            "count": 740
                         }
                     },
                     {
@@ -540391,7 +540744,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 5920
+                            "count": 1480
                         }
                     }
                 ],
@@ -540462,7 +540815,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 1600
+                            "count": 400
                         }
                     },
                     {
@@ -540480,7 +540833,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3200
+                            "count": 800
                         }
                     }
                 ]
@@ -540497,7 +540850,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3200
+                            "count": 800
                         }
                     },
                     {
@@ -540515,7 +540868,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6400
+                            "count": 1600
                         }
                     }
                 ],
@@ -540533,7 +540886,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 1720
+                            "count": 430
                         }
                     },
                     {
@@ -540551,7 +540904,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3440
+                            "count": 860
                         }
                     }
                 ]
@@ -540568,7 +540921,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3440
+                            "count": 860
                         }
                     },
                     {
@@ -540586,7 +540939,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6880
+                            "count": 1720
                         }
                     }
                 ],
@@ -540604,7 +540957,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 1720
+                            "count": 430
                         }
                     },
                     {
@@ -540622,7 +540975,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3440
+                            "count": 860
                         }
                     }
                 ]
@@ -540639,7 +540992,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3440
+                            "count": 860
                         }
                     },
                     {
@@ -540657,7 +541010,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 6880
+                            "count": 1720
                         }
                     }
                 ],
@@ -540675,7 +541028,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 1880
+                            "count": 470
                         }
                     },
                     {
@@ -540693,7 +541046,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3760
+                            "count": 940
                         }
                     }
                 ]
@@ -540710,7 +541063,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 3760
+                            "count": 940
                         }
                     },
                     {
@@ -540728,7 +541081,7 @@
                     {
                         "item": {
                             "stardust": true,
-                            "count": 7520
+                            "count": 1880
                         }
                     }
                 ],
