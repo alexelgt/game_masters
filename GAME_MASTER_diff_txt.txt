@@ -1,1498 +1,2950 @@
---- GAME_MASTER_old.txt	2026-10-20 19:53:08.233881695 +0200
-+++ GAME_MASTER.txt	2026-10-21 19:48:31.698874902 +0200
-@@ -169277,12 +169277,17 @@
-   }
- }
- template {
--  template_id: "FRIENDSHIP_RESYNC_ON_READ_FEATURE_GATE"
-+  template_id: "BADGE_EVENT_0282"
-   data {
--    template_id: "FRIENDSHIP_RESYNC_ON_READ_FEATURE_GATE"
--    featureGate {
--      status: 1
--      rolloutPercentage: 100
-+    template_id: "BADGE_EVENT_0282"
-+    badgeSettings {
-+      badgeType: 6303
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
+--- GAME_MASTER_old.txt	2026-10-21 19:48:31.698874902 +0200
++++ GAME_MASTER.txt	2026-10-22 19:49:21.153663363 +0200
+@@ -42752,6 +42752,9 @@
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
 +      eventBadgeSettings {
 +        obEventBadgeSettingsNumber6: 1
 +      }
      }
    }
  }
-@@ -174764,6 +174769,7 @@
+@@ -43019,6 +43022,9 @@
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
++      eventBadgeSettings {
++        obEventBadgeSettingsNumber6: 1
++      }
+     }
+   }
+ }
+@@ -88044,2055 +88050,68 @@
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT"
+-    eventPassSettings {
+-      prefix: "EVENT_PASS_FALLMARATHON2026_EVENT"
+-      pointsItemId: ITEM_EVENT_PASS_POINT_LIVE_OPS_04
+-      trackConditions {
+-        track: FREE
+-        trackTitleKey: "season_pass_base_track_title_fall_marathon_2026"
+-      }
+-      trackConditions {
+-        track: PREMIUM
+-        badge: BADGE_EVENT_0244
+-        trackTitleKey: "season_pass_premium_track_title_fall_marathon_2026"
+-      }
+-      expirationTime: "2026-10-19T20:00:00"
+-      maxTierLevel: 60
+-      additionalBonusTiersLevel: 31
+-      eventPassDisplaySettings {
+-        bonusBoxes {
+-          text: "quest_catch_pokemon_singular"
+-          iconType: SPAWN_UNKNOWN
+-          quantity: 5
+-        }
+-        bonusBoxes {
+-          text: "quest_hatch_egg_singular"
+-          iconType: EGG
+-          quantity: 40
+-        }
+-        bonusBoxes {
+-          text: "quest_win_raid_singular"
+-          iconType: RAID
+-          quantity: 100
+-        }
+-        eventPassTrackUpgradeDescriptions {
+-          passTrackUpgradeHeaderDescription: "season_pass_fall_marathon_2026_track_upgrade_header_description"
+-          eventPassTrackToUpgradeTo: PREMIUM
+-          trackUnlockSkuId: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
+-          trackUnlockPlusPointsSkuId: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
+-          upgradeDescriptionKey: "season_pass_fall_marathon_2026_upgrade_description"
+-          ranksToHighlightRewards: 6
+-          ranksToHighlightRewards: 15
+-          ranksToHighlightRewards: 30
+-          detailsLinkKey: "season_pass_details_link_fall_marathon_2026"
+-          trackUnlockImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe.png"
+-          trackUnlockPlusPointsImageUrl: "https://storage.googleapis.com/prod-public-images/ic_eventpass_deluxe_plus.png"
+-        }
+-        eventPassTitleKey: "season_pass_base_track_title_fall_marathon_2026"
+-        headerIconUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7150419b_s24-logo-512x512.png"
+-        premiumRewardBannerTop: "event_pass_premium_reward_banner_top_text"
+-        premiumRewardBannerMiddle: "item_fall_marathon_2026_milestone_name"
+-        premiumRewardBannerBottom: "event_pass_premium_reward_banner_bottom_text_bugoutbuddies2026"
+-        premiumRewardBannerImageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F7150419b_s24-logo-512x512.png"
+-        premiumRewardsDescription: "season_pass_premium_rewards_desc_monthly_no_disclaimer"
+-        todayViewSection: SEASONAL_EVENT_PASS_SECTION
+-        sectionDisplayPriority: 50
+-      }
+-      gracePeriodEndTime: "2026-10-21T20:00:00"
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_10_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_10_FREE"
+-    eventPassTierSettings {
+-      rank: 10
+-      track: FREE
+-      minPointsRequired: 900
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "fallmarathon2026_season_pass_rank_01"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_01"
+-        bonusBoxes {
+-          text: "incense_duration_double"
+-          iconType: INCENSE
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        eventName: "go_pass_cumulative_bonuses_header"
+-        bonusBoxes {
+-          text: "incense_duration_double"
+-          iconType: INCENSE
+-        }
+-      }
+-      isMilestoneRank: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_10_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_10_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 10
+-      track: PREMIUM
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_11_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_11_FREE"
+-    eventPassTierSettings {
+-      rank: 11
+-      track: FREE
+-      minPointsRequired: 1000
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_11_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_11_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 11
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 7500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_12_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_12_FREE"
+-    eventPassTierSettings {
+-      rank: 12
+-      track: FREE
+-      minPointsRequired: 1100
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_12_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_12_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 12
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_13_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_13_FREE"
+-    eventPassTierSettings {
+-      rank: 13
+-      track: FREE
+-      minPointsRequired: 1200
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_RARE_CANDY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_13_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_13_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 13
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_XL_RARE_CANDY
+-          amount: 3
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_14_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_14_FREE"
+-    eventPassTierSettings {
+-      rank: 14
+-      track: FREE
+-      minPointsRequired: 1300
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: BLITZLE
+-          pokemonDisplay {
+-            form: BLITZLE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_14_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_14_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 14
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: DWEBBLE
+-          pokemonDisplay {
+-            form: DWEBBLE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_15_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_15_FREE"
+-    eventPassTierSettings {
+-      rank: 15
+-      track: FREE
+-      minPointsRequired: 1400
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_INCENSE_ORDINARY
+-          amount: 1
+-        }
+-      }
+-      isMilestoneRank: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_15_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_15_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 15
+-      track: PREMIUM
+-      rewards {
+-        type: MEGA_RESOURCE
+-        megaResource {
+-          pokemonId: MANECTRIC
+-          amount: 500
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_16_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_16_FREE"
+-    eventPassTierSettings {
+-      rank: 16
+-      track: FREE
+-      minPointsRequired: 1500
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_16_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_16_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 16
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 7500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_17_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_17_FREE"
+-    eventPassTierSettings {
+-      rank: 17
+-      track: FREE
+-      minPointsRequired: 1600
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_17_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_17_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 17
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_18_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_18_FREE"
+-    eventPassTierSettings {
+-      rank: 18
+-      track: FREE
+-      minPointsRequired: 1700
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: ELECTRIKE
+-          pokemonDisplay {
+-            form: ELECTRIKE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_18_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_18_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 18
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: ELECTRIKE
+-          pokemonDisplay {
+-            form: ELECTRIKE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_19_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_19_FREE"
+-    eventPassTierSettings {
+-      rank: 19
+-      track: FREE
+-      minPointsRequired: 1800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SKARMORY
+-          pokemonDisplay {
+-            form: SKARMORY_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_19_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_19_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 19
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: SKARMORY
+-          pokemonDisplay {
+-            form: SKARMORY_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_1_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_1_FREE"
+-    eventPassTierSettings {
+-      rank: 1
+-      track: FREE
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 2500
+-      }
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "fallmarathon2026_season_pass_entitlement"
+-          durationMins: 131487
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_1_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_1_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 1
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_20_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_20_FREE"
+-    eventPassTierSettings {
+-      rank: 20
+-      track: FREE
+-      minPointsRequired: 1900
+-      rewards {
+-        type: PLAYER_ATTRIBUTE
+-        playerAttribute {
+-          key: "fallmarathon2026_season_pass_rank_02"
+-          durationMins: 131487
+-        }
+-      }
+-      bonusSettings {
+-        eventName: "season_pass_milestone_bonus_title_02"
+-        bonusBoxes {
+-          text: "5x_mega_energy_electrike_manectric_buddy"
+-          iconType: BUDDY
+-        }
+-      }
+-      activeBonusDisplaySettings {
+-        eventName: "go_pass_cumulative_bonuses_header"
+-        bonusBoxes {
+-          text: "incense_duration_double"
+-          iconType: INCENSE
+-        }
+-        bonusBoxes {
+-          text: "5x_mega_energy_electrike_manectric_buddy"
+-          iconType: BUDDY
+-        }
+-      }
+-      isMilestoneRank: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_20_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_20_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 20
+-      track: PREMIUM
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_21_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_21_FREE"
+-    eventPassTierSettings {
+-      rank: 21
+-      track: FREE
+-      minPointsRequired: 2000
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 7500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_21_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_21_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 21
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 10000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_22_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_22_FREE"
+-    eventPassTierSettings {
+-      rank: 22
+-      track: FREE
+-      minPointsRequired: 2100
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_22_PREMIUM"
++  template_id: "general2.ticket.6"
+   data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_22_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 22
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_ULTRA_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_23_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_23_FREE"
+-    eventPassTierSettings {
+-      rank: 23
+-      track: FREE
+-      minPointsRequired: 2200
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_RARE_CANDY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_23_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_23_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 23
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_XL_RARE_CANDY
+-          amount: 3
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_24_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_24_FREE"
+-    eventPassTierSettings {
+-      rank: 24
+-      track: FREE
+-      minPointsRequired: 2300
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GOLDEN_PINAP_BERRY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_24_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_24_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 24
+-      track: PREMIUM
+-      rewards {
+-        type: MEGA_RESOURCE
+-        megaResource {
+-          pokemonId: MANECTRIC
+-          amount: 500
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_25_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_25_FREE"
+-    eventPassTierSettings {
+-      rank: 25
+-      track: FREE
+-      minPointsRequired: 2400
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 7500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_25_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_25_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 25
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 10000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_26_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_26_FREE"
+-    eventPassTierSettings {
+-      rank: 26
+-      track: FREE
+-      minPointsRequired: 2500
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: ELECTRIKE
+-          pokemonDisplay {
+-            form: ELECTRIKE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_26_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_26_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 26
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: ELECTRIKE
+-          pokemonDisplay {
+-            form: ELECTRIKE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_27_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_27_FREE"
+-    eventPassTierSettings {
+-      rank: 27
+-      track: FREE
+-      minPointsRequired: 2600
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: ELECTRIKE
+-          pokemonDisplay {
+-            form: ELECTRIKE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_27_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_27_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 27
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: ELECTRIKE
+-          pokemonDisplay {
+-            form: ELECTRIKE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_28_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_28_FREE"
+-    eventPassTierSettings {
+-      rank: 28
+-      track: FREE
+-      minPointsRequired: 2700
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: GROWLITHE
+-          pokemonDisplay {
+-            form: GROWLITHE_HISUIAN
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_28_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_28_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 28
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: GROWLITHE
+-          pokemonDisplay {
+-            form: GROWLITHE_HISUIAN
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_29_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_29_FREE"
+-    eventPassTierSettings {
+-      rank: 29
+-      track: FREE
+-      minPointsRequired: 2800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: GROWLITHE
+-          pokemonDisplay {
+-            form: GROWLITHE_HISUIAN
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_29_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_29_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 29
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: GROWLITHE
+-          pokemonDisplay {
+-            form: GROWLITHE_HISUIAN
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_2_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_2_FREE"
+-    eventPassTierSettings {
+-      rank: 2
+-      track: FREE
+-      minPointsRequired: 100
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_POKE_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_2_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_2_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 2
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_POKE_BALL
+-          amount: 30
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_30_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_30_FREE"
+-    eventPassTierSettings {
+-      rank: 30
+-      track: FREE
+-      minPointsRequired: 2900
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: BRAMBLIN
+-          pokemonDisplay {
+-            form: BRAMBLIN_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-      isMilestoneRank: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_30_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_30_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 30
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: BRAMBLIN
+-          pokemonDisplay {
+-            form: BRAMBLIN_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_31_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_31_FREE"
+-    eventPassTierSettings {
+-      rank: 31
+-      track: FREE
+-      minPointsRequired: 3000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_31_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_31_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 31
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_32_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_32_FREE"
+-    eventPassTierSettings {
+-      rank: 32
+-      track: FREE
+-      minPointsRequired: 3100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_32_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_32_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 32
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_33_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_33_FREE"
+-    eventPassTierSettings {
+-      rank: 33
+-      track: FREE
+-      minPointsRequired: 3200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_33_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_33_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 33
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_34_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_34_FREE"
+-    eventPassTierSettings {
+-      rank: 34
+-      track: FREE
+-      minPointsRequired: 3300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_34_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_34_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 34
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_35_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_35_FREE"
+-    eventPassTierSettings {
+-      rank: 35
+-      track: FREE
+-      minPointsRequired: 3400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_35_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_35_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 35
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_36_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_36_FREE"
+-    eventPassTierSettings {
+-      rank: 36
+-      track: FREE
+-      minPointsRequired: 3500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_36_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_36_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 36
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_37_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_37_FREE"
+-    eventPassTierSettings {
+-      rank: 37
+-      track: FREE
+-      minPointsRequired: 3600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_37_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_37_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 37
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_38_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_38_FREE"
+-    eventPassTierSettings {
+-      rank: 38
+-      track: FREE
+-      minPointsRequired: 3700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_38_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_38_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 38
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_39_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_39_FREE"
+-    eventPassTierSettings {
+-      rank: 39
+-      track: FREE
+-      minPointsRequired: 3800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_39_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_39_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 39
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_3_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_3_FREE"
+-    eventPassTierSettings {
+-      rank: 3
+-      track: FREE
+-      minPointsRequired: 200
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_RARE_CANDY
+-          amount: 1
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_3_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_3_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 3
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_XL_RARE_CANDY
+-          amount: 3
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_40_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_40_FREE"
+-    eventPassTierSettings {
+-      rank: 40
+-      track: FREE
+-      minPointsRequired: 3900
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_40_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_40_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 40
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_41_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_41_FREE"
+-    eventPassTierSettings {
+-      rank: 41
+-      track: FREE
+-      minPointsRequired: 4000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_41_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_41_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 41
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_42_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_42_FREE"
+-    eventPassTierSettings {
+-      rank: 42
+-      track: FREE
+-      minPointsRequired: 4100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_42_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_42_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 42
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_43_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_43_FREE"
+-    eventPassTierSettings {
+-      rank: 43
+-      track: FREE
+-      minPointsRequired: 4200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_43_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_43_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 43
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_44_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_44_FREE"
+-    eventPassTierSettings {
+-      rank: 44
+-      track: FREE
+-      minPointsRequired: 4300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_44_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_44_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 44
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_45_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_45_FREE"
+-    eventPassTierSettings {
+-      rank: 45
+-      track: FREE
+-      minPointsRequired: 4400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_45_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_45_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 45
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_46_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_46_FREE"
+-    eventPassTierSettings {
+-      rank: 46
+-      track: FREE
+-      minPointsRequired: 4500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_46_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_46_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 46
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_47_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_47_FREE"
+-    eventPassTierSettings {
+-      rank: 47
+-      track: FREE
+-      minPointsRequired: 4600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_47_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_47_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 47
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_48_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_48_FREE"
+-    eventPassTierSettings {
+-      rank: 48
+-      track: FREE
+-      minPointsRequired: 4700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_48_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_48_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 48
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_49_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_49_FREE"
+-    eventPassTierSettings {
+-      rank: 49
+-      track: FREE
+-      minPointsRequired: 4800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_49_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_49_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 49
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_4_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_4_FREE"
+-    eventPassTierSettings {
+-      rank: 4
+-      track: FREE
+-      minPointsRequired: 300
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: CACNEA
+-          pokemonDisplay {
+-            form: CACNEA_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_4_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_4_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 4
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: HOPPIP
+-          pokemonDisplay {
+-            form: HOPPIP_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_50_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_50_FREE"
+-    eventPassTierSettings {
+-      rank: 50
+-      track: FREE
+-      minPointsRequired: 4900
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_50_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_50_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 50
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_51_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_51_FREE"
+-    eventPassTierSettings {
+-      rank: 51
+-      track: FREE
+-      minPointsRequired: 5000
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_51_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_51_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 51
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_52_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_52_FREE"
+-    eventPassTierSettings {
+-      rank: 52
+-      track: FREE
+-      minPointsRequired: 5100
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_52_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_52_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 52
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_53_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_53_FREE"
+-    eventPassTierSettings {
+-      rank: 53
+-      track: FREE
+-      minPointsRequired: 5200
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_53_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_53_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 53
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_54_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_54_FREE"
+-    eventPassTierSettings {
+-      rank: 54
+-      track: FREE
+-      minPointsRequired: 5300
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_54_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_54_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 54
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_55_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_55_FREE"
+-    eventPassTierSettings {
+-      rank: 55
+-      track: FREE
+-      minPointsRequired: 5400
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_55_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_55_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 55
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_56_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_56_FREE"
+-    eventPassTierSettings {
+-      rank: 56
+-      track: FREE
+-      minPointsRequired: 5500
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_56_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_56_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 56
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_57_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_57_FREE"
+-    eventPassTierSettings {
+-      rank: 57
+-      track: FREE
+-      minPointsRequired: 5600
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_57_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_57_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 57
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_58_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_58_FREE"
+-    eventPassTierSettings {
+-      rank: 58
+-      track: FREE
+-      minPointsRequired: 5700
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_58_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_58_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 58
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_59_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_59_FREE"
+-    eventPassTierSettings {
+-      rank: 59
+-      track: FREE
+-      minPointsRequired: 5800
+-      rewards {
+-        type: STARDUST
+-        stardust: 50
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_59_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_59_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 59
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 100
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_5_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_5_FREE"
+-    eventPassTierSettings {
+-      rank: 5
+-      track: FREE
+-      minPointsRequired: 400
+-      rewards {
+-        type: EXPERIENCE
+-        exp: 2500
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_5_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_5_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 5
+-      track: PREMIUM
+-      rewards {
+-        type: STARDUST
+-        stardust: 5000
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_60_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_60_FREE"
+-    eventPassTierSettings {
+-      rank: 60
+-      track: FREE
+-      minPointsRequired: 5900
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: BRAMBLIN
+-          pokemonDisplay {
+-            form: BRAMBLIN_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_60_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_60_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 60
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: BRAMBLIN
+-          pokemonDisplay {
+-            form: BRAMBLIN_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_6_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_6_FREE"
+-    eventPassTierSettings {
+-      rank: 6
+-      track: FREE
+-      minPointsRequired: 500
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GOLDEN_RAZZ_BERRY
+-          amount: 1
+-        }
+-      }
+-      isMilestoneRank: true
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_6_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_6_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 6
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_INCENSE_ORDINARY
+-          amount: 5
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_7_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_7_FREE"
+-    eventPassTierSettings {
+-      rank: 7
+-      track: FREE
+-      minPointsRequired: 600
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GREAT_BALL
+-          amount: 10
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_7_PREMIUM"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_7_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 7
+-      track: PREMIUM
+-      rewards {
+-        type: ITEM
+-        item {
+-          item: ITEM_GREAT_BALL
+-          amount: 20
+-        }
+-      }
+-    }
+-  }
+-}
+-template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_8_FREE"
+-  data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_8_FREE"
+-    eventPassTierSettings {
+-      rank: 8
+-      track: FREE
+-      minPointsRequired: 700
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: PONYTA
+-          pokemonDisplay {
+-            form: PONYTA_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
++    template_id: "general2.ticket.6"
++    iapItemDisplay {
++      sku: "pgorelease.general2.ticket.6"
++      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
++      sortOrder: 1
++      spriteId: "general2.ticket.6"
++      title: "general2.ticket.6.DMAX_SINNOH_LAKE_MAX_BATTLE"
++      skuEnableTime: "2025-10-22T10:00:00"
++      skuDisableTime: "2026-10-24T17:00:00"
++      skuEnableTimeUtcMs: 1761127200000
++      skuDisableTimeUtcMs: 1792861200000
++      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2Fafa245c1_PGO-MCS_Lake_Guardians_Max_Battle_Day_v1-1025x576.jpg"
++      webstoreSkuId: "web-lake-guardians-max-battle-ultra"
++      webstoreSkuPriceE6: 4990000
++      useEnvironmentPrefix: true
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_8_PREMIUM"
++  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROXL"
+   data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_8_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 8
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: PONYTA
+-          pokemonDisplay {
+-            form: PONYTA_GALARIAN
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
++    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROXL"
++    settingsOverrideRule {
++      ruleType: DEVICE_MODEL
++      sortOrder: 50
++      ruleValue: "Google Pixel 10 Pro XL"
++      meshingEnabled: TRUE
++      occlusionEnabled: TRUE
++      semanticsEnabled: TRUE
++      vpsEnabled: TRUE
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_9_FREE"
++  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROFOLD"
+   data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_9_FREE"
+-    eventPassTierSettings {
+-      rank: 9
+-      track: FREE
+-      minPointsRequired: 800
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: ELECTRIKE
+-          pokemonDisplay {
+-            form: ELECTRIKE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
++    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROFOLD"
++    settingsOverrideRule {
++      ruleType: DEVICE_MODEL
++      sortOrder: 50
++      ruleValue: "Google Pixel 10 Pro Fold"
++      meshingEnabled: TRUE
++      occlusionEnabled: TRUE
++      semanticsEnabled: TRUE
++      vpsEnabled: TRUE
+     }
+   }
+ }
+ template {
+-  template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_9_PREMIUM"
++  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PRO"
+   data {
+-    template_id: "EVENT_PASS_FALLMARATHON2026_EVENT_9_PREMIUM"
+-    eventPassTierSettings {
+-      rank: 9
+-      track: PREMIUM
+-      rewards {
+-        type: POKEMON_ENCOUNTER
+-        pokemonEncounter {
+-          pokemonId: ELECTRIKE
+-          pokemonDisplay {
+-            form: ELECTRIKE_NORMAL
+-          }
+-          isFeaturedPokemon: true
+-        }
+-      }
++    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PRO"
++    settingsOverrideRule {
++      ruleType: DEVICE_MODEL
++      sortOrder: 50
++      ruleValue: "Google Pixel 10 Pro"
++      meshingEnabled: TRUE
++      occlusionEnabled: TRUE
++      semanticsEnabled: TRUE
++      vpsEnabled: TRUE
+     }
+   }
+ }
+@@ -170687,7 +168706,7 @@
+       ignoreInventorySpace: true
+       itemCap: 6000
+       eventPassPoint {
+-        eventPassId: "EVENT_PASS_GOWA_2025"
++        eventPassId: "EVENT_PASS_GOWA2026_GLOBAL"
+       }
+       timePeriodCounters {
+         playerActivity {
+@@ -170779,7 +168798,7 @@
+       }
+       timePeriodCounters {
+         playerActivity {
+-          limit: 500
++          limit: 300
+         }
+       }
+       hideItemInInventory: true
+@@ -172970,7 +170989,7 @@
+     template_id: "ITEM_EXPIRATION_ITEM_EVENT_PASS_POINT_GO_WILD_AREA_01"
+     itemExpirationSettings {
+       item: ITEM_EVENT_PASS_POINT_GO_WILD_AREA_01
+-      expirationTime: "2025-11-16T18:00:00"
++      expirationTime: "2026-11-17T23:59:59"
+     }
+   }
+ }
+@@ -173143,7 +171162,7 @@
+     template_id: "ITEM_EXPIRATION_ITEM_SINGLE_STAT_INCREASE"
+     itemExpirationSettings {
+       item: ITEM_SINGLE_STAT_INCREASE
+-      expirationTime: "2025-11-24T23:59:59"
++      expirationTime: "2026-11-22T23:59:59"
+       consolationItems {
+         lootItem {
+           stardust: true
+@@ -174972,6 +172991,7 @@
      locationCardSettings {
-       locationCard: LC_2023_BARCELONA_CITYSAFARI_001
-       imageUrl: "lc_CitySafari2023_barcelona_2023"
+       locationCard: LC_2024_MLB_003
+       imageUrl: "lc_MLB_clevelandGuardians"
 +      13: 1
      }
    }
  }
-@@ -174774,6 +174780,7 @@
+@@ -174982,6 +173002,7 @@
      locationCardSettings {
-       locationCard: LC_2023_JEJU_AIRADVENTURES_001
-       imageUrl: "lc_JejuAirAdv2023"
+       locationCard: LC_2024_MLB_004
+       imageUrl: "lc_MLB_tampaBayRays"
 +      13: 1
      }
    }
  }
-@@ -174794,6 +174801,7 @@
+@@ -175012,6 +173033,7 @@
      locationCardSettings {
-       locationCard: LC_2023_LONDON_GOFEST_001
-       imageUrl: "lc_GoFest2023_london"
+       locationCard: LC_2024_MLB_007
+       imageUrl: "lc_MLB_arizonaDiamondbacks"
 +      13: 1
      }
    }
  }
-@@ -174814,6 +174822,7 @@
+@@ -175072,6 +173094,7 @@
      locationCardSettings {
-       locationCard: LC_2023_NYC_GOFEST_001
-       imageUrl: "lc_GoFest2023_newyork"
+       locationCard: LC_2024_MLB_013
+       imageUrl: "lc_MLB_minnesotaTwins"
 +      13: 1
      }
    }
  }
-@@ -174824,6 +174833,7 @@
+@@ -175266,6 +173289,7 @@
      locationCardSettings {
-       locationCard: LC_2023_OSAKA_GOFEST_001
-       imageUrl: "lc_GoFest2023_osaka"
+       locationCard: LC_2025_GOWA_NAGASAKI
+       imageUrl: "lc_nagasaki2025"
 +      13: 1
      }
    }
  }
-@@ -174834,6 +174844,7 @@
+@@ -175287,6 +173311,7 @@
      locationCardSettings {
-       locationCard: LC_2023_SEOUL_CITYSAFARI_001
-       imageUrl: "lc_CitySafari2023_seoul_2023"
+       locationCard: LC_2025_JANGHEUNG_SUMMER_FESTIVAL
+       imageUrl: "lc_Jangheung_Water_Festival_2025"
 +      13: 1
      }
    }
  }
-@@ -174896,6 +174907,7 @@
+@@ -175342,6 +173367,7 @@
      locationCardSettings {
-       locationCard: LC_2024_JAKARTA_AIRADVENTURES_001
-       imageUrl: "lc_AirAdv2024_jakarta"
+       locationCard: LC_2025_MANCHESTER_ROADTRIP_001
+       imageUrl: "lc_roadtrip2025_manchester"
 +      13: 1
      }
    }
  }
-@@ -174918,6 +174930,7 @@
-       locationCard: LC_2024_MADRID_GOFEST_001
-       imageUrl: "lc_GoFest2024_madrid"
+@@ -175426,6 +173452,7 @@
+     locationCardSettings {
+       locationCard: LC_2025_PARIS_001
+       imageUrl: "lc_Paris2025_01"
++      13: 1
+     }
+   }
+ }
+@@ -175436,6 +173463,7 @@
+     locationCardSettings {
+       locationCard: LC_2025_PARIS_002
+       imageUrl: "lc_Paris2025_02"
++      13: 1
+     }
+   }
+ }
+@@ -175458,6 +173486,7 @@
+     locationCardSettings {
+       locationCard: LC_2025_PARIS_ROADTRIP_001
+       imageUrl: "lc_roadtrip2025_paris"
++      13: 1
+     }
+   }
+ }
+@@ -175523,6 +173552,7 @@
+       locationCard: LC_2026_CHICAGO_GOFEST_001
+       imageUrl: "lc_GoFest2026_chicago"
        cardType: LOCATION_CARD
 +      13: 1
      }
    }
  }
-@@ -175113,6 +175126,7 @@
+@@ -175533,6 +173563,7 @@
      locationCardSettings {
-       locationCard: LC_2024_SAOPAULO_CITYSAFARI_001
-       imageUrl: "lc_CitySafari2024_saopaulo"
+       locationCard: LC_2026_COLOGNE_CARNIVAL_001
+       imageUrl: "lc_carnivalFlamigo_cologne_2026"
 +      13: 1
      }
    }
  }
-@@ -175124,6 +175138,7 @@
-       locationCard: LC_2024_SENDAI_GOFEST_001
-       imageUrl: "lc_GoFest2024_sendai"
+@@ -175554,6 +173585,7 @@
+       locationCard: LC_2026_COPENHAGEN_GOFEST_001
+       imageUrl: "lc_GoFest2026_copenhagen"
        cardType: LOCATION_CARD
 +      13: 1
      }
    }
  }
-@@ -175145,6 +175160,7 @@
-     locationCardSettings {
-       locationCard: LC_2024_SURABAYA_AIRADVENTURES_001
-       imageUrl: "lc_AirAdv2024_surabaya"
+@@ -175588,6 +173620,7 @@
+       locationCard: 418
+       imageUrl: "lc_2026_gowa_sendai"
+       cardType: LOCATION_CARD
++      8: 1
+       10: 1
+       13: 1
+     }
+@@ -175633,6 +173666,7 @@
+       locationCard: LC_2026_LOSANGELES_GOTOUR_001
+       imageUrl: "lc_GoTour2026_losAngeles"
+       cardType: LOCATION_CARD
 +      13: 1
      }
    }
  }
-@@ -175155,6 +175171,7 @@
+@@ -175665,6 +173699,7 @@
      locationCardSettings {
-       locationCard: LC_2024_TAINAN_CITYSAFARI_001
-       imageUrl: "lc_CitySafari2024_tainan"
+       locationCard: LC_2026_NPB_001
+       imageUrl: "lc_2026_NPB_yokohamaStadium"
 +      13: 1
      }
    }
  }
-@@ -175176,6 +175193,7 @@
+@@ -175675,6 +173710,7 @@
      locationCardSettings {
-       locationCard: LC_2025_AMSTERDAM_CITYSAFARI_001
-       imageUrl: "lc_citysafari2025_amsterdam"
+       locationCard: LC_2026_NPB_002
+       imageUrl: "lc_2026_NPB_yomiuriGiants"
 +      13: 1
      }
    }
  }
-@@ -175206,6 +175224,7 @@
+@@ -175685,6 +173721,7 @@
      locationCardSettings {
-       locationCard: LC_2025_BERLIN_ROADTRIP_001
-       imageUrl: "lc_roadtrip2025_berlin"
+       locationCard: LC_2026_NPB_003
+       imageUrl: "lc_2026_NPB_tokyoSwallows"
 +      13: 1
      }
    }
  }
-@@ -175236,6 +175255,7 @@
+@@ -175695,6 +173732,7 @@
      locationCardSettings {
-       locationCard: LC_2025_COLOGNE_ROADTRIP_001
-       imageUrl: "lc_roadtrip2025_cologne"
+       locationCard: LC_2026_NPB_004
+       imageUrl: "lc_2026_NPB_koshienHanshinTigers"
 +      13: 1
      }
    }
  }
-@@ -175256,6 +175276,7 @@
+@@ -175705,6 +173743,7 @@
      locationCardSettings {
-       locationCard: LC_2025_HAGUE_ROADTRIP_001
-       imageUrl: "lc_roadtrip2025_hague"
+       locationCard: LC_2026_NPB_005
+       imageUrl: "lc_2026_NPB_rakutenEagles"
 +      13: 1
      }
    }
  }
-@@ -175457,6 +175478,7 @@
+@@ -175715,6 +173754,7 @@
      locationCardSettings {
-       locationCard: LC_2025_VALENCIA_CITYSAFARI_001
-       imageUrl: "lc_citysafari2025_valencia"
+       locationCard: LC_2026_NPB_006
+       imageUrl: "lc_2026_NPB_hiroshimaCarp"
 +      13: 1
      }
    }
  }
-@@ -175467,6 +175489,7 @@
+@@ -175725,6 +173765,7 @@
      locationCardSettings {
-       locationCard: LC_2025_VALENCIA_ROADTRIP_001
-       imageUrl: "lc_roadtrip2025_valencia"
+       locationCard: LC_2026_NPB_007
+       imageUrl: "lc_2026_NPB_toyamaAllstars"
 +      13: 1
      }
    }
  }
-@@ -175477,6 +175500,7 @@
+@@ -175735,6 +173776,7 @@
      locationCardSettings {
-       locationCard: LC_2025_VANCOUVER_CITYSAFARI_001
-       imageUrl: "lc_citysafari2025_vancouver"
+       locationCard: LC_2026_NPB_008
+       imageUrl: "lc_2026_NPB_softbankHawks"
 +      13: 1
      }
    }
  }
-@@ -175847,6 +175871,7 @@
+@@ -175745,6 +173787,7 @@
      locationCardSettings {
-       locationCard: LC_CITYSAFARI2025_SYDNEY
-       imageUrl: "lc_CitySafari2025_sydney"
+       locationCard: LC_2026_NPB_009
+       imageUrl: "lc_2026_NPB_kyocera"
 +      13: 1
      }
    }
  }
-@@ -176783,6 +176808,7 @@
+@@ -175777,6 +173820,7 @@
      locationCardSettings {
-       locationCard: LC_POKELID_TOKYO
-       imageUrl: "lc_pokelid_tokyo"
+       locationCard: LC_2026_NPB_012
+       imageUrl: "lc_2026_NPB_chunichiDragons"
 +      13: 1
      }
    }
  }
-@@ -183834,22 +183860,32 @@
-   }
- }
- template {
--  template_id: "MEP_EGG_READ_MIGRATION_FEATURE_GATE"
-+  template_id: "BADGE_EVENT_0281"
-   data {
--    template_id: "MEP_EGG_READ_MIGRATION_FEATURE_GATE"
--    featureGate {
--      status: 13
--      rolloutPercentage: 100
-+    template_id: "BADGE_EVENT_0281"
-+    badgeSettings {
-+      badgeType: 6302
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
+@@ -175787,6 +173831,7 @@
+     locationCardSettings {
+       locationCard: LC_2026_NPB_013
+       imageUrl: "lc_2026_NPB_hokkaidoFighters"
++      13: 1
      }
    }
  }
- template {
--  template_id: "MEP_EGG_WRITE_MIGRATION_FEATURE_GATE"
-+  template_id: "BADGE_EVENT_0252"
-   data {
--    template_id: "MEP_EGG_WRITE_MIGRATION_FEATURE_GATE"
--    featureGate {
--      status: 12
--      rolloutPercentage: 100
-+    template_id: "BADGE_EVENT_0252"
-+    badgeSettings {
-+      badgeType: BADGE_EVENT_0252
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
+@@ -175807,6 +173852,7 @@
+     locationCardSettings {
+       locationCard: LC_2026_RIODEJANEIRO_CARNIVAL_001
+       imageUrl: "lc_carnivalFlamigo_rio_2026"
++      13: 1
      }
    }
  }
-@@ -205578,17 +205614,6 @@
+@@ -175829,6 +173875,7 @@
+       locationCard: LC_2026_TAINAN_GOTOUR_001
+       imageUrl: "lc_GoTour2026_tainan"
+       cardType: LOCATION_CARD
++      13: 1
+     }
    }
  }
- template {
--  template_id: "PTC_OAUTH_SETTINGS"
--  data {
--    template_id: "PTC_OAUTH_SETTINGS"
--    ptcOauthSettings {
--      ptcAccountLinkingEnabled: true
--      endTimeMs: 2022190740000
--      linkingRewardItem: ITEM_INCUBATOR_BASIC
--    }
--  }
--}
--template {
-   template_id: "QUEST_DIALOGUE_INBOX_SETTINGS"
-   data {
-     template_id: "QUEST_DIALOGUE_INBOX_SETTINGS"
-@@ -210113,66 +210138,6 @@
+@@ -175840,6 +173887,7 @@
+       locationCard: LC_2026_TOKYO_GOFEST_001
+       imageUrl: "lc_GoFest2026_tokyo"
+       cardType: LOCATION_CARD
++      13: 1
+     }
    }
  }
- template {
--  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10"
--  data {
--    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10"
--    settingsOverrideRule {
--      ruleType: DEVICE_MODEL
--      sortOrder: 50
--      ruleValue: "Google Pixel 10"
--      meshingEnabled: TRUE
--      occlusionEnabled: TRUE
--      semanticsEnabled: TRUE
--      vpsEnabled: TRUE
--    }
--  }
--}
--template {
--  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PRO"
--  data {
--    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PRO"
--    settingsOverrideRule {
--      ruleType: DEVICE_MODEL
--      sortOrder: 50
--      ruleValue: "Google Pixel 10 Pro"
--      meshingEnabled: TRUE
--      occlusionEnabled: TRUE
--      semanticsEnabled: TRUE
--      vpsEnabled: TRUE
--    }
--  }
--}
--template {
--  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROFOLD"
--  data {
--    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROFOLD"
--    settingsOverrideRule {
--      ruleType: DEVICE_MODEL
--      sortOrder: 50
--      ruleValue: "Google Pixel 10 Pro Fold"
--      meshingEnabled: TRUE
--      occlusionEnabled: TRUE
--      semanticsEnabled: TRUE
--      vpsEnabled: TRUE
--    }
--  }
--}
--template {
--  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROXL"
--  data {
--    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10PROXL"
--    settingsOverrideRule {
--      ruleType: DEVICE_MODEL
--      sortOrder: 50
--      ruleValue: "Google Pixel 10 Pro XL"
--      meshingEnabled: TRUE
--      occlusionEnabled: TRUE
--      semanticsEnabled: TRUE
--      vpsEnabled: TRUE
--    }
--  }
--}
--template {
-   template_id: "SETTINGS_RULES_DENY_IPAD4"
-   data {
-     template_id: "SETTINGS_RULES_DENY_IPAD4"
-@@ -430804,9 +430769,7 @@
+@@ -175883,6 +173931,7 @@
+       locationCard: LC_CR_2026_001
+       imageUrl: "lc_CR_2026_001"
+       cardType: LOCATION_CARD
++      13: 1
+     }
+   }
+ }
+@@ -176167,6 +174216,7 @@
+     locationCardSettings {
+       locationCard: LC_JEJU_STAMP_RALLY
+       imageUrl: "lc_stampRally2025_Jeju"
++      13: 1
+     }
+   }
+ }
+@@ -176177,6 +174227,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_1
+       imageUrl: "lc_nationalTrust_angleseyAbbey"
++      13: 1
+     }
+   }
+ }
+@@ -176187,6 +174238,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_10
+       imageUrl: "lc_nationalTrust_gibslide"
++      13: 1
+     }
+   }
+ }
+@@ -176197,6 +174249,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_11
+       imageUrl: "lc_nationalTrust_hanbury"
++      13: 1
+     }
+   }
+ }
+@@ -176207,6 +174260,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_12
+       imageUrl: "lc_nationalTrust_hardwick"
++      13: 1
+     }
+   }
+ }
+@@ -176217,6 +174271,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_13
+       imageUrl: "lc_nationalTrust_killerton"
++      13: 1
+     }
+   }
+ }
+@@ -176227,6 +174282,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_14
+       imageUrl: "lc_nationalTrust_kingstonLacy"
++      13: 1
+     }
+   }
+ }
+@@ -176237,6 +174293,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_15
+       imageUrl: "lc_nationalTrust_lacock"
++      13: 1
+     }
+   }
+ }
+@@ -176247,6 +174304,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_16
+       imageUrl: "lc_nationalTrust_lymePark"
++      13: 1
+     }
+   }
+ }
+@@ -176257,6 +174315,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_17
+       imageUrl: "lc_nationalTrust_mottisfont"
++      13: 1
+     }
+   }
+ }
+@@ -176267,6 +174326,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_18
+       imageUrl: "lc_nationalTrust_mountStewart"
++      13: 1
+     }
+   }
+ }
+@@ -176277,6 +174337,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_19
+       imageUrl: "lc_nationalTrust_nymans"
++      13: 1
+     }
+   }
+ }
+@@ -176287,6 +174348,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_2
+       imageUrl: "lc_nationalTrust_attinghamPark"
++      13: 1
+     }
+   }
+ }
+@@ -176297,6 +174359,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_20
+       imageUrl: "lc_nationalTrust_polesden"
++      13: 1
+     }
+   }
+ }
+@@ -176307,6 +174370,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_21
+       imageUrl: "lc_nationalTrust_scotneyCastle"
++      13: 1
+     }
+   }
+ }
+@@ -176317,6 +174381,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_22
+       imageUrl: "lc_nationalTrust_stourhead"
++      13: 1
+     }
+   }
+ }
+@@ -176327,6 +174392,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_23
+       imageUrl: "lc_nationalTrust_stoweGardenPark"
++      13: 1
+     }
+   }
+ }
+@@ -176337,6 +174403,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_24
+       imageUrl: "lc_nationalTrust_tredegarHouse"
++      13: 1
+     }
+   }
+ }
+@@ -176347,6 +174414,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_25
+       imageUrl: "lc_nationalTrust_trelissick"
++      13: 1
+     }
+   }
+ }
+@@ -176357,6 +174425,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_26
+       imageUrl: "lc_nationalTrust_tyntesfield"
++      13: 1
+     }
+   }
+ }
+@@ -176367,6 +174436,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_27
+       imageUrl: "lc_nationalTrust_whimpole"
++      13: 1
+     }
+   }
+ }
+@@ -176377,6 +174447,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_3
+       imageUrl: "lc_nationalTrust_beltonHouse"
++      13: 1
+     }
+   }
+ }
+@@ -176387,6 +174458,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_4
+       imageUrl: "lc_nationalTrust_calkeAbbey"
++      13: 1
+     }
+   }
+ }
+@@ -176397,6 +174469,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_5
+       imageUrl: "lc_nationalTrust_chirk"
++      13: 1
+     }
+   }
+ }
+@@ -176407,6 +174480,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_6
+       imageUrl: "lc_nationalTrust_cliveden"
++      13: 1
+     }
+   }
+ }
+@@ -176428,6 +174502,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_8
+       imageUrl: "lc_nationalTrust_dunhamMassey"
++      13: 1
+     }
+   }
+ }
+@@ -176438,6 +174513,7 @@
+     locationCardSettings {
+       locationCard: LC_NT_9
+       imageUrl: "lc_nationalTrust_fountainsAbbeyEstate"
++      13: 1
+     }
+   }
+ }
+@@ -177668,6 +175744,7 @@
+     locationCardSettings {
+       locationCard: LC_TOKMUN_STAMP_02
+       imageUrl: "lc_TokMun_koto"
++      13: 1
+     }
+   }
+ }
+@@ -177678,6 +175755,7 @@
+     locationCardSettings {
+       locationCard: LC_TOKMUN_STAMP_03
+       imageUrl: "lc_TokMun_minato"
++      13: 1
+     }
+   }
+ }
+@@ -201637,12 +199715,13 @@
+     iapItemDisplay {
+       sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
+       sortOrder: 1
++      hidden: true
+       title: "season_pass_premium_track_title_fall_marathon_2026"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+       skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2026-10-21T20:00:00"
++      skuDisableTime: "2025-10-21T20:00:00"
+       skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1792612800000
++      skuDisableTimeUtcMs: 1761076800000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+     }
+   }
+@@ -201654,12 +199733,13 @@
+     iapItemDisplay {
+       sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
+       sortOrder: 1
++      hidden: true
+       title: "season_pass_premium_track_plus_six_ranks_title_fall_marathon_2026"
+       description: "event_pass_plus_points_6_ranks_description"
+       skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2026-10-21T20:00:00"
++      skuDisableTime: "2025-10-21T20:00:00"
+       skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1792612800000
++      skuDisableTimeUtcMs: 1761076800000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+     }
+   }
+@@ -201670,14 +199750,14 @@
+     template_id: "OCTOBER1_2026_DELUXE_EVENT_PASS_TRACK_UNLOCK_REDIRECT"
+     iapItemDisplay {
+       sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_redirect"
+-      category: IAP_CATEGORY_GLOBAL_EVENT_TICKET
+       sortOrder: 1
++      hidden: true
+       title: "season_pass_premium_track_title_fall_marathon_2026"
+       description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+       skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2026-10-21T20:00:00"
++      skuDisableTime: "2025-10-21T20:00:00"
+       skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1792612800000
++      skuDisableTimeUtcMs: 1761076800000
+       imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
+     }
+   }
+@@ -430769,7 +428849,9 @@
        isTransferable: true
        isDeployable: true
        isTradable: true
--      raidBossDistanceOffset: 3
++      raidBossDistanceOffset: 3
        formChange {
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -430814,6 +430777,7 @@
+@@ -430777,7 +428859,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -430881,13 +430845,13 @@
+@@ -430845,13 +428926,13 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          candyCost: 25
          stardustCost: 10000
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -430955,7 +430919,6 @@
+@@ -430919,6 +429000,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -430963,6 +430926,7 @@
+@@ -430926,7 +429008,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -431037,6 +431001,7 @@
+@@ -431001,7 +429082,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -431104,7 +431069,6 @@
+@@ -431069,6 +429149,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -431112,6 +431076,7 @@
+@@ -431076,7 +429157,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -431179,7 +431144,6 @@
+@@ -431144,6 +429224,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -431187,6 +431151,7 @@
+@@ -431151,7 +429232,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -431254,7 +431219,6 @@
+@@ -431219,6 +429299,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -431262,6 +431226,7 @@
+@@ -431226,7 +429307,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -431329,13 +431294,13 @@
+@@ -431294,13 +429374,13 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_DANDY
          candyCost: 25
          stardustCost: 10000
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -431402,7 +431367,6 @@
+@@ -431367,6 +429447,7 @@
        isTradable: true
        raidBossDistanceOffset: 3
        formChange {
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -431410,6 +431374,7 @@
+@@ -431374,7 +429455,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -431477,7 +431442,6 @@
+@@ -431442,6 +429522,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -431485,6 +431449,7 @@
+@@ -431449,7 +429530,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -431552,7 +431517,6 @@
+@@ -431517,6 +429597,7 @@
        raidBossDistanceOffset: 3
        formChange {
          availableForm: FURFROU_NATURAL
--        availableForm: FURFROU_DIAMOND
++        availableForm: FURFROU_DIAMOND
          availableForm: FURFROU_MATRON
          availableForm: FURFROU_DANDY
          candyCost: 25
-@@ -431560,6 +431524,7 @@
+@@ -431524,7 +429605,6 @@
        }
        ibfc {
        }
-+      breadTierGroup: GROUP_3
+-      breadTierGroup: GROUP_3
      }
    }
  }
-@@ -490953,6 +490918,7 @@
-       }
-       combatAnimationConfiguration {
-         fastAttackSettings {
-+          4: 1
-         }
-         projectedHealthAnimationDurationSeconds: 0.5
-         uiCameraAnimationSettings {
-@@ -492228,9 +492194,9 @@
+@@ -502828,36 +500908,28 @@
+   }
+ }
+ template {
+-  template_id: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
++  template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10"
    data {
-     template_id: "VS_SEEKER_CLIENT_SETTINGS"
-     vs_seeker_client_settings {
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_MEGAS"
--      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LITTLE"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
-+      allowedVsSeekerLeagueTemplateId: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
+-    template_id: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
+-    iapItemDisplay {
+-      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock"
+-      sortOrder: 1
+-      title: "season_pass_premium_track_title_fall_marathon_2026"
+-      description: "gotour_2025_deluxe_event_pass_track_unlock_description"
+-      skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2026-10-21T20:00:00"
+-      skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1792612800000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
++    template_id: "SETTINGS_RULES_DENY_GOOGLEPIXEL10"
++    settingsOverrideRule {
++      ruleType: DEVICE_MODEL
++      sortOrder: 50
++      ruleValue: "Google Pixel 10"
++      meshingEnabled: TRUE
++      occlusionEnabled: TRUE
++      semanticsEnabled: TRUE
++      vpsEnabled: TRUE
      }
    }
  }
-@@ -492243,31 +492209,31 @@
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 750
-+          count: 3000
-         }
-       }
-     }
-@@ -492282,31 +492248,31 @@
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       reward {
-         item {
-           stardust: true
--          count: 1500
-+          count: 6000
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -492322,7 +492288,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 530
-+          count: 2120
-         }
-       }
-       reward {
-@@ -492340,7 +492306,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-     }
-@@ -492355,7 +492321,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-       reward {
-@@ -492373,7 +492339,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2120
-+          count: 8480
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -492389,7 +492355,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 530
-+          count: 2120
-         }
-       }
-       reward {
-@@ -492407,7 +492373,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-     }
-@@ -492422,7 +492388,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1060
-+          count: 4240
-         }
-       }
-       reward {
-@@ -492440,7 +492406,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2120
-+          count: 8480
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -492456,7 +492422,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 570
-+          count: 2280
-         }
-       }
-       reward {
-@@ -492474,7 +492440,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1140
-+          count: 4560
-         }
-       }
-     }
-@@ -492489,7 +492455,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1140
-+          count: 4560
-         }
-       }
-       reward {
-@@ -492507,7 +492473,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2280
-+          count: 9120
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -492523,7 +492489,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 600
-+          count: 2400
-         }
-       }
-       reward {
-@@ -492541,7 +492507,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 4800
-         }
-       }
-     }
-@@ -492556,7 +492522,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 4800
-         }
-       }
-       reward {
-@@ -492574,7 +492540,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2400
-+          count: 9600
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -492669,7 +492635,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 700
-+          count: 2800
-         }
-       }
-       reward {
-@@ -492687,7 +492653,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1400
-+          count: 5600
-         }
-       }
-     }
-@@ -492702,7 +492668,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1400
-+          count: 5600
-         }
-       }
-       reward {
-@@ -492720,7 +492686,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2800
-+          count: 11200
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -492736,7 +492702,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 730
-+          count: 2920
-         }
-       }
-       reward {
-@@ -492754,7 +492720,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1460
-+          count: 5840
-         }
-       }
-     }
-@@ -492769,7 +492735,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1460
-+          count: 5840
-         }
-       }
-       reward {
-@@ -492787,7 +492753,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 2920
-+          count: 11680
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -492803,7 +492769,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 770
-+          count: 3080
-         }
-       }
-       reward {
-@@ -492821,7 +492787,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1540
-+          count: 6160
-         }
-       }
-     }
-@@ -492836,7 +492802,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1540
-+          count: 6160
-         }
-       }
-       reward {
-@@ -492854,7 +492820,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3080
-+          count: 12320
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -492919,7 +492885,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 300
-+          count: 1200
-         }
-       }
-       reward {
-@@ -492937,7 +492903,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 600
-+          count: 2400
-         }
-       }
-     }
-@@ -492952,7 +492918,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 600
-+          count: 2400
-         }
-       }
-       reward {
-@@ -492970,7 +492936,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1200
-+          count: 4800
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -492986,7 +492952,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 870
-+          count: 3480
-         }
-       }
-       reward {
-@@ -493004,7 +492970,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1740
-+          count: 6960
-         }
-       }
-     }
-@@ -493019,7 +492985,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1740
-+          count: 6960
-         }
-       }
-       reward {
-@@ -493037,7 +493003,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3480
-+          count: 13920
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493053,7 +493019,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -493071,7 +493037,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -493086,7 +493052,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -493104,7 +493070,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493120,7 +493086,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -493138,7 +493104,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -493153,7 +493119,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -493171,7 +493137,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493187,7 +493153,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -493205,7 +493171,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -493220,7 +493186,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -493238,7 +493204,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493254,7 +493220,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 900
-+          count: 3600
-         }
-       }
-       reward {
-@@ -493272,7 +493238,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-     }
-@@ -493287,7 +493253,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1800
-+          count: 7200
-         }
-       }
-       reward {
-@@ -493305,7 +493271,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 3600
-+          count: 14400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493321,7 +493287,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 330
-+          count: 1320
-         }
-       }
-       reward {
-@@ -493339,7 +493305,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-     }
-@@ -493354,7 +493320,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-       reward {
-@@ -493372,7 +493338,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1320
-+          count: 5280
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493388,7 +493354,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 330
-+          count: 1320
-         }
-       }
-       reward {
-@@ -493406,7 +493372,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-     }
-@@ -493421,7 +493387,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 660
-+          count: 2640
-         }
-       }
-       reward {
-@@ -493439,7 +493405,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1320
-+          count: 5280
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493455,7 +493421,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 370
-+          count: 1480
-         }
-       }
-       reward {
-@@ -493473,7 +493439,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 740
-+          count: 2960
-         }
-       }
-     }
-@@ -493488,7 +493454,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 740
-+          count: 2960
-         }
-       }
-       reward {
-@@ -493506,7 +493472,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1480
-+          count: 5920
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493571,7 +493537,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 400
-+          count: 1600
-         }
-       }
-       reward {
-@@ -493589,7 +493555,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 800
-+          count: 3200
-         }
-       }
-     }
-@@ -493604,7 +493570,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 800
-+          count: 3200
-         }
-       }
-       reward {
-@@ -493622,7 +493588,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1600
-+          count: 6400
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493638,7 +493604,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 430
-+          count: 1720
-         }
-       }
-       reward {
-@@ -493656,7 +493622,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-     }
-@@ -493671,7 +493637,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-       reward {
-@@ -493689,7 +493655,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1720
-+          count: 6880
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493705,7 +493671,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 430
-+          count: 1720
-         }
-       }
-       reward {
-@@ -493723,7 +493689,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-     }
-@@ -493738,7 +493704,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 860
-+          count: 3440
-         }
-       }
-       reward {
-@@ -493756,7 +493722,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1720
-+          count: 6880
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -493772,7 +493738,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 470
-+          count: 1880
-         }
-       }
-       reward {
-@@ -493790,7 +493756,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 940
-+          count: 3760
-         }
-       }
-     }
-@@ -493805,7 +493771,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 940
-+          count: 3760
-         }
-       }
-       reward {
-@@ -493823,7 +493789,7 @@
-       reward {
-         item {
-           stardust: true
--          count: 1880
-+          count: 7520
-         }
-       }
-       rewardTrack: PREMIUM
-@@ -508328,12 +508294,145 @@
+ template {
+-  template_id: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
++  template_id: "PTC_OAUTH_SETTINGS"
+   data {
+-    template_id: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
+-    iapItemDisplay {
+-      sku: "pgorelease.october1_2026_deluxe_event_pass_track_unlock_plus_points"
+-      sortOrder: 1
+-      title: "season_pass_premium_track_plus_six_ranks_title_fall_marathon_2026"
+-      description: "event_pass_plus_points_6_ranks_description"
+-      skuEnableTime: "2025-10-13T10:00:00"
+-      skuDisableTime: "2026-10-21T20:00:00"
+-      skuEnableTimeUtcMs: 1760349600000
+-      skuDisableTimeUtcMs: 1792612800000
+-      imageUrl: "https://asset-cdn-rel.nianticstatic.com/GameDesignAssets%2F9272deab_PGO-MCS_Fall_Marathon_Buddy_Trek_TICKET_v1-1024x576.jpg"
++    template_id: "PTC_OAUTH_SETTINGS"
++    ptcOauthSettings {
++      ptcAccountLinkingEnabled: true
++      endTimeMs: 2022190740000
++      linkingRewardItem: ITEM_INCUBATOR_BASIC
      }
    }
  }
--batch_id: 1792477975795
--experiment_id: 11
--experiment_id: 21
-+template {
-+  template_id: "BADGE_EVENT_0283"
-+  data {
-+    template_id: "BADGE_EVENT_0283"
-+    badgeSettings {
-+      badgeType: 6304
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0284"
-+  data {
-+    template_id: "BADGE_EVENT_0284"
-+    badgeSettings {
-+      badgeType: 6305
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0285"
-+  data {
-+    template_id: "BADGE_EVENT_0285"
-+    badgeSettings {
-+      badgeType: 6306
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0286"
-+  data {
-+    template_id: "BADGE_EVENT_0286"
-+    badgeSettings {
-+      badgeType: 6307
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0287"
-+  data {
-+    template_id: "BADGE_EVENT_0287"
-+    badgeSettings {
-+      badgeType: 6308
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0288"
-+  data {
-+    template_id: "BADGE_EVENT_0288"
-+    badgeSettings {
-+      badgeType: 6309
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0289"
-+  data {
-+    template_id: "BADGE_EVENT_0289"
-+    badgeSettings {
-+      badgeType: 6310
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "BADGE_EVENT_0290"
-+  data {
-+    template_id: "BADGE_EVENT_0290"
-+    badgeSettings {
-+      badgeType: 6311
-+      badgeRank: 2
-+      targets: 100
-+      eventBadge: true
-+      eventBadgeSettings {
-+        obEventBadgeSettingsNumber6: 1
-+      }
-+    }
-+  }
-+}
-+template {
-+  template_id: "TODAY_VIEW_V3_MULTI_PAGE_GO_PASS_FEATURE_GATE"
-+  data {
-+    template_id: "TODAY_VIEW_V3_MULTI_PAGE_GO_PASS_FEATURE_GATE"
-+    featureGate {
-+      status: 1
-+      rolloutPercentage: 100
-+      subFeatureGateList {
-+        name: "TODAY_VIEW_V3_GO_PASS_NEIGHBOR_PRELOAD_SUB_FEATURE_GATE"
-+        status: 1
-+        rolloutPercentage: 100
-+      }
-+    }
-+  }
-+}
-+batch_id: 1792596734222
+@@ -508429,10 +506501,13 @@
+     }
+   }
+ }
+-batch_id: 1792596734222
++batch_id: 1792650428589
++experiment_id: 11
++experiment_id: 21
  experiment_id: 101
  experiment_id: 170
--experiment_id: 177
-+experiment_id: 178
+ experiment_id: 178
++experiment_id: 196
  experiment_id: 300
  experiment_id: 320
  experiment_id: 351
-@@ -508356,21 +508455,18 @@
+@@ -508455,15 +506530,17 @@
  experiment_id: 2600
  experiment_id: 2650
  experiment_id: 3032
--experiment_id: 3033
++experiment_id: 3033
  experiment_id: 3063
  experiment_id: 3104
--experiment_id: 3105
--experiment_id: 3106
--experiment_id: 3113
-+experiment_id: 3114
++experiment_id: 3105
++experiment_id: 3106
+ experiment_id: 3114
  experiment_id: 3121
  experiment_id: 3128
- experiment_id: 3555
+-experiment_id: 3555
  experiment_id: 4845
++experiment_id: 4967
  experiment_id: 4998
-+experiment_id: 5014
+-experiment_id: 5014
  experiment_id: 5160
  experiment_id: 5162
  experiment_id: 5163
--experiment_id: 5212
- experiment_id: 5501
- experiment_id: 5502
- experiment_id: 5506
-@@ -508384,6 +508480,7 @@
- experiment_id: 8836
- experiment_id: 8837
- experiment_id: 8839
-+experiment_id: 8840
- experiment_id: 9521
- experiment_id: 9552
- experiment_id: 9553
-@@ -508399,11 +508496,8 @@
+@@ -508496,8 +506573,11 @@
  experiment_id: 1210000
  experiment_id: 3500035
  experiment_id: 3500037
--experiment_id: 4610010
--experiment_id: 4610011
++experiment_id: 4610010
++experiment_id: 4610011
  experiment_id: 4687001
  experiment_id: 4687002
--experiment_id: 5000301
++experiment_id: 5000301
  experiment_id: 5600100
  experiment_id: 6600417
  experiment_id: 6600418
