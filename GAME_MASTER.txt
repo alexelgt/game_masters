@@ -167376,26 +167376,16 @@ template {
   }
 }
 template {
-  template_id: "GAMESITE_WEBVIEW_NEARBY_BUTTONS_FEATURE_GATE"
+  template_id: "BADGE_EVENT_0295"
   data {
-    template_id: "GAMESITE_WEBVIEW_NEARBY_BUTTONS_FEATURE_GATE"
-    featureGate {
-      status: 1
-      rolloutPercentage: 100
-      subFeatureGateList {
-        name: "RAIDS"
-        status: 1
-        rolloutPercentage: 100
-      }
-      subFeatureGateList {
-        name: "STATIONS"
-        status: 1
-        rolloutPercentage: 100
-      }
-      subFeatureGateList {
-        name: "ROUTES"
-        status: 1
-        rolloutPercentage: 100
+    template_id: "BADGE_EVENT_0295"
+    badgeSettings {
+      badgeType: 6316
+      badgeRank: 2
+      targets: 100
+      eventBadge: true
+      eventBadgeSettings {
+        obEventBadgeSettingsNumber6: 1
       }
     }
   }
@@ -167594,12 +167584,17 @@ template {
   }
 }
 template {
-  template_id: "HIDE_CAMPFIRE_MAP_BUTTONS_FEATURE_GATE"
+  template_id: "BADGE_EVENT_0235"
   data {
-    template_id: "HIDE_CAMPFIRE_MAP_BUTTONS_FEATURE_GATE"
-    featureGate {
-      status: 1
-      rolloutPercentage: 100
+    template_id: "BADGE_EVENT_0235"
+    badgeSettings {
+      badgeType: BADGE_EVENT_0235
+      badgeRank: 2
+      targets: 100
+      eventBadge: true
+      eventBadgeSettings {
+        obEventBadgeSettingsNumber6: 1
+      }
     }
   }
 }
@@ -190644,7 +190639,7 @@ template {
     template_id: "N_DISPLAY_n_pose_machamp"
     avatarItemDisplay {
       iconAddress: "n_pose_machamp_icon"
-      displayStringId: "avatar_pose_machamp"
+      displayStringId: "avatar_pose_gowa2026"
     }
   }
 }
@@ -506501,13 +506496,75 @@ template {
     }
   }
 }
-batch_id: 1792650428589
+template {
+  template_id: "GRANT_CHECK_IN_BADGE_WITHOUT_REWARDS_FEATURE_GATE"
+  data {
+    template_id: "GRANT_CHECK_IN_BADGE_WITHOUT_REWARDS_FEATURE_GATE"
+    featureGate {
+      status: 1
+      rolloutPercentage: 100
+    }
+  }
+}
+template {
+  template_id: "LC_SPECIALBACKGROUND_DIA_DE_LOS_MUERTOS_2026"
+  data {
+    template_id: "LC_SPECIALBACKGROUND_DIA_DE_LOS_MUERTOS_2026"
+    locationCardSettings {
+      locationCard: 340
+      imageUrl: "sb_DiaDeMuertos_2026"
+      cardType: SPECIAL_BACKGROUND
+      vfxAddress: "bgfx_diaDeMuertos_2026"
+    }
+  }
+}
+template {
+  template_id: "PLAYER_ENCOUNTER_RANDOMIZATION_SALT_FEATURE_GATE"
+  data {
+    template_id: "PLAYER_ENCOUNTER_RANDOMIZATION_SALT_FEATURE_GATE"
+    featureGate {
+      status: 1
+      rolloutPercentage: 100
+    }
+  }
+}
+template {
+  template_id: "PRIVATE_MAX_LOBBIES_FEATURE_GATE"
+  data {
+    template_id: "PRIVATE_MAX_LOBBIES_FEATURE_GATE"
+    featureGate {
+      status: 1
+      rolloutPercentage: 100
+      subFeatureGateList {
+        name: "INVITE_BY_CODE"
+        status: 1
+        rolloutPercentage: 100
+      }
+      subFeatureGateList {
+        name: "INVITE_FRIENDS"
+        status: 1
+        rolloutPercentage: 100
+      }
+    }
+  }
+}
+template {
+  template_id: "TAPPABLE_TYPE_BOX"
+  data {
+    template_id: "TAPPABLE_TYPE_BOX"
+    tappableSettings {
+      visibleRadiusMeters: 150
+      removeWhenTapped: true
+      tappableAssetKey: "TAPPABLE_TYPE_BOX"
+    }
+  }
+}
+batch_id: 1792754857409
 experiment_id: 11
 experiment_id: 21
 experiment_id: 101
 experiment_id: 170
 experiment_id: 178
-experiment_id: 196
 experiment_id: 300
 experiment_id: 320
 experiment_id: 351
@@ -506519,11 +506576,11 @@ experiment_id: 427
 experiment_id: 511
 experiment_id: 513
 experiment_id: 514
+experiment_id: 548
 experiment_id: 602
 experiment_id: 805
 experiment_id: 807
 experiment_id: 1205
-experiment_id: 1250
 experiment_id: 1699
 experiment_id: 1816
 experiment_id: 2297
@@ -506538,7 +506595,9 @@ experiment_id: 3106
 experiment_id: 3114
 experiment_id: 3121
 experiment_id: 3128
+experiment_id: 3144
 experiment_id: 4845
+experiment_id: 4960
 experiment_id: 4967
 experiment_id: 4998
 experiment_id: 5160
@@ -506575,8 +506634,8 @@ experiment_id: 3500035
 experiment_id: 3500037
 experiment_id: 4610010
 experiment_id: 4610011
-experiment_id: 4687001
 experiment_id: 4687002
+experiment_id: 4687003
 experiment_id: 5000301
 experiment_id: 5600100
 experiment_id: 6600417
