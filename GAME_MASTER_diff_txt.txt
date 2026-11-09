@@ -1,11 +1,2133 @@
---- GAME_MASTER_old.txt	2026-11-08 16:14:45.665781612 +0100
-+++ GAME_MASTER.txt	2026-11-08 16:17:22.316276890 +0100
-@@ -169406,7 +169406,7 @@
+--- GAME_MASTER_old.txt	2026-11-08 16:17:22.316276890 +0100
++++ GAME_MASTER.txt	2026-11-09 16:53:43.588999525 +0100
+@@ -104,7 +104,7 @@
+     featureGate {
+       status: 952347117
+       rolloutPercentage: 100
+-      6: "0.429.0"
++      minClientVersion: "0.429.0"
+     }
+   }
+ }
+@@ -768,8 +768,8 @@
+       downloadMessageEnabled: true
+       shareMessageEnabled: true
+       signInButtonEnabled: true
++      showShareCard: true
+       reorderSummary: true
+-      24: 1
+     }
+   }
+ }
+@@ -36888,7 +36888,7 @@
    data {
-     template_id: "LC_SPECIALBACKGROUND_DIA_DE_LOS_MUERTOS_2026"
+     template_id: "BADGE_EVENT_0281"
+     badgeSettings {
+-      badgeType: 6302
++      badgeType: BADGE_EVENT_0281
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -36903,7 +36903,7 @@
+   data {
+     template_id: "BADGE_EVENT_0282"
+     badgeSettings {
+-      badgeType: 6303
++      badgeType: BADGE_EVENT_0282
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -36918,7 +36918,7 @@
+   data {
+     template_id: "BADGE_EVENT_0283"
+     badgeSettings {
+-      badgeType: 6304
++      badgeType: BADGE_EVENT_0283
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -36933,7 +36933,7 @@
+   data {
+     template_id: "BADGE_EVENT_0284"
+     badgeSettings {
+-      badgeType: 6305
++      badgeType: BADGE_EVENT_0284
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -36948,7 +36948,7 @@
+   data {
+     template_id: "BADGE_EVENT_0285"
+     badgeSettings {
+-      badgeType: 6306
++      badgeType: BADGE_EVENT_0285
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -36963,7 +36963,7 @@
+   data {
+     template_id: "BADGE_EVENT_0286"
+     badgeSettings {
+-      badgeType: 6307
++      badgeType: BADGE_EVENT_0286
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -36978,7 +36978,7 @@
+   data {
+     template_id: "BADGE_EVENT_0287"
+     badgeSettings {
+-      badgeType: 6308
++      badgeType: BADGE_EVENT_0287
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -36993,7 +36993,7 @@
+   data {
+     template_id: "BADGE_EVENT_0288"
+     badgeSettings {
+-      badgeType: 6309
++      badgeType: BADGE_EVENT_0288
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -37008,7 +37008,7 @@
+   data {
+     template_id: "BADGE_EVENT_0289"
+     badgeSettings {
+-      badgeType: 6310
++      badgeType: BADGE_EVENT_0289
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -37023,7 +37023,7 @@
+   data {
+     template_id: "BADGE_EVENT_0290"
+     badgeSettings {
+-      badgeType: 6311
++      badgeType: BADGE_EVENT_0290
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -37038,7 +37038,7 @@
+   data {
+     template_id: "BADGE_EVENT_0295"
+     badgeSettings {
+-      badgeType: 6316
++      badgeType: BADGE_EVENT_0295
+       badgeRank: 2
+       targets: 100
+       eventBadge: true
+@@ -53355,7 +53355,7 @@
+   template_id: "COMBAT_LEAGUE_DEFAULT_GREAT"
+   data {
+     template_id: "COMBAT_LEAGUE_DEFAULT_GREAT"
+-    combat_league {
++    combatLeague {
+       title: "combat_great_league"
+       enabled: true
+       pokemonCondition {
+@@ -53385,7 +53385,7 @@
+       badgeType: BADGE_GREAT_LEAGUE
+       leagueType: STANDARD
+       allowTempEvos: true
+-      16: 1
++      removeTempEvoSelfCpBoostAdditionalLevels: true
+     }
+   }
+ }
+@@ -53393,7 +53393,7 @@
+   template_id: "COMBAT_LEAGUE_DEFAULT_MASTER"
+   data {
+     template_id: "COMBAT_LEAGUE_DEFAULT_MASTER"
+-    combat_league {
++    combatLeague {
+       title: "combat_master_league"
+       enabled: true
+       unlockCondition {
+@@ -53417,7 +53417,7 @@
+       badgeType: BADGE_MASTER_LEAGUE
+       leagueType: STANDARD
+       allowTempEvos: true
+-      16: 1
++      removeTempEvoSelfCpBoostAdditionalLevels: true
+       17: 1
+     }
+   }
+@@ -53426,7 +53426,7 @@
+   template_id: "COMBAT_LEAGUE_DEFAULT_MASTER_NPC"
+   data {
+     template_id: "COMBAT_LEAGUE_DEFAULT_MASTER_NPC"
+-    combat_league {
++    combatLeague {
+       title: "combat_master_league"
+       enabled: true
+       unlockCondition {
+@@ -53448,7 +53448,7 @@
+       badgeType: BADGE_MASTER_LEAGUE
+       leagueType: STANDARD
+       allowTempEvos: true
+-      16: 1
++      removeTempEvoSelfCpBoostAdditionalLevels: true
+       17: 1
+     }
+   }
+@@ -53457,7 +53457,7 @@
+   template_id: "COMBAT_LEAGUE_DEFAULT_ULTRA"
+   data {
+     template_id: "COMBAT_LEAGUE_DEFAULT_ULTRA"
+-    combat_league {
++    combatLeague {
+       title: "combat_ultra_league"
+       enabled: true
+       unlockCondition {
+@@ -53481,7 +53481,7 @@
+       badgeType: BADGE_ULTRA_LEAGUE
+       leagueType: STANDARD
+       allowTempEvos: true
+-      16: 1
++      removeTempEvoSelfCpBoostAdditionalLevels: true
+     }
+   }
+ }
+@@ -53489,7 +53489,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_BARCELONA_2023_01"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_BARCELONA_2023_01"
+-    combat_league {
++    combatLeague {
+       title: "barcelona_catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -53704,7 +53704,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_BARCELONA_2023_02"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_BARCELONA_2023_02"
+-    combat_league {
++    combatLeague {
+       title: "barcelona_catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -53919,7 +53919,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_BARCELONA_2023_TEST"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_BARCELONA_2023_TEST"
+-    combat_league {
++    combatLeague {
+       title: "barcelona_catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -54134,7 +54134,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_MEXICOCITY_2023_01"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_MEXICOCITY_2023_01"
+-    combat_league {
++    combatLeague {
+       title: "mexico_city_catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -54362,7 +54362,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_MEXICOCITY_2023_02"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_MEXICOCITY_2023_02"
+-    combat_league {
++    combatLeague {
+       title: "mexico_city_catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -54590,7 +54590,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_MEXICOCITY_2023_TEST"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_MEXICOCITY_2023_TEST"
+-    combat_league {
++    combatLeague {
+       title: "mexico_city_catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -54818,7 +54818,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_SEOUL_2023_01"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_SEOUL_2023_01"
+-    combat_league {
++    combatLeague {
+       title: "seoul_catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -55019,7 +55019,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_SEOUL_2023_02"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_SEOUL_2023_02"
+-    combat_league {
++    combatLeague {
+       title: "seoul_catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -55220,7 +55220,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_SEOUL_2023_TEST"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_SEOUL_2023_TEST"
+-    combat_league {
++    combatLeague {
+       title: "seoul_catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -55421,7 +55421,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_GOYANG_2022_01"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_GOYANG_2022_01"
+-    combat_league {
++    combatLeague {
+       title: "goyang_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -55679,7 +55679,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_GOYANG_2022_02"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_GOYANG_2022_02"
+-    combat_league {
++    combatLeague {
+       title: "goyang_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -55937,7 +55937,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_GOYANG_2022_03"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_GOYANG_2022_03"
+-    combat_league {
++    combatLeague {
+       title: "goyang_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -56195,7 +56195,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_GOYANG_2022_POST"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_GOYANG_2022_POST"
+-    combat_league {
++    combatLeague {
+       title: "goyang_cup_title_post"
+       enabled: true
+       unlockCondition {
+@@ -56453,7 +56453,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_GOYANG_2022_TEST"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_GOYANG_2022_TEST"
+-    combat_league {
++    combatLeague {
+       title: "goyang_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -56711,7 +56711,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SEVILLE_2022_01"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SEVILLE_2022_01"
+-    combat_league {
++    combatLeague {
+       title: "seville_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -56918,7 +56918,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SEVILLE_2022_02"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SEVILLE_2022_02"
+-    combat_league {
++    combatLeague {
+       title: "seville_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -57125,7 +57125,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SEVILLE_2022_03"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SEVILLE_2022_03"
+-    combat_league {
++    combatLeague {
+       title: "seville_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -57332,7 +57332,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SEVILLE_2022_04"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SEVILLE_2022_04"
+-    combat_league {
++    combatLeague {
+       title: "seville_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -57539,7 +57539,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SEVILLE_2022_TEST"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SEVILLE_2022_TEST"
+-    combat_league {
++    combatLeague {
+       title: "seville_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -57746,7 +57746,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SINGAPORE_2022_01"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SINGAPORE_2022_01"
+-    combat_league {
++    combatLeague {
+       title: "singapore_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -57972,7 +57972,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SINGAPORE_2022_02"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SINGAPORE_2022_02"
+-    combat_league {
++    combatLeague {
+       title: "singapore_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -58198,7 +58198,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SINGAPORE_2022_03"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SINGAPORE_2022_03"
+-    combat_league {
++    combatLeague {
+       title: "singapore_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -58424,7 +58424,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SINGAPORE_2022_POST"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SINGAPORE_2022_POST"
+-    combat_league {
++    combatLeague {
+       title: "singapore_cup_title_post"
+       enabled: true
+       unlockCondition {
+@@ -58650,7 +58650,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SINGAPORE_2022_TEST"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_SINGAPORE_2022_TEST"
+-    combat_league {
++    combatLeague {
+       title: "singapore_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -58876,7 +58876,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_TAIPEI_2022_01"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_TAIPEI_2022_01"
+-    combat_league {
++    combatLeague {
+       title: "taipei_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -59110,7 +59110,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_TAIPEI_2022_02"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_TAIPEI_2022_02"
+-    combat_league {
++    combatLeague {
+       title: "taipei_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -59344,7 +59344,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_TAIPEI_2022_03"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_TAIPEI_2022_03"
+-    combat_league {
++    combatLeague {
+       title: "taipei_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -59578,7 +59578,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_TAIPEI_2022_POST"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_TAIPEI_2022_POST"
+-    combat_league {
++    combatLeague {
+       title: "taipei_cup_title_post"
+       enabled: true
+       unlockCondition {
+@@ -59812,7 +59812,7 @@
+   template_id: "COMBAT_LEAGUE_SAFARI_ZONE_TAIPEI_2022_TEST"
+   data {
+     template_id: "COMBAT_LEAGUE_SAFARI_ZONE_TAIPEI_2022_TEST"
+-    combat_league {
++    combatLeague {
+       title: "taipei_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -60057,7 +60057,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT"
+-    combat_league {
++    combatLeague {
+       title: "color_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -60110,7 +60110,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT_MEGAS"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_COLOR_GREAT_MEGAS"
+-    combat_league {
++    combatLeague {
+       title: "mega_color_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -60157,7 +60157,7 @@
+       battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
+       leagueType: PREMIER
+       allowTempEvos: true
+-      16: 1
++      removeTempEvoSelfCpBoostAdditionalLevels: true
+     }
+   }
+ }
+@@ -60165,7 +60165,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_ELEMENT_REMIX"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_ELEMENT_REMIX"
+-    combat_league {
++    combatLeague {
+       title: "element_remix_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -60629,7 +60629,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_EVOLUTION"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_EVOLUTION"
+-    combat_league {
++    combatLeague {
+       title: "evolution_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -61159,7 +61159,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_FANTASY_ULTRA"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_FANTASY_ULTRA"
+-    combat_league {
++    combatLeague {
+       title: "fantasy_cup_ultra_title"
+       enabled: true
+       unlockCondition {
+@@ -61197,7 +61197,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GALAR_GREAT"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GALAR_GREAT"
+-    combat_league {
++    combatLeague {
+       title: "galar_great_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -62939,7 +62939,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GALAR_LITTLE"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GALAR_LITTLE"
+-    combat_league {
++    combatLeague {
+       title: "galar_little_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -64773,7 +64773,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT"
+-    combat_league {
++    combatLeague {
+       title: "combat_great_league"
+       enabled: true
+       unlockCondition {
+@@ -64817,7 +64817,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_BIDOOF"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_BIDOOF"
+-    combat_league {
++    combatLeague {
+       title: "branch_bidoof_1a_title"
+       enabled: true
+       pokemonCondition {
+@@ -64846,7 +64846,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_title"
+       enabled: true
+       unlockCondition {
+@@ -64910,7 +64910,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_GOFEST2022"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_GOFEST2022"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -64959,7 +64959,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S13"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S13"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_title"
+       enabled: true
+       unlockCondition {
+@@ -65011,7 +65011,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S14"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S14"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_title"
+       enabled: true
+       unlockCondition {
+@@ -65062,7 +65062,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S15"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S15"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_title"
+       enabled: true
+       unlockCondition {
+@@ -65113,7 +65113,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S16"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S16"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_title"
+       enabled: true
+       unlockCondition {
+@@ -65164,7 +65164,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S18"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_title"
+       enabled: true
+       unlockCondition {
+@@ -65199,7 +65199,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S19"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S19"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_title"
+       enabled: true
+       unlockCondition {
+@@ -65234,7 +65234,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S20"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S20"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_title"
+       enabled: true
+       unlockCondition {
+@@ -65285,7 +65285,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S22"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S22"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_title"
+       enabled: true
+       unlockCondition {
+@@ -65354,7 +65354,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S24_MEGAS"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S24_MEGAS"
+-    combat_league {
++    combatLeague {
+       title: "mega_catch_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -65417,7 +65417,7 @@
+       battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
+       leagueType: PREMIER
+       allowTempEvos: true
+-      16: 1
++      removeTempEvoSelfCpBoostAdditionalLevels: true
+     }
+   }
+ }
+@@ -65425,7 +65425,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S8"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S8"
+-    combat_league {
++    combatLeague {
+       title: "gofest_2022_catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -65474,7 +65474,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_SEASON11"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_SEASON11"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -65523,7 +65523,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIPS_LEGACY"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIPS_LEGACY"
+-    combat_league {
++    combatLeague {
+       title: "combat_great_league_championships_legacy"
+       enabled: true
+       unlockCondition {
+@@ -65563,7 +65563,7 @@
+       badgeType: BADGE_GREAT_LEAGUE
+       battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
+       leagueType: STANDARD
+-      15: 1
++      allowTempEvoCpDownscaling: true
+     }
+   }
+ }
+@@ -65571,7 +65571,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_NAIC"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_NAIC"
+-    combat_league {
++    combatLeague {
+       title: "great_league_championship_series_2026"
+       enabled: true
+       unlockCondition {
+@@ -66759,7 +66759,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_SERIES"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_SERIES"
+-    combat_league {
++    combatLeague {
+       title: "mega_championship_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -67341,7 +67341,7 @@
+       pokemonCondition {
+         type: POKEMON_BANLIST
+         pokemonBanList {
+-          lgdbihdlhod: "s24_laic_prohibited_pokemon_and_classes"
++          name: "s24_laic_prohibited_pokemon_and_classes"
+           pokemon {
+             id: DITTO
+           }
+@@ -67394,8 +67394,10 @@
+             id: CORSOLA
+             forms: CORSOLA_GALARIAN
+           }
+-          3 {
+-            5: "\001\002\003"
++          groupCondition {
++            pokemonClass: POKEMON_CLASS_LEGENDARY
++            pokemonClass: POKEMON_CLASS_MYTHIC
++            pokemonClass: POKEMON_CLASS_ULTRA_BEAST
+           }
+         }
+       }
+@@ -67411,7 +67413,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_ELECTRIC"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_ELECTRIC"
+-    combat_league {
++    combatLeague {
+       title: "electric_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -67463,7 +67465,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_ELEMENT"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_ELEMENT"
+-    combat_league {
++    combatLeague {
+       title: "element_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -68033,7 +68035,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FANTASY"
+-    combat_league {
++    combatLeague {
+       title: "fantasy_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -68085,7 +68087,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FIGHTING"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FIGHTING"
+-    combat_league {
++    combatLeague {
+       title: "fighting_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -68147,7 +68149,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FIGHTING_REMIX"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FIGHTING_REMIX"
+-    combat_league {
++    combatLeague {
+       title: "fighting_cup_great_remix_title"
+       enabled: true
+       unlockCondition {
+@@ -68205,7 +68207,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FLYING"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FLYING"
+-    combat_league {
++    combatLeague {
+       title: "flying_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -68261,7 +68263,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FOSSIL"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_FOSSIL"
+-    combat_league {
++    combatLeague {
+       title: "fossil_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -68314,7 +68316,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HALLOWEEN"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HALLOWEEN"
+-    combat_league {
++    combatLeague {
+       title: "halloween_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -68368,7 +68370,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HALLOWEEN_LITTLE"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HALLOWEEN_LITTLE"
+-    combat_league {
++    combatLeague {
+       title: "halloween_cup_little_title"
+       enabled: true
+       unlockCondition {
+@@ -68513,7 +68515,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HALLOWEEN_MEGAS"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HALLOWEEN_MEGAS"
+-    combat_league {
++    combatLeague {
+       title: "mega_halloween_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -68561,7 +68563,7 @@
+       battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
+       leagueType: PREMIER
+       allowTempEvos: true
+-      16: 1
++      removeTempEvoSelfCpBoostAdditionalLevels: true
+     }
+   }
+ }
+@@ -68569,7 +68571,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HISUI"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HISUI"
+-    combat_league {
++    combatLeague {
+       title: "hisui_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -69120,7 +69122,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HOENN"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HOENN"
+-    combat_league {
++    combatLeague {
+       title: "hoenn_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -69726,7 +69728,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HOLIDAY"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_HOLIDAY"
+-    combat_league {
++    combatLeague {
+       title: "holiday_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -69785,7 +69787,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_JOHTO"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_JOHTO"
+-    combat_league {
++    combatLeague {
+       title: "johto_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -70216,7 +70218,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_JUNGLE"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_JUNGLE"
+-    combat_league {
++    combatLeague {
+       title: "great_jungle_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -70273,7 +70275,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_KANTO"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_KANTO"
+-    combat_league {
++    combatLeague {
+       title: "kanto_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -70912,7 +70914,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LITTLE"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LITTLE"
+-    combat_league {
++    combatLeague {
+       title: "little_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -72336,7 +72338,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LITTLE_REMIX"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LITTLE_REMIX"
+-    combat_league {
++    combatLeague {
+       title: "little_cup_remix_title"
+       enabled: true
+       unlockCondition {
+@@ -73548,7 +73550,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LOVE"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_LOVE"
+-    combat_league {
++    combatLeague {
+       title: "love_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -74240,7 +74242,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_MEGAS"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_MEGAS"
+-    combat_league {
++    combatLeague {
+       title: "great_league_mega_title"
+       enabled: true
+       unlockCondition {
+@@ -74278,7 +74280,7 @@
+       battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_GREAT"
+       leagueType: STANDARD
+       allowTempEvos: true
+-      16: 1
++      removeTempEvoSelfCpBoostAdditionalLevels: true
+     }
+   }
+ }
+@@ -74286,7 +74288,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_PVP_NEXT_PREVIEW"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_PVP_NEXT_PREVIEW"
+-    combat_league {
++    combatLeague {
+       title: "combat_pvpn_preview_league"
+       enabled: true
+       unlockCondition {
+@@ -74331,7 +74333,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_REMIX"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_REMIX"
+-    combat_league {
++    combatLeague {
+       title: "great_league_remix_title"
+       enabled: true
+       unlockCondition {
+@@ -74467,7 +74469,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_RETRO"
+-    combat_league {
++    combatLeague {
+       title: "retro_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -75432,7 +75434,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SCROLL"
+-    combat_league {
++    combatLeague {
+       title: "scrolls_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -75485,7 +75487,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SINGLE_TYPE"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SINGLE_TYPE"
+-    combat_league {
++    combatLeague {
+       title: "single_type_great_title"
+       enabled: true
+       unlockCondition {
+@@ -77509,7 +77511,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SINNOH"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SINNOH"
+-    combat_league {
++    combatLeague {
+       title: "sinnoh_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -77979,7 +77981,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SUMMER"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_SUMMER"
+-    combat_league {
++    combatLeague {
+       title: "summer_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -78034,7 +78036,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_WEATHER"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_WEATHER"
+-    combat_league {
++    combatLeague {
+       title: "weather_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -78087,7 +78089,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_HALLOWEEN_ULTRA"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_HALLOWEEN_ULTRA"
+-    combat_league {
++    combatLeague {
+       title: "halloween_ultra_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -78127,7 +78129,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_CATCH"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_CATCH"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_little_title"
+       enabled: true
+       unlockCondition {
+@@ -78270,7 +78272,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_CATCH_S13"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_CATCH_S13"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_little_title"
+       enabled: true
+       unlockCondition {
+@@ -78322,7 +78324,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_CATCH_S14"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_CATCH_S14"
+-    combat_league {
++    combatLeague {
+       title: "catch_cup_s13_little_title"
+       enabled: true
+       unlockCondition {
+@@ -78373,7 +78375,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_HOLIDAY"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_HOLIDAY"
+-    combat_league {
++    combatLeague {
+       title: "holiday_cup_little_title"
+       enabled: true
+       unlockCondition {
+@@ -78520,7 +78522,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_JUNGLE"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_JUNGLE"
+-    combat_league {
++    combatLeague {
+       title: "little_jungle_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -78703,7 +78705,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_JUNGLE_REMIX"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_LITTLE_JUNGLE_REMIX"
+-    combat_league {
++    combatLeague {
+       title: "little_jungle_remix_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -78857,7 +78859,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER"
+-    combat_league {
++    combatLeague {
+       title: "combat_master_league"
+       enabled: true
+       unlockCondition {
+@@ -78887,7 +78889,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER_CLASSIC"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER_CLASSIC"
+-    combat_league {
++    combatLeague {
+       title: "master_classic_title"
+       enabled: true
+       unlockCondition {
+@@ -78923,7 +78925,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER_MEGAS"
+-    combat_league {
++    combatLeague {
+       title: "master_league_mega_title"
+       enabled: true
+       unlockCondition {
+@@ -78947,7 +78949,7 @@
+       battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_MASTER"
+       leagueType: STANDARD
+       allowTempEvos: true
+-      16: 1
++      removeTempEvoSelfCpBoostAdditionalLevels: true
+       17: 1
+     }
+   }
+@@ -78956,7 +78958,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER_NO_LEGENDARY"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER_NO_LEGENDARY"
+-    combat_league {
++    combatLeague {
+       title: "master_no_legendary"
+       enabled: true
+       unlockCondition {
+@@ -79043,7 +79045,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER"
+-    combat_league {
++    combatLeague {
+       title: "master_premier_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -79178,7 +79180,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER_CLASSIC"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_MASTER_PREMIER_CLASSIC"
+-    combat_league {
++    combatLeague {
+       title: "master_premier_classic_title"
+       enabled: true
+       unlockCondition {
+@@ -79319,7 +79321,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_MOUNTAIN_GREAT"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_MOUNTAIN_GREAT"
+-    combat_league {
++    combatLeague {
+       title: "mountain_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -79376,7 +79378,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_PSYCHIC"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_PSYCHIC"
+-    combat_league {
++    combatLeague {
+       title: "psychic_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -79427,7 +79429,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_SPRING_GREAT"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_SPRING_GREAT"
+-    combat_league {
++    combatLeague {
+       title: "spring_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -79482,7 +79484,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_SUNSHINE_GREAT"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_SUNSHINE_GREAT"
+-    combat_league {
++    combatLeague {
+       title: "sunshine_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -79536,7 +79538,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA"
+-    combat_league {
++    combatLeague {
+       title: "combat_ultra_league"
+       enabled: true
+       unlockCondition {
+@@ -79566,7 +79568,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_HOLIDAY"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_HOLIDAY"
+-    combat_league {
++    combatLeague {
+       title: "holiday_cup_ultra_title"
+       enabled: true
+       unlockCondition {
+@@ -79607,7 +79609,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_MEGAS"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_MEGAS"
+-    combat_league {
++    combatLeague {
+       title: "ultra_league_mega_title"
+       enabled: true
+       unlockCondition {
+@@ -79631,7 +79633,7 @@
+       battlePartyCombatLeagueTemplateId: "COMBAT_LEAGUE_DEFAULT_ULTRA"
+       leagueType: STANDARD
+       allowTempEvos: true
+-      16: 1
++      removeTempEvoSelfCpBoostAdditionalLevels: true
+     }
+   }
+ }
+@@ -79639,7 +79641,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_NO_LEGENDARY"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_NO_LEGENDARY"
+-    combat_league {
++    combatLeague {
+       title: "master_no_legendary"
+       enabled: true
+       unlockCondition {
+@@ -79726,7 +79728,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_PREMIER"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_PREMIER"
+-    combat_league {
++    combatLeague {
+       title: "ultra_premier_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -79861,7 +79863,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_PREMIER_CLASSIC"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_PREMIER_CLASSIC"
+-    combat_league {
++    combatLeague {
+       title: "ultra_premier_classic_title"
+       enabled: true
+       unlockCondition {
+@@ -80002,7 +80004,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_REMIX"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_REMIX"
+-    combat_league {
++    combatLeague {
+       title: "ultra_league_remix_title"
+       enabled: true
+       unlockCondition {
+@@ -80075,7 +80077,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_SUMMER"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_ULTRA_SUMMER"
+-    combat_league {
++    combatLeague {
+       title: "summer_cup_ultra_title"
+       enabled: true
+       unlockCondition {
+@@ -80116,7 +80118,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_WEATHER"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_WEATHER"
+-    combat_league {
++    combatLeague {
+       title: "weather_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -80155,7 +80157,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_WILLPOWER"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_WILLPOWER"
+-    combat_league {
++    combatLeague {
+       title: "willpower_cup_title"
+       enabled: true
+       unlockCondition {
+@@ -88019,25 +88021,25 @@
+       }
+       pokemonFormAppraisalOverrides {
+         id: SINISTEA
+-        form: 3365
++        form: SINISTEA_P_HALLOWEEN_2026_01
+         appraisalKey: "appraise_sinistea_phony"
+         addToStart: true
+       }
+       pokemonFormAppraisalOverrides {
+         id: SINISTEA
+-        form: 3366
++        form: SINISTEA_A_HALLOWEEN_2026_01
+         appraisalKey: "appraise_sinistea_antique"
+         addToStart: true
+       }
+       pokemonFormAppraisalOverrides {
+         id: POLTEAGEIST
+-        form: 3367
++        form: POLTEAGEIST_P_HALLOWEEN_2026_01
+         appraisalKey: "appraise_polteageist_phony"
+         addToStart: true
+       }
+       pokemonFormAppraisalOverrides {
+         id: POLTEAGEIST
+-        form: 3368
++        form: POLTEAGEIST_A_HALLOWEEN_2026_01
+         appraisalKey: "appraise_polteageist_antique"
+         addToStart: true
+       }
+@@ -98716,7 +98718,7 @@
+     template_id: "EXTENDED_V0041_POKEMON_ZUBAT_HALLOWEEN_2026_01"
+     pokemonExtendedSettings {
+       uniqueId: ZUBAT
+-      form: 3362
++      form: ZUBAT_HALLOWEEN_2026_01
+       sizeSettings {
+         xxsLowerBound: 0.392
+         xsLowerBound: 0.4
+@@ -98769,7 +98771,7 @@
+     template_id: "EXTENDED_V0042_POKEMON_GOLBAT_HALLOWEEN_2026_01"
+     pokemonExtendedSettings {
+       uniqueId: GOLBAT
+-      form: 3363
++      form: GOLBAT_HALLOWEEN_2026_01
+       sizeSettings {
+         xxsLowerBound: 0.784
+         xsLowerBound: 0.8
+@@ -105887,7 +105889,7 @@
+     template_id: "EXTENDED_V0169_POKEMON_CROBAT_HALLOWEEN_2026_01"
+     pokemonExtendedSettings {
+       uniqueId: CROBAT
+-      form: 3364
++      form: CROBAT_HALLOWEEN_2026_01
+       sizeSettings {
+         xxsLowerBound: 0.882
+         xsLowerBound: 0.9
+@@ -139794,7 +139796,7 @@
+     template_id: "EXTENDED_V0854_POKEMON_SINISTEA_A_HALLOWEEN_2026_01"
+     pokemonExtendedSettings {
+       uniqueId: SINISTEA
+-      form: 3366
++      form: SINISTEA_A_HALLOWEEN_2026_01
+       sizeSettings {
+         xxsLowerBound: 0.049
+         xsLowerBound: 0.05
+@@ -139830,7 +139832,7 @@
+     template_id: "EXTENDED_V0854_POKEMON_SINISTEA_P_HALLOWEEN_2026_01"
+     pokemonExtendedSettings {
+       uniqueId: SINISTEA
+-      form: 3365
++      form: SINISTEA_P_HALLOWEEN_2026_01
+       sizeSettings {
+         xxsLowerBound: 0.049
+         xsLowerBound: 0.05
+@@ -139883,7 +139885,7 @@
+     template_id: "EXTENDED_V0855_POKEMON_POLTEAGEIST_A_HALLOWEEN_2026_01"
+     pokemonExtendedSettings {
+       uniqueId: POLTEAGEIST
+-      form: 3368
++      form: POLTEAGEIST_A_HALLOWEEN_2026_01
+       sizeSettings {
+         xxsLowerBound: 0.098
+         xsLowerBound: 0.1
+@@ -139919,7 +139921,7 @@
+     template_id: "EXTENDED_V0855_POKEMON_POLTEAGEIST_P_HALLOWEEN_2026_01"
+     pokemonExtendedSettings {
+       uniqueId: POLTEAGEIST
+-      form: 3367
++      form: POLTEAGEIST_P_HALLOWEEN_2026_01
+       sizeSettings {
+         xxsLowerBound: 0.098
+         xsLowerBound: 0.1
+@@ -147704,7 +147706,7 @@
+         form: ZUBAT_NORMAL
+       }
+       forms {
+-        form: 3362
++        form: ZUBAT_HALLOWEEN_2026_01
+         isCostume: true
+       }
+     }
+@@ -147720,7 +147722,7 @@
+         form: GOLBAT_NORMAL
+       }
+       forms {
+-        form: 3363
++        form: GOLBAT_HALLOWEEN_2026_01
+         isCostume: true
+       }
+     }
+@@ -149415,7 +149417,7 @@
+         form: CROBAT_NORMAL
+       }
+       forms {
+-        form: 3364
++        form: CROBAT_HALLOWEEN_2026_01
+         isCostume: true
+       }
+     }
+@@ -157707,7 +157709,7 @@
+       }
+       forms {
+         form: MINIOR_METEOR
+-        7: 1
++        unsilhouetteOnSpeciesCapture: true
+       }
+     }
+   }
+@@ -158705,11 +158707,11 @@
+         }
+       }
+       forms {
+-        form: 3365
++        form: SINISTEA_P_HALLOWEEN_2026_01
+         isCostume: true
+       }
+       forms {
+-        form: 3366
++        form: SINISTEA_A_HALLOWEEN_2026_01
+         isCostume: true
+       }
+     }
+@@ -158728,11 +158730,11 @@
+         form: POLTEAGEIST_ANTIQUE
+       }
+       forms {
+-        form: 3367
++        form: POLTEAGEIST_P_HALLOWEEN_2026_01
+         isCostume: true
+       }
+       forms {
+-        form: 3368
++        form: POLTEAGEIST_A_HALLOWEEN_2026_01
+         isCostume: true
+       }
+     }
+@@ -161285,7 +161287,7 @@
+       completeStartLetterCountPerLanguage: "hi-IN,2"
+       completeStartLetterCountPerLanguage: "id-ID,2"
+       completeStartLetterCountPerLanguage: "es-MX,2"
+-      11: 1
++      transferWarning100Enabled: true
+     }
+   }
+ }
+@@ -161310,8 +161312,8 @@
+   template_id: "GYM_TOPPER_DISTANCE_SETTINGS"
+   data {
+     template_id: "GYM_TOPPER_DISTANCE_SETTINGS"
+-    302 {
+-      1: 0x459c4000
++    gymTopperDistanceSettings {
++      guardPokemonMaxVisualDistanceMeters: 5000
+     }
+   }
+ }
+@@ -167399,7 +167401,7 @@
+   data {
+     template_id: "LC_2026_FC_SEOUL"
      locationCardSettings {
--      locationCard: 340
-+      locationCard: LC_SPECIALBACKGROUND_DIA_DE_LOS_MUERTOS_2026
-       imageUrl: "sb_DiaDeMuertos_2026"
+-      locationCard: 417
++      locationCard: LC_2026_FC_SEOUL
+       imageUrl: "lc_fc2026_seoul"
+     }
+   }
+@@ -167409,10 +167411,10 @@
+   data {
+     template_id: "LC_2026_GOWA_MEXICOCITY"
+     locationCardSettings {
+-      locationCard: 419
++      locationCard: LC_2026_GOWA_MEXICOCITY
+       imageUrl: "lc_2026_gowa_mexicocity"
+       cardType: LOCATION_CARD
+-      10: 1
++      cardTreatment: CROP_BLEED
+       13: 1
+     }
+   }
+@@ -167422,11 +167424,11 @@
+   data {
+     template_id: "LC_2026_GOWA_SENDAI"
+     locationCardSettings {
+-      locationCard: 418
++      locationCard: LC_2026_GOWA_SENDAI
+       imageUrl: "lc_2026_gowa_sendai"
+       cardType: LOCATION_CARD
+-      8: 1
+-      10: 1
++      backgroundEligibilityStatus: ELIGIBLE
++      cardTreatment: CROP_BLEED
+       13: 1
+     }
+   }
+@@ -167457,7 +167459,7 @@
+   data {
+     template_id: "LC_2026_LONDON_NO_001"
+     locationCardSettings {
+-      locationCard: 422
++      locationCard: LC_2026_LONDON_NO_001
+       imageUrl: "lc_nightOut2026_London"
+       13: 1
+     }
+@@ -167480,7 +167482,7 @@
+   data {
+     template_id: "LC_2026_LOSANGELES_NO_001"
+     locationCardSettings {
+-      locationCard: 421
++      locationCard: LC_2026_LOSANGELES_NO_001
+       imageUrl: "lc_nightOut2026_LA"
+       13: 1
+     }
+@@ -169330,11 +169332,11 @@
+   data {
+     template_id: "LC_SPECIALBACKGROUND_2026_GOWA"
+     locationCardSettings {
+-      locationCard: 420
++      locationCard: LC_SPECIALBACKGROUND_2026_GOWA
+       imageUrl: "sb_black"
        cardType: SPECIAL_BACKGROUND
-       vfxAddress: "bgfx_diaDeMuertos_2026"
+       vfxAddress: "bgfx_gowa_2026"
+-      10: 1
++      cardTreatment: CROP_BLEED
+     }
+   }
+ }
+@@ -169441,7 +169443,7 @@
+   data {
+     template_id: "LC_SPECIALBACKGROUND_FOL_2026"
+     locationCardSettings {
+-      locationCard: 424
++      locationCard: LC_SPECIALBACKGROUND_FOL_2026
+       imageUrl: "sb_black"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_Diwali_2026"
+@@ -169543,8 +169545,8 @@
+       imageUrl: "sb_TeamLeader_blue"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_TeamLeader_blue"
++      cardTreatment: EXTENDED_HEIGHT
+       7: 6
+-      10: 2
+     }
+   }
+ }
+@@ -169557,8 +169559,8 @@
+       imageUrl: "sb_TeamLeader_red"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_TeamLeader_red"
++      cardTreatment: EXTENDED_HEIGHT
+       7: 6
+-      10: 2
+     }
+   }
+ }
+@@ -169571,8 +169573,8 @@
+       imageUrl: "sb_TeamLeader_yellow"
+       cardType: SPECIAL_BACKGROUND
+       vfxAddress: "bgfx_TeamLeader_yellow"
++      cardTreatment: EXTENDED_HEIGHT
+       7: 6
+-      10: 2
+     }
+   }
+ }
+@@ -171753,10 +171755,10 @@
+   template_id: "MAP_OBJECT_COLLISION_AVOIDANCE_SETTINGS"
+   data {
+     template_id: "MAP_OBJECT_COLLISION_AVOIDANCE_SETTINGS"
+-    300 {
+-      1: 0x3f800000
+-      2: 0x3e800000
+-      3: 0x40c00000
++    mapObjectCollisionAvoidanceSettings {
++      mapPlaceCollisionBufferDistance: 1
++      pokemonCollisionBufferDistance: 0.25
++      pokemonCollisionRadiusScaleFactor: 6
+     }
+   }
+ }
+@@ -175833,9 +175835,9 @@
+         tempEvoId: TEMP_EVOLUTION_MEGA_Y
+       }
+       enableSpecialMove: true
+-      16 {
+-        1: 0x3f800000
+-        2: 0x3f800000
++      tempEvoSpecialAttackBoosts {
++        gymsAndRaidsMultiplier: 1
++        trainerBattlesMultiplier: 1
+         3 {
+           1: 1
+           2: 0x3f800000
+@@ -175861,9 +175863,9 @@
+           2: 0x3f800000
+         }
+       }
+-      16 {
+-        1: 0x3f800000
+-        2: 0x3f800000
++      tempEvoSpecialAttackBoosts {
++        gymsAndRaidsMultiplier: 1
++        trainerBattlesMultiplier: 1
+         3 {
+           1: 1
+           2: 0x3f800000
+@@ -175889,9 +175891,9 @@
+           2: 0x3f800000
+         }
+       }
+-      16 {
+-        1: 0x3f8ccccd
+-        2: 0x3f8ccccd
++      tempEvoSpecialAttackBoosts {
++        gymsAndRaidsMultiplier: 1.1
++        trainerBattlesMultiplier: 1.1
+         3 {
+           1: 1
+           2: 0x3f8ccccd
+@@ -175917,9 +175919,9 @@
+           2: 0x3f8ccccd
+         }
+       }
+-      16 {
+-        1: 0x3f99999a
+-        2: 0x3f99999a
++      tempEvoSpecialAttackBoosts {
++        gymsAndRaidsMultiplier: 1.2
++        trainerBattlesMultiplier: 1.2
+         3 {
+           1: 1
+           2: 0x3f99999a
+@@ -175945,9 +175947,9 @@
+           2: 0x3f99999a
+         }
+       }
+-      16 {
+-        1: 0x3fa66666
+-        2: 0x3fa66666
++      tempEvoSpecialAttackBoosts {
++        gymsAndRaidsMultiplier: 1.3
++        trainerBattlesMultiplier: 1.3
+         3 {
+           1: 1
+           2: 0x3fa66666
+@@ -198045,7 +198047,8 @@
+         autoThrowCountdownStartSeconds: 20
+         autoThrowSeconds: 20
+       }
+-      37: "\022\023"
++      unsupportedRaidLevelsForRsvp: RAID_LEVEL_COORDINATED_1
++      unsupportedRaidLevelsForRsvp: RAID_LEVEL_COORDINATED_2
+     }
+   }
+ }
+@@ -252756,162 +252759,162 @@
+   template_id: "TIME_BOXED_SPAWN_EVENT_SETTINGS"
+   data {
+     template_id: "TIME_BOXED_SPAWN_EVENT_SETTINGS"
+-    299 {
+-      1 {
+-        1 {
+-          1: 10
+-          2: 19
++    timeBoxedSpawnEventsSettings {
++      timeBoxedSpawnEvents {
++        startDayLocal {
++          month: 10
++          day: 19
+         }
+-        2 {
+-          1: 17
++        startTimeLocal {
++          hour: 17
+         }
+-        3 {
+-          1: 10
+-          2: 24
++        endDayLocal {
++          month: 10
++          day: 24
+         }
+-        4 {
+-          1: 23
+-          2: 59
+-        }
+-        5 {
+-          1: 17
+-        }
+-        6 {
+-          1: 21
+-        }
+-        7: "meteor_title_1"
+-        8: "meteor_desc_1"
+-        12: 1
+-      }
+-      1 {
+-        1 {
+-          1: 11
+-          2: 14
++        endTimeLocal {
++          hour: 23
++          minute: 59
+         }
+-        2 {
+-          1: 17
++        startPeakTimeLocal {
++          hour: 17
+         }
+-        3 {
+-          1: 11
+-          2: 19
++        endPeakTimeLocal {
++          hour: 21
++        }
++        titleStringKey: "meteor_title_1"
++        descriptionStringKey: "meteor_desc_1"
++        timeBoxedSpawnEventType: METEOR_SHOWER
++      }
++      timeBoxedSpawnEvents {
++        startDayLocal {
++          month: 11
++          day: 14
+         }
+-        4 {
+-          1: 23
+-          2: 59
++        startTimeLocal {
++          hour: 17
+         }
+-        5 {
+-          1: 17
++        endDayLocal {
++          month: 11
++          day: 19
+         }
+-        6 {
+-          1: 21
++        endTimeLocal {
++          hour: 23
++          minute: 59
+         }
+-        7: "meteor_title_1"
+-        8: "meteor_desc_1"
+-        12: 1
++        startPeakTimeLocal {
++          hour: 17
++        }
++        endPeakTimeLocal {
++          hour: 21
++        }
++        titleStringKey: "meteor_title_1"
++        descriptionStringKey: "meteor_desc_1"
++        timeBoxedSpawnEventType: METEOR_SHOWER
+       }
+-      1 {
+-        1 {
+-          1: 12
+-          2: 11
++      timeBoxedSpawnEvents {
++        startDayLocal {
++          month: 12
++          day: 11
+         }
+-        2 {
+-          1: 17
++        startTimeLocal {
++          hour: 17
+         }
+-        3 {
+-          1: 12
+-          2: 16
++        endDayLocal {
++          month: 12
++          day: 16
+         }
+-        4 {
+-          1: 23
+-          2: 59
++        endTimeLocal {
++          hour: 23
++          minute: 59
+         }
+-        5 {
+-          1: 17
++        startPeakTimeLocal {
++          hour: 17
+         }
+-        6 {
+-          1: 21
++        endPeakTimeLocal {
++          hour: 21
+         }
+-        7: "meteor_title_1"
+-        8: "meteor_desc_1"
+-        12: 1
++        titleStringKey: "meteor_title_1"
++        descriptionStringKey: "meteor_desc_1"
++        timeBoxedSpawnEventType: METEOR_SHOWER
+       }
+-      1 {
+-        1 {
+-          1: 5
+-          2: 3
++      timeBoxedSpawnEvents {
++        startDayLocal {
++          month: 5
++          day: 3
+         }
+-        2 {
+-          1: 17
++        startTimeLocal {
++          hour: 17
+         }
+-        3 {
+-          1: 5
+-          2: 8
++        endDayLocal {
++          month: 5
++          day: 8
+         }
+-        4 {
+-          1: 23
+-          2: 59
++        endTimeLocal {
++          hour: 23
++          minute: 59
+         }
+-        5 {
+-          1: 17
++        startPeakTimeLocal {
++          hour: 17
+         }
+-        6 {
+-          1: 21
++        endPeakTimeLocal {
++          hour: 21
+         }
+-        7: "meteor_title_1"
+-        8: "meteor_desc_1"
+-        12: 1
++        titleStringKey: "meteor_title_1"
++        descriptionStringKey: "meteor_desc_1"
++        timeBoxedSpawnEventType: METEOR_SHOWER
+       }
+-      1 {
+-        1 {
+-          1: 7
+-          2: 28
++      timeBoxedSpawnEvents {
++        startDayLocal {
++          month: 7
++          day: 28
+         }
+-        2 {
+-          1: 17
++        startTimeLocal {
++          hour: 17
+         }
+-        3 {
+-          1: 8
+-          2: 2
++        endDayLocal {
++          month: 8
++          day: 2
+         }
+-        4 {
+-          1: 23
+-          2: 59
+-        }
+-        5 {
+-          1: 17
+-        }
+-        6 {
+-          1: 21
+-        }
+-        7: "meteor_title_1"
+-        8: "meteor_desc_1"
+-        12: 1
+-      }
+-      1 {
+-        1 {
+-          1: 8
+-          2: 10
++        endTimeLocal {
++          hour: 23
++          minute: 59
+         }
+-        2 {
+-          1: 17
++        startPeakTimeLocal {
++          hour: 17
+         }
+-        3 {
+-          1: 8
+-          2: 15
++        endPeakTimeLocal {
++          hour: 21
++        }
++        titleStringKey: "meteor_title_1"
++        descriptionStringKey: "meteor_desc_1"
++        timeBoxedSpawnEventType: METEOR_SHOWER
++      }
++      timeBoxedSpawnEvents {
++        startDayLocal {
++          month: 8
++          day: 10
++        }
++        startTimeLocal {
++          hour: 17
+         }
+-        4 {
+-          1: 23
+-          2: 59
+-        }
+-        5 {
+-          1: 17
+-        }
+-        6 {
+-          1: 21
+-        }
+-        7: "meteor_title_1"
+-        8: "meteor_desc_1"
+-        12: 1
++        endDayLocal {
++          month: 8
++          day: 15
++        }
++        endTimeLocal {
++          hour: 23
++          minute: 59
++        }
++        startPeakTimeLocal {
++          hour: 17
++        }
++        endPeakTimeLocal {
++          hour: 21
++        }
++        titleStringKey: "meteor_title_1"
++        descriptionStringKey: "meteor_desc_1"
++        timeBoxedSpawnEventType: METEOR_SHOWER
+       }
+     }
+   }
+@@ -270949,11 +270952,11 @@
+       evolutionBranch {
+         evolution: GOLBAT
+         candyCost: 25
+-        form: 3363
++        form: GOLBAT_HALLOWEEN_2026_01
+         candyCostPurified: 22
+       }
+       modelScaleV2: 1
+-      form: 3362
++      form: ZUBAT_HALLOWEEN_2026_01
+       buddyOffsetMale: 6.13
+       buddyOffsetMale: 31.63
+       buddyOffsetMale: 32.8
+@@ -271278,11 +271281,11 @@
+       evolutionBranch {
+         evolution: CROBAT
+         candyCost: 100
+-        form: 3364
++        form: CROBAT_HALLOWEEN_2026_01
+         candyCostPurified: 90
+       }
+       modelScaleV2: 0.9
+-      form: 3363
++      form: GOLBAT_HALLOWEEN_2026_01
+       buddyOffsetMale: 45
+       buddyOffsetMale: -40
+       buddyOffsetMale: -70
+@@ -303125,7 +303128,7 @@
+       buddy_size: BUDDY_FLYING
+       modelHeight: 2.65
+       modelScaleV2: 0.9
+-      form: 3364
++      form: CROBAT_HALLOWEEN_2026_01
+       buddyOffsetMale: 40
+       buddyOffsetMale: -20
+       buddyOffsetMale: -40
+@@ -443326,7 +443329,13 @@
+           animationPlayPoint: BEFORE_CM_ATTACKER
+           ibfcVfxKey: ALTERNATE_TO_DEFAULT
+         }
+-        10: "\224\025\225\025\226\025\227\025\230\025\231\025\232\025"
++        defaultForms: MINIOR_BLUE
++        defaultForms: MINIOR_GREEN
++        defaultForms: MINIOR_INDIGO
++        defaultForms: MINIOR_ORANGE
++        defaultForms: MINIOR_RED
++        defaultForms: MINIOR_VIOLET
++        defaultForms: MINIOR_YELLOW
+       }
+       breadTierGroup: GROUP_2
+     }
+@@ -455626,8 +455635,8 @@
+       ibfc {
+         combatEnable: true
+         defaultForm: CRAMORANT_NORMAL
+-        AlternateForms: CRAMORANT_GULPING
+-        AlternateForms: CRAMORANT_GORGING
++        alternateForms: CRAMORANT_GULPING
++        alternateForms: CRAMORANT_GORGING
+       }
+       breadTierGroup: GROUP_2
+     }
+@@ -457302,10 +457311,10 @@
+       evolutionBranch {
+         evolution: POLTEAGEIST
+         candyCost: 400
+-        form: 3368
++        form: POLTEAGEIST_A_HALLOWEEN_2026_01
+       }
+       modelScaleV2: 2.45
+-      form: 3366
++      form: SINISTEA_A_HALLOWEEN_2026_01
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -457445,10 +457454,10 @@
+       evolutionBranch {
+         evolution: POLTEAGEIST
+         candyCost: 50
+-        form: 3367
++        form: POLTEAGEIST_P_HALLOWEEN_2026_01
+       }
+       modelScaleV2: 2.45
+-      form: 3365
++      form: SINISTEA_P_HALLOWEEN_2026_01
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -457660,7 +457669,7 @@
+       kmBuddyDistance: 3
+       modelHeight: 1
+       modelScaleV2: 1.22
+-      form: 3368
++      form: POLTEAGEIST_A_HALLOWEEN_2026_01
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -457800,7 +457809,7 @@
+       kmBuddyDistance: 3
+       modelHeight: 1
+       modelScaleV2: 1.22
+-      form: 3367
++      form: POLTEAGEIST_P_HALLOWEEN_2026_01
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+       buddyOffsetMale: 0
+@@ -483157,7 +483166,7 @@
+       }
+       combatAnimationConfiguration {
+         fastAttackSettings {
+-          4: 1
++          allowFastMoveAnimPriority: true
+         }
+         projectedHealthAnimationDurationSeconds: 0.5
+         uiCameraAnimationSettings {
+@@ -483195,33 +483204,33 @@
+         badNetworkWarningThresholdTurns: 12
+         deadNetworkDisconnectThresholdTurns: 120
+         noOpponentConnectionDisconnectThresholdTurns: 21
++        latencyTrackingSettings {
++          maxNumberEvents: 200
++          maxNumberGetState: 200
++          isUpstreamEnabled: true
++          isDownstreamEnabled: true
++        }
++        submitTurnNumberWithPlayerAction: true
++        preResponseInputBlockDurationMs: 500
++        swapButtonEndOfCooldownInputBlockDurationMs: 250
++      }
++      tgrBattleConfig {
++        battleEndTimeoutThresholdMs: 2000
++        badNetworkWarningThresholdTurns: 12
++        deadNetworkDisconnectThresholdTurns: 120
++        noOpponentConnectionDisconnectThresholdTurns: 21
++        submitTurnNumberWithPlayerAction: true
++        preResponseInputBlockDurationMs: 500
++        swapButtonEndOfCooldownInputBlockDurationMs: 250
++      }
++      teamLeaderBattleConfig {
++        battleEndTimeoutThresholdMs: 2000
++        badNetworkWarningThresholdTurns: 12
++        deadNetworkDisconnectThresholdTurns: 120
++        noOpponentConnectionDisconnectThresholdTurns: 21
+         submitTurnNumberWithPlayerAction: true
+         preResponseInputBlockDurationMs: 500
+-        6 {
+-          2: 200
+-          3: 200
+-          4: 1
+-          5: 1
+-        }
+-        10: 250
+-      }
+-      4 {
+-        1: 2000
+-        2: 12
+-        3: 120
+-        4: 21
+-        7: 1
+-        8: 500
+-        10: 250
+-      }
+-      5 {
+-        1: 2000
+-        2: 12
+-        3: 120
+-        4: 21
+-        7: 1
+-        8: 500
+-        10: 250
++        swapButtonEndOfCooldownInputBlockDurationMs: 250
+       }
+     }
+   }
+@@ -507916,7 +507925,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S25_MEGAS"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CATCH_S25_MEGAS"
+-    combat_league {
++    combatLeague {
+       title: "mega_catch_cup_great_title"
+       enabled: true
+       unlockCondition {
+@@ -507986,7 +507995,7 @@
+   template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_SERIES_EUIC"
+   data {
+     template_id: "COMBAT_LEAGUE_VS_SEEKER_GREAT_CHAMPIONSHIP_SERIES_EUIC"
+-    combat_league {
++    combatLeague {
+       title: "great_league_championship_series_2027"
+       enabled: true
+       unlockCondition {
+@@ -508115,7 +508124,7 @@
+       pokemonCondition {
+         type: POKEMON_BANLIST
+         pokemonBanList {
+-          lgdbihdlhod: "s25_euic_prohibited_pokemon"
++          name: "s25_euic_prohibited_pokemon"
+           pokemon {
+             id: CARKOL
+             forms: CARKOL_NORMAL
+@@ -508409,7 +508418,7 @@
+     locationCardSettings {
+       locationCard: LC_POKELID_GUNMA
+       imageUrl: "lc_pokelid_gunma"
+-      10: 1
++      cardTreatment: CROP_BLEED
+       13: 1
+     }
+   }
